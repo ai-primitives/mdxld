@@ -1,5 +1,5 @@
 import { parse as parseYAML, stringify as stringifyYAML } from 'yaml'
-import type { MDXLD, ParseOptions, SpecialProperty } from './types'
+import type { MDXLD, ParseOptions, SpecialProperty } from './types.js'
 
 const SPECIAL_PROPERTIES: SpecialProperty[] = [
   'type',

@@ -4,8 +4,8 @@ import remarkMDX from 'remark-mdx'
 import remarkGFM from 'remark-gfm'
 import remarkFrontmatter from 'remark-frontmatter'
 import type { Root } from 'mdast'
-import type { MDXLDWithAST, ParseOptions } from './types'
-import { parse as parseCore, stringify as stringifyCore } from './parser'
+import type { MDXLDWithAST, ParseOptions } from './types.js'
+import { parse as parseCore, stringify as stringifyCore } from './parser.js'
 
 export function parse(mdx: string, options?: ParseOptions): MDXLDWithAST {
   const core = parseCore(mdx, options)

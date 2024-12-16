@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { parse } from './ast'
+import { parse } from './ast.js'
 import type { Heading, Text } from 'mdast'
 
 describe('mdxld/ast', () => {
