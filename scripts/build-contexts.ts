@@ -76,7 +76,7 @@ try {
       const constName = path.basename(file, '.jsonld')
         .replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
         .replace(/\./g, '');  // Remove dots from names
-      return `export { ${constName} } from './${constName}';`;
+      return `export { ${constName} } from './${constName}.js';`;
     })
     .join('\n');
 
