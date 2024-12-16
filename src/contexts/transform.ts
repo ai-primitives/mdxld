@@ -1,17 +1,22 @@
-import { promises as fs } from 'fs'
-import { join, dirname } from 'path'
-import { JsonLdDocument, ContextDefinition } from 'jsonld'
-import * as jsonld from 'jsonld'
+import { promises as fs } from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import jsonld from 'jsonld'
 import JSON5 from 'json5'
-import { fileURLToPath } from 'url'
+import type { JsonLdDocument } from 'jsonld'
 
-// Get directory path
+// Get directory path for ES modules
 const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+const __dirname = path.dirname(__filename)
 
-interface JsonLdContextDocument {
-  '@context': ContextDefinition
-}
+// Define types for context documents
+type JsonLdContextDocument = {
+  '@context'?: Record<string, unknown>
+} & JsonLdDocument
+
+// Source and build directories
+const SOURCE_DIR = path.join(__dirname, 'source')
+const BUILD_DIR = path.join(__dirname, 'build')
 
 function convertAtToDollar(obj: any): any {
   if (typeof obj !== 'object' || obj === null) return obj
@@ -138,84 +143,73 @@ export default context;`
   }
 }
 
-// Main build function
 export async function buildContexts(): Promise<void> {
   try {
-    const sourceDir = join(__dirname, 'source')
-    const buildDir = join(__dirname, 'build')
-
-    console.log('\nSource directory:', sourceDir)
-    console.log('Build directory:', buildDir)
+    console.log('Starting context build process...')
 
     // Ensure build directory exists
-    await fs.mkdir(buildDir, { recursive: true })
+    console.log(`Creating build directory: ${BUILD_DIR}`)
+    await fs.mkdir(BUILD_DIR, { recursive: true })
 
-    // Transform each context file
-    const files = await fs.readdir(sourceDir)
-    console.log('\nFound files:', files)
+    // Get list of source files
+    console.log(`Reading source directory: ${SOURCE_DIR}`)
+    const files = await fs.readdir(SOURCE_DIR)
+    const jsonldFiles = files.filter(f => f.endsWith('.jsonld'))
+    console.log(`Found ${jsonldFiles.length} JSON-LD files:`, jsonldFiles)
 
-    // Filter out .gitkeep and only process .jsonld files
-    const contextFiles = files.filter(f => f.endsWith('.jsonld') && !f.startsWith('.'))
-    console.log('Context files to process:', contextFiles)
+    // Process each context file
+    const exports: string[] = []
+    for (const file of jsonldFiles) {
+      const sourcePath = path.join(SOURCE_DIR, file)
+      const outputName = path.basename(file, '.jsonld')
+      const outputPath = path.join(BUILD_DIR, `${outputName}.ts`)
 
-    if (contextFiles.length === 0) {
-      throw new Error('No .jsonld files found in source directory')
+      try {
+        console.log(`\nProcessing ${file}...`)
+        await processContextFile(sourcePath, outputPath)
+        exports.push(outputName)
+      } catch (error) {
+        console.error(`Failed to process ${file}:`, error)
+        throw error
+      }
     }
 
-    // Process files sequentially for better logging
-    for (const file of contextFiles) {
-      const inputPath = join(sourceDir, file)
-      const outputName = file.replace('.jsonld', '.ts')
-      const outputPath = join(buildDir, outputName)
-      await processContextFile(inputPath, outputPath)
-    }
+    // Generate index file
+    console.log('\nGenerating index.ts...')
+    const indexContent = `// Auto-generated index file
+${exports.map(name => `import ${name} from './${name}'`).join('\n')}
 
-    // Update index.ts with exports
-    const indexPath = join(__dirname, 'index.ts')
-    const exports = contextFiles
-      .map(file => {
-        const name = file.replace('.jsonld', '')
-        const camelName = name.replace(/-./g, x => x[1].toUpperCase())
-        return `export { default as ${camelName}Context } from './build/${name}'`
-      })
-      .join('\n')
+export {
+${exports.map(name => `  ${name},`).join('\n')}
+}
 
-    const indexContent = `/**
- * JSON-LD Context Exports
- * Auto-generated exports will be added here after build
- */
-
-// Export types for external use
 export type { JsonLdDocument, ContextDefinition } from 'jsonld'
-
-// Context exports
-${exports}
 `
 
+    const indexPath = path.join(BUILD_DIR, 'index.ts')
     await fs.writeFile(indexPath, indexContent)
-    console.log('\nUpdated index.ts')
-
-    // Print file size comparison
-    console.log('\nFile size comparison:')
-    for (const file of contextFiles) {
-      const inputPath = join(sourceDir, file)
-      const outputPath = join(buildDir, file.replace('.jsonld', '.ts'))
-      const inputStats = await fs.stat(inputPath)
-      const outputStats = await fs.stat(outputPath)
-      console.log(`\n${file}:`)
-      console.log(`Original: ${(inputStats.size / 1024).toFixed(2)}KB`)
-      console.log(`Transformed: ${(outputStats.size / 1024).toFixed(2)}KB`)
-    }
+    console.log('Build process complete!')
   } catch (error) {
-    console.error('\nBuild error:', error)
+    console.error('Build process failed:', error)
     process.exit(1)
   }
 }
 
-// Run build if called directly
-if (import.meta.url === fileURLToPath(new URL(process.argv[1], 'file:'))) {
+// Run build if this is the main module
+const isMainModule = import.meta.url.endsWith(process.argv[1])
+
+if (isMainModule) {
+  console.log('Starting context build process...')
+  console.log('Source directory:', SOURCE_DIR)
+  console.log('Build directory:', BUILD_DIR)
+
+  process.on('unhandledRejection', (error) => {
+    console.error('Unhandled promise rejection:', error)
+    process.exit(1)
+  })
+
   buildContexts().catch(error => {
-    console.error('\nFatal error:', error)
+    console.error('Fatal error:', error)
     process.exit(1)
   })
 }
