@@ -1,6 +1,7 @@
-// Generated from schema.org.jsonld
-// @ts-ignore - Large type definition, explicit type annotation provided
-export const schema.org: Record<string, unknown> = {
+// Generated from schemaorg.jsonld
+/* eslint-disable */
+// @ts-nocheck - Large type definition
+export const schemaorg = {
   $context: {
     brick: 'https://brickschema.org/schema/Brick#',
     csvw: 'http://www.w3.org/ns/csvw#',

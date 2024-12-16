@@ -1,6 +1,7 @@
 // Generated from epcisOntology.jsonld
-// @ts-ignore - Large type definition, explicit type annotation provided
-export const epcisOntology: Record<string, unknown> = {
+/* eslint-disable */
+// @ts-nocheck - Large type definition
+export const epcisOntology = {
   $context: {
     cbv: 'https://ref.gs1.org/cbv/',
     comment: {
