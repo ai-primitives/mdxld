@@ -63,14 +63,21 @@ async function transformContext(content: string): Promise<TransformOutput> {
 
     // Handle @context specially
     if (parsed['@context']) {
-      if (typeof parsed['@context'] === 'object' && parsed['@context'] !== null) {
-        // If @context is an object, look for @vocab in it
-        const contextObj = parsed['@context'] as Record<string, unknown>
-        if (contextObj['@vocab']) {
+      const contextObj = parsed['@context']
+      rootProps.$context = contextObj
+
+      // Special handling for schema.org context
+      if (typeof contextObj === 'object' && contextObj !== null) {
+        // If this is the schema.org context, use the schema URL as $vocab
+        if ('schema' in contextObj && typeof contextObj.schema === 'string' &&
+            contextObj.schema === 'https://schema.org/') {
+          rootProps.$vocab = 'http://schema.org/'
+        }
+        // For other contexts, look for @vocab
+        else if ('@vocab' in contextObj) {
           rootProps.$vocab = contextObj['@vocab']
         }
       }
-      rootProps.$context = parsed['@context']
     }
 
     // Convert @ to $ in the entire context
