@@ -9,13 +9,31 @@ interface JsonLdContextDocument {
   '@context': ContextDefinition
 }
 
+function convertAtToDollar(obj: any): any {
+  if (typeof obj !== 'object' || obj === null) return obj
+
+  if (Array.isArray(obj)) {
+    return obj.map(convertAtToDollar)
+  }
+
+  const result: any = {}
+  for (const [key, value] of Object.entries(obj)) {
+    const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key
+    result[newKey] = convertAtToDollar(value)
+  }
+  return result
+}
+
 async function transformContext(input: JsonLdContextDocument): Promise<string> {
   // Compact the context using JSON-LD API
   const context = input['@context']
   const compacted = await jsonld.compact({}, context)
 
+  // Convert @ prefixes to $ prefixes
+  const converted = convertAtToDollar(compacted)
+
   // Convert to JSON5 string (more compact than JSON)
-  return JSON5.stringify(compacted, null, 2)
+  return JSON5.stringify(converted, null, 2)
 }
 
 async function processContextFile(filename: string, outputPath: string): Promise<void> {
@@ -51,6 +69,30 @@ export async function buildContexts(): Promise<void> {
       await processContextFile(inputPath, outputPath)
     })
   )
+
+  // Update index.ts with exports
+  const indexPath = join(__dirname, 'index.ts')
+  const exports = contextFiles
+    .map(file => {
+      const name = file.replace('.jsonld', '')
+      const camelName = name.replace(/-./g, x => x[1].toUpperCase())
+      return `export { default as ${camelName}Context } from './build/${name}'`
+    })
+    .join('\n')
+
+  const indexContent = `/**
+ * JSON-LD Context Exports
+ * Auto-generated exports will be added here after build
+ */
+
+// Export types for external use
+export type { JsonLdDocument, ContextDefinition } from 'jsonld'
+
+// Context exports
+${exports}
+`
+
+  await fs.writeFile(indexPath, indexContent)
 }
 
 // Run build if called directly
