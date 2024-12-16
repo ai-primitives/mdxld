@@ -33,6 +33,10 @@ async function ensureDirectories() {
   }
 }
 
+function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
 function convertAtToDollar(obj: any): any {
   if (typeof obj !== 'object' || obj === null) return obj
 
@@ -174,9 +178,9 @@ export async function buildContexts(): Promise<void> {
         const { content } = await processContextFile(sourcePath)
 
         const tsContent = `// Generated from ${file}
-export const context = ${content} as const
-export type Context = typeof context
-export default context`
+export const ${safeIdentifier} = ${content} as const
+export type ${capitalize(safeIdentifier)} = typeof ${safeIdentifier}
+export default ${safeIdentifier}`
 
         const tsFilePath = path.join(BUILD_DIR, `${safeIdentifier}.ts`)
         console.log(`Writing TypeScript file: ${tsFilePath}`)
@@ -191,18 +195,19 @@ export default context`
       }
     }
 
-    const indexContent = `${exports.map(({ safe }) => `import ${safe}Context, { Context as ${safe}ContextType } from './${safe}'`).join('\n')}
+    const indexContent = `// Generated exports for JSON-LD contexts
+${exports.map(({ safe }) => `import { ${safe} } from './${safe}.js'`).join('\n')}
 
 export type {
-  ${exports.map(({ safe }) => `${safe}ContextType`).join(',\n  ')}
+  ${exports.map(({ safe }) => `${capitalize(safe)}`).join(',\n  ')}
 }
 
 export {
-  ${exports.map(({ safe }) => `${safe}Context`).join(',\n  ')}
+  ${exports.map(({ safe }) => safe).join(',\n  ')}
 }
 
 export default {
-  ${exports.map(({ safe }) => `${safe}: ${safe}Context`).join(',\n  ')}
+  ${exports.map(({ safe }) => `${safe}`).join(',\n  ')}
 }`
 
     const indexPath = path.join(BUILD_DIR, 'index.ts')
