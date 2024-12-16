@@ -2,6 +2,7 @@
 /* eslint-disable */
 // @ts-nocheck - Large type definition
 export const epcisContext: Record<string, any> = {
+  $vocab: 'https://ref.gs1.org/epcis/',
   $context: {
     $protected: true,
     $version: 1.1,
@@ -146,6 +147,7 @@ export const epcisContext: Record<string, any> = {
       $container: '@set',
     },
     sourceList: {
+      $vocab: 'https://ref.gs1.org/epcis/',
       $id: 'epcis:sourceList',
       $container: '@set',
       $context: {
@@ -167,6 +169,7 @@ export const epcisContext: Record<string, any> = {
       },
     },
     destinationList: {
+      $vocab: 'https://ref.gs1.org/epcis/',
       $id: 'epcis:destinationList',
       $container: '@set',
       $context: {
@@ -256,6 +259,7 @@ export const epcisContext: Record<string, any> = {
       $container: '@set',
     },
     bizTransactionList: {
+      $vocab: 'https://ref.gs1.org/epcis/',
       $id: 'epcis:bizTransactionList',
       $container: '@set',
       $context: {
@@ -315,6 +319,7 @@ export const epcisContext: Record<string, any> = {
       $container: '@set',
     },
     sensorElementList: {
+      $vocab: 'https://ref.gs1.org/epcis/',
       $id: 'epcis:sensorElementList',
       $container: '@set',
       $context: {
@@ -342,6 +347,7 @@ export const epcisContext: Record<string, any> = {
         },
         type: '@type',
         sensorMetadata: {
+          $vocab: 'https://ref.gs1.org/epcis/',
           $id: 'epcis:sensorMetadata',
           $context: {
             $protected: true,
@@ -361,6 +367,7 @@ export const epcisContext: Record<string, any> = {
           },
         },
         sensorReport: {
+          $vocab: 'https://ref.gs1.org/epcis/',
           $id: 'epcis:sensorReport',
           $context: {
             $protected: true,
@@ -533,6 +540,7 @@ export const epcisContext: Record<string, any> = {
       },
     },
     errorDeclaration: {
+      $vocab: 'https://ref.gs1.org/epcis/',
       $id: 'epcis:errorDeclaration',
       $context: {
         $protected: true,

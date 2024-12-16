@@ -2,6 +2,7 @@
 /* eslint-disable */
 // @ts-nocheck - Large type definition
 export const epcisOntology: Record<string, any> = {
+  $vocab: 'https://ref.gs1.org/epcis/',
   $context: {
     cbv: 'https://ref.gs1.org/cbv/',
     comment: {

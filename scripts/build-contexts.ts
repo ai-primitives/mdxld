@@ -35,6 +35,9 @@ function transformPrefixes(obj: unknown): unknown {
     // Handle EPCIS context
     if ('epcis' in context && typeof context.epcis === 'string') {
       result.$vocab = context.epcis;
+      // Ensure the epcis property is preserved in the context
+      if (!result.$context) result.$context = {};
+      (result.$context as Record<string, unknown>).epcis = context.epcis;
     }
   }
 
