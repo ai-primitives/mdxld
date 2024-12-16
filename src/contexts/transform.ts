@@ -53,33 +53,34 @@ function convertAtToDollar(obj: any): any {
 
 async function transformContext(content: string): Promise<TransformOutput> {
   console.log('Starting context transformation...')
-  console.log('Content length:', content.length)
-  console.log('First 100 characters:', content.slice(0, 100))
 
   try {
-    console.log('Attempting to parse JSON content...')
     const parsed = JSON.parse(content) as JsonLdContextDocument
     console.log('Successfully parsed JSON')
-    console.log('Root keys:', Object.keys(parsed))
 
-    console.log('Converting @ to $ in context...')
-    const converted = convertAtToDollar(parsed)
-    console.log('Successfully converted @ to $')
-    console.log('Converted root keys:', Object.keys(converted))
+    // Extract root level properties before transformation
+    const rootProps: Record<string, unknown> = {}
 
-    if (!converted.$context && converted.context) {
-      console.log('Moving context to $context...')
-      converted.$context = converted.context
-      delete converted.context
+    // Handle @context specially
+    if (parsed['@context']) {
+      if (typeof parsed['@context'] === 'object' && parsed['@context'] !== null) {
+        // If @context is an object, look for @vocab in it
+        const contextObj = parsed['@context'] as Record<string, unknown>
+        if (contextObj['@vocab']) {
+          rootProps.$vocab = contextObj['@vocab']
+        }
+      }
+      rootProps.$context = parsed['@context']
     }
 
-    const specialKeys = ['vocab', 'version', 'base']
-    for (const key of specialKeys) {
-      if (converted[key]) {
-        console.log(`Converting ${key} to $${key}...`)
-        converted[`$${key}`] = converted[key]
-        delete converted[key]
-      }
+    // Convert @ to $ in the entire context
+    console.log('Converting @ to $ in context...')
+    const converted = convertAtToDollar(parsed)
+
+    // Create final object with root properties
+    const finalObject = {
+      ...rootProps,
+      ...converted
     }
 
     console.log('Preparing JSON5 options...')
@@ -90,10 +91,8 @@ async function transformContext(content: string): Promise<TransformOutput> {
     }
 
     console.log('Stringifying to JSON5...')
-    const output = JSON5.stringify(converted, json5Options)
+    const output = JSON5.stringify(finalObject, json5Options)
     console.log('Successfully stringified to JSON5')
-    console.log('Output length:', output.length)
-    console.log('First 100 characters of output:', output.slice(0, 100))
 
     return {
       content: output,
