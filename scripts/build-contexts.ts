@@ -23,11 +23,18 @@ function transformPrefixes(obj: unknown): unknown {
 
   const result: Record<string, unknown> = Array.isArray(obj) ? [] : {};
 
-  // Handle special case for schema.org context
+  // Handle special cases for different contexts
   if (!Array.isArray(obj) && '@context' in obj && typeof obj['@context'] === 'object' && obj['@context'] !== null) {
     const context = obj['@context'] as Record<string, unknown>;
+
+    // Handle schema.org context
     if ('schema' in context && context.schema === 'https://schema.org/') {
       result.$vocab = 'http://schema.org/';
+    }
+
+    // Handle EPCIS context
+    if ('@vocab' in context) {
+      result.$vocab = context['@vocab'];
     }
   }
 

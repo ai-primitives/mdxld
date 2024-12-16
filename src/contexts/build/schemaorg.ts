@@ -2,6 +2,7 @@
 /* eslint-disable */
 // @ts-nocheck - Large type definition
 export const schemaorg: Record<string, any> = {
+  $vocab: 'http://schema.org/',
   $context: {
     brick: 'https://brickschema.org/schema/Brick#',
     csvw: 'http://www.w3.org/ns/csvw#',
