@@ -1,19 +1,19 @@
-import { promises as fs } from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-import jsonld from 'jsonld'
+import fs from 'fs/promises'
+import path from 'path'
 import JSON5 from 'json5'
-import type { JsonLdDocument } from 'jsonld'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-
-type JsonLdContextDocument = {
+interface JsonLdContextDocument {
   '@context'?: Record<string, unknown>
-} & JsonLdDocument
+  [key: string]: unknown
+}
 
-const SOURCE_DIR = path.join(__dirname, 'source')
-const BUILD_DIR = path.join(__dirname, 'build')
+interface TransformOutput {
+  content: string
+  size: number
+}
+
+const SOURCE_DIR = path.join(process.cwd(), 'src', 'contexts', 'source')
+const BUILD_DIR = path.join(process.cwd(), 'src', 'contexts', 'build')
 
 function convertAtToDollar(obj: any): any {
   if (typeof obj !== 'object' || obj === null) return obj
@@ -36,166 +36,116 @@ function convertAtToDollar(obj: any): any {
   return result
 }
 
-async function transformContext(input: JsonLdContextDocument): Promise<[string, any]> {
-  try {
-    console.log('\nTransforming context...')
-    let contextSize: number
-    let contextObj: any
+async function transformContext(contextDoc: JsonLdContextDocument): Promise<TransformOutput> {
+  const contextObj = contextDoc['@context'] || contextDoc
 
-    try {
-      contextObj = input['@context']
-        ? (typeof input['@context'] === 'object' ? input['@context'] : input)
-        : input
-
-      const contextStr = JSON.stringify(contextObj)
-      contextSize = contextStr.length
-      console.log(`Input context size: ${contextSize} bytes`)
-      console.log('Context structure:', Object.keys(contextObj).join(', '))
-
-      if (!contextObj || typeof contextObj !== 'object') {
-        throw new Error('Invalid context structure')
-      }
-
-      console.log('Context @vocab:', contextObj['@vocab'])
-      console.log('Context epcis prefix:', contextObj['epcis'])
-    } catch (e) {
-      console.error('Error processing context:', e)
-      throw e
+  const rootProps = Object.entries(contextObj).reduce((acc, [key, value]) => {
+    if (key.startsWith('@')) {
+      acc[key.replace('@', '$')] = value
     }
+    return acc
+  }, {} as Record<string, unknown>)
 
-    console.log('\nConverting prefixes...')
-    let converted
-    try {
-      const contextCopy = JSON.parse(JSON.stringify(contextObj))
-
-      const rootProps = {
-        $vocab: contextCopy['epcis'] || contextCopy['@vocab'] || '',
-        $version: contextCopy['@version'] || '1.0'
-      }
-
-      console.log('Root properties:', JSON.stringify(rootProps))
-
-      delete contextCopy['@vocab']
-      delete contextCopy['@version']
-
-      converted = {
-        ...rootProps,
-        ...convertAtToDollar(contextCopy)
-      }
-
-      if (!converted || typeof converted !== 'object') {
-        throw new Error('Invalid conversion result')
-      }
-
-      console.log('Prefix conversion complete')
-      console.log('Converted structure:', Object.keys(converted).join(', '))
-    } catch (e) {
-      console.error('Error converting prefixes:', e)
-      throw e
+  const converted = Object.entries(contextObj).reduce((acc, [key, value]) => {
+    const newKey = key.startsWith('@') ? key.replace('@', '$') : key
+    if (typeof value === 'object' && value !== null) {
+      acc[newKey] = Object.entries(value as Record<string, unknown>).reduce((innerAcc, [k, v]) => {
+        const newInnerKey = k.startsWith('@') ? k.replace('@', '$') : k
+        innerAcc[newInnerKey] = v
+        return innerAcc
+      }, {} as Record<string, unknown>)
+    } else {
+      acc[newKey] = value
     }
+    return acc
+  }, {} as Record<string, unknown>)
 
-    console.log('\nGenerating JSON5...')
-    let json5Output: string
-    try {
-      const json5Options = {
-        space: '',
-        quote: '"',
-        replacer: (key: string, value: any) => {
-          if (typeof value === 'string' && value.includes('://')) {
-            return value
-          }
-          if (typeof value === 'string' && /^[a-zA-Z$_][a-zA-Z0-9$_]*$/.test(value)) {
-            return value
-          }
-          return value
-        }
+  const json5Options = {
+    space: 2,
+    quote: '"',
+    replacer: (key: string, value: unknown) => {
+      if (typeof value === 'string' && value.includes('://')) {
+        return value
       }
-
-      const filteredContext = Object.fromEntries(
-        Object.entries(converted).filter(([key]) => !['$vocab', '$version'].includes(key))
-      )
-
-      json5Output = JSON5.stringify(filteredContext, json5Options.replacer)
-        .replace(/"(\w+)":/g, '$1:')
-        .replace(/,(?=\w)/g, ',\n')
-
-      const outputSize = json5Output.length
-      console.log(`Output size: ${outputSize} bytes (${Math.round((outputSize / contextSize) * 100)}% of original)`)
-    } catch (e) {
-      console.error('Error generating JSON5:', e)
-      throw e
+      return value
     }
+  }
 
-    return [json5Output, converted]
-  } catch (error) {
-    console.error('Error in transformContext:', error)
-    throw error
+  const filteredContext = { ...converted }
+
+  const json5Output = JSON5.stringify(filteredContext, json5Options)
+
+  return {
+    content: json5Output,
+    size: json5Output.length
   }
 }
 
-async function processContextFile(filepath: string, filename: string): Promise<void> {
-  console.log(`\nProcessing ${filepath}...`)
-  console.log('Reading file...')
-
+async function processContextFile(filePath: string): Promise<TransformOutput> {
+  console.log(`Processing context file: ${filePath}`)
   try {
-    const content = await fs.readFile(filepath, 'utf-8')
-    console.log(`File content size: ${content.length} bytes`)
+    const fileContent = await fs.readFile(filePath, 'utf-8')
+    console.log(`Successfully read file: ${filePath}`)
+    console.log(`File size: ${fileContent.length} bytes`)
 
-    console.log('Parsing JSON-LD...')
-    const contextDoc = JSON.parse(content)
-    console.log('JSON structure:', Object.keys(contextDoc).join(', '))
-    console.log('Context keys:', JSON.stringify(Object.keys(contextDoc['@context'] || contextDoc), null, 2))
+    let contextData: JsonLdContextDocument
+    try {
+      contextData = JSON.parse(fileContent)
+      console.log('Successfully parsed JSON')
+    } catch (parseError) {
+      console.error(`Error parsing JSON from ${filePath}:`, parseError)
+      throw parseError
+    }
 
-    console.log('Starting transformation...')
-    const [transformed, converted] = await transformContext(contextDoc)
-    console.log('Transformation complete')
-
-    const outputPath = path.join(BUILD_DIR, filename.replace('.jsonld', '.ts'))
-    const output = `// Auto-generated from ${filename}
-const context = {
-  $vocab: ${JSON.stringify(converted.$vocab || '')},
-  $version: ${JSON.stringify(converted.$version || '1.0')},
-  ...${transformed}
-} as const;
-export default context;`
-
-    console.log('Writing output...')
-    await fs.mkdir(BUILD_DIR, { recursive: true })
-    await fs.writeFile(outputPath, output, 'utf-8')
-    console.log(`Generated ${outputPath}\n`)
-  } catch (error) {
-    console.error(`Error processing file ${filepath}:`, error)
-    throw error
+    try {
+      const output = await transformContext(contextData)
+      console.log(`Successfully transformed context from ${filePath}`)
+      return output
+    } catch (transformError) {
+      console.error(`Error transforming context from ${filePath}:`, transformError)
+      throw transformError
+    }
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : String(error)
+    console.error(`Error processing file ${filePath}:`, errorMessage)
+    throw new Error(`Failed to process context file ${filePath}: ${errorMessage}`)
   }
 }
 
 export async function buildContexts(): Promise<void> {
+  console.log('\nStarting context build process...')
+
   try {
-    console.log('Starting context build process...')
-
-    console.log(`Creating build directory: ${BUILD_DIR}`)
     await fs.mkdir(BUILD_DIR, { recursive: true })
+    console.log(`Created build directory: ${BUILD_DIR}`)
 
-    console.log(`Reading source directory: ${SOURCE_DIR}`)
-    const files = await fs.readdir(SOURCE_DIR)
-    const jsonldFiles = files.filter(f => f.endsWith('.jsonld'))
-    console.log(`Found ${jsonldFiles.length} JSON-LD files:`, jsonldFiles)
+    const jsonldFiles = await fs.readdir(SOURCE_DIR)
+    const contextFiles = jsonldFiles.filter(file => file.endsWith('.jsonld'))
+    console.log('Found context files:', contextFiles)
 
-    const exports: Array<{ original: string; safe: string }> = []
-    for (const file of jsonldFiles) {
+    const exports: Array<{ safe: string; original: string }> = []
+
+    for (const file of contextFiles) {
       const sourcePath = path.join(SOURCE_DIR, file)
       const baseName = path.basename(file, '.jsonld')
+      console.log(`\nProcessing ${baseName}...`)
+
       const safeIdentifier = baseName
         .replace(/[.-]/g, '_')
         .toLowerCase()
+      console.log(`Generated safe identifier: ${safeIdentifier}`)
+
       const outputPath = path.join(BUILD_DIR, `${safeIdentifier}.ts`)
+      console.log(`Output path: ${outputPath}`)
 
       try {
-        console.log(`\nProcessing ${file}...`)
-        await processContextFile(sourcePath, file)
-        exports.push({ original: baseName, safe: safeIdentifier })
+        const { content } = await processContextFile(sourcePath)
+        const tsContent = `// Auto-generated from ${file}\nexport default ${content}\n`
+        await fs.writeFile(outputPath, tsContent, 'utf-8')
+        console.log(`Successfully generated ${outputPath}`)
+        exports.push({ safe: safeIdentifier, original: baseName })
       } catch (error) {
-        console.error(`Failed to process ${file}:`, error)
+        console.error(`Error processing ${file}:`, error)
         throw error
       }
     }
@@ -210,30 +160,10 @@ ${exports.map(({ safe }) => `  ${safe}Context,`).join('\n')}
 
 export type { JsonLdDocument, ContextDefinition } from 'jsonld'
 `
-
-    const indexPath = path.join(BUILD_DIR, 'index.ts')
-    await fs.writeFile(indexPath, indexContent)
+    await fs.writeFile(path.join(BUILD_DIR, 'index.ts'), indexContent, 'utf-8')
     console.log('Build process complete!')
   } catch (error) {
     console.error('Build process failed:', error)
-    process.exit(1)
+    throw error
   }
-}
-
-const isMainModule = import.meta.url.endsWith(process.argv[1])
-
-if (isMainModule) {
-  console.log('Starting context build process...')
-  console.log('Source directory:', SOURCE_DIR)
-  console.log('Build directory:', BUILD_DIR)
-
-  process.on('unhandledRejection', (error) => {
-    console.error('Unhandled promise rejection:', error)
-    process.exit(1)
-  })
-
-  buildContexts().catch(error => {
-    console.error('Fatal error:', error)
-    process.exit(1)
-  })
 }
