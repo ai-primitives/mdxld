@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { parse } from './ast'
-import type { Root, Heading, Text } from 'mdast'
+import type { Heading, Text } from 'mdast'
 
 describe('mdxld/ast', () => {
   it('should parse MDX with AST', () => {

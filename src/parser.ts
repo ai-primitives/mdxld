@@ -120,7 +120,7 @@ export function parse(mdx: string, options: ParseOptions = {}): MDXLD {
       content
     }
   } catch (error) {
-    throw new Error('Failed to parse YAML frontmatter')
+    throw new Error(`Failed to parse YAML frontmatter: ${error instanceof Error ? error.message : String(error)}`)
   }
 }
 
