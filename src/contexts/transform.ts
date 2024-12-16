@@ -28,7 +28,9 @@ function convertAtToDollar(obj: any): any {
   const result: any = {}
   for (const [key, value] of Object.entries(obj)) {
     const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key
-    result[newKey] = convertAtToDollar(value)
+    const newValue = typeof value === 'object' ? convertAtToDollar(value) :
+                    typeof value === 'string' && value.startsWith('@') ? `$${value.slice(1)}` : value
+    result[newKey] = newValue
   }
   return result
 }
@@ -51,31 +53,11 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
       throw e
     }
 
-    // Create a minimal document with the context
-    const doc = {
-      '@context': contextObj,
-      '@type': 'http://schema.org/Thing'
-    }
-
-    console.log('\nCompacting document...')
-    let compacted
-    try {
-      compacted = await jsonld.compact(doc, contextObj, {
-        documentLoader: jsonld.documentLoaders.node(),
-        skipExpansion: true,
-        compactArrays: true
-      })
-      console.log('Compaction complete')
-    } catch (e) {
-      console.error('Error compacting document:', e)
-      throw e
-    }
-
-    // Convert @ prefixes to $ prefixes
+    // Convert @ prefixes to $ prefixes directly on the context object
     console.log('\nConverting prefixes...')
     let converted
     try {
-      converted = convertAtToDollar(compacted['@context'] || compacted)
+      converted = convertAtToDollar(contextObj)
       console.log('Prefix conversion complete')
     } catch (e) {
       console.error('Error converting prefixes:', e)
@@ -86,23 +68,14 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
     console.log('\nGenerating JSON5...')
     let json5Output: string
     try {
-      // Use more compact JSON5 formatting
+      // Use more compact JSON5 formatting but preserve URLs
       const json5Options = {
         space: '',  // No indentation for maximum compression
         quote: '"',
         replacer: (key: string, value: any) => {
-          if (typeof value === 'string') {
-            // Remove quotes from valid identifiers and common URL prefixes
-            if (/^[a-zA-Z$_][a-zA-Z0-9$_]*$/.test(value)) {
-              return value
-            }
-            // Optimize common URL patterns
-            if (value.startsWith('http://schema.org/')) {
-              return value.replace('http://schema.org/', 'schema:')
-            }
-            if (value.startsWith('http://www.w3.org/')) {
-              return value.replace('http://www.w3.org/', 'w3:')
-            }
+          // Remove quotes from valid identifiers, but preserve URLs
+          if (typeof value === 'string' && /^[a-zA-Z$_][a-zA-Z0-9$_]*$/.test(value) && !value.includes('://')) {
+            return value
           }
           return value
         }
