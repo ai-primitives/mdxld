@@ -148,8 +148,6 @@ export const epcisContext: Record<string, any> = {
     },
     sourceList: {
       $vocab: 'https://ref.gs1.org/epcis/',
-      $id: 'epcis:sourceList',
-      $container: '@set',
       $context: {
         $protected: true,
         epcis: 'https://ref.gs1.org/epcis/',
@@ -167,11 +165,11 @@ export const epcisContext: Record<string, any> = {
           },
         },
       },
+      $id: 'epcis:sourceList',
+      $container: '@set',
     },
     destinationList: {
       $vocab: 'https://ref.gs1.org/epcis/',
-      $id: 'epcis:destinationList',
-      $container: '@set',
       $context: {
         $protected: true,
         epcis: 'https://ref.gs1.org/epcis/',
@@ -189,6 +187,8 @@ export const epcisContext: Record<string, any> = {
           },
         },
       },
+      $id: 'epcis:destinationList',
+      $container: '@set',
     },
     persistentDisposition: {
       $id: 'epcis:persistentDisposition',
@@ -260,8 +260,6 @@ export const epcisContext: Record<string, any> = {
     },
     bizTransactionList: {
       $vocab: 'https://ref.gs1.org/epcis/',
-      $id: 'epcis:bizTransactionList',
-      $container: '@set',
       $context: {
         $protected: true,
         epcis: 'https://ref.gs1.org/epcis/',
@@ -286,6 +284,8 @@ export const epcisContext: Record<string, any> = {
           },
         },
       },
+      $id: 'epcis:bizTransactionList',
+      $container: '@set',
     },
     parentID: {
       $id: 'epcis:parentID',
@@ -320,8 +320,6 @@ export const epcisContext: Record<string, any> = {
     },
     sensorElementList: {
       $vocab: 'https://ref.gs1.org/epcis/',
-      $id: 'epcis:sensorElementList',
-      $container: '@set',
       $context: {
         $protected: true,
         epcis: 'https://ref.gs1.org/epcis/',
@@ -348,7 +346,6 @@ export const epcisContext: Record<string, any> = {
         type: '@type',
         sensorMetadata: {
           $vocab: 'https://ref.gs1.org/epcis/',
-          $id: 'epcis:sensorMetadata',
           $context: {
             $protected: true,
             epcis: 'https://ref.gs1.org/epcis/',
@@ -365,10 +362,10 @@ export const epcisContext: Record<string, any> = {
               $type: '@id',
             },
           },
+          $id: 'epcis:sensorMetadata',
         },
         sensorReport: {
           $vocab: 'https://ref.gs1.org/epcis/',
-          $id: 'epcis:sensorReport',
           $context: {
             $protected: true,
             epcis: 'https://ref.gs1.org/epcis/',
@@ -536,12 +533,14 @@ export const epcisContext: Record<string, any> = {
               $type: 'xsd:double',
             },
           },
+          $id: 'epcis:sensorReport',
         },
       },
+      $id: 'epcis:sensorElementList',
+      $container: '@set',
     },
     errorDeclaration: {
       $vocab: 'https://ref.gs1.org/epcis/',
-      $id: 'epcis:errorDeclaration',
       $context: {
         $protected: true,
         epcis: 'https://ref.gs1.org/epcis/',
@@ -563,6 +562,7 @@ export const epcisContext: Record<string, any> = {
           $type: 'xsd:dateTimeStamp',
         },
       },
+      $id: 'epcis:errorDeclaration',
     },
     eventID: '@id',
     creationDate: {
