@@ -35,7 +35,7 @@ function generateTypeScriptContent(constName: string, data: unknown): string {
   return `// Generated from ${constName}.jsonld
 /* eslint-disable */
 // @ts-nocheck - Large type definition
-export const ${constName} = ${json5.stringify(data, null, 2)} as const;
+export const ${constName}: Record<string, any> = ${json5.stringify(data, null, 2)} as const;
 `;
 }
 
