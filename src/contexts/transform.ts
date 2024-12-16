@@ -123,6 +123,18 @@ async function processContextFile(filePath: string): Promise<TransformOutput> {
   }
 }
 
+async function copySourceFile(sourcePath: string, buildPath: string): Promise<void> {
+  console.log(`Copying ${sourcePath} to ${buildPath}...`)
+  try {
+    const content = await fs.readFile(sourcePath, 'utf-8')
+    await fs.writeFile(buildPath, content)
+    console.log(`Successfully copied ${sourcePath}`)
+  } catch (error) {
+    console.error(`Error copying ${sourcePath}:`, error)
+    throw error
+  }
+}
+
 export async function buildContexts(): Promise<void> {
   console.log('\nStarting context build process...')
 
@@ -150,6 +162,9 @@ export async function buildContexts(): Promise<void> {
         .toLowerCase()
 
       try {
+        const buildJsonLdPath = path.join(BUILD_DIR, file)
+        await copySourceFile(sourcePath, buildJsonLdPath)
+
         const { content } = await processContextFile(sourcePath)
 
         const tsContent = `// Generated from ${file}
