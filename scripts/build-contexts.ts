@@ -23,6 +23,14 @@ function transformPrefixes(obj: unknown): unknown {
 
   const result: Record<string, unknown> = Array.isArray(obj) ? [] : {};
 
+  // Handle special case for schema.org context
+  if (!Array.isArray(obj) && '@context' in obj && typeof obj['@context'] === 'object' && obj['@context'] !== null) {
+    const context = obj['@context'] as Record<string, unknown>;
+    if ('schema' in context && context.schema === 'https://schema.org/') {
+      result.$vocab = 'http://schema.org/';
+    }
+  }
+
   for (const [key, value] of Object.entries(obj as Record<string, unknown>)) {
     const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key;
     result[newKey] = transformPrefixes(value);

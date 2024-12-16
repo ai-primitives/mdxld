@@ -64,13 +64,11 @@ async function transformContext(content: string): Promise<TransformOutput> {
     // Handle @context specially
     if (parsed['@context']) {
       const contextObj = parsed['@context']
-      rootProps.$context = contextObj
 
       // Special handling for schema.org context
       if (typeof contextObj === 'object' && contextObj !== null) {
-        // If this is the schema.org context, use the schema URL as $vocab
-        if ('schema' in contextObj && typeof contextObj.schema === 'string' &&
-            contextObj.schema === 'https://schema.org/') {
+        // If this is the schema.org context (has schema key with https://schema.org/ value)
+        if ('schema' in contextObj && contextObj.schema === 'https://schema.org/') {
           rootProps.$vocab = 'http://schema.org/'
         }
         // For other contexts, look for @vocab
@@ -78,17 +76,30 @@ async function transformContext(content: string): Promise<TransformOutput> {
           rootProps.$vocab = contextObj['@vocab']
         }
       }
+
+      // Store the context after converting @ to $
+      rootProps.$context = convertAtToDollar(contextObj)
     }
 
     // Convert @ to $ in the entire context
     console.log('Converting @ to $ in context...')
     const converted = convertAtToDollar(parsed)
 
-    // Create final object with root properties
+    // Remove @context from converted since we've already handled it
+    if ('$context' in converted) {
+      delete converted.$context
+    }
+    if ('@context' in converted) {
+      delete converted['@context']
+    }
+
+    // Create final object with root properties first
     const finalObject = {
       ...rootProps,
       ...converted
     }
+
+    console.log('Final object:', JSON.stringify(finalObject, null, 2))
 
     console.log('Preparing JSON5 options...')
     const json5Options = {
