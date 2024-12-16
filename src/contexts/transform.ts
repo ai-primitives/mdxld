@@ -32,28 +32,33 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
   try {
     console.log('\nTransforming context...')
     let contextSize: number
+    let contextObj: any
+
+    // Extract context object, handling both direct and wrapped contexts
     try {
-      const contextStr = JSON.stringify(input['@context'])
+      contextObj = input['@context'] ? input['@context'] : input
+      const contextStr = JSON.stringify(contextObj)
       contextSize = contextStr.length
       console.log(`Input context size: ${contextSize} bytes`)
-      console.log('Context structure:', Object.keys(input['@context']).join(', '))
+      console.log('Context structure:', Object.keys(contextObj).join(', '))
     } catch (e) {
-      console.error('Error stringifying context:', e)
+      console.error('Error processing context:', e)
       throw e
     }
 
     // Create a minimal document with the context
     const doc = {
-      '@context': input['@context'],
+      '@context': contextObj,
       '@type': 'http://schema.org/Thing'
     }
 
     console.log('\nCompacting document...')
     let compacted
     try {
-      compacted = await jsonld.compact(doc, input['@context'], {
+      compacted = await jsonld.compact(doc, contextObj, {
         documentLoader: jsonld.documentLoaders.node(),
-        skipExpansion: true
+        skipExpansion: true,
+        compactArrays: true
       })
       console.log('Compaction complete')
     } catch (e) {
@@ -65,7 +70,7 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
     console.log('\nConverting prefixes...')
     let converted
     try {
-      converted = convertAtToDollar(compacted)
+      converted = convertAtToDollar(compacted['@context'] || compacted)
       console.log('Prefix conversion complete')
     } catch (e) {
       console.error('Error converting prefixes:', e)
@@ -99,8 +104,21 @@ async function processContextFile(filename: string, outputPath: string): Promise
     console.log(`File content size: ${content.length} bytes`)
 
     console.log('Parsing JSON-LD...')
-    const jsonldContent = JSON.parse(content) as JsonLdContextDocument
-    console.log('JSON-LD parsed successfully')
+    let jsonldContent
+    try {
+      jsonldContent = JSON.parse(content)
+      console.log('JSON structure:', Object.keys(jsonldContent))
+
+      // Handle both direct context and wrapped context
+      const contextDoc: JsonLdContextDocument = jsonldContent['@context']
+        ? { '@context': jsonldContent['@context'] }
+        : jsonldContent
+
+      console.log('Context keys:', Object.keys(contextDoc['@context']))
+    } catch (e) {
+      console.error('Error parsing JSON-LD:', e)
+      throw e
+    }
 
     console.log('Starting transformation...')
     const transformed = await transformContext(jsonldContent)
