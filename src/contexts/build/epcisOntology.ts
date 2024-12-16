@@ -1,7 +1,7 @@
 // Generated from epcisOntology.jsonld
 /* eslint-disable */
 // @ts-nocheck - Large type definition
-export const epcisOntology = {
+export const epcisOntology: Record<string, any> = {
   $context: {
     cbv: 'https://ref.gs1.org/cbv/',
     comment: {

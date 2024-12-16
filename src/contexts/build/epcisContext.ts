@@ -1,7 +1,7 @@
 // Generated from epcisContext.jsonld
 /* eslint-disable */
 // @ts-nocheck - Large type definition
-export const epcisContext = {
+export const epcisContext: Record<string, any> = {
   $context: {
     $protected: true,
     $version: 1.1,

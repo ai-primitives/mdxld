@@ -1,7 +1,7 @@
 // Generated from schemaorg.jsonld
 /* eslint-disable */
 // @ts-nocheck - Large type definition
-export const schemaorg = {
+export const schemaorg: Record<string, any> = {
   $context: {
     brick: 'https://brickschema.org/schema/Brick#',
     csvw: 'http://www.w3.org/ns/csvw#',
