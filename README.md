@@ -1,31 +1,92 @@
 # mdxld
 
-[![npm version](https://badge.fury.io/js/%40ai-primitives%2Fpackage-template.svg)](https://www.npmjs.com/package/@ai-primitives/package-template)
+[![npm version](https://badge.fury.io/js/mdxld.svg)](https://www.npmjs.com/package/mdxld)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A modern TypeScript package template with Vitest, Prettier, ESLint, and semantic versioning.
+A modern TypeScript package for Markdown & MDX parsing with integrated YAML-LD frontmatter support. Parse MDX documents with type-safe YAML-LD frontmatter and optional AST support.
 
 ## Features
 
-- 🚀 TypeScript for type safety and modern JavaScript features
-- ⚡️ Vitest for fast, modern testing
-- 🎨 Prettier for consistent code formatting
-- 🔍 ESLint for code quality
-- 📦 Semantic versioning with automated releases
-- 🔄 GitHub Actions for CI/CD
+- 🔒 Full YAML-LD support in frontmatter with type-safe parsing
+- 🔄 Support for both @ and $ property prefixes ($ preferred)
+- 🌳 Optional AST parsing with common remark plugins
+- 🔗 Optional Linked Data $context / $type enrichment
+- 📦 Separate entry points for core and AST functionality
+- 🚀 Built with TypeScript for type safety
 
 ## Installation
 
 ```bash
-pnpm add @ai-primitives/package-template
+pnpm add mdxld
 ```
 
 ## Usage
 
-```typescript
-import { add } from '@ai-primitives/package-template'
+### Basic Usage
 
-const result = add(1, 2) // returns 3
+```typescript
+import { parse, stringify } from 'mdxld'
+
+const mdx = parse(`---
+$type: 'https://mdx.org.ai/Document'
+$context: 'https://schema.org'
+title: 'My Document'
+description: 'A sample document'
+author: 'John Doe'
+---
+
+# Hello World
+`)
+
+console.log(mdx)
+// Output:
+// {
+//   type: 'https://mdx.org.ai/Document',
+//   context: 'https://schema.org',
+//   data: {
+//     title: 'My Document',
+//     description: 'A sample document',
+//     author: 'John Doe'
+//   },
+//   content: '# Hello World\n'
+// }
+```
+
+### AST Support
+
+For AST parsing with remark plugins:
+
+```typescript
+import { parse } from 'mdxld/ast'
+
+const mdx = parse(`---
+$type: 'https://mdx.org.ai/Document'
+title: 'My Document'
+---
+
+# Hello World
+`)
+
+// Includes AST from remark parsing
+console.log(mdx.ast)
+```
+
+### Type Definitions
+
+```typescript
+interface MDXLD {
+  id?: string
+  type?: string
+  context?: string | Record<string, unknown>
+  language?: string
+  base?: string
+  vocab?: string
+  list?: unknown[]
+  set?: Set<unknown>
+  reverse?: boolean
+  data: Record<string, unknown>
+  content: string
+}
 ```
 
 ## Development
@@ -37,22 +98,13 @@ pnpm install
 # Run tests
 pnpm test
 
-# Run tests in watch mode
-pnpm test:watch
-
 # Build the package
 pnpm build
 
-# Lint the code
-pnpm lint
-
-# Format the code
+# Format and lint
 pnpm format
+pnpm lint
 ```
-
-## Contributing
-
-Please read our [Contributing Guide](./CONTRIBUTING.md) to learn about our development process and how to propose bugfixes and improvements.
 
 ## License
 
@@ -62,7 +114,8 @@ MIT © [AI Primitives](https://mdx.org.ai)
 
 This package uses the following key dependencies:
 
-- TypeScript for static typing
-- Vitest for testing
-- ESLint for linting
-- Prettier for code formatting
+- yaml: YAML parsing and stringification
+- remark-mdx: MDX parsing support
+- remark-gfm: GitHub Flavored Markdown support
+- remark-frontmatter: Frontmatter parsing
+- unified: Unified text processing
