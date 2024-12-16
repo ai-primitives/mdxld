@@ -2,10 +2,11 @@ import { promises as fs } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import JSON5 from 'json5'
+import { JsonLdContext, JsonValue, TransformedContext } from './types'
 
 interface JsonLdContextDocument {
-  '@context'?: Record<string, unknown>
-  [key: string]: unknown
+  '@context'?: Record<string, JsonValue>
+  [key: string]: JsonValue | undefined
 }
 
 interface TransformOutput {
@@ -37,16 +38,18 @@ function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-function convertAtToDollar(obj: Record<string, unknown>): Record<string, unknown> {
-  if (typeof obj !== 'object' || obj === null) return obj as Record<string, unknown>
-
-  if (Array.isArray(obj)) {
-    return obj.map(item => convertAtToDollar(item as Record<string, unknown>))
+function convertAtToDollar(obj: JsonValue): JsonValue {
+  if (typeof obj !== 'object' || obj === null) {
+    return obj
   }
 
-  return Object.entries(obj).reduce((acc: Record<string, unknown>, [key, value]) => {
+  if (Array.isArray(obj)) {
+    return obj.map(item => convertAtToDollar(item))
+  }
+
+  return Object.entries(obj).reduce((acc: Record<string, JsonValue>, [key, value]) => {
     const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key
-    acc[newKey] = convertAtToDollar(value as Record<string, unknown>)
+    acc[newKey] = convertAtToDollar(value)
     return acc
   }, {})
 }
@@ -58,34 +61,25 @@ async function transformContext(content: string): Promise<TransformOutput> {
     const parsed = JSON.parse(content) as JsonLdContextDocument
     console.log('Successfully parsed JSON')
 
-    // Extract root level properties before transformation
-    const rootProps: Record<string, unknown> = {}
+    const rootProps: Record<string, JsonValue> = {}
 
-    // Handle @context specially
     if (parsed['@context']) {
       const contextObj = parsed['@context']
 
-      // Special handling for schema.org context
       if (typeof contextObj === 'object' && contextObj !== null) {
-        // If this is the schema.org context (has schema key with https://schema.org/ value)
         if ('schema' in contextObj && contextObj.schema === 'https://schema.org/') {
           rootProps.$vocab = 'http://schema.org/'
-        }
-        // For other contexts, look for @vocab
-        else if ('@vocab' in contextObj) {
+        } else if ('@vocab' in contextObj) {
           rootProps.$vocab = contextObj['@vocab']
         }
       }
 
-      // Store the context after converting @ to $
       rootProps.$context = convertAtToDollar(contextObj)
     }
 
-    // Convert @ to $ in the entire context
     console.log('Converting @ to $ in context...')
     const converted = convertAtToDollar(parsed)
 
-    // Remove @context from converted since we've already handled it
     if ('$context' in converted) {
       delete converted.$context
     }
@@ -93,7 +87,6 @@ async function transformContext(content: string): Promise<TransformOutput> {
       delete converted['@context']
     }
 
-    // Create final object with root properties first
     const finalObject = {
       ...rootProps,
       ...converted
@@ -101,7 +94,6 @@ async function transformContext(content: string): Promise<TransformOutput> {
 
     console.log('Final object:', JSON.stringify(finalObject, null, 2))
 
-    console.log('Preparing JSON5 options...')
     const json5Options = {
       space: 2,
       quote: '"',

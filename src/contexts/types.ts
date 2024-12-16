@@ -1,9 +1,24 @@
-export interface Context {
-  [key: string]: unknown
-  $type?: string
-  $context?: string | Record<string, unknown>
-  $id?: string
-  $base?: string
+export type JsonValue =
+  | string
+  | number
+  | boolean
+  | null
+  | JsonValue[]
+  | { [key: string]: JsonValue }
+
+export interface JsonLdContext {
+  '@context'?: Record<string, JsonValue>
+  '@vocab'?: string
+  '@type'?: string
+  '@id'?: string
+  '@base'?: string
+  '@container'?: string
+  '@protected'?: boolean
+  [key: string]: JsonValue | undefined
+}
+
+export type TransformedContext = {
+  $context?: Record<string, JsonValue>
   $vocab?: string
-  $version?: string
+  [key: string]: JsonValue | undefined
 }
