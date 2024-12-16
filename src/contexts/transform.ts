@@ -5,16 +5,13 @@ import jsonld from 'jsonld'
 import JSON5 from 'json5'
 import type { JsonLdDocument } from 'jsonld'
 
-// Get directory path for ES modules
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-// Define types for context documents
 type JsonLdContextDocument = {
   '@context'?: Record<string, unknown>
 } & JsonLdDocument
 
-// Source and build directories
 const SOURCE_DIR = path.join(__dirname, 'source')
 const BUILD_DIR = path.join(__dirname, 'build')
 
@@ -45,9 +42,7 @@ async function transformContext(input: JsonLdContextDocument): Promise<[string, 
     let contextSize: number
     let contextObj: any
 
-    // Extract context object, handling both direct and wrapped contexts
     try {
-      // Handle nested @context structures
       contextObj = input['@context']
         ? (typeof input['@context'] === 'object' ? input['@context'] : input)
         : input
@@ -61,7 +56,6 @@ async function transformContext(input: JsonLdContextDocument): Promise<[string, 
         throw new Error('Invalid context structure')
       }
 
-      // Debug context structure
       console.log('Context @vocab:', contextObj['@vocab'])
       console.log('Context epcis prefix:', contextObj['epcis'])
     } catch (e) {
@@ -69,27 +63,21 @@ async function transformContext(input: JsonLdContextDocument): Promise<[string, 
       throw e
     }
 
-    // Convert @ prefixes to $ prefixes while preserving structure
     console.log('\nConverting prefixes...')
     let converted
     try {
-      // Create a deep copy to avoid modifying the original
       const contextCopy = JSON.parse(JSON.stringify(contextObj))
 
-      // Handle root level properties first
       const rootProps = {
-        // Use epcis prefix URL as $vocab if available, otherwise use @vocab or empty string
         $vocab: contextCopy['epcis'] || contextCopy['@vocab'] || '',
         $version: contextCopy['@version'] || '1.0'
       }
 
-      // Debug root properties
       console.log('Root properties:', JSON.stringify(rootProps))
 
       delete contextCopy['@vocab']
       delete contextCopy['@version']
 
-      // Convert remaining properties
       converted = {
         ...rootProps,
         ...convertAtToDollar(contextCopy)
@@ -106,12 +94,11 @@ async function transformContext(input: JsonLdContextDocument): Promise<[string, 
       throw e
     }
 
-    // Convert to JSON5 string (more compact than JSON)
     console.log('\nGenerating JSON5...')
     let json5Output: string
     try {
       const json5Options = {
-        space: '',  // No indentation for maximum compression
+        space: '',
         quote: '"',
         replacer: (key: string, value: any) => {
           if (typeof value === 'string' && value.includes('://')) {
@@ -129,8 +116,8 @@ async function transformContext(input: JsonLdContextDocument): Promise<[string, 
       )
 
       json5Output = JSON5.stringify(filteredContext, json5Options.replacer)
-        .replace(/"(\w+)":/g, '$1:') // Remove quotes from property names where safe
-        .replace(/,(?=\w)/g, ',\n') // Add some line breaks for readability
+        .replace(/"(\w+)":/g, '$1:')
+        .replace(/,(?=\w)/g, ',\n')
 
       const outputSize = json5Output.length
       console.log(`Output size: ${outputSize} bytes (${Math.round((outputSize / contextSize) * 100)}% of original)`)
@@ -198,9 +185,9 @@ export async function buildContexts(): Promise<void> {
     for (const file of jsonldFiles) {
       const sourcePath = path.join(SOURCE_DIR, file)
       const baseName = path.basename(file, '.jsonld')
-      // Convert filename to valid TypeScript identifier while preserving original name
       const safeIdentifier = baseName
-        .toLowerCase()  // Ensure consistent casing
+        .replace(/[.-]/g, '_')
+        .toLowerCase()
       const outputPath = path.join(BUILD_DIR, `${safeIdentifier}.ts`)
 
       try {
@@ -215,10 +202,10 @@ export async function buildContexts(): Promise<void> {
 
     console.log('\nGenerating index.ts...')
     const indexContent = `// Auto-generated index file
-${exports.map(({ original }) => `import ${original.replace(/[.-]/g, '_')}Context from './${original.toLowerCase()}'`).join('\n')}
+${exports.map(({ safe }) => `import ${safe}Context from './${safe}'`).join('\n')}
 
 export {
-${exports.map(({ original }) => `  ${original.replace(/[.-]/g, '_')}Context,`).join('\n')}
+${exports.map(({ safe }) => `  ${safe}Context,`).join('\n')}
 }
 
 export type { JsonLdDocument, ContextDefinition } from 'jsonld'
