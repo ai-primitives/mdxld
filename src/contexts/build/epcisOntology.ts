@@ -1,5 +1,6 @@
-// Generated from epcis-ontology.jsonld
-export const epcisOntology = {
+// Generated from epcisOntology.jsonld
+// @ts-ignore - Large type definition, explicit type annotation provided
+export const epcisOntology: Record<string, unknown> = {
   $context: {
     cbv: 'https://ref.gs1.org/cbv/',
     comment: {

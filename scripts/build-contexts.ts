@@ -33,8 +33,9 @@ function transformPrefixes(obj: unknown): unknown {
 
 function generateTypeScriptContent(constName: string, data: unknown): string {
   return `// Generated from ${constName}.jsonld
-// @ts-ignore - Large type definition, explicit type annotation provided
-export const ${constName}: Record<string, unknown> = ${json5.stringify(data, null, 2)} as const;
+/* eslint-disable */
+// @ts-nocheck - Large type definition
+export const ${constName} = ${json5.stringify(data, null, 2)} as const;
 `;
 }
 
@@ -72,7 +73,8 @@ try {
   const exportStatements = files
     .map(file => {
       const constName = path.basename(file, '.jsonld')
-        .replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+        .replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+        .replace(/\./g, '');  // Remove dots from names
       return `export { ${constName} } from './${constName}';`;
     })
     .join('\n');

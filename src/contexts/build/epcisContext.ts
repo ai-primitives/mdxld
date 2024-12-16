@@ -1,5 +1,6 @@
-// Generated from epcis-context.jsonld
-export const epcisContext = {
+// Generated from epcisContext.jsonld
+// @ts-ignore - Large type definition, explicit type annotation provided
+export const epcisContext: Record<string, unknown> = {
   $context: {
     $protected: true,
     $version: 1.1,

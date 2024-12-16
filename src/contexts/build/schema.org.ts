@@ -1,5 +1,6 @@
 // Generated from schema.org.jsonld
-export const schema.org = {
+// @ts-ignore - Large type definition, explicit type annotation provided
+export const schema.org: Record<string, unknown> = {
   $context: {
     brick: 'https://brickschema.org/schema/Brick#',
     csvw: 'http://www.w3.org/ns/csvw#',
