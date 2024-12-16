@@ -194,20 +194,20 @@ export async function buildContexts(): Promise<void> {
     const jsonldFiles = files.filter(f => f.endsWith('.jsonld'))
     console.log(`Found ${jsonldFiles.length} JSON-LD files:`, jsonldFiles)
 
-    const exports: string[] = []
+    const exports: Array<{ original: string; safe: string }> = []
     for (const file of jsonldFiles) {
       const sourcePath = path.join(SOURCE_DIR, file)
       const baseName = path.basename(file, '.jsonld')
       // Convert filename to valid TypeScript identifier
-      const outputName = baseName
+      const safeIdentifier = baseName
         .replace(/[.-]/g, '_')  // Replace dots and hyphens with underscores
         .replace(/^(\d)/, '_$1')  // Prefix with underscore if starts with number
-      const outputPath = path.join(BUILD_DIR, `${outputName}.ts`)
+      const outputPath = path.join(BUILD_DIR, `${safeIdentifier}.ts`)
 
       try {
         console.log(`\nProcessing ${file}...`)
         await processContextFile(sourcePath, file)
-        exports.push(outputName)
+        exports.push({ original: baseName, safe: safeIdentifier })
       } catch (error) {
         console.error(`Failed to process ${file}:`, error)
         throw error
@@ -216,10 +216,10 @@ export async function buildContexts(): Promise<void> {
 
     console.log('\nGenerating index.ts...')
     const indexContent = `// Auto-generated index file
-${exports.map(name => `import ${name}Context from './${name}'`).join('\n')}
+${exports.map(({ safe }) => `import ${safe}Context from './${safe}'`).join('\n')}
 
 export {
-${exports.map(name => `  ${name}Context as ${name.replace(/_/g, '')},`).join('\n')}
+${exports.map(({ safe, original }) => `  ${safe}Context as ${original.replace(/[.-]/g, '')},`).join('\n')}
 }
 
 export type { JsonLdDocument, ContextDefinition } from 'jsonld'
