@@ -44,10 +44,10 @@ function convertAtToDollar(obj: JsonValue): JsonValue {
   }
 
   if (Array.isArray(obj)) {
-    return obj.map(item => convertAtToDollar(item)) as JsonValue[]
+    return obj.map(item => convertAtToDollar(item))
   }
 
-  return Object.entries(obj).reduce((acc: { [key: string]: JsonValue }, [key, value]) => {
+  return Object.entries(obj).reduce((acc: Record<string, JsonValue>, [key, value]) => {
     const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key
     acc[newKey] = convertAtToDollar(value)
     return acc
@@ -67,7 +67,7 @@ async function transformContext(content: string): Promise<TransformOutput> {
       const contextObj = parsed['@context']
 
       if (typeof contextObj === 'object' && contextObj !== null) {
-        if ('schema' in contextObj && contextObj.schema === 'https://schema.org/') {
+        if ('schema' in contextObj && typeof contextObj.schema === 'string' && contextObj.schema === 'https://schema.org/') {
           rootProps.$vocab = 'http://schema.org/'
         } else if ('@vocab' in contextObj) {
           rootProps.$vocab = contextObj['@vocab']
@@ -78,18 +78,14 @@ async function transformContext(content: string): Promise<TransformOutput> {
     }
 
     console.log('Converting @ to $ in context...')
-    const converted = convertAtToDollar(parsed)
+    const converted = convertAtToDollar(parsed) as Record<string, JsonValue>
 
-    if ('$context' in converted) {
-      delete converted.$context
-    }
-    if ('@context' in converted) {
-      delete converted['@context']
-    }
+    const finalObject: Record<string, JsonValue> = { ...rootProps }
 
-    const finalObject = {
-      ...rootProps,
-      ...converted
+    if (typeof converted === 'object' && converted !== null) {
+      Object.assign(finalObject, converted)
+      delete finalObject.$context
+      delete finalObject['@context']
     }
 
     console.log('Final object:', JSON.stringify(finalObject, null, 2))
