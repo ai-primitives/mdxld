@@ -44,10 +44,10 @@ function convertAtToDollar(obj: JsonValue): JsonValue {
   }
 
   if (Array.isArray(obj)) {
-    return obj.map(item => convertAtToDollar(item))
+    return obj.map(item => convertAtToDollar(item)) as JsonValue[]
   }
 
-  return Object.entries(obj).reduce((acc: Record<string, JsonValue>, [key, value]) => {
+  return Object.entries(obj).reduce((acc: { [key: string]: JsonValue }, [key, value]) => {
     const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key
     acc[newKey] = convertAtToDollar(value)
     return acc
