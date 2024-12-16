@@ -202,6 +202,7 @@ export async function buildContexts(): Promise<void> {
       const safeIdentifier = baseName
         .replace(/[.-]/g, '_')  // Replace dots and hyphens with underscores
         .replace(/^(\d)/, '_$1')  // Prefix with underscore if starts with number
+        .toLowerCase()  // Ensure consistent casing
       const outputPath = path.join(BUILD_DIR, `${safeIdentifier}.ts`)
 
       try {
@@ -219,7 +220,7 @@ export async function buildContexts(): Promise<void> {
 ${exports.map(({ safe }) => `import ${safe}Context from './${safe}'`).join('\n')}
 
 export {
-${exports.map(({ safe, original }) => `  ${safe}Context as ${original.replace(/[.-]/g, '')},`).join('\n')}
+${exports.map(({ safe }) => `  ${safe}Context,`).join('\n')}
 }
 
 export type { JsonLdDocument, ContextDefinition } from 'jsonld'
