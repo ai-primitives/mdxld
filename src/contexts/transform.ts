@@ -52,14 +52,28 @@ async function transformContext(content: string): Promise<TransformOutput> {
   console.log('Transforming context...')
 
   try {
+    console.log('Parsing JSON content...')
     const parsed = JSON.parse(content) as JsonLdContextDocument
     console.log('Successfully parsed JSON')
 
-    const rootProps = ['@context', '@id', '@type', '@base']
-    console.log('Converting @ to $ for properties:', rootProps)
-
+    console.log('Converting @ to $ in context...')
     const converted = convertAtToDollar(parsed)
     console.log('Successfully converted @ to $')
+
+    if (!converted.$context && converted.context) {
+      console.log('Moving context to $context...')
+      converted.$context = converted.context
+      delete converted.context
+    }
+
+    const specialKeys = ['vocab', 'version', 'base']
+    for (const key of specialKeys) {
+      if (converted[key]) {
+        console.log(`Converting ${key} to $${key}...`)
+        converted[`$${key}`] = converted[key]
+        delete converted[key]
+      }
+    }
 
     const json5Options = {
       space: 2,
@@ -67,6 +81,7 @@ async function transformContext(content: string): Promise<TransformOutput> {
       replacer: null
     }
 
+    console.log('Stringifying to JSON5...')
     const output = JSON5.stringify(converted, json5Options)
     console.log(`Successfully stringified to JSON5 (${output.length} bytes)`)
 
@@ -75,23 +90,35 @@ async function transformContext(content: string): Promise<TransformOutput> {
       size: output.length
     }
   } catch (error) {
-    console.error('Error in transformContext:', error)
+    console.error('Error in transformContext:', error instanceof Error ? error.message : String(error))
+    console.error('Stack trace:', error instanceof Error ? error.stack : 'No stack trace available')
     throw error
   }
 }
 
 async function processContextFile(filePath: string): Promise<TransformOutput> {
   console.log(`\nProcessing file: ${filePath}`)
-  console.log(`File exists: ${await fs.access(filePath).then(() => true).catch(() => false)}`)
 
   try {
+    console.log(`Checking if file exists: ${filePath}`)
+    await fs.access(filePath)
+    console.log('File exists, reading content...')
+
     const content = await fs.readFile(filePath, 'utf-8')
     console.log(`Read file: ${filePath} (${content.length} bytes)`)
     console.log('First 100 characters:', content.slice(0, 100))
 
-    return await transformContext(content)
+    const result = await transformContext(content)
+    console.log(`Transformed content size: ${result.size} bytes`)
+
+    return result
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error)
+    if (error.code === 'ENOENT') {
+      console.error(`File not found: ${filePath}`)
+    } else {
+      console.error(`Error processing ${filePath}:`, error instanceof Error ? error.message : String(error))
+      console.error('Stack trace:', error instanceof Error ? error.stack : 'No stack trace available')
+    }
     throw error
   }
 }
@@ -102,6 +129,7 @@ export async function buildContexts(): Promise<void> {
   try {
     await ensureDirectories()
 
+    console.log(`Reading source directory: ${SOURCE_DIR}`)
     const files = await fs.readdir(SOURCE_DIR)
     const contextFiles = files.filter(file => file.endsWith('.jsonld'))
     console.log('Found context files:', contextFiles)
@@ -125,21 +153,22 @@ export async function buildContexts(): Promise<void> {
         const { content } = await processContextFile(sourcePath)
 
         const tsContent = `// Generated from ${file}
-const context = ${content} as const;
-export type Context = typeof context;
-export default context;`
+export const context = ${content} as const
+export type Context = typeof context
+export default context`
 
         const tsFilePath = path.join(BUILD_DIR, `${safeIdentifier}.ts`)
+        console.log(`Writing TypeScript file: ${tsFilePath}`)
         await fs.writeFile(tsFilePath, tsContent)
         console.log(`Generated TypeScript module: ${tsFilePath}`)
 
         exports.push({ safe: safeIdentifier, original: baseName })
       } catch (error) {
-        console.error(`Error processing ${file}:`, error)
+        console.error(`Error processing ${file}:`, error instanceof Error ? error.message : String(error))
+        console.error('Stack trace:', error instanceof Error ? error.stack : 'No stack trace available')
         throw error
       }
     }
-
 
     const indexContent = `${exports.map(({ safe }) => `import ${safe}Context, { Context as ${safe}ContextType } from './${safe}'`).join('\n')}
 
@@ -156,11 +185,13 @@ export default {
 }`
 
     const indexPath = path.join(BUILD_DIR, 'index.ts')
+    console.log('\nWriting index.ts...')
     await fs.writeFile(indexPath, indexContent)
-    console.log('\nGenerated index.ts with context exports')
+    console.log('Generated index.ts with context exports')
 
   } catch (error) {
-    console.error('Error in buildContexts:', error)
+    console.error('Error in buildContexts:', error instanceof Error ? error.message : String(error))
+    console.error('Stack trace:', error instanceof Error ? error.stack : 'No stack trace available')
     process.exit(1)
   }
 }
