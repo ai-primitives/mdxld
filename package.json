@@ -64,6 +64,7 @@
     "@types/node": "^22.10.2",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
+    "axios": "^1.7.9",
     "eslint": "^9.17.0",
     "json5": "^2.2.3",
     "jsonld": "^8.3.2",
