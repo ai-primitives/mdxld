@@ -2,9 +2,9 @@ import { promises as fs } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import JSON5 from 'json5'
-import { JsonLdContext, JsonValue, TransformedContext } from './types.js'
+import { JsonValue } from './types.js'
 
-interface JsonLdContextDocument extends Record<string, JsonValue | undefined> {
+interface JsonLdContextDocument {
   '@context'?: Record<string, JsonValue>
   [key: string]: JsonValue | undefined
 }
