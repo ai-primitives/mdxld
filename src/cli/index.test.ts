@@ -18,9 +18,9 @@ describe('CLI', () => {
     expect(longOptions.help).toBe(true)
   })
 
-  it('should show version number', () => {
+  it('should show version number', async () => {
     const consoleSpy = vi.spyOn(console, 'log')
-    showVersion()
+    await showVersion()
     expect(consoleSpy).toHaveBeenCalled()
     consoleSpy.mockRestore()
   })
@@ -32,9 +32,9 @@ describe('CLI', () => {
     consoleSpy.mockRestore()
   })
 
-  it('should default to help when no arguments provided', () => {
+  it('should default to help when no arguments provided', async () => {
     const consoleSpy = vi.spyOn(console, 'log')
-    cli([])
+    await cli([])
     expect(consoleSpy).toHaveBeenCalled()
     consoleSpy.mockRestore()
   })

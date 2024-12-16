@@ -1,4 +1,7 @@
-import { version } from '../../package.json' assert { type: 'json' }
+async function getVersion() {
+  const packageJson = await import('../../package.json', { assert: { type: 'json' } })
+  return packageJson.default.version
+}
 
 interface CliOptions {
   version?: boolean
@@ -29,15 +32,16 @@ Options:
 `)
 }
 
-export function showVersion(): void {
+export async function showVersion(): Promise<void> {
+  const version = await getVersion()
   console.log(`v${version}`)
 }
 
-export function cli(args: string[] = process.argv.slice(2)): void {
+export async function cli(args: string[] = process.argv.slice(2)): Promise<void> {
   const options = parseArgs(args)
 
   if (options.version) {
-    showVersion()
+    await showVersion()
   } else if (options.help) {
     showHelp()
   } else {
