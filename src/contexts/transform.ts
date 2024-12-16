@@ -86,7 +86,30 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
     console.log('\nGenerating JSON5...')
     let json5Output: string
     try {
-      json5Output = JSON5.stringify(converted, null, 2)
+      // Use more compact JSON5 formatting
+      const json5Options = {
+        space: '',  // No indentation for maximum compression
+        quote: '"',
+        replacer: (key: string, value: any) => {
+          if (typeof value === 'string') {
+            // Remove quotes from valid identifiers and common URL prefixes
+            if (/^[a-zA-Z$_][a-zA-Z0-9$_]*$/.test(value)) {
+              return value
+            }
+            // Optimize common URL patterns
+            if (value.startsWith('http://schema.org/')) {
+              return value.replace('http://schema.org/', 'schema:')
+            }
+            if (value.startsWith('http://www.w3.org/')) {
+              return value.replace('http://www.w3.org/', 'w3:')
+            }
+          }
+          return value
+        }
+      }
+      json5Output = JSON5.stringify(converted, json5Options.replacer)
+        .replace(/"(\w+)":/g, '$1:') // Remove quotes from property names
+        .replace(/,(?=\w)/g, ',\n') // Add some line breaks for readability
       const outputSize = json5Output.length
       console.log(`Output size: ${outputSize} bytes (${Math.round((outputSize / contextSize) * 100)}% of original)`)
     } catch (e) {
