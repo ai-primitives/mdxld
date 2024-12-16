@@ -3,6 +3,7 @@ import { join } from 'path'
 import { JsonLdDocument, ContextDefinition } from 'jsonld'
 import * as jsonld from 'jsonld'
 import JSON5 from 'json5'
+import { fileURLToPath } from 'url'
 
 interface JsonLdContextDocument {
   '@context': ContextDefinition
@@ -31,6 +32,7 @@ export default context;`
 
 // Main build function
 export async function buildContexts(): Promise<void> {
+  const __dirname = fileURLToPath(new URL('.', import.meta.url))
   const sourceDir = join(__dirname, 'source')
   const buildDir = join(__dirname, 'build')
 
@@ -52,6 +54,6 @@ export async function buildContexts(): Promise<void> {
 }
 
 // Run build if called directly
-if (require.main === module) {
+if (import.meta.url === fileURLToPath(new URL(process.argv[1], 'file:'))) {
   buildContexts().catch(console.error)
 }
