@@ -13,6 +13,6 @@
     "isolatedModules": true,
     "rootDir": "src"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+  "include": ["src/**/*", "src/**/*.test.ts", "src/**/__tests__/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
