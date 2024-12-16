@@ -10,7 +10,9 @@ export default [
       parser: tsParser,
       parserOptions: {
         project: './tsconfig.json',
-        tsconfigRootDir: '.'
+        tsconfigRootDir: '.',
+        ecmaVersion: 'latest',
+        sourceType: 'module'
       },
       globals: {
         console: 'readonly',
@@ -21,7 +23,11 @@ export default [
       '@typescript-eslint': tsPlugin
     },
     rules: {
-      ...tsPlugin.configs.recommended.rules
+      ...tsPlugin.configs.recommended.rules,
+      'no-restricted-syntax': ['error', {
+        selector: "CallExpression[callee.name='require']",
+        message: "Use ESM import instead of require()"
+      }]
     }
   }
 ]

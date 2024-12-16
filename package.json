@@ -14,6 +14,10 @@
     "./ast": {
       "types": "./dist/ast.d.ts",
       "import": "./dist/ast.js"
+    },
+    "./parser": {
+      "types": "./dist/parser.d.ts",
+      "import": "./dist/parser.js"
     }
   },
   "files": [
