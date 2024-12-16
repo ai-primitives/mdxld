@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
-import schemaOrg from './build/schema.org'
-import epcisContext from './build/epcis-context'
-import epcisOntology from './build/epcis-ontology'
+import schemaOrg from '../build/schema.org'
+import epcisContext from '../build/epcis-context'
+import epcisOntology from '../build/epcis-ontology'
 
 test('contexts can be imported and accessed', () => {
   // Test schema.org context

@@ -39,7 +39,7 @@ function convertAtToDollar(obj: any): any {
   return result
 }
 
-async function transformContext(input: JsonLdContextDocument): Promise<string> {
+async function transformContext(input: JsonLdContextDocument): Promise<[string, any]> {
   try {
     console.log('\nTransforming context...')
     let contextSize: number
@@ -47,7 +47,11 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
 
     // Extract context object, handling both direct and wrapped contexts
     try {
-      contextObj = input['@context'] ? input['@context'] : input
+      // Handle nested @context structures
+      contextObj = input['@context']
+        ? (typeof input['@context'] === 'object' ? input['@context'] : input)
+        : input
+
       const contextStr = JSON.stringify(contextObj)
       contextSize = contextStr.length
       console.log(`Input context size: ${contextSize} bytes`)
@@ -56,6 +60,10 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
       if (!contextObj || typeof contextObj !== 'object') {
         throw new Error('Invalid context structure')
       }
+
+      // Debug context structure
+      console.log('Context @vocab:', contextObj['@vocab'])
+      console.log('Context epcis prefix:', contextObj['epcis'])
     } catch (e) {
       console.error('Error processing context:', e)
       throw e
@@ -65,15 +73,30 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
     console.log('\nConverting prefixes...')
     let converted
     try {
+      // Create a deep copy to avoid modifying the original
       const contextCopy = JSON.parse(JSON.stringify(contextObj))
-      converted = convertAtToDollar(contextCopy)
+
+      // Handle root level properties first
+      const rootProps = {
+        // Use epcis prefix URL as $vocab if available, otherwise use @vocab or empty string
+        $vocab: contextCopy['epcis'] || contextCopy['@vocab'] || '',
+        $version: contextCopy['@version'] || '1.0'
+      }
+
+      // Debug root properties
+      console.log('Root properties:', JSON.stringify(rootProps))
+
+      delete contextCopy['@vocab']
+      delete contextCopy['@version']
+
+      // Convert remaining properties
+      converted = {
+        ...rootProps,
+        ...convertAtToDollar(contextCopy)
+      }
 
       if (!converted || typeof converted !== 'object') {
         throw new Error('Invalid conversion result')
-      }
-
-      if (contextObj['@vocab'] && !converted.$vocab) {
-        throw new Error('Failed to convert @vocab to $vocab')
       }
 
       console.log('Prefix conversion complete')
@@ -101,7 +124,11 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
         }
       }
 
-      json5Output = JSON5.stringify(converted, json5Options.replacer)
+      const filteredContext = Object.fromEntries(
+        Object.entries(converted).filter(([key]) => !['$vocab', '$version'].includes(key))
+      )
+
+      json5Output = JSON5.stringify(filteredContext, json5Options.replacer)
         .replace(/"(\w+)":/g, '$1:') // Remove quotes from property names where safe
         .replace(/,(?=\w)/g, ',\n') // Add some line breaks for readability
 
@@ -112,49 +139,45 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
       throw e
     }
 
-    return json5Output
+    return [json5Output, converted]
   } catch (error) {
     console.error('Error in transformContext:', error)
     throw error
   }
 }
 
-async function processContextFile(filename: string, outputPath: string): Promise<void> {
+async function processContextFile(filepath: string, filename: string): Promise<void> {
+  console.log(`\nProcessing ${filepath}...`)
+  console.log('Reading file...')
+
   try {
-    console.log(`\nProcessing ${filename}...`)
-    console.log('Reading file...')
-    const content = await fs.readFile(filename, 'utf-8')
+    const content = await fs.readFile(filepath, 'utf-8')
     console.log(`File content size: ${content.length} bytes`)
 
     console.log('Parsing JSON-LD...')
-    let jsonldContent
-    try {
-      jsonldContent = JSON.parse(content)
-      console.log('JSON structure:', Object.keys(jsonldContent))
-
-      const contextDoc: JsonLdContextDocument = jsonldContent['@context']
-        ? { '@context': jsonldContent['@context'] }
-        : jsonldContent
-
-      console.log('Context keys:', Object.keys(contextDoc['@context']))
-    } catch (e) {
-      console.error('Error parsing JSON-LD:', e)
-      throw e
-    }
+    const contextDoc = JSON.parse(content)
+    console.log('JSON structure:', Object.keys(contextDoc).join(', '))
+    console.log('Context keys:', JSON.stringify(Object.keys(contextDoc['@context'] || contextDoc), null, 2))
 
     console.log('Starting transformation...')
-    const transformed = await transformContext(jsonldContent)
+    const [transformed, converted] = await transformContext(contextDoc)
     console.log('Transformation complete')
 
+    const outputPath = path.join(BUILD_DIR, filename.replace('.jsonld', '.ts'))
     const output = `// Auto-generated from ${filename}
-const context = ${transformed} as const;
+const context = {
+  $vocab: ${JSON.stringify(converted.$vocab || '')},
+  $version: ${JSON.stringify(converted.$version || '1.0')},
+  ...${transformed}
+} as const;
 export default context;`
 
     console.log('Writing output...')
-    await fs.writeFile(outputPath, output)
-    console.log(`Generated ${outputPath}`)
+    await fs.mkdir(BUILD_DIR, { recursive: true })
+    await fs.writeFile(outputPath, output, 'utf-8')
+    console.log(`Generated ${outputPath}\n`)
   } catch (error) {
-    console.error(`Error processing file ${filename}:`, error)
+    console.error(`Error processing file ${filepath}:`, error)
     throw error
   }
 }
@@ -179,7 +202,7 @@ export async function buildContexts(): Promise<void> {
 
       try {
         console.log(`\nProcessing ${file}...`)
-        await processContextFile(sourcePath, outputPath)
+        await processContextFile(sourcePath, file)
         exports.push(outputName)
       } catch (error) {
         console.error(`Failed to process ${file}:`, error)
