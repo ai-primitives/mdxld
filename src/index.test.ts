@@ -30,8 +30,8 @@ author: John Doe
 
     it('should support @ prefix when allowAtPrefix is true', () => {
       const input = `---
-@type: https://mdx.org.ai/Document
-@context: https://schema.org
+'@type': https://mdx.org.ai/Document
+'@context': https://schema.org
 title: My Document
 ---
 

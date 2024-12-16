@@ -14,18 +14,22 @@ const SPECIAL_PROPERTIES: SpecialProperty[] = [
 ]
 
 function extractFrontmatter(mdx: string): { frontmatter: string; content: string } {
-  // Match frontmatter between --- delimiters with exact test format matching
-  const match = mdx.match(/^---\n([\s\S]*?)---\n([\s\S]*)$/)
-
-  // Handle no frontmatter case
-  if (!match) {
+  // Check for proper frontmatter delimiters
+  if (!mdx.startsWith('---\n')) {
     return { frontmatter: '', content: mdx }
   }
 
-  const frontmatter = match[1].trim()
-  const content = match[2]
+  // Find the closing delimiter
+  const endMatch = mdx.slice(4).match(/\n---\n/)
+  if (!endMatch || typeof endMatch.index !== 'number') {
+    throw new Error('Failed to parse YAML frontmatter')
+  }
 
-  // Empty frontmatter is treated as no frontmatter
+  // Extract frontmatter and content
+  const endIndex = endMatch.index
+  const frontmatter = mdx.slice(4, 4 + endIndex).trim()
+  const content = mdx.slice(4 + endIndex + 5)
+
   if (!frontmatter) {
     return { frontmatter: '', content: mdx }
   }
@@ -41,35 +45,50 @@ function unescapeAtPrefix(yaml: string): string {
   return yaml.replace(/__AT__/g, '@')
 }
 
-function processFrontmatter(yaml: Record<string, unknown>, options?: ParseOptions): {
-  special: Partial<MDXLD>
-  data: Record<string, unknown>
-} {
-  const special: Partial<MDXLD> = {}
+function processFrontmatter(yaml: Record<string, unknown>, options: ParseOptions = {}): { data: Record<string, unknown> } & Record<string, unknown> {
   const data: Record<string, unknown> = {}
+  const metadata: Record<string, unknown> = {}
 
   for (const [key, value] of Object.entries(yaml)) {
-    const cleanKey = key.replace(/^[@$]/, '')
-    if (
-      (key.startsWith('$') || (options?.allowAtPrefix && key.startsWith('@'))) &&
-      SPECIAL_PROPERTIES.includes(cleanKey as SpecialProperty)
-    ) {
-      if (cleanKey === 'set' && Array.isArray(value)) {
-        special[cleanKey] = new Set(value)
-      } else if (cleanKey === 'list' && !Array.isArray(value)) {
-        special[cleanKey] = [value]
+    const quotedMatch = key.match(/^(['"])@(.+)\1$/)
+    if (quotedMatch) {
+      const unquotedKey = quotedMatch[2]
+      if (SPECIAL_PROPERTIES.includes(unquotedKey as SpecialProperty)) {
+        metadata[unquotedKey] = value
+        if (unquotedKey === 'set' && Array.isArray(value)) {
+          metadata[unquotedKey] = new Set(value)
+        } else if (unquotedKey === 'list' && !Array.isArray(value)) {
+          metadata[unquotedKey] = [value]
+        }
       } else {
-        special[cleanKey as keyof Partial<MDXLD>] = value as any
+        data[options.allowAtPrefix ? `@${unquotedKey}` : `$${unquotedKey}`] = value
+      }
+      continue
+    }
+
+    if (key.startsWith('@') || key.startsWith('$')) {
+      const cleanKey = key.slice(1)
+      if (SPECIAL_PROPERTIES.includes(cleanKey as SpecialProperty)) {
+        if (cleanKey === 'set' && Array.isArray(value)) {
+          metadata[cleanKey] = new Set(value)
+        } else if (cleanKey === 'list' && !Array.isArray(value)) {
+          metadata[cleanKey] = [value]
+        } else {
+          metadata[cleanKey] = value
+        }
+      } else {
+        const prefix = options.allowAtPrefix ? '@' : '$'
+        data[`${prefix}${cleanKey}`] = value
       }
     } else {
       data[key] = value
     }
   }
 
-  return { special, data }
+  return { ...metadata, data }
 }
 
-export function parse(mdx: string, options: { allowAtPrefix?: boolean } = {}): MDXLD {
+export function parse(mdx: string, options: ParseOptions = {}): MDXLD {
   const { frontmatter, content } = extractFrontmatter(mdx)
 
   if (!frontmatter) {
@@ -80,20 +99,24 @@ export function parse(mdx: string, options: { allowAtPrefix?: boolean } = {}): M
   }
 
   try {
-    // Parse YAML frontmatter
-    const unescapedYaml = options.allowAtPrefix ? frontmatter : escapeAtPrefix(frontmatter)
-    const parsed = parseYAML(unescapedYaml)
+    // Use strict mode for YAML parsing to catch invalid structures
+    const yaml = parseYAML(frontmatter, {
+      strict: true,
+      schema: 'core',
+      logLevel: 'error'
+    })
 
-    if (typeof parsed !== 'object' || parsed === null) {
+    if (
+      typeof yaml !== 'object' ||
+      yaml === null ||
+      Array.isArray(yaml) ||
+      Object.keys(yaml).length === 0
+    ) {
       throw new Error('Failed to parse YAML frontmatter')
     }
 
-    // Process frontmatter and extract special properties
-    const { special, data } = processFrontmatter(parsed, options)
-
     return {
-      ...special,
-      data,
+      ...processFrontmatter(yaml as Record<string, unknown>, options),
       content
     }
   } catch (error) {
