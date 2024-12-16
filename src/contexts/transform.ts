@@ -15,8 +15,8 @@ interface TransformOutput {
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const SOURCE_DIR = path.join(__dirname, 'source')
-const BUILD_DIR = path.join(__dirname, 'build')
+const SOURCE_DIR = path.join(__dirname, '..', '..', 'src', 'contexts', 'source')
+const BUILD_DIR = path.join(__dirname, '..', '..', 'src', 'contexts', 'build')
 
 function convertAtToDollar(obj: any): any {
   if (typeof obj !== 'object' || obj === null) return obj
