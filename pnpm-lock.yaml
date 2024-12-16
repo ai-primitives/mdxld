@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      json5:
+        specifier: ^2.2.3
+        version: 2.2.3
+      jsonld:
+        specifier: ^8.3.2
+        version: 8.3.2(web-streams-polyfill@3.3.3)
       unified:
         specifier: ^11.0.4
         version: 11.0.5
@@ -57,12 +63,6 @@ importers:
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
-      json5:
-        specifier: ^2.2.3
-        version: 2.2.3
-      jsonld:
-        specifier: ^8.3.2
-        version: 8.3.2(web-streams-polyfill@3.3.3)
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
