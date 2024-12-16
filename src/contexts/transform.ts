@@ -2,7 +2,7 @@ import { promises as fs } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import JSON5 from 'json5'
-import { JsonLdContext, JsonValue, TransformedContext } from './types'
+import { JsonLdContext, JsonValue, TransformedContext } from './types.js'
 
 interface JsonLdContextDocument {
   '@context'?: Record<string, JsonValue>
