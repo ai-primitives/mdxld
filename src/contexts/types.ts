@@ -6,7 +6,7 @@ export type JsonValue =
   | JsonValue[]
   | { [key: string]: JsonValue }
 
-export interface JsonLdContext {
+export interface JsonLdContext extends Record<string, JsonValue | undefined> {
   '@context'?: Record<string, JsonValue>
   '@vocab'?: string
   '@type'?: string
@@ -14,11 +14,14 @@ export interface JsonLdContext {
   '@base'?: string
   '@container'?: string
   '@protected'?: boolean
-  [key: string]: JsonValue | undefined
 }
 
-export type TransformedContext = {
+export interface TransformedContext extends Record<string, JsonValue | undefined> {
   $context?: Record<string, JsonValue>
   $vocab?: string
+}
+
+export interface JsonLdContextDocument extends Record<string, JsonValue | undefined> {
+  '@context'?: Record<string, JsonValue>
   [key: string]: JsonValue | undefined
 }

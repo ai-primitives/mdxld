@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import JSON5 from 'json5'
 import { JsonLdContext, JsonValue, TransformedContext } from './types.js'
 
-interface JsonLdContextDocument {
+interface JsonLdContextDocument extends Record<string, JsonValue | undefined> {
   '@context'?: Record<string, JsonValue>
   [key: string]: JsonValue | undefined
 }
