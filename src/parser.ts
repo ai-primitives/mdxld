@@ -21,6 +21,14 @@ function extractFrontmatter(mdx: string): { frontmatter: string; content: string
   return { frontmatter: match[1], content: match[2] }
 }
 
+function escapeAtPrefix(yaml: string): string {
+  return yaml.replace(/^@/gm, '__AT__')
+}
+
+function unescapeAtPrefix(yaml: string): string {
+  return yaml.replace(/__AT__/g, '@')
+}
+
 function processFrontmatter(yaml: Record<string, unknown>, options?: ParseOptions): {
   special: Partial<MDXLD>
   data: Record<string, unknown>
@@ -57,11 +65,24 @@ export function parse(mdx: string, options?: ParseOptions): MDXLD {
   }
 
   try {
-    const yaml = parseYAML(frontmatter)
+    const escapedFrontmatter = escapeAtPrefix(frontmatter)
+
+    let yaml: unknown
+    try {
+      yaml = parseYAML(escapedFrontmatter)
+    } catch (yamlError) {
+      throw new Error('Failed to parse YAML frontmatter')
+    }
+
     if (typeof yaml !== 'object' || yaml === null) {
       throw new Error('Frontmatter must be an object')
     }
-    const { special, data } = processFrontmatter(yaml as Record<string, unknown>, options)
+
+    const unescapedYaml = Object.fromEntries(
+      Object.entries(yaml).map(([key, value]) => [unescapeAtPrefix(key), value])
+    )
+
+    const { special, data } = processFrontmatter(unescapedYaml as Record<string, unknown>, options)
 
     return {
       ...special,
@@ -69,7 +90,8 @@ export function parse(mdx: string, options?: ParseOptions): MDXLD {
       content,
     }
   } catch (error) {
-    throw new Error(`Failed to parse YAML frontmatter: ${error instanceof Error ? error.message : String(error)}`)
+    const message = error instanceof Error ? error.message : String(error)
+    throw new Error(`Failed to parse YAML frontmatter: ${message}`)
   }
 }
 
@@ -77,9 +99,7 @@ export function stringify(mdxld: MDXLD, options?: { useAtPrefix?: boolean }): st
   const { data, content, ...special } = mdxld
   const prefix = options?.useAtPrefix ? '@' : '$'
 
-  const frontmatter: Record<string, unknown> = {
-    ...data,
-  }
+  const frontmatter: Record<string, unknown> = {}
 
   for (const key of SPECIAL_PROPERTIES) {
     const specialKey = key as keyof Omit<MDXLD, 'data' | 'content'>
@@ -89,6 +109,12 @@ export function stringify(mdxld: MDXLD, options?: { useAtPrefix?: boolean }): st
     }
   }
 
-  const yamlString = stringifyYAML(frontmatter)
+  Object.assign(frontmatter, data)
+
+  const escapedFrontmatter = Object.fromEntries(
+    Object.entries(frontmatter).map(([key, value]) => [escapeAtPrefix(key), value])
+  )
+
+  const yamlString = unescapeAtPrefix(stringifyYAML(escapedFrontmatter))
   return `---\n${yamlString}---\n${content}`
 }
