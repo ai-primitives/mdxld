@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { parse, stringify } from './parser'
-import type { MDXLD } from './types'
+import { parse, stringify } from './parser.js'
+import type { MDXLD } from './types.js'
 
 describe('mdxld', () => {
   describe('parse', () => {
