@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "pnpm run build:contexts && tsc --project tsconfig.json",
-    "build:contexts": "mkdir -p src/contexts/build && ts-node --esm src/contexts/transform.mts",
+    "build:contexts": "mkdir -p src/contexts/build && node scripts/build-contexts.js",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint src",
