@@ -37,16 +37,16 @@ function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-function convertAtToDollar(obj: any): any {
-  if (typeof obj !== 'object' || obj === null) return obj
+function convertAtToDollar(obj: Record<string, unknown>): Record<string, unknown> {
+  if (typeof obj !== 'object' || obj === null) return obj as Record<string, unknown>
 
   if (Array.isArray(obj)) {
-    return obj.map(item => convertAtToDollar(item))
+    return obj.map(item => convertAtToDollar(item as Record<string, unknown>))
   }
 
-  return Object.entries(obj).reduce((acc: any, [key, value]) => {
+  return Object.entries(obj).reduce((acc: Record<string, unknown>, [key, value]) => {
     const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key
-    acc[newKey] = convertAtToDollar(value)
+    acc[newKey] = convertAtToDollar(value as Record<string, unknown>)
     return acc
   }, {})
 }
