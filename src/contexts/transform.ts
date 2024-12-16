@@ -136,37 +136,41 @@ export async function buildContexts(): Promise<void> {
       const safeIdentifier = baseName
         .replace(/[.-]/g, '_')
         .toLowerCase()
-      console.log(`Generated safe identifier: ${safeIdentifier}`)
 
-      const outputPath = path.join(BUILD_DIR, `${safeIdentifier}.ts`)
-      console.log(`Output path: ${outputPath}`)
+      const { content } = await processContextFile(sourcePath)
 
-      try {
-        const { content } = await processContextFile(sourcePath)
-        const tsContent = `// Auto-generated from ${file}\nexport default ${content}\n`
-        await fs.writeFile(outputPath, tsContent, 'utf-8')
-        console.log(`Successfully generated ${outputPath}`)
-        exports.push({ safe: safeIdentifier, original: baseName })
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error)
-        throw error
-      }
+      const tsContent = `// Generated from ${file}
+const context = ${content} as const;
+export type Context = typeof context;
+export default context;
+`
+      const tsFilePath = path.join(BUILD_DIR, `${safeIdentifier}.ts`)
+      await fs.writeFile(tsFilePath, tsContent)
+      console.log(`Generated TypeScript module: ${tsFilePath}`)
+
+      exports.push({ safe: safeIdentifier, original: baseName })
     }
 
-    console.log('\nGenerating index.ts...')
-    const indexContent = `// Auto-generated index file
-${exports.map(({ safe }) => `import ${safe}Context from './${safe}'`).join('\n')}
+    const indexContent = `// Generated index file for context exports
+${exports.map(({ safe }) => `import ${safe}Context, { Context as ${safe}ContextType } from './${safe}'`).join('\n')}
 
-export {
-${exports.map(({ safe }) => `  ${safe}Context,`).join('\n')}
+export type {
+  ${exports.map(({ safe }) => `${safe}ContextType`).join(',\n  ')}
 }
 
-export type { JsonLdDocument, ContextDefinition } from 'jsonld'
+export {
+  ${exports.map(({ safe }) => `${safe}Context`).join(',\n  ')}
+}
+
+export default {
+  ${exports.map(({ safe }) => `${safe}: ${safe}Context`).join(',\n  ')}
+}
 `
-    await fs.writeFile(path.join(BUILD_DIR, 'index.ts'), indexContent, 'utf-8')
-    console.log('Build process complete!')
+    await fs.writeFile(path.join(BUILD_DIR, 'index.ts'), indexContent)
+    console.log('\nGenerated index.ts with context exports')
+
   } catch (error) {
-    console.error('Build process failed:', error)
+    console.error('Error in buildContexts:', error)
     throw error
   }
 }
