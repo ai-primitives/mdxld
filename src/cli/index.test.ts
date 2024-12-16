@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { parseArgs, showHelp, showVersion, cli } from './index'
+import { parseArgs, showHelp, showVersion, cli } from './index.js'
 
 describe('CLI', () => {
   it('should parse version flag correctly', () => {
