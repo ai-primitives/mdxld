@@ -33,8 +33,8 @@ function transformPrefixes(obj: unknown): unknown {
     }
 
     // Handle EPCIS context
-    if ('@vocab' in context) {
-      result.$vocab = context['@vocab'];
+    if ('epcis' in context && typeof context.epcis === 'string') {
+      result.$vocab = context.epcis;
     }
   }
 
