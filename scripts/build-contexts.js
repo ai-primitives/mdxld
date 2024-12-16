@@ -1,6 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const json5 = require('json5');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import json5 from 'json5';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const SOURCE_DIR = path.join(__dirname, '..', 'src', 'contexts', 'source');
 const BUILD_DIR = path.join(__dirname, '..', 'src', 'contexts', 'build');
