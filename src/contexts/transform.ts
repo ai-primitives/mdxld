@@ -1,5 +1,6 @@
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import JSON5 from 'json5'
 
 interface JsonLdContextDocument {
@@ -12,8 +13,10 @@ interface TransformOutput {
   size: number
 }
 
-const SOURCE_DIR = path.join(process.cwd(), 'src', 'contexts', 'source')
-const BUILD_DIR = path.join(process.cwd(), 'src', 'contexts', 'build')
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const SOURCE_DIR = path.join(__dirname, 'source')
+const BUILD_DIR = path.join(__dirname, 'build')
 
 async function ensureDirectories() {
   console.log('Ensuring directories exist...')
