@@ -1,4 +1,9 @@
-import { version } from '../../package.json'
+import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import { dirname, join } from 'node:path'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const pkg = JSON.parse(readFileSync(join(__dirname, '../../package.json'), 'utf8'))
 
 interface CliOptions {
   version?: boolean
@@ -30,7 +35,7 @@ Options:
 }
 
 export function showVersion(): void {
-  console.log(`v${version}`)
+  console.log(`v${pkg.version}`)
 }
 
 export function cli(args: string[] = process.argv.slice(2)): void {
