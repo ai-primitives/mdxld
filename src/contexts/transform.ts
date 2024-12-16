@@ -197,7 +197,11 @@ export async function buildContexts(): Promise<void> {
     const exports: string[] = []
     for (const file of jsonldFiles) {
       const sourcePath = path.join(SOURCE_DIR, file)
-      const outputName = path.basename(file, '.jsonld')
+      const baseName = path.basename(file, '.jsonld')
+      // Convert filename to valid TypeScript identifier
+      const outputName = baseName
+        .replace(/[.-]/g, '_')  // Replace dots and hyphens with underscores
+        .replace(/^(\d)/, '_$1')  // Prefix with underscore if starts with number
       const outputPath = path.join(BUILD_DIR, `${outputName}.ts`)
 
       try {
@@ -212,10 +216,10 @@ export async function buildContexts(): Promise<void> {
 
     console.log('\nGenerating index.ts...')
     const indexContent = `// Auto-generated index file
-${exports.map(name => `import ${name} from './${name}'`).join('\n')}
+${exports.map(name => `import ${name}Context from './${name}'`).join('\n')}
 
 export {
-${exports.map(name => `  ${name},`).join('\n')}
+${exports.map(name => `  ${name}Context as ${name.replace(/_/g, '')},`).join('\n')}
 }
 
 export type { JsonLdDocument, ContextDefinition } from 'jsonld'
