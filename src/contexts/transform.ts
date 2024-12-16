@@ -38,7 +38,7 @@ function convertAtToDollar(obj: any): any {
   if (typeof obj !== 'object' || obj === null) return obj
 
   if (Array.isArray(obj)) {
-    return obj.map(convertAtToDollar)
+    return obj.map(item => convertAtToDollar(item))
   }
 
   return Object.entries(obj).reduce((acc: any, [key, value]) => {
@@ -49,16 +49,20 @@ function convertAtToDollar(obj: any): any {
 }
 
 async function transformContext(content: string): Promise<TransformOutput> {
-  console.log('Transforming context...')
+  console.log('Starting context transformation...')
+  console.log('Content length:', content.length)
+  console.log('First 100 characters:', content.slice(0, 100))
 
   try {
-    console.log('Parsing JSON content...')
+    console.log('Attempting to parse JSON content...')
     const parsed = JSON.parse(content) as JsonLdContextDocument
     console.log('Successfully parsed JSON')
+    console.log('Root keys:', Object.keys(parsed))
 
     console.log('Converting @ to $ in context...')
     const converted = convertAtToDollar(parsed)
     console.log('Successfully converted @ to $')
+    console.log('Converted root keys:', Object.keys(converted))
 
     if (!converted.$context && converted.context) {
       console.log('Moving context to $context...')
@@ -75,6 +79,7 @@ async function transformContext(content: string): Promise<TransformOutput> {
       }
     }
 
+    console.log('Preparing JSON5 options...')
     const json5Options = {
       space: 2,
       quote: '"',
@@ -83,7 +88,9 @@ async function transformContext(content: string): Promise<TransformOutput> {
 
     console.log('Stringifying to JSON5...')
     const output = JSON5.stringify(converted, json5Options)
-    console.log(`Successfully stringified to JSON5 (${output.length} bytes)`)
+    console.log('Successfully stringified to JSON5')
+    console.log('Output length:', output.length)
+    console.log('First 100 characters of output:', output.slice(0, 100))
 
     return {
       content: output,
@@ -98,27 +105,24 @@ async function transformContext(content: string): Promise<TransformOutput> {
 
 async function processContextFile(filePath: string): Promise<TransformOutput> {
   console.log(`\nProcessing file: ${filePath}`)
+  console.log('Checking file existence...')
 
   try {
-    console.log(`Checking if file exists: ${filePath}`)
-    await fs.access(filePath)
-    console.log('File exists, reading content...')
+    const stats = await fs.stat(filePath)
+    console.log(`File exists (size: ${stats.size} bytes)`)
 
+    console.log('Reading file content...')
     const content = await fs.readFile(filePath, 'utf-8')
-    console.log(`Read file: ${filePath} (${content.length} bytes)`)
-    console.log('First 100 characters:', content.slice(0, 100))
+    console.log(`Successfully read ${content.length} bytes`)
 
+    console.log('Transforming content...')
     const result = await transformContext(content)
-    console.log(`Transformed content size: ${result.size} bytes`)
+    console.log(`Transformation complete (${result.size} bytes)`)
 
     return result
   } catch (error) {
-    if (error.code === 'ENOENT') {
-      console.error(`File not found: ${filePath}`)
-    } else {
-      console.error(`Error processing ${filePath}:`, error instanceof Error ? error.message : String(error))
-      console.error('Stack trace:', error instanceof Error ? error.stack : 'No stack trace available')
-    }
+    console.error(`Error processing ${filePath}:`, error instanceof Error ? error.message : String(error))
+    console.error('Stack trace:', error instanceof Error ? error.stack : 'No stack trace available')
     throw error
   }
 }
@@ -143,10 +147,12 @@ export async function buildContexts(): Promise<void> {
 
     console.log(`Reading source directory: ${SOURCE_DIR}`)
     const files = await fs.readdir(SOURCE_DIR)
+    console.log('All files in source directory:', files)
     const contextFiles = files.filter(file => file.endsWith('.jsonld'))
     console.log('Found context files:', contextFiles)
 
     if (contextFiles.length === 0) {
+      console.error('No .jsonld files found in source directory')
       throw new Error('No .jsonld files found in source directory')
     }
 
@@ -160,6 +166,7 @@ export async function buildContexts(): Promise<void> {
       const safeIdentifier = baseName
         .replace(/[.-]/g, '_')
         .toLowerCase()
+      console.log(`Safe identifier: ${safeIdentifier}`)
 
       try {
         const buildJsonLdPath = path.join(BUILD_DIR, file)
@@ -175,7 +182,7 @@ export default context`
         const tsFilePath = path.join(BUILD_DIR, `${safeIdentifier}.ts`)
         console.log(`Writing TypeScript file: ${tsFilePath}`)
         await fs.writeFile(tsFilePath, tsContent)
-        console.log(`Generated TypeScript module: ${tsFilePath}`)
+        console.log(`Successfully generated TypeScript module: ${tsFilePath}`)
 
         exports.push({ safe: safeIdentifier, original: baseName })
       } catch (error) {
@@ -202,7 +209,7 @@ export default {
     const indexPath = path.join(BUILD_DIR, 'index.ts')
     console.log('\nWriting index.ts...')
     await fs.writeFile(indexPath, indexContent)
-    console.log('Generated index.ts with context exports')
+    console.log('Successfully generated index.ts with context exports')
 
   } catch (error) {
     console.error('Error in buildContexts:', error instanceof Error ? error.message : String(error))
