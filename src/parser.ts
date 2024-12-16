@@ -56,13 +56,20 @@ export function parse(mdx: string, options?: ParseOptions): MDXLD {
     return { data: {}, content }
   }
 
-  const yaml = parseYAML(frontmatter)
-  const { special, data } = processFrontmatter(yaml, options)
+  try {
+    const yaml = parseYAML(frontmatter)
+    if (typeof yaml !== 'object' || yaml === null) {
+      throw new Error('Frontmatter must be an object')
+    }
+    const { special, data } = processFrontmatter(yaml as Record<string, unknown>, options)
 
-  return {
-    ...special,
-    data,
-    content,
+    return {
+      ...special,
+      data,
+      content,
+    }
+  } catch (error) {
+    throw new Error(`Failed to parse YAML frontmatter: ${error instanceof Error ? error.message : String(error)}`)
   }
 }
 
