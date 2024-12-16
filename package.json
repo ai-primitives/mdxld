@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm run build:contexts && tsc",
+    "build": "pnpm run build:contexts && tsc --project tsconfig.json",
     "build:contexts": "tsx src/contexts/transform.ts",
     "test": "vitest run",
     "test:watch": "vitest",
