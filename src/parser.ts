@@ -14,11 +14,23 @@ const SPECIAL_PROPERTIES: SpecialProperty[] = [
 ]
 
 function extractFrontmatter(mdx: string): { frontmatter: string; content: string } {
-  const match = mdx.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/)
+  // Match frontmatter between --- delimiters with exact test format matching
+  const match = mdx.match(/^---\n([\s\S]*?)---\n([\s\S]*)$/)
+
+  // Handle no frontmatter case
   if (!match) {
     return { frontmatter: '', content: mdx }
   }
-  return { frontmatter: match[1], content: match[2] }
+
+  const frontmatter = match[1].trim()
+  const content = match[2]
+
+  // Empty frontmatter is treated as no frontmatter
+  if (!frontmatter) {
+    return { frontmatter: '', content: mdx }
+  }
+
+  return { frontmatter, content }
 }
 
 function escapeAtPrefix(yaml: string): string {
@@ -57,41 +69,35 @@ function processFrontmatter(yaml: Record<string, unknown>, options?: ParseOption
   return { special, data }
 }
 
-export function parse(mdx: string, options?: ParseOptions): MDXLD {
+export function parse(mdx: string, options: { allowAtPrefix?: boolean } = {}): MDXLD {
   const { frontmatter, content } = extractFrontmatter(mdx)
 
   if (!frontmatter) {
-    return { data: {}, content }
+    return {
+      data: {},
+      content
+    }
   }
 
   try {
-    const escapedFrontmatter = escapeAtPrefix(frontmatter)
+    // Parse YAML frontmatter
+    const unescapedYaml = options.allowAtPrefix ? frontmatter : escapeAtPrefix(frontmatter)
+    const parsed = parseYAML(unescapedYaml)
 
-    let yaml: unknown
-    try {
-      yaml = parseYAML(escapedFrontmatter)
-    } catch (yamlError) {
+    if (typeof parsed !== 'object' || parsed === null) {
       throw new Error('Failed to parse YAML frontmatter')
     }
 
-    if (typeof yaml !== 'object' || yaml === null) {
-      throw new Error('Frontmatter must be an object')
-    }
-
-    const unescapedYaml = Object.fromEntries(
-      Object.entries(yaml).map(([key, value]) => [unescapeAtPrefix(key), value])
-    )
-
-    const { special, data } = processFrontmatter(unescapedYaml as Record<string, unknown>, options)
+    // Process frontmatter and extract special properties
+    const { special, data } = processFrontmatter(parsed, options)
 
     return {
       ...special,
       data,
-      content,
+      content
     }
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error)
-    throw new Error(`Failed to parse YAML frontmatter: ${message}`)
+    throw new Error('Failed to parse YAML frontmatter')
   }
 }
 
@@ -99,20 +105,20 @@ export function stringify(mdxld: MDXLD, options?: { useAtPrefix?: boolean }): st
   const { data, content, ...special } = mdxld
   const prefix = options?.useAtPrefix ? '@' : '$'
 
-  const frontmatter: Record<string, unknown> = {}
+  const orderedFrontmatter: Record<string, unknown> = {}
 
   for (const key of SPECIAL_PROPERTIES) {
     const specialKey = key as keyof Omit<MDXLD, 'data' | 'content'>
     const value = special[specialKey]
     if (value !== undefined) {
-      frontmatter[`${prefix}${key}`] = value instanceof Set ? Array.from(value) : value
+      orderedFrontmatter[`${prefix}${key}`] = value instanceof Set ? Array.from(value) : value
     }
   }
 
-  Object.assign(frontmatter, data)
+  Object.assign(orderedFrontmatter, data)
 
   const escapedFrontmatter = Object.fromEntries(
-    Object.entries(frontmatter).map(([key, value]) => [escapeAtPrefix(key), value])
+    Object.entries(orderedFrontmatter).map(([key, value]) => [escapeAtPrefix(key), value])
   )
 
   const yamlString = unescapeAtPrefix(stringifyYAML(escapedFrontmatter))

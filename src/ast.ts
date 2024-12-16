@@ -13,10 +13,12 @@ export function parse(mdx: string, options?: ParseOptions): MDXLDWithAST {
   try {
     const ast = unified()
       .use(remarkParse)
+      .use(remarkFrontmatter, ['yaml'])
       .use(remarkMDX)
       .use(remarkGFM)
-      .use(remarkFrontmatter)
       .parse(mdx) as Root
+
+    ast.children = ast.children.filter(node => node.type !== 'yaml')
 
     return {
       ...core,
