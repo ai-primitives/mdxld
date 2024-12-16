@@ -38,7 +38,7 @@ function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-function convertAtToDollar(obj: JsonValue): JsonValue {
+function convertAtToDollar(obj: JsonValue | JsonLdContextDocument): JsonValue {
   if (typeof obj !== 'object' || obj === null) {
     return obj
   }
@@ -47,11 +47,16 @@ function convertAtToDollar(obj: JsonValue): JsonValue {
     return obj.map(item => convertAtToDollar(item))
   }
 
-  return Object.entries(obj).reduce((acc: Record<string, JsonValue>, [key, value]) => {
-    const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key
-    acc[newKey] = convertAtToDollar(value)
-    return acc
-  }, {})
+  const result: Record<string, JsonValue> = {}
+  const entries = Object.entries(obj) as [string, JsonValue | undefined][]
+
+  for (const [key, value] of entries) {
+    if (value !== undefined) {
+      const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key
+      result[newKey] = convertAtToDollar(value)
+    }
+  }
+  return result
 }
 
 async function transformContext(content: string): Promise<TransformOutput> {

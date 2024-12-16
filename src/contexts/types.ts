@@ -21,7 +21,7 @@ export interface TransformedContext extends Record<string, JsonValue | undefined
   $vocab?: string
 }
 
-export interface JsonLdContextDocument extends Record<string, JsonValue | undefined> {
+export interface JsonLdContextDocument {
   '@context'?: Record<string, JsonValue>
   [key: string]: JsonValue | undefined
 }
