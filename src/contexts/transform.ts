@@ -28,8 +28,12 @@ function convertAtToDollar(obj: any): any {
   const result: any = {}
   for (const [key, value] of Object.entries(obj)) {
     const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key
-    const newValue = typeof value === 'object' ? convertAtToDollar(value) :
-                    typeof value === 'string' && value.startsWith('@') ? `$${value.slice(1)}` : value
+    let newValue = value
+    if (typeof value === 'object') {
+      newValue = convertAtToDollar(value)
+    } else if (typeof value === 'string') {
+      newValue = value.startsWith('@') && !value.includes('://') ? `$${value.slice(1)}` : value
+    }
     result[newKey] = newValue
   }
   return result
@@ -48,17 +52,32 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
       contextSize = contextStr.length
       console.log(`Input context size: ${contextSize} bytes`)
       console.log('Context structure:', Object.keys(contextObj).join(', '))
+
+      if (!contextObj || typeof contextObj !== 'object') {
+        throw new Error('Invalid context structure')
+      }
     } catch (e) {
       console.error('Error processing context:', e)
       throw e
     }
 
-    // Convert @ prefixes to $ prefixes directly on the context object
+    // Convert @ prefixes to $ prefixes while preserving structure
     console.log('\nConverting prefixes...')
     let converted
     try {
-      converted = convertAtToDollar(contextObj)
+      const contextCopy = JSON.parse(JSON.stringify(contextObj))
+      converted = convertAtToDollar(contextCopy)
+
+      if (!converted || typeof converted !== 'object') {
+        throw new Error('Invalid conversion result')
+      }
+
+      if (contextObj['@vocab'] && !converted.$vocab) {
+        throw new Error('Failed to convert @vocab to $vocab')
+      }
+
       console.log('Prefix conversion complete')
+      console.log('Converted structure:', Object.keys(converted).join(', '))
     } catch (e) {
       console.error('Error converting prefixes:', e)
       throw e
@@ -68,21 +87,24 @@ async function transformContext(input: JsonLdContextDocument): Promise<string> {
     console.log('\nGenerating JSON5...')
     let json5Output: string
     try {
-      // Use more compact JSON5 formatting but preserve URLs
       const json5Options = {
         space: '',  // No indentation for maximum compression
         quote: '"',
         replacer: (key: string, value: any) => {
-          // Remove quotes from valid identifiers, but preserve URLs
-          if (typeof value === 'string' && /^[a-zA-Z$_][a-zA-Z0-9$_]*$/.test(value) && !value.includes('://')) {
+          if (typeof value === 'string' && value.includes('://')) {
+            return value
+          }
+          if (typeof value === 'string' && /^[a-zA-Z$_][a-zA-Z0-9$_]*$/.test(value)) {
             return value
           }
           return value
         }
       }
+
       json5Output = JSON5.stringify(converted, json5Options.replacer)
-        .replace(/"(\w+)":/g, '$1:') // Remove quotes from property names
+        .replace(/"(\w+)":/g, '$1:') // Remove quotes from property names where safe
         .replace(/,(?=\w)/g, ',\n') // Add some line breaks for readability
+
       const outputSize = json5Output.length
       console.log(`Output size: ${outputSize} bytes (${Math.round((outputSize / contextSize) * 100)}% of original)`)
     } catch (e) {
@@ -110,7 +132,6 @@ async function processContextFile(filename: string, outputPath: string): Promise
       jsonldContent = JSON.parse(content)
       console.log('JSON structure:', Object.keys(jsonldContent))
 
-      // Handle both direct context and wrapped context
       const contextDoc: JsonLdContextDocument = jsonldContent['@context']
         ? { '@context': jsonldContent['@context'] }
         : jsonldContent
@@ -125,7 +146,6 @@ async function processContextFile(filename: string, outputPath: string): Promise
     const transformed = await transformContext(jsonldContent)
     console.log('Transformation complete')
 
-    // Export as a TypeScript constant
     const output = `// Auto-generated from ${filename}
 const context = ${transformed} as const;
 export default context;`
@@ -143,17 +163,14 @@ export async function buildContexts(): Promise<void> {
   try {
     console.log('Starting context build process...')
 
-    // Ensure build directory exists
     console.log(`Creating build directory: ${BUILD_DIR}`)
     await fs.mkdir(BUILD_DIR, { recursive: true })
 
-    // Get list of source files
     console.log(`Reading source directory: ${SOURCE_DIR}`)
     const files = await fs.readdir(SOURCE_DIR)
     const jsonldFiles = files.filter(f => f.endsWith('.jsonld'))
     console.log(`Found ${jsonldFiles.length} JSON-LD files:`, jsonldFiles)
 
-    // Process each context file
     const exports: string[] = []
     for (const file of jsonldFiles) {
       const sourcePath = path.join(SOURCE_DIR, file)
@@ -170,7 +187,6 @@ export async function buildContexts(): Promise<void> {
       }
     }
 
-    // Generate index file
     console.log('\nGenerating index.ts...')
     const indexContent = `// Auto-generated index file
 ${exports.map(name => `import ${name} from './${name}'`).join('\n')}
@@ -191,7 +207,6 @@ export type { JsonLdDocument, ContextDefinition } from 'jsonld'
   }
 }
 
-// Run build if this is the main module
 const isMainModule = import.meta.url.endsWith(process.argv[1])
 
 if (isMainModule) {
