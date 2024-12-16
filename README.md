@@ -87,6 +87,121 @@ interface MDXLD {
   data: Record<string, unknown>
   content: string
 }
+
+// Options for parsing MDX documents
+interface ParseOptions {
+  ast?: boolean         // Whether to parse content as AST
+  allowAtPrefix?: boolean // Allow @ prefix (defaults to $)
+}
+
+// Options for stringifying MDX documents
+interface StringifyOptions {
+  useAtPrefix?: boolean  // Use @ prefix instead of default $
+}
+```
+
+### Special Properties
+
+The following properties are treated specially when prefixed with `$` or `@`:
+
+- `type`: Document type URI (extracted to root)
+- `context`: JSON-LD context as string URI or object
+- `id`: Optional document identifier
+- `language`: Document language
+- `base`: Base URI for relative URLs
+- `vocab`: Vocabulary URI
+- `list`: Array value (converts non-array to single-item array)
+- `set`: Set value (converts array to Set)
+- `reverse`: Boolean flag for reverse properties
+
+Example with special properties:
+
+```typescript
+const mdx = parse(`---
+$type: 'https://mdx.org.ai/Document'
+$context:
+  '@vocab': 'https://schema.org/'
+  name: 'https://schema.org/name'
+$id: 'doc123'
+$set: ['item1', 'item2']
+$list: 'single-item'
+title: 'My Document'
+---`)
+
+console.log(mdx)
+// Output:
+// {
+//   type: 'https://mdx.org.ai/Document',
+//   context: {
+//     '@vocab': 'https://schema.org/',
+//     name: 'https://schema.org/name'
+//   },
+//   id: 'doc123',
+//   set: Set(2) { 'item1', 'item2' },
+//   list: ['single-item'],
+//   data: {
+//     title: 'My Document'
+//   },
+//   content: ''
+// }
+```
+
+### Advanced Usage
+
+#### Property Prefix Handling
+
+The package supports both `$` and `@` prefixes for YAML-LD properties, with `$` being the preferred prefix:
+
+```typescript
+import { parse } from 'mdxld'
+
+// Using $ prefix (preferred)
+const mdx1 = parse(`---
+$type: 'https://mdx.org.ai/Document'
+$context: 'https://schema.org'
+---`)
+
+// Using quoted @ prefix
+const mdx2 = parse(`---
+'@type': 'https://mdx.org.ai/Document'
+'@context': 'https://schema.org'
+---`, { allowAtPrefix: true })
+```
+
+#### Error Handling
+
+The package provides detailed error messages for invalid YAML frontmatter:
+
+```typescript
+try {
+  const mdx = parse(`---
+  invalid: yaml: content
+  ---`)
+} catch (error) {
+  console.error(error.message) // "Failed to parse YAML frontmatter: ..."
+}
+```
+
+#### AST Parsing with Plugins
+
+The AST functionality includes support for MDX, GitHub Flavored Markdown, and frontmatter:
+
+```typescript
+import { parse } from 'mdxld/ast'
+
+const mdx = parse(`---
+$type: 'https://mdx.org.ai/Document'
+---
+
+# Hello {name}
+
+<CustomComponent prop={value}>
+  Some **bold** text
+</CustomComponent>
+`)
+
+console.log(mdx.ast)
+// Output: Full AST with MDX nodes and GFM support
 ```
 
 ## Development
