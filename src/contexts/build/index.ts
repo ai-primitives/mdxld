@@ -1,4 +1,4 @@
 // Generated exports for JSON-LD contexts
-export { epcisContext } from './epcisContext';
-export { epcisOntology } from './epcisOntology';
-export { schemaorg } from './schemaorg';
+export { epcisContext } from './epcisContext.js'
+export { epcisOntology } from './epcisOntology.js'
+export { schemaorg } from './schemaorg.js'
