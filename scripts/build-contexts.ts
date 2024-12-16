@@ -32,7 +32,10 @@ function transformPrefixes(obj: unknown): unknown {
 }
 
 function generateTypeScriptContent(constName: string, data: unknown): string {
-  return `export const ${constName}: Record<string, unknown> = ${json5.stringify(data, null, 2)} as const;\n`;
+  return `// Generated from ${constName}.jsonld
+// @ts-ignore - Large type definition, explicit type annotation provided
+export const ${constName}: Record<string, unknown> = ${json5.stringify(data, null, 2)} as const;
+`;
 }
 
 try {
@@ -76,7 +79,7 @@ try {
 
   fs.writeFileSync(
     path.join(BUILD_DIR, 'index.ts'),
-    `${exportStatements}\n`
+    `// Generated exports for JSON-LD contexts\n${exportStatements}\n`
   );
 
   console.log('Context build complete!');
