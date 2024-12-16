@@ -53,7 +53,8 @@ try {
 
       // Create TypeScript constant
       const constName = path.basename(file, '.jsonld')
-        .replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+        .replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+        .replace(/\./g, '');  // Remove dots from names
 
       const outputPath = path.join(BUILD_DIR, `${constName}.ts`);
       const outputContent = generateTypeScriptContent(constName, transformed);
