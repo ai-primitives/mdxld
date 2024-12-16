@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "pnpm run build:contexts && tsc --project tsconfig.json",
-    "build:contexts": "tsx scripts/build-contexts.js",
+    "build:contexts": "tsx scripts/build-contexts.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint src",

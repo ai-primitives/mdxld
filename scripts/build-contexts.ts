@@ -12,18 +12,27 @@ const BUILD_DIR = path.join(__dirname, '..', 'src', 'contexts', 'build');
 // Create build directory if it doesn't exist
 fs.mkdirSync(BUILD_DIR, { recursive: true });
 
+interface JsonLdContext {
+  '@context'?: Record<string, unknown>;
+  [key: string]: unknown;
+}
+
 // Transform @ prefixes to $ prefixes in an object
 function transformPrefixes(obj: unknown): unknown {
   if (typeof obj !== 'object' || obj === null) return obj;
 
   const result: Record<string, unknown> = Array.isArray(obj) ? [] : {};
 
-  for (const [key, value] of Object.entries(obj)) {
+  for (const [key, value] of Object.entries(obj as Record<string, unknown>)) {
     const newKey = key.startsWith('@') ? `$${key.slice(1)}` : key;
     result[newKey] = transformPrefixes(value);
   }
 
   return result;
+}
+
+function generateTypeScriptContent(constName: string, data: unknown): string {
+  return `export const ${constName}: Record<string, unknown> = ${json5.stringify(data, null, 2)} as const;\n`;
 }
 
 try {
@@ -35,7 +44,7 @@ try {
     try {
       const sourcePath = path.join(SOURCE_DIR, file);
       const content = fs.readFileSync(sourcePath, 'utf8');
-      const json = JSON.parse(content);
+      const json = JSON.parse(content) as JsonLdContext;
       const transformed = transformPrefixes(json);
 
       // Create TypeScript constant
@@ -43,12 +52,16 @@ try {
         .replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
 
       const outputPath = path.join(BUILD_DIR, `${constName}.ts`);
-      const outputContent = `// Generated from ${file}\nexport const ${constName} = ${json5.stringify(transformed, null, 2)} as const;\n`;
+      const outputContent = generateTypeScriptContent(constName, transformed);
 
       fs.writeFileSync(outputPath, outputContent);
       console.log(`Processed ${file} -> ${path.basename(outputPath)}`);
     } catch (error) {
-      console.error(`Error processing ${file}:`, error);
+      if (error instanceof Error) {
+        console.error(`Error processing ${file}:`, error.message);
+      } else {
+        console.error(`Error processing ${file}:`, error);
+      }
     }
   }
 
@@ -68,6 +81,10 @@ try {
 
   console.log('Context build complete!');
 } catch (error) {
-  console.error('Build process failed:', error);
+  if (error instanceof Error) {
+    console.error('Build process failed:', error.message);
+  } else {
+    console.error('Build process failed:', error);
+  }
   process.exit(1);
 }
