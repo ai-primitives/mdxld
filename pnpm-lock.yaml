@@ -14,6 +14,9 @@ importers:
       jsonld:
         specifier: ^8.3.2
         version: 8.3.2(web-streams-polyfill@3.3.3)
+      remark-mdx:
+        specifier: ^3.1.0
+        version: 3.1.0
       unified:
         specifier: ^11.0.4
         version: 11.0.5
@@ -72,9 +75,6 @@ importers:
       remark-gfm:
         specifier: ^4.0.0
         version: 4.0.0
-      remark-mdx:
-        specifier: ^3.1.0
-        version: 3.1.0
       remark-parse:
         specifier: ^11.0.0
         version: 11.0.0
