@@ -1,37 +1,44 @@
 import { writeFile } from 'fs/promises'
 import { join } from 'path'
 import { fileURLToPath } from 'url'
-import axios from 'axios'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 async function downloadContext(url, filename) {
   console.log(`Downloading ${url} to ${filename}...`)
   try {
-    const response = await axios.get(url, {
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 10000)
+
+    const response = await fetch(url, {
       headers: {
         'Accept': 'application/ld+json',
         'User-Agent': 'Mozilla/5.0 (compatible; mdxld/1.0)'
       },
-      timeout: 10000, // 10 second timeout
-      responseType: 'text'
+      signal: controller.signal
     })
+
+    clearTimeout(timeout)
+
+    if (!response.ok) {
+      throw new Error(`Failed to download ${url}: ${response.status} ${response.statusText}`)
+    }
+
+    const data = await response.text()
 
     // Verify it's valid JSON-LD
     try {
-      JSON.parse(response.data)
+      JSON.parse(data)
       console.log('Successfully validated JSON-LD content')
     } catch (e) {
       throw new Error(`Invalid JSON-LD from ${url}: ${e.message}`)
     }
 
-    await writeFile(filename, response.data, 'utf8')
+    await writeFile(filename, data, 'utf8')
     console.log(`Successfully downloaded ${filename}`)
   } catch (error) {
-    if (error.response) {
-      throw new Error(`Failed to download ${url}: ${error.response.status} ${error.response.statusText}`)
-    } else if (error.request) {
-      throw new Error(`Network error downloading ${url}: ${error.message}`)
+    if (error.name === 'AbortError') {
+      throw new Error(`Timeout downloading ${url}: Request took longer than 10 seconds`)
     } else {
       throw new Error(`Error downloading ${url}: ${error.message}`)
     }
