@@ -37,6 +37,7 @@
 - [x] Fix package exports configuration
 
 ### Future Enhancements 🎯
+- [ ] Simplify/reduce the embedded context size
 - [ ] Add JSON-LD context validation
 - [ ] Support for custom remark plugins
 - [ ] Schema validation options
