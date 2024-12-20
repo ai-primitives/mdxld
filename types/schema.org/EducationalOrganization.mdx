@@ -4,7 +4,11 @@ $type: EducationalOrganization
 title: EducationalOrganization
 description: An educational organization.
 properties:
-
+  direct:
+    - name: alumni
+      type: Person
+      description: Alumni of an organization.
+  inherited:
 subClasses:
   - CollegeOrUniversity
   - ElementarySchool
@@ -12,9 +16,7 @@ subClasses:
   - MiddleSchool
   - Preschool
   - School
-
 ---
-
 # EducationalOrganization
 
 An educational organization.
@@ -36,9 +38,13 @@ The following types directly inherit from EducationalOrganization:
 
 ## Properties
 
-EducationalOrganization defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
+- alumni: Alumni of an organization.
 
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -46,7 +52,7 @@ EducationalOrganization defines the following properties in addition to those in
 interface EducationalOrganization {
   $context?: 'schema.org'
   $type: 'EducationalOrganization'
-
+  alumni?: Person
 }
 ```
 

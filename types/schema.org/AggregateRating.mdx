@@ -4,13 +4,95 @@ $type: AggregateRating
 title: AggregateRating
 description: The average rating based on multiple ratings or reviews.
 properties:
-  - ratingCount
-  - reviewCount
+  direct:
+    - name: ratingCount
+      type: number
+      description: The count of total number of ratings.
+    - name: reviewCount
+      type: number
+      description: The count of total number of reviews.
+    - name: itemReviewed
+      type: Thing
+      description: The item that is being reviewed/rated.
+  inherited:
+    - name: ratingExplanation
+      type: string
+      description: A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]].
+      inheritedFrom: Rating
+    - name: bestRating
+      type: number | string
+      description: The highest value allowed in this rating system.
+      inheritedFrom: Rating
+    - name: author
+      type: Organization | Person
+      description: The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
+      inheritedFrom: Rating
+    - name: reviewAspect
+      type: string
+      description: This Review or Rating is relevant to this part or facet of the itemReviewed.
+      inheritedFrom: Rating
+    - name: worstRating
+      type: number | string
+      description: The lowest value allowed in this rating system.
+      inheritedFrom: Rating
+    - name: ratingValue
+      type: number | string
+      description: The rating for the content.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
+      inheritedFrom: Rating
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
 subClasses:
   - EmployerAggregateRating
 parentClass: Rating
 ---
-
 # AggregateRating
 
 The average rating based on multiple ratings or reviews.
@@ -27,19 +109,44 @@ The following types directly inherit from AggregateRating:
 
 ## Properties
 
-AggregateRating defines the following properties in addition to those inherited from Rating:
+### Direct Properties
 
 - ratingCount: The count of total number of ratings.
 - reviewCount: The count of total number of reviews.
+- itemReviewed: The item that is being reviewed/rated.
+
+### Inherited Properties
+
+- ratingExplanation: A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]]. (inherited from Rating)
+- bestRating: The highest value allowed in this rating system. (inherited from Rating)
+- author: The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably. (inherited from Rating)
+- reviewAspect: This Review or Rating is relevant to this part or facet of the itemReviewed. (inherited from Rating)
+- worstRating: The lowest value allowed in this rating system. (inherited from Rating)
+- ratingValue: The rating for the content.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator. (inherited from Rating)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
 
 ## Usage Example
 
 ```typescript
-interface AggregateRating {
+interface AggregateRating extends Rating {
   $context?: 'schema.org'
   $type: 'AggregateRating'
   ratingCount?: number
   reviewCount?: number
+  itemReviewed?: Thing
 }
 ```
 

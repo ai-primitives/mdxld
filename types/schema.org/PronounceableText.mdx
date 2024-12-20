@@ -4,14 +4,22 @@ $type: PronounceableText
 title: PronounceableText
 description: Data type: PronounceableText.
 properties:
-  - phoneticText
-  - speechToTextMarkup
-  - textValue
-subClasses:
-
+  direct:
+    - name: phoneticText
+      type: string
+      description: Representation of a text [[textValue]] using the specified [[speechToTextMarkup]]. For example the city name of Houston in IPA: /ˈhjuːstən/.
+    - name: textValue
+      type: string
+      description: Text value being annotated.
+    - name: inLanguage
+      type: Language | string
+      description: The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+    - name: speechToTextMarkup
+      type: string
+      description: Form of markup used. eg. [SSML](https://www.w3.org/TR/speech-synthesis11) or [IPA](https://www.wikidata.org/wiki/Property:P898).
+  inherited:
 parentClass: Text
 ---
-
 # PronounceableText
 
 Data type: PronounceableText.
@@ -26,21 +34,27 @@ No types directly inherit from PronounceableText.
 
 ## Properties
 
-PronounceableText defines the following properties in addition to those inherited from Text:
+### Direct Properties
 
 - phoneticText: Representation of a text [[textValue]] using the specified [[speechToTextMarkup]]. For example the city name of Houston in IPA: /ˈhjuːstən/.
-- speechToTextMarkup: Form of markup used. eg. [SSML](https://www.w3.org/TR/speech-synthesis11) or [IPA](https://www.wikidata.org/wiki/Property:P898).
 - textValue: Text value being annotated.
+- inLanguage: The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+- speechToTextMarkup: Form of markup used. eg. [SSML](https://www.w3.org/TR/speech-synthesis11) or [IPA](https://www.wikidata.org/wiki/Property:P898).
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
 ```typescript
-interface PronounceableText {
+interface PronounceableText extends Text {
   $context?: 'schema.org'
   $type: 'PronounceableText'
   phoneticText?: string
-  speechToTextMarkup?: string
   textValue?: string
+  inLanguage?: Language | string
+  speechToTextMarkup?: string
 }
 ```
 

@@ -4,12 +4,476 @@ $type: MotorizedBicycle
 title: MotorizedBicycle
 description: A motorized bicycle is a bicycle with an attached motor used to power the vehicle, or to assist with pedaling.
 properties:
+  direct:
+  inherited:
+    - name: vehicleSeatingCapacity
+      type: QuantitativeValue | number
+      description: The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
+      inheritedFrom: Vehicle
+    - name: emissionsCO2
+      type: number
+      description: The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value, since there is no UN/CEFACT Common Code for "g/km".
+      inheritedFrom: Vehicle
+    - name: numberOfPreviousOwners
+      type: QuantitativeValue | number
+      description: The number of owners of the vehicle, including the current one.\n\nTypical unit code(s): C62.
+      inheritedFrom: Vehicle
+    - name: payload
+      type: QuantitativeValue
+      description: The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: Many databases specify the permitted TOTAL weight instead, which is the sum of [[weight]] and [[payload]]\n* Note 2: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 3: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 4: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
+      inheritedFrom: Vehicle
+    - name: meetsEmissionStandard
+      type: QualitativeValue | string
+      description: Indicates that the vehicle meets the respective emission standard.
+      inheritedFrom: Vehicle
+    - name: steeringPosition
+      type: SteeringPositionValue
+      description: The position of the steering wheel or similar device (mostly for cars).
+      inheritedFrom: Vehicle
+    - name: productionDate
+      type: string
+      description: The date of production of the item, e.g. vehicle.
+      inheritedFrom: Vehicle
+    - name: vehicleIdentificationNumber
+      type: string
+      description: The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.
+      inheritedFrom: Vehicle
+    - name: callSign
+      type: string
+      description: A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
+      inheritedFrom: Vehicle
+    - name: fuelConsumption
+      type: QuantitativeValue
+      description: The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).\n\n* Note 1: There are unfortunately no standard unit codes for liters per 100 km.  Use [[unitText]] to indicate the unit of measurement, e.g. L/100 km.\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel consumption to another value.
+      inheritedFrom: Vehicle
+    - name: numberOfDoors
+      type: QuantitativeValue | number
+      description: The number of doors.\n\nTypical unit code(s): C62.
+      inheritedFrom: Vehicle
+    - name: knownVehicleDamages
+      type: string
+      description: A textual description of known damages, both repaired and unrepaired.
+      inheritedFrom: Vehicle
+    - name: fuelCapacity
+      type: QuantitativeValue
+      description: The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.\n\nTypical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles).
+      inheritedFrom: Vehicle
+    - name: cargoVolume
+      type: QuantitativeValue
+      description: The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.\n\nTypical unit code(s): LTR for liters, FTQ for cubic foot/feet\n\nNote: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+      inheritedFrom: Vehicle
+    - name: vehicleConfiguration
+      type: string
+      description: A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.
+      inheritedFrom: Vehicle
+    - name: vehicleInteriorColor
+      type: string
+      description: The color or color combination of the interior of the vehicle.
+      inheritedFrom: Vehicle
+    - name: vehicleModelDate
+      type: string
+      description: The release date of a vehicle model (often used to differentiate versions of the same make and model).
+      inheritedFrom: Vehicle
+    - name: mileageFromOdometer
+      type: QuantitativeValue
+      description: The total distance travelled by the particular vehicle since its initial production, as read from its odometer.\n\nTypical unit code(s): KMT for kilometers, SMI for statute miles.
+      inheritedFrom: Vehicle
+    - name: seatingCapacity
+      type: QuantitativeValue | number
+      description: The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
+      inheritedFrom: Vehicle
+    - name: numberOfAirbags
+      type: number | string
+      description: The number or type of airbags in the vehicle.
+      inheritedFrom: Vehicle
+    - name: vehicleTransmission
+      type: QualitativeValue | string
+      description: The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars).
+      inheritedFrom: Vehicle
+    - name: modelDate
+      type: string
+      description: The release date of a vehicle model (often used to differentiate versions of the same make and model).
+      inheritedFrom: Vehicle
+    - name: numberOfForwardGears
+      type: QuantitativeValue | number
+      description: The total number of forward gears available for the transmission system of the vehicle.\n\nTypical unit code(s): C62.
+      inheritedFrom: Vehicle
+    - name: vehicleSpecialUsage
+      type: CarUsageType | string
+      description: Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale.
+      inheritedFrom: Vehicle
+    - name: accelerationTime
+      type: QuantitativeValue
+      description: The time needed to accelerate the vehicle from a given start velocity to a given target velocity.\n\nTypical unit code(s): SEC for seconds\n\n* Note: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use "SEC" for seconds and indicate the velocities in the [[name]] of the [[QuantitativeValue]], or use [[valueReference]] with a [[QuantitativeValue]] of 0..60 mph or 0..100 km/h to specify the reference speeds.
+      inheritedFrom: Vehicle
+    - name: vehicleEngine
+      type: EngineSpecification
+      description: Information about the engine or engines of the vehicle.
+      inheritedFrom: Vehicle
+    - name: weightTotal
+      type: QuantitativeValue
+      description: The permitted total weight of the loaded vehicle, including passengers and cargo and the weight of the empty vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
+      inheritedFrom: Vehicle
+    - name: trailerWeight
+      type: QuantitativeValue
+      description: The permitted weight of a trailer attached to the vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
+      inheritedFrom: Vehicle
+    - name: numberOfAxles
+      type: QuantitativeValue | number
+      description: The number of axles.\n\nTypical unit code(s): C62.
+      inheritedFrom: Vehicle
+    - name: speed
+      type: QuantitativeValue
+      description: The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range (indicated by [[maxValue]]) should be the maximum speed achievable under regular conditions.\n\nTypical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for knot\n\n*Note 1: Use [[minValue]] and [[maxValue]] to indicate the range. Typically, the minimal value is zero.\n* Note 2: There are many different ways of measuring the speed range. You can link to information about how the given value has been determined using the [[valueReference]] property.
+      inheritedFrom: Vehicle
+    - name: vehicleInteriorType
+      type: string
+      description: The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are characterized by the material used, an interior type can also be based on vehicle usage or target audience.
+      inheritedFrom: Vehicle
+    - name: fuelEfficiency
+      type: QuantitativeValue
+      description: The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).\n\n* Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. Use [[unitText]] to indicate the unit of measurement, e.g. mpg or km/L.\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel economy to another value.
+      inheritedFrom: Vehicle
+    - name: dateVehicleFirstRegistered
+      type: string
+      description: The date of the first registration of the vehicle with the respective public authorities.
+      inheritedFrom: Vehicle
+    - name: fuelType
+      type: QualitativeValue | string
+      description: The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.
+      inheritedFrom: Vehicle
+    - name: bodyType
+      type: QualitativeValue | string
+      description: Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).
+      inheritedFrom: Vehicle
+    - name: driveWheelConfiguration
+      type: DriveWheelConfigurationValue | string
+      description: The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.
+      inheritedFrom: Vehicle
+    - name: tongueWeight
+      type: QuantitativeValue
+      description: The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR).\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
+      inheritedFrom: Vehicle
+    - name: purchaseDate
+      type: string
+      description: The date the item, e.g. vehicle, was purchased by the current owner.
+      inheritedFrom: Vehicle
+    - name: wheelbase
+      type: QuantitativeValue
+      description: The distance between the centers of the front and rear wheels.\n\nTypical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet.
+      inheritedFrom: Vehicle
+    - name: releaseDate
+      type: string
+      description: The release date of a product or product model. This can be used to distinguish the exact variant of a product.
+      inheritedFrom: Product
+    - name: additionalProperty
+      type: PropertyValue
+      description: A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
 
-subClasses:
+      inheritedFrom: Product
+    - name: mobileUrl
+      type: string
+      description: The [[mobileUrl]] property is provided for specific situations in which data consumers need to determine whether one of several provided URLs is a dedicated 'mobile site'.
 
+To discourage over-use, and reflecting intial usecases, the property is expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The general trend in web technology is towards [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) in which content can be flexibly adapted to a wide range of browsing environments. Pages and sites referenced with the long-established [[url]] property should ideally also be usable on a wide variety of devices, including mobile phones. In most cases, it would be pointless and counter productive to attempt to update all [[url]] markup to use [[mobileUrl]] for more mobile-oriented pages. The property is intended for the case when items (primarily [[Product]] and [[Offer]]) have extra URLs hosted on an additional "mobile site" alongside the main one. It should not be taken as an endorsement of this publication style.
+    
+      inheritedFrom: Product
+    - name: isSimilarTo
+      type: Product | Service
+      description: A pointer to another, functionally similar product (or multiple products).
+      inheritedFrom: Product
+    - name: model
+      type: ProductModel | string
+      description: The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.
+      inheritedFrom: Product
+    - name: productionDate
+      type: string
+      description: The date of production of the item, e.g. vehicle.
+      inheritedFrom: Product
+    - name: hasEnergyConsumptionDetails
+      type: EnergyConsumptionDetails
+      description: Defines the energy efficiency Category (also known as "class" or "rating") for a product according to an international energy efficiency standard.
+      inheritedFrom: Product
+    - name: material
+      type: Product | string
+      description: A material that something is made from, e.g. leather, wool, cotton, paper.
+      inheritedFrom: Product
+    - name: hasMeasurement
+      type: QuantitativeValue
+      description: A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.
+      inheritedFrom: Product
+    - name: award
+      type: string
+      description: An award won by or for this item.
+      inheritedFrom: Product
+    - name: inProductGroupWithID
+      type: string
+      description: Indicates the [[productGroupID]] for a [[ProductGroup]] that this product [[isVariantOf]]. 
+      inheritedFrom: Product
+    - name: funding
+      type: Grant
+      description: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+      inheritedFrom: Product
+    - name: hasCertification
+      type: Certification
+      description: Certification information about a product, organization, service, place, or person.
+      inheritedFrom: Product
+    - name: manufacturer
+      type: Organization
+      description: The manufacturer of the product.
+      inheritedFrom: Product
+    - name: isFamilyFriendly
+      type: boolean
+      description: Indicates whether this content is family friendly.
+      inheritedFrom: Product
+    - name: countryOfAssembly
+      type: string
+      description: The place where the product was assembled.
+      inheritedFrom: Product
+    - name: keywords
+      type: DefinedTerm | string
+      description: Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
+      inheritedFrom: Product
+    - name: size
+      type: DefinedTerm | QuantitativeValue | SizeSpecification | string
+      description: A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured [[SizeSpecification]]; in other cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be more applicable. 
+      inheritedFrom: Product
+    - name: logo
+      type: ImageObject | string
+      description: An associated logo.
+      inheritedFrom: Product
+    - name: asin
+      type: string
+      description: An Amazon Standard Identification Number (ASIN) is a 10-character alphanumeric unique identifier assigned by Amazon.com and its partners for product identification within the Amazon organization (summary from [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s article).
+
+Note also that this is a definition for how to include ASINs in Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details.
+ASINs are most commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too.
+      inheritedFrom: Product
+    - name: gtin13
+      type: string
+      description: The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+      inheritedFrom: Product
+    - name: hasAdultConsideration
+      type: AdultOrientedEnumeration
+      description: Used to tag an item to be intended or suitable for consumption or use by adults only.
+      inheritedFrom: Product
+    - name: positiveNotes
+      type: ItemList | ListItem | WebContent | string
+      description: Provides positive considerations regarding something, for example product highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described.
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most positive is at the beginning of the list).
+      inheritedFrom: Product
+    - name: mpn
+      type: string
+      description: The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.
+      inheritedFrom: Product
+    - name: pattern
+      type: DefinedTerm | string
+      description: A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'. Values are typically expressed as text, although links to controlled value schemes are also supported.
+      inheritedFrom: Product
+    - name: brand
+      type: Brand | Organization
+      description: The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
+      inheritedFrom: Product
+    - name: hasMerchantReturnPolicy
+      type: MerchantReturnPolicy
+      description: Specifies a MerchantReturnPolicy that may be applicable.
+      inheritedFrom: Product
+    - name: category
+      type: CategoryCode | PhysicalActivityCategory | Thing | string
+      description: A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+      inheritedFrom: Product
+    - name: hasGS1DigitalLink
+      type: string
+      description: The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProduct]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>)  should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly.
+      inheritedFrom: Product
+    - name: gtin8
+      type: string
+      description: The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+      inheritedFrom: Product
+    - name: reviews
+      type: Review
+      description: Review of the item.
+      inheritedFrom: Product
+    - name: gtin
+      type: string
+      description: A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes.
+
+A correct [[gtin]] value should be a valid GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1 Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet the other rules for valid GTINs. See also [GS1's GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties.
+
+The GS1 [digital link specifications](https://www.gs1.org/standards/Digital-Link/) expresses GTINs as URLs (URIs, IRIs, etc.).
+Digital Links should be populated into the [[hasGS1DigitalLink]] attribute.
+
+Note also that this is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see the GS1 documentation for authoritative details.
+      inheritedFrom: Product
+    - name: isRelatedTo
+      type: Product | Service
+      description: A pointer to another, somehow related product (or multiple products).
+      inheritedFrom: Product
+    - name: review
+      type: Review
+      description: A review of the item.
+      inheritedFrom: Product
+    - name: color
+      type: string
+      description: The color of the product.
+      inheritedFrom: Product
+    - name: countryOfOrigin
+      type: Country
+      description: The country of origin of something, including products as well as creative  works such as movie and TV content.
+
+In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
+
+In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.
+      inheritedFrom: Product
+    - name: gtin14
+      type: string
+      description: The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+      inheritedFrom: Product
+    - name: offers
+      type: Demand | Offer
+      description: An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+      
+      inheritedFrom: Product
+    - name: height
+      type: Distance | QuantitativeValue
+      description: The height of the item.
+      inheritedFrom: Product
+    - name: isAccessoryOrSparePartFor
+      type: Product
+      description: A pointer to another product (or multiple products) for which this product is an accessory or spare part.
+      inheritedFrom: Product
+    - name: itemCondition
+      type: OfferItemCondition
+      description: A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.
+      inheritedFrom: Product
+    - name: awards
+      type: string
+      description: Awards won by or for this item.
+      inheritedFrom: Product
+    - name: width
+      type: Distance | QuantitativeValue
+      description: The width of the item.
+      inheritedFrom: Product
+    - name: isVariantOf
+      type: ProductGroup | ProductModel
+      description: Indicates the kind of product that this is a variant of. In the case of [[ProductModel]], this is a pointer (from a ProductModel) to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive. In the case of a [[ProductGroup]], the group description also serves as a template, representing a set of Products that vary on explicitly defined, specific dimensions only (so it defines both a set of variants, as well as which values distinguish amongst those variants). When used with [[ProductGroup]], this property can apply to any [[Product]] included in the group.
+      inheritedFrom: Product
+    - name: isConsumableFor
+      type: Product
+      description: A pointer to another product (or multiple products) for which this product is a consumable.
+      inheritedFrom: Product
+    - name: slogan
+      type: string
+      description: A slogan or motto associated with the item.
+      inheritedFrom: Product
+    - name: countryOfLastProcessing
+      type: string
+      description: The place where the item (typically [[Product]]) was last processed and tested before importation.
+      inheritedFrom: Product
+    - name: weight
+      type: QuantitativeValue
+      description: The weight of the product or person.
+      inheritedFrom: Product
+    - name: gtin12
+      type: string
+      description: The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
+      inheritedFrom: Product
+    - name: nsn
+      type: string
+      description: Indicates the [NATO stock number](https://en.wikipedia.org/wiki/NATO_Stock_Number) (nsn) of a [[Product]]. 
+      inheritedFrom: Product
+    - name: depth
+      type: Distance | QuantitativeValue
+      description: The depth of the item.
+      inheritedFrom: Product
+    - name: colorSwatch
+      type: ImageObject | string
+      description: A color swatch image, visualizing the color of a [[Product]]. Should match the textual description specified in the [[color]] property. This can be a URL or a fully described ImageObject.
+      inheritedFrom: Product
+    - name: aggregateRating
+      type: AggregateRating
+      description: The overall rating, based on a collection of reviews or ratings, of the item.
+      inheritedFrom: Product
+    - name: negativeNotes
+      type: ItemList | ListItem | WebContent | string
+      description: Provides negative considerations regarding something, most typically in pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described. Since product descriptions 
+tend to emphasise positive claims, it may be relatively unusual to find [[negativeNotes]] used in this way. Nevertheless for the sake of symmetry, [[negativeNotes]] can be used on [[Product]].
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most negative is at the beginning of the list).
+      inheritedFrom: Product
+    - name: sku
+      type: string
+      description: The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers.
+      inheritedFrom: Product
+    - name: productID
+      type: string
+      description: The product identifier, such as ISBN. For example: ``` meta itemprop="productID" content="isbn:123-456-789" ```.
+      inheritedFrom: Product
+    - name: purchaseDate
+      type: string
+      description: The date the item, e.g. vehicle, was purchased by the current owner.
+      inheritedFrom: Product
+    - name: audience
+      type: Audience
+      description: An intended audience, i.e. a group for whom something was created.
+      inheritedFrom: Product
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
 parentClass: Vehicle
 ---
-
 # MotorizedBicycle
 
 A motorized bicycle is a bicycle with an attached motor used to power the vehicle, or to assist with pedaling.
@@ -24,14 +488,156 @@ No types directly inherit from MotorizedBicycle.
 
 ## Properties
 
-MotorizedBicycle defines the following properties in addition to those inherited from Vehicle:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+- vehicleSeatingCapacity: The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons. (inherited from Vehicle)
+- emissionsCO2: The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value, since there is no UN/CEFACT Common Code for "g/km". (inherited from Vehicle)
+- numberOfPreviousOwners: The number of owners of the vehicle, including the current one.\n\nTypical unit code(s): C62. (inherited from Vehicle)
+- payload: The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: Many databases specify the permitted TOTAL weight instead, which is the sum of [[weight]] and [[payload]]\n* Note 2: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 3: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 4: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges. (inherited from Vehicle)
+- meetsEmissionStandard: Indicates that the vehicle meets the respective emission standard. (inherited from Vehicle)
+- steeringPosition: The position of the steering wheel or similar device (mostly for cars). (inherited from Vehicle)
+- productionDate: The date of production of the item, e.g. vehicle. (inherited from Vehicle)
+- vehicleIdentificationNumber: The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles. (inherited from Vehicle)
+- callSign: A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles. (inherited from Vehicle)
+- fuelConsumption: The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).\n\n* Note 1: There are unfortunately no standard unit codes for liters per 100 km.  Use [[unitText]] to indicate the unit of measurement, e.g. L/100 km.\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel consumption to another value. (inherited from Vehicle)
+- numberOfDoors: The number of doors.\n\nTypical unit code(s): C62. (inherited from Vehicle)
+- knownVehicleDamages: A textual description of known damages, both repaired and unrepaired. (inherited from Vehicle)
+- fuelCapacity: The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.\n\nTypical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles). (inherited from Vehicle)
+- cargoVolume: The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.\n\nTypical unit code(s): LTR for liters, FTQ for cubic foot/feet\n\nNote: You can use [[minValue]] and [[maxValue]] to indicate ranges. (inherited from Vehicle)
+- vehicleConfiguration: A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'. (inherited from Vehicle)
+- vehicleInteriorColor: The color or color combination of the interior of the vehicle. (inherited from Vehicle)
+- vehicleModelDate: The release date of a vehicle model (often used to differentiate versions of the same make and model). (inherited from Vehicle)
+- mileageFromOdometer: The total distance travelled by the particular vehicle since its initial production, as read from its odometer.\n\nTypical unit code(s): KMT for kilometers, SMI for statute miles. (inherited from Vehicle)
+- seatingCapacity: The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons. (inherited from Vehicle)
+- numberOfAirbags: The number or type of airbags in the vehicle. (inherited from Vehicle)
+- vehicleTransmission: The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars). (inherited from Vehicle)
+- modelDate: The release date of a vehicle model (often used to differentiate versions of the same make and model). (inherited from Vehicle)
+- numberOfForwardGears: The total number of forward gears available for the transmission system of the vehicle.\n\nTypical unit code(s): C62. (inherited from Vehicle)
+- vehicleSpecialUsage: Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale. (inherited from Vehicle)
+- accelerationTime: The time needed to accelerate the vehicle from a given start velocity to a given target velocity.\n\nTypical unit code(s): SEC for seconds\n\n* Note: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use "SEC" for seconds and indicate the velocities in the [[name]] of the [[QuantitativeValue]], or use [[valueReference]] with a [[QuantitativeValue]] of 0..60 mph or 0..100 km/h to specify the reference speeds. (inherited from Vehicle)
+- vehicleEngine: Information about the engine or engines of the vehicle. (inherited from Vehicle)
+- weightTotal: The permitted total weight of the loaded vehicle, including passengers and cargo and the weight of the empty vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges. (inherited from Vehicle)
+- trailerWeight: The permitted weight of a trailer attached to the vehicle.\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges. (inherited from Vehicle)
+- numberOfAxles: The number of axles.\n\nTypical unit code(s): C62. (inherited from Vehicle)
+- speed: The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range (indicated by [[maxValue]]) should be the maximum speed achievable under regular conditions.\n\nTypical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for knot\n\n*Note 1: Use [[minValue]] and [[maxValue]] to indicate the range. Typically, the minimal value is zero.\n* Note 2: There are many different ways of measuring the speed range. You can link to information about how the given value has been determined using the [[valueReference]] property. (inherited from Vehicle)
+- vehicleInteriorType: The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are characterized by the material used, an interior type can also be based on vehicle usage or target audience. (inherited from Vehicle)
+- fuelEfficiency: The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).\n\n* Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. Use [[unitText]] to indicate the unit of measurement, e.g. mpg or km/L.\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel economy to another value. (inherited from Vehicle)
+- dateVehicleFirstRegistered: The date of the first registration of the vehicle with the respective public authorities. (inherited from Vehicle)
+- fuelType: The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle. (inherited from Vehicle)
+- bodyType: Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.). (inherited from Vehicle)
+- driveWheelConfiguration: The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain. (inherited from Vehicle)
+- tongueWeight: The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR).\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges. (inherited from Vehicle)
+- purchaseDate: The date the item, e.g. vehicle, was purchased by the current owner. (inherited from Vehicle)
+- wheelbase: The distance between the centers of the front and rear wheels.\n\nTypical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet. (inherited from Vehicle)
+- releaseDate: The release date of a product or product model. This can be used to distinguish the exact variant of a product. (inherited from Product)
+- additionalProperty: A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+ (inherited from Product)
+- mobileUrl: The [[mobileUrl]] property is provided for specific situations in which data consumers need to determine whether one of several provided URLs is a dedicated 'mobile site'.
+
+To discourage over-use, and reflecting intial usecases, the property is expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The general trend in web technology is towards [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) in which content can be flexibly adapted to a wide range of browsing environments. Pages and sites referenced with the long-established [[url]] property should ideally also be usable on a wide variety of devices, including mobile phones. In most cases, it would be pointless and counter productive to attempt to update all [[url]] markup to use [[mobileUrl]] for more mobile-oriented pages. The property is intended for the case when items (primarily [[Product]] and [[Offer]]) have extra URLs hosted on an additional "mobile site" alongside the main one. It should not be taken as an endorsement of this publication style.
+     (inherited from Product)
+- isSimilarTo: A pointer to another, functionally similar product (or multiple products). (inherited from Product)
+- model: The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties. (inherited from Product)
+- productionDate: The date of production of the item, e.g. vehicle. (inherited from Product)
+- hasEnergyConsumptionDetails: Defines the energy efficiency Category (also known as "class" or "rating") for a product according to an international energy efficiency standard. (inherited from Product)
+- material: A material that something is made from, e.g. leather, wool, cotton, paper. (inherited from Product)
+- hasMeasurement: A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings. (inherited from Product)
+- award: An award won by or for this item. (inherited from Product)
+- inProductGroupWithID: Indicates the [[productGroupID]] for a [[ProductGroup]] that this product [[isVariantOf]].  (inherited from Product)
+- funding: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]]. (inherited from Product)
+- hasCertification: Certification information about a product, organization, service, place, or person. (inherited from Product)
+- manufacturer: The manufacturer of the product. (inherited from Product)
+- isFamilyFriendly: Indicates whether this content is family friendly. (inherited from Product)
+- countryOfAssembly: The place where the product was assembled. (inherited from Product)
+- keywords: Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property. (inherited from Product)
+- size: A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured [[SizeSpecification]]; in other cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be more applicable.  (inherited from Product)
+- logo: An associated logo. (inherited from Product)
+- asin: An Amazon Standard Identification Number (ASIN) is a 10-character alphanumeric unique identifier assigned by Amazon.com and its partners for product identification within the Amazon organization (summary from [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s article).
+
+Note also that this is a definition for how to include ASINs in Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details.
+ASINs are most commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too. (inherited from Product)
+- gtin13: The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details. (inherited from Product)
+- hasAdultConsideration: Used to tag an item to be intended or suitable for consumption or use by adults only. (inherited from Product)
+- positiveNotes: Provides positive considerations regarding something, for example product highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described.
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most positive is at the beginning of the list). (inherited from Product)
+- mpn: The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers. (inherited from Product)
+- pattern: A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'. Values are typically expressed as text, although links to controlled value schemes are also supported. (inherited from Product)
+- brand: The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person. (inherited from Product)
+- hasMerchantReturnPolicy: Specifies a MerchantReturnPolicy that may be applicable. (inherited from Product)
+- category: A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy. (inherited from Product)
+- hasGS1DigitalLink: The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProduct]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>)  should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly. (inherited from Product)
+- gtin8: The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details. (inherited from Product)
+- reviews: Review of the item. (inherited from Product)
+- gtin: A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes.
+
+A correct [[gtin]] value should be a valid GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1 Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet the other rules for valid GTINs. See also [GS1's GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties.
+
+The GS1 [digital link specifications](https://www.gs1.org/standards/Digital-Link/) expresses GTINs as URLs (URIs, IRIs, etc.).
+Digital Links should be populated into the [[hasGS1DigitalLink]] attribute.
+
+Note also that this is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see the GS1 documentation for authoritative details. (inherited from Product)
+- isRelatedTo: A pointer to another, somehow related product (or multiple products). (inherited from Product)
+- review: A review of the item. (inherited from Product)
+- color: The color of the product. (inherited from Product)
+- countryOfOrigin: The country of origin of something, including products as well as creative  works such as movie and TV content.
+
+In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
+
+In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here. (inherited from Product)
+- gtin14: The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details. (inherited from Product)
+- offers: An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+       (inherited from Product)
+- height: The height of the item. (inherited from Product)
+- isAccessoryOrSparePartFor: A pointer to another product (or multiple products) for which this product is an accessory or spare part. (inherited from Product)
+- itemCondition: A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns. (inherited from Product)
+- awards: Awards won by or for this item. (inherited from Product)
+- width: The width of the item. (inherited from Product)
+- isVariantOf: Indicates the kind of product that this is a variant of. In the case of [[ProductModel]], this is a pointer (from a ProductModel) to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive. In the case of a [[ProductGroup]], the group description also serves as a template, representing a set of Products that vary on explicitly defined, specific dimensions only (so it defines both a set of variants, as well as which values distinguish amongst those variants). When used with [[ProductGroup]], this property can apply to any [[Product]] included in the group. (inherited from Product)
+- isConsumableFor: A pointer to another product (or multiple products) for which this product is a consumable. (inherited from Product)
+- slogan: A slogan or motto associated with the item. (inherited from Product)
+- countryOfLastProcessing: The place where the item (typically [[Product]]) was last processed and tested before importation. (inherited from Product)
+- weight: The weight of the product or person. (inherited from Product)
+- gtin12: The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details. (inherited from Product)
+- nsn: Indicates the [NATO stock number](https://en.wikipedia.org/wiki/NATO_Stock_Number) (nsn) of a [[Product]].  (inherited from Product)
+- depth: The depth of the item. (inherited from Product)
+- colorSwatch: A color swatch image, visualizing the color of a [[Product]]. Should match the textual description specified in the [[color]] property. This can be a URL or a fully described ImageObject. (inherited from Product)
+- aggregateRating: The overall rating, based on a collection of reviews or ratings, of the item. (inherited from Product)
+- negativeNotes: Provides negative considerations regarding something, most typically in pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described. Since product descriptions 
+tend to emphasise positive claims, it may be relatively unusual to find [[negativeNotes]] used in this way. Nevertheless for the sake of symmetry, [[negativeNotes]] can be used on [[Product]].
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most negative is at the beginning of the list). (inherited from Product)
+- sku: The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers. (inherited from Product)
+- productID: The product identifier, such as ISBN. For example: ``` meta itemprop="productID" content="isbn:123-456-789" ```. (inherited from Product)
+- purchaseDate: The date the item, e.g. vehicle, was purchased by the current owner. (inherited from Product)
+- audience: An intended audience, i.e. a group for whom something was created. (inherited from Product)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
 
 ## Usage Example
 
 ```typescript
-interface MotorizedBicycle {
+interface MotorizedBicycle extends Vehicle {
   $context?: 'schema.org'
   $type: 'MotorizedBicycle'
 

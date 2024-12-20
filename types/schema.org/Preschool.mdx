@@ -4,12 +4,14 @@ $type: Preschool
 title: Preschool
 description: A preschool.
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
+    - name: alumni
+      type: Person
+      description: Alumni of an organization.
+      inheritedFrom: EducationalOrganization
 parentClass: EducationalOrganization
 ---
-
 # Preschool
 
 A preschool.
@@ -24,14 +26,18 @@ No types directly inherit from Preschool.
 
 ## Properties
 
-Preschool defines the following properties in addition to those inherited from EducationalOrganization:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+- alumni: Alumni of an organization. (inherited from EducationalOrganization)
 
 ## Usage Example
 
 ```typescript
-interface Preschool {
+interface Preschool extends EducationalOrganization {
   $context?: 'schema.org'
   $type: 'Preschool'
 

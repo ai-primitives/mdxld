@@ -4,12 +4,14 @@ $type: MiddleSchool
 title: MiddleSchool
 description: A middle school (typically for children aged around 11-14, although this varies somewhat).
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
+    - name: alumni
+      type: Person
+      description: Alumni of an organization.
+      inheritedFrom: EducationalOrganization
 parentClass: EducationalOrganization
 ---
-
 # MiddleSchool
 
 A middle school (typically for children aged around 11-14, although this varies somewhat).
@@ -24,14 +26,18 @@ No types directly inherit from MiddleSchool.
 
 ## Properties
 
-MiddleSchool defines the following properties in addition to those inherited from EducationalOrganization:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+- alumni: Alumni of an organization. (inherited from EducationalOrganization)
 
 ## Usage Example
 
 ```typescript
-interface MiddleSchool {
+interface MiddleSchool extends EducationalOrganization {
   $context?: 'schema.org'
   $type: 'MiddleSchool'
 

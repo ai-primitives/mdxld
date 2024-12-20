@@ -4,12 +4,64 @@ $type: RadioSeries
 title: RadioSeries
 description: CreativeWorkSeries dedicated to radio broadcast and associated online delivery.
 properties:
-
-subClasses:
-
+  direct:
+    - name: actor
+      type: PerformingGroup | Person
+      description: An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+    - name: trailer
+      type: VideoObject
+      description: The trailer of a movie or TV/radio series, season, episode, etc.
+    - name: actors
+      type: Person
+      description: An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+    - name: containsSeason
+      type: CreativeWorkSeason
+      description: A season that is part of the media series.
+    - name: numberOfSeasons
+      type: number
+      description: The number of seasons in this series.
+    - name: episode
+      type: Episode
+      description: An episode of a TV, radio or game media within a series or season.
+    - name: directors
+      type: Person
+      description: A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+    - name: seasons
+      type: CreativeWorkSeason
+      description: A season in a media series.
+    - name: season
+      type: CreativeWorkSeason | string
+      description: A season in a media series.
+    - name: productionCompany
+      type: Organization
+      description: The production company or studio responsible for the item, e.g. series, video game, episode etc.
+    - name: director
+      type: Person
+      description: A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+    - name: numberOfEpisodes
+      type: number
+      description: The number of episodes in this season or series.
+    - name: musicBy
+      type: MusicGroup | Person
+      description: The composer of the soundtrack.
+    - name: episodes
+      type: Episode
+      description: An episode of a TV/radio series or season.
+  inherited:
+    - name: issn
+      type: string
+      description: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+      inheritedFrom: CreativeWorkSeries
+    - name: startDate
+      type: string
+      description: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+    - name: endDate
+      type: string
+      description: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
 parentClass: CreativeWorkSeries
 ---
-
 # RadioSeries
 
 CreativeWorkSeries dedicated to radio broadcast and associated online delivery.
@@ -24,17 +76,49 @@ No types directly inherit from RadioSeries.
 
 ## Properties
 
-RadioSeries defines the following properties in addition to those inherited from CreativeWorkSeries:
+### Direct Properties
 
+- actor: An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+- trailer: The trailer of a movie or TV/radio series, season, episode, etc.
+- actors: An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+- containsSeason: A season that is part of the media series.
+- numberOfSeasons: The number of seasons in this series.
+- episode: An episode of a TV, radio or game media within a series or season.
+- directors: A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+- seasons: A season in a media series.
+- season: A season in a media series.
+- productionCompany: The production company or studio responsible for the item, e.g. series, video game, episode etc.
+- director: A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+- numberOfEpisodes: The number of episodes in this season or series.
+- musicBy: The composer of the soundtrack.
+- episodes: An episode of a TV/radio series or season.
 
+### Inherited Properties
+
+- issn: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication. (inherited from CreativeWorkSeries)
+- startDate: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+- endDate: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
 
 ## Usage Example
 
 ```typescript
-interface RadioSeries {
+interface RadioSeries extends CreativeWorkSeries {
   $context?: 'schema.org'
   $type: 'RadioSeries'
-
+  actor?: PerformingGroup | Person
+  trailer?: VideoObject
+  actors?: Person
+  containsSeason?: CreativeWorkSeason
+  numberOfSeasons?: number
+  episode?: Episode
+  directors?: Person
+  seasons?: CreativeWorkSeason
+  season?: CreativeWorkSeason | string
+  productionCompany?: Organization
+  director?: Person
+  numberOfEpisodes?: number
+  musicBy?: MusicGroup | Person
+  episodes?: Episode
 }
 ```
 

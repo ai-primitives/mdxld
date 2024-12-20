@@ -4,12 +4,83 @@ $type: ActionAccessSpecification
 title: ActionAccessSpecification
 description: A set of requirements that must be fulfilled in order to perform an Action.
 properties:
-
-subClasses:
-
+  direct:
+    - name: availabilityStarts
+      type: string
+      description: The beginning of the availability of the product or service included in the offer.
+    - name: ineligibleRegion
+      type: GeoShape | Place | string
+      description: The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]].
+      
+    - name: expectsAcceptanceOf
+      type: Offer
+      description: An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
+    - name: category
+      type: CategoryCode | PhysicalActivityCategory | Thing | string
+      description: A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+    - name: requiresSubscription
+      type: MediaSubscription | boolean
+      description: Indicates if use of the media require a subscription  (either paid or free). Allowed values are ```true``` or ```false``` (note that an earlier version had 'yes', 'no').
+    - name: eligibleRegion
+      type: GeoShape | Place | string
+      description: The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]].
+    
+    - name: availabilityEnds
+      type: string
+      description: The end of the availability of the product or service included in the offer.
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
 parentClass: Intangible
 ---
-
 # ActionAccessSpecification
 
 A set of requirements that must be fulfilled in order to perform an Action.
@@ -24,17 +95,48 @@ No types directly inherit from ActionAccessSpecification.
 
 ## Properties
 
-ActionAccessSpecification defines the following properties in addition to those inherited from Intangible:
+### Direct Properties
 
+- availabilityStarts: The beginning of the availability of the product or service included in the offer.
+- ineligibleRegion: The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]].
+      
+- expectsAcceptanceOf: An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.
+- category: A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
+- requiresSubscription: Indicates if use of the media require a subscription  (either paid or free). Allowed values are ```true``` or ```false``` (note that an earlier version had 'yes', 'no').
+- eligibleRegion: The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]].
+    
+- availabilityEnds: The end of the availability of the product or service included in the offer.
 
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
 
 ## Usage Example
 
 ```typescript
-interface ActionAccessSpecification {
+interface ActionAccessSpecification extends Intangible {
   $context?: 'schema.org'
   $type: 'ActionAccessSpecification'
-
+  availabilityStarts?: string
+  ineligibleRegion?: GeoShape | Place | string
+  expectsAcceptanceOf?: Offer
+  category?: CategoryCode | PhysicalActivityCategory | Thing | string
+  requiresSubscription?: MediaSubscription | boolean
+  eligibleRegion?: GeoShape | Place | string
+  availabilityEnds?: string
 }
 ```
 

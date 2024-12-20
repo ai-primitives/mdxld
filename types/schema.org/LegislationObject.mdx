@@ -4,12 +4,12 @@ $type: LegislationObject
 title: LegislationObject
 description: A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.
 properties:
-  - legislationLegalValue
-subClasses:
-
-
+  direct:
+    - name: legislationLegalValue
+      type: LegalValueLevel
+      description: The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.
+  inherited:
 ---
-
 # LegislationObject
 
 A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.
@@ -24,9 +24,13 @@ No types directly inherit from LegislationObject.
 
 ## Properties
 
-LegislationObject defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
 - legislationLegalValue: The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 

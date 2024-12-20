@@ -4,12 +4,30 @@ $type: ShoeStore
 title: ShoeStore
 description: A shoe store.
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
+    - name: priceRange
+      type: string
+      description: The price range of the business, for example ```$$$```.
+      inheritedFrom: LocalBusiness
+    - name: openingHours
+      type: string
+      description: The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \n* Here is an example: <code>&lt;time itemprop="openingHours" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.
+      inheritedFrom: LocalBusiness
+    - name: paymentAccepted
+      type: string
+      description: Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.
+      inheritedFrom: LocalBusiness
+    - name: branchOf
+      type: Organization
+      description: The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical) [[branch]].
+      inheritedFrom: LocalBusiness
+    - name: currenciesAccepted
+      type: string
+      description: The currency accepted.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+      inheritedFrom: LocalBusiness
 parentClass: Store
 ---
-
 # ShoeStore
 
 A shoe store.
@@ -24,14 +42,22 @@ No types directly inherit from ShoeStore.
 
 ## Properties
 
-ShoeStore defines the following properties in addition to those inherited from Store:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+- priceRange: The price range of the business, for example ```$$$```. (inherited from LocalBusiness)
+- openingHours: The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \n* Here is an example: <code>&lt;time itemprop="openingHours" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>. (inherited from LocalBusiness)
+- paymentAccepted: Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc. (inherited from LocalBusiness)
+- branchOf: The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical) [[branch]]. (inherited from LocalBusiness)
+- currenciesAccepted: The currency accepted.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR". (inherited from LocalBusiness)
 
 ## Usage Example
 
 ```typescript
-interface ShoeStore {
+interface ShoeStore extends Store {
   $context?: 'schema.org'
   $type: 'ShoeStore'
 

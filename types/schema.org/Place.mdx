@@ -4,21 +4,202 @@ $type: Place
 title: Place
 description: Entities that have a somewhat fixed, physical extension.
 properties:
-  - branchCode
-  - containedIn
-  - containedInPlace
-  - containsPlace
-  - geo
-  - hasDriveThroughService
-  - hasMap
-  - map
-  - maps
-  - openingHoursSpecification
-  - photo
-  - photos
-  - publicAccess
-  - smokingAllowed
-  - specialOpeningHoursSpecification
+  direct:
+    - name: photos
+      type: ImageObject | Photograph
+      description: Photographs of this place.
+    - name: additionalProperty
+      type: PropertyValue
+      description: A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+
+    - name: isicV4
+      type: string
+      description: The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.
+    - name: containedInPlace
+      type: Place
+      description: The basic containment relation between a place and one that contains it.
+    - name: telephone
+      type: string
+      description: The telephone number.
+    - name: geoEquals
+      type: GeospatialGeometry | Place
+      description: Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior of the other" (a symmetric relationship).
+    - name: address
+      type: PostalAddress | string
+      description: Physical address of the item.
+    - name: hasCertification
+      type: Certification
+      description: Certification information about a product, organization, service, place, or person.
+    - name: branchCode
+      type: string
+      description: A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.\n\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
+      
+    - name: geoWithin
+      type: GeospatialGeometry | Place
+      description: Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+    - name: faxNumber
+      type: string
+      description: The fax number.
+    - name: event
+      type: Event
+      description: Upcoming or past event associated with this place, organization, or action.
+    - name: events
+      type: Event
+      description: Upcoming or past events associated with this place or organization.
+    - name: latitude
+      type: number | string
+      description: The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+    - name: keywords
+      type: DefinedTerm | string
+      description: Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
+    - name: smokingAllowed
+      type: boolean
+      description: Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
+    - name: isAccessibleForFree
+      type: boolean
+      description: A flag to signal that the item, event, or place is accessible for free.
+    - name: logo
+      type: ImageObject | string
+      description: An associated logo.
+    - name: geoCovers
+      type: GeospatialGeometry | Place
+      description: Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+    - name: longitude
+      type: number | string
+      description: The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+    - name: hasDriveThroughService
+      type: boolean
+      description: Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.
+    - name: geoCrosses
+      type: GeospatialGeometry | Place
+      description: Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses b: they have some but not all interior points in common, and the dimension of the intersection is less than that of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+    - name: geoOverlaps
+      type: GeospatialGeometry | Place
+      description: Represents a relationship between two geometries (or the places they represent), relating a geometry to another that geospatially overlaps it, i.e. they have some but not all points in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+    - name: geo
+      type: GeoCoordinates | GeoShape
+      description: The geo coordinates of the place.
+    - name: publicAccess
+      type: boolean
+      description: A flag to signal that the [[Place]] is open to public visitors.  If this property is omitted there is no assumed default boolean value.
+    - name: map
+      type: string
+      description: A URL to a map of the place.
+    - name: hasGS1DigitalLink
+      type: string
+      description: The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProduct]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>)  should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly.
+    - name: reviews
+      type: Review
+      description: Review of the item.
+    - name: globalLocationNumber
+      type: string
+      description: The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.
+    - name: geoDisjoint
+      type: GeospatialGeometry | Place
+      description: Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common. They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
+    - name: review
+      type: Review
+      description: A review of the item.
+    - name: maps
+      type: string
+      description: A URL to a map of the place.
+    - name: openingHoursSpecification
+      type: OpeningHoursSpecification
+      description: The opening hours of a certain place.
+    - name: geoContains
+      type: GeospatialGeometry | Place
+      description: Represents a relationship between two geometries (or the places they represent), relating a containing geometry to a contained geometry. "a contains b iff no points of b lie in the exterior of a, and at least one point of the interior of b lies in the interior of a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+    - name: containsPlace
+      type: Place
+      description: The basic containment relation between a place and another that it contains.
+    - name: containedIn
+      type: Place
+      description: The basic containment relation between a place and one that contains it.
+    - name: geoTouches
+      type: GeospatialGeometry | Place
+      description: Represents spatial relations in which two geometries (or the places they represent) touch: "they have at least one boundary point in common, but no interior points." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
+    - name: slogan
+      type: string
+      description: A slogan or motto associated with the item.
+    - name: amenityFeature
+      type: LocationFeatureSpecification
+      description: An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
+    - name: geoIntersects
+      type: GeospatialGeometry | Place
+      description: Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+    - name: tourBookingPage
+      type: string
+      description: A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.
+    - name: geoCoveredBy
+      type: GeospatialGeometry | Place
+      description: Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+    - name: photo
+      type: ImageObject | Photograph
+      description: A photograph of this place.
+    - name: aggregateRating
+      type: AggregateRating
+      description: The overall rating, based on a collection of reviews or ratings, of the item.
+    - name: hasMap
+      type: Map | string
+      description: A URL to a map of the place.
+    - name: maximumAttendeeCapacity
+      type: number
+      description: The total number of individuals that may attend an event or venue.
+    - name: specialOpeningHoursSpecification
+      type: OpeningHoursSpecification
+      description: The special opening hours of a certain place.\n\nUse this to explicitly override general opening hours brought in scope by [[openingHoursSpecification]] or [[openingHours]].
+      
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
 subClasses:
   - Accommodation
   - AdministrativeArea
@@ -30,7 +211,6 @@ subClasses:
   - TouristDestination
 parentClass: Thing
 ---
-
 # Place
 
 Entities that have a somewhat fixed, physical extension.
@@ -59,46 +239,128 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
 
 ## Properties
 
-Place defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
+- photos: Photographs of this place.
+- additionalProperty: A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+
+- isicV4: The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.
+- containedInPlace: The basic containment relation between a place and one that contains it.
+- telephone: The telephone number.
+- geoEquals: Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior of the other" (a symmetric relationship).
+- address: Physical address of the item.
+- hasCertification: Certification information about a product, organization, service, place, or person.
 - branchCode: A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.\n\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
       
-- containedIn: The basic containment relation between a place and one that contains it.
-- containedInPlace: The basic containment relation between a place and one that contains it.
-- containsPlace: The basic containment relation between a place and another that it contains.
-- geo: The geo coordinates of the place.
+- geoWithin: Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+- faxNumber: The fax number.
+- event: Upcoming or past event associated with this place, organization, or action.
+- events: Upcoming or past events associated with this place or organization.
+- latitude: The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+- keywords: Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
+- smokingAllowed: Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
+- isAccessibleForFree: A flag to signal that the item, event, or place is accessible for free.
+- logo: An associated logo.
+- geoCovers: Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+- longitude: The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
 - hasDriveThroughService: Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.
-- hasMap: A URL to a map of the place.
+- geoCrosses: Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses b: they have some but not all interior points in common, and the dimension of the intersection is less than that of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+- geoOverlaps: Represents a relationship between two geometries (or the places they represent), relating a geometry to another that geospatially overlaps it, i.e. they have some but not all points in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+- geo: The geo coordinates of the place.
+- publicAccess: A flag to signal that the [[Place]] is open to public visitors.  If this property is omitted there is no assumed default boolean value.
 - map: A URL to a map of the place.
+- hasGS1DigitalLink: The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProduct]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>)  should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly.
+- reviews: Review of the item.
+- globalLocationNumber: The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.
+- geoDisjoint: Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common. They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
+- review: A review of the item.
 - maps: A URL to a map of the place.
 - openingHoursSpecification: The opening hours of a certain place.
+- geoContains: Represents a relationship between two geometries (or the places they represent), relating a containing geometry to a contained geometry. "a contains b iff no points of b lie in the exterior of a, and at least one point of the interior of b lies in the interior of a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+- containsPlace: The basic containment relation between a place and another that it contains.
+- containedIn: The basic containment relation between a place and one that contains it.
+- geoTouches: Represents spatial relations in which two geometries (or the places they represent) touch: "they have at least one boundary point in common, but no interior points." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)
+- slogan: A slogan or motto associated with the item.
+- amenityFeature: An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
+- geoIntersects: Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+- tourBookingPage: A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.
+- geoCoveredBy: Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
 - photo: A photograph of this place.
-- photos: Photographs of this place.
-- publicAccess: A flag to signal that the [[Place]] is open to public visitors.  If this property is omitted there is no assumed default boolean value.
-- smokingAllowed: Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
+- aggregateRating: The overall rating, based on a collection of reviews or ratings, of the item.
+- hasMap: A URL to a map of the place.
+- maximumAttendeeCapacity: The total number of individuals that may attend an event or venue.
 - specialOpeningHoursSpecification: The special opening hours of a certain place.\n\nUse this to explicitly override general opening hours brought in scope by [[openingHoursSpecification]] or [[openingHours]].
       
+
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
 
 ## Usage Example
 
 ```typescript
-interface Place {
+interface Place extends Thing {
   $context?: 'schema.org'
   $type: 'Place'
-  branchCode?: string
-  containedIn?: Place
+  photos?: ImageObject | Photograph
+  additionalProperty?: PropertyValue
+  isicV4?: string
   containedInPlace?: Place
-  containsPlace?: Place
-  geo?: GeoCoordinates | GeoShape
+  telephone?: string
+  geoEquals?: GeospatialGeometry | Place
+  address?: PostalAddress | string
+  hasCertification?: Certification
+  branchCode?: string
+  geoWithin?: GeospatialGeometry | Place
+  faxNumber?: string
+  event?: Event
+  events?: Event
+  latitude?: number | string
+  keywords?: DefinedTerm | string
+  smokingAllowed?: boolean
+  isAccessibleForFree?: boolean
+  logo?: ImageObject | string
+  geoCovers?: GeospatialGeometry | Place
+  longitude?: number | string
   hasDriveThroughService?: boolean
-  hasMap?: Map | string
+  geoCrosses?: GeospatialGeometry | Place
+  geoOverlaps?: GeospatialGeometry | Place
+  geo?: GeoCoordinates | GeoShape
+  publicAccess?: boolean
   map?: string
+  hasGS1DigitalLink?: string
+  reviews?: Review
+  globalLocationNumber?: string
+  geoDisjoint?: GeospatialGeometry | Place
+  review?: Review
   maps?: string
   openingHoursSpecification?: OpeningHoursSpecification
+  geoContains?: GeospatialGeometry | Place
+  containsPlace?: Place
+  containedIn?: Place
+  geoTouches?: GeospatialGeometry | Place
+  slogan?: string
+  amenityFeature?: LocationFeatureSpecification
+  geoIntersects?: GeospatialGeometry | Place
+  tourBookingPage?: string
+  geoCoveredBy?: GeospatialGeometry | Place
   photo?: ImageObject | Photograph
-  photos?: ImageObject | Photograph
-  publicAccess?: boolean
-  smokingAllowed?: boolean
+  aggregateRating?: AggregateRating
+  hasMap?: Map | string
+  maximumAttendeeCapacity?: number
   specialOpeningHoursSpecification?: OpeningHoursSpecification
 }
 ```

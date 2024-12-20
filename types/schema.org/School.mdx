@@ -4,12 +4,14 @@ $type: School
 title: School
 description: A school.
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
+    - name: alumni
+      type: Person
+      description: Alumni of an organization.
+      inheritedFrom: EducationalOrganization
 parentClass: EducationalOrganization
 ---
-
 # School
 
 A school.
@@ -24,14 +26,18 @@ No types directly inherit from School.
 
 ## Properties
 
-School defines the following properties in addition to those inherited from EducationalOrganization:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+- alumni: Alumni of an organization. (inherited from EducationalOrganization)
 
 ## Usage Example
 
 ```typescript
-interface School {
+interface School extends EducationalOrganization {
   $context?: 'schema.org'
   $type: 'School'
 

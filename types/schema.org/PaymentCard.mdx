@@ -4,15 +4,21 @@ $type: PaymentCard
 title: PaymentCard
 description: A payment method using a credit, debit, store or other card to associate the payment with an account.
 properties:
-  - cashBack
-  - contactlessPayment
-  - floorLimit
-  - monthlyMinimumRepaymentAmount
-subClasses:
-
-
+  direct:
+    - name: contactlessPayment
+      type: boolean
+      description: A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
+    - name: cashBack
+      type: boolean | number
+      description: A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
+    - name: floorLimit
+      type: MonetaryAmount
+      description: A floor limit is the amount of money above which credit card transactions must be authorized.
+    - name: monthlyMinimumRepaymentAmount
+      type: MonetaryAmount | number
+      description: The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each month.
+  inherited:
 ---
-
 # PaymentCard
 
 A payment method using a credit, debit, store or other card to associate the payment with an account.
@@ -27,12 +33,16 @@ No types directly inherit from PaymentCard.
 
 ## Properties
 
-PaymentCard defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
-- cashBack: A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
 - contactlessPayment: A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.
+- cashBack: A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
 - floorLimit: A floor limit is the amount of money above which credit card transactions must be authorized.
 - monthlyMinimumRepaymentAmount: The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each month.
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -40,8 +50,8 @@ PaymentCard defines the following properties in addition to those inherited from
 interface PaymentCard {
   $context?: 'schema.org'
   $type: 'PaymentCard'
-  cashBack?: boolean | number
   contactlessPayment?: boolean
+  cashBack?: boolean | number
   floorLimit?: MonetaryAmount
   monthlyMinimumRepaymentAmount?: MonetaryAmount | number
 }

@@ -4,14 +4,45 @@ $type: VideoGame
 title: VideoGame
 description: A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device.
 properties:
-  - gameEdition
-  - gameServer
-  - gameTip
-subClasses:
-
-
+  direct:
+    - name: actor
+      type: PerformingGroup | Person
+      description: An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+    - name: gamePlatform
+      type: Thing | string
+      description: The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
+    - name: trailer
+      type: VideoObject
+      description: The trailer of a movie or TV/radio series, season, episode, etc.
+    - name: actors
+      type: Person
+      description: An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+    - name: gameServer
+      type: GameServer
+      description: The server on which  it is possible to play the game.
+    - name: gameTip
+      type: CreativeWork
+      description: Links to tips, tactics, etc.
+    - name: directors
+      type: Person
+      description: A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+    - name: cheatCode
+      type: CreativeWork
+      description: Cheat codes to the game.
+    - name: gameEdition
+      type: string
+      description: The edition of a video game.
+    - name: playMode
+      type: GamePlayMode
+      description: Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
+    - name: director
+      type: Person
+      description: A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+    - name: musicBy
+      type: MusicGroup | Person
+      description: The composer of the soundtrack.
+  inherited:
 ---
-
 # VideoGame
 
 A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device.
@@ -26,11 +57,24 @@ No types directly inherit from VideoGame.
 
 ## Properties
 
-VideoGame defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
-- gameEdition: The edition of a video game.
+- actor: An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+- gamePlatform: The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.
+- trailer: The trailer of a movie or TV/radio series, season, episode, etc.
+- actors: An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
 - gameServer: The server on which  it is possible to play the game.
 - gameTip: Links to tips, tactics, etc.
+- directors: A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+- cheatCode: Cheat codes to the game.
+- gameEdition: The edition of a video game.
+- playMode: Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
+- director: A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+- musicBy: The composer of the soundtrack.
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -38,9 +82,18 @@ VideoGame defines the following properties in addition to those inherited from T
 interface VideoGame {
   $context?: 'schema.org'
   $type: 'VideoGame'
-  gameEdition?: string
+  actor?: PerformingGroup | Person
+  gamePlatform?: Thing | string
+  trailer?: VideoObject
+  actors?: Person
   gameServer?: GameServer
   gameTip?: CreativeWork
+  directors?: Person
+  cheatCode?: CreativeWork
+  gameEdition?: string
+  playMode?: GamePlayMode
+  director?: Person
+  musicBy?: MusicGroup | Person
 }
 ```
 

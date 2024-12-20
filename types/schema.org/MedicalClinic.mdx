@@ -4,12 +4,17 @@ $type: MedicalClinic
 title: MedicalClinic
 description: A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.
 properties:
-
+  direct:
+    - name: medicalSpecialty
+      type: MedicalSpecialty
+      description: A medical specialty of the provider.
+    - name: availableService
+      type: MedicalProcedure | MedicalTest | MedicalTherapy
+      description: A medical service available from this provider.
+  inherited:
 subClasses:
   - CovidTestingFacility
-
 ---
-
 # MedicalClinic
 
 A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.
@@ -30,9 +35,14 @@ The following types directly inherit from MedicalClinic:
 
 ## Properties
 
-MedicalClinic defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
+- medicalSpecialty: A medical specialty of the provider.
+- availableService: A medical service available from this provider.
 
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -40,7 +50,8 @@ MedicalClinic defines the following properties in addition to those inherited fr
 interface MedicalClinic {
   $context?: 'schema.org'
   $type: 'MedicalClinic'
-
+  medicalSpecialty?: MedicalSpecialty
+  availableService?: MedicalProcedure | MedicalTest | MedicalTherapy
 }
 ```
 

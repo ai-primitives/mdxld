@@ -4,13 +4,39 @@ $type: DietarySupplement
 title: DietarySupplement
 description: A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.
 properties:
-  - recommendedIntake
-  - safetyConsideration
-subClasses:
-
-
+  direct:
+    - name: legalStatus
+      type: DrugLegalStatus | MedicalEnumeration | string
+      description: The drug or supplement's legal status, including any controlled substance schedules that apply.
+    - name: recommendedIntake
+      type: RecommendedDoseSchedule
+      description: Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+    - name: mechanismOfAction
+      type: string
+      description: The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
+    - name: safetyConsideration
+      type: string
+      description: Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.
+    - name: isProprietary
+      type: boolean
+      description: True if this item's name is a proprietary/brand name (vs. generic name).
+    - name: targetPopulation
+      type: string
+      description: Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+    - name: proprietaryName
+      type: string
+      description: Proprietary name given to the diet plan, typically by its originator or creator.
+    - name: maximumIntake
+      type: MaximumDoseSchedule
+      description: Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+    - name: nonProprietaryName
+      type: string
+      description: The generic name of this drug or supplement.
+    - name: activeIngredient
+      type: string
+      description: An active ingredient, typically chemical compounds and/or biologic substances.
+  inherited:
 ---
-
 # DietarySupplement
 
 A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.
@@ -25,10 +51,22 @@ No types directly inherit from DietarySupplement.
 
 ## Properties
 
-DietarySupplement defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
+- legalStatus: The drug or supplement's legal status, including any controlled substance schedules that apply.
 - recommendedIntake: Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+- mechanismOfAction: The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
 - safetyConsideration: Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.
+- isProprietary: True if this item's name is a proprietary/brand name (vs. generic name).
+- targetPopulation: Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.
+- proprietaryName: Proprietary name given to the diet plan, typically by its originator or creator.
+- maximumIntake: Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+- nonProprietaryName: The generic name of this drug or supplement.
+- activeIngredient: An active ingredient, typically chemical compounds and/or biologic substances.
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -36,8 +74,16 @@ DietarySupplement defines the following properties in addition to those inherite
 interface DietarySupplement {
   $context?: 'schema.org'
   $type: 'DietarySupplement'
+  legalStatus?: DrugLegalStatus | MedicalEnumeration | string
   recommendedIntake?: RecommendedDoseSchedule
+  mechanismOfAction?: string
   safetyConsideration?: string
+  isProprietary?: boolean
+  targetPopulation?: string
+  proprietaryName?: string
+  maximumIntake?: MaximumDoseSchedule
+  nonProprietaryName?: string
+  activeIngredient?: string
 }
 ```
 

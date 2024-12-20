@@ -4,12 +4,10 @@ $type: URL
 title: URL
 description: Data type: URL.
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
 parentClass: Text
 ---
-
 # URL
 
 Data type: URL.
@@ -24,14 +22,18 @@ No types directly inherit from URL.
 
 ## Properties
 
-URL defines the following properties in addition to those inherited from Text:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
 ```typescript
-interface URL {
+interface URL extends Text {
   $context?: 'schema.org'
   $type: 'URL'
 

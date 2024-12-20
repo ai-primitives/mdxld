@@ -4,16 +4,24 @@ $type: Diet
 title: Diet
 description: A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.
 properties:
-  - dietFeatures
-  - endorsers
-  - expertConsiderations
-  - physiologicalBenefits
-  - risks
-subClasses:
-
-
+  direct:
+    - name: expertConsiderations
+      type: string
+      description: Medical expert advice related to the plan.
+    - name: endorsers
+      type: Organization | Person
+      description: People or organizations that endorse the plan.
+    - name: dietFeatures
+      type: string
+      description: Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
+    - name: physiologicalBenefits
+      type: string
+      description: Specific physiologic benefits associated to the plan.
+    - name: risks
+      type: string
+      description: Specific physiologic risks associated to the diet plan.
+  inherited:
 ---
-
 # Diet
 
 A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.
@@ -28,13 +36,17 @@ No types directly inherit from Diet.
 
 ## Properties
 
-Diet defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
-- dietFeatures: Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
-- endorsers: People or organizations that endorse the plan.
 - expertConsiderations: Medical expert advice related to the plan.
+- endorsers: People or organizations that endorse the plan.
+- dietFeatures: Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
 - physiologicalBenefits: Specific physiologic benefits associated to the plan.
 - risks: Specific physiologic risks associated to the diet plan.
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -42,9 +54,9 @@ Diet defines the following properties in addition to those inherited from Thing:
 interface Diet {
   $context?: 'schema.org'
   $type: 'Diet'
-  dietFeatures?: string
-  endorsers?: Organization | Person
   expertConsiderations?: string
+  endorsers?: Organization | Person
+  dietFeatures?: string
   physiologicalBenefits?: string
   risks?: string
 }

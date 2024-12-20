@@ -4,33 +4,59 @@ $type: Thing
 title: Thing
 description: The most generic type of item.
 properties:
-  - name
-  - description
-  - url
-  - identifier
-  - image
-  - additionalType
-  - disambiguatingDescription
-  - potentialAction
-  - subjectOf
-  - sameAs
-  - alternateName
-  - mainEntityOfPage
+  direct:
+    - name: name
+      type: string
+      description: The name of the item.
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+    - name: url
+      type: string
+      description: URL of the item.
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+    - name: description
+      type: string
+      description: A description of the item.
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+  inherited:
 subClasses:
   - Action
-  - Organization
-  - Intangible
+  - BioChemEntity
   - CreativeWork
   - Event
-  - Product
-  - Person
-  - BioChemEntity
+  - Intangible
   - MedicalEntity
+  - Organization
+  - Person
   - Place
+  - Product
   - Taxon
-
 ---
-
 # Thing
 
 The most generic type of item.
@@ -57,20 +83,26 @@ The following types directly inherit from Thing:
 
 ## Properties
 
-Thing defines the following core properties that are inherited by all other types:
+### Direct Properties
 
-- name: The name of the item
-- description: A description of the item
-- url: URL of the item
-- identifier: Any kind of identifier for the item
-- image: An image of the item
-- additionalType: An additional type for the item
-- disambiguatingDescription: A description that disambiguates this item from others
-- potentialAction: Indicates a potential Action that describes an idealized action
-- subjectOf: A CreativeWork or Event about this Thing
-- sameAs: URL of a reference Web page that unambiguously indicates the item's identity
-- alternateName: An alias for the item
-- mainEntityOfPage: Indicates a page for which this thing is the main entity being described
+- name: The name of the item.
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+- url: URL of the item.
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+- subjectOf: A CreativeWork or Event about this Thing.
+- description: A description of the item.
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+- alternateName: An alias for the item.
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -79,14 +111,14 @@ interface Thing {
   $context?: 'schema.org'
   $type: 'Thing'
   name?: string
-  description?: string
-  url?: string
-  identifier?: PropertyValue | string
-  image?: ImageObject | string
-  additionalType?: string
   disambiguatingDescription?: string
   potentialAction?: Action
+  url?: string
+  identifier?: PropertyValue | string
   subjectOf?: CreativeWork | Event
+  description?: string
+  additionalType?: string
+  image?: ImageObject | string
   sameAs?: string
   alternateName?: string
   mainEntityOfPage?: CreativeWork | string

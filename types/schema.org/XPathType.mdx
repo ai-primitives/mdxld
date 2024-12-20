@@ -4,12 +4,10 @@ $type: XPathType
 title: XPathType
 description: Text representing an XPath (typically but not necessarily version 1.0).
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
 parentClass: Text
 ---
-
 # XPathType
 
 Text representing an XPath (typically but not necessarily version 1.0).
@@ -24,14 +22,18 @@ No types directly inherit from XPathType.
 
 ## Properties
 
-XPathType defines the following properties in addition to those inherited from Text:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
 ```typescript
-interface XPathType {
+interface XPathType extends Text {
   $context?: 'schema.org'
   $type: 'XPathType'
 

@@ -4,12 +4,12 @@ $type: ProductCollection
 title: ProductCollection
 description: A set of products (either [[ProductGroup]]s or specific variants) that are listed together e.g. in an [[Offer]].
 properties:
-
-subClasses:
-
-
+  direct:
+    - name: includesObject
+      type: TypeAndQuantityNode
+      description: This links to a node or nodes indicating the exact quantity of the products included in  an [[Offer]] or [[ProductCollection]].
+  inherited:
 ---
-
 # ProductCollection
 
 A set of products (either [[ProductGroup]]s or specific variants) that are listed together e.g. in an [[Offer]].
@@ -24,9 +24,13 @@ No types directly inherit from ProductCollection.
 
 ## Properties
 
-ProductCollection defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
+- includesObject: This links to a node or nodes indicating the exact quantity of the products included in  an [[Offer]] or [[ProductCollection]].
 
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -34,7 +38,7 @@ ProductCollection defines the following properties in addition to those inherite
 interface ProductCollection {
   $context?: 'schema.org'
   $type: 'ProductCollection'
-
+  includesObject?: TypeAndQuantityNode
 }
 ```
 

@@ -4,12 +4,18 @@ $type: Hospital
 title: Hospital
 description: A hospital.
 properties:
-  - healthcareReportingData
-subClasses:
-
-
+  direct:
+    - name: medicalSpecialty
+      type: MedicalSpecialty
+      description: A medical specialty of the provider.
+    - name: availableService
+      type: MedicalProcedure | MedicalTest | MedicalTherapy
+      description: A medical service available from this provider.
+    - name: healthcareReportingData
+      type: CDCPMDRecord | Dataset
+      description: Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some kind of [[Dataset]].
+  inherited:
 ---
-
 # Hospital
 
 A hospital.
@@ -24,9 +30,15 @@ No types directly inherit from Hospital.
 
 ## Properties
 
-Hospital defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
+- medicalSpecialty: A medical specialty of the provider.
+- availableService: A medical service available from this provider.
 - healthcareReportingData: Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some kind of [[Dataset]].
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -34,6 +46,8 @@ Hospital defines the following properties in addition to those inherited from Th
 interface Hospital {
   $context?: 'schema.org'
   $type: 'Hospital'
+  medicalSpecialty?: MedicalSpecialty
+  availableService?: MedicalProcedure | MedicalTest | MedicalTherapy
   healthcareReportingData?: CDCPMDRecord | Dataset
 }
 ```

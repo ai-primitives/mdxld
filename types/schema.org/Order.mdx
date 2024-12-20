@@ -4,23 +4,126 @@ $type: Order
 title: Order
 description: An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer.
 properties:
-  - acceptedOffer
-  - billingAddress
-  - discount
-  - discountCode
-  - discountCurrency
-  - isGift
-  - merchant
-  - orderDate
-  - orderNumber
-  - orderStatus
-  - partOfInvoice
-  - paymentUrl
-subClasses:
-
+  direct:
+    - name: acceptedOffer
+      type: Offer
+      description: The offer(s) -- e.g., product, quantity and price combinations -- included in the order.
+    - name: customer
+      type: Organization | Person
+      description: Party placing the order or paying the invoice.
+    - name: isGift
+      type: boolean
+      description: Indicates whether the offer was accepted as a gift for someone other than the buyer.
+    - name: paymentMethod
+      type: PaymentMethod | string
+      description: The name of the credit card or other method of payment for the order.
+    - name: paymentUrl
+      type: string
+      description: The URL for sending a payment.
+    - name: merchant
+      type: Organization | Person
+      description: 'merchant' is an out-dated term for 'seller'.
+    - name: partOfInvoice
+      type: Invoice
+      description: The order is being paid as part of the referenced Invoice.
+    - name: paymentDueDate
+      type: string
+      description: The date that payment is due.
+    - name: broker
+      type: Organization | Person
+      description: An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+    - name: discount
+      type: number | string
+      description: Any discount applied (to an Order).
+    - name: orderDate
+      type: string
+      description: Date order was placed.
+    - name: paymentMethodId
+      type: string
+      description: An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
+    - name: orderedItem
+      type: OrderItem | Product | Service
+      description: The item ordered.
+    - name: paymentDue
+      type: string
+      description: The date that payment is due.
+    - name: seller
+      type: Organization | Person
+      description: An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
+    - name: discountCurrency
+      type: string
+      description: The currency of the discount.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+    - name: orderDelivery
+      type: ParcelDelivery
+      description: The delivery of the parcel related to this order or order item.
+    - name: billingAddress
+      type: PostalAddress
+      description: The billing address for the order.
+    - name: confirmationNumber
+      type: string
+      description: A number that confirms the given order or payment has been received.
+    - name: orderStatus
+      type: OrderStatus
+      description: The current status of the order.
+    - name: discountCode
+      type: string
+      description: Code used to redeem a discount.
+    - name: orderNumber
+      type: string
+      description: The identifier of the transaction.
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
 parentClass: Intangible
 ---
-
 # Order
 
 An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer.
@@ -35,39 +138,76 @@ No types directly inherit from Order.
 
 ## Properties
 
-Order defines the following properties in addition to those inherited from Intangible:
+### Direct Properties
 
 - acceptedOffer: The offer(s) -- e.g., product, quantity and price combinations -- included in the order.
-- billingAddress: The billing address for the order.
-- discount: Any discount applied (to an Order).
-- discountCode: Code used to redeem a discount.
-- discountCurrency: The currency of the discount.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+- customer: Party placing the order or paying the invoice.
 - isGift: Indicates whether the offer was accepted as a gift for someone other than the buyer.
-- merchant: 'merchant' is an out-dated term for 'seller'.
-- orderDate: Date order was placed.
-- orderNumber: The identifier of the transaction.
-- orderStatus: The current status of the order.
-- partOfInvoice: The order is being paid as part of the referenced Invoice.
+- paymentMethod: The name of the credit card or other method of payment for the order.
 - paymentUrl: The URL for sending a payment.
+- merchant: 'merchant' is an out-dated term for 'seller'.
+- partOfInvoice: The order is being paid as part of the referenced Invoice.
+- paymentDueDate: The date that payment is due.
+- broker: An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+- discount: Any discount applied (to an Order).
+- orderDate: Date order was placed.
+- paymentMethodId: An identifier for the method of payment used (e.g. the last 4 digits of the credit card).
+- orderedItem: The item ordered.
+- paymentDue: The date that payment is due.
+- seller: An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
+- discountCurrency: The currency of the discount.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+- orderDelivery: The delivery of the parcel related to this order or order item.
+- billingAddress: The billing address for the order.
+- confirmationNumber: A number that confirms the given order or payment has been received.
+- orderStatus: The current status of the order.
+- discountCode: Code used to redeem a discount.
+- orderNumber: The identifier of the transaction.
+
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
 
 ## Usage Example
 
 ```typescript
-interface Order {
+interface Order extends Intangible {
   $context?: 'schema.org'
   $type: 'Order'
   acceptedOffer?: Offer
-  billingAddress?: PostalAddress
-  discount?: number | string
-  discountCode?: string
-  discountCurrency?: string
+  customer?: Organization | Person
   isGift?: boolean
-  merchant?: Organization | Person
-  orderDate?: string
-  orderNumber?: string
-  orderStatus?: OrderStatus
-  partOfInvoice?: Invoice
+  paymentMethod?: PaymentMethod | string
   paymentUrl?: string
+  merchant?: Organization | Person
+  partOfInvoice?: Invoice
+  paymentDueDate?: string
+  broker?: Organization | Person
+  discount?: number | string
+  orderDate?: string
+  paymentMethodId?: string
+  orderedItem?: OrderItem | Product | Service
+  paymentDue?: string
+  seller?: Organization | Person
+  discountCurrency?: string
+  orderDelivery?: ParcelDelivery
+  billingAddress?: PostalAddress
+  confirmationNumber?: string
+  orderStatus?: OrderStatus
+  discountCode?: string
+  orderNumber?: string
 }
 ```
 

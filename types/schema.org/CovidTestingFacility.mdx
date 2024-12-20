@@ -8,12 +8,18 @@ description: A CovidTestingFacility is a [[MedicalClinic]] where testing for the
       about that place, e.g. contact info, address, opening hours. Note that in an emergency, such information may not always be reliable.
       
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
+    - name: medicalSpecialty
+      type: MedicalSpecialty
+      description: A medical specialty of the provider.
+      inheritedFrom: MedicalClinic
+    - name: availableService
+      type: MedicalProcedure | MedicalTest | MedicalTherapy
+      description: A medical service available from this provider.
+      inheritedFrom: MedicalClinic
 parentClass: MedicalClinic
 ---
-
 # CovidTestingFacility
 
 A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus
@@ -32,14 +38,19 @@ No types directly inherit from CovidTestingFacility.
 
 ## Properties
 
-CovidTestingFacility defines the following properties in addition to those inherited from MedicalClinic:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+- medicalSpecialty: A medical specialty of the provider. (inherited from MedicalClinic)
+- availableService: A medical service available from this provider. (inherited from MedicalClinic)
 
 ## Usage Example
 
 ```typescript
-interface CovidTestingFacility {
+interface CovidTestingFacility extends MedicalClinic {
   $context?: 'schema.org'
   $type: 'CovidTestingFacility'
 

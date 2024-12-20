@@ -6,12 +6,22 @@ description: A sequential publication of comic stories under a
     	unifying title, for example "The Amazing Spider-Man" or "Groo the
     	Wanderer".
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
+    - name: issn
+      type: string
+      description: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+      inheritedFrom: CreativeWorkSeries
+    - name: startDate
+      type: string
+      description: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+    - name: endDate
+      type: string
+      description: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
 parentClass: Periodical
 ---
-
 # ComicSeries
 
 A sequential publication of comic stories under a
@@ -28,14 +38,20 @@ No types directly inherit from ComicSeries.
 
 ## Properties
 
-ComicSeries defines the following properties in addition to those inherited from Periodical:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+- issn: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication. (inherited from CreativeWorkSeries)
+- startDate: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+- endDate: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
 
 ## Usage Example
 
 ```typescript
-interface ComicSeries {
+interface ComicSeries extends Periodical {
   $context?: 'schema.org'
   $type: 'ComicSeries'
 

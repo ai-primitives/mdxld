@@ -4,12 +4,115 @@ $type: Protein
 title: Protein
 description: Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type :Protein. A protein can thus be a subclass of another protein, e.g. :Protein as a UniProt record can have multiple isoforms inside it which would also be :Protein. They can be imagined, synthetic, hypothetical or naturally occurring.
 properties:
-
-subClasses:
-
+  direct:
+    - name: hasBioPolymerSequence
+      type: string
+      description: A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.
+  inherited:
+    - name: isLocatedInSubcellularLocation
+      type: DefinedTerm | PropertyValue | string
+      description: Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
+      inheritedFrom: BioChemEntity
+    - name: funding
+      type: Grant
+      description: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+      inheritedFrom: BioChemEntity
+    - name: isPartOfBioChemEntity
+      type: BioChemEntity
+      description: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. 
+      inheritedFrom: BioChemEntity
+    - name: isInvolvedInBiologicalProcess
+      type: DefinedTerm | PropertyValue | string
+      description: Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
+      inheritedFrom: BioChemEntity
+    - name: hasBioChemEntityPart
+      type: BioChemEntity
+      description: Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. 
+      inheritedFrom: BioChemEntity
+    - name: bioChemInteraction
+      type: BioChemEntity
+      description: A BioChemEntity that is known to interact with this item.
+      inheritedFrom: BioChemEntity
+    - name: bioChemSimilarity
+      type: BioChemEntity
+      description: A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
+      inheritedFrom: BioChemEntity
+    - name: hasRepresentation
+      type: PropertyValue | string
+      description: A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
+      inheritedFrom: BioChemEntity
+    - name: isEncodedByBioChemEntity
+      type: Gene
+      description: Another BioChemEntity encoding by this one.
+      inheritedFrom: BioChemEntity
+    - name: hasMolecularFunction
+      type: DefinedTerm | PropertyValue | string
+      description: Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.
+      inheritedFrom: BioChemEntity
+    - name: biologicalRole
+      type: DefinedTerm
+      description: A role played by the BioChemEntity within a biological context.
+      inheritedFrom: BioChemEntity
+    - name: taxonomicRange
+      type: DefinedTerm | Taxon | string
+      description: The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity.
+      inheritedFrom: BioChemEntity
+    - name: associatedDisease
+      type: MedicalCondition | PropertyValue | string
+      description: Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.
+      inheritedFrom: BioChemEntity
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
 parentClass: BioChemEntity
 ---
-
 # Protein
 
 Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type :Protein. A protein can thus be a subclass of another protein, e.g. :Protein as a UniProt record can have multiple isoforms inside it which would also be :Protein. They can be imagined, synthetic, hypothetical or naturally occurring.
@@ -24,17 +127,47 @@ No types directly inherit from Protein.
 
 ## Properties
 
-Protein defines the following properties in addition to those inherited from BioChemEntity:
+### Direct Properties
 
+- hasBioPolymerSequence: A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.
 
+### Inherited Properties
+
+- isLocatedInSubcellularLocation: Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence. (inherited from BioChemEntity)
+- funding: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]]. (inherited from BioChemEntity)
+- isPartOfBioChemEntity: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.  (inherited from BioChemEntity)
+- isInvolvedInBiologicalProcess: Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence. (inherited from BioChemEntity)
+- hasBioChemEntityPart: Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.  (inherited from BioChemEntity)
+- bioChemInteraction: A BioChemEntity that is known to interact with this item. (inherited from BioChemEntity)
+- bioChemSimilarity: A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms. (inherited from BioChemEntity)
+- hasRepresentation: A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image. (inherited from BioChemEntity)
+- isEncodedByBioChemEntity: Another BioChemEntity encoding by this one. (inherited from BioChemEntity)
+- hasMolecularFunction: Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence. (inherited from BioChemEntity)
+- biologicalRole: A role played by the BioChemEntity within a biological context. (inherited from BioChemEntity)
+- taxonomicRange: The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity. (inherited from BioChemEntity)
+- associatedDisease: Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue. (inherited from BioChemEntity)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
 
 ## Usage Example
 
 ```typescript
-interface Protein {
+interface Protein extends BioChemEntity {
   $context?: 'schema.org'
   $type: 'Protein'
-
+  hasBioPolymerSequence?: string
 }
 ```
 

@@ -4,12 +4,12 @@ $type: HowToSection
 title: HowToSection
 description: A sub-grouping of steps in the instructions for how to achieve a result (e.g. steps for making a pie crust within a pie recipe).
 properties:
-
-subClasses:
-
-
+  direct:
+    - name: steps
+      type: CreativeWork | ItemList | string
+      description: A single step item (as HowToStep, text, document, video, etc.) or a HowToSection (originally misnamed 'steps'; 'step' is preferred).
+  inherited:
 ---
-
 # HowToSection
 
 A sub-grouping of steps in the instructions for how to achieve a result (e.g. steps for making a pie crust within a pie recipe).
@@ -24,9 +24,13 @@ No types directly inherit from HowToSection.
 
 ## Properties
 
-HowToSection defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
+- steps: A single step item (as HowToStep, text, document, video, etc.) or a HowToSection (originally misnamed 'steps'; 'step' is preferred).
 
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -34,7 +38,7 @@ HowToSection defines the following properties in addition to those inherited fro
 interface HowToSection {
   $context?: 'schema.org'
   $type: 'HowToSection'
-
+  steps?: CreativeWork | ItemList | string
 }
 ```
 

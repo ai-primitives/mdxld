@@ -4,11 +4,105 @@ $type: MedicalTest
 title: MedicalTest
 description: Any medical test, typically performed for diagnostic purposes.
 properties:
-  - affectedBy
-  - normalRange
-  - signDetected
-  - usedToDiagnose
-  - usesDevice
+  direct:
+    - name: usedToDiagnose
+      type: MedicalCondition
+      description: A condition the test is used to diagnose.
+    - name: signDetected
+      type: MedicalSign
+      description: A sign detected by the test.
+    - name: affectedBy
+      type: Drug
+      description: Drugs that affect the test's results.
+    - name: usesDevice
+      type: MedicalDevice
+      description: Device used to perform the test.
+    - name: normalRange
+      type: MedicalEnumeration | string
+      description: Range of acceptable values for a typical patient, when applicable.
+  inherited:
+    - name: legalStatus
+      type: DrugLegalStatus | MedicalEnumeration | string
+      description: The drug or supplement's legal status, including any controlled substance schedules that apply.
+      inheritedFrom: MedicalEntity
+    - name: recognizingAuthority
+      type: Organization
+      description: If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.
+      inheritedFrom: MedicalEntity
+    - name: funding
+      type: Grant
+      description: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+      inheritedFrom: MedicalEntity
+    - name: code
+      type: MedicalCode
+      description: A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+      inheritedFrom: MedicalEntity
+    - name: medicineSystem
+      type: MedicineSystem
+      description: The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+      inheritedFrom: MedicalEntity
+    - name: study
+      type: MedicalStudy
+      description: A medical study or trial related to this entity.
+      inheritedFrom: MedicalEntity
+    - name: guideline
+      type: MedicalGuideline
+      description: A medical guideline related to this entity.
+      inheritedFrom: MedicalEntity
+    - name: relevantSpecialty
+      type: MedicalSpecialty
+      description: If applicable, a medical specialty in which this entity is relevant.
+      inheritedFrom: MedicalEntity
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
 subClasses:
   - BloodTest
   - ImagingTest
@@ -16,7 +110,6 @@ subClasses:
   - PathologyTest
 parentClass: MedicalEntity
 ---
-
 # MedicalTest
 
 Any medical test, typically performed for diagnostic purposes.
@@ -36,25 +129,50 @@ The following types directly inherit from MedicalTest:
 
 ## Properties
 
-MedicalTest defines the following properties in addition to those inherited from MedicalEntity:
+### Direct Properties
 
-- affectedBy: Drugs that affect the test's results.
-- normalRange: Range of acceptable values for a typical patient, when applicable.
-- signDetected: A sign detected by the test.
 - usedToDiagnose: A condition the test is used to diagnose.
+- signDetected: A sign detected by the test.
+- affectedBy: Drugs that affect the test's results.
 - usesDevice: Device used to perform the test.
+- normalRange: Range of acceptable values for a typical patient, when applicable.
+
+### Inherited Properties
+
+- legalStatus: The drug or supplement's legal status, including any controlled substance schedules that apply. (inherited from MedicalEntity)
+- recognizingAuthority: If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine. (inherited from MedicalEntity)
+- funding: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]]. (inherited from MedicalEntity)
+- code: A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc. (inherited from MedicalEntity)
+- medicineSystem: The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc. (inherited from MedicalEntity)
+- study: A medical study or trial related to this entity. (inherited from MedicalEntity)
+- guideline: A medical guideline related to this entity. (inherited from MedicalEntity)
+- relevantSpecialty: If applicable, a medical specialty in which this entity is relevant. (inherited from MedicalEntity)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
 
 ## Usage Example
 
 ```typescript
-interface MedicalTest {
+interface MedicalTest extends MedicalEntity {
   $context?: 'schema.org'
   $type: 'MedicalTest'
-  affectedBy?: Drug
-  normalRange?: MedicalEnumeration | string
-  signDetected?: MedicalSign
   usedToDiagnose?: MedicalCondition
+  signDetected?: MedicalSign
+  affectedBy?: Drug
   usesDevice?: MedicalDevice
+  normalRange?: MedicalEnumeration | string
 }
 ```
 

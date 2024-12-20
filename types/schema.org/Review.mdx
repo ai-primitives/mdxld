@@ -4,11 +4,582 @@ $type: Review
 title: Review
 description: A review of an item - for example, of a restaurant, movie, or store.
 properties:
-  - associatedClaimReview
-  - associatedMediaReview
-  - associatedReview
-  - reviewBody
-  - reviewRating
+  direct:
+    - name: associatedReview
+      type: Review
+      description: An associated [[Review]].
+    - name: positiveNotes
+      type: ItemList | ListItem | WebContent | string
+      description: Provides positive considerations regarding something, for example product highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described.
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most positive is at the beginning of the list).
+    - name: associatedClaimReview
+      type: Review
+      description: An associated [[ClaimReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
+    - name: reviewBody
+      type: string
+      description: The actual body of the review.
+    - name: itemReviewed
+      type: Thing
+      description: The item that is being reviewed/rated.
+    - name: reviewAspect
+      type: string
+      description: This Review or Rating is relevant to this part or facet of the itemReviewed.
+    - name: reviewRating
+      type: Rating
+      description: The rating given in this review. Note that reviews can themselves be rated. The ```reviewRating``` applies to rating given by the review. The [[aggregateRating]] property applies to the review itself, as a creative work.
+    - name: negativeNotes
+      type: ItemList | ListItem | WebContent | string
+      description: Provides negative considerations regarding something, most typically in pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described. Since product descriptions 
+tend to emphasise positive claims, it may be relatively unusual to find [[negativeNotes]] used in this way. Nevertheless for the sake of symmetry, [[negativeNotes]] can be used on [[Product]].
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most negative is at the beginning of the list).
+    - name: associatedMediaReview
+      type: Review
+      description: An associated [[MediaReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
+  inherited:
+    - name: interactionStatistic
+      type: InteractionCounter
+      description: The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.
+      inheritedFrom: CreativeWork
+    - name: contributor
+      type: Organization | Person
+      description: A secondary contributor to the CreativeWork or Event.
+      inheritedFrom: CreativeWork
+    - name: publishingPrinciples
+      type: CreativeWork | string
+      description: The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].
+
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
+
+      inheritedFrom: CreativeWork
+    - name: exampleOfWork
+      type: CreativeWork
+      description: A creative work that this work is an example/instance/realization/derivation of.
+      inheritedFrom: CreativeWork
+    - name: contentReferenceTime
+      type: string
+      description: The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.
+      inheritedFrom: CreativeWork
+    - name: fileFormat
+      type: string
+      description: Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.
+      inheritedFrom: CreativeWork
+    - name: copyrightNotice
+      type: string
+      description: Text of a notice appropriate for describing the copyright aspects of this Creative Work, ideally indicating the owner of the copyright for the Work.
+      inheritedFrom: CreativeWork
+    - name: educationalAlignment
+      type: AlignmentObject
+      description: An alignment to an established educational framework.
+
+This property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
+      inheritedFrom: CreativeWork
+    - name: mentions
+      type: Thing
+      description: Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.
+      inheritedFrom: CreativeWork
+    - name: temporal
+      type: string
+      description: The "temporal" property can be used in cases where more specific properties
+(e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate.
+      inheritedFrom: CreativeWork
+    - name: material
+      type: Product | string
+      description: A material that something is made from, e.g. leather, wool, cotton, paper.
+      inheritedFrom: CreativeWork
+    - name: associatedMedia
+      type: MediaObject
+      description: A media object that encodes this CreativeWork. This property is a synonym for encoding.
+      inheritedFrom: CreativeWork
+    - name: version
+      type: number | string
+      description: The version of the CreativeWork embodied by a specified resource.
+      inheritedFrom: CreativeWork
+    - name: award
+      type: string
+      description: An award won by or for this item.
+      inheritedFrom: CreativeWork
+    - name: learningResourceType
+      type: DefinedTerm | string
+      description: The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.
+      inheritedFrom: CreativeWork
+    - name: encoding
+      type: MediaObject
+      description: A media object that encodes this CreativeWork. This property is a synonym for associatedMedia.
+      inheritedFrom: CreativeWork
+    - name: recordedAt
+      type: Event
+      description: The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event.
+      inheritedFrom: CreativeWork
+    - name: encodingFormat
+      type: string
+      description: Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.
+
+In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.
+
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
+      inheritedFrom: CreativeWork
+    - name: accessibilitySummary
+      type: string
+      description: A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as "short descriptions are present but long descriptions will be needed for non-visual users" or "short descriptions are present and no long descriptions are needed".
+      inheritedFrom: CreativeWork
+    - name: editor
+      type: Person
+      description: Specifies the Person who edited the CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: copyrightHolder
+      type: Organization | Person
+      description: The party holding the legal copyright to the CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: funding
+      type: Grant
+      description: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+      inheritedFrom: CreativeWork
+    - name: position
+      type: number | string
+      description: The position of an item in a series or sequence of items.
+      inheritedFrom: CreativeWork
+    - name: about
+      type: Thing
+      description: The subject matter of the content.
+      inheritedFrom: CreativeWork
+    - name: alternativeHeadline
+      type: string
+      description: A secondary title of the CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: commentCount
+      type: number
+      description: The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.
+      inheritedFrom: CreativeWork
+    - name: funder
+      type: Organization | Person
+      description: A person or organization that supports (sponsors) something through some kind of financial contribution.
+      inheritedFrom: CreativeWork
+    - name: datePublished
+      type: string
+      description: Date of first publication or broadcast. For example the date a [[CreativeWork]] was broadcast or a [[Certification]] was issued.
+      inheritedFrom: CreativeWork
+    - name: isFamilyFriendly
+      type: boolean
+      description: Indicates whether this content is family friendly.
+      inheritedFrom: CreativeWork
+    - name: comment
+      type: Comment
+      description: Comments, typically from users.
+      inheritedFrom: CreativeWork
+    - name: isBasedOn
+      type: CreativeWork | Product | string
+      description: A resource from which this work is derived or from which it is a modification or adaptation.
+      inheritedFrom: CreativeWork
+    - name: sourceOrganization
+      type: Organization
+      description: The Organization on whose behalf the creator was working.
+      inheritedFrom: CreativeWork
+    - name: isBasedOnUrl
+      type: CreativeWork | Product | string
+      description: A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+      inheritedFrom: CreativeWork
+    - name: thumbnail
+      type: ImageObject
+      description: Thumbnail image for an image or video.
+      inheritedFrom: CreativeWork
+    - name: video
+      type: Clip | VideoObject
+      description: An embedded video object.
+      inheritedFrom: CreativeWork
+    - name: keywords
+      type: DefinedTerm | string
+      description: Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
+      inheritedFrom: CreativeWork
+    - name: creditText
+      type: string
+      description: Text that can be used to credit person(s) and/or organization(s) associated with a published Creative Work.
+      inheritedFrom: CreativeWork
+    - name: size
+      type: DefinedTerm | QuantitativeValue | SizeSpecification | string
+      description: A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured [[SizeSpecification]]; in other cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be more applicable. 
+      inheritedFrom: CreativeWork
+    - name: license
+      type: CreativeWork | string
+      description: A license document that applies to this content, typically indicated by URL.
+      inheritedFrom: CreativeWork
+    - name: isAccessibleForFree
+      type: boolean
+      description: A flag to signal that the item, event, or place is accessible for free.
+      inheritedFrom: CreativeWork
+    - name: acquireLicensePage
+      type: CreativeWork | string
+      description: Indicates a page documenting how licenses can be purchased or otherwise acquired, for the current item.
+      inheritedFrom: CreativeWork
+    - name: discussionUrl
+      type: string
+      description: A link to the page containing the comments of the CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: editEIDR
+      type: string
+      description: An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing a specific edit / edition for a work of film or television.
+
+For example, the motion picture known as "Ghostbusters" whose [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J" has several edits, e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
+
+Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
+
+      inheritedFrom: CreativeWork
+    - name: spatialCoverage
+      type: Place
+      description: The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of
+      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates
+      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.
+      inheritedFrom: CreativeWork
+    - name: sdPublisher
+      type: Organization | Person
+      description: Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The
+[[sdPublisher]] property helps make such practices more explicit.
+      inheritedFrom: CreativeWork
+    - name: dateCreated
+      type: string
+      description: The date on which the CreativeWork was created or the item was added to a DataFeed.
+      inheritedFrom: CreativeWork
+    - name: encodings
+      type: MediaObject
+      description: A media object that encodes this CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: citation
+      type: CreativeWork | string
+      description: A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.
+      inheritedFrom: CreativeWork
+    - name: timeRequired
+      type: Duration
+      description: Approximate or typical time it usually takes to work with or through the content of this work for the typical or target audience.
+      inheritedFrom: CreativeWork
+    - name: character
+      type: Person
+      description: Fictional person connected with a creative work.
+      inheritedFrom: CreativeWork
+    - name: pattern
+      type: DefinedTerm | string
+      description: A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'. Values are typically expressed as text, although links to controlled value schemes are also supported.
+      inheritedFrom: CreativeWork
+    - name: typicalAgeRange
+      type: string
+      description: The typical expected age range, e.g. '7-9', '11-'.
+      inheritedFrom: CreativeWork
+    - name: translator
+      type: Organization | Person
+      description: Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.
+      inheritedFrom: CreativeWork
+    - name: thumbnailUrl
+      type: string
+      description: A thumbnail image relevant to the Thing.
+      inheritedFrom: CreativeWork
+    - name: digitalSourceType
+      type: IPTCDigitalSourceEnumeration
+      description: Indicates an IPTCDigitalSourceEnumeration code indicating the nature of the digital source(s) for some [[CreativeWork]].
+      inheritedFrom: CreativeWork
+    - name: producer
+      type: Organization | Person
+      description: The person or organization who produced the work (e.g. music album, movie, TV/radio series etc.).
+      inheritedFrom: CreativeWork
+    - name: accessibilityControl
+      type: string
+      description: Identifies input methods that are sufficient to fully control the described resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary).
+      inheritedFrom: CreativeWork
+    - name: author
+      type: Organization | Person
+      description: The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
+      inheritedFrom: CreativeWork
+    - name: educationalLevel
+      type: DefinedTerm | string
+      description: The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.
+      inheritedFrom: CreativeWork
+    - name: genre
+      type: string
+      description: Genre of the creative work, broadcast channel or group.
+      inheritedFrom: CreativeWork
+    - name: isPartOf
+      type: CreativeWork | string
+      description: Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
+      inheritedFrom: CreativeWork
+    - name: archivedAt
+      type: WebPage | string
+      description: Indicates a page or other link involved in archival of a [[CreativeWork]]. In the case of [[MediaReview]], the items in a [[MediaReviewItem]] may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content.
+      inheritedFrom: CreativeWork
+    - name: copyrightYear
+      type: number
+      description: The year during which the claimed copyright for the CreativeWork was first asserted.
+      inheritedFrom: CreativeWork
+    - name: headline
+      type: string
+      description: Headline of the article.
+      inheritedFrom: CreativeWork
+    - name: reviews
+      type: Review
+      description: Review of the item.
+      inheritedFrom: CreativeWork
+    - name: interpretedAsClaim
+      type: Claim
+      description: Used to indicate a specific claim contained, implied, translated or refined from the content of a [[MediaObject]] or other [[CreativeWork]]. The interpreting party can be indicated using [[claimInterpreter]].
+      inheritedFrom: CreativeWork
+    - name: publisher
+      type: Organization | Person
+      description: The publisher of the creative work.
+      inheritedFrom: CreativeWork
+    - name: review
+      type: Review
+      description: A review of the item.
+      inheritedFrom: CreativeWork
+    - name: creativeWorkStatus
+      type: DefinedTerm | string
+      description: The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.
+      inheritedFrom: CreativeWork
+    - name: audio
+      type: AudioObject | Clip | MusicRecording
+      description: An embedded audio object.
+      inheritedFrom: CreativeWork
+    - name: educationalUse
+      type: DefinedTerm | string
+      description: The purpose of a work in the context of education; for example, 'assignment', 'group work'.
+      inheritedFrom: CreativeWork
+    - name: countryOfOrigin
+      type: Country
+      description: The country of origin of something, including products as well as creative  works such as movie and TV content.
+
+In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
+
+In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.
+      inheritedFrom: CreativeWork
+    - name: interactivityType
+      type: string
+      description: The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.
+      inheritedFrom: CreativeWork
+    - name: offers
+      type: Demand | Offer
+      description: An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+      
+      inheritedFrom: CreativeWork
+    - name: temporalCoverage
+      type: string
+      description: The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In
+      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written "2011/2012"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL.
+      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945".
+
+Open-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.
+      inheritedFrom: CreativeWork
+    - name: sdLicense
+      type: CreativeWork | string
+      description: A license document that applies to this structured data, typically indicated by URL.
+      inheritedFrom: CreativeWork
+    - name: publisherImprint
+      type: Organization
+      description: The publishing division which published the comic.
+      inheritedFrom: CreativeWork
+    - name: provider
+      type: Organization | Person
+      description: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+      inheritedFrom: CreativeWork
+    - name: accountablePerson
+      type: Person
+      description: Specifies the Person that is legally accountable for the CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: workTranslation
+      type: CreativeWork
+      description: A work that is a translation of the content of this work. E.g. 西遊記 has an English workTranslation “Journey to the West”, a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation Tây du ký bình khảo.
+      inheritedFrom: CreativeWork
+    - name: contentRating
+      type: Rating | string
+      description: Official rating of a piece of content&#x2014;for example, 'MPAA PG-13'.
+      inheritedFrom: CreativeWork
+    - name: awards
+      type: string
+      description: Awards won by or for this item.
+      inheritedFrom: CreativeWork
+    - name: spatial
+      type: Place
+      description: The "spatial" property can be used in cases when more specific properties
+(e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are not known to be appropriate.
+      inheritedFrom: CreativeWork
+    - name: assesses
+      type: DefinedTerm | string
+      description: The item being described is intended to assess the competency or learning outcome defined by the referenced term.
+      inheritedFrom: CreativeWork
+    - name: translationOfWork
+      type: CreativeWork
+      description: The work that this work has been translated from. E.g. 物种起源 is a translationOf “On the Origin of Species”.
+      inheritedFrom: CreativeWork
+    - name: schemaVersion
+      type: string
+      description: Indicates (by URL or string) a particular version of a schema used in some CreativeWork. This property was created primarily to
+    indicate the use of a specific schema.org release, e.g. ```10.0``` as a simple string, or more explicitly via URL, ```https://schema.org/docs/releases.html#v10.0```. There may be situations in which other schemas might usefully be referenced this way, e.g. ```http://dublincore.org/specifications/dublin-core/dces/1999-07-02/``` but this has not been carefully explored in the community.
+      inheritedFrom: CreativeWork
+    - name: locationCreated
+      type: Place
+      description: The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: teaches
+      type: DefinedTerm | string
+      description: The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.
+      inheritedFrom: CreativeWork
+    - name: mainEntity
+      type: Thing
+      description: Indicates the primary entity described in some page or other CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: conditionsOfAccess
+      type: string
+      description: Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\n\nFor example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ". 
+      inheritedFrom: CreativeWork
+    - name: publication
+      type: PublicationEvent
+      description: A publication event associated with the item.
+      inheritedFrom: CreativeWork
+    - name: [object Object]
+      type: QuantitativeValue | string
+      description: [object Object]
+      inheritedFrom: CreativeWork
+    - name: usageInfo
+      type: CreativeWork | string
+      description: The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.
+
+This property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.
+      inheritedFrom: CreativeWork
+    - name: accessModeSufficient
+      type: ItemList
+      description: A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).
+      inheritedFrom: CreativeWork
+    - name: maintainer
+      type: Organization | Person
+      description: A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on "upstream" sources. When [[maintainer]] is applied to a specific version of something e.g. a particular version or packaging of a [[Dataset]], it is always  possible that the upstream source has a different maintainer. The [[isBasedOn]] property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.
+      
+      inheritedFrom: CreativeWork
+    - name: accessibilityAPI
+      type: string
+      description: Indicates that the resource is compatible with the referenced accessibility API. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary).
+      inheritedFrom: CreativeWork
+    - name: hasPart
+      type: CreativeWork
+      description: Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
+      inheritedFrom: CreativeWork
+    - name: accessibilityFeature
+      type: string
+      description: Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary).
+      inheritedFrom: CreativeWork
+    - name: text
+      type: string
+      description: The textual content of this CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: correction
+      type: CorrectionComment | string
+      description: Indicates a correction to a [[CreativeWork]], either via a [[CorrectionComment]], textually or in another document.
+      inheritedFrom: CreativeWork
+    - name: sponsor
+      type: Organization | Person
+      description: A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+      inheritedFrom: CreativeWork
+    - name: workExample
+      type: CreativeWork
+      description: Example/instance/realization/derivation of the concept of this creative work. E.g. the paperback edition, first edition, or e-book.
+      inheritedFrom: CreativeWork
+    - name: abstract
+      type: string
+      description: An abstract is a short description that summarizes a [[CreativeWork]].
+      inheritedFrom: CreativeWork
+    - name: aggregateRating
+      type: AggregateRating
+      description: The overall rating, based on a collection of reviews or ratings, of the item.
+      inheritedFrom: CreativeWork
+    - name: contentLocation
+      type: Place
+      description: The location depicted or described in the content. For example, the location in a photograph or painting.
+      inheritedFrom: CreativeWork
+    - name: creator
+      type: Organization | Person
+      description: The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
+      inheritedFrom: CreativeWork
+    - name: expires
+      type: string
+      description: Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date, or a [[Certification]] the validity has expired.
+      inheritedFrom: CreativeWork
+    - name: sdDatePublished
+      type: string
+      description: Indicates the date on which the current structured data was generated / published. Typically used alongside [[sdPublisher]].
+      inheritedFrom: CreativeWork
+    - name: inLanguage
+      type: Language | string
+      description: The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+      inheritedFrom: CreativeWork
+    - name: releasedEvent
+      type: PublicationEvent
+      description: The place and time the release was issued, expressed as a PublicationEvent.
+      inheritedFrom: CreativeWork
+    - name: dateModified
+      type: string
+      description: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
+      inheritedFrom: CreativeWork
+    - name: accessibilityHazard
+      type: string
+      description: A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary).
+      inheritedFrom: CreativeWork
+    - name: accessMode
+      type: string
+      description: The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
+      inheritedFrom: CreativeWork
+    - name: audience
+      type: Audience
+      description: An intended audience, i.e. a group for whom something was created.
+      inheritedFrom: CreativeWork
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
 subClasses:
   - ClaimReview
   - CriticReview
@@ -18,7 +589,6 @@ subClasses:
   - UserReview
 parentClass: CreativeWork
 ---
-
 # Review
 
 A review of an item - for example, of a restaurant, movie, or store.
@@ -43,25 +613,205 @@ The following types directly inherit from Review:
 
 ## Properties
 
-Review defines the following properties in addition to those inherited from CreativeWork:
+### Direct Properties
 
-- associatedClaimReview: An associated [[ClaimReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
-- associatedMediaReview: An associated [[MediaReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
 - associatedReview: An associated [[Review]].
+- positiveNotes: Provides positive considerations regarding something, for example product highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described.
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most positive is at the beginning of the list).
+- associatedClaimReview: An associated [[ClaimReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
 - reviewBody: The actual body of the review.
+- itemReviewed: The item that is being reviewed/rated.
+- reviewAspect: This Review or Rating is relevant to this part or facet of the itemReviewed.
 - reviewRating: The rating given in this review. Note that reviews can themselves be rated. The ```reviewRating``` applies to rating given by the review. The [[aggregateRating]] property applies to the review itself, as a creative work.
+- negativeNotes: Provides negative considerations regarding something, most typically in pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry 
+
+In the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described. Since product descriptions 
+tend to emphasise positive claims, it may be relatively unusual to find [[negativeNotes]] used in this way. Nevertheless for the sake of symmetry, [[negativeNotes]] can be used on [[Product]].
+
+The property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most negative is at the beginning of the list).
+- associatedMediaReview: An associated [[MediaReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
+
+### Inherited Properties
+
+- interactionStatistic: The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used. (inherited from CreativeWork)
+- contributor: A secondary contributor to the CreativeWork or Event. (inherited from CreativeWork)
+- publishingPrinciples: The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].
+
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
+ (inherited from CreativeWork)
+- exampleOfWork: A creative work that this work is an example/instance/realization/derivation of. (inherited from CreativeWork)
+- contentReferenceTime: The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event. (inherited from CreativeWork)
+- fileFormat: Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry. (inherited from CreativeWork)
+- copyrightNotice: Text of a notice appropriate for describing the copyright aspects of this Creative Work, ideally indicating the owner of the copyright for the Work. (inherited from CreativeWork)
+- educationalAlignment: An alignment to an established educational framework.
+
+This property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency. (inherited from CreativeWork)
+- mentions: Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept. (inherited from CreativeWork)
+- temporal: The "temporal" property can be used in cases where more specific properties
+(e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate. (inherited from CreativeWork)
+- material: A material that something is made from, e.g. leather, wool, cotton, paper. (inherited from CreativeWork)
+- associatedMedia: A media object that encodes this CreativeWork. This property is a synonym for encoding. (inherited from CreativeWork)
+- version: The version of the CreativeWork embodied by a specified resource. (inherited from CreativeWork)
+- award: An award won by or for this item. (inherited from CreativeWork)
+- learningResourceType: The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'. (inherited from CreativeWork)
+- encoding: A media object that encodes this CreativeWork. This property is a synonym for associatedMedia. (inherited from CreativeWork)
+- recordedAt: The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event. (inherited from CreativeWork)
+- encodingFormat: Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.
+
+In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.
+
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry. (inherited from CreativeWork)
+- accessibilitySummary: A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as "short descriptions are present but long descriptions will be needed for non-visual users" or "short descriptions are present and no long descriptions are needed". (inherited from CreativeWork)
+- editor: Specifies the Person who edited the CreativeWork. (inherited from CreativeWork)
+- copyrightHolder: The party holding the legal copyright to the CreativeWork. (inherited from CreativeWork)
+- funding: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]]. (inherited from CreativeWork)
+- position: The position of an item in a series or sequence of items. (inherited from CreativeWork)
+- about: The subject matter of the content. (inherited from CreativeWork)
+- alternativeHeadline: A secondary title of the CreativeWork. (inherited from CreativeWork)
+- commentCount: The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere. (inherited from CreativeWork)
+- funder: A person or organization that supports (sponsors) something through some kind of financial contribution. (inherited from CreativeWork)
+- datePublished: Date of first publication or broadcast. For example the date a [[CreativeWork]] was broadcast or a [[Certification]] was issued. (inherited from CreativeWork)
+- isFamilyFriendly: Indicates whether this content is family friendly. (inherited from CreativeWork)
+- comment: Comments, typically from users. (inherited from CreativeWork)
+- isBasedOn: A resource from which this work is derived or from which it is a modification or adaptation. (inherited from CreativeWork)
+- sourceOrganization: The Organization on whose behalf the creator was working. (inherited from CreativeWork)
+- isBasedOnUrl: A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. (inherited from CreativeWork)
+- thumbnail: Thumbnail image for an image or video. (inherited from CreativeWork)
+- video: An embedded video object. (inherited from CreativeWork)
+- keywords: Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property. (inherited from CreativeWork)
+- creditText: Text that can be used to credit person(s) and/or organization(s) associated with a published Creative Work. (inherited from CreativeWork)
+- size: A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured [[SizeSpecification]]; in other cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be more applicable.  (inherited from CreativeWork)
+- license: A license document that applies to this content, typically indicated by URL. (inherited from CreativeWork)
+- isAccessibleForFree: A flag to signal that the item, event, or place is accessible for free. (inherited from CreativeWork)
+- acquireLicensePage: Indicates a page documenting how licenses can be purchased or otherwise acquired, for the current item. (inherited from CreativeWork)
+- discussionUrl: A link to the page containing the comments of the CreativeWork. (inherited from CreativeWork)
+- editEIDR: An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing a specific edit / edition for a work of film or television.
+
+For example, the motion picture known as "Ghostbusters" whose [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J" has several edits, e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
+
+Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
+ (inherited from CreativeWork)
+- spatialCoverage: The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of
+      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates
+      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York. (inherited from CreativeWork)
+- sdPublisher: Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The
+[[sdPublisher]] property helps make such practices more explicit. (inherited from CreativeWork)
+- dateCreated: The date on which the CreativeWork was created or the item was added to a DataFeed. (inherited from CreativeWork)
+- encodings: A media object that encodes this CreativeWork. (inherited from CreativeWork)
+- citation: A citation or reference to another creative work, such as another publication, web page, scholarly article, etc. (inherited from CreativeWork)
+- timeRequired: Approximate or typical time it usually takes to work with or through the content of this work for the typical or target audience. (inherited from CreativeWork)
+- character: Fictional person connected with a creative work. (inherited from CreativeWork)
+- pattern: A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'. Values are typically expressed as text, although links to controlled value schemes are also supported. (inherited from CreativeWork)
+- typicalAgeRange: The typical expected age range, e.g. '7-9', '11-'. (inherited from CreativeWork)
+- translator: Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event. (inherited from CreativeWork)
+- thumbnailUrl: A thumbnail image relevant to the Thing. (inherited from CreativeWork)
+- digitalSourceType: Indicates an IPTCDigitalSourceEnumeration code indicating the nature of the digital source(s) for some [[CreativeWork]]. (inherited from CreativeWork)
+- producer: The person or organization who produced the work (e.g. music album, movie, TV/radio series etc.). (inherited from CreativeWork)
+- accessibilityControl: Identifies input methods that are sufficient to fully control the described resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary). (inherited from CreativeWork)
+- author: The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably. (inherited from CreativeWork)
+- educationalLevel: The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators. (inherited from CreativeWork)
+- genre: Genre of the creative work, broadcast channel or group. (inherited from CreativeWork)
+- isPartOf: Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. (inherited from CreativeWork)
+- archivedAt: Indicates a page or other link involved in archival of a [[CreativeWork]]. In the case of [[MediaReview]], the items in a [[MediaReviewItem]] may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content. (inherited from CreativeWork)
+- copyrightYear: The year during which the claimed copyright for the CreativeWork was first asserted. (inherited from CreativeWork)
+- headline: Headline of the article. (inherited from CreativeWork)
+- reviews: Review of the item. (inherited from CreativeWork)
+- interpretedAsClaim: Used to indicate a specific claim contained, implied, translated or refined from the content of a [[MediaObject]] or other [[CreativeWork]]. The interpreting party can be indicated using [[claimInterpreter]]. (inherited from CreativeWork)
+- publisher: The publisher of the creative work. (inherited from CreativeWork)
+- review: A review of the item. (inherited from CreativeWork)
+- creativeWorkStatus: The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle. (inherited from CreativeWork)
+- audio: An embedded audio object. (inherited from CreativeWork)
+- educationalUse: The purpose of a work in the context of education; for example, 'assignment', 'group work'. (inherited from CreativeWork)
+- countryOfOrigin: The country of origin of something, including products as well as creative  works such as movie and TV content.
+
+In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
+
+In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here. (inherited from CreativeWork)
+- interactivityType: The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'. (inherited from CreativeWork)
+- offers: An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+       (inherited from CreativeWork)
+- temporalCoverage: The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In
+      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written "2011/2012"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL.
+      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945".
+
+Open-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated. (inherited from CreativeWork)
+- sdLicense: A license document that applies to this structured data, typically indicated by URL. (inherited from CreativeWork)
+- publisherImprint: The publishing division which published the comic. (inherited from CreativeWork)
+- provider: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. (inherited from CreativeWork)
+- accountablePerson: Specifies the Person that is legally accountable for the CreativeWork. (inherited from CreativeWork)
+- workTranslation: A work that is a translation of the content of this work. E.g. 西遊記 has an English workTranslation “Journey to the West”, a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation Tây du ký bình khảo. (inherited from CreativeWork)
+- contentRating: Official rating of a piece of content&#x2014;for example, 'MPAA PG-13'. (inherited from CreativeWork)
+- awards: Awards won by or for this item. (inherited from CreativeWork)
+- spatial: The "spatial" property can be used in cases when more specific properties
+(e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are not known to be appropriate. (inherited from CreativeWork)
+- assesses: The item being described is intended to assess the competency or learning outcome defined by the referenced term. (inherited from CreativeWork)
+- translationOfWork: The work that this work has been translated from. E.g. 物种起源 is a translationOf “On the Origin of Species”. (inherited from CreativeWork)
+- schemaVersion: Indicates (by URL or string) a particular version of a schema used in some CreativeWork. This property was created primarily to
+    indicate the use of a specific schema.org release, e.g. ```10.0``` as a simple string, or more explicitly via URL, ```https://schema.org/docs/releases.html#v10.0```. There may be situations in which other schemas might usefully be referenced this way, e.g. ```http://dublincore.org/specifications/dublin-core/dces/1999-07-02/``` but this has not been carefully explored in the community. (inherited from CreativeWork)
+- locationCreated: The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork. (inherited from CreativeWork)
+- teaches: The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term. (inherited from CreativeWork)
+- mainEntity: Indicates the primary entity described in some page or other CreativeWork. (inherited from CreativeWork)
+- conditionsOfAccess: Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\n\nFor example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ".  (inherited from CreativeWork)
+- publication: A publication event associated with the item. (inherited from CreativeWork)
+- [object Object]: [object Object] (inherited from CreativeWork)
+- usageInfo: The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.
+
+This property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses. (inherited from CreativeWork)
+- accessModeSufficient: A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary). (inherited from CreativeWork)
+- maintainer: A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on "upstream" sources. When [[maintainer]] is applied to a specific version of something e.g. a particular version or packaging of a [[Dataset]], it is always  possible that the upstream source has a different maintainer. The [[isBasedOn]] property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.
+       (inherited from CreativeWork)
+- accessibilityAPI: Indicates that the resource is compatible with the referenced accessibility API. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary). (inherited from CreativeWork)
+- hasPart: Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). (inherited from CreativeWork)
+- accessibilityFeature: Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary). (inherited from CreativeWork)
+- text: The textual content of this CreativeWork. (inherited from CreativeWork)
+- correction: Indicates a correction to a [[CreativeWork]], either via a [[CorrectionComment]], textually or in another document. (inherited from CreativeWork)
+- sponsor: A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event. (inherited from CreativeWork)
+- workExample: Example/instance/realization/derivation of the concept of this creative work. E.g. the paperback edition, first edition, or e-book. (inherited from CreativeWork)
+- abstract: An abstract is a short description that summarizes a [[CreativeWork]]. (inherited from CreativeWork)
+- aggregateRating: The overall rating, based on a collection of reviews or ratings, of the item. (inherited from CreativeWork)
+- contentLocation: The location depicted or described in the content. For example, the location in a photograph or painting. (inherited from CreativeWork)
+- creator: The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork. (inherited from CreativeWork)
+- expires: Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date, or a [[Certification]] the validity has expired. (inherited from CreativeWork)
+- sdDatePublished: Indicates the date on which the current structured data was generated / published. Typically used alongside [[sdPublisher]]. (inherited from CreativeWork)
+- inLanguage: The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]]. (inherited from CreativeWork)
+- releasedEvent: The place and time the release was issued, expressed as a PublicationEvent. (inherited from CreativeWork)
+- dateModified: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed. (inherited from CreativeWork)
+- accessibilityHazard: A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary). (inherited from CreativeWork)
+- accessMode: The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary). (inherited from CreativeWork)
+- audience: An intended audience, i.e. a group for whom something was created. (inherited from CreativeWork)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
 
 ## Usage Example
 
 ```typescript
-interface Review {
+interface Review extends CreativeWork {
   $context?: 'schema.org'
   $type: 'Review'
-  associatedClaimReview?: Review
-  associatedMediaReview?: Review
   associatedReview?: Review
+  positiveNotes?: ItemList | ListItem | WebContent | string
+  associatedClaimReview?: Review
   reviewBody?: string
+  itemReviewed?: Thing
+  reviewAspect?: string
   reviewRating?: Rating
+  negativeNotes?: ItemList | ListItem | WebContent | string
+  associatedMediaReview?: Review
 }
 ```
 

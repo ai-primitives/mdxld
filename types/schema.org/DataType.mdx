@@ -4,12 +4,10 @@ $type: DataType
 title: DataType
 description: The basic data types such as Integers, Strings, etc.
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
 parentClass: rdfs:Class
 ---
-
 # DataType
 
 The basic data types such as Integers, Strings, etc.
@@ -24,14 +22,18 @@ No types directly inherit from DataType.
 
 ## Properties
 
-DataType defines the following properties in addition to those inherited from rdfs:Class:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
 ```typescript
-interface DataType {
+interface DataType extends rdfs:Class {
   $context?: 'schema.org'
   $type: 'DataType'
 

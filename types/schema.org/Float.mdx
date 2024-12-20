@@ -4,12 +4,10 @@ $type: Float
 title: Float
 description: Data type: Floating number.
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
 parentClass: Number
 ---
-
 # Float
 
 Data type: Floating number.
@@ -24,14 +22,18 @@ No types directly inherit from Float.
 
 ## Properties
 
-Float defines the following properties in addition to those inherited from Number:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
 ```typescript
-interface Float {
+interface Float extends Number {
   $context?: 'schema.org'
   $type: 'Float'
 

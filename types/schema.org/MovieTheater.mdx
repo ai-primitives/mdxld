@@ -4,12 +4,12 @@ $type: MovieTheater
 title: MovieTheater
 description: A movie theater.
 properties:
-  - screenCount
-subClasses:
-
-
+  direct:
+    - name: screenCount
+      type: number
+      description: The number of screens in the movie theater.
+  inherited:
 ---
-
 # MovieTheater
 
 A movie theater.
@@ -24,9 +24,13 @@ No types directly inherit from MovieTheater.
 
 ## Properties
 
-MovieTheater defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
 - screenCount: The number of screens in the movie theater.
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 

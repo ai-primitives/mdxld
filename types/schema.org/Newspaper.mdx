@@ -4,12 +4,22 @@ $type: Newspaper
 title: Newspaper
 description: A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
+    - name: issn
+      type: string
+      description: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+      inheritedFrom: CreativeWorkSeries
+    - name: startDate
+      type: string
+      description: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+    - name: endDate
+      type: string
+      description: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
 parentClass: Periodical
 ---
-
 # Newspaper
 
 A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.
@@ -24,14 +34,20 @@ No types directly inherit from Newspaper.
 
 ## Properties
 
-Newspaper defines the following properties in addition to those inherited from Periodical:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+- issn: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication. (inherited from CreativeWorkSeries)
+- startDate: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+- endDate: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
 
 ## Usage Example
 
 ```typescript
-interface Newspaper {
+interface Newspaper extends Periodical {
   $context?: 'schema.org'
   $type: 'Newspaper'
 

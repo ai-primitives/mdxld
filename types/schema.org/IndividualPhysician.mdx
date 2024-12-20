@@ -5,12 +5,35 @@ title: IndividualPhysician
 description: An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]]. 
 The [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.
 properties:
-  - practicesAt
-subClasses:
-
+  direct:
+    - name: practicesAt
+      type: MedicalOrganization
+      description: A [[MedicalOrganization]] where the [[IndividualPhysician]] practices.
+  inherited:
+    - name: occupationalCategory
+      type: CategoryCode | string
+      description: A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
+      inheritedFrom: Physician
+    - name: medicalSpecialty
+      type: MedicalSpecialty
+      description: A medical specialty of the provider.
+      inheritedFrom: Physician
+    - name: availableService
+      type: MedicalProcedure | MedicalTest | MedicalTherapy
+      description: A medical service available from this provider.
+      inheritedFrom: Physician
+    - name: usNPI
+      type: string
+      description: A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) 
+    is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services.
+      inheritedFrom: Physician
+    - name: hospitalAffiliation
+      type: Hospital
+      description: A hospital with which the physician or office is affiliated.
+      inheritedFrom: Physician
 parentClass: Physician
 ---
-
 # IndividualPhysician
 
 An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]]. 
@@ -26,14 +49,24 @@ No types directly inherit from IndividualPhysician.
 
 ## Properties
 
-IndividualPhysician defines the following properties in addition to those inherited from Physician:
+### Direct Properties
 
 - practicesAt: A [[MedicalOrganization]] where the [[IndividualPhysician]] practices.
+
+### Inherited Properties
+
+- occupationalCategory: A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC. (inherited from Physician)
+- medicalSpecialty: A medical specialty of the provider. (inherited from Physician)
+- availableService: A medical service available from this provider. (inherited from Physician)
+- usNPI: A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) 
+    is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services. (inherited from Physician)
+- hospitalAffiliation: A hospital with which the physician or office is affiliated. (inherited from Physician)
 
 ## Usage Example
 
 ```typescript
-interface IndividualPhysician {
+interface IndividualPhysician extends Physician {
   $context?: 'schema.org'
   $type: 'IndividualPhysician'
   practicesAt?: MedicalOrganization

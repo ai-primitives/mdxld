@@ -4,14 +4,29 @@ $type: Physician
 title: Physician
 description: An individual physician or a physician's office considered as a [[MedicalOrganization]].
 properties:
-  - hospitalAffiliation
-  - usNPI
+  direct:
+    - name: occupationalCategory
+      type: CategoryCode | string
+      description: A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
+    - name: medicalSpecialty
+      type: MedicalSpecialty
+      description: A medical specialty of the provider.
+    - name: availableService
+      type: MedicalProcedure | MedicalTest | MedicalTherapy
+      description: A medical service available from this provider.
+    - name: usNPI
+      type: string
+      description: A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) 
+    is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services.
+    - name: hospitalAffiliation
+      type: Hospital
+      description: A hospital with which the physician or office is affiliated.
+  inherited:
 subClasses:
   - IndividualPhysician
   - PhysiciansOffice
-
 ---
-
 # Physician
 
 An individual physician or a physician's office considered as a [[MedicalOrganization]].
@@ -30,11 +45,19 @@ The [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hos
 
 ## Properties
 
-Physician defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
-- hospitalAffiliation: A hospital with which the physician or office is affiliated.
+- occupationalCategory: A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
+- medicalSpecialty: A medical specialty of the provider.
+- availableService: A medical service available from this provider.
 - usNPI: A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) 
     is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services.
+- hospitalAffiliation: A hospital with which the physician or office is affiliated.
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -42,8 +65,11 @@ Physician defines the following properties in addition to those inherited from T
 interface Physician {
   $context?: 'schema.org'
   $type: 'Physician'
-  hospitalAffiliation?: Hospital
+  occupationalCategory?: CategoryCode | string
+  medicalSpecialty?: MedicalSpecialty
+  availableService?: MedicalProcedure | MedicalTest | MedicalTherapy
   usNPI?: string
+  hospitalAffiliation?: Hospital
 }
 ```
 

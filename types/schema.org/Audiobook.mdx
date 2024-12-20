@@ -4,12 +4,15 @@ $type: Audiobook
 title: Audiobook
 description: An audiobook.
 properties:
-  - readBy
-subClasses:
-
-
+  direct:
+    - name: readBy
+      type: Person
+      description: A person who reads (performs) the audiobook.
+    - name: duration
+      type: Duration
+      description: The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+  inherited:
 ---
-
 # Audiobook
 
 An audiobook.
@@ -24,9 +27,14 @@ No types directly inherit from Audiobook.
 
 ## Properties
 
-Audiobook defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
 - readBy: A person who reads (performs) the audiobook.
+- duration: The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -35,6 +43,7 @@ interface Audiobook {
   $context?: 'schema.org'
   $type: 'Audiobook'
   readBy?: Person
+  duration?: Duration
 }
 ```
 

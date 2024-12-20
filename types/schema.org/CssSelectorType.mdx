@@ -4,12 +4,10 @@ $type: CssSelectorType
 title: CssSelectorType
 description: Text representing a CSS selector.
 properties:
-
-subClasses:
-
+  direct:
+  inherited:
 parentClass: Text
 ---
-
 # CssSelectorType
 
 Text representing a CSS selector.
@@ -24,14 +22,18 @@ No types directly inherit from CssSelectorType.
 
 ## Properties
 
-CssSelectorType defines the following properties in addition to those inherited from Text:
+### Direct Properties
 
 
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
 ```typescript
-interface CssSelectorType {
+interface CssSelectorType extends Text {
   $context?: 'schema.org'
   $type: 'CssSelectorType'
 

@@ -4,12 +4,15 @@ $type: MedicalCode
 title: MedicalCode
 description: A code for a medical entity.
 properties:
-  - codingSystem
-subClasses:
-
-
+  direct:
+    - name: codingSystem
+      type: string
+      description: The coding system, e.g. 'ICD-10'.
+    - name: codeValue
+      type: string
+      description: A short textual code that uniquely identifies the value.
+  inherited:
 ---
-
 # MedicalCode
 
 A code for a medical entity.
@@ -24,9 +27,14 @@ No types directly inherit from MedicalCode.
 
 ## Properties
 
-MedicalCode defines the following properties in addition to those inherited from Thing:
+### Direct Properties
 
 - codingSystem: The coding system, e.g. 'ICD-10'.
+- codeValue: A short textual code that uniquely identifies the value.
+
+### Inherited Properties
+
+No inherited properties.
 
 ## Usage Example
 
@@ -35,6 +43,7 @@ interface MedicalCode {
   $context?: 'schema.org'
   $type: 'MedicalCode'
   codingSystem?: string
+  codeValue?: string
 }
 ```
 
