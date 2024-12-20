@@ -119,11 +119,9 @@ export const epcisOntology: Record<string, any> = {
       preferredNamespacePrefix: 'epcis',
       preferredNamespaceUri: 'https://ref.gs1.org/epcis/',
       publisher: 'https://gs1.org/',
-      'rdfs:comment': 'The Electronic Product Code Information System (EPCIS) is a specification for capturing and exchanging event visibility data across the global logistics chain.\nVersion 2.0 is a major release that adds JSON, JSONLD and RDF payload formats, sensor reports, and other major features.',
-      seeAlso: [
-        'https://ref.gs1.org/cbv/',
-        'https://gs1.org/voc/',
-      ],
+      'rdfs:comment':
+        'The Electronic Product Code Information System (EPCIS) is a specification for capturing and exchanging event visibility data across the global logistics chain.\nVersion 2.0 is a major release that adds JSON, JSONLD and RDF payload formats, sensor reports, and other major features.',
+      seeAlso: ['https://ref.gs1.org/cbv/', 'https://gs1.org/voc/'],
       versionInfo: '2.0',
     },
     {
@@ -134,10 +132,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:jsonldLabel',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: 'JSONLD term (alias) used for this property.\nThe default is the property local name, which is captured in rdfs:label.',
       domain: 'rdf:Property',
       domainIncludes: 'rdf:Property',
@@ -153,11 +148,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:jsonldUriLabel',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: 'JSONLD term (alias) used for the URI of nodes of this class.\nThere is no default: many EPCIS classes use blank nodes instead of the standard @id JSONLD term.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        'JSONLD term (alias) used for the URI of nodes of this class.\nThere is no default: many EPCIS classes use blank nodes instead of the standard @id JSONLD term.',
       domain: 'rdfs:Class',
       domainIncludes: 'rdfs:Class',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -168,22 +161,18 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:EPCISEvent',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'A logistics event. This is a common superclass (base type) for all EPCIS events. All of the more specific event types are subclasses of EPCISEvent.',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'A logistics event. This is a common superclass (base type) for all EPCIS events. All of the more specific event types are subclasses of EPCISEvent.',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'EPCISEvent',
       term_status: 'stable',
     },
     {
       $id: 'epcis:AggregationEvent',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: "The event type AggregationEvent describes events that apply to objects that have been aggregated to one another. In such an event, there is a set of 'contained' objects that have been aggregated within a 'containing' entity that's meant to identify the aggregation itself.  This event type is intended to be used for 'aggregations', meaning an association where there is a strong physical relationship between the containing and the contained objects such that they will all occupy the same location at the same time, until such time as they are disaggregated.",
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        "The event type AggregationEvent describes events that apply to objects that have been aggregated to one another. In such an event, there is a set of 'contained' objects that have been aggregated within a 'containing' entity that's meant to identify the aggregation itself.  This event type is intended to be used for 'aggregations', meaning an association where there is a strong physical relationship between the containing and the contained objects such that they will all occupy the same location at the same time, until such time as they are disaggregated.",
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       jsonldUriLabel: 'eventID',
       label: 'AggregationEvent',
@@ -192,11 +181,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:AssociationEvent',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'The event type AssociationEvent describes the association or disassociation of one or several physical objects with a parent object or a specific physical location.  Like the AggregationEvent, the AssociationEvent is also used to capture associations where there is a strong physical relationship between the containing and the contained objects such that they will all occupy the same location at the same time, until such time as they are disaggregated. However, the AggregationEvent does not allow for associations of objects with physical locations;  if action is DELETE while omitting the childEPC and childQuantityList field, all contained children are disaggregated from the containing parent. Because there are situations in which associations are more permanent, i.e. beyond the physical flow of goods (e.g. packing/unpacking and loading/unloading), an AssociationEvent SHOULD be used: (a) when objects need to be associated with a physical location or (b) when the parent object could also be subject to other, more temporary associations (i.e. captured using AggregationEvent).',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'The event type AssociationEvent describes the association or disassociation of one or several physical objects with a parent object or a specific physical location.  Like the AggregationEvent, the AssociationEvent is also used to capture associations where there is a strong physical relationship between the containing and the contained objects such that they will all occupy the same location at the same time, until such time as they are disaggregated. However, the AggregationEvent does not allow for associations of objects with physical locations;  if action is DELETE while omitting the childEPC and childQuantityList field, all contained children are disaggregated from the containing parent. Because there are situations in which associations are more permanent, i.e. beyond the physical flow of goods (e.g. packing/unpacking and loading/unloading), an AssociationEvent SHOULD be used: (a) when objects need to be associated with a physical location or (b) when the parent object could also be subject to other, more temporary associations (i.e. captured using AggregationEvent).',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       jsonldUriLabel: 'eventID',
       label: 'AssociationEvent',
@@ -205,11 +192,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:ObjectEvent',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'An ObjectEvent captures information about an event pertaining to one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers. In most situations, an ObjectEvent is envisioned to represent an actual observations of objects, but strictly speaking it can be used for any event a Capturing Application wants to assert about objects, including for example capturing the fact that an expected observation failed to occur.',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'An ObjectEvent captures information about an event pertaining to one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers. In most situations, an ObjectEvent is envisioned to represent an actual observations of objects, but strictly speaking it can be used for any event a Capturing Application wants to assert about objects, including for example capturing the fact that an expected observation failed to occur.',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       jsonldUriLabel: 'eventID',
       label: 'ObjectEvent',
@@ -218,11 +203,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:TransactionEvent',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'The event type TransactionEvent describes the association or disassociation of physical or digital objects to one or more business transactions. While other event types have an optional bizTransactionList field that may be used to provide context for an event, the TransactionEvent is used to declare in an unequivocal way that certain objects have been associated or disassociated with one or more business transactions as part of the event.',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'The event type TransactionEvent describes the association or disassociation of physical or digital objects to one or more business transactions. While other event types have an optional bizTransactionList field that may be used to provide context for an event, the TransactionEvent is used to declare in an unequivocal way that certain objects have been associated or disassociated with one or more business transactions as part of the event.',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       jsonldUriLabel: 'eventID',
       label: 'TransactionEvent',
@@ -231,22 +214,18 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:Transformation',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'A transformation business processes that takes a longer period of time than a single TransformationEvent, so is associated with a series of such events.\nWhen events share the same Transformation, the meaning is that the inputs to any of those events may have contributed in some way to each of the outputs in any of those same events.',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'A transformation business processes that takes a longer period of time than a single TransformationEvent, so is associated with a series of such events.\nWhen events share the same Transformation, the meaning is that the inputs to any of those events may have contributed in some way to each of the outputs in any of those same events.',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'Transformation',
       term_status: 'stable',
     },
     {
       $id: 'epcis:TransformationEvent',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'A TransformationEvent captures information about an event in which one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are fully or partially consumed as inputs and one or more objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are produced as outputs. The TransformationEvent captures the relationship between the inputs and the outputs, such that any of the inputs may have contributed in some way to each of the outputs.',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'A TransformationEvent captures information about an event in which one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are fully or partially consumed as inputs and one or more objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are produced as outputs. The TransformationEvent captures the relationship between the inputs and the outputs, such that any of the inputs may have contributed in some way to each of the outputs.',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       jsonldUriLabel: 'eventID',
       label: 'TransformationEvent',
@@ -255,11 +234,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:BizTransaction',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: "Document that describes a particular business transaction. An example is a specific Purchase Order or Despatch Advice. Business Transaction information may be included in EPCIS events to record an event's participation in particular business transactions.",
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        "Document that describes a particular business transaction. An example is a specific Purchase Order or Despatch Advice. Business Transaction information may be included in EPCIS events to record an event's participation in particular business transactions.",
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       jsonldUriLabel: 'bizTransaction',
       label: 'BizTransaction',
@@ -267,11 +244,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:EPCISDocument',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'An EPCISDocument is a means to transport a collection of EPCIS events, optionally accompanied by relevant master data, as a single electronic document.  It is used by the concrete bindings of the EPCIS Capture Interface.  In addition, trading partners may by mutual agreement use it as a single electronic document.',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'An EPCISDocument is a means to transport a collection of EPCIS events, optionally accompanied by relevant master data, as a single electronic document.  It is used by the concrete bindings of the EPCIS Capture Interface.  In addition, trading partners may by mutual agreement use it as a single electronic document.',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       jsonldUriLabel: 'id',
       label: 'EPCISDocument',
@@ -279,10 +254,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:EPCISDocumentBody',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
+      $type: ['owl:Class', 'rdfs:Class'],
       comment: 'Intermediate node that is connected to EPCISDocument using epcisBody, and includes a list of events using eventList',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'EPCISDocumentBody',
@@ -290,10 +262,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:EPCISDocumentHeader',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
+      $type: ['owl:Class', 'rdfs:Class'],
       comment: 'Intermediate node that is connected to EPCISDocument using epcisHeader, and may include master data using masterData',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'EPCISDocumentHeader',
@@ -301,32 +270,25 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:ErrorDeclaration',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: "When an event contains an ErrorDeclaration element, it indicates that this event has special semantics: instead of the normal semantics which assert that various things happened and that various things are true following the event, the semantics of this event assert that those prior assertions are in error. An event containing an ErrorDeclaration element SHALL be otherwise identical to a prior event, 'otherwise identical' meaning that all fields of the event other than the ErrorDeclaration element and the value of recordTime are exactly equal to the prior event. (Note that includes the eventID field: the eventID of the error declaration will be equal to the eventID of the prior event or null if the eventID of the prior event is null. This is the sole case where the same non-null eventID may appear in two events.) The semantics of an event containing the ErrorDeclaration element are that all assertions implied by the prior event are considered to be erroneous, as of the specified declarationTime. The prior event is not modified in any way, and subsequent queries will return both the prior event and the error declaration.",
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        "When an event contains an ErrorDeclaration element, it indicates that this event has special semantics: instead of the normal semantics which assert that various things happened and that various things are true following the event, the semantics of this event assert that those prior assertions are in error. An event containing an ErrorDeclaration element SHALL be otherwise identical to a prior event, 'otherwise identical' meaning that all fields of the event other than the ErrorDeclaration element and the value of recordTime are exactly equal to the prior event. (Note that includes the eventID field: the eventID of the error declaration will be equal to the eventID of the prior event or null if the eventID of the prior event is null. This is the sole case where the same non-null eventID may appear in two events.) The semantics of an event containing the ErrorDeclaration element are that all assertions implied by the prior event are considered to be erroneous, as of the specified declarationTime. The prior event is not modified in any way, and subsequent queries will return both the prior event and the error declaration.",
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'ErrorDeclaration',
       term_status: 'stable',
     },
     {
       $id: 'epcis:ILMD',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'Instance/Lot master data (ILMD) is data that describes a specific instance of a physical or digital object, or a specific batch/lot of objects that are produced in batches/lots. ILMD consists of a set of descriptive attributes that provide information about one or more specific objects or lots. It is similar to ordinary master data, which also consists of a set of descriptive attributes that provide information about objects. But whereas master data attributes have the same values for a large class of objects, (e.g., for all objects having a given GTIN), the values of ILMD attributes may be different for much smaller groupings of objects (e.g., a single batch or lot), and may be different for each object (i.e., different for each instance).',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'Instance/Lot master data (ILMD) is data that describes a specific instance of a physical or digital object, or a specific batch/lot of objects that are produced in batches/lots. ILMD consists of a set of descriptive attributes that provide information about one or more specific objects or lots. It is similar to ordinary master data, which also consists of a set of descriptive attributes that provide information about objects. But whereas master data attributes have the same values for a large class of objects, (e.g., for all objects having a given GTIN), the values of ILMD attributes may be different for much smaller groupings of objects (e.g., a single batch or lot), and may be different for each object (i.e., different for each instance).',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'ILMD',
       term_status: 'stable',
     },
     {
       $id: 'epcis:MasterData',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
+      $type: ['owl:Class', 'rdfs:Class'],
       comment: 'Intermediate node that is connected to EPCISDocumentHeader using masterData, and may include vocabulary elements using vocabularyList',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'MasterData',
@@ -334,32 +296,25 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:PersistentDisposition',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: "The persistentDisposition field of an event specifies one or more business conditions of the event's objects, subsequent to the event. One or more persistentDisposition values can be set or unset, independently of each other. Values that are set are considered to remain valid until explicitly unset. Like disposition, persistentDisposition leverages the DispositionID Standard Vocabulary.",
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        "The persistentDisposition field of an event specifies one or more business conditions of the event's objects, subsequent to the event. One or more persistentDisposition values can be set or unset, independently of each other. Values that are set are considered to remain valid until explicitly unset. Like disposition, persistentDisposition leverages the DispositionID Standard Vocabulary.",
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'PersistentDisposition',
       term_status: 'stable',
     },
     {
       $id: 'epcis:QuantityElement',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'A QuantityElement is a structure that identifies objects identified by a specific class-level identifier, either a specific quantity or an unspecified quantity.',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'A QuantityElement is a structure that identifies objects identified by a specific class-level identifier, either a specific quantity or an unspecified quantity.',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'QuantityElement',
       term_status: 'stable',
     },
     {
       $id: 'epcis:SensorElement',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
+      $type: ['owl:Class', 'rdfs:Class'],
       comment: 'A SensorElement is a structure that contains an optional sensorMetadata structure and one or several sensorReport structures',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'SensorElement',
@@ -367,21 +322,16 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:SensorMetadata',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'A class containing one or several metadata attributes, which are applicable to all sensorReport structures that are part of the same sensorElement',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'A class containing one or several metadata attributes, which are applicable to all sensorReport structures that are part of the same sensorElement',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'SensorMetadata',
       term_status: 'stable',
     },
     {
       $id: 'epcis:SensorReport',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
+      $type: ['owl:Class', 'rdfs:Class'],
       comment: 'A class containing one or several attributes that pertain to a specific sensor observation.',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'SensorReport',
@@ -389,11 +339,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:SourceOrDestination',
-      $type: [
-        'owl:Class',
-        'rdfs:Class',
-      ],
-      comment: 'Provides additional business context when an EPCIS event is part of a business transfer; that is, a process in which there is a change of location, or transfer of ownership, or transfer of possession (responsibility and/or custody) of physical or digital objects.  Within a specified type of transfer (indicated by sourceOrDestinationType), the business transfer is from the Source to the Destination.',
+      $type: ['owl:Class', 'rdfs:Class'],
+      comment:
+        'Provides additional business context when an EPCIS event is part of a business transfer; that is, a process in which there is a change of location, or transfer of ownership, or transfer of possession (responsibility and/or custody) of physical or digital objects.  Within a specified type of transfer (indicated by sourceOrDestinationType), the business transfer is from the Source to the Destination.',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       jsonldUriLabel: 'id',
       label: 'Source or Destination',
@@ -401,28 +349,15 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:action',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: 'How this event relates to the lifecycle of the EPCs named in this event.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:ObjectEvent',
-            'epcis:AggregationEvent',
-            'epcis:AssociationEvent',
-            'epcis:TransactionEvent',
-          ],
+          $list: ['epcis:ObjectEvent', 'epcis:AggregationEvent', 'epcis:AssociationEvent', 'epcis:TransactionEvent'],
         },
       },
-      domainIncludes: [
-        'epcis:ObjectEvent',
-        'epcis:AggregationEvent',
-        'epcis:AssociationEvent',
-        'epcis:TransactionEvent',
-      ],
+      domainIncludes: ['epcis:ObjectEvent', 'epcis:AggregationEvent', 'epcis:AssociationEvent', 'epcis:TransactionEvent'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'action',
       range: 'xsd:string',
@@ -431,10 +366,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:bizLocation',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) The business location where the objects associated with the EPCs may be found, until contradicted by a subsequent event.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
@@ -446,11 +378,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:bizRules',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: "(Optional) Storage location of an electronic document accommodating product- or application-specific business rules on which basis the EPCIS event was triggered.  For instance, an EPCIS capturing application might only trigger an event if the 'what' dimension contains a certain product class (e.g. GTIN of a cold-storage pharmaceutical product) AND a certain temperature threshold was exceeded.  Note: In contrast to a business transaction, a business rules file is not a standard-defined, interoperably communicated business document such as an invoice. In addition, the set of rules typically will only change in an infrequent manner.",
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        "(Optional) Storage location of an electronic document accommodating product- or application-specific business rules on which basis the EPCIS event was triggered.  For instance, an EPCIS capturing application might only trigger an event if the 'what' dimension contains a certain product class (e.g. GTIN of a cold-storage pharmaceutical product) AND a certain temperature threshold was exceeded.  Note: In contrast to a business transaction, a business rules file is not a standard-defined, interoperably communicated business document such as an invoice. In addition, the set of rules typically will only change in an infrequent manner.",
       domain: 'epcis:SensorMetadata',
       domainIncludes: 'epcis:SensorMetadata',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -459,10 +389,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:bizStep',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) The business step of which this event was a part.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
@@ -474,10 +401,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:bizTransactionList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) An unordered list of business transactions that define the context of this event.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
@@ -489,10 +413,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:bizTransactionType',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'An identifier that indicates the type of BizTransaction document (e.g. Purchase Order, Despatch Advice).',
       domain: 'epcis:BizTransaction',
       domainIncludes: 'epcis:BizTransaction',
@@ -505,10 +426,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:booleanValue',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: '(Optional) Similar to stringValue, for Boolean value.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
@@ -520,10 +438,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:certificationInfo',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'CertificationDetails relevant for Objects, Places and/or Organizations mentioned in this Event',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
@@ -535,10 +450,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:chemicalSubstance',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) Identifies a specific chemical substance.  If chemicalSubstance is present, a sensorReport element SHALL NOT include microorganism.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
@@ -548,24 +460,16 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:childEPCs',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) An unordered list of the EPCs of contained objects identified by instance-level identifiers. An AggregationEvent SHALL contain either a nonempty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.  An AssociationEvent SHALL contain either a non-empty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disassociated from the parent.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) An unordered list of the EPCs of contained objects identified by instance-level identifiers. An AggregationEvent SHALL contain either a nonempty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.  An AssociationEvent SHALL contain either a non-empty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disassociated from the parent.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:AggregationEvent',
-            'epcis:AssociationEvent',
-          ],
+          $list: ['epcis:AggregationEvent', 'epcis:AssociationEvent'],
         },
       },
-      domainIncludes: [
-        'epcis:AggregationEvent',
-        'epcis:AssociationEvent',
-      ],
+      domainIncludes: ['epcis:AggregationEvent', 'epcis:AssociationEvent'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'childEPCs',
       range: 'gs1:IndividualObject',
@@ -574,24 +478,16 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:childQuantityList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) An unordered list of one or more QuantityElements identifying (at the class level) contained objects. An AggregationEvent SHALL contain either a nonempty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.  An AssociationEvent SHALL contain either a non-empty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) An unordered list of one or more QuantityElements identifying (at the class level) contained objects. An AggregationEvent SHALL contain either a nonempty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.  An AssociationEvent SHALL contain either a non-empty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:AggregationEvent',
-            'epcis:AssociationEvent',
-          ],
+          $list: ['epcis:AggregationEvent', 'epcis:AssociationEvent'],
         },
       },
-      domainIncludes: [
-        'epcis:AggregationEvent',
-        'epcis:AssociationEvent',
-      ],
+      domainIncludes: ['epcis:AggregationEvent', 'epcis:AssociationEvent'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'childQuantityList',
       range: 'epcis:QuantityElement',
@@ -600,11 +496,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:component',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) Some measurement types (e.g. force, pressure) are vectors (having magnitude and direction in space), whereas others (e.g. temperature, absolute humidity) are scalars.  The components of a vector in a coordinate system can be specified by setting the value of component to indicate which vector component has magnitude indicated by the value parameter.  The SensorReport element is then repeated as two or three instances to express each component of the vector in two or three dimensions, the pair or trio of SensorReport elements sharing the same values for all fields except value, component and uom (which may differ for each vector component). If present, the SensorReport element MUST also include the value and uom fields.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) Some measurement types (e.g. force, pressure) are vectors (having magnitude and direction in space), whereas others (e.g. temperature, absolute humidity) are scalars.  The components of a vector in a coordinate system can be specified by setting the value of component to indicate which vector component has magnitude indicated by the value parameter.  The SensorReport element is then repeated as two or three instances to express each component of the vector in two or three dimensions, the pair or trio of SensorReport elements sharing the same values for all fields except value, component and uom (which may differ for each vector component). If present, the SensorReport element MUST also include the value and uom fields.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -615,10 +509,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:coordinateReferenceSystem',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) A URI identifying the Coordinate Reference System. If omitted, the World Geodetic System 1984 (WGS-84) is assumed to apply.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
@@ -628,11 +519,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:correctiveEventIDs',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: "(Optional) If present, indicates that the events having the specified URIs as the value of their eventID fields are to be considered as 'corrections' to the event declared erroneous by this event. This provides a means to link an error declaration event to one or more events that are intended to replace the erroneous event.",
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        "(Optional) If present, indicates that the events having the specified URIs as the value of their eventID fields are to be considered as 'corrections' to the event declared erroneous by this event. This provides a means to link an error declaration event to one or more events that are intended to replace the erroneous event.",
       domain: 'epcis:ErrorDeclaration',
       domainIncludes: 'epcis:ErrorDeclaration',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -643,35 +532,25 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:dataProcessingMethod',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) Storage location of an electronic document accommodating the data processing method of the contained sensor data, if applicable.  For instance, before sensor data is captured in an EPCIS event, the latter might be redacted or refined by means of specific algorithms.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) Storage location of an electronic document accommodating the data processing method of the contained sensor data, if applicable.  For instance, before sensor data is captured in an EPCIS event, the latter might be redacted or refined by means of specific algorithms.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:SensorMetadata',
-            'epcis:SensorReport',
-          ],
+          $list: ['epcis:SensorMetadata', 'epcis:SensorReport'],
         },
       },
-      domainIncludes: [
-        'epcis:SensorMetadata',
-        'epcis:SensorReport',
-      ],
+      domainIncludes: ['epcis:SensorMetadata', 'epcis:SensorReport'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'dataProcessingMethod',
       term_status: 'stable',
     },
     {
       $id: 'epcis:declarationTime',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: 'The date and time at which the declaration of error is made. (Note that the eventTime of this event must match the eventTime of the prior event being declared erroneous, so the declarationTime field is required to indicate the time at which this event is asserted.)',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        'The date and time at which the declaration of error is made. (Note that the eventTime of this event must match the eventTime of the prior event being declared erroneous, so the declarationTime field is required to indicate the time at which this event is asserted.)',
       domain: 'epcis:ErrorDeclaration',
       domainIncludes: 'epcis:ErrorDeclaration',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -682,11 +561,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:destinationList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) An unordered list of Destination elements that provide context about the terminating endpoint of a business transfer of which this event is a part.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) An unordered list of Destination elements that provide context about the terminating endpoint of a business transfer of which this event is a part.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -697,24 +574,15 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:deviceID',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) Device from which the sensor data originates.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:SensorMetadata',
-            'epcis:SensorReport',
-          ],
+          $list: ['epcis:SensorMetadata', 'epcis:SensorReport'],
         },
       },
-      domainIncludes: [
-        'epcis:SensorMetadata',
-        'epcis:SensorReport',
-      ],
+      domainIncludes: ['epcis:SensorMetadata', 'epcis:SensorReport'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'deviceID',
       range: 'gs1:SensorDevice',
@@ -723,34 +591,22 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:deviceMetadata',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) Storage location of an electronic document accommodating metadata of the device from which the sensor data originates.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:SensorMetadata',
-            'epcis:SensorReport',
-          ],
+          $list: ['epcis:SensorMetadata', 'epcis:SensorReport'],
         },
       },
-      domainIncludes: [
-        'epcis:SensorMetadata',
-        'epcis:SensorReport',
-      ],
+      domainIncludes: ['epcis:SensorMetadata', 'epcis:SensorReport'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'deviceMetadata',
       term_status: 'stable',
     },
     {
       $id: 'epcis:disposition',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) The business condition of the objects associated with the EPCs, presumed to hold true until contradicted by a subsequent event.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
@@ -762,11 +618,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:endTime',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) The highest (most recent) value of a given observation period, as transmitted by a sensor device. If present, the endTime SHALL be less (earlier) than or equal to the eventTime value.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) The highest (most recent) value of a given observation period, as transmitted by a sensor device. If present, the endTime SHALL be less (earlier) than or equal to the eventTime value.',
       domain: 'epcis:SensorMetadata',
       domainIncludes: 'epcis:SensorMetadata',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -777,10 +631,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:epcClass',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'A class-level identifier for the class to which the specified quantity of objects belongs.',
       domain: 'epcis:QuantityElement',
       domainIncludes: 'epcis:QuantityElement',
@@ -789,38 +640,23 @@ export const epcisOntology: Record<string, any> = {
       range: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'gs1:Product',
-            'gs1:ProductBatch',
-          ],
+          $list: ['gs1:Product', 'gs1:ProductBatch'],
         },
       },
-      rangeIncludes: [
-        'gs1:Product',
-        'gs1:ProductBatch',
-      ],
+      rangeIncludes: ['gs1:Product', 'gs1:ProductBatch'],
       term_status: 'stable',
     },
     {
       $id: 'epcis:epcList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) An unordered list of one or more EPCs naming specific objects to which the event pertained.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:ObjectEvent',
-            'epcis:TransactionEvent',
-          ],
+          $list: ['epcis:ObjectEvent', 'epcis:TransactionEvent'],
         },
       },
-      domainIncludes: [
-        'epcis:ObjectEvent',
-        'epcis:TransactionEvent',
-      ],
+      domainIncludes: ['epcis:ObjectEvent', 'epcis:TransactionEvent'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'epcList',
       range: 'gs1:IndividualObject',
@@ -829,10 +665,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:epcisBody',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'Body (EPCISDocumentBody) of an EPCISDocument',
       domain: 'epcis:EPCISDocument',
       domainIncludes: 'epcis:EPCISDocument',
@@ -844,10 +677,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:epcisHeader',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'Header (EPCISDocumentHeader) of an EPCISDocument',
       domain: 'epcis:EPCISDocument',
       domainIncludes: 'epcis:EPCISDocument',
@@ -859,10 +689,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:errorDeclaration',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) If present, indicates that this event serves to assert that the assertions made by a prior event are in error.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
@@ -874,10 +701,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:eventList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'List of EPCIS events included in a document: connects EPCISDocumentBody to EPCISEvent',
       domain: 'epcis:EPCISDocumentBody',
       domainIncludes: 'epcis:EPCISDocumentBody',
@@ -889,10 +713,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:eventTime',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: 'The date and time at which the EPCIS Capturing Applications asserts the event occurred.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
@@ -904,11 +725,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:eventTimeZoneOffset',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: "The time zone offset in effect at the time and place the event occurred, expressed as an offset from UTC. The value of this field SHALL be a string consisting of the character '+' or the character '-', followed by two digits whose value is within the range 00 through 14 (inclusive), followed by a colon character ':', followed by two digits whose value is within the range 00 through 59 (inclusive), except that if the value of the first two digits is 14, the value of the second two digits must be 00. For example, the value +05:30 specifies that where the event occurred, local time was five hours and 30 minutes later than UTC (that is, midnight UTC was 5:30am local time).",
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        "The time zone offset in effect at the time and place the event occurred, expressed as an offset from UTC. The value of this field SHALL be a string consisting of the character '+' or the character '-', followed by two digits whose value is within the range 00 through 14 (inclusive), followed by a colon character ':', followed by two digits whose value is within the range 00 through 59 (inclusive), except that if the value of the first two digits is 14, the value of the second two digits must be 00. For example, the value +05:30 specifies that where the event occurred, local time was five hours and 30 minutes later than UTC (that is, midnight UTC was 5:30am local time).",
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -919,11 +738,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:exception',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) A sensor alert, including an alarm condition or an error condition. When this field is used, extra details can be specified via `booleanValue` or `uriValue`.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) A sensor alert, including an alarm condition or an error condition. When this field is used, extra details can be specified via `booleanValue` or `uriValue`.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -934,10 +751,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:hexBinaryValue',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: '(Optional) Similar to stringValue, for HexBinary value.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
@@ -949,10 +763,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:transformationID',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) Associates several TransformationEvents with a longer-running Transformation process, therefore linking them together.',
       domain: 'epcis:TransformationEvent',
       domainIncludes: 'epcis:TransformationEvent',
@@ -964,24 +775,15 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:ilmd',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) Instance/Lot master data that describes the objects created during this event.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:ObjectEvent',
-            'epcis:TransformationEvent',
-          ],
+          $list: ['epcis:ObjectEvent', 'epcis:TransformationEvent'],
         },
       },
-      domainIncludes: [
-        'epcis:ObjectEvent',
-        'epcis:TransformationEvent',
-      ],
+      domainIncludes: ['epcis:ObjectEvent', 'epcis:TransformationEvent'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'ilmd',
       range: 'epcis:ILMD',
@@ -990,10 +792,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:inputEPCList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) An unordered list of one or more EPCs identifying (at the instance level) objects that were inputs to the transformation.',
       domain: 'epcis:TransformationEvent',
       domainIncludes: 'epcis:TransformationEvent',
@@ -1005,11 +804,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:inputQuantityList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects that were inputs to the transformation. See below for constraints on when inputQuantityList may be omitted.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects that were inputs to the transformation. See below for constraints on when inputQuantityList may be omitted.',
       domain: 'epcis:TransformationEvent',
       domainIncludes: 'epcis:TransformationEvent',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1020,10 +817,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:instanceIdentifier',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: '(Optional) the instance identifier of an EPCISDocument.',
       domain: 'epcis:EPCISDocument',
       domainIncludes: 'epcis:EPCISDocument',
@@ -1035,10 +829,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:masterData',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'Master data included in a document: connects EPCISDocumentHeader to MasterData',
       domain: 'epcis:EPCISDocumentHeader',
       domainIncludes: 'epcis:EPCISDocumentHeader',
@@ -1050,10 +841,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:maxValue',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: '(Optional) Similar to minValue, for the maximum quantitative value.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
@@ -1065,11 +853,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:meanValue',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) The arithmetic mean of the values of the property specified by the type as part of the sensorReport element.  If a startTime and endTime field is present, the meanValue SHALL pertain to the resulting period. Otherwise, it SHALL pertain to the business process step the EPCIS event captures.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) The arithmetic mean of the values of the property specified by the type as part of the sensorReport element.  If a startTime and endTime field is present, the meanValue SHALL pertain to the resulting period. Otherwise, it SHALL pertain to the business process step the EPCIS event captures.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1080,10 +866,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:measurementType',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'An identifier that indicates what kind of measurement the SensorReport pertains to (e.g. Length, Mass, Temperature).',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
@@ -1096,11 +879,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:microorganism',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) Identifies a specific microorganism species.  If microorganism is present, a sensorReport element SHALL NOT include chemicalSubstance.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) Identifies a specific microorganism species.  If microorganism is present, a sensorReport element SHALL NOT include chemicalSubstance.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1109,11 +890,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:minValue',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) Minimum quantitative value of the property specified by type , as part of the sensorReport element.  If a startTime and endTime field is present, the minValue SHALL pertain to the resulting period. Otherwise, minValue SHALL pertain to the business process step the EPCIS event captures.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) Minimum quantitative value of the property specified by type , as part of the sensorReport element.  If a startTime and endTime field is present, the minValue SHALL pertain to the resulting period. Otherwise, minValue SHALL pertain to the business process step the EPCIS event captures.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1124,10 +903,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:outputEPCList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) An unordered list of one or more EPCs naming (at the instance level) objects that were outputs from the transformation.',
       domain: 'epcis:TransformationEvent',
       domainIncludes: 'epcis:TransformationEvent',
@@ -1139,11 +915,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:outputQuantityList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects that were outputs from the transformation. See below for constraints on when outputQuantityList may be omitted.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects that were outputs from the transformation. See below for constraints on when outputQuantityList may be omitted.',
       domain: 'epcis:TransformationEvent',
       domainIncludes: 'epcis:TransformationEvent',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1154,50 +928,32 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:parentID',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: "(Optional when action is OBSERVE, required otherwise) The identifier of the parent of the aggregation or association. When the parent identifier is an EPC, this field SHALL contain the 'pure identity' URI for the EPC as specified in the GS1 Tag Data Standard",
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        "(Optional when action is OBSERVE, required otherwise) The identifier of the parent of the aggregation or association. When the parent identifier is an EPC, this field SHALL contain the 'pure identity' URI for the EPC as specified in the GS1 Tag Data Standard",
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:AggregationEvent',
-            'epcis:AssociationEvent',
-            'epcis:TransactionEvent',
-          ],
+          $list: ['epcis:AggregationEvent', 'epcis:AssociationEvent', 'epcis:TransactionEvent'],
         },
       },
-      domainIncludes: [
-        'epcis:AggregationEvent',
-        'epcis:AssociationEvent',
-        'epcis:TransactionEvent',
-      ],
+      domainIncludes: ['epcis:AggregationEvent', 'epcis:AssociationEvent', 'epcis:TransactionEvent'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'parentID',
       range: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'gs1:IndividualObject',
-            'gs1:Place',
-          ],
+          $list: ['gs1:IndividualObject', 'gs1:Place'],
         },
       },
-      rangeIncludes: [
-        'gs1:IndividualObject',
-        'gs1:Place',
-      ],
+      rangeIncludes: ['gs1:IndividualObject', 'gs1:Place'],
       term_status: 'stable',
     },
     {
       $id: 'epcis:percRank',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) Percentile rank, signifying the percentage of observations in a frequency distribution that are equal to or lower than it.  percRank SHALL only be used in conjunction with the field percValue.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) Percentile rank, signifying the percentage of observations in a frequency distribution that are equal to or lower than it.  percRank SHALL only be used in conjunction with the field percValue.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1208,11 +964,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:percValue',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) The percentile value, at or below which a given percentage of observations (as specified by percRank) may be found.  percValue SHALL only be used in conjunction with the field percRank.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) The percentile value, at or below which a given percentage of observations (as specified by percRank) may be found.  percValue SHALL only be used in conjunction with the field percRank.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1223,11 +977,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:persistentDisposition',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) One or more business conditions of the objects associated with the EPCs.  Each persistentDisposition is explicitly set and unset independently of other persistentDisposition values.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) One or more business conditions of the objects associated with the EPCs.  Each persistentDisposition is explicitly set and unset independently of other persistentDisposition values.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1238,10 +990,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:quantity',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: 'A number that specifies how many or how much of the specified EPCClass is denoted by this QuantityElement.',
       domain: 'epcis:QuantityElement',
       domainIncludes: 'epcis:QuantityElement',
@@ -1253,24 +1002,15 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:quantityList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects to which the event pertained.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:ObjectEvent',
-            'epcis:TransactionEvent',
-          ],
+          $list: ['epcis:ObjectEvent', 'epcis:TransactionEvent'],
         },
       },
-      domainIncludes: [
-        'epcis:ObjectEvent',
-        'epcis:TransactionEvent',
-      ],
+      domainIncludes: ['epcis:ObjectEvent', 'epcis:TransactionEvent'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'quantityList',
       range: 'epcis:QuantityElement',
@@ -1279,34 +1019,23 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:rawData',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) Storage/service location of the raw sensor data on which the aggregated/business-oriented data contained in the sensorElement is based.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) Storage/service location of the raw sensor data on which the aggregated/business-oriented data contained in the sensorElement is based.',
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:SensorMetadata',
-            'epcis:SensorReport',
-          ],
+          $list: ['epcis:SensorMetadata', 'epcis:SensorReport'],
         },
       },
-      domainIncludes: [
-        'epcis:SensorMetadata',
-        'epcis:SensorReport',
-      ],
+      domainIncludes: ['epcis:SensorMetadata', 'epcis:SensorReport'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'rawData',
       term_status: 'stable',
     },
     {
       $id: 'epcis:readPoint',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) The read point at which the event took place.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
@@ -1318,10 +1047,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:reason',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) An element from a standard vocabulary that specifies the reason the prior event is considered erroneous.',
       domain: 'epcis:ErrorDeclaration',
       domainIncludes: 'epcis:ErrorDeclaration',
@@ -1333,10 +1059,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:receiver',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: '(Optional) The intended receiver of an EPCISDocument.',
       domain: 'epcis:EPCISDocument',
       domainIncludes: 'epcis:EPCISDocument',
@@ -1348,11 +1071,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:recordTime',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) The date and time at which this event was recorded by an EPCIS Repository. This field SHALL be ignored when an event is presented to the EPCIS Capture Interface, and SHALL be present when an event is retrieved through the EPCIS Query Interfaces. The recordTime does not describe anything about the real-world event, but is rather a bookkeeping mechanism that plays a role in the interpretation of standing queries',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) The date and time at which this event was recorded by an EPCIS Repository. This field SHALL be ignored when an event is presented to the EPCIS Capture Interface, and SHALL be present when an event is retrieved through the EPCIS Query Interfaces. The recordTime does not describe anything about the real-world event, but is rather a bookkeeping mechanism that plays a role in the interpretation of standing queries',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1363,11 +1084,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:sDev',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) Standard deviation of the values of the property specified by type , as part of the sensorReport element.  sDev SHALL only be used in conjunction with the field meanValue.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) Standard deviation of the values of the property specified by type , as part of the sensorReport element.  sDev SHALL only be used in conjunction with the field meanValue.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1378,10 +1097,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:sender',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
       comment: '(Optional) The sender of an EPCISDocument.',
       domain: 'epcis:EPCISDocument',
       domainIncludes: 'epcis:EPCISDocument',
@@ -1393,10 +1109,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:sensorElementList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'Connects event to one or more SensorElements',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
@@ -1408,11 +1121,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:sensorMetadata',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) An element containing one or several metadata attributes, which are applicable to all sensorReport elements that are part of the same sensorElement.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) An element containing one or several metadata attributes, which are applicable to all sensorReport elements that are part of the same sensorElement.',
       domain: 'epcis:SensorElement',
       domainIncludes: 'epcis:SensorElement',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1423,10 +1134,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:sensorReport',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'An element containing one or several attributes that pertain to a specific sensor observation.',
       domain: 'epcis:SensorElement',
       domainIncludes: 'epcis:SensorElement',
@@ -1438,10 +1146,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:set',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'The set field within persistentDisposition may specify a list of persistentDisposition URI values to be set.',
       domain: 'epcis:PersistentDisposition',
       domainIncludes: 'epcis:PersistentDisposition',
@@ -1453,11 +1158,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:sourceList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) An unordered list of Source elements that provide context about the originating endpoint of a business transfer of which this event is a part.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        '(Optional) An unordered list of Source elements that provide context about the originating endpoint of a business transfer of which this event is a part.',
       domain: 'epcis:EPCISEvent',
       domainIncludes: 'epcis:EPCISEvent',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1468,41 +1171,28 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:sourceOrDestination',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: 'An identifier that denotes the specific source or destination of a business transfer."@en ;\nIts type (gs1:Organization or gs1:Place) must correlate with sourceOrDestinationType.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        'An identifier that denotes the specific source or destination of a business transfer."@en ;\nIts type (gs1:Organization or gs1:Place) must correlate with sourceOrDestinationType.',
       domain: 'epcis:SourceOrDestination',
       domainIncludes: 'epcis:SourceOrDestination',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
-      jsonldLabel: [
-        'source',
-        'destination',
-      ],
+      jsonldLabel: ['source', 'destination'],
       label: 'sourceOrDestination',
       range: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'gs1:Organization',
-            'gs1:Place',
-          ],
+          $list: ['gs1:Organization', 'gs1:Place'],
         },
       },
-      rangeIncludes: [
-        'gs1:Organization',
-        'gs1:Place',
-      ],
+      rangeIncludes: ['gs1:Organization', 'gs1:Place'],
       term_status: 'stable',
     },
     {
       $id: 'epcis:sourceOrDestinationType',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: 'An identifier that indicates the role of SourceOrDestination in a transfer (Owning Party, Possessing Party; or Location).\nMust correlate with the type of sourceOrDestination: gs1:Organization for the first two; gs1:Place for the last one.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        'An identifier that indicates the role of SourceOrDestination in a transfer (Owning Party, Possessing Party; or Location).\nMust correlate with the type of sourceOrDestination: gs1:Organization for the first two; gs1:Place for the last one.',
       domain: 'epcis:SourceOrDestination',
       domainIncludes: 'epcis:SourceOrDestination',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1514,11 +1204,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:startTime',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) The lowest (earliest) value of a given observation period as transmitted by a sensor device.  If present, the startTime SHALL be less (earlier) than the eventTime value and the endTime value.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) The lowest (earliest) value of a given observation period as transmitted by a sensor device.  If present, the startTime SHALL be less (earlier) than the eventTime value and the endTime value.',
       domain: 'epcis:SensorMetadata',
       domainIncludes: 'epcis:SensorMetadata',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1529,11 +1217,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:stringValue',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: '(Optional) The String value of the property specified by the type as part of the sensorReport element.  If a time field is present, the stringValue SHALL pertain to this point in time. Otherwise, it SHALL refer to the eventTime.',
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        '(Optional) The String value of the property specified by the type as part of the sensorReport element.  If a time field is present, the stringValue SHALL pertain to this point in time. Otherwise, it SHALL refer to the eventTime.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1544,24 +1230,16 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:time',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: "(Optional) The actual point in time of an observation as transmitted by a sensor device.  If present, the time value SHALL be less (earlier) than or equal to the eventTime value.  It SHALL also contain a time zone offset value.  The coordination and integrity of distributed computing requires time synchronisation of EPCIS events conveying sensor data. Therefore, when populating the time, startTime, and endTime field, EPCIS capture applications SHOULD apply established time synchronisation protocols such as IEEE 1588-2008, which provides a standard method to synchronise device clocks in a network.  Note: The eventTime applies to the completion of a business step, not a sensor observation. For instance, for a receiving event accommodating a sensor element, the eventTime indicates when goods were received ' it gives no information when certain conditions (e.g. a specific temperature value) held true. In some circumstances, event and sensor observation times may correspond though (e.g. if a quality inspector checks certain properties of goods). In such cases, indicating the eventTime may be sufficient.",
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        "(Optional) The actual point in time of an observation as transmitted by a sensor device.  If present, the time value SHALL be less (earlier) than or equal to the eventTime value.  It SHALL also contain a time zone offset value.  The coordination and integrity of distributed computing requires time synchronisation of EPCIS events conveying sensor data. Therefore, when populating the time, startTime, and endTime field, EPCIS capture applications SHOULD apply established time synchronisation protocols such as IEEE 1588-2008, which provides a standard method to synchronise device clocks in a network.  Note: The eventTime applies to the completion of a business step, not a sensor observation. For instance, for a receiving event accommodating a sensor element, the eventTime indicates when goods were received ' it gives no information when certain conditions (e.g. a specific temperature value) held true. In some circumstances, event and sensor observation times may correspond though (e.g. if a quality inspector checks certain properties of goods). In such cases, indicating the eventTime may be sufficient.",
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:SensorMetadata',
-            'epcis:SensorReport',
-          ],
+          $list: ['epcis:SensorMetadata', 'epcis:SensorReport'],
         },
       },
-      domainIncludes: [
-        'epcis:SensorMetadata',
-        'epcis:SensorReport',
-      ],
+      domainIncludes: ['epcis:SensorMetadata', 'epcis:SensorReport'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'time',
       range: 'xsd:dateTimeStamp',
@@ -1570,11 +1248,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:transformationID',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
-      comment: 'A unique identifier that links this event to other TransformationEvents having an identical value of transformationID. When specified, all inputs to all events sharing the same value of the transformationID may contribute to all outputs of all events sharing that value of transformationID. If transformationID is omitted, then the inputs of this event may contribute to the outputs of this event, but the inputs and outputs of other events are not connected to this one.',
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
+      comment:
+        'A unique identifier that links this event to other TransformationEvents having an identical value of transformationID. When specified, all inputs to all events sharing the same value of the transformationID may contribute to all outputs of all events sharing that value of transformationID. If transformationID is omitted, then the inputs of this event may contribute to the outputs of this event, but the inputs and outputs of other events are not connected to this one.',
       domain: 'epcis:TransformationEvent',
       domainIncludes: 'epcis:TransformationEvent',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1583,10 +1259,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:unset',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'The unset field within persistentDisposition may specify a list of persistentDisposition URI values to be unset (revoked).',
       domain: 'epcis:PersistentDisposition',
       domainIncludes: 'epcis:PersistentDisposition',
@@ -1598,24 +1271,16 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:uom',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: "(Optional) Unit of measure by which the specified value(s) of the property specified by type should be interpreted.  If there is no value, minValue, maxValue, averageValue or percValue field present, uom SHALL be omitted.  When a uom field is present, its value SHALL be the 2- or 3-character code for a physical unit specified in the 'Common Code' column of UN/CEFACT Recommendation'20 [CEFACT20].   Note: GS1 provides a tool containing a machine-readable file which enables the automatic conversion between quantitative values expressed using UN/CEFACT common codes. [https://ref.gs1.org/tools/UnitConverterUNECERec20]",
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        "(Optional) Unit of measure by which the specified value(s) of the property specified by type should be interpreted.  If there is no value, minValue, maxValue, averageValue or percValue field present, uom SHALL be omitted.  When a uom field is present, its value SHALL be the 2- or 3-character code for a physical unit specified in the 'Common Code' column of UN/CEFACT Recommendation'20 [CEFACT20].   Note: GS1 provides a tool containing a machine-readable file which enables the automatic conversion between quantitative values expressed using UN/CEFACT common codes. [https://ref.gs1.org/tools/UnitConverterUNECERec20]",
       domain: {
         $type: 'owl:Class',
         unionOf: {
-          $list: [
-            'epcis:SensorReport',
-            'epcis:QuantityElement',
-          ],
+          $list: ['epcis:SensorReport', 'epcis:QuantityElement'],
         },
       },
-      domainIncludes: [
-        'epcis:SensorReport',
-        'epcis:QuantityElement',
-      ],
+      domainIncludes: ['epcis:SensorReport', 'epcis:QuantityElement'],
       isDefinedBy: 'https://ref.gs1.org/epcis/',
       label: 'uom',
       range: 'xsd:string',
@@ -1624,10 +1289,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:uriValue',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: '(Optional) Similar to stringValue, for a URI value.',
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
@@ -1637,11 +1299,9 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:value',
-      $type: [
-        'owl:DatatypeProperty',
-        'rdf:Property',
-      ],
-      comment: "(Optional) Value of the property specified by the type as part of the sensorReport element.  If a chemicalSubstance or microorganism field is present, the value indicates the detected measurement (e.g., of molar mass or concentration) of a chemical substance or microorganism in the physical objects specified in the 'What' dimension.  If a time field is present, the value SHALL pertain to this point in time. Otherwise, value SHALL refer to the eventTime.",
+      $type: ['owl:DatatypeProperty', 'rdf:Property'],
+      comment:
+        "(Optional) Value of the property specified by the type as part of the sensorReport element.  If a chemicalSubstance or microorganism field is present, the value indicates the detected measurement (e.g., of molar mass or concentration) of a chemical substance or microorganism in the physical objects specified in the 'What' dimension.  If a time field is present, the value SHALL pertain to this point in time. Otherwise, value SHALL refer to the eventTime.",
       domain: 'epcis:SensorReport',
       domainIncludes: 'epcis:SensorReport',
       isDefinedBy: 'https://ref.gs1.org/epcis/',
@@ -1652,10 +1312,7 @@ export const epcisOntology: Record<string, any> = {
     },
     {
       $id: 'epcis:vocabularyList',
-      $type: [
-        'owl:ObjectProperty',
-        'rdf:Property',
-      ],
+      $type: ['owl:ObjectProperty', 'rdf:Property'],
       comment: 'List of vocabulary elements included in master data: connects MasterData to VocabularyElement',
       domain: 'epcis:MasterData',
       domainIncludes: 'epcis:MasterData',
@@ -1666,4 +1323,4 @@ export const epcisOntology: Record<string, any> = {
       term_status: 'stable',
     },
   ],
-} as const;
+} as const

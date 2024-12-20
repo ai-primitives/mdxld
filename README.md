@@ -90,13 +90,13 @@ interface MDXLD {
 
 // Options for parsing MDX documents
 interface ParseOptions {
-  ast?: boolean         // Whether to parse content as AST
+  ast?: boolean // Whether to parse content as AST
   allowAtPrefix?: boolean // Allow @ prefix (defaults to $)
 }
 
 // Options for stringifying MDX documents
 interface StringifyOptions {
-  useAtPrefix?: boolean  // Use @ prefix instead of default $
+  useAtPrefix?: boolean // Use @ prefix instead of default $
 }
 ```
 
@@ -162,10 +162,13 @@ $context: 'https://schema.org'
 ---`)
 
 // Using quoted @ prefix
-const mdx2 = parse(`---
+const mdx2 = parse(
+  `---
 '@type': 'https://mdx.org.ai/Document'
 '@context': 'https://schema.org'
----`, { allowAtPrefix: true })
+---`,
+  { allowAtPrefix: true },
+)
 ```
 
 #### Error Handling

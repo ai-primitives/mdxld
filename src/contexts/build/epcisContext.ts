@@ -601,4 +601,4 @@ export const epcisContext: Record<string, any> = {
       $type: '@id',
     },
   },
-} as const;
+} as const

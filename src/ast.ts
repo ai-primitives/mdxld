@@ -11,14 +11,9 @@ export function parse(mdx: string, options?: ParseOptions): MDXLDWithAST {
   const core = parseCore(mdx, options)
 
   try {
-    const ast = unified()
-      .use(remarkParse)
-      .use(remarkFrontmatter, ['yaml'])
-      .use(remarkMDX)
-      .use(remarkGFM)
-      .parse(mdx) as Root
+    const ast = unified().use(remarkParse).use(remarkFrontmatter, ['yaml']).use(remarkMDX).use(remarkGFM).parse(mdx) as Root
 
-    ast.children = ast.children.filter(node => node.type !== 'yaml')
+    ast.children = ast.children.filter((node) => node.type !== 'yaml')
 
     return {
       ...core,
