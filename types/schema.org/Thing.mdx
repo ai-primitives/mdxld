@@ -1,0 +1,55 @@
+---
+$type: schema:Thing
+title: Thing
+description: The most generic type of item.
+---
+
+# Thing
+
+The Thing type is the most generic type in Schema.org. All other types inherit from this base type.
+
+## Properties
+
+Thing serves as the base type and defines several core properties that are inherited by all other types:
+
+- name: The name of the item
+- description: A description of the item
+- url: URL of the item
+- identifier: The identifier property represents any kind of identifier for any kind of Thing
+- image: An image of the item
+- additionalType: An additional type for the item
+
+## Usage
+
+```typescript
+interface Thing {
+  $type: 'schema:Thing'
+  name?: string
+  description?: string
+  url?: string
+  identifier?: string | PropertyValue
+  image?: ImageObject | URL | string
+  additionalType?: URL | string
+}
+```
+
+## Examples
+
+```json
+{
+  "$type": "schema:Thing",
+  "name": "Example Item",
+  "description": "This is an example of the most basic Schema.org type",
+  "url": "https://example.com/item"
+}
+```
+
+## Related Types
+
+As the root type, Thing is related to all other Schema.org types as they all inherit from it.
+
+## Notes
+
+- All Schema.org types extend Thing
+- The properties defined on Thing are available on all other types
+- When using Thing directly, consider if a more specific type would be more appropriate
