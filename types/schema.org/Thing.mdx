@@ -1,55 +1,115 @@
 ---
-$type: schema:Thing
+$context: schema.org
+$type: Thing
 title: Thing
 description: The most generic type of item.
+properties:
+  - name
+  - description
+  - url
+  - identifier
+  - image
+  - additionalType
+  - disambiguatingDescription
+  - potentialAction
+  - subjectOf
+  - sameAs
+  - alternateName
+  - mainEntityOfPage
+subClasses:
+  - Action
+  - Organization
+  - Intangible
+  - CreativeWork
+  - Event
+  - Product
+  - Person
+  - BioChemEntity
+  - MedicalEntity
+  - Place
+  - Taxon
 ---
 
 # Thing
 
-The Thing type is the most generic type in Schema.org. All other types inherit from this base type.
+The Thing type is the most generic type in Schema.org. It serves as the root class from which all other types inherit.
+
+## Type Hierarchy
+
+Thing is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+The following types directly inherit from Thing:
+
+- Action: An action performed by a direct agent upon a direct object.
+- Organization: An organization such as a school, NGO, corporation, club, etc.
+- Intangible: A utility type that groups together intangible things.
+- CreativeWork: The most generic kind of creative work.
+- Event: An event happening at a certain time and location.
+- Product: Any offered product or service.
+- Person: A person (alive, dead, undead, or fictional).
+- BioChemEntity: Any biological, chemical, or biochemical thing.
+- MedicalEntity: The most generic type for medical entities.
+- Place: Entities with a somewhat fixed physical extension.
+- Taxon: A set of organisms representing a natural biological unit.
 
 ## Properties
 
-Thing serves as the base type and defines several core properties that are inherited by all other types:
+Thing defines the following core properties that are inherited by all other types:
 
 - name: The name of the item
 - description: A description of the item
 - url: URL of the item
-- identifier: The identifier property represents any kind of identifier for any kind of Thing
+- identifier: Any kind of identifier for the item
 - image: An image of the item
 - additionalType: An additional type for the item
+- disambiguatingDescription: A description that disambiguates this item from others
+- potentialAction: Indicates a potential Action that describes an idealized action
+- subjectOf: A CreativeWork or Event about this Thing
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity
+- alternateName: An alias for the item
+- mainEntityOfPage: Indicates a page for which this thing is the main entity being described
 
-## Usage
+## Usage Example
 
 ```typescript
 interface Thing {
-  $type: 'schema:Thing'
+  $context?: 'schema.org'
+  $type: 'Thing'
   name?: string
   description?: string
   url?: string
   identifier?: string | PropertyValue
   image?: ImageObject | URL | string
   additionalType?: URL | string
+  disambiguatingDescription?: string
+  potentialAction?: Action
+  subjectOf?: CreativeWork | Event
+  sameAs?: URL | string
+  alternateName?: string
+  mainEntityOfPage?: CreativeWork | URL
 }
 ```
 
-## Examples
+## Example Usage
 
 ```json
 {
-  "$type": "schema:Thing",
+  "$context": "schema.org",
+  "$type": "Thing",
   "name": "Example Item",
-  "description": "This is an example of the most basic Schema.org type",
-  "url": "https://example.com/item"
+  "description": "An example of the most basic Schema.org type",
+  "url": "https://example.com/item",
+  "identifier": "example-item-1",
+  "disambiguatingDescription": "A demonstration of the Thing type properties",
+  "alternateName": "Sample Thing"
 }
 ```
 
-## Related Types
-
-As the root type, Thing is related to all other Schema.org types as they all inherit from it.
-
 ## Notes
 
-- All Schema.org types extend Thing
+- Thing is the root type in Schema.org - it has no parent classes
+- All Schema.org types extend Thing, either directly or through inheritance
 - The properties defined on Thing are available on all other types
 - When using Thing directly, consider if a more specific type would be more appropriate
