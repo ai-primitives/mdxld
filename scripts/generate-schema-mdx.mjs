@@ -187,8 +187,10 @@ async function generateMdxFile(type, data) {
   const frontmatter = generateFrontmatter(type, data)
   const hierarchy = generateTypeHierarchy(type, data)
   const properties = generatePropertiesSection(type, data)
+  const typeData = data['@graph'].find(n => n['@id'] === `schema:${type}`)
+  const parentClass = typeData['rdfs:subClassOf']?.['@id']?.replace('schema:', '')
 
-  const mdx = `---
+  return `---
 $context: schema.org
 $type: ${type}
 title: ${type}
@@ -196,31 +198,33 @@ description: ${frontmatter.description}
 properties:
 ${frontmatter.properties.map(p => `  - ${p}`).join('\n')}
 subClasses:
-${type === 'Thing'
-  ? subClassOrder.map(s => `  - ${s}`).join('\n')
-  : frontmatter.subClasses.map(s => `  - ${s}`).join('\n')}
+${frontmatter.subClasses.map(s => `  - ${s}`).join('\n')}
+${parentClass ? `parentClass: ${parentClass}` : ''}
 ---
 
 # ${type}
 
-The most generic type of item.
+${hierarchy.description}
 
 ## Type Hierarchy
 
-${type} is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+${parentClass
+  ? `${type} is a type of ${parentClass}.`
+  : `${type} is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.`}
 
 ### Direct Subtypes
 
-The following types directly inherit from ${type}:
-
-${hierarchy.subClasses
-  .sort((a, b) => subClassOrder.indexOf(a.name) - subClassOrder.indexOf(b.name))
-  .map(s => `- ${s.name}: ${s.description}`)
-  .join('\n')}
+${hierarchy.subClasses.length > 0
+  ? `The following types directly inherit from ${type}:\n\n${hierarchy.subClasses
+      .map(s => `- ${s.name}: ${s.description}`)
+      .join('\n')}`
+  : `No types directly inherit from ${type}.`}
 
 ## Properties
 
-${type} defines the following core properties that are inherited by all other types:
+${type === 'Thing'
+  ? `${type} defines the following core properties that are inherited by all other types:`
+  : `${type} defines the following properties in addition to those inherited from ${parentClass || 'Thing'}:`}
 
 ${properties
   .map(p => `- ${p.name}: ${p.description}`)
@@ -244,34 +248,61 @@ ${properties
 {
   "$context": "schema.org",
   "$type": "${type}",
-  "name": "Example Item",
-  "description": "An example of the most basic Schema.org type",
-  "url": "https://example.com/item",
-  "identifier": "example-item-1",
-  "disambiguatingDescription": "A demonstration of the Thing type properties",
-  "alternateName": "Sample Thing"
+  "name": "Example ${type}",
+  "description": "An example of the ${type} type",
+  "url": "https://example.com/${type.toLowerCase()}",
+  "identifier": "example-${type.toLowerCase()}-1"
 }
 \`\`\`
 
 ## Notes
 
-- Thing is the root type in Schema.org - it has no parent classes
+${type === 'Thing'
+  ? `- Thing is the root type in Schema.org - it has no parent classes
 - All Schema.org types extend Thing, either directly or through inheritance
 - The properties defined on Thing are available on all other types
-- When using Thing directly, consider if a more specific type would be more appropriate
+- When using Thing directly, consider if a more specific type would be more appropriate`
+  : `- ${type} inherits all properties from ${parentClass || 'Thing'}
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface`}
 `
-
-  await mkdir(TYPES_DIR, { recursive: true })
-  await writeFile(join(TYPES_DIR, `${type}.mdx`), mdx)
 }
 
+// Get all types from schema.org context
+function getAllTypes(data) {
+  return data['@graph']
+    .filter(node => node['@type'] === 'rdfs:Class')
+    .map(node => node['@id'].replace('schema:', ''))
+}
+
+// Main function to generate all MDX files
 async function main() {
-  const content = await readFile(SCHEMA_FILE, 'utf8')
-  const data = JSON.parse(content)
+  try {
+    console.log('Reading schema.org context...')
+    const data = JSON.parse(await readFile(SCHEMA_FILE, 'utf8'))
 
+    console.log('Creating output directory...')
+    await mkdir(TYPES_DIR, { recursive: true })
 
-  // Only generate Thing.mdx for now
-  await generateMdxFile('Thing', data)
+    const types = getAllTypes(data)
+    console.log(`Found ${types.length} types to process`)
+
+    for (const type of types) {
+      try {
+        console.log(`Generating MDX for ${type}...`)
+        const mdx = await generateMdxFile(type, data)
+        await writeFile(join(TYPES_DIR, `${type}.mdx`), mdx)
+      } catch (error) {
+        console.error(`Error generating ${type}.mdx:`, error)
+      }
+    }
+
+    console.log('Completed generating all MDX files')
+  } catch (error) {
+    console.error('Fatal error:', error)
+    process.exit(1)
+  }
 }
 
-main().catch(console.error)
+main()
