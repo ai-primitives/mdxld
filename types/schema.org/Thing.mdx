@@ -32,7 +32,7 @@ subClasses:
 
 # Thing
 
-The Thing type is the most generic type in Schema.org. It serves as the root class from which all other types inherit.
+The most generic type of item.
 
 ## Type Hierarchy
 
@@ -80,15 +80,15 @@ interface Thing {
   name?: string
   description?: string
   url?: string
-  identifier?: string | PropertyValue
-  image?: ImageObject | URL | string
-  additionalType?: URL | string
+  identifier?: PropertyValue | string
+  image?: ImageObject | string
+  additionalType?: string
   disambiguatingDescription?: string
   potentialAction?: Action
   subjectOf?: CreativeWork | Event
-  sameAs?: URL | string
+  sameAs?: string
   alternateName?: string
-  mainEntityOfPage?: CreativeWork | URL
+  mainEntityOfPage?: CreativeWork | string
 }
 ```
 
