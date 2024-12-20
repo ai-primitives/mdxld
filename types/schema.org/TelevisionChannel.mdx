@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TelevisionChannel
+title: TelevisionChannel
+description: A unique instance of a television BroadcastService on a CableOrSatelliteService lineup.
+properties:
+
+subClasses:
+
+parentClass: BroadcastChannel
+---
+
+# TelevisionChannel
+
+A unique instance of a television BroadcastService on a CableOrSatelliteService lineup.
+
+## Type Hierarchy
+
+TelevisionChannel is a type of BroadcastChannel.
+
+### Direct Subtypes
+
+No types directly inherit from TelevisionChannel.
+
+## Properties
+
+TelevisionChannel defines the following properties in addition to those inherited from BroadcastChannel:
+
+
+
+## Usage Example
+
+```typescript
+interface TelevisionChannel {
+  $context?: 'schema.org'
+  $type: 'TelevisionChannel'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TelevisionChannel",
+  "name": "Example TelevisionChannel",
+  "description": "An example of the TelevisionChannel type",
+  "url": "https://example.com/televisionchannel",
+  "identifier": "example-televisionchannel-1"
+}
+```
+
+## Notes
+
+- TelevisionChannel inherits all properties from BroadcastChannel
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

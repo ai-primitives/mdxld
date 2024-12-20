@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SearchResultsPage
+title: SearchResultsPage
+description: Web page type: Search results page.
+properties:
+
+subClasses:
+
+parentClass: WebPage
+---
+
+# SearchResultsPage
+
+Web page type: Search results page.
+
+## Type Hierarchy
+
+SearchResultsPage is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from SearchResultsPage.
+
+## Properties
+
+SearchResultsPage defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface SearchResultsPage {
+  $context?: 'schema.org'
+  $type: 'SearchResultsPage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SearchResultsPage",
+  "name": "Example SearchResultsPage",
+  "description": "An example of the SearchResultsPage type",
+  "url": "https://example.com/searchresultspage",
+  "identifier": "example-searchresultspage-1"
+}
+```
+
+## Notes
+
+- SearchResultsPage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

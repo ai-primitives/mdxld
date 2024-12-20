@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Atlas
+title: Atlas
+description: A collection or bound volume of maps, charts, plates or tables, physical or in media form illustrating any subject.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Atlas
+
+A collection or bound volume of maps, charts, plates or tables, physical or in media form illustrating any subject.
+
+## Type Hierarchy
+
+Atlas is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Atlas.
+
+## Properties
+
+Atlas defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Atlas {
+  $context?: 'schema.org'
+  $type: 'Atlas'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Atlas",
+  "name": "Example Atlas",
+  "description": "An example of the Atlas type",
+  "url": "https://example.com/atlas",
+  "identifier": "example-atlas-1"
+}
+```
+
+## Notes
+
+- Atlas inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,77 @@
+---
+$context: schema.org
+$type: SoftwareSourceCode
+title: SoftwareSourceCode
+description: Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.
+properties:
+  - codeRepository
+  - codeSampleType
+  - programmingLanguage
+  - runtime
+  - runtimePlatform
+  - sampleType
+  - targetProduct
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# SoftwareSourceCode
+
+Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.
+
+## Type Hierarchy
+
+SoftwareSourceCode is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from SoftwareSourceCode.
+
+## Properties
+
+SoftwareSourceCode defines the following properties in addition to those inherited from CreativeWork:
+
+- codeRepository: Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).
+- codeSampleType: What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
+- programmingLanguage: The computer programming language.
+- runtime: Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
+- runtimePlatform: Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
+- sampleType: What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
+- targetProduct: Target Operating System / Product to which the code applies.  If applies to several versions, just the product name can be used.
+
+## Usage Example
+
+```typescript
+interface SoftwareSourceCode {
+  $context?: 'schema.org'
+  $type: 'SoftwareSourceCode'
+  codeRepository?: string
+  codeSampleType?: string
+  programmingLanguage?: ComputerLanguage | string
+  runtime?: string
+  runtimePlatform?: string
+  sampleType?: string
+  targetProduct?: SoftwareApplication
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SoftwareSourceCode",
+  "name": "Example SoftwareSourceCode",
+  "description": "An example of the SoftwareSourceCode type",
+  "url": "https://example.com/softwaresourcecode",
+  "identifier": "example-softwaresourcecode-1"
+}
+```
+
+## Notes
+
+- SoftwareSourceCode inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

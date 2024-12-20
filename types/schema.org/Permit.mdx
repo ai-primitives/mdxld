@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: Permit
+title: Permit
+description: A permit issued by an organization, e.g. a parking pass.
+properties:
+  - issuedThrough
+  - permitAudience
+  - validUntil
+subClasses:
+  - GovernmentPermit
+parentClass: Intangible
+---
+
+# Permit
+
+A permit issued by an organization, e.g. a parking pass.
+
+## Type Hierarchy
+
+Permit is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from Permit:
+
+- GovernmentPermit: A permit issued by a government agency.
+
+## Properties
+
+Permit defines the following properties in addition to those inherited from Intangible:
+
+- issuedThrough: The service through which the permit was granted.
+- permitAudience: The target audience for this permit.
+- validUntil: The date when the item is no longer valid.
+
+## Usage Example
+
+```typescript
+interface Permit {
+  $context?: 'schema.org'
+  $type: 'Permit'
+  issuedThrough?: Service
+  permitAudience?: Audience
+  validUntil?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Permit",
+  "name": "Example Permit",
+  "description": "An example of the Permit type",
+  "url": "https://example.com/permit",
+  "identifier": "example-permit-1"
+}
+```
+
+## Notes
+
+- Permit inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

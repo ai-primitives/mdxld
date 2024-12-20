@@ -1,0 +1,75 @@
+---
+$context: schema.org
+$type: Room
+title: Room
+description: A room is a distinguishable space within a structure, usually separated from other spaces by interior walls (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Room">http://en.wikipedia.org/wiki/Room</a>).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+properties:
+
+subClasses:
+  - HotelRoom
+  - MeetingRoom
+parentClass: Accommodation
+---
+
+# Room
+
+A room is a distinguishable space within a structure, usually separated from other spaces by interior walls (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Room">http://en.wikipedia.org/wiki/Room</a>).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+
+## Type Hierarchy
+
+Room is a type of Accommodation.
+
+### Direct Subtypes
+
+The following types directly inherit from Room:
+
+- HotelRoom: A hotel room is a single room in a hotel.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+- MeetingRoom: A meeting room, conference room, or conference hall is a room provided for singular events such as business conferences and meetings (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Conference_hall">http://en.wikipedia.org/wiki/Conference_hall</a>).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+
+## Properties
+
+Room defines the following properties in addition to those inherited from Accommodation:
+
+
+
+## Usage Example
+
+```typescript
+interface Room {
+  $context?: 'schema.org'
+  $type: 'Room'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Room",
+  "name": "Example Room",
+  "description": "An example of the Room type",
+  "url": "https://example.com/room",
+  "identifier": "example-room-1"
+}
+```
+
+## Notes
+
+- Room inherits all properties from Accommodation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

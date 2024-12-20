@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: InsuranceAgency
+title: InsuranceAgency
+description: An Insurance agency.
+properties:
+
+subClasses:
+
+parentClass: FinancialService
+---
+
+# InsuranceAgency
+
+An Insurance agency.
+
+## Type Hierarchy
+
+InsuranceAgency is a type of FinancialService.
+
+### Direct Subtypes
+
+No types directly inherit from InsuranceAgency.
+
+## Properties
+
+InsuranceAgency defines the following properties in addition to those inherited from FinancialService:
+
+
+
+## Usage Example
+
+```typescript
+interface InsuranceAgency {
+  $context?: 'schema.org'
+  $type: 'InsuranceAgency'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InsuranceAgency",
+  "name": "Example InsuranceAgency",
+  "description": "An example of the InsuranceAgency type",
+  "url": "https://example.com/insuranceagency",
+  "identifier": "example-insuranceagency-1"
+}
+```
+
+## Notes
+
+- InsuranceAgency inherits all properties from FinancialService
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

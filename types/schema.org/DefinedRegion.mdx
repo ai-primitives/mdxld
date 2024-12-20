@@ -1,0 +1,88 @@
+---
+$context: schema.org
+$type: DefinedRegion
+title: DefinedRegion
+description: A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes.
+
+Examples: a delivery destination when shopping. Region where regional pricing is configured.
+
+Requirement 1:
+Country: US
+States: "NY", "CA"
+
+Requirement 2:
+Country: US
+PostalCode Set: { [94000-94585], [97000, 97999], [13000, 13599]}
+{ [12345, 12345], [78945, 78945], }
+Region = state, canton, prefecture, autonomous community...
+
+properties:
+  - postalCodePrefix
+  - postalCodeRange
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# DefinedRegion
+
+A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes.
+
+Examples: a delivery destination when shopping. Region where regional pricing is configured.
+
+Requirement 1:
+Country: US
+States: "NY", "CA"
+
+Requirement 2:
+Country: US
+PostalCode Set: { [94000-94585], [97000, 97999], [13000, 13599]}
+{ [12345, 12345], [78945, 78945], }
+Region = state, canton, prefecture, autonomous community...
+
+
+## Type Hierarchy
+
+DefinedRegion is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from DefinedRegion.
+
+## Properties
+
+DefinedRegion defines the following properties in addition to those inherited from StructuredValue:
+
+- postalCodePrefix: A defined range of postal codes indicated by a common textual prefix. Used for non-numeric systems such as UK.
+- postalCodeRange: A defined range of postal codes.
+
+## Usage Example
+
+```typescript
+interface DefinedRegion {
+  $context?: 'schema.org'
+  $type: 'DefinedRegion'
+  postalCodePrefix?: string
+  postalCodeRange?: PostalCodeRangeSpecification
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DefinedRegion",
+  "name": "Example DefinedRegion",
+  "description": "An example of the DefinedRegion type",
+  "url": "https://example.com/definedregion",
+  "identifier": "example-definedregion-1"
+}
+```
+
+## Notes
+
+- DefinedRegion inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

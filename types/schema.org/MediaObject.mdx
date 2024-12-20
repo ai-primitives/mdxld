@@ -1,0 +1,101 @@
+---
+$context: schema.org
+$type: MediaObject
+title: MediaObject
+description: A media object, such as an image, video, audio, or text object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
+properties:
+  - associatedArticle
+  - bitrate
+  - contentSize
+  - contentUrl
+  - embedUrl
+  - encodesCreativeWork
+  - playerType
+  - regionsAllowed
+  - sha256
+  - uploadDate
+subClasses:
+  - 3DModel
+  - AudioObject
+  - DataDownload
+  - ImageObject
+  - MusicVideoObject
+  - TextObject
+  - VideoObject
+parentClass: CreativeWork
+---
+
+# MediaObject
+
+A media object, such as an image, video, audio, or text object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
+
+## Type Hierarchy
+
+MediaObject is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from MediaObject:
+
+- 3DModel: A 3D model represents some kind of 3D content, which may have [[encoding]]s in one or more [[MediaObject]]s. Many 3D formats are available (e.g. see [Wikipedia](https://en.wikipedia.org/wiki/Category:3D_graphics_file_formats)); specific encoding formats can be represented using the [[encodingFormat]] property applied to the relevant [[MediaObject]]. For the
+case of a single file published after Zip compression, the convention of appending '+zip' to the [[encodingFormat]] can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using [[3DModel]].
+- AudioObject: An audio file.
+- DataDownload: All or part of a [[Dataset]] in downloadable form. 
+- ImageObject: An image file.
+- MusicVideoObject: A music video file.
+- TextObject: A text file. The text can be unformatted or contain markup, html, etc.
+- VideoObject: A video file.
+
+## Properties
+
+MediaObject defines the following properties in addition to those inherited from CreativeWork:
+
+- associatedArticle: A NewsArticle associated with the Media Object.
+- bitrate: The bitrate of the media object.
+- contentSize: File size in (mega/kilo)bytes.
+- contentUrl: Actual bytes of the media object, for example the image file or video file.
+- embedUrl: A URL pointing to a player for a specific video. In general, this is the information in the ```src``` element of an ```embed``` tag and should not be the same as the content of the ```loc``` tag.
+- encodesCreativeWork: The CreativeWork encoded by this media object.
+- playerType: Player type required&#x2014;for example, Flash or Silverlight.
+- regionsAllowed: The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).
+- sha256: The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.
+- uploadDate: Date (including time if available) when this media object was uploaded to this site.
+
+## Usage Example
+
+```typescript
+interface MediaObject {
+  $context?: 'schema.org'
+  $type: 'MediaObject'
+  associatedArticle?: NewsArticle
+  bitrate?: string
+  contentSize?: string
+  contentUrl?: string
+  embedUrl?: string
+  encodesCreativeWork?: CreativeWork
+  playerType?: string
+  regionsAllowed?: Place
+  sha256?: string
+  uploadDate?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MediaObject",
+  "name": "Example MediaObject",
+  "description": "An example of the MediaObject type",
+  "url": "https://example.com/mediaobject",
+  "identifier": "example-mediaobject-1"
+}
+```
+
+## Notes
+
+- MediaObject inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

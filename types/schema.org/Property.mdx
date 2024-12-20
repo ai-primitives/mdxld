@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Property
+title: Property
+description: A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.
+properties:
+  - domainIncludes
+  - inverseOf
+  - rangeIncludes
+subClasses:
+
+parentClass: Intangible
+---
+
+# Property
+
+A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.
+
+## Type Hierarchy
+
+Property is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Property.
+
+## Properties
+
+Property defines the following properties in addition to those inherited from Intangible:
+
+- domainIncludes: Relates a property to a class that is (one of) the type(s) the property is expected to be used on.
+- inverseOf: Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.
+- rangeIncludes: Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.
+
+## Usage Example
+
+```typescript
+interface Property {
+  $context?: 'schema.org'
+  $type: 'Property'
+  domainIncludes?: Class
+  inverseOf?: Property
+  rangeIncludes?: Class
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Property",
+  "name": "Example Property",
+  "description": "An example of the Property type",
+  "url": "https://example.com/property",
+  "identifier": "example-property-1"
+}
+```
+
+## Notes
+
+- Property inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: UseAction
+title: UseAction
+description: The act of applying an object to its intended purpose.
+properties:
+
+subClasses:
+  - WearAction
+parentClass: ConsumeAction
+---
+
+# UseAction
+
+The act of applying an object to its intended purpose.
+
+## Type Hierarchy
+
+UseAction is a type of ConsumeAction.
+
+### Direct Subtypes
+
+The following types directly inherit from UseAction:
+
+- WearAction: The act of dressing oneself in clothing.
+
+## Properties
+
+UseAction defines the following properties in addition to those inherited from ConsumeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface UseAction {
+  $context?: 'schema.org'
+  $type: 'UseAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UseAction",
+  "name": "Example UseAction",
+  "description": "An example of the UseAction type",
+  "url": "https://example.com/useaction",
+  "identifier": "example-useaction-1"
+}
+```
+
+## Notes
+
+- UseAction inherits all properties from ConsumeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

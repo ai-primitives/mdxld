@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Hostel
+title: Hostel
+description: A hostel - cheap accommodation, often in shared dormitories.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+properties:
+
+subClasses:
+
+parentClass: LodgingBusiness
+---
+
+# Hostel
+
+A hostel - cheap accommodation, often in shared dormitories.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+
+## Type Hierarchy
+
+Hostel is a type of LodgingBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from Hostel.
+
+## Properties
+
+Hostel defines the following properties in addition to those inherited from LodgingBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface Hostel {
+  $context?: 'schema.org'
+  $type: 'Hostel'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Hostel",
+  "name": "Example Hostel",
+  "description": "An example of the Hostel type",
+  "url": "https://example.com/hostel",
+  "identifier": "example-hostel-1"
+}
+```
+
+## Notes
+
+- Hostel inherits all properties from LodgingBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ReserveAction
+title: ReserveAction
+description: Reserving a concrete object.\n\nRelated actions:\n\n* [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot / spatial allocation.
+properties:
+
+subClasses:
+
+parentClass: PlanAction
+---
+
+# ReserveAction
+
+Reserving a concrete object.\n\nRelated actions:\n\n* [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot / spatial allocation.
+
+## Type Hierarchy
+
+ReserveAction is a type of PlanAction.
+
+### Direct Subtypes
+
+No types directly inherit from ReserveAction.
+
+## Properties
+
+ReserveAction defines the following properties in addition to those inherited from PlanAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ReserveAction {
+  $context?: 'schema.org'
+  $type: 'ReserveAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReserveAction",
+  "name": "Example ReserveAction",
+  "description": "An example of the ReserveAction type",
+  "url": "https://example.com/reserveaction",
+  "identifier": "example-reserveaction-1"
+}
+```
+
+## Notes
+
+- ReserveAction inherits all properties from PlanAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

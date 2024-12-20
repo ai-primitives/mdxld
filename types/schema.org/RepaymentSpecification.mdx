@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: RepaymentSpecification
+title: RepaymentSpecification
+description: A structured value representing repayment.
+properties:
+  - downPayment
+  - earlyPrepaymentPenalty
+  - loanPaymentAmount
+  - loanPaymentFrequency
+  - numberOfLoanPayments
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# RepaymentSpecification
+
+A structured value representing repayment.
+
+## Type Hierarchy
+
+RepaymentSpecification is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from RepaymentSpecification.
+
+## Properties
+
+RepaymentSpecification defines the following properties in addition to those inherited from StructuredValue:
+
+- downPayment: a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents only a percentage of the full purchase price.
+- earlyPrepaymentPenalty: The amount to be paid as a penalty in the event of early payment of the loan.
+- loanPaymentAmount: The amount of money to pay in a single payment.
+- loanPaymentFrequency: Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a period of time.
+- numberOfLoanPayments: The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of months from the contractual first payment date to the maturity date.
+
+## Usage Example
+
+```typescript
+interface RepaymentSpecification {
+  $context?: 'schema.org'
+  $type: 'RepaymentSpecification'
+  downPayment?: MonetaryAmount | number
+  earlyPrepaymentPenalty?: MonetaryAmount
+  loanPaymentAmount?: MonetaryAmount
+  loanPaymentFrequency?: number
+  numberOfLoanPayments?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RepaymentSpecification",
+  "name": "Example RepaymentSpecification",
+  "description": "An example of the RepaymentSpecification type",
+  "url": "https://example.com/repaymentspecification",
+  "identifier": "example-repaymentspecification-1"
+}
+```
+
+## Notes
+
+- RepaymentSpecification inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

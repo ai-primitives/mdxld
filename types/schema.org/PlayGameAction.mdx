@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PlayGameAction
+title: PlayGameAction
+description: The act of playing a video game.
+properties:
+  - gameAvailabilityType
+subClasses:
+
+parentClass: ConsumeAction
+---
+
+# PlayGameAction
+
+The act of playing a video game.
+
+## Type Hierarchy
+
+PlayGameAction is a type of ConsumeAction.
+
+### Direct Subtypes
+
+No types directly inherit from PlayGameAction.
+
+## Properties
+
+PlayGameAction defines the following properties in addition to those inherited from ConsumeAction:
+
+- gameAvailabilityType: Indicates the availability type of the game content associated with this action, such as whether it is a full version or a demo.
+
+## Usage Example
+
+```typescript
+interface PlayGameAction {
+  $context?: 'schema.org'
+  $type: 'PlayGameAction'
+  gameAvailabilityType?: GameAvailabilityEnumeration | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PlayGameAction",
+  "name": "Example PlayGameAction",
+  "description": "An example of the PlayGameAction type",
+  "url": "https://example.com/playgameaction",
+  "identifier": "example-playgameaction-1"
+}
+```
+
+## Notes
+
+- PlayGameAction inherits all properties from ConsumeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

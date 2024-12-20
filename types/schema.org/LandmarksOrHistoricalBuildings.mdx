@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LandmarksOrHistoricalBuildings
+title: LandmarksOrHistoricalBuildings
+description: An historical landmark or building.
+properties:
+
+subClasses:
+
+parentClass: Place
+---
+
+# LandmarksOrHistoricalBuildings
+
+An historical landmark or building.
+
+## Type Hierarchy
+
+LandmarksOrHistoricalBuildings is a type of Place.
+
+### Direct Subtypes
+
+No types directly inherit from LandmarksOrHistoricalBuildings.
+
+## Properties
+
+LandmarksOrHistoricalBuildings defines the following properties in addition to those inherited from Place:
+
+
+
+## Usage Example
+
+```typescript
+interface LandmarksOrHistoricalBuildings {
+  $context?: 'schema.org'
+  $type: 'LandmarksOrHistoricalBuildings'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LandmarksOrHistoricalBuildings",
+  "name": "Example LandmarksOrHistoricalBuildings",
+  "description": "An example of the LandmarksOrHistoricalBuildings type",
+  "url": "https://example.com/landmarksorhistoricalbuildings",
+  "identifier": "example-landmarksorhistoricalbuildings-1"
+}
+```
+
+## Notes
+
+- LandmarksOrHistoricalBuildings inherits all properties from Place
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

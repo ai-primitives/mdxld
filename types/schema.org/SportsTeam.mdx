@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: SportsTeam
+title: SportsTeam
+description: Organization: Sports team.
+properties:
+  - athlete
+  - coach
+subClasses:
+
+parentClass: SportsOrganization
+---
+
+# SportsTeam
+
+Organization: Sports team.
+
+## Type Hierarchy
+
+SportsTeam is a type of SportsOrganization.
+
+### Direct Subtypes
+
+No types directly inherit from SportsTeam.
+
+## Properties
+
+SportsTeam defines the following properties in addition to those inherited from SportsOrganization:
+
+- athlete: A person that acts as performing member of a sports team; a player as opposed to a coach.
+- coach: A person that acts in a coaching role for a sports team.
+
+## Usage Example
+
+```typescript
+interface SportsTeam {
+  $context?: 'schema.org'
+  $type: 'SportsTeam'
+  athlete?: Person
+  coach?: Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SportsTeam",
+  "name": "Example SportsTeam",
+  "description": "An example of the SportsTeam type",
+  "url": "https://example.com/sportsteam",
+  "identifier": "example-sportsteam-1"
+}
+```
+
+## Notes
+
+- SportsTeam inherits all properties from SportsOrganization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

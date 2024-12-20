@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ItemAvailability
+title: ItemAvailability
+description: A list of possible product availability options.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# ItemAvailability
+
+A list of possible product availability options.
+
+## Type Hierarchy
+
+ItemAvailability is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from ItemAvailability.
+
+## Properties
+
+ItemAvailability defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface ItemAvailability {
+  $context?: 'schema.org'
+  $type: 'ItemAvailability'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ItemAvailability",
+  "name": "Example ItemAvailability",
+  "description": "An example of the ItemAvailability type",
+  "url": "https://example.com/itemavailability",
+  "identifier": "example-itemavailability-1"
+}
+```
+
+## Notes
+
+- ItemAvailability inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

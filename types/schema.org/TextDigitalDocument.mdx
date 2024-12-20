@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TextDigitalDocument
+title: TextDigitalDocument
+description: A file composed primarily of text.
+properties:
+
+subClasses:
+
+parentClass: DigitalDocument
+---
+
+# TextDigitalDocument
+
+A file composed primarily of text.
+
+## Type Hierarchy
+
+TextDigitalDocument is a type of DigitalDocument.
+
+### Direct Subtypes
+
+No types directly inherit from TextDigitalDocument.
+
+## Properties
+
+TextDigitalDocument defines the following properties in addition to those inherited from DigitalDocument:
+
+
+
+## Usage Example
+
+```typescript
+interface TextDigitalDocument {
+  $context?: 'schema.org'
+  $type: 'TextDigitalDocument'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TextDigitalDocument",
+  "name": "Example TextDigitalDocument",
+  "description": "An example of the TextDigitalDocument type",
+  "url": "https://example.com/textdigitaldocument",
+  "identifier": "example-textdigitaldocument-1"
+}
+```
+
+## Notes
+
+- TextDigitalDocument inherits all properties from DigitalDocument
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

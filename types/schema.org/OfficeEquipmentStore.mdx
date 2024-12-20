@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OfficeEquipmentStore
+title: OfficeEquipmentStore
+description: An office equipment store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# OfficeEquipmentStore
+
+An office equipment store.
+
+## Type Hierarchy
+
+OfficeEquipmentStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from OfficeEquipmentStore.
+
+## Properties
+
+OfficeEquipmentStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface OfficeEquipmentStore {
+  $context?: 'schema.org'
+  $type: 'OfficeEquipmentStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OfficeEquipmentStore",
+  "name": "Example OfficeEquipmentStore",
+  "description": "An example of the OfficeEquipmentStore type",
+  "url": "https://example.com/officeequipmentstore",
+  "identifier": "example-officeequipmentstore-1"
+}
+```
+
+## Notes
+
+- OfficeEquipmentStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

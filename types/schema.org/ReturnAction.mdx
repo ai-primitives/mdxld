@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ReturnAction
+title: ReturnAction
+description: The act of returning to the origin that which was previously received (concrete objects) or taken (ownership).
+properties:
+
+subClasses:
+
+parentClass: TransferAction
+---
+
+# ReturnAction
+
+The act of returning to the origin that which was previously received (concrete objects) or taken (ownership).
+
+## Type Hierarchy
+
+ReturnAction is a type of TransferAction.
+
+### Direct Subtypes
+
+No types directly inherit from ReturnAction.
+
+## Properties
+
+ReturnAction defines the following properties in addition to those inherited from TransferAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ReturnAction {
+  $context?: 'schema.org'
+  $type: 'ReturnAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReturnAction",
+  "name": "Example ReturnAction",
+  "description": "An example of the ReturnAction type",
+  "url": "https://example.com/returnaction",
+  "identifier": "example-returnaction-1"
+}
+```
+
+## Notes
+
+- ReturnAction inherits all properties from TransferAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

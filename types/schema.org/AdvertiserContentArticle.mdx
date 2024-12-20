@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AdvertiserContentArticle
+title: AdvertiserContentArticle
+description: An [[Article]] that an external entity has paid to place or to produce to its specifications. Includes [advertorials](https://en.wikipedia.org/wiki/Advertorial), sponsored content, native advertising and other paid content.
+properties:
+
+subClasses:
+
+parentClass: Article
+---
+
+# AdvertiserContentArticle
+
+An [[Article]] that an external entity has paid to place or to produce to its specifications. Includes [advertorials](https://en.wikipedia.org/wiki/Advertorial), sponsored content, native advertising and other paid content.
+
+## Type Hierarchy
+
+AdvertiserContentArticle is a type of Article.
+
+### Direct Subtypes
+
+No types directly inherit from AdvertiserContentArticle.
+
+## Properties
+
+AdvertiserContentArticle defines the following properties in addition to those inherited from Article:
+
+
+
+## Usage Example
+
+```typescript
+interface AdvertiserContentArticle {
+  $context?: 'schema.org'
+  $type: 'AdvertiserContentArticle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AdvertiserContentArticle",
+  "name": "Example AdvertiserContentArticle",
+  "description": "An example of the AdvertiserContentArticle type",
+  "url": "https://example.com/advertisercontentarticle",
+  "identifier": "example-advertisercontentarticle-1"
+}
+```
+
+## Notes
+
+- AdvertiserContentArticle inherits all properties from Article
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

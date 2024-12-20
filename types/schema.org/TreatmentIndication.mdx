@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TreatmentIndication
+title: TreatmentIndication
+description: An indication for treating an underlying condition, symptom, etc.
+properties:
+
+subClasses:
+
+parentClass: MedicalIndication
+---
+
+# TreatmentIndication
+
+An indication for treating an underlying condition, symptom, etc.
+
+## Type Hierarchy
+
+TreatmentIndication is a type of MedicalIndication.
+
+### Direct Subtypes
+
+No types directly inherit from TreatmentIndication.
+
+## Properties
+
+TreatmentIndication defines the following properties in addition to those inherited from MedicalIndication:
+
+
+
+## Usage Example
+
+```typescript
+interface TreatmentIndication {
+  $context?: 'schema.org'
+  $type: 'TreatmentIndication'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TreatmentIndication",
+  "name": "Example TreatmentIndication",
+  "description": "An example of the TreatmentIndication type",
+  "url": "https://example.com/treatmentindication",
+  "identifier": "example-treatmentindication-1"
+}
+```
+
+## Notes
+
+- TreatmentIndication inherits all properties from MedicalIndication
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

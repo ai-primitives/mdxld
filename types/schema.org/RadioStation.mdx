@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RadioStation
+title: RadioStation
+description: A radio station.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# RadioStation
+
+A radio station.
+
+## Type Hierarchy
+
+RadioStation is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from RadioStation.
+
+## Properties
+
+RadioStation defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface RadioStation {
+  $context?: 'schema.org'
+  $type: 'RadioStation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RadioStation",
+  "name": "Example RadioStation",
+  "description": "An example of the RadioStation type",
+  "url": "https://example.com/radiostation",
+  "identifier": "example-radiostation-1"
+}
+```
+
+## Notes
+
+- RadioStation inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

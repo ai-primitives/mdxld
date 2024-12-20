@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SomeProducts
+title: SomeProducts
+description: A placeholder for multiple similar products of the same kind.
+properties:
+
+subClasses:
+
+parentClass: Product
+---
+
+# SomeProducts
+
+A placeholder for multiple similar products of the same kind.
+
+## Type Hierarchy
+
+SomeProducts is a type of Product.
+
+### Direct Subtypes
+
+No types directly inherit from SomeProducts.
+
+## Properties
+
+SomeProducts defines the following properties in addition to those inherited from Product:
+
+
+
+## Usage Example
+
+```typescript
+interface SomeProducts {
+  $context?: 'schema.org'
+  $type: 'SomeProducts'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SomeProducts",
+  "name": "Example SomeProducts",
+  "description": "An example of the SomeProducts type",
+  "url": "https://example.com/someproducts",
+  "identifier": "example-someproducts-1"
+}
+```
+
+## Notes
+
+- SomeProducts inherits all properties from Product
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

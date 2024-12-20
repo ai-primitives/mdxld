@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: FAQPage
+title: FAQPage
+description: A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).
+properties:
+
+subClasses:
+
+parentClass: WebPage
+---
+
+# FAQPage
+
+A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).
+
+## Type Hierarchy
+
+FAQPage is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from FAQPage.
+
+## Properties
+
+FAQPage defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface FAQPage {
+  $context?: 'schema.org'
+  $type: 'FAQPage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FAQPage",
+  "name": "Example FAQPage",
+  "description": "An example of the FAQPage type",
+  "url": "https://example.com/faqpage",
+  "identifier": "example-faqpage-1"
+}
+```
+
+## Notes
+
+- FAQPage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

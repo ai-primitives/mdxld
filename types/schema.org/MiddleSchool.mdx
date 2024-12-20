@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MiddleSchool
+title: MiddleSchool
+description: A middle school (typically for children aged around 11-14, although this varies somewhat).
+properties:
+
+subClasses:
+
+parentClass: EducationalOrganization
+---
+
+# MiddleSchool
+
+A middle school (typically for children aged around 11-14, although this varies somewhat).
+
+## Type Hierarchy
+
+MiddleSchool is a type of EducationalOrganization.
+
+### Direct Subtypes
+
+No types directly inherit from MiddleSchool.
+
+## Properties
+
+MiddleSchool defines the following properties in addition to those inherited from EducationalOrganization:
+
+
+
+## Usage Example
+
+```typescript
+interface MiddleSchool {
+  $context?: 'schema.org'
+  $type: 'MiddleSchool'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MiddleSchool",
+  "name": "Example MiddleSchool",
+  "description": "An example of the MiddleSchool type",
+  "url": "https://example.com/middleschool",
+  "identifier": "example-middleschool-1"
+}
+```
+
+## Notes
+
+- MiddleSchool inherits all properties from EducationalOrganization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

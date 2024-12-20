@@ -1,0 +1,64 @@
+---
+$context: schema.org
+$type: ListItem
+title: ListItem
+description: An list item, e.g. a step in a checklist or how-to description.
+properties:
+  - nextItem
+  - previousItem
+subClasses:
+  - HowToItem
+parentClass: Intangible
+---
+
+# ListItem
+
+An list item, e.g. a step in a checklist or how-to description.
+
+## Type Hierarchy
+
+ListItem is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from ListItem:
+
+- HowToItem: An item used as either a tool or supply when performing the instructions for how to achieve a result.
+
+## Properties
+
+ListItem defines the following properties in addition to those inherited from Intangible:
+
+- nextItem: A link to the ListItem that follows the current one.
+- previousItem: A link to the ListItem that precedes the current one.
+
+## Usage Example
+
+```typescript
+interface ListItem {
+  $context?: 'schema.org'
+  $type: 'ListItem'
+  nextItem?: ListItem
+  previousItem?: ListItem
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ListItem",
+  "name": "Example ListItem",
+  "description": "An example of the ListItem type",
+  "url": "https://example.com/listitem",
+  "identifier": "example-listitem-1"
+}
+```
+
+## Notes
+
+- ListItem inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: BroadcastEvent
+title: BroadcastEvent
+description: An over the air or online broadcast event.
+properties:
+  - broadcastOfEvent
+  - isLiveBroadcast
+subClasses:
+
+parentClass: PublicationEvent
+---
+
+# BroadcastEvent
+
+An over the air or online broadcast event.
+
+## Type Hierarchy
+
+BroadcastEvent is a type of PublicationEvent.
+
+### Direct Subtypes
+
+No types directly inherit from BroadcastEvent.
+
+## Properties
+
+BroadcastEvent defines the following properties in addition to those inherited from PublicationEvent:
+
+- broadcastOfEvent: The event being broadcast such as a sporting event or awards ceremony.
+- isLiveBroadcast: True if the broadcast is of a live event.
+
+## Usage Example
+
+```typescript
+interface BroadcastEvent {
+  $context?: 'schema.org'
+  $type: 'BroadcastEvent'
+  broadcastOfEvent?: Event
+  isLiveBroadcast?: boolean
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BroadcastEvent",
+  "name": "Example BroadcastEvent",
+  "description": "An example of the BroadcastEvent type",
+  "url": "https://example.com/broadcastevent",
+  "identifier": "example-broadcastevent-1"
+}
+```
+
+## Notes
+
+- BroadcastEvent inherits all properties from PublicationEvent
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

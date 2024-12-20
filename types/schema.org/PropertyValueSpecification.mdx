@@ -1,0 +1,83 @@
+---
+$context: schema.org
+$type: PropertyValueSpecification
+title: PropertyValueSpecification
+description: A Property value specification.
+properties:
+  - defaultValue
+  - multipleValues
+  - readonlyValue
+  - stepValue
+  - valueMaxLength
+  - valueMinLength
+  - valueName
+  - valuePattern
+  - valueRequired
+subClasses:
+
+parentClass: Intangible
+---
+
+# PropertyValueSpecification
+
+A Property value specification.
+
+## Type Hierarchy
+
+PropertyValueSpecification is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from PropertyValueSpecification.
+
+## Properties
+
+PropertyValueSpecification defines the following properties in addition to those inherited from Intangible:
+
+- defaultValue: The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.
+- multipleValues: Whether multiple values are allowed for the property.  Default is false.
+- readonlyValue: Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.
+- stepValue: The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
+- valueMaxLength: Specifies the allowed range for number of characters in a literal value.
+- valueMinLength: Specifies the minimum allowed range for number of characters in a literal value.
+- valueName: Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.
+- valuePattern: Specifies a regular expression for testing literal values according to the HTML spec.
+- valueRequired: Whether the property must be filled in to complete the action.  Default is false.
+
+## Usage Example
+
+```typescript
+interface PropertyValueSpecification {
+  $context?: 'schema.org'
+  $type: 'PropertyValueSpecification'
+  defaultValue?: Thing | string
+  multipleValues?: boolean
+  readonlyValue?: boolean
+  stepValue?: number
+  valueMaxLength?: number
+  valueMinLength?: number
+  valueName?: string
+  valuePattern?: string
+  valueRequired?: boolean
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PropertyValueSpecification",
+  "name": "Example PropertyValueSpecification",
+  "description": "An example of the PropertyValueSpecification type",
+  "url": "https://example.com/propertyvaluespecification",
+  "identifier": "example-propertyvaluespecification-1"
+}
+```
+
+## Notes
+
+- PropertyValueSpecification inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: MedicalWebPage
+title: MedicalWebPage
+description: A web page that provides medical information.
+properties:
+  - aspect
+  - medicalAudience
+subClasses:
+
+parentClass: WebPage
+---
+
+# MedicalWebPage
+
+A web page that provides medical information.
+
+## Type Hierarchy
+
+MedicalWebPage is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalWebPage.
+
+## Properties
+
+MedicalWebPage defines the following properties in addition to those inherited from WebPage:
+
+- aspect: An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.
+- medicalAudience: Medical audience for page.
+
+## Usage Example
+
+```typescript
+interface MedicalWebPage {
+  $context?: 'schema.org'
+  $type: 'MedicalWebPage'
+  aspect?: string
+  medicalAudience?: MedicalAudience | MedicalAudienceType
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalWebPage",
+  "name": "Example MedicalWebPage",
+  "description": "An example of the MedicalWebPage type",
+  "url": "https://example.com/medicalwebpage",
+  "identifier": "example-medicalwebpage-1"
+}
+```
+
+## Notes
+
+- MedicalWebPage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

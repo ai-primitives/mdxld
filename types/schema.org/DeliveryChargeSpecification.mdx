@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DeliveryChargeSpecification
+title: DeliveryChargeSpecification
+description: The price for the delivery of an offer using a particular delivery method.
+properties:
+
+subClasses:
+
+parentClass: PriceSpecification
+---
+
+# DeliveryChargeSpecification
+
+The price for the delivery of an offer using a particular delivery method.
+
+## Type Hierarchy
+
+DeliveryChargeSpecification is a type of PriceSpecification.
+
+### Direct Subtypes
+
+No types directly inherit from DeliveryChargeSpecification.
+
+## Properties
+
+DeliveryChargeSpecification defines the following properties in addition to those inherited from PriceSpecification:
+
+
+
+## Usage Example
+
+```typescript
+interface DeliveryChargeSpecification {
+  $context?: 'schema.org'
+  $type: 'DeliveryChargeSpecification'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DeliveryChargeSpecification",
+  "name": "Example DeliveryChargeSpecification",
+  "description": "An example of the DeliveryChargeSpecification type",
+  "url": "https://example.com/deliverychargespecification",
+  "identifier": "example-deliverychargespecification-1"
+}
+```
+
+## Notes
+
+- DeliveryChargeSpecification inherits all properties from PriceSpecification
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

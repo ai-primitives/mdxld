@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ImagingTest
+title: ImagingTest
+description: Any medical imaging modality typically used for diagnostic purposes.
+properties:
+  - imagingTechnique
+subClasses:
+
+parentClass: MedicalTest
+---
+
+# ImagingTest
+
+Any medical imaging modality typically used for diagnostic purposes.
+
+## Type Hierarchy
+
+ImagingTest is a type of MedicalTest.
+
+### Direct Subtypes
+
+No types directly inherit from ImagingTest.
+
+## Properties
+
+ImagingTest defines the following properties in addition to those inherited from MedicalTest:
+
+- imagingTechnique: Imaging technique used.
+
+## Usage Example
+
+```typescript
+interface ImagingTest {
+  $context?: 'schema.org'
+  $type: 'ImagingTest'
+  imagingTechnique?: MedicalImagingTechnique
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ImagingTest",
+  "name": "Example ImagingTest",
+  "description": "An example of the ImagingTest type",
+  "url": "https://example.com/imagingtest",
+  "identifier": "example-imagingtest-1"
+}
+```
+
+## Notes
+
+- ImagingTest inherits all properties from MedicalTest
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

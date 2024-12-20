@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PodcastSeason
+title: PodcastSeason
+description: A single season of a podcast. Many podcasts do not break down into separate seasons. In that case, PodcastSeries should be used.
+properties:
+
+subClasses:
+
+parentClass: CreativeWorkSeason
+---
+
+# PodcastSeason
+
+A single season of a podcast. Many podcasts do not break down into separate seasons. In that case, PodcastSeries should be used.
+
+## Type Hierarchy
+
+PodcastSeason is a type of CreativeWorkSeason.
+
+### Direct Subtypes
+
+No types directly inherit from PodcastSeason.
+
+## Properties
+
+PodcastSeason defines the following properties in addition to those inherited from CreativeWorkSeason:
+
+
+
+## Usage Example
+
+```typescript
+interface PodcastSeason {
+  $context?: 'schema.org'
+  $type: 'PodcastSeason'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PodcastSeason",
+  "name": "Example PodcastSeason",
+  "description": "An example of the PodcastSeason type",
+  "url": "https://example.com/podcastseason",
+  "identifier": "example-podcastseason-1"
+}
+```
+
+## Notes
+
+- PodcastSeason inherits all properties from CreativeWorkSeason
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

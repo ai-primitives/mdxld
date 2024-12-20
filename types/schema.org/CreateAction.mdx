@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: CreateAction
+title: CreateAction
+description: The act of deliberately creating/producing/generating/building a result out of the agent.
+properties:
+
+subClasses:
+  - CookAction
+  - DrawAction
+  - FilmAction
+  - PaintAction
+  - PhotographAction
+  - WriteAction
+parentClass: Action
+---
+
+# CreateAction
+
+The act of deliberately creating/producing/generating/building a result out of the agent.
+
+## Type Hierarchy
+
+CreateAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from CreateAction:
+
+- CookAction: The act of producing/preparing food.
+- DrawAction: The act of producing a visual/graphical representation of an object, typically with a pen/pencil and paper as instruments.
+- FilmAction: The act of capturing sound and moving images on film, video, or digitally.
+- PaintAction: The act of producing a painting, typically with paint and canvas as instruments.
+- PhotographAction: The act of capturing still images of objects using a camera.
+- WriteAction: The act of authoring written creative content.
+
+## Properties
+
+CreateAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface CreateAction {
+  $context?: 'schema.org'
+  $type: 'CreateAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CreateAction",
+  "name": "Example CreateAction",
+  "description": "An example of the CreateAction type",
+  "url": "https://example.com/createaction",
+  "identifier": "example-createaction-1"
+}
+```
+
+## Notes
+
+- CreateAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

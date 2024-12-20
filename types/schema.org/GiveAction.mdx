@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GiveAction
+title: GiveAction
+description: The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\n\nRelated actions:\n\n* [[TakeAction]]: Reciprocal of GiveAction.\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you).
+properties:
+
+subClasses:
+
+parentClass: TransferAction
+---
+
+# GiveAction
+
+The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\n\nRelated actions:\n\n* [[TakeAction]]: Reciprocal of GiveAction.\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you).
+
+## Type Hierarchy
+
+GiveAction is a type of TransferAction.
+
+### Direct Subtypes
+
+No types directly inherit from GiveAction.
+
+## Properties
+
+GiveAction defines the following properties in addition to those inherited from TransferAction:
+
+
+
+## Usage Example
+
+```typescript
+interface GiveAction {
+  $context?: 'schema.org'
+  $type: 'GiveAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GiveAction",
+  "name": "Example GiveAction",
+  "description": "An example of the GiveAction type",
+  "url": "https://example.com/giveaction",
+  "identifier": "example-giveaction-1"
+}
+```
+
+## Notes
+
+- GiveAction inherits all properties from TransferAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

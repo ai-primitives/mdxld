@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MotorcycleRepair
+title: MotorcycleRepair
+description: A motorcycle repair shop.
+properties:
+
+subClasses:
+
+parentClass: AutomotiveBusiness
+---
+
+# MotorcycleRepair
+
+A motorcycle repair shop.
+
+## Type Hierarchy
+
+MotorcycleRepair is a type of AutomotiveBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from MotorcycleRepair.
+
+## Properties
+
+MotorcycleRepair defines the following properties in addition to those inherited from AutomotiveBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface MotorcycleRepair {
+  $context?: 'schema.org'
+  $type: 'MotorcycleRepair'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MotorcycleRepair",
+  "name": "Example MotorcycleRepair",
+  "description": "An example of the MotorcycleRepair type",
+  "url": "https://example.com/motorcyclerepair",
+  "identifier": "example-motorcyclerepair-1"
+}
+```
+
+## Notes
+
+- MotorcycleRepair inherits all properties from AutomotiveBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

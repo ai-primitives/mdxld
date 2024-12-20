@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Airport
+title: Airport
+description: An airport.
+properties:
+  - icaoCode
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# Airport
+
+An airport.
+
+## Type Hierarchy
+
+Airport is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Airport.
+
+## Properties
+
+Airport defines the following properties in addition to those inherited from CivicStructure:
+
+- icaoCode: ICAO identifier for an airport.
+
+## Usage Example
+
+```typescript
+interface Airport {
+  $context?: 'schema.org'
+  $type: 'Airport'
+  icaoCode?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Airport",
+  "name": "Example Airport",
+  "description": "An example of the Airport type",
+  "url": "https://example.com/airport",
+  "identifier": "example-airport-1"
+}
+```
+
+## Notes
+
+- Airport inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

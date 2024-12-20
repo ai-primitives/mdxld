@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ExerciseGym
+title: ExerciseGym
+description: A gym.
+properties:
+
+subClasses:
+
+parentClass: SportsActivityLocation
+---
+
+# ExerciseGym
+
+A gym.
+
+## Type Hierarchy
+
+ExerciseGym is a type of SportsActivityLocation.
+
+### Direct Subtypes
+
+No types directly inherit from ExerciseGym.
+
+## Properties
+
+ExerciseGym defines the following properties in addition to those inherited from SportsActivityLocation:
+
+
+
+## Usage Example
+
+```typescript
+interface ExerciseGym {
+  $context?: 'schema.org'
+  $type: 'ExerciseGym'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ExerciseGym",
+  "name": "Example ExerciseGym",
+  "description": "An example of the ExerciseGym type",
+  "url": "https://example.com/exercisegym",
+  "identifier": "example-exercisegym-1"
+}
+```
+
+## Notes
+
+- ExerciseGym inherits all properties from SportsActivityLocation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

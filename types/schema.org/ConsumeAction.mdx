@@ -1,0 +1,77 @@
+---
+$context: schema.org
+$type: ConsumeAction
+title: ConsumeAction
+description: The act of ingesting information/resources/food.
+properties:
+  - actionAccessibilityRequirement
+subClasses:
+  - DrinkAction
+  - EatAction
+  - InstallAction
+  - ListenAction
+  - PlayGameAction
+  - ReadAction
+  - UseAction
+  - ViewAction
+  - WatchAction
+parentClass: Action
+---
+
+# ConsumeAction
+
+The act of ingesting information/resources/food.
+
+## Type Hierarchy
+
+ConsumeAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from ConsumeAction:
+
+- DrinkAction: The act of swallowing liquids.
+- EatAction: The act of swallowing solid objects.
+- InstallAction: The act of installing an application.
+- ListenAction: The act of consuming audio content.
+- PlayGameAction: The act of playing a video game.
+- ReadAction: The act of consuming written content.
+- UseAction: The act of applying an object to its intended purpose.
+- ViewAction: The act of consuming static visual content.
+- WatchAction: The act of consuming dynamic/moving visual content.
+
+## Properties
+
+ConsumeAction defines the following properties in addition to those inherited from Action:
+
+- actionAccessibilityRequirement: A set of requirements that must be fulfilled in order to perform an Action. If more than one value is specified, fulfilling one set of requirements will allow the Action to be performed.
+
+## Usage Example
+
+```typescript
+interface ConsumeAction {
+  $context?: 'schema.org'
+  $type: 'ConsumeAction'
+  actionAccessibilityRequirement?: ActionAccessSpecification
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ConsumeAction",
+  "name": "Example ConsumeAction",
+  "description": "An example of the ConsumeAction type",
+  "url": "https://example.com/consumeaction",
+  "identifier": "example-consumeaction-1"
+}
+```
+
+## Notes
+
+- ConsumeAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

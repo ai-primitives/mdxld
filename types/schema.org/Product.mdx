@@ -1,0 +1,107 @@
+---
+$context: schema.org
+$type: Product
+title: Product
+description: Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.
+properties:
+  - color
+  - colorSwatch
+  - countryOfAssembly
+  - countryOfLastProcessing
+  - hasEnergyConsumptionDetails
+  - inProductGroupWithID
+  - isAccessoryOrSparePartFor
+  - isConsumableFor
+  - manufacturer
+  - model
+  - nsn
+  - productID
+  - releaseDate
+subClasses:
+  - IndividualProduct
+  - ProductGroup
+  - ProductModel
+  - SomeProducts
+  - Vehicle
+parentClass: Thing
+---
+
+# Product
+
+Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.
+
+## Type Hierarchy
+
+Product is a type of Thing.
+
+### Direct Subtypes
+
+The following types directly inherit from Product:
+
+- IndividualProduct: A single, identifiable product instance (e.g. a laptop with a particular serial number).
+- ProductGroup: A ProductGroup represents a group of [[Product]]s that vary only in certain well-described ways, such as by [[size]], [[color]], [[material]] etc.
+
+While a ProductGroup itself is not directly offered for sale, the various varying products that it represents can be. The ProductGroup serves as a prototype or template, standing in for all of the products who have an [[isVariantOf]] relationship to it. As such, properties (including additional types) can be applied to the ProductGroup to represent characteristics shared by each of the (possibly very many) variants. Properties that reference a ProductGroup are not included in this mechanism; neither are the following specific properties [[variesBy]], [[hasVariant]], [[url]]. 
+- ProductModel: A datasheet or vendor specification of a product (in the sense of a prototypical description).
+- SomeProducts: A placeholder for multiple similar products of the same kind.
+- Vehicle: A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space.
+
+## Properties
+
+Product defines the following properties in addition to those inherited from Thing:
+
+- color: The color of the product.
+- colorSwatch: A color swatch image, visualizing the color of a [[Product]]. Should match the textual description specified in the [[color]] property. This can be a URL or a fully described ImageObject.
+- countryOfAssembly: The place where the product was assembled.
+- countryOfLastProcessing: The place where the item (typically [[Product]]) was last processed and tested before importation.
+- hasEnergyConsumptionDetails: Defines the energy efficiency Category (also known as "class" or "rating") for a product according to an international energy efficiency standard.
+- inProductGroupWithID: Indicates the [[productGroupID]] for a [[ProductGroup]] that this product [[isVariantOf]]. 
+- isAccessoryOrSparePartFor: A pointer to another product (or multiple products) for which this product is an accessory or spare part.
+- isConsumableFor: A pointer to another product (or multiple products) for which this product is a consumable.
+- manufacturer: The manufacturer of the product.
+- model: The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.
+- nsn: Indicates the [NATO stock number](https://en.wikipedia.org/wiki/NATO_Stock_Number) (nsn) of a [[Product]]. 
+- productID: The product identifier, such as ISBN. For example: ``` meta itemprop="productID" content="isbn:123-456-789" ```.
+- releaseDate: The release date of a product or product model. This can be used to distinguish the exact variant of a product.
+
+## Usage Example
+
+```typescript
+interface Product {
+  $context?: 'schema.org'
+  $type: 'Product'
+  color?: string
+  colorSwatch?: ImageObject | string
+  countryOfAssembly?: string
+  countryOfLastProcessing?: string
+  hasEnergyConsumptionDetails?: EnergyConsumptionDetails
+  inProductGroupWithID?: string
+  isAccessoryOrSparePartFor?: Product
+  isConsumableFor?: Product
+  manufacturer?: Organization
+  model?: ProductModel | string
+  nsn?: string
+  productID?: string
+  releaseDate?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Product",
+  "name": "Example Product",
+  "description": "An example of the Product type",
+  "url": "https://example.com/product",
+  "identifier": "example-product-1"
+}
+```
+
+## Notes
+
+- Product inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Distillery
+title: Distillery
+description: A distillery.
+properties:
+
+subClasses:
+
+parentClass: FoodEstablishment
+---
+
+# Distillery
+
+A distillery.
+
+## Type Hierarchy
+
+Distillery is a type of FoodEstablishment.
+
+### Direct Subtypes
+
+No types directly inherit from Distillery.
+
+## Properties
+
+Distillery defines the following properties in addition to those inherited from FoodEstablishment:
+
+
+
+## Usage Example
+
+```typescript
+interface Distillery {
+  $context?: 'schema.org'
+  $type: 'Distillery'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Distillery",
+  "name": "Example Distillery",
+  "description": "An example of the Distillery type",
+  "url": "https://example.com/distillery",
+  "identifier": "example-distillery-1"
+}
+```
+
+## Notes
+
+- Distillery inherits all properties from FoodEstablishment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

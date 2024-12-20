@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: DrugStrength
+title: DrugStrength
+description: A specific strength in which a medical drug is available in a specific country.
+properties:
+  - availableIn
+  - strengthUnit
+  - strengthValue
+subClasses:
+
+parentClass: MedicalIntangible
+---
+
+# DrugStrength
+
+A specific strength in which a medical drug is available in a specific country.
+
+## Type Hierarchy
+
+DrugStrength is a type of MedicalIntangible.
+
+### Direct Subtypes
+
+No types directly inherit from DrugStrength.
+
+## Properties
+
+DrugStrength defines the following properties in addition to those inherited from MedicalIntangible:
+
+- availableIn: The location in which the strength is available.
+- strengthUnit: The units of an active ingredient's strength, e.g. mg.
+- strengthValue: The value of an active ingredient's strength, e.g. 325.
+
+## Usage Example
+
+```typescript
+interface DrugStrength {
+  $context?: 'schema.org'
+  $type: 'DrugStrength'
+  availableIn?: AdministrativeArea
+  strengthUnit?: string
+  strengthValue?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DrugStrength",
+  "name": "Example DrugStrength",
+  "description": "An example of the DrugStrength type",
+  "url": "https://example.com/drugstrength",
+  "identifier": "example-drugstrength-1"
+}
+```
+
+## Notes
+
+- DrugStrength inherits all properties from MedicalIntangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

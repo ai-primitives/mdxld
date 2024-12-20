@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CommentAction
+title: CommentAction
+description: The act of generating a comment about a subject.
+properties:
+
+subClasses:
+
+parentClass: CommunicateAction
+---
+
+# CommentAction
+
+The act of generating a comment about a subject.
+
+## Type Hierarchy
+
+CommentAction is a type of CommunicateAction.
+
+### Direct Subtypes
+
+No types directly inherit from CommentAction.
+
+## Properties
+
+CommentAction defines the following properties in addition to those inherited from CommunicateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface CommentAction {
+  $context?: 'schema.org'
+  $type: 'CommentAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CommentAction",
+  "name": "Example CommentAction",
+  "description": "An example of the CommentAction type",
+  "url": "https://example.com/commentaction",
+  "identifier": "example-commentaction-1"
+}
+```
+
+## Notes
+
+- CommentAction inherits all properties from CommunicateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

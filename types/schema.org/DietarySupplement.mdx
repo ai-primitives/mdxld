@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: DietarySupplement
+title: DietarySupplement
+description: A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.
+properties:
+  - recommendedIntake
+  - safetyConsideration
+subClasses:
+
+
+---
+
+# DietarySupplement
+
+A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.
+
+## Type Hierarchy
+
+DietarySupplement is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from DietarySupplement.
+
+## Properties
+
+DietarySupplement defines the following properties in addition to those inherited from Thing:
+
+- recommendedIntake: Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+- safetyConsideration: Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.
+
+## Usage Example
+
+```typescript
+interface DietarySupplement {
+  $context?: 'schema.org'
+  $type: 'DietarySupplement'
+  recommendedIntake?: RecommendedDoseSchedule
+  safetyConsideration?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DietarySupplement",
+  "name": "Example DietarySupplement",
+  "description": "An example of the DietarySupplement type",
+  "url": "https://example.com/dietarysupplement",
+  "identifier": "example-dietarysupplement-1"
+}
+```
+
+## Notes
+
+- DietarySupplement inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

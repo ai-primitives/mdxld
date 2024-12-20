@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ResearchOrganization
+title: ResearchOrganization
+description: A Research Organization (e.g. scientific institute, research company).
+properties:
+
+subClasses:
+
+parentClass: Organization
+---
+
+# ResearchOrganization
+
+A Research Organization (e.g. scientific institute, research company).
+
+## Type Hierarchy
+
+ResearchOrganization is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from ResearchOrganization.
+
+## Properties
+
+ResearchOrganization defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface ResearchOrganization {
+  $context?: 'schema.org'
+  $type: 'ResearchOrganization'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ResearchOrganization",
+  "name": "Example ResearchOrganization",
+  "description": "An example of the ResearchOrganization type",
+  "url": "https://example.com/researchorganization",
+  "identifier": "example-researchorganization-1"
+}
+```
+
+## Notes
+
+- ResearchOrganization inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

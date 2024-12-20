@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GeospatialGeometry
+title: GeospatialGeometry
+description: (Eventually to be defined as) a supertype of GeoShape designed to accommodate definitions from Geo-Spatial best practices.
+properties:
+
+subClasses:
+
+parentClass: Intangible
+---
+
+# GeospatialGeometry
+
+(Eventually to be defined as) a supertype of GeoShape designed to accommodate definitions from Geo-Spatial best practices.
+
+## Type Hierarchy
+
+GeospatialGeometry is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from GeospatialGeometry.
+
+## Properties
+
+GeospatialGeometry defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface GeospatialGeometry {
+  $context?: 'schema.org'
+  $type: 'GeospatialGeometry'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GeospatialGeometry",
+  "name": "Example GeospatialGeometry",
+  "description": "An example of the GeospatialGeometry type",
+  "url": "https://example.com/geospatialgeometry",
+  "identifier": "example-geospatialgeometry-1"
+}
+```
+
+## Notes
+
+- GeospatialGeometry inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

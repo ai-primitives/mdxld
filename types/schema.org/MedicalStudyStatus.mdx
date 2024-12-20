@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalStudyStatus
+title: MedicalStudyStatus
+description: The status of a medical study. Enumerated type.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# MedicalStudyStatus
+
+The status of a medical study. Enumerated type.
+
+## Type Hierarchy
+
+MedicalStudyStatus is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalStudyStatus.
+
+## Properties
+
+MedicalStudyStatus defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalStudyStatus {
+  $context?: 'schema.org'
+  $type: 'MedicalStudyStatus'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalStudyStatus",
+  "name": "Example MedicalStudyStatus",
+  "description": "An example of the MedicalStudyStatus type",
+  "url": "https://example.com/medicalstudystatus",
+  "identifier": "example-medicalstudystatus-1"
+}
+```
+
+## Notes
+
+- MedicalStudyStatus inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

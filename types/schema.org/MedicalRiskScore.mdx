@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalRiskScore
+title: MedicalRiskScore
+description: A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.
+properties:
+  - algorithm
+subClasses:
+
+parentClass: MedicalRiskEstimator
+---
+
+# MedicalRiskScore
+
+A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.
+
+## Type Hierarchy
+
+MedicalRiskScore is a type of MedicalRiskEstimator.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalRiskScore.
+
+## Properties
+
+MedicalRiskScore defines the following properties in addition to those inherited from MedicalRiskEstimator:
+
+- algorithm: The algorithm or rules to follow to compute the score.
+
+## Usage Example
+
+```typescript
+interface MedicalRiskScore {
+  $context?: 'schema.org'
+  $type: 'MedicalRiskScore'
+  algorithm?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalRiskScore",
+  "name": "Example MedicalRiskScore",
+  "description": "An example of the MedicalRiskScore type",
+  "url": "https://example.com/medicalriskscore",
+  "identifier": "example-medicalriskscore-1"
+}
+```
+
+## Notes
+
+- MedicalRiskScore inherits all properties from MedicalRiskEstimator
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

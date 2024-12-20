@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: MortgageLoan
+title: MortgageLoan
+description: A loan in which property or real estate is used as collateral. (A loan securitized against some real estate.)
+properties:
+  - domiciledMortgage
+  - loanMortgageMandateAmount
+subClasses:
+
+parentClass: LoanOrCredit
+---
+
+# MortgageLoan
+
+A loan in which property or real estate is used as collateral. (A loan securitized against some real estate.)
+
+## Type Hierarchy
+
+MortgageLoan is a type of LoanOrCredit.
+
+### Direct Subtypes
+
+No types directly inherit from MortgageLoan.
+
+## Properties
+
+MortgageLoan defines the following properties in addition to those inherited from LoanOrCredit:
+
+- domiciledMortgage: Whether borrower is a resident of the jurisdiction where the property is located.
+- loanMortgageMandateAmount: Amount of mortgage mandate that can be converted into a proper mortgage at a later stage.
+
+## Usage Example
+
+```typescript
+interface MortgageLoan {
+  $context?: 'schema.org'
+  $type: 'MortgageLoan'
+  domiciledMortgage?: boolean
+  loanMortgageMandateAmount?: MonetaryAmount
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MortgageLoan",
+  "name": "Example MortgageLoan",
+  "description": "An example of the MortgageLoan type",
+  "url": "https://example.com/mortgageloan",
+  "identifier": "example-mortgageloan-1"
+}
+```
+
+## Notes
+
+- MortgageLoan inherits all properties from LoanOrCredit
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

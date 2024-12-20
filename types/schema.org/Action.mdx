@@ -1,0 +1,115 @@
+---
+$context: schema.org
+$type: Action
+title: Action
+description: An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.\n\nSee also [blog post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and [Actions overview document](https://schema.org/docs/actions.html).
+properties:
+  - actionProcess
+  - actionStatus
+  - agent
+  - error
+  - instrument
+  - object
+  - participant
+  - result
+  - target
+subClasses:
+  - AchieveAction
+  - AssessAction
+  - ConsumeAction
+  - ControlAction
+  - CreateAction
+  - FindAction
+  - InteractAction
+  - MoveAction
+  - OrganizeAction
+  - PlayAction
+  - SearchAction
+  - SeekToAction
+  - SolveMathAction
+  - TradeAction
+  - TransferAction
+  - UpdateAction
+parentClass: Thing
+---
+
+# Action
+
+An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.\n\nSee also [blog post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and [Actions overview document](https://schema.org/docs/actions.html).
+
+## Type Hierarchy
+
+Action is a type of Thing.
+
+### Direct Subtypes
+
+The following types directly inherit from Action:
+
+- AchieveAction: The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.
+- AssessAction: The act of forming one's opinion, reaction or sentiment.
+- ConsumeAction: The act of ingesting information/resources/food.
+- ControlAction: An agent controls a device or application.
+- CreateAction: The act of deliberately creating/producing/generating/building a result out of the agent.
+- FindAction: The act of finding an object.\n\nRelated actions:\n\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.
+- InteractAction: The act of interacting with another person or organization.
+- MoveAction: The act of an agent relocating to a place.\n\nRelated actions:\n\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.
+- OrganizeAction: The act of manipulating/administering/supervising/controlling one or more objects.
+- PlayAction: The act of playing/exercising/training/performing for enjoyment, leisure, recreation, competition or exercise.\n\nRelated actions:\n\n* [[ListenAction]]: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.\n* [[WatchAction]]: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content.
+- SearchAction: The act of searching for an object.\n\nRelated actions:\n\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.
+- SeekToAction: This is the [[Action]] of navigating to a specific [[startOffset]] timestamp within a [[VideoObject]], typically represented with a URL template structure.
+- SolveMathAction: The action that takes in a math expression and directs users to a page potentially capable of solving/simplifying that expression.
+- TradeAction: The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.
+- TransferAction: The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.
+- UpdateAction: The act of managing by changing/editing the state of the object.
+
+## Properties
+
+Action defines the following properties in addition to those inherited from Thing:
+
+- actionProcess: Description of the process by which the action was performed.
+- actionStatus: Indicates the current disposition of the Action.
+- agent: The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
+- error: For failed actions, more information on the cause of the failure.
+- instrument: The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
+- object: The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read *a book*.
+- participant: Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
+- result: The result produced in the action. E.g. John wrote *a book*.
+- target: Indicates a target EntryPoint, or url, for an Action.
+
+## Usage Example
+
+```typescript
+interface Action {
+  $context?: 'schema.org'
+  $type: 'Action'
+  actionProcess?: HowTo
+  actionStatus?: ActionStatusType
+  agent?: Organization | Person
+  error?: Thing
+  instrument?: Thing
+  object?: Thing
+  participant?: Organization | Person
+  result?: Thing
+  target?: EntryPoint | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Action",
+  "name": "Example Action",
+  "description": "An example of the Action type",
+  "url": "https://example.com/action",
+  "identifier": "example-action-1"
+}
+```
+
+## Notes
+
+- Action inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

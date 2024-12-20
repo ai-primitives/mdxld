@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DanceEvent
+title: DanceEvent
+description: Event type: A social dance.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# DanceEvent
+
+Event type: A social dance.
+
+## Type Hierarchy
+
+DanceEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from DanceEvent.
+
+## Properties
+
+DanceEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface DanceEvent {
+  $context?: 'schema.org'
+  $type: 'DanceEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DanceEvent",
+  "name": "Example DanceEvent",
+  "description": "An example of the DanceEvent type",
+  "url": "https://example.com/danceevent",
+  "identifier": "example-danceevent-1"
+}
+```
+
+## Notes
+
+- DanceEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

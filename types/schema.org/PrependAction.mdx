@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PrependAction
+title: PrependAction
+description: The act of inserting at the beginning if an ordered collection.
+properties:
+
+subClasses:
+
+parentClass: InsertAction
+---
+
+# PrependAction
+
+The act of inserting at the beginning if an ordered collection.
+
+## Type Hierarchy
+
+PrependAction is a type of InsertAction.
+
+### Direct Subtypes
+
+No types directly inherit from PrependAction.
+
+## Properties
+
+PrependAction defines the following properties in addition to those inherited from InsertAction:
+
+
+
+## Usage Example
+
+```typescript
+interface PrependAction {
+  $context?: 'schema.org'
+  $type: 'PrependAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PrependAction",
+  "name": "Example PrependAction",
+  "description": "An example of the PrependAction type",
+  "url": "https://example.com/prependaction",
+  "identifier": "example-prependaction-1"
+}
+```
+
+## Notes
+
+- PrependAction inherits all properties from InsertAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

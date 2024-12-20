@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AssignAction
+title: AssignAction
+description: The act of allocating an action/event/task to some destination (someone or something).
+properties:
+
+subClasses:
+
+parentClass: AllocateAction
+---
+
+# AssignAction
+
+The act of allocating an action/event/task to some destination (someone or something).
+
+## Type Hierarchy
+
+AssignAction is a type of AllocateAction.
+
+### Direct Subtypes
+
+No types directly inherit from AssignAction.
+
+## Properties
+
+AssignAction defines the following properties in addition to those inherited from AllocateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface AssignAction {
+  $context?: 'schema.org'
+  $type: 'AssignAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AssignAction",
+  "name": "Example AssignAction",
+  "description": "An example of the AssignAction type",
+  "url": "https://example.com/assignaction",
+  "identifier": "example-assignaction-1"
+}
+```
+
+## Notes
+
+- AssignAction inherits all properties from AllocateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

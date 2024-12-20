@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SchoolDistrict
+title: SchoolDistrict
+description: A School District is an administrative area for the administration of schools.
+properties:
+
+subClasses:
+
+parentClass: AdministrativeArea
+---
+
+# SchoolDistrict
+
+A School District is an administrative area for the administration of schools.
+
+## Type Hierarchy
+
+SchoolDistrict is a type of AdministrativeArea.
+
+### Direct Subtypes
+
+No types directly inherit from SchoolDistrict.
+
+## Properties
+
+SchoolDistrict defines the following properties in addition to those inherited from AdministrativeArea:
+
+
+
+## Usage Example
+
+```typescript
+interface SchoolDistrict {
+  $context?: 'schema.org'
+  $type: 'SchoolDistrict'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SchoolDistrict",
+  "name": "Example SchoolDistrict",
+  "description": "An example of the SchoolDistrict type",
+  "url": "https://example.com/schooldistrict",
+  "identifier": "example-schooldistrict-1"
+}
+```
+
+## Notes
+
+- SchoolDistrict inherits all properties from AdministrativeArea
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

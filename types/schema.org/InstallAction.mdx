@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: InstallAction
+title: InstallAction
+description: The act of installing an application.
+properties:
+
+subClasses:
+
+parentClass: ConsumeAction
+---
+
+# InstallAction
+
+The act of installing an application.
+
+## Type Hierarchy
+
+InstallAction is a type of ConsumeAction.
+
+### Direct Subtypes
+
+No types directly inherit from InstallAction.
+
+## Properties
+
+InstallAction defines the following properties in addition to those inherited from ConsumeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface InstallAction {
+  $context?: 'schema.org'
+  $type: 'InstallAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InstallAction",
+  "name": "Example InstallAction",
+  "description": "An example of the InstallAction type",
+  "url": "https://example.com/installaction",
+  "identifier": "example-installaction-1"
+}
+```
+
+## Notes
+
+- InstallAction inherits all properties from ConsumeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

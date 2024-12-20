@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AutoDealer
+title: AutoDealer
+description: An car dealership.
+properties:
+
+subClasses:
+
+parentClass: AutomotiveBusiness
+---
+
+# AutoDealer
+
+An car dealership.
+
+## Type Hierarchy
+
+AutoDealer is a type of AutomotiveBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from AutoDealer.
+
+## Properties
+
+AutoDealer defines the following properties in addition to those inherited from AutomotiveBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface AutoDealer {
+  $context?: 'schema.org'
+  $type: 'AutoDealer'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AutoDealer",
+  "name": "Example AutoDealer",
+  "description": "An example of the AutoDealer type",
+  "url": "https://example.com/autodealer",
+  "identifier": "example-autodealer-1"
+}
+```
+
+## Notes
+
+- AutoDealer inherits all properties from AutomotiveBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

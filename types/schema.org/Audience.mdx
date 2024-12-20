@@ -1,0 +1,70 @@
+---
+$context: schema.org
+$type: Audience
+title: Audience
+description: Intended audience for an item, i.e. the group for whom the item was created.
+properties:
+  - audienceType
+  - geographicArea
+subClasses:
+  - BusinessAudience
+  - EducationalAudience
+  - PeopleAudience
+  - Researcher
+parentClass: Intangible
+---
+
+# Audience
+
+Intended audience for an item, i.e. the group for whom the item was created.
+
+## Type Hierarchy
+
+Audience is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from Audience:
+
+- BusinessAudience: A set of characteristics belonging to businesses, e.g. who compose an item's target audience.
+- EducationalAudience: An EducationalAudience.
+- PeopleAudience: A set of characteristics belonging to people, e.g. who compose an item's target audience.
+- Researcher: Researchers.
+
+## Properties
+
+Audience defines the following properties in addition to those inherited from Intangible:
+
+- audienceType: The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
+- geographicArea: The geographic area associated with the audience.
+
+## Usage Example
+
+```typescript
+interface Audience {
+  $context?: 'schema.org'
+  $type: 'Audience'
+  audienceType?: string
+  geographicArea?: AdministrativeArea
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Audience",
+  "name": "Example Audience",
+  "description": "An example of the Audience type",
+  "url": "https://example.com/audience",
+  "identifier": "example-audience-1"
+}
+```
+
+## Notes
+
+- Audience inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

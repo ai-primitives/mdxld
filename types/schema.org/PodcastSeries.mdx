@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PodcastSeries
+title: PodcastSeries
+description: A podcast is an episodic series of digital audio or video files which a user can download and listen to.
+properties:
+
+subClasses:
+
+parentClass: CreativeWorkSeries
+---
+
+# PodcastSeries
+
+A podcast is an episodic series of digital audio or video files which a user can download and listen to.
+
+## Type Hierarchy
+
+PodcastSeries is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+No types directly inherit from PodcastSeries.
+
+## Properties
+
+PodcastSeries defines the following properties in addition to those inherited from CreativeWorkSeries:
+
+
+
+## Usage Example
+
+```typescript
+interface PodcastSeries {
+  $context?: 'schema.org'
+  $type: 'PodcastSeries'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PodcastSeries",
+  "name": "Example PodcastSeries",
+  "description": "An example of the PodcastSeries type",
+  "url": "https://example.com/podcastseries",
+  "identifier": "example-podcastseries-1"
+}
+```
+
+## Notes
+
+- PodcastSeries inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

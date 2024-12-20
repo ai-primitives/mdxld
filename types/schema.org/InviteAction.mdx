@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: InviteAction
+title: InviteAction
+description: The act of asking someone to attend an event. Reciprocal of RsvpAction.
+properties:
+
+subClasses:
+
+parentClass: CommunicateAction
+---
+
+# InviteAction
+
+The act of asking someone to attend an event. Reciprocal of RsvpAction.
+
+## Type Hierarchy
+
+InviteAction is a type of CommunicateAction.
+
+### Direct Subtypes
+
+No types directly inherit from InviteAction.
+
+## Properties
+
+InviteAction defines the following properties in addition to those inherited from CommunicateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface InviteAction {
+  $context?: 'schema.org'
+  $type: 'InviteAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InviteAction",
+  "name": "Example InviteAction",
+  "description": "An example of the InviteAction type",
+  "url": "https://example.com/inviteaction",
+  "identifier": "example-inviteaction-1"
+}
+```
+
+## Notes
+
+- InviteAction inherits all properties from CommunicateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

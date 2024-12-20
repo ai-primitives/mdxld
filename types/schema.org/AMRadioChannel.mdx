@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AMRadioChannel
+title: AMRadioChannel
+description: A radio channel that uses AM.
+properties:
+
+subClasses:
+
+parentClass: RadioChannel
+---
+
+# AMRadioChannel
+
+A radio channel that uses AM.
+
+## Type Hierarchy
+
+AMRadioChannel is a type of RadioChannel.
+
+### Direct Subtypes
+
+No types directly inherit from AMRadioChannel.
+
+## Properties
+
+AMRadioChannel defines the following properties in addition to those inherited from RadioChannel:
+
+
+
+## Usage Example
+
+```typescript
+interface AMRadioChannel {
+  $context?: 'schema.org'
+  $type: 'AMRadioChannel'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AMRadioChannel",
+  "name": "Example AMRadioChannel",
+  "description": "An example of the AMRadioChannel type",
+  "url": "https://example.com/amradiochannel",
+  "identifier": "example-amradiochannel-1"
+}
+```
+
+## Notes
+
+- AMRadioChannel inherits all properties from RadioChannel
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: SportsEvent
+title: SportsEvent
+description: Event type: Sports event.
+properties:
+  - awayTeam
+  - competitor
+  - homeTeam
+subClasses:
+
+parentClass: Event
+---
+
+# SportsEvent
+
+Event type: Sports event.
+
+## Type Hierarchy
+
+SportsEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from SportsEvent.
+
+## Properties
+
+SportsEvent defines the following properties in addition to those inherited from Event:
+
+- awayTeam: The away team in a sports event.
+- competitor: A competitor in a sports event.
+- homeTeam: The home team in a sports event.
+
+## Usage Example
+
+```typescript
+interface SportsEvent {
+  $context?: 'schema.org'
+  $type: 'SportsEvent'
+  awayTeam?: Person | SportsTeam
+  competitor?: Person | SportsTeam
+  homeTeam?: Person | SportsTeam
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SportsEvent",
+  "name": "Example SportsEvent",
+  "description": "An example of the SportsEvent type",
+  "url": "https://example.com/sportsevent",
+  "identifier": "example-sportsevent-1"
+}
+```
+
+## Notes
+
+- SportsEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

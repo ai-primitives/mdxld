@@ -1,0 +1,69 @@
+---
+$context: schema.org
+$type: GovernmentBuilding
+title: GovernmentBuilding
+description: A government building.
+properties:
+
+subClasses:
+  - CityHall
+  - Courthouse
+  - DefenceEstablishment
+  - Embassy
+  - LegislativeBuilding
+parentClass: CivicStructure
+---
+
+# GovernmentBuilding
+
+A government building.
+
+## Type Hierarchy
+
+GovernmentBuilding is a type of CivicStructure.
+
+### Direct Subtypes
+
+The following types directly inherit from GovernmentBuilding:
+
+- CityHall: A city hall.
+- Courthouse: A courthouse.
+- DefenceEstablishment: A defence establishment, such as an army or navy base.
+- Embassy: An embassy.
+- LegislativeBuilding: A legislative building&#x2014;for example, the state capitol.
+
+## Properties
+
+GovernmentBuilding defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface GovernmentBuilding {
+  $context?: 'schema.org'
+  $type: 'GovernmentBuilding'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GovernmentBuilding",
+  "name": "Example GovernmentBuilding",
+  "description": "An example of the GovernmentBuilding type",
+  "url": "https://example.com/governmentbuilding",
+  "identifier": "example-governmentbuilding-1"
+}
+```
+
+## Notes
+
+- GovernmentBuilding inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

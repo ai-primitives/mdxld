@@ -1,0 +1,64 @@
+---
+$context: schema.org
+$type: TechArticle
+title: TechArticle
+description: A technical article - Example: How-to (task) topics, step-by-step, procedural troubleshooting, specifications, etc.
+properties:
+  - dependencies
+  - proficiencyLevel
+subClasses:
+  - APIReference
+parentClass: Article
+---
+
+# TechArticle
+
+A technical article - Example: How-to (task) topics, step-by-step, procedural troubleshooting, specifications, etc.
+
+## Type Hierarchy
+
+TechArticle is a type of Article.
+
+### Direct Subtypes
+
+The following types directly inherit from TechArticle:
+
+- APIReference: Reference documentation for application programming interfaces (APIs).
+
+## Properties
+
+TechArticle defines the following properties in addition to those inherited from Article:
+
+- dependencies: Prerequisites needed to fulfill steps in article.
+- proficiencyLevel: Proficiency needed for this content; expected values: 'Beginner', 'Expert'.
+
+## Usage Example
+
+```typescript
+interface TechArticle {
+  $context?: 'schema.org'
+  $type: 'TechArticle'
+  dependencies?: string
+  proficiencyLevel?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TechArticle",
+  "name": "Example TechArticle",
+  "description": "An example of the TechArticle type",
+  "url": "https://example.com/techarticle",
+  "identifier": "example-techarticle-1"
+}
+```
+
+## Notes
+
+- TechArticle inherits all properties from Article
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

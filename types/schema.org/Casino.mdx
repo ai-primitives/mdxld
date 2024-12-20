@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Casino
+title: Casino
+description: A casino.
+properties:
+
+subClasses:
+
+parentClass: EntertainmentBusiness
+---
+
+# Casino
+
+A casino.
+
+## Type Hierarchy
+
+Casino is a type of EntertainmentBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from Casino.
+
+## Properties
+
+Casino defines the following properties in addition to those inherited from EntertainmentBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface Casino {
+  $context?: 'schema.org'
+  $type: 'Casino'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Casino",
+  "name": "Example Casino",
+  "description": "An example of the Casino type",
+  "url": "https://example.com/casino",
+  "identifier": "example-casino-1"
+}
+```
+
+## Notes
+
+- Casino inherits all properties from EntertainmentBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

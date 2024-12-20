@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: BusinessEntityType
+title: BusinessEntityType
+description: A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#Business\n* http://purl.org/goodrelations/v1#Enduser\n* http://purl.org/goodrelations/v1#PublicInstitution\n* http://purl.org/goodrelations/v1#Reseller
+    
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# BusinessEntityType
+
+A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#Business\n* http://purl.org/goodrelations/v1#Enduser\n* http://purl.org/goodrelations/v1#PublicInstitution\n* http://purl.org/goodrelations/v1#Reseller
+    
+
+## Type Hierarchy
+
+BusinessEntityType is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from BusinessEntityType.
+
+## Properties
+
+BusinessEntityType defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface BusinessEntityType {
+  $context?: 'schema.org'
+  $type: 'BusinessEntityType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BusinessEntityType",
+  "name": "Example BusinessEntityType",
+  "description": "An example of the BusinessEntityType type",
+  "url": "https://example.com/businessentitytype",
+  "identifier": "example-businessentitytype-1"
+}
+```
+
+## Notes
+
+- BusinessEntityType inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

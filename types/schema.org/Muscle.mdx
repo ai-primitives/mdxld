@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: Muscle
+title: Muscle
+description: A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.
+properties:
+  - antagonist
+  - bloodSupply
+  - insertion
+  - muscleAction
+  - nerve
+subClasses:
+
+parentClass: AnatomicalStructure
+---
+
+# Muscle
+
+A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.
+
+## Type Hierarchy
+
+Muscle is a type of AnatomicalStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Muscle.
+
+## Properties
+
+Muscle defines the following properties in addition to those inherited from AnatomicalStructure:
+
+- antagonist: The muscle whose action counteracts the specified muscle.
+- bloodSupply: The blood vessel that carries blood from the heart to the muscle.
+- insertion: The place of attachment of a muscle, or what the muscle moves.
+- muscleAction: The movement the muscle generates.
+- nerve: The underlying innervation associated with the muscle.
+
+## Usage Example
+
+```typescript
+interface Muscle {
+  $context?: 'schema.org'
+  $type: 'Muscle'
+  antagonist?: Muscle
+  bloodSupply?: Vessel
+  insertion?: AnatomicalStructure
+  muscleAction?: string
+  nerve?: Nerve
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Muscle",
+  "name": "Example Muscle",
+  "description": "An example of the Muscle type",
+  "url": "https://example.com/muscle",
+  "identifier": "example-muscle-1"
+}
+```
+
+## Notes
+
+- Muscle inherits all properties from AnatomicalStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

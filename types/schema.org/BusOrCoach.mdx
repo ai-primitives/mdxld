@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BusOrCoach
+title: BusOrCoach
+description: A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury buses, usually in service for long distance travel.
+properties:
+
+subClasses:
+
+parentClass: Vehicle
+---
+
+# BusOrCoach
+
+A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury buses, usually in service for long distance travel.
+
+## Type Hierarchy
+
+BusOrCoach is a type of Vehicle.
+
+### Direct Subtypes
+
+No types directly inherit from BusOrCoach.
+
+## Properties
+
+BusOrCoach defines the following properties in addition to those inherited from Vehicle:
+
+
+
+## Usage Example
+
+```typescript
+interface BusOrCoach {
+  $context?: 'schema.org'
+  $type: 'BusOrCoach'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BusOrCoach",
+  "name": "Example BusOrCoach",
+  "description": "An example of the BusOrCoach type",
+  "url": "https://example.com/busorcoach",
+  "identifier": "example-busorcoach-1"
+}
+```
+
+## Notes
+
+- BusOrCoach inherits all properties from Vehicle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

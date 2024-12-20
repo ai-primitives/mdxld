@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BeautySalon
+title: BeautySalon
+description: Beauty salon.
+properties:
+
+subClasses:
+
+parentClass: HealthAndBeautyBusiness
+---
+
+# BeautySalon
+
+Beauty salon.
+
+## Type Hierarchy
+
+BeautySalon is a type of HealthAndBeautyBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from BeautySalon.
+
+## Properties
+
+BeautySalon defines the following properties in addition to those inherited from HealthAndBeautyBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface BeautySalon {
+  $context?: 'schema.org'
+  $type: 'BeautySalon'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BeautySalon",
+  "name": "Example BeautySalon",
+  "description": "An example of the BeautySalon type",
+  "url": "https://example.com/beautysalon",
+  "identifier": "example-beautysalon-1"
+}
+```
+
+## Notes
+
+- BeautySalon inherits all properties from HealthAndBeautyBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

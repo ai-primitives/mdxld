@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GardenStore
+title: GardenStore
+description: A garden store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# GardenStore
+
+A garden store.
+
+## Type Hierarchy
+
+GardenStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from GardenStore.
+
+## Properties
+
+GardenStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface GardenStore {
+  $context?: 'schema.org'
+  $type: 'GardenStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GardenStore",
+  "name": "Example GardenStore",
+  "description": "An example of the GardenStore type",
+  "url": "https://example.com/gardenstore",
+  "identifier": "example-gardenstore-1"
+}
+```
+
+## Notes
+
+- GardenStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

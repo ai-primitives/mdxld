@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ElementarySchool
+title: ElementarySchool
+description: An elementary school.
+properties:
+
+subClasses:
+
+parentClass: EducationalOrganization
+---
+
+# ElementarySchool
+
+An elementary school.
+
+## Type Hierarchy
+
+ElementarySchool is a type of EducationalOrganization.
+
+### Direct Subtypes
+
+No types directly inherit from ElementarySchool.
+
+## Properties
+
+ElementarySchool defines the following properties in addition to those inherited from EducationalOrganization:
+
+
+
+## Usage Example
+
+```typescript
+interface ElementarySchool {
+  $context?: 'schema.org'
+  $type: 'ElementarySchool'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ElementarySchool",
+  "name": "Example ElementarySchool",
+  "description": "An example of the ElementarySchool type",
+  "url": "https://example.com/elementaryschool",
+  "identifier": "example-elementaryschool-1"
+}
+```
+
+## Notes
+
+- ElementarySchool inherits all properties from EducationalOrganization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

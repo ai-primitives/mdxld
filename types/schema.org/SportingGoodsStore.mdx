@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SportingGoodsStore
+title: SportingGoodsStore
+description: A sporting goods store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# SportingGoodsStore
+
+A sporting goods store.
+
+## Type Hierarchy
+
+SportingGoodsStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from SportingGoodsStore.
+
+## Properties
+
+SportingGoodsStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface SportingGoodsStore {
+  $context?: 'schema.org'
+  $type: 'SportingGoodsStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SportingGoodsStore",
+  "name": "Example SportingGoodsStore",
+  "description": "An example of the SportingGoodsStore type",
+  "url": "https://example.com/sportinggoodsstore",
+  "identifier": "example-sportinggoodsstore-1"
+}
+```
+
+## Notes
+
+- SportingGoodsStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

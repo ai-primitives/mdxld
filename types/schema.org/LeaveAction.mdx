@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LeaveAction
+title: LeaveAction
+description: An agent leaves an event / group with participants/friends at a location.\n\nRelated actions:\n\n* [[JoinAction]]: The antonym of LeaveAction.\n* [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.
+properties:
+
+subClasses:
+
+parentClass: InteractAction
+---
+
+# LeaveAction
+
+An agent leaves an event / group with participants/friends at a location.\n\nRelated actions:\n\n* [[JoinAction]]: The antonym of LeaveAction.\n* [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.
+
+## Type Hierarchy
+
+LeaveAction is a type of InteractAction.
+
+### Direct Subtypes
+
+No types directly inherit from LeaveAction.
+
+## Properties
+
+LeaveAction defines the following properties in addition to those inherited from InteractAction:
+
+
+
+## Usage Example
+
+```typescript
+interface LeaveAction {
+  $context?: 'schema.org'
+  $type: 'LeaveAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LeaveAction",
+  "name": "Example LeaveAction",
+  "description": "An example of the LeaveAction type",
+  "url": "https://example.com/leaveaction",
+  "identifier": "example-leaveaction-1"
+}
+```
+
+## Notes
+
+- LeaveAction inherits all properties from InteractAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

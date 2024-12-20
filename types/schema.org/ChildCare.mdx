@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ChildCare
+title: ChildCare
+description: A Childcare center.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# ChildCare
+
+A Childcare center.
+
+## Type Hierarchy
+
+ChildCare is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from ChildCare.
+
+## Properties
+
+ChildCare defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface ChildCare {
+  $context?: 'schema.org'
+  $type: 'ChildCare'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ChildCare",
+  "name": "Example ChildCare",
+  "description": "An example of the ChildCare type",
+  "url": "https://example.com/childcare",
+  "identifier": "example-childcare-1"
+}
+```
+
+## Notes
+
+- ChildCare inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ImageObjectSnapshot
+title: ImageObjectSnapshot
+description: A specific and exact (byte-for-byte) version of an [[ImageObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata (e.g. XMP, EXIF) the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.
+properties:
+
+subClasses:
+
+parentClass: ImageObject
+---
+
+# ImageObjectSnapshot
+
+A specific and exact (byte-for-byte) version of an [[ImageObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata (e.g. XMP, EXIF) the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.
+
+## Type Hierarchy
+
+ImageObjectSnapshot is a type of ImageObject.
+
+### Direct Subtypes
+
+No types directly inherit from ImageObjectSnapshot.
+
+## Properties
+
+ImageObjectSnapshot defines the following properties in addition to those inherited from ImageObject:
+
+
+
+## Usage Example
+
+```typescript
+interface ImageObjectSnapshot {
+  $context?: 'schema.org'
+  $type: 'ImageObjectSnapshot'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ImageObjectSnapshot",
+  "name": "Example ImageObjectSnapshot",
+  "description": "An example of the ImageObjectSnapshot type",
+  "url": "https://example.com/imageobjectsnapshot",
+  "identifier": "example-imageobjectsnapshot-1"
+}
+```
+
+## Notes
+
+- ImageObjectSnapshot inherits all properties from ImageObject
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

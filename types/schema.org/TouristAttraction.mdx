@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TouristAttraction
+title: TouristAttraction
+description: A tourist attraction.  In principle any Thing can be a [[TouristAttraction]], from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a [[LocalBusiness]].  This Type can be used on its own to describe a general [[TouristAttraction]], or be used as an [[additionalType]] to add tourist attraction properties to any other type.  (See examples below)
+properties:
+
+subClasses:
+
+parentClass: Place
+---
+
+# TouristAttraction
+
+A tourist attraction.  In principle any Thing can be a [[TouristAttraction]], from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a [[LocalBusiness]].  This Type can be used on its own to describe a general [[TouristAttraction]], or be used as an [[additionalType]] to add tourist attraction properties to any other type.  (See examples below)
+
+## Type Hierarchy
+
+TouristAttraction is a type of Place.
+
+### Direct Subtypes
+
+No types directly inherit from TouristAttraction.
+
+## Properties
+
+TouristAttraction defines the following properties in addition to those inherited from Place:
+
+
+
+## Usage Example
+
+```typescript
+interface TouristAttraction {
+  $context?: 'schema.org'
+  $type: 'TouristAttraction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TouristAttraction",
+  "name": "Example TouristAttraction",
+  "description": "An example of the TouristAttraction type",
+  "url": "https://example.com/touristattraction",
+  "identifier": "example-touristattraction-1"
+}
+```
+
+## Notes
+
+- TouristAttraction inherits all properties from Place
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

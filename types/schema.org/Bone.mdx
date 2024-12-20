@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Bone
+title: Bone
+description: Rigid connective tissue that comprises up the skeletal structure of the human body.
+properties:
+
+subClasses:
+
+parentClass: AnatomicalStructure
+---
+
+# Bone
+
+Rigid connective tissue that comprises up the skeletal structure of the human body.
+
+## Type Hierarchy
+
+Bone is a type of AnatomicalStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Bone.
+
+## Properties
+
+Bone defines the following properties in addition to those inherited from AnatomicalStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface Bone {
+  $context?: 'schema.org'
+  $type: 'Bone'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Bone",
+  "name": "Example Bone",
+  "description": "An example of the Bone type",
+  "url": "https://example.com/bone",
+  "identifier": "example-bone-1"
+}
+```
+
+## Notes
+
+- Bone inherits all properties from AnatomicalStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

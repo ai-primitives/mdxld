@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: FindAction
+title: FindAction
+description: The act of finding an object.\n\nRelated actions:\n\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.
+properties:
+
+subClasses:
+  - CheckAction
+  - DiscoverAction
+  - TrackAction
+parentClass: Action
+---
+
+# FindAction
+
+The act of finding an object.\n\nRelated actions:\n\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.
+
+## Type Hierarchy
+
+FindAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from FindAction:
+
+- CheckAction: An agent inspects, determines, investigates, inquires, or examines an object's accuracy, quality, condition, or state.
+- DiscoverAction: The act of discovering/finding an object.
+- TrackAction: An agent tracks an object for updates.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.\n* [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.
+
+## Properties
+
+FindAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface FindAction {
+  $context?: 'schema.org'
+  $type: 'FindAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FindAction",
+  "name": "Example FindAction",
+  "description": "An example of the FindAction type",
+  "url": "https://example.com/findaction",
+  "identifier": "example-findaction-1"
+}
+```
+
+## Notes
+
+- FindAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

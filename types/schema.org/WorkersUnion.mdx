@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WorkersUnion
+title: WorkersUnion
+description: A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.
+properties:
+
+subClasses:
+
+parentClass: Organization
+---
+
+# WorkersUnion
+
+A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.
+
+## Type Hierarchy
+
+WorkersUnion is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from WorkersUnion.
+
+## Properties
+
+WorkersUnion defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface WorkersUnion {
+  $context?: 'schema.org'
+  $type: 'WorkersUnion'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WorkersUnion",
+  "name": "Example WorkersUnion",
+  "description": "An example of the WorkersUnion type",
+  "url": "https://example.com/workersunion",
+  "identifier": "example-workersunion-1"
+}
+```
+
+## Notes
+
+- WorkersUnion inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

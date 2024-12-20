@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HowToSupply
+title: HowToSupply
+description: A supply consumed when performing the instructions for how to achieve a result.
+properties:
+
+subClasses:
+
+parentClass: HowToItem
+---
+
+# HowToSupply
+
+A supply consumed when performing the instructions for how to achieve a result.
+
+## Type Hierarchy
+
+HowToSupply is a type of HowToItem.
+
+### Direct Subtypes
+
+No types directly inherit from HowToSupply.
+
+## Properties
+
+HowToSupply defines the following properties in addition to those inherited from HowToItem:
+
+
+
+## Usage Example
+
+```typescript
+interface HowToSupply {
+  $context?: 'schema.org'
+  $type: 'HowToSupply'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HowToSupply",
+  "name": "Example HowToSupply",
+  "description": "An example of the HowToSupply type",
+  "url": "https://example.com/howtosupply",
+  "identifier": "example-howtosupply-1"
+}
+```
+
+## Notes
+
+- HowToSupply inherits all properties from HowToItem
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

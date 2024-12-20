@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PodcastEpisode
+title: PodcastEpisode
+description: A single episode of a podcast series.
+properties:
+
+subClasses:
+
+parentClass: Episode
+---
+
+# PodcastEpisode
+
+A single episode of a podcast series.
+
+## Type Hierarchy
+
+PodcastEpisode is a type of Episode.
+
+### Direct Subtypes
+
+No types directly inherit from PodcastEpisode.
+
+## Properties
+
+PodcastEpisode defines the following properties in addition to those inherited from Episode:
+
+
+
+## Usage Example
+
+```typescript
+interface PodcastEpisode {
+  $context?: 'schema.org'
+  $type: 'PodcastEpisode'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PodcastEpisode",
+  "name": "Example PodcastEpisode",
+  "description": "An example of the PodcastEpisode type",
+  "url": "https://example.com/podcastepisode",
+  "identifier": "example-podcastepisode-1"
+}
+```
+
+## Notes
+
+- PodcastEpisode inherits all properties from Episode
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

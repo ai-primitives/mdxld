@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: RentalCarReservation
+title: RentalCarReservation
+description: A reservation for a rental car.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+properties:
+  - dropoffLocation
+  - dropoffTime
+subClasses:
+
+parentClass: Reservation
+---
+
+# RentalCarReservation
+
+A reservation for a rental car.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+
+## Type Hierarchy
+
+RentalCarReservation is a type of Reservation.
+
+### Direct Subtypes
+
+No types directly inherit from RentalCarReservation.
+
+## Properties
+
+RentalCarReservation defines the following properties in addition to those inherited from Reservation:
+
+- dropoffLocation: Where a rental car can be dropped off.
+- dropoffTime: When a rental car can be dropped off.
+
+## Usage Example
+
+```typescript
+interface RentalCarReservation {
+  $context?: 'schema.org'
+  $type: 'RentalCarReservation'
+  dropoffLocation?: Place
+  dropoffTime?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RentalCarReservation",
+  "name": "Example RentalCarReservation",
+  "description": "An example of the RentalCarReservation type",
+  "url": "https://example.com/rentalcarreservation",
+  "identifier": "example-rentalcarreservation-1"
+}
+```
+
+## Notes
+
+- RentalCarReservation inherits all properties from Reservation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

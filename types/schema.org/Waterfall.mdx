@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Waterfall
+title: Waterfall
+description: A waterfall, like Niagara.
+properties:
+
+subClasses:
+
+parentClass: BodyOfWater
+---
+
+# Waterfall
+
+A waterfall, like Niagara.
+
+## Type Hierarchy
+
+Waterfall is a type of BodyOfWater.
+
+### Direct Subtypes
+
+No types directly inherit from Waterfall.
+
+## Properties
+
+Waterfall defines the following properties in addition to those inherited from BodyOfWater:
+
+
+
+## Usage Example
+
+```typescript
+interface Waterfall {
+  $context?: 'schema.org'
+  $type: 'Waterfall'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Waterfall",
+  "name": "Example Waterfall",
+  "description": "An example of the Waterfall type",
+  "url": "https://example.com/waterfall",
+  "identifier": "example-waterfall-1"
+}
+```
+
+## Notes
+
+- Waterfall inherits all properties from BodyOfWater
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

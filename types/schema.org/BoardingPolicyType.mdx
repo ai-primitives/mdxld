@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BoardingPolicyType
+title: BoardingPolicyType
+description: A type of boarding policy used by an airline.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# BoardingPolicyType
+
+A type of boarding policy used by an airline.
+
+## Type Hierarchy
+
+BoardingPolicyType is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from BoardingPolicyType.
+
+## Properties
+
+BoardingPolicyType defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface BoardingPolicyType {
+  $context?: 'schema.org'
+  $type: 'BoardingPolicyType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BoardingPolicyType",
+  "name": "Example BoardingPolicyType",
+  "description": "An example of the BoardingPolicyType type",
+  "url": "https://example.com/boardingpolicytype",
+  "identifier": "example-boardingpolicytype-1"
+}
+```
+
+## Notes
+
+- BoardingPolicyType inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

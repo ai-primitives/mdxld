@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LoseAction
+title: LoseAction
+description: The act of being defeated in a competitive activity.
+properties:
+  - winner
+subClasses:
+
+parentClass: AchieveAction
+---
+
+# LoseAction
+
+The act of being defeated in a competitive activity.
+
+## Type Hierarchy
+
+LoseAction is a type of AchieveAction.
+
+### Direct Subtypes
+
+No types directly inherit from LoseAction.
+
+## Properties
+
+LoseAction defines the following properties in addition to those inherited from AchieveAction:
+
+- winner: A sub property of participant. The winner of the action.
+
+## Usage Example
+
+```typescript
+interface LoseAction {
+  $context?: 'schema.org'
+  $type: 'LoseAction'
+  winner?: Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LoseAction",
+  "name": "Example LoseAction",
+  "description": "An example of the LoseAction type",
+  "url": "https://example.com/loseaction",
+  "identifier": "example-loseaction-1"
+}
+```
+
+## Notes
+
+- LoseAction inherits all properties from AchieveAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

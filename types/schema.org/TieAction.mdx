@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TieAction
+title: TieAction
+description: The act of reaching a draw in a competitive activity.
+properties:
+
+subClasses:
+
+parentClass: AchieveAction
+---
+
+# TieAction
+
+The act of reaching a draw in a competitive activity.
+
+## Type Hierarchy
+
+TieAction is a type of AchieveAction.
+
+### Direct Subtypes
+
+No types directly inherit from TieAction.
+
+## Properties
+
+TieAction defines the following properties in addition to those inherited from AchieveAction:
+
+
+
+## Usage Example
+
+```typescript
+interface TieAction {
+  $context?: 'schema.org'
+  $type: 'TieAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TieAction",
+  "name": "Example TieAction",
+  "description": "An example of the TieAction type",
+  "url": "https://example.com/tieaction",
+  "identifier": "example-tieaction-1"
+}
+```
+
+## Notes
+
+- TieAction inherits all properties from AchieveAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SaleEvent
+title: SaleEvent
+description: Event type: Sales event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# SaleEvent
+
+Event type: Sales event.
+
+## Type Hierarchy
+
+SaleEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from SaleEvent.
+
+## Properties
+
+SaleEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface SaleEvent {
+  $context?: 'schema.org'
+  $type: 'SaleEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SaleEvent",
+  "name": "Example SaleEvent",
+  "description": "An example of the SaleEvent type",
+  "url": "https://example.com/saleevent",
+  "identifier": "example-saleevent-1"
+}
+```
+
+## Notes
+
+- SaleEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

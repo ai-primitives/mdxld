@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: MusicGroup
+title: MusicGroup
+description: A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.
+properties:
+  - album
+  - albums
+  - musicGroupMember
+subClasses:
+
+parentClass: PerformingGroup
+---
+
+# MusicGroup
+
+A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.
+
+## Type Hierarchy
+
+MusicGroup is a type of PerformingGroup.
+
+### Direct Subtypes
+
+No types directly inherit from MusicGroup.
+
+## Properties
+
+MusicGroup defines the following properties in addition to those inherited from PerformingGroup:
+
+- album: A music album.
+- albums: A collection of music albums.
+- musicGroupMember: A member of a music group&#x2014;for example, John, Paul, George, or Ringo.
+
+## Usage Example
+
+```typescript
+interface MusicGroup {
+  $context?: 'schema.org'
+  $type: 'MusicGroup'
+  album?: MusicAlbum
+  albums?: MusicAlbum
+  musicGroupMember?: Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicGroup",
+  "name": "Example MusicGroup",
+  "description": "An example of the MusicGroup type",
+  "url": "https://example.com/musicgroup",
+  "identifier": "example-musicgroup-1"
+}
+```
+
+## Notes
+
+- MusicGroup inherits all properties from PerformingGroup
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

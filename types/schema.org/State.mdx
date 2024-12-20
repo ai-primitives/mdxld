@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: State
+title: State
+description: A state or province of a country.
+properties:
+
+subClasses:
+
+parentClass: AdministrativeArea
+---
+
+# State
+
+A state or province of a country.
+
+## Type Hierarchy
+
+State is a type of AdministrativeArea.
+
+### Direct Subtypes
+
+No types directly inherit from State.
+
+## Properties
+
+State defines the following properties in addition to those inherited from AdministrativeArea:
+
+
+
+## Usage Example
+
+```typescript
+interface State {
+  $context?: 'schema.org'
+  $type: 'State'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "State",
+  "name": "Example State",
+  "description": "An example of the State type",
+  "url": "https://example.com/state",
+  "identifier": "example-state-1"
+}
+```
+
+## Notes
+
+- State inherits all properties from AdministrativeArea
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

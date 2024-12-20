@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PhysiciansOffice
+title: PhysiciansOffice
+description: A doctor's office or clinic.
+properties:
+
+subClasses:
+
+parentClass: Physician
+---
+
+# PhysiciansOffice
+
+A doctor's office or clinic.
+
+## Type Hierarchy
+
+PhysiciansOffice is a type of Physician.
+
+### Direct Subtypes
+
+No types directly inherit from PhysiciansOffice.
+
+## Properties
+
+PhysiciansOffice defines the following properties in addition to those inherited from Physician:
+
+
+
+## Usage Example
+
+```typescript
+interface PhysiciansOffice {
+  $context?: 'schema.org'
+  $type: 'PhysiciansOffice'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PhysiciansOffice",
+  "name": "Example PhysiciansOffice",
+  "description": "An example of the PhysiciansOffice type",
+  "url": "https://example.com/physiciansoffice",
+  "identifier": "example-physiciansoffice-1"
+}
+```
+
+## Notes
+
+- PhysiciansOffice inherits all properties from Physician
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: FoodEstablishmentReservation
+title: FoodEstablishmentReservation
+description: A reservation to dine at a food-related business.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+properties:
+
+subClasses:
+
+parentClass: Reservation
+---
+
+# FoodEstablishmentReservation
+
+A reservation to dine at a food-related business.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+
+## Type Hierarchy
+
+FoodEstablishmentReservation is a type of Reservation.
+
+### Direct Subtypes
+
+No types directly inherit from FoodEstablishmentReservation.
+
+## Properties
+
+FoodEstablishmentReservation defines the following properties in addition to those inherited from Reservation:
+
+
+
+## Usage Example
+
+```typescript
+interface FoodEstablishmentReservation {
+  $context?: 'schema.org'
+  $type: 'FoodEstablishmentReservation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FoodEstablishmentReservation",
+  "name": "Example FoodEstablishmentReservation",
+  "description": "An example of the FoodEstablishmentReservation type",
+  "url": "https://example.com/foodestablishmentreservation",
+  "identifier": "example-foodestablishmentreservation-1"
+}
+```
+
+## Notes
+
+- FoodEstablishmentReservation inherits all properties from Reservation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

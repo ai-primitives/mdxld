@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AboutPage
+title: AboutPage
+description: Web page type: About page.
+properties:
+
+subClasses:
+
+parentClass: WebPage
+---
+
+# AboutPage
+
+Web page type: About page.
+
+## Type Hierarchy
+
+AboutPage is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from AboutPage.
+
+## Properties
+
+AboutPage defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface AboutPage {
+  $context?: 'schema.org'
+  $type: 'AboutPage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AboutPage",
+  "name": "Example AboutPage",
+  "description": "An example of the AboutPage type",
+  "url": "https://example.com/aboutpage",
+  "identifier": "example-aboutpage-1"
+}
+```
+
+## Notes
+
+- AboutPage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

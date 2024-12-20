@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: NonprofitType
+title: NonprofitType
+description: NonprofitType enumerates several kinds of official non-profit types of which a non-profit organization can be.
+properties:
+
+subClasses:
+  - NLNonprofitType
+  - UKNonprofitType
+  - USNonprofitType
+parentClass: Enumeration
+---
+
+# NonprofitType
+
+NonprofitType enumerates several kinds of official non-profit types of which a non-profit organization can be.
+
+## Type Hierarchy
+
+NonprofitType is a type of Enumeration.
+
+### Direct Subtypes
+
+The following types directly inherit from NonprofitType:
+
+- NLNonprofitType: NLNonprofitType: Non-profit organization type originating from the Netherlands.
+- UKNonprofitType: UKNonprofitType: Non-profit organization type originating from the United Kingdom.
+- USNonprofitType: USNonprofitType: Non-profit organization type originating from the United States.
+
+## Properties
+
+NonprofitType defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface NonprofitType {
+  $context?: 'schema.org'
+  $type: 'NonprofitType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "NonprofitType",
+  "name": "Example NonprofitType",
+  "description": "An example of the NonprofitType type",
+  "url": "https://example.com/nonprofittype",
+  "identifier": "example-nonprofittype-1"
+}
+```
+
+## Notes
+
+- NonprofitType inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

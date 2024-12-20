@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SocialEvent
+title: SocialEvent
+description: Event type: Social event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# SocialEvent
+
+Event type: Social event.
+
+## Type Hierarchy
+
+SocialEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from SocialEvent.
+
+## Properties
+
+SocialEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface SocialEvent {
+  $context?: 'schema.org'
+  $type: 'SocialEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SocialEvent",
+  "name": "Example SocialEvent",
+  "description": "An example of the SocialEvent type",
+  "url": "https://example.com/socialevent",
+  "identifier": "example-socialevent-1"
+}
+```
+
+## Notes
+
+- SocialEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

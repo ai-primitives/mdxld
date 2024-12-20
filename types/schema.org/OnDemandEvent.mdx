@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OnDemandEvent
+title: OnDemandEvent
+description: A publication event, e.g. catch-up TV or radio podcast, during which a program is available on-demand.
+properties:
+
+subClasses:
+
+parentClass: PublicationEvent
+---
+
+# OnDemandEvent
+
+A publication event, e.g. catch-up TV or radio podcast, during which a program is available on-demand.
+
+## Type Hierarchy
+
+OnDemandEvent is a type of PublicationEvent.
+
+### Direct Subtypes
+
+No types directly inherit from OnDemandEvent.
+
+## Properties
+
+OnDemandEvent defines the following properties in addition to those inherited from PublicationEvent:
+
+
+
+## Usage Example
+
+```typescript
+interface OnDemandEvent {
+  $context?: 'schema.org'
+  $type: 'OnDemandEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OnDemandEvent",
+  "name": "Example OnDemandEvent",
+  "description": "An example of the OnDemandEvent type",
+  "url": "https://example.com/ondemandevent",
+  "identifier": "example-ondemandevent-1"
+}
+```
+
+## Notes
+
+- OnDemandEvent inherits all properties from PublicationEvent
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

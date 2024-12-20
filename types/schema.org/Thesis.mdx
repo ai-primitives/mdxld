@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Thesis
+title: Thesis
+description: A thesis or dissertation document submitted in support of candidature for an academic degree or professional qualification.
+properties:
+  - inSupportOf
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Thesis
+
+A thesis or dissertation document submitted in support of candidature for an academic degree or professional qualification.
+
+## Type Hierarchy
+
+Thesis is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Thesis.
+
+## Properties
+
+Thesis defines the following properties in addition to those inherited from CreativeWork:
+
+- inSupportOf: Qualification, candidature, degree, application that Thesis supports.
+
+## Usage Example
+
+```typescript
+interface Thesis {
+  $context?: 'schema.org'
+  $type: 'Thesis'
+  inSupportOf?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Thesis",
+  "name": "Example Thesis",
+  "description": "An example of the Thesis type",
+  "url": "https://example.com/thesis",
+  "identifier": "example-thesis-1"
+}
+```
+
+## Notes
+
+- Thesis inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

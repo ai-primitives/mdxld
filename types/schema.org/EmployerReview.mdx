@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EmployerReview
+title: EmployerReview
+description: An [[EmployerReview]] is a review of an [[Organization]] regarding its role as an employer, written by a current or former employee of that organization.
+properties:
+
+subClasses:
+
+parentClass: Review
+---
+
+# EmployerReview
+
+An [[EmployerReview]] is a review of an [[Organization]] regarding its role as an employer, written by a current or former employee of that organization.
+
+## Type Hierarchy
+
+EmployerReview is a type of Review.
+
+### Direct Subtypes
+
+No types directly inherit from EmployerReview.
+
+## Properties
+
+EmployerReview defines the following properties in addition to those inherited from Review:
+
+
+
+## Usage Example
+
+```typescript
+interface EmployerReview {
+  $context?: 'schema.org'
+  $type: 'EmployerReview'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EmployerReview",
+  "name": "Example EmployerReview",
+  "description": "An example of the EmployerReview type",
+  "url": "https://example.com/employerreview",
+  "identifier": "example-employerreview-1"
+}
+```
+
+## Notes
+
+- EmployerReview inherits all properties from Review
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

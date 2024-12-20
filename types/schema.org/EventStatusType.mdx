@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EventStatusType
+title: EventStatusType
+description: EventStatusType is an enumeration type whose instances represent several states that an Event may be in.
+properties:
+
+subClasses:
+
+parentClass: StatusEnumeration
+---
+
+# EventStatusType
+
+EventStatusType is an enumeration type whose instances represent several states that an Event may be in.
+
+## Type Hierarchy
+
+EventStatusType is a type of StatusEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from EventStatusType.
+
+## Properties
+
+EventStatusType defines the following properties in addition to those inherited from StatusEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface EventStatusType {
+  $context?: 'schema.org'
+  $type: 'EventStatusType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EventStatusType",
+  "name": "Example EventStatusType",
+  "description": "An example of the EventStatusType type",
+  "url": "https://example.com/eventstatustype",
+  "identifier": "example-eventstatustype-1"
+}
+```
+
+## Notes
+
+- EventStatusType inherits all properties from StatusEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

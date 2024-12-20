@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Winery
+title: Winery
+description: A winery.
+properties:
+
+subClasses:
+
+parentClass: FoodEstablishment
+---
+
+# Winery
+
+A winery.
+
+## Type Hierarchy
+
+Winery is a type of FoodEstablishment.
+
+### Direct Subtypes
+
+No types directly inherit from Winery.
+
+## Properties
+
+Winery defines the following properties in addition to those inherited from FoodEstablishment:
+
+
+
+## Usage Example
+
+```typescript
+interface Winery {
+  $context?: 'schema.org'
+  $type: 'Winery'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Winery",
+  "name": "Example Winery",
+  "description": "An example of the Winery type",
+  "url": "https://example.com/winery",
+  "identifier": "example-winery-1"
+}
+```
+
+## Notes
+
+- Winery inherits all properties from FoodEstablishment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Festival
+title: Festival
+description: Event type: Festival.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# Festival
+
+Event type: Festival.
+
+## Type Hierarchy
+
+Festival is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from Festival.
+
+## Properties
+
+Festival defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface Festival {
+  $context?: 'schema.org'
+  $type: 'Festival'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Festival",
+  "name": "Example Festival",
+  "description": "An example of the Festival type",
+  "url": "https://example.com/festival",
+  "identifier": "example-festival-1"
+}
+```
+
+## Notes
+
+- Festival inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

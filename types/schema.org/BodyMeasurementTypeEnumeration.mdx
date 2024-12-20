@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BodyMeasurementTypeEnumeration
+title: BodyMeasurementTypeEnumeration
+description: Enumerates types (or dimensions) of a person's body measurements, for example for fitting of clothes.
+properties:
+
+subClasses:
+
+parentClass: MeasurementTypeEnumeration
+---
+
+# BodyMeasurementTypeEnumeration
+
+Enumerates types (or dimensions) of a person's body measurements, for example for fitting of clothes.
+
+## Type Hierarchy
+
+BodyMeasurementTypeEnumeration is a type of MeasurementTypeEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from BodyMeasurementTypeEnumeration.
+
+## Properties
+
+BodyMeasurementTypeEnumeration defines the following properties in addition to those inherited from MeasurementTypeEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface BodyMeasurementTypeEnumeration {
+  $context?: 'schema.org'
+  $type: 'BodyMeasurementTypeEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BodyMeasurementTypeEnumeration",
+  "name": "Example BodyMeasurementTypeEnumeration",
+  "description": "An example of the BodyMeasurementTypeEnumeration type",
+  "url": "https://example.com/bodymeasurementtypeenumeration",
+  "identifier": "example-bodymeasurementtypeenumeration-1"
+}
+```
+
+## Notes
+
+- BodyMeasurementTypeEnumeration inherits all properties from MeasurementTypeEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

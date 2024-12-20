@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Brewery
+title: Brewery
+description: Brewery.
+properties:
+
+subClasses:
+
+parentClass: FoodEstablishment
+---
+
+# Brewery
+
+Brewery.
+
+## Type Hierarchy
+
+Brewery is a type of FoodEstablishment.
+
+### Direct Subtypes
+
+No types directly inherit from Brewery.
+
+## Properties
+
+Brewery defines the following properties in addition to those inherited from FoodEstablishment:
+
+
+
+## Usage Example
+
+```typescript
+interface Brewery {
+  $context?: 'schema.org'
+  $type: 'Brewery'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Brewery",
+  "name": "Example Brewery",
+  "description": "An example of the Brewery type",
+  "url": "https://example.com/brewery",
+  "identifier": "example-brewery-1"
+}
+```
+
+## Notes
+
+- Brewery inherits all properties from FoodEstablishment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

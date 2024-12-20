@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DrinkAction
+title: DrinkAction
+description: The act of swallowing liquids.
+properties:
+
+subClasses:
+
+parentClass: ConsumeAction
+---
+
+# DrinkAction
+
+The act of swallowing liquids.
+
+## Type Hierarchy
+
+DrinkAction is a type of ConsumeAction.
+
+### Direct Subtypes
+
+No types directly inherit from DrinkAction.
+
+## Properties
+
+DrinkAction defines the following properties in addition to those inherited from ConsumeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DrinkAction {
+  $context?: 'schema.org'
+  $type: 'DrinkAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DrinkAction",
+  "name": "Example DrinkAction",
+  "description": "An example of the DrinkAction type",
+  "url": "https://example.com/drinkaction",
+  "identifier": "example-drinkaction-1"
+}
+```
+
+## Notes
+
+- DrinkAction inherits all properties from ConsumeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

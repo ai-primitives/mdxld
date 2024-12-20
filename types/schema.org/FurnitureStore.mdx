@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: FurnitureStore
+title: FurnitureStore
+description: A furniture store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# FurnitureStore
+
+A furniture store.
+
+## Type Hierarchy
+
+FurnitureStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from FurnitureStore.
+
+## Properties
+
+FurnitureStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface FurnitureStore {
+  $context?: 'schema.org'
+  $type: 'FurnitureStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FurnitureStore",
+  "name": "Example FurnitureStore",
+  "description": "An example of the FurnitureStore type",
+  "url": "https://example.com/furniturestore",
+  "identifier": "example-furniturestore-1"
+}
+```
+
+## Notes
+
+- FurnitureStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ApprovedIndication
+title: ApprovedIndication
+description: An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.
+properties:
+
+subClasses:
+
+parentClass: MedicalIndication
+---
+
+# ApprovedIndication
+
+An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.
+
+## Type Hierarchy
+
+ApprovedIndication is a type of MedicalIndication.
+
+### Direct Subtypes
+
+No types directly inherit from ApprovedIndication.
+
+## Properties
+
+ApprovedIndication defines the following properties in addition to those inherited from MedicalIndication:
+
+
+
+## Usage Example
+
+```typescript
+interface ApprovedIndication {
+  $context?: 'schema.org'
+  $type: 'ApprovedIndication'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ApprovedIndication",
+  "name": "Example ApprovedIndication",
+  "description": "An example of the ApprovedIndication type",
+  "url": "https://example.com/approvedindication",
+  "identifier": "example-approvedindication-1"
+}
+```
+
+## Notes
+
+- ApprovedIndication inherits all properties from MedicalIndication
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TouristInformationCenter
+title: TouristInformationCenter
+description: A tourist information center.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# TouristInformationCenter
+
+A tourist information center.
+
+## Type Hierarchy
+
+TouristInformationCenter is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from TouristInformationCenter.
+
+## Properties
+
+TouristInformationCenter defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface TouristInformationCenter {
+  $context?: 'schema.org'
+  $type: 'TouristInformationCenter'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TouristInformationCenter",
+  "name": "Example TouristInformationCenter",
+  "description": "An example of the TouristInformationCenter type",
+  "url": "https://example.com/touristinformationcenter",
+  "identifier": "example-touristinformationcenter-1"
+}
+```
+
+## Notes
+
+- TouristInformationCenter inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalRiskFactor
+title: MedicalRiskFactor
+description: A risk factor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication.
+properties:
+  - increasesRiskOf
+subClasses:
+
+parentClass: MedicalEntity
+---
+
+# MedicalRiskFactor
+
+A risk factor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication.
+
+## Type Hierarchy
+
+MedicalRiskFactor is a type of MedicalEntity.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalRiskFactor.
+
+## Properties
+
+MedicalRiskFactor defines the following properties in addition to those inherited from MedicalEntity:
+
+- increasesRiskOf: The condition, complication, etc. influenced by this factor.
+
+## Usage Example
+
+```typescript
+interface MedicalRiskFactor {
+  $context?: 'schema.org'
+  $type: 'MedicalRiskFactor'
+  increasesRiskOf?: MedicalEntity
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalRiskFactor",
+  "name": "Example MedicalRiskFactor",
+  "description": "An example of the MedicalRiskFactor type",
+  "url": "https://example.com/medicalriskfactor",
+  "identifier": "example-medicalriskfactor-1"
+}
+```
+
+## Notes
+
+- MedicalRiskFactor inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

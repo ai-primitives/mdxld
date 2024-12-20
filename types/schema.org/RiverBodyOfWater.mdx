@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RiverBodyOfWater
+title: RiverBodyOfWater
+description: A river (for example, the broad majestic Shannon).
+properties:
+
+subClasses:
+
+parentClass: BodyOfWater
+---
+
+# RiverBodyOfWater
+
+A river (for example, the broad majestic Shannon).
+
+## Type Hierarchy
+
+RiverBodyOfWater is a type of BodyOfWater.
+
+### Direct Subtypes
+
+No types directly inherit from RiverBodyOfWater.
+
+## Properties
+
+RiverBodyOfWater defines the following properties in addition to those inherited from BodyOfWater:
+
+
+
+## Usage Example
+
+```typescript
+interface RiverBodyOfWater {
+  $context?: 'schema.org'
+  $type: 'RiverBodyOfWater'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RiverBodyOfWater",
+  "name": "Example RiverBodyOfWater",
+  "description": "An example of the RiverBodyOfWater type",
+  "url": "https://example.com/riverbodyofwater",
+  "identifier": "example-riverbodyofwater-1"
+}
+```
+
+## Notes
+
+- RiverBodyOfWater inherits all properties from BodyOfWater
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

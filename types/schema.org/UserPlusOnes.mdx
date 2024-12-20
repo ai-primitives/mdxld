@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UserPlusOnes
+title: UserPlusOnes
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+
+subClasses:
+
+parentClass: UserInteraction
+---
+
+# UserPlusOnes
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserPlusOnes is a type of UserInteraction.
+
+### Direct Subtypes
+
+No types directly inherit from UserPlusOnes.
+
+## Properties
+
+UserPlusOnes defines the following properties in addition to those inherited from UserInteraction:
+
+
+
+## Usage Example
+
+```typescript
+interface UserPlusOnes {
+  $context?: 'schema.org'
+  $type: 'UserPlusOnes'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserPlusOnes",
+  "name": "Example UserPlusOnes",
+  "description": "An example of the UserPlusOnes type",
+  "url": "https://example.com/userplusones",
+  "identifier": "example-userplusones-1"
+}
+```
+
+## Notes
+
+- UserPlusOnes inherits all properties from UserInteraction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

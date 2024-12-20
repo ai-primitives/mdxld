@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AdultEntertainment
+title: AdultEntertainment
+description: An adult entertainment establishment.
+properties:
+
+subClasses:
+
+parentClass: EntertainmentBusiness
+---
+
+# AdultEntertainment
+
+An adult entertainment establishment.
+
+## Type Hierarchy
+
+AdultEntertainment is a type of EntertainmentBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from AdultEntertainment.
+
+## Properties
+
+AdultEntertainment defines the following properties in addition to those inherited from EntertainmentBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface AdultEntertainment {
+  $context?: 'schema.org'
+  $type: 'AdultEntertainment'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AdultEntertainment",
+  "name": "Example AdultEntertainment",
+  "description": "An example of the AdultEntertainment type",
+  "url": "https://example.com/adultentertainment",
+  "identifier": "example-adultentertainment-1"
+}
+```
+
+## Notes
+
+- AdultEntertainment inherits all properties from EntertainmentBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

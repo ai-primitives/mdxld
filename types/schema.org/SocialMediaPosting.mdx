@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: SocialMediaPosting
+title: SocialMediaPosting
+description: A post to a social media platform, including blog posts, tweets, Facebook posts, etc.
+properties:
+
+subClasses:
+  - BlogPosting
+  - DiscussionForumPosting
+parentClass: Article
+---
+
+# SocialMediaPosting
+
+A post to a social media platform, including blog posts, tweets, Facebook posts, etc.
+
+## Type Hierarchy
+
+SocialMediaPosting is a type of Article.
+
+### Direct Subtypes
+
+The following types directly inherit from SocialMediaPosting:
+
+- BlogPosting: A blog post.
+- DiscussionForumPosting: A posting to a discussion forum.
+
+## Properties
+
+SocialMediaPosting defines the following properties in addition to those inherited from Article:
+
+
+
+## Usage Example
+
+```typescript
+interface SocialMediaPosting {
+  $context?: 'schema.org'
+  $type: 'SocialMediaPosting'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SocialMediaPosting",
+  "name": "Example SocialMediaPosting",
+  "description": "An example of the SocialMediaPosting type",
+  "url": "https://example.com/socialmediaposting",
+  "identifier": "example-socialmediaposting-1"
+}
+```
+
+## Notes
+
+- SocialMediaPosting inherits all properties from Article
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

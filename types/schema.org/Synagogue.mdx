@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Synagogue
+title: Synagogue
+description: A synagogue.
+properties:
+
+subClasses:
+
+parentClass: PlaceOfWorship
+---
+
+# Synagogue
+
+A synagogue.
+
+## Type Hierarchy
+
+Synagogue is a type of PlaceOfWorship.
+
+### Direct Subtypes
+
+No types directly inherit from Synagogue.
+
+## Properties
+
+Synagogue defines the following properties in addition to those inherited from PlaceOfWorship:
+
+
+
+## Usage Example
+
+```typescript
+interface Synagogue {
+  $context?: 'schema.org'
+  $type: 'Synagogue'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Synagogue",
+  "name": "Example Synagogue",
+  "description": "An example of the Synagogue type",
+  "url": "https://example.com/synagogue",
+  "identifier": "example-synagogue-1"
+}
+```
+
+## Notes
+
+- Synagogue inherits all properties from PlaceOfWorship
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

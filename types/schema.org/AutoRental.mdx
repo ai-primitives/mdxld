@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AutoRental
+title: AutoRental
+description: A car rental business.
+properties:
+
+subClasses:
+
+parentClass: AutomotiveBusiness
+---
+
+# AutoRental
+
+A car rental business.
+
+## Type Hierarchy
+
+AutoRental is a type of AutomotiveBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from AutoRental.
+
+## Properties
+
+AutoRental defines the following properties in addition to those inherited from AutomotiveBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface AutoRental {
+  $context?: 'schema.org'
+  $type: 'AutoRental'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AutoRental",
+  "name": "Example AutoRental",
+  "description": "An example of the AutoRental type",
+  "url": "https://example.com/autorental",
+  "identifier": "example-autorental-1"
+}
+```
+
+## Notes
+
+- AutoRental inherits all properties from AutomotiveBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

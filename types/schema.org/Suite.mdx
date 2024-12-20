@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Suite
+title: Suite
+description: A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Suite_(hotel)">http://en.wikipedia.org/wiki/Suite_(hotel)</a>).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+properties:
+
+subClasses:
+
+parentClass: Accommodation
+---
+
+# Suite
+
+A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Suite_(hotel)">http://en.wikipedia.org/wiki/Suite_(hotel)</a>).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+
+## Type Hierarchy
+
+Suite is a type of Accommodation.
+
+### Direct Subtypes
+
+No types directly inherit from Suite.
+
+## Properties
+
+Suite defines the following properties in addition to those inherited from Accommodation:
+
+
+
+## Usage Example
+
+```typescript
+interface Suite {
+  $context?: 'schema.org'
+  $type: 'Suite'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Suite",
+  "name": "Example Suite",
+  "description": "An example of the Suite type",
+  "url": "https://example.com/suite",
+  "identifier": "example-suite-1"
+}
+```
+
+## Notes
+
+- Suite inherits all properties from Accommodation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

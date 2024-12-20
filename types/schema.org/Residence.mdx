@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: Residence
+title: Residence
+description: The place where a person lives.
+properties:
+
+subClasses:
+  - ApartmentComplex
+  - GatedResidenceCommunity
+parentClass: Place
+---
+
+# Residence
+
+The place where a person lives.
+
+## Type Hierarchy
+
+Residence is a type of Place.
+
+### Direct Subtypes
+
+The following types directly inherit from Residence:
+
+- ApartmentComplex: Residence type: Apartment complex.
+- GatedResidenceCommunity: Residence type: Gated community.
+
+## Properties
+
+Residence defines the following properties in addition to those inherited from Place:
+
+
+
+## Usage Example
+
+```typescript
+interface Residence {
+  $context?: 'schema.org'
+  $type: 'Residence'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Residence",
+  "name": "Example Residence",
+  "description": "An example of the Residence type",
+  "url": "https://example.com/residence",
+  "identifier": "example-residence-1"
+}
+```
+
+## Notes
+
+- Residence inherits all properties from Place
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

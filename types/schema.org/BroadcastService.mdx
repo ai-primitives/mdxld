@@ -1,0 +1,79 @@
+---
+$context: schema.org
+$type: BroadcastService
+title: BroadcastService
+description: A delivery service through which content is provided via broadcast over the air or online.
+properties:
+  - area
+  - broadcastAffiliateOf
+  - broadcastDisplayName
+  - broadcastTimezone
+  - broadcaster
+  - hasBroadcastChannel
+  - parentService
+subClasses:
+  - RadioBroadcastService
+parentClass: Service
+---
+
+# BroadcastService
+
+A delivery service through which content is provided via broadcast over the air or online.
+
+## Type Hierarchy
+
+BroadcastService is a type of Service.
+
+### Direct Subtypes
+
+The following types directly inherit from BroadcastService:
+
+- RadioBroadcastService: A delivery service through which radio content is provided via broadcast over the air or online.
+
+## Properties
+
+BroadcastService defines the following properties in addition to those inherited from Service:
+
+- area: The area within which users can expect to reach the broadcast service.
+- broadcastAffiliateOf: The media network(s) whose content is broadcast on this station.
+- broadcastDisplayName: The name displayed in the channel guide. For many US affiliates, it is the network name.
+- broadcaster: The organization owning or operating the broadcast service.
+- broadcastTimezone: The timezone in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601) for which the service bases its broadcasts.
+- hasBroadcastChannel: A broadcast channel of a broadcast service.
+- parentService: A broadcast service to which the broadcast service may belong to such as regional variations of a national channel.
+
+## Usage Example
+
+```typescript
+interface BroadcastService {
+  $context?: 'schema.org'
+  $type: 'BroadcastService'
+  area?: Place
+  broadcastAffiliateOf?: Organization
+  broadcastDisplayName?: string
+  broadcaster?: Organization
+  broadcastTimezone?: string
+  hasBroadcastChannel?: BroadcastChannel
+  parentService?: BroadcastService
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BroadcastService",
+  "name": "Example BroadcastService",
+  "description": "An example of the BroadcastService type",
+  "url": "https://example.com/broadcastservice",
+  "identifier": "example-broadcastservice-1"
+}
+```
+
+## Notes
+
+- BroadcastService inherits all properties from Service
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

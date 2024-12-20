@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SelfStorage
+title: SelfStorage
+description: A self-storage facility.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# SelfStorage
+
+A self-storage facility.
+
+## Type Hierarchy
+
+SelfStorage is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from SelfStorage.
+
+## Properties
+
+SelfStorage defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface SelfStorage {
+  $context?: 'schema.org'
+  $type: 'SelfStorage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SelfStorage",
+  "name": "Example SelfStorage",
+  "description": "An example of the SelfStorage type",
+  "url": "https://example.com/selfstorage",
+  "identifier": "example-selfstorage-1"
+}
+```
+
+## Notes
+
+- SelfStorage inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

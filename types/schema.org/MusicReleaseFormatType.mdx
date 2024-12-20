@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MusicReleaseFormatType
+title: MusicReleaseFormatType
+description: Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# MusicReleaseFormatType
+
+Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
+
+## Type Hierarchy
+
+MusicReleaseFormatType is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MusicReleaseFormatType.
+
+## Properties
+
+MusicReleaseFormatType defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MusicReleaseFormatType {
+  $context?: 'schema.org'
+  $type: 'MusicReleaseFormatType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicReleaseFormatType",
+  "name": "Example MusicReleaseFormatType",
+  "description": "An example of the MusicReleaseFormatType type",
+  "url": "https://example.com/musicreleaseformattype",
+  "identifier": "example-musicreleaseformattype-1"
+}
+```
+
+## Notes
+
+- MusicReleaseFormatType inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

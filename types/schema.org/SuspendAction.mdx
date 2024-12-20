@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SuspendAction
+title: SuspendAction
+description: The act of momentarily pausing a device or application (e.g. pause music playback or pause a timer).
+properties:
+
+subClasses:
+
+parentClass: ControlAction
+---
+
+# SuspendAction
+
+The act of momentarily pausing a device or application (e.g. pause music playback or pause a timer).
+
+## Type Hierarchy
+
+SuspendAction is a type of ControlAction.
+
+### Direct Subtypes
+
+No types directly inherit from SuspendAction.
+
+## Properties
+
+SuspendAction defines the following properties in addition to those inherited from ControlAction:
+
+
+
+## Usage Example
+
+```typescript
+interface SuspendAction {
+  $context?: 'schema.org'
+  $type: 'SuspendAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SuspendAction",
+  "name": "Example SuspendAction",
+  "description": "An example of the SuspendAction type",
+  "url": "https://example.com/suspendaction",
+  "identifier": "example-suspendaction-1"
+}
+```
+
+## Notes
+
+- SuspendAction inherits all properties from ControlAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

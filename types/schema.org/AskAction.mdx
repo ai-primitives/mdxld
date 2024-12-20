@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AskAction
+title: AskAction
+description: The act of posing a question / favor to someone.\n\nRelated actions:\n\n* [[ReplyAction]]: Appears generally as a response to AskAction.
+properties:
+  - question
+subClasses:
+
+parentClass: CommunicateAction
+---
+
+# AskAction
+
+The act of posing a question / favor to someone.\n\nRelated actions:\n\n* [[ReplyAction]]: Appears generally as a response to AskAction.
+
+## Type Hierarchy
+
+AskAction is a type of CommunicateAction.
+
+### Direct Subtypes
+
+No types directly inherit from AskAction.
+
+## Properties
+
+AskAction defines the following properties in addition to those inherited from CommunicateAction:
+
+- question: A sub property of object. A question.
+
+## Usage Example
+
+```typescript
+interface AskAction {
+  $context?: 'schema.org'
+  $type: 'AskAction'
+  question?: Question
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AskAction",
+  "name": "Example AskAction",
+  "description": "An example of the AskAction type",
+  "url": "https://example.com/askaction",
+  "identifier": "example-askaction-1"
+}
+```
+
+## Notes
+
+- AskAction inherits all properties from CommunicateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: AllocateAction
+title: AllocateAction
+description: The act of organizing tasks/objects/events by associating resources to it.
+properties:
+
+subClasses:
+  - AcceptAction
+  - AssignAction
+  - AuthorizeAction
+  - RejectAction
+parentClass: OrganizeAction
+---
+
+# AllocateAction
+
+The act of organizing tasks/objects/events by associating resources to it.
+
+## Type Hierarchy
+
+AllocateAction is a type of OrganizeAction.
+
+### Direct Subtypes
+
+The following types directly inherit from AllocateAction:
+
+- AcceptAction: The act of committing to/adopting an object.\n\nRelated actions:\n\n* [[RejectAction]]: The antonym of AcceptAction.
+- AssignAction: The act of allocating an action/event/task to some destination (someone or something).
+- AuthorizeAction: The act of granting permission to an object.
+- RejectAction: The act of rejecting to/adopting an object.\n\nRelated actions:\n\n* [[AcceptAction]]: The antonym of RejectAction.
+
+## Properties
+
+AllocateAction defines the following properties in addition to those inherited from OrganizeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface AllocateAction {
+  $context?: 'schema.org'
+  $type: 'AllocateAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AllocateAction",
+  "name": "Example AllocateAction",
+  "description": "An example of the AllocateAction type",
+  "url": "https://example.com/allocateaction",
+  "identifier": "example-allocateaction-1"
+}
+```
+
+## Notes
+
+- AllocateAction inherits all properties from OrganizeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ConvenienceStore
+title: ConvenienceStore
+description: A convenience store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# ConvenienceStore
+
+A convenience store.
+
+## Type Hierarchy
+
+ConvenienceStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from ConvenienceStore.
+
+## Properties
+
+ConvenienceStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface ConvenienceStore {
+  $context?: 'schema.org'
+  $type: 'ConvenienceStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ConvenienceStore",
+  "name": "Example ConvenienceStore",
+  "description": "An example of the ConvenienceStore type",
+  "url": "https://example.com/conveniencestore",
+  "identifier": "example-conveniencestore-1"
+}
+```
+
+## Notes
+
+- ConvenienceStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

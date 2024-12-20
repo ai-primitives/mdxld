@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PhotographAction
+title: PhotographAction
+description: The act of capturing still images of objects using a camera.
+properties:
+
+subClasses:
+
+parentClass: CreateAction
+---
+
+# PhotographAction
+
+The act of capturing still images of objects using a camera.
+
+## Type Hierarchy
+
+PhotographAction is a type of CreateAction.
+
+### Direct Subtypes
+
+No types directly inherit from PhotographAction.
+
+## Properties
+
+PhotographAction defines the following properties in addition to those inherited from CreateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface PhotographAction {
+  $context?: 'schema.org'
+  $type: 'PhotographAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PhotographAction",
+  "name": "Example PhotographAction",
+  "description": "An example of the PhotographAction type",
+  "url": "https://example.com/photographaction",
+  "identifier": "example-photographaction-1"
+}
+```
+
+## Notes
+
+- PhotographAction inherits all properties from CreateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

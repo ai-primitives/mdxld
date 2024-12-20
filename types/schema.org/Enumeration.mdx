@@ -1,0 +1,168 @@
+---
+$context: schema.org
+$type: Enumeration
+title: Enumeration
+description: Lists or enumerations—for example, a list of cuisines or music genres, etc.
+properties:
+
+subClasses:
+  - AdultOrientedEnumeration
+  - BoardingPolicyType
+  - BookFormatType
+  - BusinessEntityType
+  - BusinessFunction
+  - CarUsageType
+  - CertificationStatusEnumeration
+  - ContactPointOption
+  - DayOfWeek
+  - DeliveryMethod
+  - DigitalDocumentPermissionType
+  - DigitalPlatformEnumeration
+  - EnergyEfficiencyEnumeration
+  - EventAttendanceModeEnumeration
+  - GameAvailabilityEnumeration
+  - GamePlayMode
+  - GenderType
+  - GovernmentBenefitsType
+  - HealthAspectEnumeration
+  - ItemAvailability
+  - ItemListOrderType
+  - LegalValueLevel
+  - MapCategoryType
+  - MeasurementMethodEnum
+  - MeasurementTypeEnumeration
+  - MediaEnumeration
+  - MediaManipulationRatingEnumeration
+  - MedicalEnumeration
+  - MerchantReturnEnumeration
+  - MusicAlbumProductionType
+  - MusicAlbumReleaseType
+  - MusicReleaseFormatType
+  - NonprofitType
+  - OfferItemCondition
+  - PaymentMethodType
+  - PhysicalActivityCategory
+  - PriceComponentTypeEnumeration
+  - PriceTypeEnumeration
+  - QualitativeValue
+  - RefundTypeEnumeration
+  - RestrictedDiet
+  - ReturnFeesEnumeration
+  - ReturnLabelSourceEnumeration
+  - ReturnMethodEnumeration
+  - RsvpResponseType
+  - SizeGroupEnumeration
+  - SizeSystemEnumeration
+  - Specialty
+  - StatusEnumeration
+  - TierBenefitEnumeration
+  - WarrantyScope
+parentClass: Intangible
+---
+
+# Enumeration
+
+Lists or enumerations—for example, a list of cuisines or music genres, etc.
+
+## Type Hierarchy
+
+Enumeration is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from Enumeration:
+
+- AdultOrientedEnumeration: Enumeration of considerations that make a product relevant or potentially restricted for adults only.
+- BoardingPolicyType: A type of boarding policy used by an airline.
+- BookFormatType: The publication format of the book.
+- BusinessEntityType: A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#Business\n* http://purl.org/goodrelations/v1#Enduser\n* http://purl.org/goodrelations/v1#PublicInstitution\n* http://purl.org/goodrelations/v1#Reseller
+    
+- BusinessFunction: The business function specifies the type of activity or access (i.e., the bundle of rights) offered by the organization or business person through the offer. Typical are sell, rental or lease, maintenance or repair, manufacture / produce, recycle / dispose, engineering / construction, or installation. Proprietary specifications of access rights are also instances of this class.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#ConstructionInstallation\n* http://purl.org/goodrelations/v1#Dispose\n* http://purl.org/goodrelations/v1#LeaseOut\n* http://purl.org/goodrelations/v1#Maintain\n* http://purl.org/goodrelations/v1#ProvideService\n* http://purl.org/goodrelations/v1#Repair\n* http://purl.org/goodrelations/v1#Sell\n* http://purl.org/goodrelations/v1#Buy
+        
+- CarUsageType: A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.
+- CertificationStatusEnumeration: Enumerates the different statuses of a Certification (Active and Inactive).
+- ContactPointOption: Enumerated options related to a ContactPoint.
+- DayOfWeek: The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.
+
+Originally, URLs from [GoodRelations](http://purl.org/goodrelations/v1) were used (for [[Monday]], [[Tuesday]], [[Wednesday]], [[Thursday]], [[Friday]], [[Saturday]], [[Sunday]] plus a special entry for [[PublicHolidays]]); these have now been integrated directly into schema.org.
+      
+- DeliveryMethod: A delivery method is a standardized procedure for transferring the product or service to the destination of fulfillment chosen by the customer. Delivery methods are characterized by the means of transportation used, and by the organization or group that is the contracting party for the sending organization or person.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#DeliveryModeDirectDownload\n* http://purl.org/goodrelations/v1#DeliveryModeFreight\n* http://purl.org/goodrelations/v1#DeliveryModeMail\n* http://purl.org/goodrelations/v1#DeliveryModeOwnFleet\n* http://purl.org/goodrelations/v1#DeliveryModePickUp\n* http://purl.org/goodrelations/v1#DHL\n* http://purl.org/goodrelations/v1#FederalExpress\n* http://purl.org/goodrelations/v1#UPS
+        
+- DigitalDocumentPermissionType: A type of permission which can be granted for accessing a digital document.
+- DigitalPlatformEnumeration: Enumerates some common technology platforms, for use with properties such as [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable code is not enumerated here, textual or URL values can be used instead. These codes are at a fairly high level and do not deal with versioning and other nuance. Additional codes can be suggested [in github](https://github.com/schemaorg/schemaorg/issues/3057). 
+- EnergyEfficiencyEnumeration: Enumerates energy efficiency levels (also known as "classes" or "ratings") and certifications that are part of several international energy efficiency standards.
+- EventAttendanceModeEnumeration: An EventAttendanceModeEnumeration value is one of potentially several modes of organising an event, relating to whether it is online or offline.
+- GameAvailabilityEnumeration: For a [[VideoGame]], such as used with a [[PlayGameAction]], an enumeration of the kind of game availability offered. 
+- GamePlayMode: Indicates whether this game is multi-player, co-op or single-player.
+- GenderType: An enumeration of genders.
+- GovernmentBenefitsType: GovernmentBenefitsType enumerates several kinds of government benefits to support the COVID-19 situation. Note that this structure may not capture all benefits offered.
+- HealthAspectEnumeration: HealthAspectEnumeration enumerates several aspects of health content online, each of which might be described using [[hasHealthAspect]] and [[HealthTopicContent]].
+- ItemAvailability: A list of possible product availability options.
+- ItemListOrderType: Enumerated for values for itemListOrder for indicating how an ordered ItemList is organized.
+- LegalValueLevel: A list of possible levels for the legal validity of a legislation.
+- MapCategoryType: An enumeration of several kinds of Map.
+- MeasurementMethodEnum: Enumeration(s) for use with [[measurementMethod]].
+- MeasurementTypeEnumeration: Enumeration of common measurement types (or dimensions), for example "chest" for a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.
+- MediaEnumeration: MediaEnumeration enumerations are lists of codes, labels etc. useful for describing media objects. They may be reflections of externally developed lists, or created at schema.org, or a combination.
+- MediaManipulationRatingEnumeration:  Codes for use with the [[mediaAuthenticityCategory]] property, indicating the authenticity of a media object (in the context of how it was published or shared). In general these codes are not mutually exclusive, although some combinations (such as 'original' versus 'transformed', 'edited' and 'staged') would be contradictory if applied in the same [[MediaReview]]. Note that the application of these codes is with regard to a piece of media shared or published in a particular context.
+- MedicalEnumeration: Enumerations related to health and the practice of medicine: A concept that is used to attribute a quality to another concept, as a qualifier, a collection of items or a listing of all of the elements of a set in medicine practice.
+- MerchantReturnEnumeration: Enumerates several kinds of product return policies.
+- MusicAlbumProductionType: Classification of the album by its type of content: soundtrack, live album, studio album, etc.
+- MusicAlbumReleaseType: The kind of release which this album is: single, EP or album.
+- MusicReleaseFormatType: Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
+- NonprofitType: NonprofitType enumerates several kinds of official non-profit types of which a non-profit organization can be.
+- OfferItemCondition: A list of possible conditions for the item.
+- PaymentMethodType: The type of payment method, only for generic payment types, specific forms of payments, like card payment should be expressed using subclasses of PaymentMethod.
+- PhysicalActivityCategory: Categories of physical activity, organized by physiologic classification.
+- PriceComponentTypeEnumeration: Enumerates different price components that together make up the total price for an offered product.
+- PriceTypeEnumeration: Enumerates different price types, for example list price, invoice price, and sale price.
+- QualitativeValue: A predefined value for a product characteristic, e.g. the power cord plug type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
+- RefundTypeEnumeration: Enumerates several kinds of product return refund types.
+- RestrictedDiet: A diet restricted to certain foods or preparations for cultural, religious, health or lifestyle reasons. 
+- ReturnFeesEnumeration: Enumerates several kinds of policies for product return fees.
+- ReturnLabelSourceEnumeration: Enumerates several types of return labels for product returns.
+- ReturnMethodEnumeration: Enumerates several types of product return methods.
+- RsvpResponseType: RsvpResponseType is an enumeration type whose instances represent responding to an RSVP request.
+- SizeGroupEnumeration: Enumerates common size groups for various product categories.
+- SizeSystemEnumeration: Enumerates common size systems for different categories of products, for example "EN-13402" or "UK" for wearables or "Imperial" for screws.
+- Specialty: Any branch of a field in which people typically develop specific expertise, usually after significant study, time, and effort.
+- StatusEnumeration: Lists or enumerations dealing with status types.
+- TierBenefitEnumeration: An enumeration of possible benefits as part of a loyalty (members) program.
+- WarrantyScope: A range of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#Labor-BringIn\n* http://purl.org/goodrelations/v1#PartsAndLabor-BringIn\n* http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
+      
+
+## Properties
+
+Enumeration defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface Enumeration {
+  $context?: 'schema.org'
+  $type: 'Enumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Enumeration",
+  "name": "Example Enumeration",
+  "description": "An example of the Enumeration type",
+  "url": "https://example.com/enumeration",
+  "identifier": "example-enumeration-1"
+}
+```
+
+## Notes
+
+- Enumeration inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MusicVideoObject
+title: MusicVideoObject
+description: A music video file.
+properties:
+
+subClasses:
+
+parentClass: MediaObject
+---
+
+# MusicVideoObject
+
+A music video file.
+
+## Type Hierarchy
+
+MusicVideoObject is a type of MediaObject.
+
+### Direct Subtypes
+
+No types directly inherit from MusicVideoObject.
+
+## Properties
+
+MusicVideoObject defines the following properties in addition to those inherited from MediaObject:
+
+
+
+## Usage Example
+
+```typescript
+interface MusicVideoObject {
+  $context?: 'schema.org'
+  $type: 'MusicVideoObject'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicVideoObject",
+  "name": "Example MusicVideoObject",
+  "description": "An example of the MusicVideoObject type",
+  "url": "https://example.com/musicvideoobject",
+  "identifier": "example-musicvideoobject-1"
+}
+```
+
+## Notes
+
+- MusicVideoObject inherits all properties from MediaObject
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

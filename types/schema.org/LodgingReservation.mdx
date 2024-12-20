@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: LodgingReservation
+title: LodgingReservation
+description: A reservation for lodging at a hotel, motel, inn, etc.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+properties:
+  - lodgingUnitDescription
+  - lodgingUnitType
+  - numAdults
+  - numChildren
+subClasses:
+
+parentClass: Reservation
+---
+
+# LodgingReservation
+
+A reservation for lodging at a hotel, motel, inn, etc.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+
+## Type Hierarchy
+
+LodgingReservation is a type of Reservation.
+
+### Direct Subtypes
+
+No types directly inherit from LodgingReservation.
+
+## Properties
+
+LodgingReservation defines the following properties in addition to those inherited from Reservation:
+
+- lodgingUnitDescription: A full description of the lodging unit.
+- lodgingUnitType: Textual description of the unit type (including suite vs. room, size of bed, etc.).
+- numAdults: The number of adults staying in the unit.
+- numChildren: The number of children staying in the unit.
+
+## Usage Example
+
+```typescript
+interface LodgingReservation {
+  $context?: 'schema.org'
+  $type: 'LodgingReservation'
+  lodgingUnitDescription?: string
+  lodgingUnitType?: QualitativeValue | string
+  numAdults?: QuantitativeValue | number
+  numChildren?: QuantitativeValue | number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LodgingReservation",
+  "name": "Example LodgingReservation",
+  "description": "An example of the LodgingReservation type",
+  "url": "https://example.com/lodgingreservation",
+  "identifier": "example-lodgingreservation-1"
+}
+```
+
+## Notes
+
+- LodgingReservation inherits all properties from Reservation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

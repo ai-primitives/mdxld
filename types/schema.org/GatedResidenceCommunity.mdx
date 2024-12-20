@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GatedResidenceCommunity
+title: GatedResidenceCommunity
+description: Residence type: Gated community.
+properties:
+
+subClasses:
+
+parentClass: Residence
+---
+
+# GatedResidenceCommunity
+
+Residence type: Gated community.
+
+## Type Hierarchy
+
+GatedResidenceCommunity is a type of Residence.
+
+### Direct Subtypes
+
+No types directly inherit from GatedResidenceCommunity.
+
+## Properties
+
+GatedResidenceCommunity defines the following properties in addition to those inherited from Residence:
+
+
+
+## Usage Example
+
+```typescript
+interface GatedResidenceCommunity {
+  $context?: 'schema.org'
+  $type: 'GatedResidenceCommunity'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GatedResidenceCommunity",
+  "name": "Example GatedResidenceCommunity",
+  "description": "An example of the GatedResidenceCommunity type",
+  "url": "https://example.com/gatedresidencecommunity",
+  "identifier": "example-gatedresidencecommunity-1"
+}
+```
+
+## Notes
+
+- GatedResidenceCommunity inherits all properties from Residence
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

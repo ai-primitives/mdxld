@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ImageGallery
+title: ImageGallery
+description: Web page type: Image gallery page.
+properties:
+
+subClasses:
+
+parentClass: MediaGallery
+---
+
+# ImageGallery
+
+Web page type: Image gallery page.
+
+## Type Hierarchy
+
+ImageGallery is a type of MediaGallery.
+
+### Direct Subtypes
+
+No types directly inherit from ImageGallery.
+
+## Properties
+
+ImageGallery defines the following properties in addition to those inherited from MediaGallery:
+
+
+
+## Usage Example
+
+```typescript
+interface ImageGallery {
+  $context?: 'schema.org'
+  $type: 'ImageGallery'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ImageGallery",
+  "name": "Example ImageGallery",
+  "description": "An example of the ImageGallery type",
+  "url": "https://example.com/imagegallery",
+  "identifier": "example-imagegallery-1"
+}
+```
+
+## Notes
+
+- ImageGallery inherits all properties from MediaGallery
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

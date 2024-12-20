@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PresentationDigitalDocument
+title: PresentationDigitalDocument
+description: A file containing slides or used for a presentation.
+properties:
+
+subClasses:
+
+parentClass: DigitalDocument
+---
+
+# PresentationDigitalDocument
+
+A file containing slides or used for a presentation.
+
+## Type Hierarchy
+
+PresentationDigitalDocument is a type of DigitalDocument.
+
+### Direct Subtypes
+
+No types directly inherit from PresentationDigitalDocument.
+
+## Properties
+
+PresentationDigitalDocument defines the following properties in addition to those inherited from DigitalDocument:
+
+
+
+## Usage Example
+
+```typescript
+interface PresentationDigitalDocument {
+  $context?: 'schema.org'
+  $type: 'PresentationDigitalDocument'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PresentationDigitalDocument",
+  "name": "Example PresentationDigitalDocument",
+  "description": "An example of the PresentationDigitalDocument type",
+  "url": "https://example.com/presentationdigitaldocument",
+  "identifier": "example-presentationdigitaldocument-1"
+}
+```
+
+## Notes
+
+- PresentationDigitalDocument inherits all properties from DigitalDocument
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

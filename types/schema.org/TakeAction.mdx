@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TakeAction
+title: TakeAction
+description: The act of gaining ownership of an object from an origin. Reciprocal of GiveAction.\n\nRelated actions:\n\n* [[GiveAction]]: The reciprocal of TakeAction.\n* [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership has been transferred.
+properties:
+
+subClasses:
+
+parentClass: TransferAction
+---
+
+# TakeAction
+
+The act of gaining ownership of an object from an origin. Reciprocal of GiveAction.\n\nRelated actions:\n\n* [[GiveAction]]: The reciprocal of TakeAction.\n* [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership has been transferred.
+
+## Type Hierarchy
+
+TakeAction is a type of TransferAction.
+
+### Direct Subtypes
+
+No types directly inherit from TakeAction.
+
+## Properties
+
+TakeAction defines the following properties in addition to those inherited from TransferAction:
+
+
+
+## Usage Example
+
+```typescript
+interface TakeAction {
+  $context?: 'schema.org'
+  $type: 'TakeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TakeAction",
+  "name": "Example TakeAction",
+  "description": "An example of the TakeAction type",
+  "url": "https://example.com/takeaction",
+  "identifier": "example-takeaction-1"
+}
+```
+
+## Notes
+
+- TakeAction inherits all properties from TransferAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

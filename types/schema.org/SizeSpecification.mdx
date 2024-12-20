@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: SizeSpecification
+title: SizeSpecification
+description: Size related properties of a product, typically a size code ([[name]]) and optionally a [[sizeSystem]], [[sizeGroup]], and product measurements ([[hasMeasurement]]). In addition, the intended audience can be defined through [[suggestedAge]], [[suggestedGender]], and suggested body measurements ([[suggestedMeasurement]]).
+properties:
+  - sizeGroup
+  - sizeSystem
+subClasses:
+
+parentClass: QualitativeValue
+---
+
+# SizeSpecification
+
+Size related properties of a product, typically a size code ([[name]]) and optionally a [[sizeSystem]], [[sizeGroup]], and product measurements ([[hasMeasurement]]). In addition, the intended audience can be defined through [[suggestedAge]], [[suggestedGender]], and suggested body measurements ([[suggestedMeasurement]]).
+
+## Type Hierarchy
+
+SizeSpecification is a type of QualitativeValue.
+
+### Direct Subtypes
+
+No types directly inherit from SizeSpecification.
+
+## Properties
+
+SizeSpecification defines the following properties in addition to those inherited from QualitativeValue:
+
+- sizeGroup: The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite maternity" or "regular".
+- sizeSystem: The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
+
+## Usage Example
+
+```typescript
+interface SizeSpecification {
+  $context?: 'schema.org'
+  $type: 'SizeSpecification'
+  sizeGroup?: SizeGroupEnumeration | string
+  sizeSystem?: SizeSystemEnumeration | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SizeSpecification",
+  "name": "Example SizeSpecification",
+  "description": "An example of the SizeSpecification type",
+  "url": "https://example.com/sizespecification",
+  "identifier": "example-sizespecification-1"
+}
+```
+
+## Notes
+
+- SizeSpecification inherits all properties from QualitativeValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

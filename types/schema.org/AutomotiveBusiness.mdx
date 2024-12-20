@@ -1,0 +1,75 @@
+---
+$context: schema.org
+$type: AutomotiveBusiness
+title: AutomotiveBusiness
+description: Car repair, sales, or parts.
+properties:
+
+subClasses:
+  - AutoBodyShop
+  - AutoDealer
+  - AutoRental
+  - AutoRepair
+  - AutoWash
+  - GasStation
+  - MotorcycleDealer
+  - MotorcycleRepair
+parentClass: LocalBusiness
+---
+
+# AutomotiveBusiness
+
+Car repair, sales, or parts.
+
+## Type Hierarchy
+
+AutomotiveBusiness is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from AutomotiveBusiness:
+
+- AutoBodyShop: Auto body shop.
+- AutoDealer: An car dealership.
+- AutoRental: A car rental business.
+- AutoRepair: Car repair business.
+- AutoWash: A car wash business.
+- GasStation: A gas station.
+- MotorcycleDealer: A motorcycle dealer.
+- MotorcycleRepair: A motorcycle repair shop.
+
+## Properties
+
+AutomotiveBusiness defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface AutomotiveBusiness {
+  $context?: 'schema.org'
+  $type: 'AutomotiveBusiness'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AutomotiveBusiness",
+  "name": "Example AutomotiveBusiness",
+  "description": "An example of the AutomotiveBusiness type",
+  "url": "https://example.com/automotivebusiness",
+  "identifier": "example-automotivebusiness-1"
+}
+```
+
+## Notes
+
+- AutomotiveBusiness inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

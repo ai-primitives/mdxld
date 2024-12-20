@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GovernmentPermit
+title: GovernmentPermit
+description: A permit issued by a government agency.
+properties:
+
+subClasses:
+
+parentClass: Permit
+---
+
+# GovernmentPermit
+
+A permit issued by a government agency.
+
+## Type Hierarchy
+
+GovernmentPermit is a type of Permit.
+
+### Direct Subtypes
+
+No types directly inherit from GovernmentPermit.
+
+## Properties
+
+GovernmentPermit defines the following properties in addition to those inherited from Permit:
+
+
+
+## Usage Example
+
+```typescript
+interface GovernmentPermit {
+  $context?: 'schema.org'
+  $type: 'GovernmentPermit'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GovernmentPermit",
+  "name": "Example GovernmentPermit",
+  "description": "An example of the GovernmentPermit type",
+  "url": "https://example.com/governmentpermit",
+  "identifier": "example-governmentpermit-1"
+}
+```
+
+## Notes
+
+- GovernmentPermit inherits all properties from Permit
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: MedicalConditionStage
+title: MedicalConditionStage
+description: A stage of a medical condition, such as 'Stage IIIa'.
+properties:
+  - stageAsNumber
+  - subStageSuffix
+subClasses:
+
+parentClass: MedicalIntangible
+---
+
+# MedicalConditionStage
+
+A stage of a medical condition, such as 'Stage IIIa'.
+
+## Type Hierarchy
+
+MedicalConditionStage is a type of MedicalIntangible.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalConditionStage.
+
+## Properties
+
+MedicalConditionStage defines the following properties in addition to those inherited from MedicalIntangible:
+
+- stageAsNumber: The stage represented as a number, e.g. 3.
+- subStageSuffix: The substage, e.g. 'a' for Stage IIIa.
+
+## Usage Example
+
+```typescript
+interface MedicalConditionStage {
+  $context?: 'schema.org'
+  $type: 'MedicalConditionStage'
+  stageAsNumber?: number
+  subStageSuffix?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalConditionStage",
+  "name": "Example MedicalConditionStage",
+  "description": "An example of the MedicalConditionStage type",
+  "url": "https://example.com/medicalconditionstage",
+  "identifier": "example-medicalconditionstage-1"
+}
+```
+
+## Notes
+
+- MedicalConditionStage inherits all properties from MedicalIntangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

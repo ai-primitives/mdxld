@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Distance
+title: Distance
+description: Properties that take Distances as values are of the form '&lt;Number&gt; &lt;Length unit of measure&gt;'. E.g., '7 ft'.
+properties:
+
+subClasses:
+
+parentClass: Quantity
+---
+
+# Distance
+
+Properties that take Distances as values are of the form '&lt;Number&gt; &lt;Length unit of measure&gt;'. E.g., '7 ft'.
+
+## Type Hierarchy
+
+Distance is a type of Quantity.
+
+### Direct Subtypes
+
+No types directly inherit from Distance.
+
+## Properties
+
+Distance defines the following properties in addition to those inherited from Quantity:
+
+
+
+## Usage Example
+
+```typescript
+interface Distance {
+  $context?: 'schema.org'
+  $type: 'Distance'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Distance",
+  "name": "Example Distance",
+  "description": "An example of the Distance type",
+  "url": "https://example.com/distance",
+  "identifier": "example-distance-1"
+}
+```
+
+## Notes
+
+- Distance inherits all properties from Quantity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Conversation
+title: Conversation
+description: One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Conversation
+
+One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.
+
+## Type Hierarchy
+
+Conversation is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Conversation.
+
+## Properties
+
+Conversation defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Conversation {
+  $context?: 'schema.org'
+  $type: 'Conversation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Conversation",
+  "name": "Example Conversation",
+  "description": "An example of the Conversation type",
+  "url": "https://example.com/conversation",
+  "identifier": "example-conversation-1"
+}
+```
+
+## Notes
+
+- Conversation inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

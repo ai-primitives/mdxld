@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Class
+title: Class
+description: A class, also often called a 'Type'; equivalent to rdfs:Class.
+properties:
+
+subClasses:
+
+parentClass: Intangible
+---
+
+# Class
+
+A class, also often called a 'Type'; equivalent to rdfs:Class.
+
+## Type Hierarchy
+
+Class is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Class.
+
+## Properties
+
+Class defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface Class {
+  $context?: 'schema.org'
+  $type: 'Class'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Class",
+  "name": "Example Class",
+  "description": "An example of the Class type",
+  "url": "https://example.com/class",
+  "identifier": "example-class-1"
+}
+```
+
+## Notes
+
+- Class inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

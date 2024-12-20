@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Sculpture
+title: Sculpture
+description: A piece of sculpture.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Sculpture
+
+A piece of sculpture.
+
+## Type Hierarchy
+
+Sculpture is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Sculpture.
+
+## Properties
+
+Sculpture defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Sculpture {
+  $context?: 'schema.org'
+  $type: 'Sculpture'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Sculpture",
+  "name": "Example Sculpture",
+  "description": "An example of the Sculpture type",
+  "url": "https://example.com/sculpture",
+  "identifier": "example-sculpture-1"
+}
+```
+
+## Notes
+
+- Sculpture inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

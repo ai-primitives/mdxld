@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WholesaleStore
+title: WholesaleStore
+description: A wholesale store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# WholesaleStore
+
+A wholesale store.
+
+## Type Hierarchy
+
+WholesaleStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from WholesaleStore.
+
+## Properties
+
+WholesaleStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface WholesaleStore {
+  $context?: 'schema.org'
+  $type: 'WholesaleStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WholesaleStore",
+  "name": "Example WholesaleStore",
+  "description": "An example of the WholesaleStore type",
+  "url": "https://example.com/wholesalestore",
+  "identifier": "example-wholesalestore-1"
+}
+```
+
+## Notes
+
+- WholesaleStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

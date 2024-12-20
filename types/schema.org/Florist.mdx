@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Florist
+title: Florist
+description: A florist.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# Florist
+
+A florist.
+
+## Type Hierarchy
+
+Florist is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from Florist.
+
+## Properties
+
+Florist defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface Florist {
+  $context?: 'schema.org'
+  $type: 'Florist'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Florist",
+  "name": "Example Florist",
+  "description": "An example of the Florist type",
+  "url": "https://example.com/florist",
+  "identifier": "example-florist-1"
+}
+```
+
+## Notes
+
+- Florist inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BikeStore
+title: BikeStore
+description: A bike store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# BikeStore
+
+A bike store.
+
+## Type Hierarchy
+
+BikeStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from BikeStore.
+
+## Properties
+
+BikeStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface BikeStore {
+  $context?: 'schema.org'
+  $type: 'BikeStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BikeStore",
+  "name": "Example BikeStore",
+  "description": "An example of the BikeStore type",
+  "url": "https://example.com/bikestore",
+  "identifier": "example-bikestore-1"
+}
+```
+
+## Notes
+
+- BikeStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

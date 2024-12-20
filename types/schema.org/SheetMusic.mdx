@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SheetMusic
+title: SheetMusic
+description: Printed music, as opposed to performed or recorded music.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# SheetMusic
+
+Printed music, as opposed to performed or recorded music.
+
+## Type Hierarchy
+
+SheetMusic is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from SheetMusic.
+
+## Properties
+
+SheetMusic defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface SheetMusic {
+  $context?: 'schema.org'
+  $type: 'SheetMusic'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SheetMusic",
+  "name": "Example SheetMusic",
+  "description": "An example of the SheetMusic type",
+  "url": "https://example.com/sheetmusic",
+  "identifier": "example-sheetmusic-1"
+}
+```
+
+## Notes
+
+- SheetMusic inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

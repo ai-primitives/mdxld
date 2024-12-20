@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DatedMoneySpecification
+title: DatedMoneySpecification
+description: A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.
+properties:
+
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# DatedMoneySpecification
+
+A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.
+
+## Type Hierarchy
+
+DatedMoneySpecification is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from DatedMoneySpecification.
+
+## Properties
+
+DatedMoneySpecification defines the following properties in addition to those inherited from StructuredValue:
+
+
+
+## Usage Example
+
+```typescript
+interface DatedMoneySpecification {
+  $context?: 'schema.org'
+  $type: 'DatedMoneySpecification'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DatedMoneySpecification",
+  "name": "Example DatedMoneySpecification",
+  "description": "An example of the DatedMoneySpecification type",
+  "url": "https://example.com/datedmoneyspecification",
+  "identifier": "example-datedmoneyspecification-1"
+}
+```
+
+## Notes
+
+- DatedMoneySpecification inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

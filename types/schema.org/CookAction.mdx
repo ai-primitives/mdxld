@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: CookAction
+title: CookAction
+description: The act of producing/preparing food.
+properties:
+  - foodEstablishment
+  - foodEvent
+  - recipe
+subClasses:
+
+parentClass: CreateAction
+---
+
+# CookAction
+
+The act of producing/preparing food.
+
+## Type Hierarchy
+
+CookAction is a type of CreateAction.
+
+### Direct Subtypes
+
+No types directly inherit from CookAction.
+
+## Properties
+
+CookAction defines the following properties in addition to those inherited from CreateAction:
+
+- foodEstablishment: A sub property of location. The specific food establishment where the action occurred.
+- foodEvent: A sub property of location. The specific food event where the action occurred.
+- recipe: A sub property of instrument. The recipe/instructions used to perform the action.
+
+## Usage Example
+
+```typescript
+interface CookAction {
+  $context?: 'schema.org'
+  $type: 'CookAction'
+  foodEstablishment?: FoodEstablishment | Place
+  foodEvent?: FoodEvent
+  recipe?: Recipe
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CookAction",
+  "name": "Example CookAction",
+  "description": "An example of the CookAction type",
+  "url": "https://example.com/cookaction",
+  "identifier": "example-cookaction-1"
+}
+```
+
+## Notes
+
+- CookAction inherits all properties from CreateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

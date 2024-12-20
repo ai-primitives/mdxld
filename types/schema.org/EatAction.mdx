@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EatAction
+title: EatAction
+description: The act of swallowing solid objects.
+properties:
+
+subClasses:
+
+parentClass: ConsumeAction
+---
+
+# EatAction
+
+The act of swallowing solid objects.
+
+## Type Hierarchy
+
+EatAction is a type of ConsumeAction.
+
+### Direct Subtypes
+
+No types directly inherit from EatAction.
+
+## Properties
+
+EatAction defines the following properties in addition to those inherited from ConsumeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface EatAction {
+  $context?: 'schema.org'
+  $type: 'EatAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EatAction",
+  "name": "Example EatAction",
+  "description": "An example of the EatAction type",
+  "url": "https://example.com/eataction",
+  "identifier": "example-eataction-1"
+}
+```
+
+## Notes
+
+- EatAction inherits all properties from ConsumeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PaymentStatusType
+title: PaymentStatusType
+description: A specific payment status. For example, PaymentDue, PaymentComplete, etc.
+properties:
+
+subClasses:
+
+parentClass: StatusEnumeration
+---
+
+# PaymentStatusType
+
+A specific payment status. For example, PaymentDue, PaymentComplete, etc.
+
+## Type Hierarchy
+
+PaymentStatusType is a type of StatusEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from PaymentStatusType.
+
+## Properties
+
+PaymentStatusType defines the following properties in addition to those inherited from StatusEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface PaymentStatusType {
+  $context?: 'schema.org'
+  $type: 'PaymentStatusType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PaymentStatusType",
+  "name": "Example PaymentStatusType",
+  "description": "An example of the PaymentStatusType type",
+  "url": "https://example.com/paymentstatustype",
+  "identifier": "example-paymentstatustype-1"
+}
+```
+
+## Notes
+
+- PaymentStatusType inherits all properties from StatusEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

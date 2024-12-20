@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MaximumDoseSchedule
+title: MaximumDoseSchedule
+description: The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
+properties:
+
+subClasses:
+
+parentClass: DoseSchedule
+---
+
+# MaximumDoseSchedule
+
+The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
+
+## Type Hierarchy
+
+MaximumDoseSchedule is a type of DoseSchedule.
+
+### Direct Subtypes
+
+No types directly inherit from MaximumDoseSchedule.
+
+## Properties
+
+MaximumDoseSchedule defines the following properties in addition to those inherited from DoseSchedule:
+
+
+
+## Usage Example
+
+```typescript
+interface MaximumDoseSchedule {
+  $context?: 'schema.org'
+  $type: 'MaximumDoseSchedule'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MaximumDoseSchedule",
+  "name": "Example MaximumDoseSchedule",
+  "description": "An example of the MaximumDoseSchedule type",
+  "url": "https://example.com/maximumdoseschedule",
+  "identifier": "example-maximumdoseschedule-1"
+}
+```
+
+## Notes
+
+- MaximumDoseSchedule inherits all properties from DoseSchedule
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,69 @@
+---
+$context: schema.org
+$type: MedicalIntangible
+title: MedicalIntangible
+description: A utility class that serves as the umbrella for a number of 'intangible' things in the medical space.
+properties:
+
+subClasses:
+  - DDxElement
+  - DoseSchedule
+  - DrugLegalStatus
+  - DrugStrength
+  - MedicalConditionStage
+parentClass: MedicalEntity
+---
+
+# MedicalIntangible
+
+A utility class that serves as the umbrella for a number of 'intangible' things in the medical space.
+
+## Type Hierarchy
+
+MedicalIntangible is a type of MedicalEntity.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalIntangible:
+
+- DDxElement: An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.
+- DoseSchedule: A specific dosing schedule for a drug or supplement.
+- DrugLegalStatus: The legal availability status of a medical drug.
+- DrugStrength: A specific strength in which a medical drug is available in a specific country.
+- MedicalConditionStage: A stage of a medical condition, such as 'Stage IIIa'.
+
+## Properties
+
+MedicalIntangible defines the following properties in addition to those inherited from MedicalEntity:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalIntangible {
+  $context?: 'schema.org'
+  $type: 'MedicalIntangible'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalIntangible",
+  "name": "Example MedicalIntangible",
+  "description": "An example of the MedicalIntangible type",
+  "url": "https://example.com/medicalintangible",
+  "identifier": "example-medicalintangible-1"
+}
+```
+
+## Notes
+
+- MedicalIntangible inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

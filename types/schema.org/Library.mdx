@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Library
+title: Library
+description: A library.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# Library
+
+A library.
+
+## Type Hierarchy
+
+Library is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from Library.
+
+## Properties
+
+Library defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface Library {
+  $context?: 'schema.org'
+  $type: 'Library'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Library",
+  "name": "Example Library",
+  "description": "An example of the Library type",
+  "url": "https://example.com/library",
+  "identifier": "example-library-1"
+}
+```
+
+## Notes
+
+- Library inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

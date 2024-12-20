@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GeoCoordinates
+title: GeoCoordinates
+description: The geographic coordinates of a place or event.
+properties:
+
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# GeoCoordinates
+
+The geographic coordinates of a place or event.
+
+## Type Hierarchy
+
+GeoCoordinates is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from GeoCoordinates.
+
+## Properties
+
+GeoCoordinates defines the following properties in addition to those inherited from StructuredValue:
+
+
+
+## Usage Example
+
+```typescript
+interface GeoCoordinates {
+  $context?: 'schema.org'
+  $type: 'GeoCoordinates'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GeoCoordinates",
+  "name": "Example GeoCoordinates",
+  "description": "An example of the GeoCoordinates type",
+  "url": "https://example.com/geocoordinates",
+  "identifier": "example-geocoordinates-1"
+}
+```
+
+## Notes
+
+- GeoCoordinates inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

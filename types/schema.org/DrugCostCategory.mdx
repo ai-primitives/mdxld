@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DrugCostCategory
+title: DrugCostCategory
+description: Enumerated categories of medical drug costs.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# DrugCostCategory
+
+Enumerated categories of medical drug costs.
+
+## Type Hierarchy
+
+DrugCostCategory is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from DrugCostCategory.
+
+## Properties
+
+DrugCostCategory defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface DrugCostCategory {
+  $context?: 'schema.org'
+  $type: 'DrugCostCategory'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DrugCostCategory",
+  "name": "Example DrugCostCategory",
+  "description": "An example of the DrugCostCategory type",
+  "url": "https://example.com/drugcostcategory",
+  "identifier": "example-drugcostcategory-1"
+}
+```
+
+## Notes
+
+- DrugCostCategory inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

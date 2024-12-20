@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AutoWash
+title: AutoWash
+description: A car wash business.
+properties:
+
+subClasses:
+
+parentClass: AutomotiveBusiness
+---
+
+# AutoWash
+
+A car wash business.
+
+## Type Hierarchy
+
+AutoWash is a type of AutomotiveBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from AutoWash.
+
+## Properties
+
+AutoWash defines the following properties in addition to those inherited from AutomotiveBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface AutoWash {
+  $context?: 'schema.org'
+  $type: 'AutoWash'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AutoWash",
+  "name": "Example AutoWash",
+  "description": "An example of the AutoWash type",
+  "url": "https://example.com/autowash",
+  "identifier": "example-autowash-1"
+}
+```
+
+## Notes
+
+- AutoWash inherits all properties from AutomotiveBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

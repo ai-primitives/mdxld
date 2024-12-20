@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RealEstateAgent
+title: RealEstateAgent
+description: A real-estate agent.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# RealEstateAgent
+
+A real-estate agent.
+
+## Type Hierarchy
+
+RealEstateAgent is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from RealEstateAgent.
+
+## Properties
+
+RealEstateAgent defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface RealEstateAgent {
+  $context?: 'schema.org'
+  $type: 'RealEstateAgent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RealEstateAgent",
+  "name": "Example RealEstateAgent",
+  "description": "An example of the RealEstateAgent type",
+  "url": "https://example.com/realestateagent",
+  "identifier": "example-realestateagent-1"
+}
+```
+
+## Notes
+
+- RealEstateAgent inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

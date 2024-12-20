@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Periodical
+title: Periodical
+description: A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+properties:
+
+subClasses:
+  - ComicSeries
+  - Newspaper
+parentClass: CreativeWorkSeries
+---
+
+# Periodical
+
+A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+
+## Type Hierarchy
+
+Periodical is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+The following types directly inherit from Periodical:
+
+- ComicSeries: A sequential publication of comic stories under a
+    	unifying title, for example "The Amazing Spider-Man" or "Groo the
+    	Wanderer".
+- Newspaper: A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.
+
+## Properties
+
+Periodical defines the following properties in addition to those inherited from CreativeWorkSeries:
+
+
+
+## Usage Example
+
+```typescript
+interface Periodical {
+  $context?: 'schema.org'
+  $type: 'Periodical'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Periodical",
+  "name": "Example Periodical",
+  "description": "An example of the Periodical type",
+  "url": "https://example.com/periodical",
+  "identifier": "example-periodical-1"
+}
+```
+
+## Notes
+
+- Periodical inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

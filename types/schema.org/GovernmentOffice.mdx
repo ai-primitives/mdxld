@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: GovernmentOffice
+title: GovernmentOffice
+description: A government office&#x2014;for example, an IRS or DMV office.
+properties:
+
+subClasses:
+  - PostOffice
+parentClass: LocalBusiness
+---
+
+# GovernmentOffice
+
+A government office&#x2014;for example, an IRS or DMV office.
+
+## Type Hierarchy
+
+GovernmentOffice is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from GovernmentOffice:
+
+- PostOffice: A post office.
+
+## Properties
+
+GovernmentOffice defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface GovernmentOffice {
+  $context?: 'schema.org'
+  $type: 'GovernmentOffice'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GovernmentOffice",
+  "name": "Example GovernmentOffice",
+  "description": "An example of the GovernmentOffice type",
+  "url": "https://example.com/governmentoffice",
+  "identifier": "example-governmentoffice-1"
+}
+```
+
+## Notes
+
+- GovernmentOffice inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

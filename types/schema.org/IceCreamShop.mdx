@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: IceCreamShop
+title: IceCreamShop
+description: An ice cream shop.
+properties:
+
+subClasses:
+
+parentClass: FoodEstablishment
+---
+
+# IceCreamShop
+
+An ice cream shop.
+
+## Type Hierarchy
+
+IceCreamShop is a type of FoodEstablishment.
+
+### Direct Subtypes
+
+No types directly inherit from IceCreamShop.
+
+## Properties
+
+IceCreamShop defines the following properties in addition to those inherited from FoodEstablishment:
+
+
+
+## Usage Example
+
+```typescript
+interface IceCreamShop {
+  $context?: 'schema.org'
+  $type: 'IceCreamShop'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "IceCreamShop",
+  "name": "Example IceCreamShop",
+  "description": "An example of the IceCreamShop type",
+  "url": "https://example.com/icecreamshop",
+  "identifier": "example-icecreamshop-1"
+}
+```
+
+## Notes
+
+- IceCreamShop inherits all properties from FoodEstablishment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

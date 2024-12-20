@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Restaurant
+title: Restaurant
+description: A restaurant.
+properties:
+
+subClasses:
+
+parentClass: FoodEstablishment
+---
+
+# Restaurant
+
+A restaurant.
+
+## Type Hierarchy
+
+Restaurant is a type of FoodEstablishment.
+
+### Direct Subtypes
+
+No types directly inherit from Restaurant.
+
+## Properties
+
+Restaurant defines the following properties in addition to those inherited from FoodEstablishment:
+
+
+
+## Usage Example
+
+```typescript
+interface Restaurant {
+  $context?: 'schema.org'
+  $type: 'Restaurant'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Restaurant",
+  "name": "Example Restaurant",
+  "description": "An example of the Restaurant type",
+  "url": "https://example.com/restaurant",
+  "identifier": "example-restaurant-1"
+}
+```
+
+## Notes
+
+- Restaurant inherits all properties from FoodEstablishment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

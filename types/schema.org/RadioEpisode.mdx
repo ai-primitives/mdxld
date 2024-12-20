@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RadioEpisode
+title: RadioEpisode
+description: A radio episode which can be part of a series or season.
+properties:
+
+subClasses:
+
+parentClass: Episode
+---
+
+# RadioEpisode
+
+A radio episode which can be part of a series or season.
+
+## Type Hierarchy
+
+RadioEpisode is a type of Episode.
+
+### Direct Subtypes
+
+No types directly inherit from RadioEpisode.
+
+## Properties
+
+RadioEpisode defines the following properties in addition to those inherited from Episode:
+
+
+
+## Usage Example
+
+```typescript
+interface RadioEpisode {
+  $context?: 'schema.org'
+  $type: 'RadioEpisode'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RadioEpisode",
+  "name": "Example RadioEpisode",
+  "description": "An example of the RadioEpisode type",
+  "url": "https://example.com/radioepisode",
+  "identifier": "example-radioepisode-1"
+}
+```
+
+## Notes
+
+- RadioEpisode inherits all properties from Episode
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

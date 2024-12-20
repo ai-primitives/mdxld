@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MediaSubscription
+title: MediaSubscription
+description: A subscription which allows a user to access media including audio, video, books, etc.
+properties:
+  - authenticator
+subClasses:
+
+parentClass: Intangible
+---
+
+# MediaSubscription
+
+A subscription which allows a user to access media including audio, video, books, etc.
+
+## Type Hierarchy
+
+MediaSubscription is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from MediaSubscription.
+
+## Properties
+
+MediaSubscription defines the following properties in addition to those inherited from Intangible:
+
+- authenticator: The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription before playing media.
+
+## Usage Example
+
+```typescript
+interface MediaSubscription {
+  $context?: 'schema.org'
+  $type: 'MediaSubscription'
+  authenticator?: Organization
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MediaSubscription",
+  "name": "Example MediaSubscription",
+  "description": "An example of the MediaSubscription type",
+  "url": "https://example.com/mediasubscription",
+  "identifier": "example-mediasubscription-1"
+}
+```
+
+## Notes
+
+- MediaSubscription inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

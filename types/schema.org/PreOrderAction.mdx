@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PreOrderAction
+title: PreOrderAction
+description: An agent orders a (not yet released) object/product/service to be delivered/sent.
+properties:
+
+subClasses:
+
+parentClass: TradeAction
+---
+
+# PreOrderAction
+
+An agent orders a (not yet released) object/product/service to be delivered/sent.
+
+## Type Hierarchy
+
+PreOrderAction is a type of TradeAction.
+
+### Direct Subtypes
+
+No types directly inherit from PreOrderAction.
+
+## Properties
+
+PreOrderAction defines the following properties in addition to those inherited from TradeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface PreOrderAction {
+  $context?: 'schema.org'
+  $type: 'PreOrderAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PreOrderAction",
+  "name": "Example PreOrderAction",
+  "description": "An example of the PreOrderAction type",
+  "url": "https://example.com/preorderaction",
+  "identifier": "example-preorderaction-1"
+}
+```
+
+## Notes
+
+- PreOrderAction inherits all properties from TradeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: ReplaceAction
+title: ReplaceAction
+description: The act of editing a recipient by replacing an old object with a new object.
+properties:
+  - replacee
+  - replacer
+subClasses:
+
+parentClass: UpdateAction
+---
+
+# ReplaceAction
+
+The act of editing a recipient by replacing an old object with a new object.
+
+## Type Hierarchy
+
+ReplaceAction is a type of UpdateAction.
+
+### Direct Subtypes
+
+No types directly inherit from ReplaceAction.
+
+## Properties
+
+ReplaceAction defines the following properties in addition to those inherited from UpdateAction:
+
+- replacee: A sub property of object. The object that is being replaced.
+- replacer: A sub property of object. The object that replaces.
+
+## Usage Example
+
+```typescript
+interface ReplaceAction {
+  $context?: 'schema.org'
+  $type: 'ReplaceAction'
+  replacee?: Thing
+  replacer?: Thing
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReplaceAction",
+  "name": "Example ReplaceAction",
+  "description": "An example of the ReplaceAction type",
+  "url": "https://example.com/replaceaction",
+  "identifier": "example-replaceaction-1"
+}
+```
+
+## Notes
+
+- ReplaceAction inherits all properties from UpdateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

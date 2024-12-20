@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Poster
+title: Poster
+description: A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Poster
+
+A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.
+
+## Type Hierarchy
+
+Poster is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Poster.
+
+## Properties
+
+Poster defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Poster {
+  $context?: 'schema.org'
+  $type: 'Poster'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Poster",
+  "name": "Example Poster",
+  "description": "An example of the Poster type",
+  "url": "https://example.com/poster",
+  "identifier": "example-poster-1"
+}
+```
+
+## Notes
+
+- Poster inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

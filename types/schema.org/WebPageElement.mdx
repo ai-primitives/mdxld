@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: WebPageElement
+title: WebPageElement
+description: A web page element, like a table or an image.
+properties:
+
+subClasses:
+  - SiteNavigationElement
+  - Table
+  - WPAdBlock
+  - WPFooter
+  - WPHeader
+  - WPSideBar
+parentClass: CreativeWork
+---
+
+# WebPageElement
+
+A web page element, like a table or an image.
+
+## Type Hierarchy
+
+WebPageElement is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from WebPageElement:
+
+- SiteNavigationElement: A navigation element of the page.
+- Table: A table on a Web page.
+- WPAdBlock: An advertising section of the page.
+- WPFooter: The footer section of the page.
+- WPHeader: The header section of the page.
+- WPSideBar: A sidebar section of the page.
+
+## Properties
+
+WebPageElement defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface WebPageElement {
+  $context?: 'schema.org'
+  $type: 'WebPageElement'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WebPageElement",
+  "name": "Example WebPageElement",
+  "description": "An example of the WebPageElement type",
+  "url": "https://example.com/webpageelement",
+  "identifier": "example-webpageelement-1"
+}
+```
+
+## Notes
+
+- WebPageElement inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

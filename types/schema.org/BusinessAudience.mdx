@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: BusinessAudience
+title: BusinessAudience
+description: A set of characteristics belonging to businesses, e.g. who compose an item's target audience.
+properties:
+  - yearlyRevenue
+  - yearsInOperation
+subClasses:
+
+parentClass: Audience
+---
+
+# BusinessAudience
+
+A set of characteristics belonging to businesses, e.g. who compose an item's target audience.
+
+## Type Hierarchy
+
+BusinessAudience is a type of Audience.
+
+### Direct Subtypes
+
+No types directly inherit from BusinessAudience.
+
+## Properties
+
+BusinessAudience defines the following properties in addition to those inherited from Audience:
+
+- yearlyRevenue: The size of the business in annual revenue.
+- yearsInOperation: The age of the business.
+
+## Usage Example
+
+```typescript
+interface BusinessAudience {
+  $context?: 'schema.org'
+  $type: 'BusinessAudience'
+  yearlyRevenue?: QuantitativeValue
+  yearsInOperation?: QuantitativeValue
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BusinessAudience",
+  "name": "Example BusinessAudience",
+  "description": "An example of the BusinessAudience type",
+  "url": "https://example.com/businessaudience",
+  "identifier": "example-businessaudience-1"
+}
+```
+
+## Notes
+
+- BusinessAudience inherits all properties from Audience
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

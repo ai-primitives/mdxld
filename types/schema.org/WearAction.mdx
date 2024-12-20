@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WearAction
+title: WearAction
+description: The act of dressing oneself in clothing.
+properties:
+
+subClasses:
+
+parentClass: UseAction
+---
+
+# WearAction
+
+The act of dressing oneself in clothing.
+
+## Type Hierarchy
+
+WearAction is a type of UseAction.
+
+### Direct Subtypes
+
+No types directly inherit from WearAction.
+
+## Properties
+
+WearAction defines the following properties in addition to those inherited from UseAction:
+
+
+
+## Usage Example
+
+```typescript
+interface WearAction {
+  $context?: 'schema.org'
+  $type: 'WearAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WearAction",
+  "name": "Example WearAction",
+  "description": "An example of the WearAction type",
+  "url": "https://example.com/wearaction",
+  "identifier": "example-wearaction-1"
+}
+```
+
+## Notes
+
+- WearAction inherits all properties from UseAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

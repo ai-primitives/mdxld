@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MobileApplication
+title: MobileApplication
+description: A software application designed specifically to work well on a mobile device such as a telephone.
+properties:
+  - carrierRequirements
+subClasses:
+
+parentClass: SoftwareApplication
+---
+
+# MobileApplication
+
+A software application designed specifically to work well on a mobile device such as a telephone.
+
+## Type Hierarchy
+
+MobileApplication is a type of SoftwareApplication.
+
+### Direct Subtypes
+
+No types directly inherit from MobileApplication.
+
+## Properties
+
+MobileApplication defines the following properties in addition to those inherited from SoftwareApplication:
+
+- carrierRequirements: Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).
+
+## Usage Example
+
+```typescript
+interface MobileApplication {
+  $context?: 'schema.org'
+  $type: 'MobileApplication'
+  carrierRequirements?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MobileApplication",
+  "name": "Example MobileApplication",
+  "description": "An example of the MobileApplication type",
+  "url": "https://example.com/mobileapplication",
+  "identifier": "example-mobileapplication-1"
+}
+```
+
+## Notes
+
+- MobileApplication inherits all properties from SoftwareApplication
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

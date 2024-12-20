@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: MedicalBusiness
+title: MedicalBusiness
+description: A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include different businesses run by health professionals.
+properties:
+
+subClasses:
+  - Optician
+parentClass: LocalBusiness
+---
+
+# MedicalBusiness
+
+A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include different businesses run by health professionals.
+
+## Type Hierarchy
+
+MedicalBusiness is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalBusiness:
+
+- Optician: A store that sells reading glasses and similar devices for improving vision.
+
+## Properties
+
+MedicalBusiness defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalBusiness {
+  $context?: 'schema.org'
+  $type: 'MedicalBusiness'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalBusiness",
+  "name": "Example MedicalBusiness",
+  "description": "An example of the MedicalBusiness type",
+  "url": "https://example.com/medicalbusiness",
+  "identifier": "example-medicalbusiness-1"
+}
+```
+
+## Notes
+
+- MedicalBusiness inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

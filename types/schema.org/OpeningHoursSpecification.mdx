@@ -1,0 +1,66 @@
+---
+$context: schema.org
+$type: OpeningHoursSpecification
+title: OpeningHoursSpecification
+description: A structured value providing information about the opening hours of a place or a certain service inside a place.\n\n
+The place is __open__ if the [[opens]] property is specified, and __closed__ otherwise.\n\nIf the value for the [[closes]] property is less than the value for the [[opens]] property then the hour range is assumed to span over the next day.
+      
+properties:
+  - closes
+  - opens
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# OpeningHoursSpecification
+
+A structured value providing information about the opening hours of a place or a certain service inside a place.\n\n
+The place is __open__ if the [[opens]] property is specified, and __closed__ otherwise.\n\nIf the value for the [[closes]] property is less than the value for the [[opens]] property then the hour range is assumed to span over the next day.
+      
+
+## Type Hierarchy
+
+OpeningHoursSpecification is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from OpeningHoursSpecification.
+
+## Properties
+
+OpeningHoursSpecification defines the following properties in addition to those inherited from StructuredValue:
+
+- closes: The closing hour of the place or service on the given day(s) of the week.
+- opens: The opening hour of the place or service on the given day(s) of the week.
+
+## Usage Example
+
+```typescript
+interface OpeningHoursSpecification {
+  $context?: 'schema.org'
+  $type: 'OpeningHoursSpecification'
+  closes?: string
+  opens?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OpeningHoursSpecification",
+  "name": "Example OpeningHoursSpecification",
+  "description": "An example of the OpeningHoursSpecification type",
+  "url": "https://example.com/openinghoursspecification",
+  "identifier": "example-openinghoursspecification-1"
+}
+```
+
+## Notes
+
+- OpeningHoursSpecification inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

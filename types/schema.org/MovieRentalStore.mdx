@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MovieRentalStore
+title: MovieRentalStore
+description: A movie rental store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# MovieRentalStore
+
+A movie rental store.
+
+## Type Hierarchy
+
+MovieRentalStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from MovieRentalStore.
+
+## Properties
+
+MovieRentalStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface MovieRentalStore {
+  $context?: 'schema.org'
+  $type: 'MovieRentalStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MovieRentalStore",
+  "name": "Example MovieRentalStore",
+  "description": "An example of the MovieRentalStore type",
+  "url": "https://example.com/movierentalstore",
+  "identifier": "example-movierentalstore-1"
+}
+```
+
+## Notes
+
+- MovieRentalStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: MedicalDevice
+title: MedicalDevice
+description: Any object used in a medical capacity, such as to diagnose or treat a patient.
+properties:
+  - postOp
+  - preOp
+  - procedure
+subClasses:
+
+parentClass: MedicalEntity
+---
+
+# MedicalDevice
+
+Any object used in a medical capacity, such as to diagnose or treat a patient.
+
+## Type Hierarchy
+
+MedicalDevice is a type of MedicalEntity.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalDevice.
+
+## Properties
+
+MedicalDevice defines the following properties in addition to those inherited from MedicalEntity:
+
+- postOp: A description of the postoperative procedures, care, and/or followups for this device.
+- preOp: A description of the workup, testing, and other preparations required before implanting this device.
+- procedure: A description of the procedure involved in setting up, using, and/or installing the device.
+
+## Usage Example
+
+```typescript
+interface MedicalDevice {
+  $context?: 'schema.org'
+  $type: 'MedicalDevice'
+  postOp?: string
+  preOp?: string
+  procedure?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalDevice",
+  "name": "Example MedicalDevice",
+  "description": "An example of the MedicalDevice type",
+  "url": "https://example.com/medicaldevice",
+  "identifier": "example-medicaldevice-1"
+}
+```
+
+## Notes
+
+- MedicalDevice inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

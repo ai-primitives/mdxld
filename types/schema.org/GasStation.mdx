@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GasStation
+title: GasStation
+description: A gas station.
+properties:
+
+subClasses:
+
+parentClass: AutomotiveBusiness
+---
+
+# GasStation
+
+A gas station.
+
+## Type Hierarchy
+
+GasStation is a type of AutomotiveBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from GasStation.
+
+## Properties
+
+GasStation defines the following properties in addition to those inherited from AutomotiveBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface GasStation {
+  $context?: 'schema.org'
+  $type: 'GasStation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GasStation",
+  "name": "Example GasStation",
+  "description": "An example of the GasStation type",
+  "url": "https://example.com/gasstation",
+  "identifier": "example-gasstation-1"
+}
+```
+
+## Notes
+
+- GasStation inherits all properties from AutomotiveBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PhysicalActivity
+title: PhysicalActivity
+description: Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.
+properties:
+
+subClasses:
+
+parentClass: LifestyleModification
+---
+
+# PhysicalActivity
+
+Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.
+
+## Type Hierarchy
+
+PhysicalActivity is a type of LifestyleModification.
+
+### Direct Subtypes
+
+No types directly inherit from PhysicalActivity.
+
+## Properties
+
+PhysicalActivity defines the following properties in addition to those inherited from LifestyleModification:
+
+
+
+## Usage Example
+
+```typescript
+interface PhysicalActivity {
+  $context?: 'schema.org'
+  $type: 'PhysicalActivity'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PhysicalActivity",
+  "name": "Example PhysicalActivity",
+  "description": "An example of the PhysicalActivity type",
+  "url": "https://example.com/physicalactivity",
+  "identifier": "example-physicalactivity-1"
+}
+```
+
+## Notes
+
+- PhysicalActivity inherits all properties from LifestyleModification
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

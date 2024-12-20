@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: SizeSystemEnumeration
+title: SizeSystemEnumeration
+description: Enumerates common size systems for different categories of products, for example "EN-13402" or "UK" for wearables or "Imperial" for screws.
+properties:
+
+subClasses:
+  - WearableSizeSystemEnumeration
+parentClass: Enumeration
+---
+
+# SizeSystemEnumeration
+
+Enumerates common size systems for different categories of products, for example "EN-13402" or "UK" for wearables or "Imperial" for screws.
+
+## Type Hierarchy
+
+SizeSystemEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+The following types directly inherit from SizeSystemEnumeration:
+
+- WearableSizeSystemEnumeration: Enumerates common size systems specific for wearable products.
+
+## Properties
+
+SizeSystemEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface SizeSystemEnumeration {
+  $context?: 'schema.org'
+  $type: 'SizeSystemEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SizeSystemEnumeration",
+  "name": "Example SizeSystemEnumeration",
+  "description": "An example of the SizeSystemEnumeration type",
+  "url": "https://example.com/sizesystemenumeration",
+  "identifier": "example-sizesystemenumeration-1"
+}
+```
+
+## Notes
+
+- SizeSystemEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OrderAction
+title: OrderAction
+description: An agent orders an object/product/service to be delivered/sent.
+properties:
+
+subClasses:
+
+parentClass: TradeAction
+---
+
+# OrderAction
+
+An agent orders an object/product/service to be delivered/sent.
+
+## Type Hierarchy
+
+OrderAction is a type of TradeAction.
+
+### Direct Subtypes
+
+No types directly inherit from OrderAction.
+
+## Properties
+
+OrderAction defines the following properties in addition to those inherited from TradeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface OrderAction {
+  $context?: 'schema.org'
+  $type: 'OrderAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OrderAction",
+  "name": "Example OrderAction",
+  "description": "An example of the OrderAction type",
+  "url": "https://example.com/orderaction",
+  "identifier": "example-orderaction-1"
+}
+```
+
+## Notes
+
+- OrderAction inherits all properties from TradeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CorrectionComment
+title: CorrectionComment
+description: A [[comment]] that corrects [[CreativeWork]].
+properties:
+
+subClasses:
+
+parentClass: Comment
+---
+
+# CorrectionComment
+
+A [[comment]] that corrects [[CreativeWork]].
+
+## Type Hierarchy
+
+CorrectionComment is a type of Comment.
+
+### Direct Subtypes
+
+No types directly inherit from CorrectionComment.
+
+## Properties
+
+CorrectionComment defines the following properties in addition to those inherited from Comment:
+
+
+
+## Usage Example
+
+```typescript
+interface CorrectionComment {
+  $context?: 'schema.org'
+  $type: 'CorrectionComment'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CorrectionComment",
+  "name": "Example CorrectionComment",
+  "description": "An example of the CorrectionComment type",
+  "url": "https://example.com/correctioncomment",
+  "identifier": "example-correctioncomment-1"
+}
+```
+
+## Notes
+
+- CorrectionComment inherits all properties from Comment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

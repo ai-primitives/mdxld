@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BloodTest
+title: BloodTest
+description: A medical test performed on a sample of a patient's blood.
+properties:
+
+subClasses:
+
+parentClass: MedicalTest
+---
+
+# BloodTest
+
+A medical test performed on a sample of a patient's blood.
+
+## Type Hierarchy
+
+BloodTest is a type of MedicalTest.
+
+### Direct Subtypes
+
+No types directly inherit from BloodTest.
+
+## Properties
+
+BloodTest defines the following properties in addition to those inherited from MedicalTest:
+
+
+
+## Usage Example
+
+```typescript
+interface BloodTest {
+  $context?: 'schema.org'
+  $type: 'BloodTest'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BloodTest",
+  "name": "Example BloodTest",
+  "description": "An example of the BloodTest type",
+  "url": "https://example.com/bloodtest",
+  "identifier": "example-bloodtest-1"
+}
+```
+
+## Notes
+
+- BloodTest inherits all properties from MedicalTest
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Park
+title: Park
+description: A park.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# Park
+
+A park.
+
+## Type Hierarchy
+
+Park is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Park.
+
+## Properties
+
+Park defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface Park {
+  $context?: 'schema.org'
+  $type: 'Park'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Park",
+  "name": "Example Park",
+  "description": "An example of the Park type",
+  "url": "https://example.com/park",
+  "identifier": "example-park-1"
+}
+```
+
+## Notes
+
+- Park inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: PostalCodeRangeSpecification
+title: PostalCodeRangeSpecification
+description: Indicates a range of postal codes, usually defined as the set of valid codes between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.
+properties:
+  - postalCodeBegin
+  - postalCodeEnd
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# PostalCodeRangeSpecification
+
+Indicates a range of postal codes, usually defined as the set of valid codes between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.
+
+## Type Hierarchy
+
+PostalCodeRangeSpecification is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from PostalCodeRangeSpecification.
+
+## Properties
+
+PostalCodeRangeSpecification defines the following properties in addition to those inherited from StructuredValue:
+
+- postalCodeBegin: First postal code in a range (included).
+- postalCodeEnd: Last postal code in the range (included). Needs to be after [[postalCodeBegin]].
+
+## Usage Example
+
+```typescript
+interface PostalCodeRangeSpecification {
+  $context?: 'schema.org'
+  $type: 'PostalCodeRangeSpecification'
+  postalCodeBegin?: string
+  postalCodeEnd?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PostalCodeRangeSpecification",
+  "name": "Example PostalCodeRangeSpecification",
+  "description": "An example of the PostalCodeRangeSpecification type",
+  "url": "https://example.com/postalcoderangespecification",
+  "identifier": "example-postalcoderangespecification-1"
+}
+```
+
+## Notes
+
+- PostalCodeRangeSpecification inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WebAPI
+title: WebAPI
+description: An application programming interface accessible over Web/Internet technologies.
+properties:
+  - documentation
+subClasses:
+
+parentClass: Service
+---
+
+# WebAPI
+
+An application programming interface accessible over Web/Internet technologies.
+
+## Type Hierarchy
+
+WebAPI is a type of Service.
+
+### Direct Subtypes
+
+No types directly inherit from WebAPI.
+
+## Properties
+
+WebAPI defines the following properties in addition to those inherited from Service:
+
+- documentation: Further documentation describing the Web API in more detail.
+
+## Usage Example
+
+```typescript
+interface WebAPI {
+  $context?: 'schema.org'
+  $type: 'WebAPI'
+  documentation?: CreativeWork | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WebAPI",
+  "name": "Example WebAPI",
+  "description": "An example of the WebAPI type",
+  "url": "https://example.com/webapi",
+  "identifier": "example-webapi-1"
+}
+```
+
+## Notes
+
+- WebAPI inherits all properties from Service
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

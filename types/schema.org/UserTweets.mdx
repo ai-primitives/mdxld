@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UserTweets
+title: UserTweets
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+
+subClasses:
+
+parentClass: UserInteraction
+---
+
+# UserTweets
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserTweets is a type of UserInteraction.
+
+### Direct Subtypes
+
+No types directly inherit from UserTweets.
+
+## Properties
+
+UserTweets defines the following properties in addition to those inherited from UserInteraction:
+
+
+
+## Usage Example
+
+```typescript
+interface UserTweets {
+  $context?: 'schema.org'
+  $type: 'UserTweets'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserTweets",
+  "name": "Example UserTweets",
+  "description": "An example of the UserTweets type",
+  "url": "https://example.com/usertweets",
+  "identifier": "example-usertweets-1"
+}
+```
+
+## Notes
+
+- UserTweets inherits all properties from UserInteraction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

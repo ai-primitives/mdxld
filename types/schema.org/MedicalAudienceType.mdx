@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalAudienceType
+title: MedicalAudienceType
+description: Target audiences types for medical web pages. Enumerated type.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# MedicalAudienceType
+
+Target audiences types for medical web pages. Enumerated type.
+
+## Type Hierarchy
+
+MedicalAudienceType is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalAudienceType.
+
+## Properties
+
+MedicalAudienceType defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalAudienceType {
+  $context?: 'schema.org'
+  $type: 'MedicalAudienceType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalAudienceType",
+  "name": "Example MedicalAudienceType",
+  "description": "An example of the MedicalAudienceType type",
+  "url": "https://example.com/medicalaudiencetype",
+  "identifier": "example-medicalaudiencetype-1"
+}
+```
+
+## Notes
+
+- MedicalAudienceType inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: DrugCost
+title: DrugCost
+description: The cost per unit of a medical drug. Note that this type is not meant to represent the price in an offer of a drug for sale; see the Offer type for that. This type will typically be used to tag wholesale or average retail cost of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending on how and where they are paid for, so while this type captures some of the variables, costs should be used with caution by consumers of this schema's markup.
+properties:
+  - costCategory
+  - costCurrency
+  - costOrigin
+  - costPerUnit
+subClasses:
+
+parentClass: MedicalEntity
+---
+
+# DrugCost
+
+The cost per unit of a medical drug. Note that this type is not meant to represent the price in an offer of a drug for sale; see the Offer type for that. This type will typically be used to tag wholesale or average retail cost of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending on how and where they are paid for, so while this type captures some of the variables, costs should be used with caution by consumers of this schema's markup.
+
+## Type Hierarchy
+
+DrugCost is a type of MedicalEntity.
+
+### Direct Subtypes
+
+No types directly inherit from DrugCost.
+
+## Properties
+
+DrugCost defines the following properties in addition to those inherited from MedicalEntity:
+
+- costCategory: The category of cost, such as wholesale, retail, reimbursement cap, etc.
+- costCurrency: The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217. 
+- costOrigin: Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.
+- costPerUnit: The cost per unit of the drug.
+
+## Usage Example
+
+```typescript
+interface DrugCost {
+  $context?: 'schema.org'
+  $type: 'DrugCost'
+  costCategory?: DrugCostCategory
+  costCurrency?: string
+  costOrigin?: string
+  costPerUnit?: QualitativeValue | number | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DrugCost",
+  "name": "Example DrugCost",
+  "description": "An example of the DrugCost type",
+  "url": "https://example.com/drugcost",
+  "identifier": "example-drugcost-1"
+}
+```
+
+## Notes
+
+- DrugCost inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

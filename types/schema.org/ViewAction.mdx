@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ViewAction
+title: ViewAction
+description: The act of consuming static visual content.
+properties:
+
+subClasses:
+
+parentClass: ConsumeAction
+---
+
+# ViewAction
+
+The act of consuming static visual content.
+
+## Type Hierarchy
+
+ViewAction is a type of ConsumeAction.
+
+### Direct Subtypes
+
+No types directly inherit from ViewAction.
+
+## Properties
+
+ViewAction defines the following properties in addition to those inherited from ConsumeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ViewAction {
+  $context?: 'schema.org'
+  $type: 'ViewAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ViewAction",
+  "name": "Example ViewAction",
+  "description": "An example of the ViewAction type",
+  "url": "https://example.com/viewaction",
+  "identifier": "example-viewaction-1"
+}
+```
+
+## Notes
+
+- ViewAction inherits all properties from ConsumeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

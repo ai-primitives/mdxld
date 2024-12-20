@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Hotel
+title: Hotel
+description: A hotel is an establishment that provides lodging paid on a short-term basis (source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+properties:
+
+subClasses:
+
+parentClass: LodgingBusiness
+---
+
+# Hotel
+
+A hotel is an establishment that provides lodging paid on a short-term basis (source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+
+## Type Hierarchy
+
+Hotel is a type of LodgingBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from Hotel.
+
+## Properties
+
+Hotel defines the following properties in addition to those inherited from LodgingBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface Hotel {
+  $context?: 'schema.org'
+  $type: 'Hotel'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Hotel",
+  "name": "Example Hotel",
+  "description": "An example of the Hotel type",
+  "url": "https://example.com/hotel",
+  "identifier": "example-hotel-1"
+}
+```
+
+## Notes
+
+- Hotel inherits all properties from LodgingBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

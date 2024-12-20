@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HealthClub
+title: HealthClub
+description: A health club.
+properties:
+
+subClasses:
+
+
+---
+
+# HealthClub
+
+A health club.
+
+## Type Hierarchy
+
+HealthClub is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from HealthClub.
+
+## Properties
+
+HealthClub defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface HealthClub {
+  $context?: 'schema.org'
+  $type: 'HealthClub'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HealthClub",
+  "name": "Example HealthClub",
+  "description": "An example of the HealthClub type",
+  "url": "https://example.com/healthclub",
+  "identifier": "example-healthclub-1"
+}
+```
+
+## Notes
+
+- HealthClub inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

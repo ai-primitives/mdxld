@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LegislativeBuilding
+title: LegislativeBuilding
+description: A legislative building&#x2014;for example, the state capitol.
+properties:
+
+subClasses:
+
+parentClass: GovernmentBuilding
+---
+
+# LegislativeBuilding
+
+A legislative building&#x2014;for example, the state capitol.
+
+## Type Hierarchy
+
+LegislativeBuilding is a type of GovernmentBuilding.
+
+### Direct Subtypes
+
+No types directly inherit from LegislativeBuilding.
+
+## Properties
+
+LegislativeBuilding defines the following properties in addition to those inherited from GovernmentBuilding:
+
+
+
+## Usage Example
+
+```typescript
+interface LegislativeBuilding {
+  $context?: 'schema.org'
+  $type: 'LegislativeBuilding'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LegislativeBuilding",
+  "name": "Example LegislativeBuilding",
+  "description": "An example of the LegislativeBuilding type",
+  "url": "https://example.com/legislativebuilding",
+  "identifier": "example-legislativebuilding-1"
+}
+```
+
+## Notes
+
+- LegislativeBuilding inherits all properties from GovernmentBuilding
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

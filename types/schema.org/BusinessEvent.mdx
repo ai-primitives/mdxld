@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BusinessEvent
+title: BusinessEvent
+description: Event type: Business event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# BusinessEvent
+
+Event type: Business event.
+
+## Type Hierarchy
+
+BusinessEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from BusinessEvent.
+
+## Properties
+
+BusinessEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface BusinessEvent {
+  $context?: 'schema.org'
+  $type: 'BusinessEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BusinessEvent",
+  "name": "Example BusinessEvent",
+  "description": "An example of the BusinessEvent type",
+  "url": "https://example.com/businessevent",
+  "identifier": "example-businessevent-1"
+}
+```
+
+## Notes
+
+- BusinessEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

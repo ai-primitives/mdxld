@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EmployerAggregateRating
+title: EmployerAggregateRating
+description: An aggregate rating of an Organization related to its role as an employer.
+properties:
+
+subClasses:
+
+parentClass: AggregateRating
+---
+
+# EmployerAggregateRating
+
+An aggregate rating of an Organization related to its role as an employer.
+
+## Type Hierarchy
+
+EmployerAggregateRating is a type of AggregateRating.
+
+### Direct Subtypes
+
+No types directly inherit from EmployerAggregateRating.
+
+## Properties
+
+EmployerAggregateRating defines the following properties in addition to those inherited from AggregateRating:
+
+
+
+## Usage Example
+
+```typescript
+interface EmployerAggregateRating {
+  $context?: 'schema.org'
+  $type: 'EmployerAggregateRating'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EmployerAggregateRating",
+  "name": "Example EmployerAggregateRating",
+  "description": "An example of the EmployerAggregateRating type",
+  "url": "https://example.com/employeraggregaterating",
+  "identifier": "example-employeraggregaterating-1"
+}
+```
+
+## Notes
+
+- EmployerAggregateRating inherits all properties from AggregateRating
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

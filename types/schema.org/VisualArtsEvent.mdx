@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: VisualArtsEvent
+title: VisualArtsEvent
+description: Event type: Visual arts event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# VisualArtsEvent
+
+Event type: Visual arts event.
+
+## Type Hierarchy
+
+VisualArtsEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from VisualArtsEvent.
+
+## Properties
+
+VisualArtsEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface VisualArtsEvent {
+  $context?: 'schema.org'
+  $type: 'VisualArtsEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VisualArtsEvent",
+  "name": "Example VisualArtsEvent",
+  "description": "An example of the VisualArtsEvent type",
+  "url": "https://example.com/visualartsevent",
+  "identifier": "example-visualartsevent-1"
+}
+```
+
+## Notes
+
+- VisualArtsEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

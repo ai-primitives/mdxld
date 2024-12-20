@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: RadioChannel
+title: RadioChannel
+description: A unique instance of a radio BroadcastService on a CableOrSatelliteService lineup.
+properties:
+
+subClasses:
+  - AMRadioChannel
+  - FMRadioChannel
+parentClass: BroadcastChannel
+---
+
+# RadioChannel
+
+A unique instance of a radio BroadcastService on a CableOrSatelliteService lineup.
+
+## Type Hierarchy
+
+RadioChannel is a type of BroadcastChannel.
+
+### Direct Subtypes
+
+The following types directly inherit from RadioChannel:
+
+- AMRadioChannel: A radio channel that uses AM.
+- FMRadioChannel: A radio channel that uses FM.
+
+## Properties
+
+RadioChannel defines the following properties in addition to those inherited from BroadcastChannel:
+
+
+
+## Usage Example
+
+```typescript
+interface RadioChannel {
+  $context?: 'schema.org'
+  $type: 'RadioChannel'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RadioChannel",
+  "name": "Example RadioChannel",
+  "description": "An example of the RadioChannel type",
+  "url": "https://example.com/radiochannel",
+  "identifier": "example-radiochannel-1"
+}
+```
+
+## Notes
+
+- RadioChannel inherits all properties from BroadcastChannel
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

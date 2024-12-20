@@ -1,0 +1,75 @@
+---
+$context: schema.org
+$type: CommunicateAction
+title: CommunicateAction
+description: The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.
+properties:
+
+subClasses:
+  - AskAction
+  - CheckInAction
+  - CheckOutAction
+  - CommentAction
+  - InformAction
+  - InviteAction
+  - ReplyAction
+  - ShareAction
+parentClass: InteractAction
+---
+
+# CommunicateAction
+
+The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.
+
+## Type Hierarchy
+
+CommunicateAction is a type of InteractAction.
+
+### Direct Subtypes
+
+The following types directly inherit from CommunicateAction:
+
+- AskAction: The act of posing a question / favor to someone.\n\nRelated actions:\n\n* [[ReplyAction]]: Appears generally as a response to AskAction.
+- CheckInAction: The act of an agent communicating (service provider, social media, etc) their arrival by registering/confirming for a previously reserved service (e.g. flight check-in) or at a place (e.g. hotel), possibly resulting in a result (boarding pass, etc).\n\nRelated actions:\n\n* [[CheckOutAction]]: The antonym of CheckInAction.\n* [[ArriveAction]]: Unlike ArriveAction, CheckInAction implies that the agent is informing/confirming the start of a previously reserved service.\n* [[ConfirmAction]]: Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming the *start* of a previously reserved service rather than its validity/existence.
+- CheckOutAction: The act of an agent communicating (service provider, social media, etc) their departure of a previously reserved service (e.g. flight check-in) or place (e.g. hotel).\n\nRelated actions:\n\n* [[CheckInAction]]: The antonym of CheckOutAction.\n* [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.\n* [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.
+- CommentAction: The act of generating a comment about a subject.
+- InformAction: The act of notifying someone of information pertinent to them, with no expectation of a response.
+- InviteAction: The act of asking someone to attend an event. Reciprocal of RsvpAction.
+- ReplyAction: The act of responding to a question/message asked/sent by the object. Related to [[AskAction]].\n\nRelated actions:\n\n* [[AskAction]]: Appears generally as an origin of a ReplyAction.
+- ShareAction: The act of distributing content to people for their amusement or edification.
+
+## Properties
+
+CommunicateAction defines the following properties in addition to those inherited from InteractAction:
+
+
+
+## Usage Example
+
+```typescript
+interface CommunicateAction {
+  $context?: 'schema.org'
+  $type: 'CommunicateAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CommunicateAction",
+  "name": "Example CommunicateAction",
+  "description": "An example of the CommunicateAction type",
+  "url": "https://example.com/communicateaction",
+  "identifier": "example-communicateaction-1"
+}
+```
+
+## Notes
+
+- CommunicateAction inherits all properties from InteractAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

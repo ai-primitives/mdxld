@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: ControlAction
+title: ControlAction
+description: An agent controls a device or application.
+properties:
+
+subClasses:
+  - ActivateAction
+  - DeactivateAction
+  - ResumeAction
+  - SuspendAction
+parentClass: Action
+---
+
+# ControlAction
+
+An agent controls a device or application.
+
+## Type Hierarchy
+
+ControlAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from ControlAction:
+
+- ActivateAction: The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight).
+- DeactivateAction: The act of stopping or deactivating a device or application (e.g. stopping a timer or turning off a flashlight).
+- ResumeAction: The act of resuming a device or application which was formerly paused (e.g. resume music playback or resume a timer).
+- SuspendAction: The act of momentarily pausing a device or application (e.g. pause music playback or pause a timer).
+
+## Properties
+
+ControlAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface ControlAction {
+  $context?: 'schema.org'
+  $type: 'ControlAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ControlAction",
+  "name": "Example ControlAction",
+  "description": "An example of the ControlAction type",
+  "url": "https://example.com/controlaction",
+  "identifier": "example-controlaction-1"
+}
+```
+
+## Notes
+
+- ControlAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

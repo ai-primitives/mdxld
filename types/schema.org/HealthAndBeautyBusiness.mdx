@@ -1,0 +1,69 @@
+---
+$context: schema.org
+$type: HealthAndBeautyBusiness
+title: HealthAndBeautyBusiness
+description: Health and beauty.
+properties:
+
+subClasses:
+  - BeautySalon
+  - DaySpa
+  - HairSalon
+  - NailSalon
+  - TattooParlor
+parentClass: LocalBusiness
+---
+
+# HealthAndBeautyBusiness
+
+Health and beauty.
+
+## Type Hierarchy
+
+HealthAndBeautyBusiness is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from HealthAndBeautyBusiness:
+
+- BeautySalon: Beauty salon.
+- DaySpa: A day spa.
+- HairSalon: A hair salon.
+- NailSalon: A nail salon.
+- TattooParlor: A tattoo parlor.
+
+## Properties
+
+HealthAndBeautyBusiness defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface HealthAndBeautyBusiness {
+  $context?: 'schema.org'
+  $type: 'HealthAndBeautyBusiness'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HealthAndBeautyBusiness",
+  "name": "Example HealthAndBeautyBusiness",
+  "description": "An example of the HealthAndBeautyBusiness type",
+  "url": "https://example.com/healthandbeautybusiness",
+  "identifier": "example-healthandbeautybusiness-1"
+}
+```
+
+## Notes
+
+- HealthAndBeautyBusiness inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

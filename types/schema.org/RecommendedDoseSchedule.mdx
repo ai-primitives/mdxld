@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RecommendedDoseSchedule
+title: RecommendedDoseSchedule
+description: A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
+properties:
+
+subClasses:
+
+parentClass: DoseSchedule
+---
+
+# RecommendedDoseSchedule
+
+A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
+
+## Type Hierarchy
+
+RecommendedDoseSchedule is a type of DoseSchedule.
+
+### Direct Subtypes
+
+No types directly inherit from RecommendedDoseSchedule.
+
+## Properties
+
+RecommendedDoseSchedule defines the following properties in addition to those inherited from DoseSchedule:
+
+
+
+## Usage Example
+
+```typescript
+interface RecommendedDoseSchedule {
+  $context?: 'schema.org'
+  $type: 'RecommendedDoseSchedule'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RecommendedDoseSchedule",
+  "name": "Example RecommendedDoseSchedule",
+  "description": "An example of the RecommendedDoseSchedule type",
+  "url": "https://example.com/recommendeddoseschedule",
+  "identifier": "example-recommendeddoseschedule-1"
+}
+```
+
+## Notes
+
+- RecommendedDoseSchedule inherits all properties from DoseSchedule
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

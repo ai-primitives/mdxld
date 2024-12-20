@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TheaterGroup
+title: TheaterGroup
+description: A theater group or company, for example, the Royal Shakespeare Company or Druid Theatre.
+properties:
+
+subClasses:
+
+parentClass: PerformingGroup
+---
+
+# TheaterGroup
+
+A theater group or company, for example, the Royal Shakespeare Company or Druid Theatre.
+
+## Type Hierarchy
+
+TheaterGroup is a type of PerformingGroup.
+
+### Direct Subtypes
+
+No types directly inherit from TheaterGroup.
+
+## Properties
+
+TheaterGroup defines the following properties in addition to those inherited from PerformingGroup:
+
+
+
+## Usage Example
+
+```typescript
+interface TheaterGroup {
+  $context?: 'schema.org'
+  $type: 'TheaterGroup'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TheaterGroup",
+  "name": "Example TheaterGroup",
+  "description": "An example of the TheaterGroup type",
+  "url": "https://example.com/theatergroup",
+  "identifier": "example-theatergroup-1"
+}
+```
+
+## Notes
+
+- TheaterGroup inherits all properties from PerformingGroup
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

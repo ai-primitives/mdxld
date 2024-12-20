@@ -1,0 +1,73 @@
+---
+$context: schema.org
+$type: VisualArtwork
+title: VisualArtwork
+description: A work of art that is primarily visual in character.
+properties:
+  - artEdition
+  - artMedium
+  - artform
+  - artworkSurface
+  - surface
+subClasses:
+  - CoverArt
+parentClass: CreativeWork
+---
+
+# VisualArtwork
+
+A work of art that is primarily visual in character.
+
+## Type Hierarchy
+
+VisualArtwork is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from VisualArtwork:
+
+- CoverArt: The artwork on the outer surface of a CreativeWork.
+
+## Properties
+
+VisualArtwork defines the following properties in addition to those inherited from CreativeWork:
+
+- artEdition: The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
+- artform: e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
+- artMedium: The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)
+- artworkSurface: The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
+- surface: A material used as a surface in some artwork, e.g. Canvas, Paper, Wood, Board, etc.
+
+## Usage Example
+
+```typescript
+interface VisualArtwork {
+  $context?: 'schema.org'
+  $type: 'VisualArtwork'
+  artEdition?: number | string
+  artform?: string
+  artMedium?: string
+  artworkSurface?: string
+  surface?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VisualArtwork",
+  "name": "Example VisualArtwork",
+  "description": "An example of the VisualArtwork type",
+  "url": "https://example.com/visualartwork",
+  "identifier": "example-visualartwork-1"
+}
+```
+
+## Notes
+
+- VisualArtwork inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

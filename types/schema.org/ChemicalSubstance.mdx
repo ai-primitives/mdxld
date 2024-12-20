@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ChemicalSubstance
+title: ChemicalSubstance
+description: A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: [ChEBI:59999](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999)).
+properties:
+  - chemicalComposition
+subClasses:
+
+parentClass: BioChemEntity
+---
+
+# ChemicalSubstance
+
+A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: [ChEBI:59999](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999)).
+
+## Type Hierarchy
+
+ChemicalSubstance is a type of BioChemEntity.
+
+### Direct Subtypes
+
+No types directly inherit from ChemicalSubstance.
+
+## Properties
+
+ChemicalSubstance defines the following properties in addition to those inherited from BioChemEntity:
+
+- chemicalComposition: The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
+
+## Usage Example
+
+```typescript
+interface ChemicalSubstance {
+  $context?: 'schema.org'
+  $type: 'ChemicalSubstance'
+  chemicalComposition?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ChemicalSubstance",
+  "name": "Example ChemicalSubstance",
+  "description": "An example of the ChemicalSubstance type",
+  "url": "https://example.com/chemicalsubstance",
+  "identifier": "example-chemicalsubstance-1"
+}
+```
+
+## Notes
+
+- ChemicalSubstance inherits all properties from BioChemEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

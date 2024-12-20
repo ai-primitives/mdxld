@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CertificationStatusEnumeration
+title: CertificationStatusEnumeration
+description: Enumerates the different statuses of a Certification (Active and Inactive).
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# CertificationStatusEnumeration
+
+Enumerates the different statuses of a Certification (Active and Inactive).
+
+## Type Hierarchy
+
+CertificationStatusEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from CertificationStatusEnumeration.
+
+## Properties
+
+CertificationStatusEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface CertificationStatusEnumeration {
+  $context?: 'schema.org'
+  $type: 'CertificationStatusEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CertificationStatusEnumeration",
+  "name": "Example CertificationStatusEnumeration",
+  "description": "An example of the CertificationStatusEnumeration type",
+  "url": "https://example.com/certificationstatusenumeration",
+  "identifier": "example-certificationstatusenumeration-1"
+}
+```
+
+## Notes
+
+- CertificationStatusEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

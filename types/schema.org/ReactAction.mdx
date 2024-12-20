@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: ReactAction
+title: ReactAction
+description: The act of responding instinctively and emotionally to an object, expressing a sentiment.
+properties:
+
+subClasses:
+  - AgreeAction
+  - DisagreeAction
+  - DislikeAction
+  - EndorseAction
+  - LikeAction
+  - WantAction
+parentClass: AssessAction
+---
+
+# ReactAction
+
+The act of responding instinctively and emotionally to an object, expressing a sentiment.
+
+## Type Hierarchy
+
+ReactAction is a type of AssessAction.
+
+### Direct Subtypes
+
+The following types directly inherit from ReactAction:
+
+- AgreeAction: The act of expressing a consistency of opinion with the object. An agent agrees to/about an object (a proposition, topic or theme) with participants.
+- DisagreeAction: The act of expressing a difference of opinion with the object. An agent disagrees to/about an object (a proposition, topic or theme) with participants.
+- DislikeAction: The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.
+- EndorseAction: An agent approves/certifies/likes/supports/sanctions an object.
+- LikeAction: The act of expressing a positive sentiment about the object. An agent likes an object (a proposition, topic or theme) with participants.
+- WantAction: The act of expressing a desire about the object. An agent wants an object.
+
+## Properties
+
+ReactAction defines the following properties in addition to those inherited from AssessAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ReactAction {
+  $context?: 'schema.org'
+  $type: 'ReactAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReactAction",
+  "name": "Example ReactAction",
+  "description": "An example of the ReactAction type",
+  "url": "https://example.com/reactaction",
+  "identifier": "example-reactaction-1"
+}
+```
+
+## Notes
+
+- ReactAction inherits all properties from AssessAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

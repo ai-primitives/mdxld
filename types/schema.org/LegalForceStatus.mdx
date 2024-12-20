@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LegalForceStatus
+title: LegalForceStatus
+description: A list of possible statuses for the legal force of a legislation.
+properties:
+
+subClasses:
+
+parentClass: StatusEnumeration
+---
+
+# LegalForceStatus
+
+A list of possible statuses for the legal force of a legislation.
+
+## Type Hierarchy
+
+LegalForceStatus is a type of StatusEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from LegalForceStatus.
+
+## Properties
+
+LegalForceStatus defines the following properties in addition to those inherited from StatusEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface LegalForceStatus {
+  $context?: 'schema.org'
+  $type: 'LegalForceStatus'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LegalForceStatus",
+  "name": "Example LegalForceStatus",
+  "description": "An example of the LegalForceStatus type",
+  "url": "https://example.com/legalforcestatus",
+  "identifier": "example-legalforcestatus-1"
+}
+```
+
+## Notes
+
+- LegalForceStatus inherits all properties from StatusEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

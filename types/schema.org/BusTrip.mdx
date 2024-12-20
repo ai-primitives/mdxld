@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: BusTrip
+title: BusTrip
+description: A trip on a commercial bus line.
+properties:
+  - arrivalBusStop
+  - busName
+  - busNumber
+  - departureBusStop
+subClasses:
+
+parentClass: Trip
+---
+
+# BusTrip
+
+A trip on a commercial bus line.
+
+## Type Hierarchy
+
+BusTrip is a type of Trip.
+
+### Direct Subtypes
+
+No types directly inherit from BusTrip.
+
+## Properties
+
+BusTrip defines the following properties in addition to those inherited from Trip:
+
+- arrivalBusStop: The stop or station from which the bus arrives.
+- busName: The name of the bus (e.g. Bolt Express).
+- busNumber: The unique identifier for the bus.
+- departureBusStop: The stop or station from which the bus departs.
+
+## Usage Example
+
+```typescript
+interface BusTrip {
+  $context?: 'schema.org'
+  $type: 'BusTrip'
+  arrivalBusStop?: BusStation | BusStop
+  busName?: string
+  busNumber?: string
+  departureBusStop?: BusStation | BusStop
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BusTrip",
+  "name": "Example BusTrip",
+  "description": "An example of the BusTrip type",
+  "url": "https://example.com/bustrip",
+  "identifier": "example-bustrip-1"
+}
+```
+
+## Notes
+
+- BusTrip inherits all properties from Trip
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

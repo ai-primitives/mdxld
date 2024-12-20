@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: WebContent
+title: WebContent
+description: WebContent is a type representing all [[WebPage]], [[WebSite]] and [[WebPageElement]] content. It is sometimes the case that detailed distinctions between Web pages, sites and their parts are not always important or obvious. The  [[WebContent]] type makes it easier to describe Web-addressable content without requiring such distinctions to always be stated. (The intent is that the existing types [[WebPage]], [[WebSite]] and [[WebPageElement]] will eventually be declared as subtypes of [[WebContent]].)
+properties:
+
+subClasses:
+  - HealthTopicContent
+parentClass: CreativeWork
+---
+
+# WebContent
+
+WebContent is a type representing all [[WebPage]], [[WebSite]] and [[WebPageElement]] content. It is sometimes the case that detailed distinctions between Web pages, sites and their parts are not always important or obvious. The  [[WebContent]] type makes it easier to describe Web-addressable content without requiring such distinctions to always be stated. (The intent is that the existing types [[WebPage]], [[WebSite]] and [[WebPageElement]] will eventually be declared as subtypes of [[WebContent]].)
+
+## Type Hierarchy
+
+WebContent is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from WebContent:
+
+- HealthTopicContent: [[HealthTopicContent]] is [[WebContent]] that is about some aspect of a health topic, e.g. a condition, its symptoms or treatments. Such content may be comprised of several parts or sections and use different types of media. Multiple instances of [[WebContent]] (and hence [[HealthTopicContent]]) can be related using [[hasPart]] / [[isPartOf]] where there is some kind of content hierarchy, and their content described with [[about]] and [[mentions]] e.g. building upon the existing [[MedicalCondition]] vocabulary.
+  
+
+## Properties
+
+WebContent defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface WebContent {
+  $context?: 'schema.org'
+  $type: 'WebContent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WebContent",
+  "name": "Example WebContent",
+  "description": "An example of the WebContent type",
+  "url": "https://example.com/webcontent",
+  "identifier": "example-webcontent-1"
+}
+```
+
+## Notes
+
+- WebContent inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

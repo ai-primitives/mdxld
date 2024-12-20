@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MovieSeries
+title: MovieSeries
+description: A series of movies. Included movies can be indicated with the hasPart property.
+properties:
+
+subClasses:
+
+parentClass: CreativeWorkSeries
+---
+
+# MovieSeries
+
+A series of movies. Included movies can be indicated with the hasPart property.
+
+## Type Hierarchy
+
+MovieSeries is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+No types directly inherit from MovieSeries.
+
+## Properties
+
+MovieSeries defines the following properties in addition to those inherited from CreativeWorkSeries:
+
+
+
+## Usage Example
+
+```typescript
+interface MovieSeries {
+  $context?: 'schema.org'
+  $type: 'MovieSeries'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MovieSeries",
+  "name": "Example MovieSeries",
+  "description": "An example of the MovieSeries type",
+  "url": "https://example.com/movieseries",
+  "identifier": "example-movieseries-1"
+}
+```
+
+## Notes
+
+- MovieSeries inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

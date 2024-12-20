@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AskPublicNewsArticle
+title: AskPublicNewsArticle
+description: A [[NewsArticle]] expressing an open call by a [[NewsMediaOrganization]] asking the public for input, insights, clarifications, anecdotes, documentation, etc., on an issue, for reporting purposes.
+properties:
+
+subClasses:
+
+parentClass: NewsArticle
+---
+
+# AskPublicNewsArticle
+
+A [[NewsArticle]] expressing an open call by a [[NewsMediaOrganization]] asking the public for input, insights, clarifications, anecdotes, documentation, etc., on an issue, for reporting purposes.
+
+## Type Hierarchy
+
+AskPublicNewsArticle is a type of NewsArticle.
+
+### Direct Subtypes
+
+No types directly inherit from AskPublicNewsArticle.
+
+## Properties
+
+AskPublicNewsArticle defines the following properties in addition to those inherited from NewsArticle:
+
+
+
+## Usage Example
+
+```typescript
+interface AskPublicNewsArticle {
+  $context?: 'schema.org'
+  $type: 'AskPublicNewsArticle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AskPublicNewsArticle",
+  "name": "Example AskPublicNewsArticle",
+  "description": "An example of the AskPublicNewsArticle type",
+  "url": "https://example.com/askpublicnewsarticle",
+  "identifier": "example-askpublicnewsarticle-1"
+}
+```
+
+## Notes
+
+- AskPublicNewsArticle inherits all properties from NewsArticle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

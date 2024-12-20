@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Substance
+title: Substance
+description: Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.
+properties:
+
+subClasses:
+
+parentClass: MedicalEntity
+---
+
+# Substance
+
+Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.
+
+## Type Hierarchy
+
+Substance is a type of MedicalEntity.
+
+### Direct Subtypes
+
+No types directly inherit from Substance.
+
+## Properties
+
+Substance defines the following properties in addition to those inherited from MedicalEntity:
+
+
+
+## Usage Example
+
+```typescript
+interface Substance {
+  $context?: 'schema.org'
+  $type: 'Substance'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Substance",
+  "name": "Example Substance",
+  "description": "An example of the Substance type",
+  "url": "https://example.com/substance",
+  "identifier": "example-substance-1"
+}
+```
+
+## Notes
+
+- Substance inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

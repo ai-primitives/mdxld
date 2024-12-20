@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ClaimReview
+title: ClaimReview
+description: A fact-checking review of claims made (or reported) in some creative work (referenced via itemReviewed).
+properties:
+  - claimReviewed
+subClasses:
+
+parentClass: Review
+---
+
+# ClaimReview
+
+A fact-checking review of claims made (or reported) in some creative work (referenced via itemReviewed).
+
+## Type Hierarchy
+
+ClaimReview is a type of Review.
+
+### Direct Subtypes
+
+No types directly inherit from ClaimReview.
+
+## Properties
+
+ClaimReview defines the following properties in addition to those inherited from Review:
+
+- claimReviewed: A short summary of the specific claims reviewed in a ClaimReview.
+
+## Usage Example
+
+```typescript
+interface ClaimReview {
+  $context?: 'schema.org'
+  $type: 'ClaimReview'
+  claimReviewed?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ClaimReview",
+  "name": "Example ClaimReview",
+  "description": "An example of the ClaimReview type",
+  "url": "https://example.com/claimreview",
+  "identifier": "example-claimreview-1"
+}
+```
+
+## Notes
+
+- ClaimReview inherits all properties from Review
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

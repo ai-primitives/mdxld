@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: VacationRental
+title: VacationRental
+description: A kind of lodging business that focuses on renting single properties for limited time.
+properties:
+
+subClasses:
+
+parentClass: LodgingBusiness
+---
+
+# VacationRental
+
+A kind of lodging business that focuses on renting single properties for limited time.
+
+## Type Hierarchy
+
+VacationRental is a type of LodgingBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from VacationRental.
+
+## Properties
+
+VacationRental defines the following properties in addition to those inherited from LodgingBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface VacationRental {
+  $context?: 'schema.org'
+  $type: 'VacationRental'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VacationRental",
+  "name": "Example VacationRental",
+  "description": "An example of the VacationRental type",
+  "url": "https://example.com/vacationrental",
+  "identifier": "example-vacationrental-1"
+}
+```
+
+## Notes
+
+- VacationRental inherits all properties from LodgingBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

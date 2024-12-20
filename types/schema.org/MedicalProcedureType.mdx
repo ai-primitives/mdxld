@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalProcedureType
+title: MedicalProcedureType
+description: An enumeration that describes different types of medical procedures.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# MedicalProcedureType
+
+An enumeration that describes different types of medical procedures.
+
+## Type Hierarchy
+
+MedicalProcedureType is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalProcedureType.
+
+## Properties
+
+MedicalProcedureType defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalProcedureType {
+  $context?: 'schema.org'
+  $type: 'MedicalProcedureType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalProcedureType",
+  "name": "Example MedicalProcedureType",
+  "description": "An example of the MedicalProcedureType type",
+  "url": "https://example.com/medicalproceduretype",
+  "identifier": "example-medicalproceduretype-1"
+}
+```
+
+## Notes
+
+- MedicalProcedureType inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

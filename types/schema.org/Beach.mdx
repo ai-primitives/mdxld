@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Beach
+title: Beach
+description: Beach.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# Beach
+
+Beach.
+
+## Type Hierarchy
+
+Beach is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Beach.
+
+## Properties
+
+Beach defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface Beach {
+  $context?: 'schema.org'
+  $type: 'Beach'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Beach",
+  "name": "Example Beach",
+  "description": "An example of the Beach type",
+  "url": "https://example.com/beach",
+  "identifier": "example-beach-1"
+}
+```
+
+## Notes
+
+- Beach inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

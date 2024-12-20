@@ -1,0 +1,102 @@
+---
+$context: schema.org
+$type: Reservation
+title: Reservation
+description: Describes a reservation for travel, dining or an event. Some reservations require tickets. \n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, restaurant reservations, flights, or rental cars, use [[Offer]].
+properties:
+  - bookingAgent
+  - bookingTime
+  - modifiedTime
+  - programMembershipUsed
+  - reservationFor
+  - reservationId
+  - reservationStatus
+  - reservedTicket
+subClasses:
+  - BoatReservation
+  - BusReservation
+  - EventReservation
+  - FlightReservation
+  - FoodEstablishmentReservation
+  - LodgingReservation
+  - RentalCarReservation
+  - ReservationPackage
+  - TaxiReservation
+  - TrainReservation
+parentClass: Intangible
+---
+
+# Reservation
+
+Describes a reservation for travel, dining or an event. Some reservations require tickets. \n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, restaurant reservations, flights, or rental cars, use [[Offer]].
+
+## Type Hierarchy
+
+Reservation is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from Reservation:
+
+- BoatReservation: A reservation for boat travel.
+
+Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+- BusReservation: A reservation for bus travel. \n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+- EventReservation: A reservation for an event like a concert, sporting event, or lecture.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+- FlightReservation: A reservation for air travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+- FoodEstablishmentReservation: A reservation to dine at a food-related business.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+- LodgingReservation: A reservation for lodging at a hotel, motel, inn, etc.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+- RentalCarReservation: A reservation for a rental car.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
+- ReservationPackage: A group of multiple reservations with common values for all sub-reservations.
+- TaxiReservation: A reservation for a taxi.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+- TrainReservation: A reservation for train travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+
+## Properties
+
+Reservation defines the following properties in addition to those inherited from Intangible:
+
+- bookingAgent: 'bookingAgent' is an out-dated term indicating a 'broker' that serves as a booking agent.
+- bookingTime: The date and time the reservation was booked.
+- modifiedTime: The date and time the reservation was modified.
+- programMembershipUsed: Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.
+- reservationFor: The thing -- flight, event, restaurant, etc. being reserved.
+- reservationId: A unique identifier for the reservation.
+- reservationStatus: The current status of the reservation.
+- reservedTicket: A ticket associated with the reservation.
+
+## Usage Example
+
+```typescript
+interface Reservation {
+  $context?: 'schema.org'
+  $type: 'Reservation'
+  bookingAgent?: Organization | Person
+  bookingTime?: string
+  modifiedTime?: string
+  programMembershipUsed?: ProgramMembership
+  reservationFor?: Thing
+  reservationId?: string
+  reservationStatus?: ReservationStatusType
+  reservedTicket?: Ticket
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Reservation",
+  "name": "Example Reservation",
+  "description": "An example of the Reservation type",
+  "url": "https://example.com/reservation",
+  "identifier": "example-reservation-1"
+}
+```
+
+## Notes
+
+- Reservation inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

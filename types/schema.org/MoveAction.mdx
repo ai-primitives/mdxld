@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: MoveAction
+title: MoveAction
+description: The act of an agent relocating to a place.\n\nRelated actions:\n\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.
+properties:
+
+subClasses:
+  - ArriveAction
+  - DepartAction
+  - TravelAction
+parentClass: Action
+---
+
+# MoveAction
+
+The act of an agent relocating to a place.\n\nRelated actions:\n\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.
+
+## Type Hierarchy
+
+MoveAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from MoveAction:
+
+- ArriveAction: The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants.
+- DepartAction: The act of  departing from a place. An agent departs from a fromLocation for a destination, optionally with participants.
+- TravelAction: The act of traveling from a fromLocation to a destination by a specified mode of transport, optionally with participants.
+
+## Properties
+
+MoveAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface MoveAction {
+  $context?: 'schema.org'
+  $type: 'MoveAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MoveAction",
+  "name": "Example MoveAction",
+  "description": "An example of the MoveAction type",
+  "url": "https://example.com/moveaction",
+  "identifier": "example-moveaction-1"
+}
+```
+
+## Notes
+
+- MoveAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

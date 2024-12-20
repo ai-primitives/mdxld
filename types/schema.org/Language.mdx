@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Language
+title: Language
+description: Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in [BCP 47](https://en.wikipedia.org/wiki/IETF_language_tag) can be used via the [[alternateName]] property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using [[ComputerLanguage]].
+properties:
+
+subClasses:
+
+parentClass: Intangible
+---
+
+# Language
+
+Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in [BCP 47](https://en.wikipedia.org/wiki/IETF_language_tag) can be used via the [[alternateName]] property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using [[ComputerLanguage]].
+
+## Type Hierarchy
+
+Language is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Language.
+
+## Properties
+
+Language defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface Language {
+  $context?: 'schema.org'
+  $type: 'Language'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Language",
+  "name": "Example Language",
+  "description": "An example of the Language type",
+  "url": "https://example.com/language",
+  "identifier": "example-language-1"
+}
+```
+
+## Notes
+
+- Language inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

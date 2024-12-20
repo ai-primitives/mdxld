@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DonateAction
+title: DonateAction
+description: The act of providing goods, services, or money without compensation, often for philanthropic reasons.
+properties:
+
+subClasses:
+
+parentClass: TransferAction
+---
+
+# DonateAction
+
+The act of providing goods, services, or money without compensation, often for philanthropic reasons.
+
+## Type Hierarchy
+
+DonateAction is a type of TransferAction.
+
+### Direct Subtypes
+
+No types directly inherit from DonateAction.
+
+## Properties
+
+DonateAction defines the following properties in addition to those inherited from TransferAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DonateAction {
+  $context?: 'schema.org'
+  $type: 'DonateAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DonateAction",
+  "name": "Example DonateAction",
+  "description": "An example of the DonateAction type",
+  "url": "https://example.com/donateaction",
+  "identifier": "example-donateaction-1"
+}
+```
+
+## Notes
+
+- DonateAction inherits all properties from TransferAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

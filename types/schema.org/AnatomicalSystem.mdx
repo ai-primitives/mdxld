@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: AnatomicalSystem
+title: AnatomicalSystem
+description: An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can include circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.
+properties:
+  - comprisedOf
+  - relatedStructure
+subClasses:
+
+parentClass: MedicalEntity
+---
+
+# AnatomicalSystem
+
+An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can include circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.
+
+## Type Hierarchy
+
+AnatomicalSystem is a type of MedicalEntity.
+
+### Direct Subtypes
+
+No types directly inherit from AnatomicalSystem.
+
+## Properties
+
+AnatomicalSystem defines the following properties in addition to those inherited from MedicalEntity:
+
+- comprisedOf: Specifying something physically contained by something else. Typically used here for the underlying anatomical structures, such as organs, that comprise the anatomical system.
+- relatedStructure: Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.
+
+## Usage Example
+
+```typescript
+interface AnatomicalSystem {
+  $context?: 'schema.org'
+  $type: 'AnatomicalSystem'
+  comprisedOf?: AnatomicalStructure | AnatomicalSystem
+  relatedStructure?: AnatomicalStructure
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AnatomicalSystem",
+  "name": "Example AnatomicalSystem",
+  "description": "An example of the AnatomicalSystem type",
+  "url": "https://example.com/anatomicalsystem",
+  "identifier": "example-anatomicalsystem-1"
+}
+```
+
+## Notes
+
+- AnatomicalSystem inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: VeterinaryCare
+title: VeterinaryCare
+description: A vet's office.
+properties:
+
+subClasses:
+
+parentClass: MedicalOrganization
+---
+
+# VeterinaryCare
+
+A vet's office.
+
+## Type Hierarchy
+
+VeterinaryCare is a type of MedicalOrganization.
+
+### Direct Subtypes
+
+No types directly inherit from VeterinaryCare.
+
+## Properties
+
+VeterinaryCare defines the following properties in addition to those inherited from MedicalOrganization:
+
+
+
+## Usage Example
+
+```typescript
+interface VeterinaryCare {
+  $context?: 'schema.org'
+  $type: 'VeterinaryCare'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VeterinaryCare",
+  "name": "Example VeterinaryCare",
+  "description": "An example of the VeterinaryCare type",
+  "url": "https://example.com/veterinarycare",
+  "identifier": "example-veterinarycare-1"
+}
+```
+
+## Notes
+
+- VeterinaryCare inherits all properties from MedicalOrganization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

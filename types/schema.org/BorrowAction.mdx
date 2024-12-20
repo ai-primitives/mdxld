@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BorrowAction
+title: BorrowAction
+description: The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.\n\nRelated actions:\n\n* [[LendAction]]: Reciprocal of BorrowAction.
+properties:
+  - lender
+subClasses:
+
+parentClass: TransferAction
+---
+
+# BorrowAction
+
+The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.\n\nRelated actions:\n\n* [[LendAction]]: Reciprocal of BorrowAction.
+
+## Type Hierarchy
+
+BorrowAction is a type of TransferAction.
+
+### Direct Subtypes
+
+No types directly inherit from BorrowAction.
+
+## Properties
+
+BorrowAction defines the following properties in addition to those inherited from TransferAction:
+
+- lender: A sub property of participant. The person that lends the object being borrowed.
+
+## Usage Example
+
+```typescript
+interface BorrowAction {
+  $context?: 'schema.org'
+  $type: 'BorrowAction'
+  lender?: Organization | Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BorrowAction",
+  "name": "Example BorrowAction",
+  "description": "An example of the BorrowAction type",
+  "url": "https://example.com/borrowaction",
+  "identifier": "example-borrowaction-1"
+}
+```
+
+## Notes
+
+- BorrowAction inherits all properties from TransferAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

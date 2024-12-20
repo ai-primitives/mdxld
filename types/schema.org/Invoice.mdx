@@ -1,0 +1,77 @@
+---
+$context: schema.org
+$type: Invoice
+title: Invoice
+description: A statement of the money due for goods or services; a bill.
+properties:
+  - accountId
+  - billingPeriod
+  - minimumPaymentDue
+  - paymentStatus
+  - referencesOrder
+  - scheduledPaymentDate
+  - totalPaymentDue
+subClasses:
+
+parentClass: Intangible
+---
+
+# Invoice
+
+A statement of the money due for goods or services; a bill.
+
+## Type Hierarchy
+
+Invoice is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Invoice.
+
+## Properties
+
+Invoice defines the following properties in addition to those inherited from Intangible:
+
+- accountId: The identifier for the account the payment will be applied to.
+- billingPeriod: The time interval used to compute the invoice.
+- minimumPaymentDue: The minimum payment required at this time.
+- paymentStatus: The status of payment; whether the invoice has been paid or not.
+- referencesOrder: The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.
+- scheduledPaymentDate: The date the invoice is scheduled to be paid.
+- totalPaymentDue: The total amount due.
+
+## Usage Example
+
+```typescript
+interface Invoice {
+  $context?: 'schema.org'
+  $type: 'Invoice'
+  accountId?: string
+  billingPeriod?: Duration
+  minimumPaymentDue?: MonetaryAmount | PriceSpecification
+  paymentStatus?: PaymentStatusType | string
+  referencesOrder?: Order
+  scheduledPaymentDate?: string
+  totalPaymentDue?: MonetaryAmount | PriceSpecification
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Invoice",
+  "name": "Example Invoice",
+  "description": "An example of the Invoice type",
+  "url": "https://example.com/invoice",
+  "identifier": "example-invoice-1"
+}
+```
+
+## Notes
+
+- Invoice inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

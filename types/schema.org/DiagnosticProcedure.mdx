@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DiagnosticProcedure
+title: DiagnosticProcedure
+description: A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.
+properties:
+
+subClasses:
+
+parentClass: MedicalProcedure
+---
+
+# DiagnosticProcedure
+
+A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.
+
+## Type Hierarchy
+
+DiagnosticProcedure is a type of MedicalProcedure.
+
+### Direct Subtypes
+
+No types directly inherit from DiagnosticProcedure.
+
+## Properties
+
+DiagnosticProcedure defines the following properties in addition to those inherited from MedicalProcedure:
+
+
+
+## Usage Example
+
+```typescript
+interface DiagnosticProcedure {
+  $context?: 'schema.org'
+  $type: 'DiagnosticProcedure'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DiagnosticProcedure",
+  "name": "Example DiagnosticProcedure",
+  "description": "An example of the DiagnosticProcedure type",
+  "url": "https://example.com/diagnosticprocedure",
+  "identifier": "example-diagnosticprocedure-1"
+}
+```
+
+## Notes
+
+- DiagnosticProcedure inherits all properties from MedicalProcedure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

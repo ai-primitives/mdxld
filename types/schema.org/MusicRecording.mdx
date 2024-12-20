@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: MusicRecording
+title: MusicRecording
+description: A music recording (track), usually a single song.
+properties:
+  - inAlbum
+  - inPlaylist
+  - isrcCode
+  - recordingOf
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# MusicRecording
+
+A music recording (track), usually a single song.
+
+## Type Hierarchy
+
+MusicRecording is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from MusicRecording.
+
+## Properties
+
+MusicRecording defines the following properties in addition to those inherited from CreativeWork:
+
+- inAlbum: The album to which this recording belongs.
+- inPlaylist: The playlist to which this recording belongs.
+- isrcCode: The International Standard Recording Code for the recording.
+- recordingOf: The composition this track is a recording of.
+
+## Usage Example
+
+```typescript
+interface MusicRecording {
+  $context?: 'schema.org'
+  $type: 'MusicRecording'
+  inAlbum?: MusicAlbum
+  inPlaylist?: MusicPlaylist
+  isrcCode?: string
+  recordingOf?: MusicComposition
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicRecording",
+  "name": "Example MusicRecording",
+  "description": "An example of the MusicRecording type",
+  "url": "https://example.com/musicrecording",
+  "identifier": "example-musicrecording-1"
+}
+```
+
+## Notes
+
+- MusicRecording inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TennisComplex
+title: TennisComplex
+description: A tennis complex.
+properties:
+
+subClasses:
+
+parentClass: SportsActivityLocation
+---
+
+# TennisComplex
+
+A tennis complex.
+
+## Type Hierarchy
+
+TennisComplex is a type of SportsActivityLocation.
+
+### Direct Subtypes
+
+No types directly inherit from TennisComplex.
+
+## Properties
+
+TennisComplex defines the following properties in addition to those inherited from SportsActivityLocation:
+
+
+
+## Usage Example
+
+```typescript
+interface TennisComplex {
+  $context?: 'schema.org'
+  $type: 'TennisComplex'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TennisComplex",
+  "name": "Example TennisComplex",
+  "description": "An example of the TennisComplex type",
+  "url": "https://example.com/tenniscomplex",
+  "identifier": "example-tenniscomplex-1"
+}
+```
+
+## Notes
+
+- TennisComplex inherits all properties from SportsActivityLocation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

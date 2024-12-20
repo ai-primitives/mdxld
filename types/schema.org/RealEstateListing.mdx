@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: RealEstateListing
+title: RealEstateListing
+description: A [[RealEstateListing]] is a listing that describes one or more real-estate [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).
+  The [[RealEstateListing]] type itself represents the overall listing, as manifested in some [[WebPage]].
+  
+properties:
+
+subClasses:
+
+parentClass: WebPage
+---
+
+# RealEstateListing
+
+A [[RealEstateListing]] is a listing that describes one or more real-estate [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).
+  The [[RealEstateListing]] type itself represents the overall listing, as manifested in some [[WebPage]].
+  
+
+## Type Hierarchy
+
+RealEstateListing is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from RealEstateListing.
+
+## Properties
+
+RealEstateListing defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface RealEstateListing {
+  $context?: 'schema.org'
+  $type: 'RealEstateListing'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RealEstateListing",
+  "name": "Example RealEstateListing",
+  "description": "An example of the RealEstateListing type",
+  "url": "https://example.com/realestatelisting",
+  "identifier": "example-realestatelisting-1"
+}
+```
+
+## Notes
+
+- RealEstateListing inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

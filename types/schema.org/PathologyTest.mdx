@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PathologyTest
+title: PathologyTest
+description: A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.
+properties:
+  - tissueSample
+subClasses:
+
+parentClass: MedicalTest
+---
+
+# PathologyTest
+
+A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.
+
+## Type Hierarchy
+
+PathologyTest is a type of MedicalTest.
+
+### Direct Subtypes
+
+No types directly inherit from PathologyTest.
+
+## Properties
+
+PathologyTest defines the following properties in addition to those inherited from MedicalTest:
+
+- tissueSample: The type of tissue sample required for the test.
+
+## Usage Example
+
+```typescript
+interface PathologyTest {
+  $context?: 'schema.org'
+  $type: 'PathologyTest'
+  tissueSample?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PathologyTest",
+  "name": "Example PathologyTest",
+  "description": "An example of the PathologyTest type",
+  "url": "https://example.com/pathologytest",
+  "identifier": "example-pathologytest-1"
+}
+```
+
+## Notes
+
+- PathologyTest inherits all properties from MedicalTest
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

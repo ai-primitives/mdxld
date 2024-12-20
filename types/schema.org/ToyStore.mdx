@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ToyStore
+title: ToyStore
+description: A toy store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# ToyStore
+
+A toy store.
+
+## Type Hierarchy
+
+ToyStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from ToyStore.
+
+## Properties
+
+ToyStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface ToyStore {
+  $context?: 'schema.org'
+  $type: 'ToyStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ToyStore",
+  "name": "Example ToyStore",
+  "description": "An example of the ToyStore type",
+  "url": "https://example.com/toystore",
+  "identifier": "example-toystore-1"
+}
+```
+
+## Notes
+
+- ToyStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

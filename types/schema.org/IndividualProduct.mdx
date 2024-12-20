@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: IndividualProduct
+title: IndividualProduct
+description: A single, identifiable product instance (e.g. a laptop with a particular serial number).
+properties:
+
+subClasses:
+
+parentClass: Product
+---
+
+# IndividualProduct
+
+A single, identifiable product instance (e.g. a laptop with a particular serial number).
+
+## Type Hierarchy
+
+IndividualProduct is a type of Product.
+
+### Direct Subtypes
+
+No types directly inherit from IndividualProduct.
+
+## Properties
+
+IndividualProduct defines the following properties in addition to those inherited from Product:
+
+
+
+## Usage Example
+
+```typescript
+interface IndividualProduct {
+  $context?: 'schema.org'
+  $type: 'IndividualProduct'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "IndividualProduct",
+  "name": "Example IndividualProduct",
+  "description": "An example of the IndividualProduct type",
+  "url": "https://example.com/individualproduct",
+  "identifier": "example-individualproduct-1"
+}
+```
+
+## Notes
+
+- IndividualProduct inherits all properties from Product
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: DoseSchedule
+title: DoseSchedule
+description: A specific dosing schedule for a drug or supplement.
+properties:
+  - doseUnit
+  - doseValue
+  - frequency
+subClasses:
+  - MaximumDoseSchedule
+  - RecommendedDoseSchedule
+  - ReportedDoseSchedule
+parentClass: MedicalIntangible
+---
+
+# DoseSchedule
+
+A specific dosing schedule for a drug or supplement.
+
+## Type Hierarchy
+
+DoseSchedule is a type of MedicalIntangible.
+
+### Direct Subtypes
+
+The following types directly inherit from DoseSchedule:
+
+- MaximumDoseSchedule: The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
+- RecommendedDoseSchedule: A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
+- ReportedDoseSchedule: A patient-reported or observed dosing schedule for a drug or supplement.
+
+## Properties
+
+DoseSchedule defines the following properties in addition to those inherited from MedicalIntangible:
+
+- doseUnit: The unit of the dose, e.g. 'mg'.
+- doseValue: The value of the dose, e.g. 500.
+- frequency: How often the dose is taken, e.g. 'daily'.
+
+## Usage Example
+
+```typescript
+interface DoseSchedule {
+  $context?: 'schema.org'
+  $type: 'DoseSchedule'
+  doseUnit?: string
+  doseValue?: QualitativeValue | number
+  frequency?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DoseSchedule",
+  "name": "Example DoseSchedule",
+  "description": "An example of the DoseSchedule type",
+  "url": "https://example.com/doseschedule",
+  "identifier": "example-doseschedule-1"
+}
+```
+
+## Notes
+
+- DoseSchedule inherits all properties from MedicalIntangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

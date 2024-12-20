@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LikeAction
+title: LikeAction
+description: The act of expressing a positive sentiment about the object. An agent likes an object (a proposition, topic or theme) with participants.
+properties:
+
+subClasses:
+
+parentClass: ReactAction
+---
+
+# LikeAction
+
+The act of expressing a positive sentiment about the object. An agent likes an object (a proposition, topic or theme) with participants.
+
+## Type Hierarchy
+
+LikeAction is a type of ReactAction.
+
+### Direct Subtypes
+
+No types directly inherit from LikeAction.
+
+## Properties
+
+LikeAction defines the following properties in addition to those inherited from ReactAction:
+
+
+
+## Usage Example
+
+```typescript
+interface LikeAction {
+  $context?: 'schema.org'
+  $type: 'LikeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LikeAction",
+  "name": "Example LikeAction",
+  "description": "An example of the LikeAction type",
+  "url": "https://example.com/likeaction",
+  "identifier": "example-likeaction-1"
+}
+```
+
+## Notes
+
+- LikeAction inherits all properties from ReactAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

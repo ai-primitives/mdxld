@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WPHeader
+title: WPHeader
+description: The header section of the page.
+properties:
+
+subClasses:
+
+parentClass: WebPageElement
+---
+
+# WPHeader
+
+The header section of the page.
+
+## Type Hierarchy
+
+WPHeader is a type of WebPageElement.
+
+### Direct Subtypes
+
+No types directly inherit from WPHeader.
+
+## Properties
+
+WPHeader defines the following properties in addition to those inherited from WebPageElement:
+
+
+
+## Usage Example
+
+```typescript
+interface WPHeader {
+  $context?: 'schema.org'
+  $type: 'WPHeader'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WPHeader",
+  "name": "Example WPHeader",
+  "description": "An example of the WPHeader type",
+  "url": "https://example.com/wpheader",
+  "identifier": "example-wpheader-1"
+}
+```
+
+## Notes
+
+- WPHeader inherits all properties from WebPageElement
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

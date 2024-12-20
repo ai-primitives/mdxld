@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HighSchool
+title: HighSchool
+description: A high school.
+properties:
+
+subClasses:
+
+parentClass: EducationalOrganization
+---
+
+# HighSchool
+
+A high school.
+
+## Type Hierarchy
+
+HighSchool is a type of EducationalOrganization.
+
+### Direct Subtypes
+
+No types directly inherit from HighSchool.
+
+## Properties
+
+HighSchool defines the following properties in addition to those inherited from EducationalOrganization:
+
+
+
+## Usage Example
+
+```typescript
+interface HighSchool {
+  $context?: 'schema.org'
+  $type: 'HighSchool'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HighSchool",
+  "name": "Example HighSchool",
+  "description": "An example of the HighSchool type",
+  "url": "https://example.com/highschool",
+  "identifier": "example-highschool-1"
+}
+```
+
+## Notes
+
+- HighSchool inherits all properties from EducationalOrganization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

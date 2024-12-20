@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LinkRole
+title: LinkRole
+description: A Role that represents a Web link, e.g. as expressed via the 'url' property. Its linkRelationship property can indicate URL-based and plain textual link types, e.g. those in IANA link registry or others such as 'amphtml'. This structure provides a placeholder where details from HTML's link element can be represented outside of HTML, e.g. in JSON-LD feeds.
+properties:
+  - linkRelationship
+subClasses:
+
+parentClass: Role
+---
+
+# LinkRole
+
+A Role that represents a Web link, e.g. as expressed via the 'url' property. Its linkRelationship property can indicate URL-based and plain textual link types, e.g. those in IANA link registry or others such as 'amphtml'. This structure provides a placeholder where details from HTML's link element can be represented outside of HTML, e.g. in JSON-LD feeds.
+
+## Type Hierarchy
+
+LinkRole is a type of Role.
+
+### Direct Subtypes
+
+No types directly inherit from LinkRole.
+
+## Properties
+
+LinkRole defines the following properties in addition to those inherited from Role:
+
+- linkRelationship: Indicates the relationship type of a Web link. 
+
+## Usage Example
+
+```typescript
+interface LinkRole {
+  $context?: 'schema.org'
+  $type: 'LinkRole'
+  linkRelationship?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LinkRole",
+  "name": "Example LinkRole",
+  "description": "An example of the LinkRole type",
+  "url": "https://example.com/linkrole",
+  "identifier": "example-linkrole-1"
+}
+```
+
+## Notes
+
+- LinkRole inherits all properties from Role
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

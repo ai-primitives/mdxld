@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WPAdBlock
+title: WPAdBlock
+description: An advertising section of the page.
+properties:
+
+subClasses:
+
+parentClass: WebPageElement
+---
+
+# WPAdBlock
+
+An advertising section of the page.
+
+## Type Hierarchy
+
+WPAdBlock is a type of WebPageElement.
+
+### Direct Subtypes
+
+No types directly inherit from WPAdBlock.
+
+## Properties
+
+WPAdBlock defines the following properties in addition to those inherited from WebPageElement:
+
+
+
+## Usage Example
+
+```typescript
+interface WPAdBlock {
+  $context?: 'schema.org'
+  $type: 'WPAdBlock'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WPAdBlock",
+  "name": "Example WPAdBlock",
+  "description": "An example of the WPAdBlock type",
+  "url": "https://example.com/wpadblock",
+  "identifier": "example-wpadblock-1"
+}
+```
+
+## Notes
+
+- WPAdBlock inherits all properties from WebPageElement
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

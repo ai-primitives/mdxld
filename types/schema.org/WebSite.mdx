@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WebSite
+title: WebSite
+description: A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# WebSite
+
+A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs.
+
+## Type Hierarchy
+
+WebSite is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from WebSite.
+
+## Properties
+
+WebSite defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface WebSite {
+  $context?: 'schema.org'
+  $type: 'WebSite'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WebSite",
+  "name": "Example WebSite",
+  "description": "An example of the WebSite type",
+  "url": "https://example.com/website",
+  "identifier": "example-website-1"
+}
+```
+
+## Notes
+
+- WebSite inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Taxon
+title: Taxon
+description: A set of organisms asserted to represent a natural cohesive biological unit.
+properties:
+  - childTaxon
+  - parentTaxon
+  - taxonRank
+subClasses:
+
+parentClass: Thing
+---
+
+# Taxon
+
+A set of organisms asserted to represent a natural cohesive biological unit.
+
+## Type Hierarchy
+
+Taxon is a type of Thing.
+
+### Direct Subtypes
+
+No types directly inherit from Taxon.
+
+## Properties
+
+Taxon defines the following properties in addition to those inherited from Thing:
+
+- childTaxon: Closest child taxa of the taxon in question.
+- parentTaxon: Closest parent taxon of the taxon in question.
+- taxonRank: The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs.
+
+## Usage Example
+
+```typescript
+interface Taxon {
+  $context?: 'schema.org'
+  $type: 'Taxon'
+  childTaxon?: Taxon | string
+  parentTaxon?: Taxon | string
+  taxonRank?: PropertyValue | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Taxon",
+  "name": "Example Taxon",
+  "description": "An example of the Taxon type",
+  "url": "https://example.com/taxon",
+  "identifier": "example-taxon-1"
+}
+```
+
+## Notes
+
+- Taxon inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

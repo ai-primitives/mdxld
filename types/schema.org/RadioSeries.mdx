@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RadioSeries
+title: RadioSeries
+description: CreativeWorkSeries dedicated to radio broadcast and associated online delivery.
+properties:
+
+subClasses:
+
+parentClass: CreativeWorkSeries
+---
+
+# RadioSeries
+
+CreativeWorkSeries dedicated to radio broadcast and associated online delivery.
+
+## Type Hierarchy
+
+RadioSeries is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+No types directly inherit from RadioSeries.
+
+## Properties
+
+RadioSeries defines the following properties in addition to those inherited from CreativeWorkSeries:
+
+
+
+## Usage Example
+
+```typescript
+interface RadioSeries {
+  $context?: 'schema.org'
+  $type: 'RadioSeries'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RadioSeries",
+  "name": "Example RadioSeries",
+  "description": "An example of the RadioSeries type",
+  "url": "https://example.com/radioseries",
+  "identifier": "example-radioseries-1"
+}
+```
+
+## Notes
+
+- RadioSeries inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

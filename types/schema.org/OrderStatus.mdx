@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OrderStatus
+title: OrderStatus
+description: Enumerated status values for Order.
+properties:
+
+subClasses:
+
+parentClass: StatusEnumeration
+---
+
+# OrderStatus
+
+Enumerated status values for Order.
+
+## Type Hierarchy
+
+OrderStatus is a type of StatusEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from OrderStatus.
+
+## Properties
+
+OrderStatus defines the following properties in addition to those inherited from StatusEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface OrderStatus {
+  $context?: 'schema.org'
+  $type: 'OrderStatus'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OrderStatus",
+  "name": "Example OrderStatus",
+  "description": "An example of the OrderStatus type",
+  "url": "https://example.com/orderstatus",
+  "identifier": "example-orderstatus-1"
+}
+```
+
+## Notes
+
+- OrderStatus inherits all properties from StatusEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

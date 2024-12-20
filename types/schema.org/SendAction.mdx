@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SendAction
+title: SendAction
+description: The act of physically/electronically dispatching an object for transfer from an origin to a destination. Related actions:\n\n* [[ReceiveAction]]: The reciprocal of SendAction.\n* [[GiveAction]]: Unlike GiveAction, SendAction does not imply the transfer of ownership (e.g. I can send you my laptop, but I'm not necessarily giving it to you).
+properties:
+
+subClasses:
+
+parentClass: TransferAction
+---
+
+# SendAction
+
+The act of physically/electronically dispatching an object for transfer from an origin to a destination. Related actions:\n\n* [[ReceiveAction]]: The reciprocal of SendAction.\n* [[GiveAction]]: Unlike GiveAction, SendAction does not imply the transfer of ownership (e.g. I can send you my laptop, but I'm not necessarily giving it to you).
+
+## Type Hierarchy
+
+SendAction is a type of TransferAction.
+
+### Direct Subtypes
+
+No types directly inherit from SendAction.
+
+## Properties
+
+SendAction defines the following properties in addition to those inherited from TransferAction:
+
+
+
+## Usage Example
+
+```typescript
+interface SendAction {
+  $context?: 'schema.org'
+  $type: 'SendAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SendAction",
+  "name": "Example SendAction",
+  "description": "An example of the SendAction type",
+  "url": "https://example.com/sendaction",
+  "identifier": "example-sendaction-1"
+}
+```
+
+## Notes
+
+- SendAction inherits all properties from TransferAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

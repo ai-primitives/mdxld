@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Volcano
+title: Volcano
+description: A volcano, like Fujisan.
+properties:
+
+subClasses:
+
+parentClass: Landform
+---
+
+# Volcano
+
+A volcano, like Fujisan.
+
+## Type Hierarchy
+
+Volcano is a type of Landform.
+
+### Direct Subtypes
+
+No types directly inherit from Volcano.
+
+## Properties
+
+Volcano defines the following properties in addition to those inherited from Landform:
+
+
+
+## Usage Example
+
+```typescript
+interface Volcano {
+  $context?: 'schema.org'
+  $type: 'Volcano'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Volcano",
+  "name": "Example Volcano",
+  "description": "An example of the Volcano type",
+  "url": "https://example.com/volcano",
+  "identifier": "example-volcano-1"
+}
+```
+
+## Notes
+
+- Volcano inherits all properties from Landform
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

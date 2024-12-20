@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BookmarkAction
+title: BookmarkAction
+description: An agent bookmarks/flags/labels/tags/marks an object.
+properties:
+
+subClasses:
+
+parentClass: OrganizeAction
+---
+
+# BookmarkAction
+
+An agent bookmarks/flags/labels/tags/marks an object.
+
+## Type Hierarchy
+
+BookmarkAction is a type of OrganizeAction.
+
+### Direct Subtypes
+
+No types directly inherit from BookmarkAction.
+
+## Properties
+
+BookmarkAction defines the following properties in addition to those inherited from OrganizeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface BookmarkAction {
+  $context?: 'schema.org'
+  $type: 'BookmarkAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BookmarkAction",
+  "name": "Example BookmarkAction",
+  "description": "An example of the BookmarkAction type",
+  "url": "https://example.com/bookmarkaction",
+  "identifier": "example-bookmarkaction-1"
+}
+```
+
+## Notes
+
+- BookmarkAction inherits all properties from OrganizeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

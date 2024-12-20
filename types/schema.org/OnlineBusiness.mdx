@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: OnlineBusiness
+title: OnlineBusiness
+description: A particular online business, either standalone or the online part of a broader organization. Examples include an eCommerce site, an online travel booking site, an online learning site, an online logistics and shipping provider, an online (virtual) doctor, etc.
+properties:
+
+subClasses:
+  - OnlineStore
+parentClass: Organization
+---
+
+# OnlineBusiness
+
+A particular online business, either standalone or the online part of a broader organization. Examples include an eCommerce site, an online travel booking site, an online learning site, an online logistics and shipping provider, an online (virtual) doctor, etc.
+
+## Type Hierarchy
+
+OnlineBusiness is a type of Organization.
+
+### Direct Subtypes
+
+The following types directly inherit from OnlineBusiness:
+
+- OnlineStore: An eCommerce site.
+
+## Properties
+
+OnlineBusiness defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface OnlineBusiness {
+  $context?: 'schema.org'
+  $type: 'OnlineBusiness'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OnlineBusiness",
+  "name": "Example OnlineBusiness",
+  "description": "An example of the OnlineBusiness type",
+  "url": "https://example.com/onlinebusiness",
+  "identifier": "example-onlinebusiness-1"
+}
+```
+
+## Notes
+
+- OnlineBusiness inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

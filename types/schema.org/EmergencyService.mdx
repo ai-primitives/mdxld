@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EmergencyService
+title: EmergencyService
+description: An emergency service, such as a fire station or ER.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# EmergencyService
+
+An emergency service, such as a fire station or ER.
+
+## Type Hierarchy
+
+EmergencyService is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from EmergencyService.
+
+## Properties
+
+EmergencyService defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface EmergencyService {
+  $context?: 'schema.org'
+  $type: 'EmergencyService'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EmergencyService",
+  "name": "Example EmergencyService",
+  "description": "An example of the EmergencyService type",
+  "url": "https://example.com/emergencyservice",
+  "identifier": "example-emergencyservice-1"
+}
+```
+
+## Notes
+
+- EmergencyService inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

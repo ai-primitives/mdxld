@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: VirtualLocation
+title: VirtualLocation
+description: An online or virtual location for attending events. For example, one may attend an online seminar or educational event. While a virtual location may be used as the location of an event, virtual locations should not be confused with physical locations in the real world.
+properties:
+
+subClasses:
+
+parentClass: Intangible
+---
+
+# VirtualLocation
+
+An online or virtual location for attending events. For example, one may attend an online seminar or educational event. While a virtual location may be used as the location of an event, virtual locations should not be confused with physical locations in the real world.
+
+## Type Hierarchy
+
+VirtualLocation is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from VirtualLocation.
+
+## Properties
+
+VirtualLocation defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface VirtualLocation {
+  $context?: 'schema.org'
+  $type: 'VirtualLocation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VirtualLocation",
+  "name": "Example VirtualLocation",
+  "description": "An example of the VirtualLocation type",
+  "url": "https://example.com/virtuallocation",
+  "identifier": "example-virtuallocation-1"
+}
+```
+
+## Notes
+
+- VirtualLocation inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Quotation
+title: Quotation
+description: A quotation. Often but not necessarily from some written work, attributable to a real world author and - if associated with a fictional character - to any fictional Person. Use [[isBasedOn]] to link to source/origin. The [[recordedIn]] property can be used to reference a Quotation from an [[Event]].
+properties:
+  - spokenByCharacter
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Quotation
+
+A quotation. Often but not necessarily from some written work, attributable to a real world author and - if associated with a fictional character - to any fictional Person. Use [[isBasedOn]] to link to source/origin. The [[recordedIn]] property can be used to reference a Quotation from an [[Event]].
+
+## Type Hierarchy
+
+Quotation is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Quotation.
+
+## Properties
+
+Quotation defines the following properties in addition to those inherited from CreativeWork:
+
+- spokenByCharacter: The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork.
+
+## Usage Example
+
+```typescript
+interface Quotation {
+  $context?: 'schema.org'
+  $type: 'Quotation'
+  spokenByCharacter?: Organization | Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Quotation",
+  "name": "Example Quotation",
+  "description": "An example of the Quotation type",
+  "url": "https://example.com/quotation",
+  "identifier": "example-quotation-1"
+}
+```
+
+## Notes
+
+- Quotation inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

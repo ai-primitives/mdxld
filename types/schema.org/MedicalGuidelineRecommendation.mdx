@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalGuidelineRecommendation
+title: MedicalGuidelineRecommendation
+description: A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.
+properties:
+  - recommendationStrength
+subClasses:
+
+parentClass: MedicalGuideline
+---
+
+# MedicalGuidelineRecommendation
+
+A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.
+
+## Type Hierarchy
+
+MedicalGuidelineRecommendation is a type of MedicalGuideline.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalGuidelineRecommendation.
+
+## Properties
+
+MedicalGuidelineRecommendation defines the following properties in addition to those inherited from MedicalGuideline:
+
+- recommendationStrength: Strength of the guideline's recommendation (e.g. 'class I').
+
+## Usage Example
+
+```typescript
+interface MedicalGuidelineRecommendation {
+  $context?: 'schema.org'
+  $type: 'MedicalGuidelineRecommendation'
+  recommendationStrength?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalGuidelineRecommendation",
+  "name": "Example MedicalGuidelineRecommendation",
+  "description": "An example of the MedicalGuidelineRecommendation type",
+  "url": "https://example.com/medicalguidelinerecommendation",
+  "identifier": "example-medicalguidelinerecommendation-1"
+}
+```
+
+## Notes
+
+- MedicalGuidelineRecommendation inherits all properties from MedicalGuideline
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

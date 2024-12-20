@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: Artery
+title: Artery
+description: A type of blood vessel that specifically carries blood away from the heart.
+properties:
+  - arterialBranch
+  - supplyTo
+subClasses:
+
+parentClass: Vessel
+---
+
+# Artery
+
+A type of blood vessel that specifically carries blood away from the heart.
+
+## Type Hierarchy
+
+Artery is a type of Vessel.
+
+### Direct Subtypes
+
+No types directly inherit from Artery.
+
+## Properties
+
+Artery defines the following properties in addition to those inherited from Vessel:
+
+- arterialBranch: The branches that comprise the arterial structure.
+- supplyTo: The area to which the artery supplies blood.
+
+## Usage Example
+
+```typescript
+interface Artery {
+  $context?: 'schema.org'
+  $type: 'Artery'
+  arterialBranch?: AnatomicalStructure
+  supplyTo?: AnatomicalStructure
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Artery",
+  "name": "Example Artery",
+  "description": "An example of the Artery type",
+  "url": "https://example.com/artery",
+  "identifier": "example-artery-1"
+}
+```
+
+## Notes
+
+- Artery inherits all properties from Vessel
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

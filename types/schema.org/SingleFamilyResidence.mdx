@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SingleFamilyResidence
+title: SingleFamilyResidence
+description: Residence type: Single-family home.
+properties:
+
+subClasses:
+
+parentClass: House
+---
+
+# SingleFamilyResidence
+
+Residence type: Single-family home.
+
+## Type Hierarchy
+
+SingleFamilyResidence is a type of House.
+
+### Direct Subtypes
+
+No types directly inherit from SingleFamilyResidence.
+
+## Properties
+
+SingleFamilyResidence defines the following properties in addition to those inherited from House:
+
+
+
+## Usage Example
+
+```typescript
+interface SingleFamilyResidence {
+  $context?: 'schema.org'
+  $type: 'SingleFamilyResidence'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SingleFamilyResidence",
+  "name": "Example SingleFamilyResidence",
+  "description": "An example of the SingleFamilyResidence type",
+  "url": "https://example.com/singlefamilyresidence",
+  "identifier": "example-singlefamilyresidence-1"
+}
+```
+
+## Notes
+
+- SingleFamilyResidence inherits all properties from House
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

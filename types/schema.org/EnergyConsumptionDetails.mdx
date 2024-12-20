@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: EnergyConsumptionDetails
+title: EnergyConsumptionDetails
+description: EnergyConsumptionDetails represents information related to the energy efficiency of a product that consumes energy. The information that can be provided is based on international regulations such as for example [EU directive 2017/1369](https://eur-lex.europa.eu/eli/reg/2017/1369/oj) for energy labeling and the [Energy labeling rule](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/energy-water-use-labeling-consumer) under the Energy Policy and Conservation Act (EPCA) in the US.
+properties:
+  - energyEfficiencyScaleMax
+  - energyEfficiencyScaleMin
+  - hasEnergyEfficiencyCategory
+subClasses:
+
+parentClass: Intangible
+---
+
+# EnergyConsumptionDetails
+
+EnergyConsumptionDetails represents information related to the energy efficiency of a product that consumes energy. The information that can be provided is based on international regulations such as for example [EU directive 2017/1369](https://eur-lex.europa.eu/eli/reg/2017/1369/oj) for energy labeling and the [Energy labeling rule](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/energy-water-use-labeling-consumer) under the Energy Policy and Conservation Act (EPCA) in the US.
+
+## Type Hierarchy
+
+EnergyConsumptionDetails is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from EnergyConsumptionDetails.
+
+## Properties
+
+EnergyConsumptionDetails defines the following properties in addition to those inherited from Intangible:
+
+- energyEfficiencyScaleMax: Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
+- energyEfficiencyScaleMin: Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
+- hasEnergyEfficiencyCategory: Defines the energy efficiency Category (which could be either a rating out of range of values or a yes/no certification) for a product according to an international energy efficiency standard.
+
+## Usage Example
+
+```typescript
+interface EnergyConsumptionDetails {
+  $context?: 'schema.org'
+  $type: 'EnergyConsumptionDetails'
+  energyEfficiencyScaleMax?: EUEnergyEfficiencyEnumeration
+  energyEfficiencyScaleMin?: EUEnergyEfficiencyEnumeration
+  hasEnergyEfficiencyCategory?: EnergyEfficiencyEnumeration
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EnergyConsumptionDetails",
+  "name": "Example EnergyConsumptionDetails",
+  "description": "An example of the EnergyConsumptionDetails type",
+  "url": "https://example.com/energyconsumptiondetails",
+  "identifier": "example-energyconsumptiondetails-1"
+}
+```
+
+## Notes
+
+- EnergyConsumptionDetails inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

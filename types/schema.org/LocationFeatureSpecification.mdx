@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LocationFeatureSpecification
+title: LocationFeatureSpecification
+description: Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.
+properties:
+
+subClasses:
+
+parentClass: PropertyValue
+---
+
+# LocationFeatureSpecification
+
+Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.
+
+## Type Hierarchy
+
+LocationFeatureSpecification is a type of PropertyValue.
+
+### Direct Subtypes
+
+No types directly inherit from LocationFeatureSpecification.
+
+## Properties
+
+LocationFeatureSpecification defines the following properties in addition to those inherited from PropertyValue:
+
+
+
+## Usage Example
+
+```typescript
+interface LocationFeatureSpecification {
+  $context?: 'schema.org'
+  $type: 'LocationFeatureSpecification'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LocationFeatureSpecification",
+  "name": "Example LocationFeatureSpecification",
+  "description": "An example of the LocationFeatureSpecification type",
+  "url": "https://example.com/locationfeaturespecification",
+  "identifier": "example-locationfeaturespecification-1"
+}
+```
+
+## Notes
+
+- LocationFeatureSpecification inherits all properties from PropertyValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

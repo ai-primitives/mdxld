@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Syllabus
+title: Syllabus
+description: A syllabus that describes the material covered in a course, often with several such sections per [[Course]] so that a distinct [[timeRequired]] can be provided for that section of the [[Course]].
+properties:
+
+subClasses:
+
+parentClass: LearningResource
+---
+
+# Syllabus
+
+A syllabus that describes the material covered in a course, often with several such sections per [[Course]] so that a distinct [[timeRequired]] can be provided for that section of the [[Course]].
+
+## Type Hierarchy
+
+Syllabus is a type of LearningResource.
+
+### Direct Subtypes
+
+No types directly inherit from Syllabus.
+
+## Properties
+
+Syllabus defines the following properties in addition to those inherited from LearningResource:
+
+
+
+## Usage Example
+
+```typescript
+interface Syllabus {
+  $context?: 'schema.org'
+  $type: 'Syllabus'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Syllabus",
+  "name": "Example Syllabus",
+  "description": "An example of the Syllabus type",
+  "url": "https://example.com/syllabus",
+  "identifier": "example-syllabus-1"
+}
+```
+
+## Notes
+
+- Syllabus inherits all properties from LearningResource
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

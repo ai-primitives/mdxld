@@ -1,0 +1,82 @@
+---
+$context: schema.org
+$type: AnatomicalStructure
+title: AnatomicalStructure
+description: Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.
+properties:
+  - connectedTo
+  - diagram
+  - partOfSystem
+  - subStructure
+subClasses:
+  - Bone
+  - BrainStructure
+  - Joint
+  - Ligament
+  - Muscle
+  - Nerve
+  - Vessel
+parentClass: MedicalEntity
+---
+
+# AnatomicalStructure
+
+Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.
+
+## Type Hierarchy
+
+AnatomicalStructure is a type of MedicalEntity.
+
+### Direct Subtypes
+
+The following types directly inherit from AnatomicalStructure:
+
+- Bone: Rigid connective tissue that comprises up the skeletal structure of the human body.
+- BrainStructure: Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.
+- Joint: The anatomical location at which two or more bones make contact.
+- Ligament: A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.
+- Muscle: A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.
+- Nerve: A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.
+- Vessel: A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.
+
+## Properties
+
+AnatomicalStructure defines the following properties in addition to those inherited from MedicalEntity:
+
+- connectedTo: Other anatomical structures to which this structure is connected.
+- diagram: An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.
+- partOfSystem: The anatomical or organ system that this structure is part of.
+- subStructure: Component (sub-)structure(s) that comprise this anatomical structure.
+
+## Usage Example
+
+```typescript
+interface AnatomicalStructure {
+  $context?: 'schema.org'
+  $type: 'AnatomicalStructure'
+  connectedTo?: AnatomicalStructure
+  diagram?: ImageObject
+  partOfSystem?: AnatomicalSystem
+  subStructure?: AnatomicalStructure
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AnatomicalStructure",
+  "name": "Example AnatomicalStructure",
+  "description": "An example of the AnatomicalStructure type",
+  "url": "https://example.com/anatomicalstructure",
+  "identifier": "example-anatomicalstructure-1"
+}
+```
+
+## Notes
+
+- AnatomicalStructure inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: CourseInstance
+title: CourseInstance
+description: An instance of a [[Course]] which is distinct from other instances because it is offered at a different time or location or through different media or modes of study or to a specific section of students.
+properties:
+  - courseMode
+  - courseSchedule
+  - courseWorkload
+  - instructor
+subClasses:
+
+parentClass: Event
+---
+
+# CourseInstance
+
+An instance of a [[Course]] which is distinct from other instances because it is offered at a different time or location or through different media or modes of study or to a specific section of students.
+
+## Type Hierarchy
+
+CourseInstance is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from CourseInstance.
+
+## Properties
+
+CourseInstance defines the following properties in addition to those inherited from Event:
+
+- courseMode: The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
+- courseSchedule: Represents the length and pace of a course, expressed as a [[Schedule]].
+- courseWorkload: The amount of work expected of students taking the course, often provided as a figure per week or per month, and may be broken down by type. For example, "2 hours of lectures, 1 hour of lab work and 3 hours of independent study per week".
+- instructor: A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].
+
+## Usage Example
+
+```typescript
+interface CourseInstance {
+  $context?: 'schema.org'
+  $type: 'CourseInstance'
+  courseMode?: string
+  courseSchedule?: Schedule
+  courseWorkload?: string
+  instructor?: Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CourseInstance",
+  "name": "Example CourseInstance",
+  "description": "An example of the CourseInstance type",
+  "url": "https://example.com/courseinstance",
+  "identifier": "example-courseinstance-1"
+}
+```
+
+## Notes
+
+- CourseInstance inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

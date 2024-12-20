@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Game
+title: Game
+description: The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Game
+
+The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.
+
+## Type Hierarchy
+
+Game is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Game.
+
+## Properties
+
+Game defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Game {
+  $context?: 'schema.org'
+  $type: 'Game'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Game",
+  "name": "Example Game",
+  "description": "An example of the Game type",
+  "url": "https://example.com/game",
+  "identifier": "example-game-1"
+}
+```
+
+## Notes
+
+- Game inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

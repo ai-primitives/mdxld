@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ParkingFacility
+title: ParkingFacility
+description: A parking lot or other parking facility.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# ParkingFacility
+
+A parking lot or other parking facility.
+
+## Type Hierarchy
+
+ParkingFacility is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from ParkingFacility.
+
+## Properties
+
+ParkingFacility defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface ParkingFacility {
+  $context?: 'schema.org'
+  $type: 'ParkingFacility'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ParkingFacility",
+  "name": "Example ParkingFacility",
+  "description": "An example of the ParkingFacility type",
+  "url": "https://example.com/parkingfacility",
+  "identifier": "example-parkingfacility-1"
+}
+```
+
+## Notes
+
+- ParkingFacility inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

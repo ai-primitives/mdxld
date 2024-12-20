@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MotorizedBicycle
+title: MotorizedBicycle
+description: A motorized bicycle is a bicycle with an attached motor used to power the vehicle, or to assist with pedaling.
+properties:
+
+subClasses:
+
+parentClass: Vehicle
+---
+
+# MotorizedBicycle
+
+A motorized bicycle is a bicycle with an attached motor used to power the vehicle, or to assist with pedaling.
+
+## Type Hierarchy
+
+MotorizedBicycle is a type of Vehicle.
+
+### Direct Subtypes
+
+No types directly inherit from MotorizedBicycle.
+
+## Properties
+
+MotorizedBicycle defines the following properties in addition to those inherited from Vehicle:
+
+
+
+## Usage Example
+
+```typescript
+interface MotorizedBicycle {
+  $context?: 'schema.org'
+  $type: 'MotorizedBicycle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MotorizedBicycle",
+  "name": "Example MotorizedBicycle",
+  "description": "An example of the MotorizedBicycle type",
+  "url": "https://example.com/motorizedbicycle",
+  "identifier": "example-motorizedbicycle-1"
+}
+```
+
+## Notes
+
+- MotorizedBicycle inherits all properties from Vehicle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

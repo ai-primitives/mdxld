@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ReadAction
+title: ReadAction
+description: The act of consuming written content.
+properties:
+
+subClasses:
+
+parentClass: ConsumeAction
+---
+
+# ReadAction
+
+The act of consuming written content.
+
+## Type Hierarchy
+
+ReadAction is a type of ConsumeAction.
+
+### Direct Subtypes
+
+No types directly inherit from ReadAction.
+
+## Properties
+
+ReadAction defines the following properties in addition to those inherited from ConsumeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ReadAction {
+  $context?: 'schema.org'
+  $type: 'ReadAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReadAction",
+  "name": "Example ReadAction",
+  "description": "An example of the ReadAction type",
+  "url": "https://example.com/readaction",
+  "identifier": "example-readaction-1"
+}
+```
+
+## Notes
+
+- ReadAction inherits all properties from ConsumeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,92 @@
+---
+$context: schema.org
+$type: Flight
+title: Flight
+description: An airline flight.
+properties:
+  - aircraft
+  - arrivalAirport
+  - arrivalGate
+  - arrivalTerminal
+  - departureAirport
+  - departureGate
+  - departureTerminal
+  - estimatedFlightDuration
+  - flightDistance
+  - flightNumber
+  - mealService
+  - webCheckinTime
+subClasses:
+
+parentClass: Trip
+---
+
+# Flight
+
+An airline flight.
+
+## Type Hierarchy
+
+Flight is a type of Trip.
+
+### Direct Subtypes
+
+No types directly inherit from Flight.
+
+## Properties
+
+Flight defines the following properties in addition to those inherited from Trip:
+
+- aircraft: The kind of aircraft (e.g., "Boeing 747").
+- arrivalAirport: The airport where the flight terminates.
+- arrivalGate: Identifier of the flight's arrival gate.
+- arrivalTerminal: Identifier of the flight's arrival terminal.
+- departureAirport: The airport where the flight originates.
+- departureGate: Identifier of the flight's departure gate.
+- departureTerminal: Identifier of the flight's departure terminal.
+- estimatedFlightDuration: The estimated time the flight will take.
+- flightDistance: The distance of the flight.
+- flightNumber: The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is 'UA', the flightNumber is 'UA110'.
+- mealService: Description of the meals that will be provided or available for purchase.
+- webCheckinTime: The time when a passenger can check into the flight online.
+
+## Usage Example
+
+```typescript
+interface Flight {
+  $context?: 'schema.org'
+  $type: 'Flight'
+  aircraft?: Vehicle | string
+  arrivalAirport?: Airport
+  arrivalGate?: string
+  arrivalTerminal?: string
+  departureAirport?: Airport
+  departureGate?: string
+  departureTerminal?: string
+  estimatedFlightDuration?: Duration | string
+  flightDistance?: Distance | string
+  flightNumber?: string
+  mealService?: string
+  webCheckinTime?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Flight",
+  "name": "Example Flight",
+  "description": "An example of the Flight type",
+  "url": "https://example.com/flight",
+  "identifier": "example-flight-1"
+}
+```
+
+## Notes
+
+- Flight inherits all properties from Trip
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

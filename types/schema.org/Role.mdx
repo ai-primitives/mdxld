@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: Role
+title: Role
+description: Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\n\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html).
+properties:
+  - namedPosition
+  - roleName
+subClasses:
+  - LinkRole
+  - OrganizationRole
+  - PerformanceRole
+parentClass: Intangible
+---
+
+# Role
+
+Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\n\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html).
+
+## Type Hierarchy
+
+Role is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from Role:
+
+- LinkRole: A Role that represents a Web link, e.g. as expressed via the 'url' property. Its linkRelationship property can indicate URL-based and plain textual link types, e.g. those in IANA link registry or others such as 'amphtml'. This structure provides a placeholder where details from HTML's link element can be represented outside of HTML, e.g. in JSON-LD feeds.
+- OrganizationRole: A subclass of Role used to describe roles within organizations.
+- PerformanceRole: A PerformanceRole is a Role that some entity places with regard to a theatrical performance, e.g. in a Movie, TVSeries etc.
+
+## Properties
+
+Role defines the following properties in addition to those inherited from Intangible:
+
+- namedPosition: A position played, performed or filled by a person or organization, as part of an organization. For example, an athlete in a SportsTeam might play in the position named 'Quarterback'.
+- roleName: A role played, performed or filled by a person or organization. For example, the team of creators for a comic book might fill the roles named 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the position named 'Quarterback'.
+
+## Usage Example
+
+```typescript
+interface Role {
+  $context?: 'schema.org'
+  $type: 'Role'
+  namedPosition?: string
+  roleName?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Role",
+  "name": "Example Role",
+  "description": "An example of the Role type",
+  "url": "https://example.com/role",
+  "identifier": "example-role-1"
+}
+```
+
+## Notes
+
+- Role inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

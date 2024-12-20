@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DiscussionForumPosting
+title: DiscussionForumPosting
+description: A posting to a discussion forum.
+properties:
+
+subClasses:
+
+parentClass: SocialMediaPosting
+---
+
+# DiscussionForumPosting
+
+A posting to a discussion forum.
+
+## Type Hierarchy
+
+DiscussionForumPosting is a type of SocialMediaPosting.
+
+### Direct Subtypes
+
+No types directly inherit from DiscussionForumPosting.
+
+## Properties
+
+DiscussionForumPosting defines the following properties in addition to those inherited from SocialMediaPosting:
+
+
+
+## Usage Example
+
+```typescript
+interface DiscussionForumPosting {
+  $context?: 'schema.org'
+  $type: 'DiscussionForumPosting'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DiscussionForumPosting",
+  "name": "Example DiscussionForumPosting",
+  "description": "An example of the DiscussionForumPosting type",
+  "url": "https://example.com/discussionforumposting",
+  "identifier": "example-discussionforumposting-1"
+}
+```
+
+## Notes
+
+- DiscussionForumPosting inherits all properties from SocialMediaPosting
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

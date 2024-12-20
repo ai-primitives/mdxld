@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalTrial
+title: MedicalTrial
+description: A medical trial is a type of medical study that uses a scientific process to compare the safety and efficacy of medical therapies or medical procedures. In general, medical trials are controlled and subjects are allocated at random to the different treatment and/or control groups.
+properties:
+  - trialDesign
+subClasses:
+
+parentClass: MedicalStudy
+---
+
+# MedicalTrial
+
+A medical trial is a type of medical study that uses a scientific process to compare the safety and efficacy of medical therapies or medical procedures. In general, medical trials are controlled and subjects are allocated at random to the different treatment and/or control groups.
+
+## Type Hierarchy
+
+MedicalTrial is a type of MedicalStudy.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalTrial.
+
+## Properties
+
+MedicalTrial defines the following properties in addition to those inherited from MedicalStudy:
+
+- trialDesign: Specifics about the trial design (enumerated).
+
+## Usage Example
+
+```typescript
+interface MedicalTrial {
+  $context?: 'schema.org'
+  $type: 'MedicalTrial'
+  trialDesign?: MedicalTrialDesign
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalTrial",
+  "name": "Example MedicalTrial",
+  "description": "An example of the MedicalTrial type",
+  "url": "https://example.com/medicaltrial",
+  "identifier": "example-medicaltrial-1"
+}
+```
+
+## Notes
+
+- MedicalTrial inherits all properties from MedicalStudy
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

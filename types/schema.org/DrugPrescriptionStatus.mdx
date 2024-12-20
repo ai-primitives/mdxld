@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DrugPrescriptionStatus
+title: DrugPrescriptionStatus
+description: Indicates whether this drug is available by prescription or over-the-counter.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# DrugPrescriptionStatus
+
+Indicates whether this drug is available by prescription or over-the-counter.
+
+## Type Hierarchy
+
+DrugPrescriptionStatus is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from DrugPrescriptionStatus.
+
+## Properties
+
+DrugPrescriptionStatus defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface DrugPrescriptionStatus {
+  $context?: 'schema.org'
+  $type: 'DrugPrescriptionStatus'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DrugPrescriptionStatus",
+  "name": "Example DrugPrescriptionStatus",
+  "description": "An example of the DrugPrescriptionStatus type",
+  "url": "https://example.com/drugprescriptionstatus",
+  "identifier": "example-drugprescriptionstatus-1"
+}
+```
+
+## Notes
+
+- DrugPrescriptionStatus inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

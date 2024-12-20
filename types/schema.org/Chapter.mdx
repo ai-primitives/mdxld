@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Chapter
+title: Chapter
+description: One of the sections into which a book is divided. A chapter usually has a section number or a name.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Chapter
+
+One of the sections into which a book is divided. A chapter usually has a section number or a name.
+
+## Type Hierarchy
+
+Chapter is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Chapter.
+
+## Properties
+
+Chapter defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Chapter {
+  $context?: 'schema.org'
+  $type: 'Chapter'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Chapter",
+  "name": "Example Chapter",
+  "description": "An example of the Chapter type",
+  "url": "https://example.com/chapter",
+  "identifier": "example-chapter-1"
+}
+```
+
+## Notes
+
+- Chapter inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WebApplication
+title: WebApplication
+description: Web applications.
+properties:
+  - browserRequirements
+subClasses:
+
+parentClass: SoftwareApplication
+---
+
+# WebApplication
+
+Web applications.
+
+## Type Hierarchy
+
+WebApplication is a type of SoftwareApplication.
+
+### Direct Subtypes
+
+No types directly inherit from WebApplication.
+
+## Properties
+
+WebApplication defines the following properties in addition to those inherited from SoftwareApplication:
+
+- browserRequirements: Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.
+
+## Usage Example
+
+```typescript
+interface WebApplication {
+  $context?: 'schema.org'
+  $type: 'WebApplication'
+  browserRequirements?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WebApplication",
+  "name": "Example WebApplication",
+  "description": "An example of the WebApplication type",
+  "url": "https://example.com/webapplication",
+  "identifier": "example-webapplication-1"
+}
+```
+
+## Notes
+
+- WebApplication inherits all properties from SoftwareApplication
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ProfilePage
+title: ProfilePage
+description: Web page type: Profile page.
+properties:
+
+subClasses:
+
+parentClass: WebPage
+---
+
+# ProfilePage
+
+Web page type: Profile page.
+
+## Type Hierarchy
+
+ProfilePage is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from ProfilePage.
+
+## Properties
+
+ProfilePage defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface ProfilePage {
+  $context?: 'schema.org'
+  $type: 'ProfilePage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ProfilePage",
+  "name": "Example ProfilePage",
+  "description": "An example of the ProfilePage type",
+  "url": "https://example.com/profilepage",
+  "identifier": "example-profilepage-1"
+}
+```
+
+## Notes
+
+- ProfilePage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

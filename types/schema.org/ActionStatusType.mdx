@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ActionStatusType
+title: ActionStatusType
+description: The status of an Action.
+properties:
+
+subClasses:
+
+parentClass: StatusEnumeration
+---
+
+# ActionStatusType
+
+The status of an Action.
+
+## Type Hierarchy
+
+ActionStatusType is a type of StatusEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from ActionStatusType.
+
+## Properties
+
+ActionStatusType defines the following properties in addition to those inherited from StatusEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface ActionStatusType {
+  $context?: 'schema.org'
+  $type: 'ActionStatusType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ActionStatusType",
+  "name": "Example ActionStatusType",
+  "description": "An example of the ActionStatusType type",
+  "url": "https://example.com/actionstatustype",
+  "identifier": "example-actionstatustype-1"
+}
+```
+
+## Notes
+
+- ActionStatusType inherits all properties from StatusEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

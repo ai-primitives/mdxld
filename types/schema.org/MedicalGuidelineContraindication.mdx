@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalGuidelineContraindication
+title: MedicalGuidelineContraindication
+description: A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.
+properties:
+
+subClasses:
+
+parentClass: MedicalGuideline
+---
+
+# MedicalGuidelineContraindication
+
+A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.
+
+## Type Hierarchy
+
+MedicalGuidelineContraindication is a type of MedicalGuideline.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalGuidelineContraindication.
+
+## Properties
+
+MedicalGuidelineContraindication defines the following properties in addition to those inherited from MedicalGuideline:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalGuidelineContraindication {
+  $context?: 'schema.org'
+  $type: 'MedicalGuidelineContraindication'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalGuidelineContraindication",
+  "name": "Example MedicalGuidelineContraindication",
+  "description": "An example of the MedicalGuidelineContraindication type",
+  "url": "https://example.com/medicalguidelinecontraindication",
+  "identifier": "example-medicalguidelinecontraindication-1"
+}
+```
+
+## Notes
+
+- MedicalGuidelineContraindication inherits all properties from MedicalGuideline
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

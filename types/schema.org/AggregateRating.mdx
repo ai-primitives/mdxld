@@ -1,0 +1,64 @@
+---
+$context: schema.org
+$type: AggregateRating
+title: AggregateRating
+description: The average rating based on multiple ratings or reviews.
+properties:
+  - ratingCount
+  - reviewCount
+subClasses:
+  - EmployerAggregateRating
+parentClass: Rating
+---
+
+# AggregateRating
+
+The average rating based on multiple ratings or reviews.
+
+## Type Hierarchy
+
+AggregateRating is a type of Rating.
+
+### Direct Subtypes
+
+The following types directly inherit from AggregateRating:
+
+- EmployerAggregateRating: An aggregate rating of an Organization related to its role as an employer.
+
+## Properties
+
+AggregateRating defines the following properties in addition to those inherited from Rating:
+
+- ratingCount: The count of total number of ratings.
+- reviewCount: The count of total number of reviews.
+
+## Usage Example
+
+```typescript
+interface AggregateRating {
+  $context?: 'schema.org'
+  $type: 'AggregateRating'
+  ratingCount?: number
+  reviewCount?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AggregateRating",
+  "name": "Example AggregateRating",
+  "description": "An example of the AggregateRating type",
+  "url": "https://example.com/aggregaterating",
+  "identifier": "example-aggregaterating-1"
+}
+```
+
+## Notes
+
+- AggregateRating inherits all properties from Rating
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,69 @@
+---
+$context: schema.org
+$type: PublicationEvent
+title: PublicationEvent
+description: A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type, e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.
+properties:
+  - free
+  - publishedBy
+  - publishedOn
+subClasses:
+  - BroadcastEvent
+  - OnDemandEvent
+parentClass: Event
+---
+
+# PublicationEvent
+
+A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type, e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.
+
+## Type Hierarchy
+
+PublicationEvent is a type of Event.
+
+### Direct Subtypes
+
+The following types directly inherit from PublicationEvent:
+
+- BroadcastEvent: An over the air or online broadcast event.
+- OnDemandEvent: A publication event, e.g. catch-up TV or radio podcast, during which a program is available on-demand.
+
+## Properties
+
+PublicationEvent defines the following properties in addition to those inherited from Event:
+
+- free: A flag to signal that the item, event, or place is accessible for free.
+- publishedBy: An agent associated with the publication event.
+- publishedOn: A broadcast service associated with the publication event.
+
+## Usage Example
+
+```typescript
+interface PublicationEvent {
+  $context?: 'schema.org'
+  $type: 'PublicationEvent'
+  free?: boolean
+  publishedBy?: Organization | Person
+  publishedOn?: BroadcastService
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PublicationEvent",
+  "name": "Example PublicationEvent",
+  "description": "An example of the PublicationEvent type",
+  "url": "https://example.com/publicationevent",
+  "identifier": "example-publicationevent-1"
+}
+```
+
+## Notes
+
+- PublicationEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

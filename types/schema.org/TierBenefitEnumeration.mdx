@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TierBenefitEnumeration
+title: TierBenefitEnumeration
+description: An enumeration of possible benefits as part of a loyalty (members) program.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# TierBenefitEnumeration
+
+An enumeration of possible benefits as part of a loyalty (members) program.
+
+## Type Hierarchy
+
+TierBenefitEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from TierBenefitEnumeration.
+
+## Properties
+
+TierBenefitEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface TierBenefitEnumeration {
+  $context?: 'schema.org'
+  $type: 'TierBenefitEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TierBenefitEnumeration",
+  "name": "Example TierBenefitEnumeration",
+  "description": "An example of the TierBenefitEnumeration type",
+  "url": "https://example.com/tierbenefitenumeration",
+  "identifier": "example-tierbenefitenumeration-1"
+}
+```
+
+## Notes
+
+- TierBenefitEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

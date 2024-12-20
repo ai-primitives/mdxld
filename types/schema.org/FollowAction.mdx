@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: FollowAction
+title: FollowAction
+description: The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates polled from.\n\nRelated actions:\n\n* [[BefriendAction]]: Unlike BefriendAction, FollowAction implies that the connection is *not* necessarily reciprocal.\n* [[SubscribeAction]]: Unlike SubscribeAction, FollowAction implies that the follower acts as an active agent constantly/actively polling for updates.\n* [[RegisterAction]]: Unlike RegisterAction, FollowAction implies that the agent is interested in continuing receiving updates from the object.\n* [[JoinAction]]: Unlike JoinAction, FollowAction implies that the agent is interested in getting updates from the object.\n* [[TrackAction]]: Unlike TrackAction, FollowAction refers to the polling of updates of all aspects of animate objects rather than the location of inanimate objects (e.g. you track a package, but you don't follow it).
+properties:
+  - followee
+subClasses:
+
+parentClass: InteractAction
+---
+
+# FollowAction
+
+The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates polled from.\n\nRelated actions:\n\n* [[BefriendAction]]: Unlike BefriendAction, FollowAction implies that the connection is *not* necessarily reciprocal.\n* [[SubscribeAction]]: Unlike SubscribeAction, FollowAction implies that the follower acts as an active agent constantly/actively polling for updates.\n* [[RegisterAction]]: Unlike RegisterAction, FollowAction implies that the agent is interested in continuing receiving updates from the object.\n* [[JoinAction]]: Unlike JoinAction, FollowAction implies that the agent is interested in getting updates from the object.\n* [[TrackAction]]: Unlike TrackAction, FollowAction refers to the polling of updates of all aspects of animate objects rather than the location of inanimate objects (e.g. you track a package, but you don't follow it).
+
+## Type Hierarchy
+
+FollowAction is a type of InteractAction.
+
+### Direct Subtypes
+
+No types directly inherit from FollowAction.
+
+## Properties
+
+FollowAction defines the following properties in addition to those inherited from InteractAction:
+
+- followee: A sub property of object. The person or organization being followed.
+
+## Usage Example
+
+```typescript
+interface FollowAction {
+  $context?: 'schema.org'
+  $type: 'FollowAction'
+  followee?: Organization | Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FollowAction",
+  "name": "Example FollowAction",
+  "description": "An example of the FollowAction type",
+  "url": "https://example.com/followaction",
+  "identifier": "example-followaction-1"
+}
+```
+
+## Notes
+
+- FollowAction inherits all properties from InteractAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

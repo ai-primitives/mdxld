@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: InformAction
+title: InformAction
+description: The act of notifying someone of information pertinent to them, with no expectation of a response.
+properties:
+
+subClasses:
+  - ConfirmAction
+  - RsvpAction
+parentClass: CommunicateAction
+---
+
+# InformAction
+
+The act of notifying someone of information pertinent to them, with no expectation of a response.
+
+## Type Hierarchy
+
+InformAction is a type of CommunicateAction.
+
+### Direct Subtypes
+
+The following types directly inherit from InformAction:
+
+- ConfirmAction: The act of notifying someone that a future event/action is going to happen as expected.\n\nRelated actions:\n\n* [[CancelAction]]: The antonym of ConfirmAction.
+- RsvpAction: The act of notifying an event organizer as to whether you expect to attend the event.
+
+## Properties
+
+InformAction defines the following properties in addition to those inherited from CommunicateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface InformAction {
+  $context?: 'schema.org'
+  $type: 'InformAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InformAction",
+  "name": "Example InformAction",
+  "description": "An example of the InformAction type",
+  "url": "https://example.com/informaction",
+  "identifier": "example-informaction-1"
+}
+```
+
+## Notes
+
+- InformAction inherits all properties from CommunicateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Hackathon
+title: Hackathon
+description: A [hackathon](https://en.wikipedia.org/wiki/Hackathon) event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# Hackathon
+
+A [hackathon](https://en.wikipedia.org/wiki/Hackathon) event.
+
+## Type Hierarchy
+
+Hackathon is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from Hackathon.
+
+## Properties
+
+Hackathon defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface Hackathon {
+  $context?: 'schema.org'
+  $type: 'Hackathon'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Hackathon",
+  "name": "Example Hackathon",
+  "description": "An example of the Hackathon type",
+  "url": "https://example.com/hackathon",
+  "identifier": "example-hackathon-1"
+}
+```
+
+## Notes
+
+- Hackathon inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

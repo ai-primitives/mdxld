@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Barcode
+title: Barcode
+description: An image of a visual machine-readable code such as a barcode or QR code.
+properties:
+
+subClasses:
+
+parentClass: ImageObject
+---
+
+# Barcode
+
+An image of a visual machine-readable code such as a barcode or QR code.
+
+## Type Hierarchy
+
+Barcode is a type of ImageObject.
+
+### Direct Subtypes
+
+No types directly inherit from Barcode.
+
+## Properties
+
+Barcode defines the following properties in addition to those inherited from ImageObject:
+
+
+
+## Usage Example
+
+```typescript
+interface Barcode {
+  $context?: 'schema.org'
+  $type: 'Barcode'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Barcode",
+  "name": "Example Barcode",
+  "description": "An example of the Barcode type",
+  "url": "https://example.com/barcode",
+  "identifier": "example-barcode-1"
+}
+```
+
+## Notes
+
+- Barcode inherits all properties from ImageObject
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

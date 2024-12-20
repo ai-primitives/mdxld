@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SatiricalArticle
+title: SatiricalArticle
+description: An [[Article]] whose content is primarily [[satirical]](https://en.wikipedia.org/wiki/Satire) in nature, i.e. unlikely to be literally true. A satirical article is sometimes but not necessarily also a [[NewsArticle]]. [[ScholarlyArticle]]s are also sometimes satirized.
+properties:
+
+subClasses:
+
+parentClass: Article
+---
+
+# SatiricalArticle
+
+An [[Article]] whose content is primarily [[satirical]](https://en.wikipedia.org/wiki/Satire) in nature, i.e. unlikely to be literally true. A satirical article is sometimes but not necessarily also a [[NewsArticle]]. [[ScholarlyArticle]]s are also sometimes satirized.
+
+## Type Hierarchy
+
+SatiricalArticle is a type of Article.
+
+### Direct Subtypes
+
+No types directly inherit from SatiricalArticle.
+
+## Properties
+
+SatiricalArticle defines the following properties in addition to those inherited from Article:
+
+
+
+## Usage Example
+
+```typescript
+interface SatiricalArticle {
+  $context?: 'schema.org'
+  $type: 'SatiricalArticle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SatiricalArticle",
+  "name": "Example SatiricalArticle",
+  "description": "An example of the SatiricalArticle type",
+  "url": "https://example.com/satiricalarticle",
+  "identifier": "example-satiricalarticle-1"
+}
+```
+
+## Notes
+
+- SatiricalArticle inherits all properties from Article
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

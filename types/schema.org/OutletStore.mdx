@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OutletStore
+title: OutletStore
+description: An outlet store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# OutletStore
+
+An outlet store.
+
+## Type Hierarchy
+
+OutletStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from OutletStore.
+
+## Properties
+
+OutletStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface OutletStore {
+  $context?: 'schema.org'
+  $type: 'OutletStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OutletStore",
+  "name": "Example OutletStore",
+  "description": "An example of the OutletStore type",
+  "url": "https://example.com/outletstore",
+  "identifier": "example-outletstore-1"
+}
+```
+
+## Notes
+
+- OutletStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

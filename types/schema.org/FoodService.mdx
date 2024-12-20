@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: FoodService
+title: FoodService
+description: A food service, like breakfast, lunch, or dinner.
+properties:
+
+subClasses:
+
+parentClass: Service
+---
+
+# FoodService
+
+A food service, like breakfast, lunch, or dinner.
+
+## Type Hierarchy
+
+FoodService is a type of Service.
+
+### Direct Subtypes
+
+No types directly inherit from FoodService.
+
+## Properties
+
+FoodService defines the following properties in addition to those inherited from Service:
+
+
+
+## Usage Example
+
+```typescript
+interface FoodService {
+  $context?: 'schema.org'
+  $type: 'FoodService'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FoodService",
+  "name": "Example FoodService",
+  "description": "An example of the FoodService type",
+  "url": "https://example.com/foodservice",
+  "identifier": "example-foodservice-1"
+}
+```
+
+## Notes
+
+- FoodService inherits all properties from Service
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Menu
+title: Menu
+description: A structured representation of food or drink items available from a FoodEstablishment.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Menu
+
+A structured representation of food or drink items available from a FoodEstablishment.
+
+## Type Hierarchy
+
+Menu is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Menu.
+
+## Properties
+
+Menu defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Menu {
+  $context?: 'schema.org'
+  $type: 'Menu'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Menu",
+  "name": "Example Menu",
+  "description": "An example of the Menu type",
+  "url": "https://example.com/menu",
+  "identifier": "example-menu-1"
+}
+```
+
+## Notes
+
+- Menu inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

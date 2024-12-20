@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HVACBusiness
+title: HVACBusiness
+description: A business that provides Heating, Ventilation and Air Conditioning services.
+properties:
+
+subClasses:
+
+parentClass: HomeAndConstructionBusiness
+---
+
+# HVACBusiness
+
+A business that provides Heating, Ventilation and Air Conditioning services.
+
+## Type Hierarchy
+
+HVACBusiness is a type of HomeAndConstructionBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from HVACBusiness.
+
+## Properties
+
+HVACBusiness defines the following properties in addition to those inherited from HomeAndConstructionBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface HVACBusiness {
+  $context?: 'schema.org'
+  $type: 'HVACBusiness'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HVACBusiness",
+  "name": "Example HVACBusiness",
+  "description": "An example of the HVACBusiness type",
+  "url": "https://example.com/hvacbusiness",
+  "identifier": "example-hvacbusiness-1"
+}
+```
+
+## Notes
+
+- HVACBusiness inherits all properties from HomeAndConstructionBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

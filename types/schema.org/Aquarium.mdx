@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Aquarium
+title: Aquarium
+description: Aquarium.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# Aquarium
+
+Aquarium.
+
+## Type Hierarchy
+
+Aquarium is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Aquarium.
+
+## Properties
+
+Aquarium defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface Aquarium {
+  $context?: 'schema.org'
+  $type: 'Aquarium'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Aquarium",
+  "name": "Example Aquarium",
+  "description": "An example of the Aquarium type",
+  "url": "https://example.com/aquarium",
+  "identifier": "example-aquarium-1"
+}
+```
+
+## Notes
+
+- Aquarium inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

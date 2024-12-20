@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: DayOfWeek
+title: DayOfWeek
+description: The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.
+
+Originally, URLs from [GoodRelations](http://purl.org/goodrelations/v1) were used (for [[Monday]], [[Tuesday]], [[Wednesday]], [[Thursday]], [[Friday]], [[Saturday]], [[Sunday]] plus a special entry for [[PublicHolidays]]); these have now been integrated directly into schema.org.
+      
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# DayOfWeek
+
+The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.
+
+Originally, URLs from [GoodRelations](http://purl.org/goodrelations/v1) were used (for [[Monday]], [[Tuesday]], [[Wednesday]], [[Thursday]], [[Friday]], [[Saturday]], [[Sunday]] plus a special entry for [[PublicHolidays]]); these have now been integrated directly into schema.org.
+      
+
+## Type Hierarchy
+
+DayOfWeek is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from DayOfWeek.
+
+## Properties
+
+DayOfWeek defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface DayOfWeek {
+  $context?: 'schema.org'
+  $type: 'DayOfWeek'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DayOfWeek",
+  "name": "Example DayOfWeek",
+  "description": "An example of the DayOfWeek type",
+  "url": "https://example.com/dayofweek",
+  "identifier": "example-dayofweek-1"
+}
+```
+
+## Notes
+
+- DayOfWeek inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

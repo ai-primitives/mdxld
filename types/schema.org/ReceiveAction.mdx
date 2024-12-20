@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ReceiveAction
+title: ReceiveAction
+description: The act of physically/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\n\nRelated actions:\n\n* [[SendAction]]: The reciprocal of ReceiveAction.\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transferred (e.g. I can receive a package, but it does not mean the package is now mine).
+properties:
+
+subClasses:
+
+parentClass: TransferAction
+---
+
+# ReceiveAction
+
+The act of physically/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\n\nRelated actions:\n\n* [[SendAction]]: The reciprocal of ReceiveAction.\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transferred (e.g. I can receive a package, but it does not mean the package is now mine).
+
+## Type Hierarchy
+
+ReceiveAction is a type of TransferAction.
+
+### Direct Subtypes
+
+No types directly inherit from ReceiveAction.
+
+## Properties
+
+ReceiveAction defines the following properties in addition to those inherited from TransferAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ReceiveAction {
+  $context?: 'schema.org'
+  $type: 'ReceiveAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReceiveAction",
+  "name": "Example ReceiveAction",
+  "description": "An example of the ReceiveAction type",
+  "url": "https://example.com/receiveaction",
+  "identifier": "example-receiveaction-1"
+}
+```
+
+## Notes
+
+- ReceiveAction inherits all properties from TransferAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

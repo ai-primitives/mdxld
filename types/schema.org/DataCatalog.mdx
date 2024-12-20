@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DataCatalog
+title: DataCatalog
+description: A collection of datasets.
+properties:
+  - dataset
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# DataCatalog
+
+A collection of datasets.
+
+## Type Hierarchy
+
+DataCatalog is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from DataCatalog.
+
+## Properties
+
+DataCatalog defines the following properties in addition to those inherited from CreativeWork:
+
+- dataset: A dataset contained in this catalog.
+
+## Usage Example
+
+```typescript
+interface DataCatalog {
+  $context?: 'schema.org'
+  $type: 'DataCatalog'
+  dataset?: Dataset
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DataCatalog",
+  "name": "Example DataCatalog",
+  "description": "An example of the DataCatalog type",
+  "url": "https://example.com/datacatalog",
+  "identifier": "example-datacatalog-1"
+}
+```
+
+## Notes
+
+- DataCatalog inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

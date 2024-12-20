@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GenderType
+title: GenderType
+description: An enumeration of genders.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# GenderType
+
+An enumeration of genders.
+
+## Type Hierarchy
+
+GenderType is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from GenderType.
+
+## Properties
+
+GenderType defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface GenderType {
+  $context?: 'schema.org'
+  $type: 'GenderType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GenderType",
+  "name": "Example GenderType",
+  "description": "An example of the GenderType type",
+  "url": "https://example.com/gendertype",
+  "identifier": "example-gendertype-1"
+}
+```
+
+## Notes
+
+- GenderType inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

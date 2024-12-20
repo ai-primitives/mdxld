@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalImagingTechnique
+title: MedicalImagingTechnique
+description: Any medical imaging modality typically used for diagnostic purposes. Enumerated type.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# MedicalImagingTechnique
+
+Any medical imaging modality typically used for diagnostic purposes. Enumerated type.
+
+## Type Hierarchy
+
+MedicalImagingTechnique is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalImagingTechnique.
+
+## Properties
+
+MedicalImagingTechnique defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalImagingTechnique {
+  $context?: 'schema.org'
+  $type: 'MedicalImagingTechnique'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalImagingTechnique",
+  "name": "Example MedicalImagingTechnique",
+  "description": "An example of the MedicalImagingTechnique type",
+  "url": "https://example.com/medicalimagingtechnique",
+  "identifier": "example-medicalimagingtechnique-1"
+}
+```
+
+## Notes
+
+- MedicalImagingTechnique inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

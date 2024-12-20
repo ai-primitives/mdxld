@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: AddAction
+title: AddAction
+description: The act of editing by adding an object to a collection.
+properties:
+
+subClasses:
+  - InsertAction
+parentClass: UpdateAction
+---
+
+# AddAction
+
+The act of editing by adding an object to a collection.
+
+## Type Hierarchy
+
+AddAction is a type of UpdateAction.
+
+### Direct Subtypes
+
+The following types directly inherit from AddAction:
+
+- InsertAction: The act of adding at a specific location in an ordered collection.
+
+## Properties
+
+AddAction defines the following properties in addition to those inherited from UpdateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface AddAction {
+  $context?: 'schema.org'
+  $type: 'AddAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AddAction",
+  "name": "Example AddAction",
+  "description": "An example of the AddAction type",
+  "url": "https://example.com/addaction",
+  "identifier": "example-addaction-1"
+}
+```
+
+## Notes
+
+- AddAction inherits all properties from UpdateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

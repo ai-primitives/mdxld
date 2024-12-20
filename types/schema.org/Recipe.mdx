@@ -1,0 +1,80 @@
+---
+$context: schema.org
+$type: Recipe
+title: Recipe
+description: A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.
+properties:
+  - cookTime
+  - cookingMethod
+  - ingredients
+  - recipeCategory
+  - recipeCuisine
+  - recipeIngredient
+  - recipeInstructions
+  - recipeYield
+subClasses:
+
+parentClass: HowTo
+---
+
+# Recipe
+
+A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.
+
+## Type Hierarchy
+
+Recipe is a type of HowTo.
+
+### Direct Subtypes
+
+No types directly inherit from Recipe.
+
+## Properties
+
+Recipe defines the following properties in addition to those inherited from HowTo:
+
+- cookingMethod: The method of cooking, such as Frying, Steaming, ...
+- cookTime: The time it takes to actually cook the dish, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+- ingredients: A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+- recipeCategory: The category of the recipe—for example, appetizer, entree, etc.
+- recipeCuisine: The cuisine of the recipe (for example, French or Ethiopian).
+- recipeIngredient: A single ingredient used in the recipe, e.g. sugar, flour or garlic.
+- recipeInstructions: A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with HowToStep and/or HowToSection items.
+- recipeYield: The quantity produced by the recipe (for example, number of people served, number of servings, etc).
+
+## Usage Example
+
+```typescript
+interface Recipe {
+  $context?: 'schema.org'
+  $type: 'Recipe'
+  cookingMethod?: string
+  cookTime?: Duration
+  ingredients?: string
+  recipeCategory?: string
+  recipeCuisine?: string
+  recipeIngredient?: string
+  recipeInstructions?: CreativeWork | ItemList | string
+  recipeYield?: QuantitativeValue | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Recipe",
+  "name": "Example Recipe",
+  "description": "An example of the Recipe type",
+  "url": "https://example.com/recipe",
+  "identifier": "example-recipe-1"
+}
+```
+
+## Notes
+
+- Recipe inherits all properties from HowTo
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

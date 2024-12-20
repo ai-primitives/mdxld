@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: ComicSeries
+title: ComicSeries
+description: A sequential publication of comic stories under a
+    	unifying title, for example "The Amazing Spider-Man" or "Groo the
+    	Wanderer".
+properties:
+
+subClasses:
+
+parentClass: Periodical
+---
+
+# ComicSeries
+
+A sequential publication of comic stories under a
+    	unifying title, for example "The Amazing Spider-Man" or "Groo the
+    	Wanderer".
+
+## Type Hierarchy
+
+ComicSeries is a type of Periodical.
+
+### Direct Subtypes
+
+No types directly inherit from ComicSeries.
+
+## Properties
+
+ComicSeries defines the following properties in addition to those inherited from Periodical:
+
+
+
+## Usage Example
+
+```typescript
+interface ComicSeries {
+  $context?: 'schema.org'
+  $type: 'ComicSeries'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ComicSeries",
+  "name": "Example ComicSeries",
+  "description": "An example of the ComicSeries type",
+  "url": "https://example.com/comicseries",
+  "identifier": "example-comicseries-1"
+}
+```
+
+## Notes
+
+- ComicSeries inherits all properties from Periodical
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

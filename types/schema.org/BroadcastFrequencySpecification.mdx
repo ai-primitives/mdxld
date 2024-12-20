@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: BroadcastFrequencySpecification
+title: BroadcastFrequencySpecification
+description: The frequency in MHz and the modulation used for a particular BroadcastService.
+properties:
+  - broadcastFrequencyValue
+  - broadcastSignalModulation
+  - broadcastSubChannel
+subClasses:
+
+parentClass: Intangible
+---
+
+# BroadcastFrequencySpecification
+
+The frequency in MHz and the modulation used for a particular BroadcastService.
+
+## Type Hierarchy
+
+BroadcastFrequencySpecification is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from BroadcastFrequencySpecification.
+
+## Properties
+
+BroadcastFrequencySpecification defines the following properties in addition to those inherited from Intangible:
+
+- broadcastFrequencyValue: The frequency in MHz for a particular broadcast.
+- broadcastSignalModulation: The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
+- broadcastSubChannel: The subchannel used for the broadcast.
+
+## Usage Example
+
+```typescript
+interface BroadcastFrequencySpecification {
+  $context?: 'schema.org'
+  $type: 'BroadcastFrequencySpecification'
+  broadcastFrequencyValue?: QuantitativeValue | number
+  broadcastSignalModulation?: QualitativeValue | string
+  broadcastSubChannel?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BroadcastFrequencySpecification",
+  "name": "Example BroadcastFrequencySpecification",
+  "description": "An example of the BroadcastFrequencySpecification type",
+  "url": "https://example.com/broadcastfrequencyspecification",
+  "identifier": "example-broadcastfrequencyspecification-1"
+}
+```
+
+## Notes
+
+- BroadcastFrequencySpecification inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

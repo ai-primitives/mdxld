@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Airline
+title: Airline
+description: An organization that provides flights for passengers.
+properties:
+
+subClasses:
+
+parentClass: Organization
+---
+
+# Airline
+
+An organization that provides flights for passengers.
+
+## Type Hierarchy
+
+Airline is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from Airline.
+
+## Properties
+
+Airline defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface Airline {
+  $context?: 'schema.org'
+  $type: 'Airline'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Airline",
+  "name": "Example Airline",
+  "description": "An example of the Airline type",
+  "url": "https://example.com/airline",
+  "identifier": "example-airline-1"
+}
+```
+
+## Notes
+
+- Airline inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

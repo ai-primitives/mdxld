@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CarUsageType
+title: CarUsageType
+description: A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# CarUsageType
+
+A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.
+
+## Type Hierarchy
+
+CarUsageType is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from CarUsageType.
+
+## Properties
+
+CarUsageType defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface CarUsageType {
+  $context?: 'schema.org'
+  $type: 'CarUsageType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CarUsageType",
+  "name": "Example CarUsageType",
+  "description": "An example of the CarUsageType type",
+  "url": "https://example.com/carusagetype",
+  "identifier": "example-carusagetype-1"
+}
+```
+
+## Notes
+
+- CarUsageType inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

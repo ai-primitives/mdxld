@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Continent
+title: Continent
+description: One of the continents (for example, Europe or Africa).
+properties:
+
+subClasses:
+
+parentClass: Landform
+---
+
+# Continent
+
+One of the continents (for example, Europe or Africa).
+
+## Type Hierarchy
+
+Continent is a type of Landform.
+
+### Direct Subtypes
+
+No types directly inherit from Continent.
+
+## Properties
+
+Continent defines the following properties in addition to those inherited from Landform:
+
+
+
+## Usage Example
+
+```typescript
+interface Continent {
+  $context?: 'schema.org'
+  $type: 'Continent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Continent",
+  "name": "Example Continent",
+  "description": "An example of the Continent type",
+  "url": "https://example.com/continent",
+  "identifier": "example-continent-1"
+}
+```
+
+## Notes
+
+- Continent inherits all properties from Landform
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

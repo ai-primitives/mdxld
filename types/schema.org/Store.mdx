@@ -1,0 +1,117 @@
+---
+$context: schema.org
+$type: Store
+title: Store
+description: A retail good store.
+properties:
+
+subClasses:
+  - BikeStore
+  - BookStore
+  - ClothingStore
+  - ComputerStore
+  - ConvenienceStore
+  - DepartmentStore
+  - ElectronicsStore
+  - Florist
+  - FurnitureStore
+  - GardenStore
+  - GroceryStore
+  - HardwareStore
+  - HobbyShop
+  - HomeGoodsStore
+  - JewelryStore
+  - LiquorStore
+  - MensClothingStore
+  - MobilePhoneStore
+  - MovieRentalStore
+  - MusicStore
+  - OfficeEquipmentStore
+  - OutletStore
+  - PawnShop
+  - PetStore
+  - ShoeStore
+  - SportingGoodsStore
+  - TireShop
+  - ToyStore
+  - WholesaleStore
+parentClass: LocalBusiness
+---
+
+# Store
+
+A retail good store.
+
+## Type Hierarchy
+
+Store is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from Store:
+
+- BikeStore: A bike store.
+- BookStore: A bookstore.
+- ClothingStore: A clothing store.
+- ComputerStore: A computer store.
+- ConvenienceStore: A convenience store.
+- DepartmentStore: A department store.
+- ElectronicsStore: An electronics store.
+- Florist: A florist.
+- FurnitureStore: A furniture store.
+- GardenStore: A garden store.
+- GroceryStore: A grocery store.
+- HardwareStore: A hardware store.
+- HobbyShop: A store that sells materials useful or necessary for various hobbies.
+- HomeGoodsStore: A home goods store.
+- JewelryStore: A jewelry store.
+- LiquorStore: A shop that sells alcoholic drinks such as wine, beer, whisky and other spirits.
+- MensClothingStore: A men's clothing store.
+- MobilePhoneStore: A store that sells mobile phones and related accessories.
+- MovieRentalStore: A movie rental store.
+- MusicStore: A music store.
+- OfficeEquipmentStore: An office equipment store.
+- OutletStore: An outlet store.
+- PawnShop: A shop that will buy, or lend money against the security of, personal possessions.
+- PetStore: A pet store.
+- ShoeStore: A shoe store.
+- SportingGoodsStore: A sporting goods store.
+- TireShop: A tire shop.
+- ToyStore: A toy store.
+- WholesaleStore: A wholesale store.
+
+## Properties
+
+Store defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface Store {
+  $context?: 'schema.org'
+  $type: 'Store'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Store",
+  "name": "Example Store",
+  "description": "An example of the Store type",
+  "url": "https://example.com/store",
+  "identifier": "example-store-1"
+}
+```
+
+## Notes
+
+- Store inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

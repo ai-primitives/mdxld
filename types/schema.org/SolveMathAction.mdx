@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SolveMathAction
+title: SolveMathAction
+description: The action that takes in a math expression and directs users to a page potentially capable of solving/simplifying that expression.
+properties:
+
+subClasses:
+
+parentClass: Action
+---
+
+# SolveMathAction
+
+The action that takes in a math expression and directs users to a page potentially capable of solving/simplifying that expression.
+
+## Type Hierarchy
+
+SolveMathAction is a type of Action.
+
+### Direct Subtypes
+
+No types directly inherit from SolveMathAction.
+
+## Properties
+
+SolveMathAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface SolveMathAction {
+  $context?: 'schema.org'
+  $type: 'SolveMathAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SolveMathAction",
+  "name": "Example SolveMathAction",
+  "description": "An example of the SolveMathAction type",
+  "url": "https://example.com/solvemathaction",
+  "identifier": "example-solvemathaction-1"
+}
+```
+
+## Notes
+
+- SolveMathAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

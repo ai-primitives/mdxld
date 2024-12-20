@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: MedicalIndication
+title: MedicalIndication
+description: A condition or factor that indicates use of a medical therapy, including signs, symptoms, risk factors, anatomical states, etc.
+properties:
+
+subClasses:
+  - ApprovedIndication
+  - PreventionIndication
+  - TreatmentIndication
+parentClass: MedicalEntity
+---
+
+# MedicalIndication
+
+A condition or factor that indicates use of a medical therapy, including signs, symptoms, risk factors, anatomical states, etc.
+
+## Type Hierarchy
+
+MedicalIndication is a type of MedicalEntity.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalIndication:
+
+- ApprovedIndication: An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.
+- PreventionIndication: An indication for preventing an underlying condition, symptom, etc.
+- TreatmentIndication: An indication for treating an underlying condition, symptom, etc.
+
+## Properties
+
+MedicalIndication defines the following properties in addition to those inherited from MedicalEntity:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalIndication {
+  $context?: 'schema.org'
+  $type: 'MedicalIndication'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalIndication",
+  "name": "Example MedicalIndication",
+  "description": "An example of the MedicalIndication type",
+  "url": "https://example.com/medicalindication",
+  "identifier": "example-medicalindication-1"
+}
+```
+
+## Notes
+
+- MedicalIndication inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: FlightReservation
+title: FlightReservation
+description: A reservation for air travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+properties:
+  - boardingGroup
+  - passengerPriorityStatus
+  - passengerSequenceNumber
+  - securityScreening
+subClasses:
+
+parentClass: Reservation
+---
+
+# FlightReservation
+
+A reservation for air travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+
+## Type Hierarchy
+
+FlightReservation is a type of Reservation.
+
+### Direct Subtypes
+
+No types directly inherit from FlightReservation.
+
+## Properties
+
+FlightReservation defines the following properties in addition to those inherited from Reservation:
+
+- boardingGroup: The airline-specific indicator of boarding order / preference.
+- passengerPriorityStatus: The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).
+- passengerSequenceNumber: The passenger's sequence number as assigned by the airline.
+- securityScreening: The type of security screening the passenger is subject to.
+
+## Usage Example
+
+```typescript
+interface FlightReservation {
+  $context?: 'schema.org'
+  $type: 'FlightReservation'
+  boardingGroup?: string
+  passengerPriorityStatus?: QualitativeValue | string
+  passengerSequenceNumber?: string
+  securityScreening?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FlightReservation",
+  "name": "Example FlightReservation",
+  "description": "An example of the FlightReservation type",
+  "url": "https://example.com/flightreservation",
+  "identifier": "example-flightreservation-1"
+}
+```
+
+## Notes
+
+- FlightReservation inherits all properties from Reservation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

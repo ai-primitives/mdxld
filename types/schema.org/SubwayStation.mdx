@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SubwayStation
+title: SubwayStation
+description: A subway station.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# SubwayStation
+
+A subway station.
+
+## Type Hierarchy
+
+SubwayStation is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from SubwayStation.
+
+## Properties
+
+SubwayStation defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface SubwayStation {
+  $context?: 'schema.org'
+  $type: 'SubwayStation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SubwayStation",
+  "name": "Example SubwayStation",
+  "description": "An example of the SubwayStation type",
+  "url": "https://example.com/subwaystation",
+  "identifier": "example-subwaystation-1"
+}
+```
+
+## Notes
+
+- SubwayStation inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

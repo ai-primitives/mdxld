@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TypeAndQuantityNode
+title: TypeAndQuantityNode
+description: A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.
+properties:
+  - amountOfThisGood
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# TypeAndQuantityNode
+
+A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.
+
+## Type Hierarchy
+
+TypeAndQuantityNode is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from TypeAndQuantityNode.
+
+## Properties
+
+TypeAndQuantityNode defines the following properties in addition to those inherited from StructuredValue:
+
+- amountOfThisGood: The quantity of the goods included in the offer.
+
+## Usage Example
+
+```typescript
+interface TypeAndQuantityNode {
+  $context?: 'schema.org'
+  $type: 'TypeAndQuantityNode'
+  amountOfThisGood?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TypeAndQuantityNode",
+  "name": "Example TypeAndQuantityNode",
+  "description": "An example of the TypeAndQuantityNode type",
+  "url": "https://example.com/typeandquantitynode",
+  "identifier": "example-typeandquantitynode-1"
+}
+```
+
+## Notes
+
+- TypeAndQuantityNode inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

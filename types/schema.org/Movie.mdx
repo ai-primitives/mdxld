@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Movie
+title: Movie
+description: A movie.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Movie
+
+A movie.
+
+## Type Hierarchy
+
+Movie is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Movie.
+
+## Properties
+
+Movie defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Movie {
+  $context?: 'schema.org'
+  $type: 'Movie'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Movie",
+  "name": "Example Movie",
+  "description": "An example of the Movie type",
+  "url": "https://example.com/movie",
+  "identifier": "example-movie-1"
+}
+```
+
+## Notes
+
+- Movie inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

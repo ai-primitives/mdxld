@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: NailSalon
+title: NailSalon
+description: A nail salon.
+properties:
+
+subClasses:
+
+parentClass: HealthAndBeautyBusiness
+---
+
+# NailSalon
+
+A nail salon.
+
+## Type Hierarchy
+
+NailSalon is a type of HealthAndBeautyBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from NailSalon.
+
+## Properties
+
+NailSalon defines the following properties in addition to those inherited from HealthAndBeautyBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface NailSalon {
+  $context?: 'schema.org'
+  $type: 'NailSalon'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "NailSalon",
+  "name": "Example NailSalon",
+  "description": "An example of the NailSalon type",
+  "url": "https://example.com/nailsalon",
+  "identifier": "example-nailsalon-1"
+}
+```
+
+## Notes
+
+- NailSalon inherits all properties from HealthAndBeautyBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

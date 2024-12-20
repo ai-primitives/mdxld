@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: LearningResource
+title: LearningResource
+description: The LearningResource type can be used to indicate [[CreativeWork]]s (whether physical or digital) that have a particular and explicit orientation towards learning, education, skill acquisition, and other educational purposes.
+
+[[LearningResource]] is expected to be used as an addition to a primary type such as [[Book]], [[VideoObject]], [[Product]] etc.
+
+[[EducationEvent]] serves a similar purpose for event-like things (e.g. a [[Trip]]). A [[LearningResource]] may be created as a result of an [[EducationEvent]], for example by recording one.
+properties:
+
+subClasses:
+  - Quiz
+  - Syllabus
+parentClass: CreativeWork
+---
+
+# LearningResource
+
+The LearningResource type can be used to indicate [[CreativeWork]]s (whether physical or digital) that have a particular and explicit orientation towards learning, education, skill acquisition, and other educational purposes.
+
+[[LearningResource]] is expected to be used as an addition to a primary type such as [[Book]], [[VideoObject]], [[Product]] etc.
+
+[[EducationEvent]] serves a similar purpose for event-like things (e.g. a [[Trip]]). A [[LearningResource]] may be created as a result of an [[EducationEvent]], for example by recording one.
+
+## Type Hierarchy
+
+LearningResource is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from LearningResource:
+
+- Quiz: Quiz: A test of knowledge, skills and abilities.
+- Syllabus: A syllabus that describes the material covered in a course, often with several such sections per [[Course]] so that a distinct [[timeRequired]] can be provided for that section of the [[Course]].
+
+## Properties
+
+LearningResource defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface LearningResource {
+  $context?: 'schema.org'
+  $type: 'LearningResource'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LearningResource",
+  "name": "Example LearningResource",
+  "description": "An example of the LearningResource type",
+  "url": "https://example.com/learningresource",
+  "identifier": "example-learningresource-1"
+}
+```
+
+## Notes
+
+- LearningResource inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: Church
+title: Church
+description: A church.
+properties:
+
+subClasses:
+  - CatholicChurch
+parentClass: PlaceOfWorship
+---
+
+# Church
+
+A church.
+
+## Type Hierarchy
+
+Church is a type of PlaceOfWorship.
+
+### Direct Subtypes
+
+The following types directly inherit from Church:
+
+- CatholicChurch: A Catholic church.
+
+## Properties
+
+Church defines the following properties in addition to those inherited from PlaceOfWorship:
+
+
+
+## Usage Example
+
+```typescript
+interface Church {
+  $context?: 'schema.org'
+  $type: 'Church'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Church",
+  "name": "Example Church",
+  "description": "An example of the Church type",
+  "url": "https://example.com/church",
+  "identifier": "example-church-1"
+}
+```
+
+## Notes
+
+- Church inherits all properties from PlaceOfWorship
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

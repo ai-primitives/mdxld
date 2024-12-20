@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ContactPointOption
+title: ContactPointOption
+description: Enumerated options related to a ContactPoint.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# ContactPointOption
+
+Enumerated options related to a ContactPoint.
+
+## Type Hierarchy
+
+ContactPointOption is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from ContactPointOption.
+
+## Properties
+
+ContactPointOption defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface ContactPointOption {
+  $context?: 'schema.org'
+  $type: 'ContactPointOption'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ContactPointOption",
+  "name": "Example ContactPointOption",
+  "description": "An example of the ContactPointOption type",
+  "url": "https://example.com/contactpointoption",
+  "identifier": "example-contactpointoption-1"
+}
+```
+
+## Notes
+
+- ContactPointOption inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

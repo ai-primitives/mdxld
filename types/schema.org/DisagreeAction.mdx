@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DisagreeAction
+title: DisagreeAction
+description: The act of expressing a difference of opinion with the object. An agent disagrees to/about an object (a proposition, topic or theme) with participants.
+properties:
+
+subClasses:
+
+parentClass: ReactAction
+---
+
+# DisagreeAction
+
+The act of expressing a difference of opinion with the object. An agent disagrees to/about an object (a proposition, topic or theme) with participants.
+
+## Type Hierarchy
+
+DisagreeAction is a type of ReactAction.
+
+### Direct Subtypes
+
+No types directly inherit from DisagreeAction.
+
+## Properties
+
+DisagreeAction defines the following properties in addition to those inherited from ReactAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DisagreeAction {
+  $context?: 'schema.org'
+  $type: 'DisagreeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DisagreeAction",
+  "name": "Example DisagreeAction",
+  "description": "An example of the DisagreeAction type",
+  "url": "https://example.com/disagreeaction",
+  "identifier": "example-disagreeaction-1"
+}
+```
+
+## Notes
+
+- DisagreeAction inherits all properties from ReactAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

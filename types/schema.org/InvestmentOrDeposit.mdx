@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: InvestmentOrDeposit
+title: InvestmentOrDeposit
+description: A type of financial product that typically requires the client to transfer funds to a financial service in return for potential beneficial financial return.
+properties:
+
+subClasses:
+  - BrokerageAccount
+  - InvestmentFund
+parentClass: FinancialProduct
+---
+
+# InvestmentOrDeposit
+
+A type of financial product that typically requires the client to transfer funds to a financial service in return for potential beneficial financial return.
+
+## Type Hierarchy
+
+InvestmentOrDeposit is a type of FinancialProduct.
+
+### Direct Subtypes
+
+The following types directly inherit from InvestmentOrDeposit:
+
+- BrokerageAccount: An account that allows an investor to deposit funds and place investment orders with a licensed broker or brokerage firm.
+- InvestmentFund: A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.
+
+## Properties
+
+InvestmentOrDeposit defines the following properties in addition to those inherited from FinancialProduct:
+
+
+
+## Usage Example
+
+```typescript
+interface InvestmentOrDeposit {
+  $context?: 'schema.org'
+  $type: 'InvestmentOrDeposit'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InvestmentOrDeposit",
+  "name": "Example InvestmentOrDeposit",
+  "description": "An example of the InvestmentOrDeposit type",
+  "url": "https://example.com/investmentordeposit",
+  "identifier": "example-investmentordeposit-1"
+}
+```
+
+## Notes
+
+- InvestmentOrDeposit inherits all properties from FinancialProduct
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

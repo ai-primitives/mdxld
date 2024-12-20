@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DeliveryTimeSettings
+title: DeliveryTimeSettings
+description: A DeliveryTimeSettings represents re-usable pieces of shipping information, relating to timing. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished (and identified/referenced) by their different values for [[transitTimeLabel]].
+properties:
+
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# DeliveryTimeSettings
+
+A DeliveryTimeSettings represents re-usable pieces of shipping information, relating to timing. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished (and identified/referenced) by their different values for [[transitTimeLabel]].
+
+## Type Hierarchy
+
+DeliveryTimeSettings is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from DeliveryTimeSettings.
+
+## Properties
+
+DeliveryTimeSettings defines the following properties in addition to those inherited from StructuredValue:
+
+
+
+## Usage Example
+
+```typescript
+interface DeliveryTimeSettings {
+  $context?: 'schema.org'
+  $type: 'DeliveryTimeSettings'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DeliveryTimeSettings",
+  "name": "Example DeliveryTimeSettings",
+  "description": "An example of the DeliveryTimeSettings type",
+  "url": "https://example.com/deliverytimesettings",
+  "identifier": "example-deliverytimesettings-1"
+}
+```
+
+## Notes
+
+- DeliveryTimeSettings inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

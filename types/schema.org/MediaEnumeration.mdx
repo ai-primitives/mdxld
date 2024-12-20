@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: MediaEnumeration
+title: MediaEnumeration
+description: MediaEnumeration enumerations are lists of codes, labels etc. useful for describing media objects. They may be reflections of externally developed lists, or created at schema.org, or a combination.
+properties:
+
+subClasses:
+  - IPTCDigitalSourceEnumeration
+parentClass: Enumeration
+---
+
+# MediaEnumeration
+
+MediaEnumeration enumerations are lists of codes, labels etc. useful for describing media objects. They may be reflections of externally developed lists, or created at schema.org, or a combination.
+
+## Type Hierarchy
+
+MediaEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+The following types directly inherit from MediaEnumeration:
+
+- IPTCDigitalSourceEnumeration: <a href="https://www.iptc.org/">IPTC</a> "Digital Source" codes for use with the [[digitalSourceType]] property, providing information about the source for a digital media object.
+In general these codes are not declared here to be mutually exclusive, although some combinations would be contradictory if applied simultaneously, or might be considered mutually incompatible by upstream maintainers of the definitions. See the IPTC <a href="https://www.iptc.org/std/photometadata/documentation/userguide/">documentation</a>
+ for <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">detailed definitions</a> of all terms.
+
+## Properties
+
+MediaEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MediaEnumeration {
+  $context?: 'schema.org'
+  $type: 'MediaEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MediaEnumeration",
+  "name": "Example MediaEnumeration",
+  "description": "An example of the MediaEnumeration type",
+  "url": "https://example.com/mediaenumeration",
+  "identifier": "example-mediaenumeration-1"
+}
+```
+
+## Notes
+
+- MediaEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

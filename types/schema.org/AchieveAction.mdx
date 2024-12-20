@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: AchieveAction
+title: AchieveAction
+description: The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.
+properties:
+
+subClasses:
+  - LoseAction
+  - TieAction
+  - WinAction
+parentClass: Action
+---
+
+# AchieveAction
+
+The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.
+
+## Type Hierarchy
+
+AchieveAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from AchieveAction:
+
+- LoseAction: The act of being defeated in a competitive activity.
+- TieAction: The act of reaching a draw in a competitive activity.
+- WinAction: The act of achieving victory in a competitive activity.
+
+## Properties
+
+AchieveAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface AchieveAction {
+  $context?: 'schema.org'
+  $type: 'AchieveAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AchieveAction",
+  "name": "Example AchieveAction",
+  "description": "An example of the AchieveAction type",
+  "url": "https://example.com/achieveaction",
+  "identifier": "example-achieveaction-1"
+}
+```
+
+## Notes
+
+- AchieveAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

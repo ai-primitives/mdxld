@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Researcher
+title: Researcher
+description: Researchers.
+properties:
+
+subClasses:
+
+parentClass: Audience
+---
+
+# Researcher
+
+Researchers.
+
+## Type Hierarchy
+
+Researcher is a type of Audience.
+
+### Direct Subtypes
+
+No types directly inherit from Researcher.
+
+## Properties
+
+Researcher defines the following properties in addition to those inherited from Audience:
+
+
+
+## Usage Example
+
+```typescript
+interface Researcher {
+  $context?: 'schema.org'
+  $type: 'Researcher'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Researcher",
+  "name": "Example Researcher",
+  "description": "An example of the Researcher type",
+  "url": "https://example.com/researcher",
+  "identifier": "example-researcher-1"
+}
+```
+
+## Notes
+
+- Researcher inherits all properties from Audience
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

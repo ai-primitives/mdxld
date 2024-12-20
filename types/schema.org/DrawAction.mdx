@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DrawAction
+title: DrawAction
+description: The act of producing a visual/graphical representation of an object, typically with a pen/pencil and paper as instruments.
+properties:
+
+subClasses:
+
+parentClass: CreateAction
+---
+
+# DrawAction
+
+The act of producing a visual/graphical representation of an object, typically with a pen/pencil and paper as instruments.
+
+## Type Hierarchy
+
+DrawAction is a type of CreateAction.
+
+### Direct Subtypes
+
+No types directly inherit from DrawAction.
+
+## Properties
+
+DrawAction defines the following properties in addition to those inherited from CreateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DrawAction {
+  $context?: 'schema.org'
+  $type: 'DrawAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DrawAction",
+  "name": "Example DrawAction",
+  "description": "An example of the DrawAction type",
+  "url": "https://example.com/drawaction",
+  "identifier": "example-drawaction-1"
+}
+```
+
+## Notes
+
+- DrawAction inherits all properties from CreateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

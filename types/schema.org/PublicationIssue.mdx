@@ -1,0 +1,66 @@
+---
+$context: schema.org
+$type: PublicationIssue
+title: PublicationIssue
+description: A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+properties:
+  - issueNumber
+subClasses:
+  - ComicIssue
+parentClass: CreativeWork
+---
+
+# PublicationIssue
+
+A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+
+## Type Hierarchy
+
+PublicationIssue is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from PublicationIssue:
+
+- ComicIssue: Individual comic issues are serially published as
+    	part of a larger series. For the sake of consistency, even one-shot issues
+    	belong to a series comprised of a single issue. All comic issues can be
+    	uniquely identified by: the combination of the name and volume number of the
+    	series to which the issue belongs; the issue number; and the variant
+    	description of the issue (if any).
+
+## Properties
+
+PublicationIssue defines the following properties in addition to those inherited from CreativeWork:
+
+- issueNumber: Identifies the issue of publication; for example, "iii" or "2".
+
+## Usage Example
+
+```typescript
+interface PublicationIssue {
+  $context?: 'schema.org'
+  $type: 'PublicationIssue'
+  issueNumber?: number | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PublicationIssue",
+  "name": "Example PublicationIssue",
+  "description": "An example of the PublicationIssue type",
+  "url": "https://example.com/publicationissue",
+  "identifier": "example-publicationissue-1"
+}
+```
+
+## Notes
+
+- PublicationIssue inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

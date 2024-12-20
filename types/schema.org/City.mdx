@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: City
+title: City
+description: A city or town.
+properties:
+
+subClasses:
+
+parentClass: AdministrativeArea
+---
+
+# City
+
+A city or town.
+
+## Type Hierarchy
+
+City is a type of AdministrativeArea.
+
+### Direct Subtypes
+
+No types directly inherit from City.
+
+## Properties
+
+City defines the following properties in addition to those inherited from AdministrativeArea:
+
+
+
+## Usage Example
+
+```typescript
+interface City {
+  $context?: 'schema.org'
+  $type: 'City'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "City",
+  "name": "Example City",
+  "description": "An example of the City type",
+  "url": "https://example.com/city",
+  "identifier": "example-city-1"
+}
+```
+
+## Notes
+
+- City inherits all properties from AdministrativeArea
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

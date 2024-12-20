@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Season
+title: Season
+description: A media season, e.g. TV, radio, video game etc.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Season
+
+A media season, e.g. TV, radio, video game etc.
+
+## Type Hierarchy
+
+Season is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Season.
+
+## Properties
+
+Season defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Season {
+  $context?: 'schema.org'
+  $type: 'Season'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Season",
+  "name": "Example Season",
+  "description": "An example of the Season type",
+  "url": "https://example.com/season",
+  "identifier": "example-season-1"
+}
+```
+
+## Notes
+
+- Season inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

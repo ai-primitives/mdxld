@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TrainReservation
+title: TrainReservation
+description: A reservation for train travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+properties:
+
+subClasses:
+
+parentClass: Reservation
+---
+
+# TrainReservation
+
+A reservation for train travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+
+## Type Hierarchy
+
+TrainReservation is a type of Reservation.
+
+### Direct Subtypes
+
+No types directly inherit from TrainReservation.
+
+## Properties
+
+TrainReservation defines the following properties in addition to those inherited from Reservation:
+
+
+
+## Usage Example
+
+```typescript
+interface TrainReservation {
+  $context?: 'schema.org'
+  $type: 'TrainReservation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TrainReservation",
+  "name": "Example TrainReservation",
+  "description": "An example of the TrainReservation type",
+  "url": "https://example.com/trainreservation",
+  "identifier": "example-trainreservation-1"
+}
+```
+
+## Notes
+
+- TrainReservation inherits all properties from Reservation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

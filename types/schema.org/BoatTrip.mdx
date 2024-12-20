@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: BoatTrip
+title: BoatTrip
+description: A trip on a commercial ferry line.
+properties:
+  - arrivalBoatTerminal
+  - departureBoatTerminal
+subClasses:
+
+parentClass: Trip
+---
+
+# BoatTrip
+
+A trip on a commercial ferry line.
+
+## Type Hierarchy
+
+BoatTrip is a type of Trip.
+
+### Direct Subtypes
+
+No types directly inherit from BoatTrip.
+
+## Properties
+
+BoatTrip defines the following properties in addition to those inherited from Trip:
+
+- arrivalBoatTerminal: The terminal or port from which the boat arrives.
+- departureBoatTerminal: The terminal or port from which the boat departs.
+
+## Usage Example
+
+```typescript
+interface BoatTrip {
+  $context?: 'schema.org'
+  $type: 'BoatTrip'
+  arrivalBoatTerminal?: BoatTerminal
+  departureBoatTerminal?: BoatTerminal
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BoatTrip",
+  "name": "Example BoatTrip",
+  "description": "An example of the BoatTrip type",
+  "url": "https://example.com/boattrip",
+  "identifier": "example-boattrip-1"
+}
+```
+
+## Notes
+
+- BoatTrip inherits all properties from Trip
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

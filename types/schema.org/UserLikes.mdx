@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UserLikes
+title: UserLikes
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+
+subClasses:
+
+parentClass: UserInteraction
+---
+
+# UserLikes
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserLikes is a type of UserInteraction.
+
+### Direct Subtypes
+
+No types directly inherit from UserLikes.
+
+## Properties
+
+UserLikes defines the following properties in addition to those inherited from UserInteraction:
+
+
+
+## Usage Example
+
+```typescript
+interface UserLikes {
+  $context?: 'schema.org'
+  $type: 'UserLikes'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserLikes",
+  "name": "Example UserLikes",
+  "description": "An example of the UserLikes type",
+  "url": "https://example.com/userlikes",
+  "identifier": "example-userlikes-1"
+}
+```
+
+## Notes
+
+- UserLikes inherits all properties from UserInteraction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EndorseAction
+title: EndorseAction
+description: An agent approves/certifies/likes/supports/sanctions an object.
+properties:
+  - endorsee
+subClasses:
+
+parentClass: ReactAction
+---
+
+# EndorseAction
+
+An agent approves/certifies/likes/supports/sanctions an object.
+
+## Type Hierarchy
+
+EndorseAction is a type of ReactAction.
+
+### Direct Subtypes
+
+No types directly inherit from EndorseAction.
+
+## Properties
+
+EndorseAction defines the following properties in addition to those inherited from ReactAction:
+
+- endorsee: A sub property of participant. The person/organization being supported.
+
+## Usage Example
+
+```typescript
+interface EndorseAction {
+  $context?: 'schema.org'
+  $type: 'EndorseAction'
+  endorsee?: Organization | Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EndorseAction",
+  "name": "Example EndorseAction",
+  "description": "An example of the EndorseAction type",
+  "url": "https://example.com/endorseaction",
+  "identifier": "example-endorseaction-1"
+}
+```
+
+## Notes
+
+- EndorseAction inherits all properties from ReactAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

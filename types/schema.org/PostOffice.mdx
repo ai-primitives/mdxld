@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PostOffice
+title: PostOffice
+description: A post office.
+properties:
+
+subClasses:
+
+parentClass: GovernmentOffice
+---
+
+# PostOffice
+
+A post office.
+
+## Type Hierarchy
+
+PostOffice is a type of GovernmentOffice.
+
+### Direct Subtypes
+
+No types directly inherit from PostOffice.
+
+## Properties
+
+PostOffice defines the following properties in addition to those inherited from GovernmentOffice:
+
+
+
+## Usage Example
+
+```typescript
+interface PostOffice {
+  $context?: 'schema.org'
+  $type: 'PostOffice'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PostOffice",
+  "name": "Example PostOffice",
+  "description": "An example of the PostOffice type",
+  "url": "https://example.com/postoffice",
+  "identifier": "example-postoffice-1"
+}
+```
+
+## Notes
+
+- PostOffice inherits all properties from GovernmentOffice
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ResearchProject
+title: ResearchProject
+description: A Research project.
+properties:
+
+subClasses:
+
+parentClass: Project
+---
+
+# ResearchProject
+
+A Research project.
+
+## Type Hierarchy
+
+ResearchProject is a type of Project.
+
+### Direct Subtypes
+
+No types directly inherit from ResearchProject.
+
+## Properties
+
+ResearchProject defines the following properties in addition to those inherited from Project:
+
+
+
+## Usage Example
+
+```typescript
+interface ResearchProject {
+  $context?: 'schema.org'
+  $type: 'ResearchProject'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ResearchProject",
+  "name": "Example ResearchProject",
+  "description": "An example of the ResearchProject type",
+  "url": "https://example.com/researchproject",
+  "identifier": "example-researchproject-1"
+}
+```
+
+## Notes
+
+- ResearchProject inherits all properties from Project
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

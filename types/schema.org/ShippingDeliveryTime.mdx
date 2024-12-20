@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: ShippingDeliveryTime
+title: ShippingDeliveryTime
+description: ShippingDeliveryTime provides various pieces of information about delivery times for shipping.
+properties:
+  - businessDays
+  - cutoffTime
+  - handlingTime
+  - transitTime
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# ShippingDeliveryTime
+
+ShippingDeliveryTime provides various pieces of information about delivery times for shipping.
+
+## Type Hierarchy
+
+ShippingDeliveryTime is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from ShippingDeliveryTime.
+
+## Properties
+
+ShippingDeliveryTime defines the following properties in addition to those inherited from StructuredValue:
+
+- businessDays: Days of the week when the merchant typically operates, indicated via opening hours markup.
+- cutoffTime: Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day. For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
+- handlingTime: The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup. Typical properties: minValue, maxValue, unitCode (d for DAY).  This is by common convention assumed to mean business days (if a unitCode is used, coded as "d"), i.e. only counting days when the business normally operates.
+- transitTime: The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue, unitCode (d for DAY).
+
+## Usage Example
+
+```typescript
+interface ShippingDeliveryTime {
+  $context?: 'schema.org'
+  $type: 'ShippingDeliveryTime'
+  businessDays?: OpeningHoursSpecification
+  cutoffTime?: string
+  handlingTime?: QuantitativeValue
+  transitTime?: QuantitativeValue
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ShippingDeliveryTime",
+  "name": "Example ShippingDeliveryTime",
+  "description": "An example of the ShippingDeliveryTime type",
+  "url": "https://example.com/shippingdeliverytime",
+  "identifier": "example-shippingdeliverytime-1"
+}
+```
+
+## Notes
+
+- ShippingDeliveryTime inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

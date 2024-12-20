@@ -1,0 +1,82 @@
+---
+$context: schema.org
+$type: QualitativeValue
+title: QualitativeValue
+description: A predefined value for a product characteristic, e.g. the power cord plug type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
+properties:
+  - equal
+  - greater
+  - greaterOrEqual
+  - lesser
+  - lesserOrEqual
+  - nonEqual
+subClasses:
+  - BedType
+  - DriveWheelConfigurationValue
+  - SizeSpecification
+  - SteeringPositionValue
+parentClass: Enumeration
+---
+
+# QualitativeValue
+
+A predefined value for a product characteristic, e.g. the power cord plug type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
+
+## Type Hierarchy
+
+QualitativeValue is a type of Enumeration.
+
+### Direct Subtypes
+
+The following types directly inherit from QualitativeValue:
+
+- BedType: A type of bed. This is used for indicating the bed or beds available in an accommodation.
+- DriveWheelConfigurationValue: A value indicating which roadwheels will receive torque.
+- SizeSpecification: Size related properties of a product, typically a size code ([[name]]) and optionally a [[sizeSystem]], [[sizeGroup]], and product measurements ([[hasMeasurement]]). In addition, the intended audience can be defined through [[suggestedAge]], [[suggestedGender]], and suggested body measurements ([[suggestedMeasurement]]).
+- SteeringPositionValue: A value indicating a steering position.
+
+## Properties
+
+QualitativeValue defines the following properties in addition to those inherited from Enumeration:
+
+- equal: This ordering relation for qualitative values indicates that the subject is equal to the object.
+- greater: This ordering relation for qualitative values indicates that the subject is greater than the object.
+- greaterOrEqual: This ordering relation for qualitative values indicates that the subject is greater than or equal to the object.
+- lesser: This ordering relation for qualitative values indicates that the subject is lesser than the object.
+- lesserOrEqual: This ordering relation for qualitative values indicates that the subject is lesser than or equal to the object.
+- nonEqual: This ordering relation for qualitative values indicates that the subject is not equal to the object.
+
+## Usage Example
+
+```typescript
+interface QualitativeValue {
+  $context?: 'schema.org'
+  $type: 'QualitativeValue'
+  equal?: QualitativeValue
+  greater?: QualitativeValue
+  greaterOrEqual?: QualitativeValue
+  lesser?: QualitativeValue
+  lesserOrEqual?: QualitativeValue
+  nonEqual?: QualitativeValue
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "QualitativeValue",
+  "name": "Example QualitativeValue",
+  "description": "An example of the QualitativeValue type",
+  "url": "https://example.com/qualitativevalue",
+  "identifier": "example-qualitativevalue-1"
+}
+```
+
+## Notes
+
+- QualitativeValue inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

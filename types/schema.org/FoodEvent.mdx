@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: FoodEvent
+title: FoodEvent
+description: Event type: Food event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# FoodEvent
+
+Event type: Food event.
+
+## Type Hierarchy
+
+FoodEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from FoodEvent.
+
+## Properties
+
+FoodEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface FoodEvent {
+  $context?: 'schema.org'
+  $type: 'FoodEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FoodEvent",
+  "name": "Example FoodEvent",
+  "description": "An example of the FoodEvent type",
+  "url": "https://example.com/foodevent",
+  "identifier": "example-foodevent-1"
+}
+```
+
+## Notes
+
+- FoodEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

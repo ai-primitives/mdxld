@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Manuscript
+title: Manuscript
+description: A book, document, or piece of music written by hand rather than typed or printed.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Manuscript
+
+A book, document, or piece of music written by hand rather than typed or printed.
+
+## Type Hierarchy
+
+Manuscript is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Manuscript.
+
+## Properties
+
+Manuscript defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Manuscript {
+  $context?: 'schema.org'
+  $type: 'Manuscript'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Manuscript",
+  "name": "Example Manuscript",
+  "description": "An example of the Manuscript type",
+  "url": "https://example.com/manuscript",
+  "identifier": "example-manuscript-1"
+}
+```
+
+## Notes
+
+- Manuscript inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SearchRescueOrganization
+title: SearchRescueOrganization
+description: A Search and Rescue organization of some kind.
+properties:
+
+subClasses:
+
+parentClass: Organization
+---
+
+# SearchRescueOrganization
+
+A Search and Rescue organization of some kind.
+
+## Type Hierarchy
+
+SearchRescueOrganization is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from SearchRescueOrganization.
+
+## Properties
+
+SearchRescueOrganization defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface SearchRescueOrganization {
+  $context?: 'schema.org'
+  $type: 'SearchRescueOrganization'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SearchRescueOrganization",
+  "name": "Example SearchRescueOrganization",
+  "description": "An example of the SearchRescueOrganization type",
+  "url": "https://example.com/searchrescueorganization",
+  "identifier": "example-searchrescueorganization-1"
+}
+```
+
+## Notes
+
+- SearchRescueOrganization inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

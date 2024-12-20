@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TVEpisode
+title: TVEpisode
+description: A TV episode which can be part of a series or season.
+properties:
+
+subClasses:
+
+parentClass: Episode
+---
+
+# TVEpisode
+
+A TV episode which can be part of a series or season.
+
+## Type Hierarchy
+
+TVEpisode is a type of Episode.
+
+### Direct Subtypes
+
+No types directly inherit from TVEpisode.
+
+## Properties
+
+TVEpisode defines the following properties in addition to those inherited from Episode:
+
+
+
+## Usage Example
+
+```typescript
+interface TVEpisode {
+  $context?: 'schema.org'
+  $type: 'TVEpisode'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TVEpisode",
+  "name": "Example TVEpisode",
+  "description": "An example of the TVEpisode type",
+  "url": "https://example.com/tvepisode",
+  "identifier": "example-tvepisode-1"
+}
+```
+
+## Notes
+
+- TVEpisode inherits all properties from Episode
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

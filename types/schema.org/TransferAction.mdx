@@ -1,0 +1,79 @@
+---
+$context: schema.org
+$type: TransferAction
+title: TransferAction
+description: The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.
+properties:
+
+subClasses:
+  - BorrowAction
+  - DonateAction
+  - DownloadAction
+  - GiveAction
+  - LendAction
+  - MoneyTransfer
+  - ReceiveAction
+  - ReturnAction
+  - SendAction
+  - TakeAction
+parentClass: Action
+---
+
+# TransferAction
+
+The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.
+
+## Type Hierarchy
+
+TransferAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from TransferAction:
+
+- BorrowAction: The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.\n\nRelated actions:\n\n* [[LendAction]]: Reciprocal of BorrowAction.
+- DonateAction: The act of providing goods, services, or money without compensation, often for philanthropic reasons.
+- DownloadAction: The act of downloading an object.
+- GiveAction: The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\n\nRelated actions:\n\n* [[TakeAction]]: Reciprocal of GiveAction.\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you).
+- LendAction: The act of providing an object under an agreement that it will be returned at a later date. Reciprocal of BorrowAction.\n\nRelated actions:\n\n* [[BorrowAction]]: Reciprocal of LendAction.
+- MoneyTransfer: The act of transferring money from one place to another place. This may occur electronically or physically.
+- ReceiveAction: The act of physically/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\n\nRelated actions:\n\n* [[SendAction]]: The reciprocal of ReceiveAction.\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transferred (e.g. I can receive a package, but it does not mean the package is now mine).
+- ReturnAction: The act of returning to the origin that which was previously received (concrete objects) or taken (ownership).
+- SendAction: The act of physically/electronically dispatching an object for transfer from an origin to a destination. Related actions:\n\n* [[ReceiveAction]]: The reciprocal of SendAction.\n* [[GiveAction]]: Unlike GiveAction, SendAction does not imply the transfer of ownership (e.g. I can send you my laptop, but I'm not necessarily giving it to you).
+- TakeAction: The act of gaining ownership of an object from an origin. Reciprocal of GiveAction.\n\nRelated actions:\n\n* [[GiveAction]]: The reciprocal of TakeAction.\n* [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership has been transferred.
+
+## Properties
+
+TransferAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface TransferAction {
+  $context?: 'schema.org'
+  $type: 'TransferAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TransferAction",
+  "name": "Example TransferAction",
+  "description": "An example of the TransferAction type",
+  "url": "https://example.com/transferaction",
+  "identifier": "example-transferaction-1"
+}
+```
+
+## Notes
+
+- TransferAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

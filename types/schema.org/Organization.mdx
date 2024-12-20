@@ -1,0 +1,139 @@
+---
+$context: schema.org
+$type: Organization
+title: Organization
+description: An organization such as a school, NGO, corporation, club, etc.
+properties:
+  - department
+  - dissolutionDate
+  - employee
+  - employees
+  - founder
+  - founders
+  - foundingDate
+  - foundingLocation
+  - hasMemberProgram
+  - iso6523Code
+  - legalName
+  - leiCode
+  - nonprofitStatus
+  - parentOrganization
+  - subOrganization
+subClasses:
+  - Airline
+  - Consortium
+  - Corporation
+  - FundingScheme
+  - GovernmentOrganization
+  - LibrarySystem
+  - MedicalOrganization
+  - NGO
+  - NewsMediaOrganization
+  - OnlineBusiness
+  - PerformingGroup
+  - PoliticalParty
+  - Project
+  - ResearchOrganization
+  - SearchRescueOrganization
+  - SportsOrganization
+  - WorkersUnion
+parentClass: Thing
+---
+
+# Organization
+
+An organization such as a school, NGO, corporation, club, etc.
+
+## Type Hierarchy
+
+Organization is a type of Thing.
+
+### Direct Subtypes
+
+The following types directly inherit from Organization:
+
+- Airline: An organization that provides flights for passengers.
+- Consortium: A Consortium is a membership [[Organization]] whose members are typically Organizations.
+- Corporation: Organization: A business corporation.
+- FundingScheme: A FundingScheme combines organizational, project and policy aspects of grant-based funding
+    that sets guidelines, principles and mechanisms to support other kinds of projects and activities.
+    Funding is typically organized via [[Grant]] funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - [[FundingAgency]]s such as ERC, REA, ...
+- GovernmentOrganization: A governmental organization or agency.
+- LibrarySystem: A [[LibrarySystem]] is a collaborative system amongst several libraries.
+- MedicalOrganization: A medical organization (physical or not), such as hospital, institution or clinic.
+- NewsMediaOrganization: A News/Media organization such as a newspaper or TV station.
+- NGO: Organization: Non-governmental Organization.
+- OnlineBusiness: A particular online business, either standalone or the online part of a broader organization. Examples include an eCommerce site, an online travel booking site, an online learning site, an online logistics and shipping provider, an online (virtual) doctor, etc.
+- PerformingGroup: A performance group, such as a band, an orchestra, or a circus.
+- PoliticalParty: Organization: Political Party.
+- Project: An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim.
+Use properties from [[Organization]], [[subOrganization]]/[[parentOrganization]] to indicate project sub-structures. 
+   
+- ResearchOrganization: A Research Organization (e.g. scientific institute, research company).
+- SearchRescueOrganization: A Search and Rescue organization of some kind.
+- SportsOrganization: Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations.
+- WorkersUnion: A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.
+
+## Properties
+
+Organization defines the following properties in addition to those inherited from Thing:
+
+- department: A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.
+- dissolutionDate: The date that this organization was dissolved.
+- employee: Someone working for this organization.
+- employees: People working for this organization.
+- founder: A person or organization who founded this organization.
+- founders: A person who founded this organization.
+- foundingDate: The date that this organization was founded.
+- foundingLocation: The place where the Organization was founded.
+- hasMemberProgram: MemberProgram offered by an Organization, for example an eCommerce merchant or an airline.
+- iso6523Code: An organization identifier as defined in [ISO 6523(-1)](https://en.wikipedia.org/wiki/ISO/IEC_6523). The identifier should be in the `XXXX:YYYYYY:ZZZ` or `XXXX:YYYYYY`format. Where `XXXX` is a 4 digit _ICD_ (International Code Designator), `YYYYYY` is an _OID_ (Organization Identifier) with all formatting characters (dots, dashes, spaces) removed with a maximal length of 35 characters, and `ZZZ` is an optional OPI (Organization Part Identifier) with a maximum length of 35 characters. The various components (ICD, OID, OPI) are joined with a colon character (ASCII `0x3a`). Note that many existing organization identifiers defined as attributes like [leiCode](https://schema.org/leiCode) (`0199`), [duns](https://schema.org/duns) (`0060`) or [GLN](https://schema.org/globalLocationNumber) (`0088`) can be expressed using ISO-6523. If possible, ISO-6523 codes should be preferred to populating [vatID](https://schema.org/vatID) or [taxID](https://schema.org/taxID), as ISO identifiers are less ambiguous.
+- legalName: The official name of the organization, e.g. the registered company name.
+- leiCode: An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.
+- nonprofitStatus: nonprofitStatus indicates the legal status of a non-profit organization in its primary place of business.
+- parentOrganization: The larger organization that this organization is a [[subOrganization]] of, if any.
+- subOrganization: A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.
+
+## Usage Example
+
+```typescript
+interface Organization {
+  $context?: 'schema.org'
+  $type: 'Organization'
+  department?: Organization
+  dissolutionDate?: string
+  employee?: Person
+  employees?: Person
+  founder?: Organization | Person
+  founders?: Person
+  foundingDate?: string
+  foundingLocation?: Place
+  hasMemberProgram?: MemberProgram
+  iso6523Code?: string
+  legalName?: string
+  leiCode?: string
+  nonprofitStatus?: NonprofitType
+  parentOrganization?: Organization
+  subOrganization?: Organization
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Organization",
+  "name": "Example Organization",
+  "description": "An example of the Organization type",
+  "url": "https://example.com/organization",
+  "identifier": "example-organization-1"
+}
+```
+
+## Notes
+
+- Organization inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

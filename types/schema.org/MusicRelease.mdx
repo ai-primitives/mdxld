@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: MusicRelease
+title: MusicRelease
+description: A MusicRelease is a specific release of a music album.
+properties:
+  - catalogNumber
+  - creditedTo
+  - musicReleaseFormat
+  - recordLabel
+  - releaseOf
+subClasses:
+
+parentClass: MusicPlaylist
+---
+
+# MusicRelease
+
+A MusicRelease is a specific release of a music album.
+
+## Type Hierarchy
+
+MusicRelease is a type of MusicPlaylist.
+
+### Direct Subtypes
+
+No types directly inherit from MusicRelease.
+
+## Properties
+
+MusicRelease defines the following properties in addition to those inherited from MusicPlaylist:
+
+- catalogNumber: The catalog number for the release.
+- creditedTo: The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.
+- musicReleaseFormat: Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
+- recordLabel: The label that issued the release.
+- releaseOf: The album this is a release of.
+
+## Usage Example
+
+```typescript
+interface MusicRelease {
+  $context?: 'schema.org'
+  $type: 'MusicRelease'
+  catalogNumber?: string
+  creditedTo?: Organization | Person
+  musicReleaseFormat?: MusicReleaseFormatType
+  recordLabel?: Organization
+  releaseOf?: MusicAlbum
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicRelease",
+  "name": "Example MusicRelease",
+  "description": "An example of the MusicRelease type",
+  "url": "https://example.com/musicrelease",
+  "identifier": "example-musicrelease-1"
+}
+```
+
+## Notes
+
+- MusicRelease inherits all properties from MusicPlaylist
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

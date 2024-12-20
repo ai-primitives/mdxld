@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: NewsMediaOrganization
+title: NewsMediaOrganization
+description: A News/Media organization such as a newspaper or TV station.
+properties:
+  - masthead
+  - missionCoveragePrioritiesPolicy
+  - noBylinesPolicy
+  - verificationFactCheckingPolicy
+subClasses:
+
+parentClass: Organization
+---
+
+# NewsMediaOrganization
+
+A News/Media organization such as a newspaper or TV station.
+
+## Type Hierarchy
+
+NewsMediaOrganization is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from NewsMediaOrganization.
+
+## Properties
+
+NewsMediaOrganization defines the following properties in addition to those inherited from Organization:
+
+- masthead: For a [[NewsMediaOrganization]], a link to the masthead page or a page listing top editorial management.
+- missionCoveragePrioritiesPolicy: For a [[NewsMediaOrganization]], a statement on coverage priorities, including any public agenda or stance on issues.
+- noBylinesPolicy: For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement explaining when authors of articles are not named in bylines.
+- verificationFactCheckingPolicy: Disclosure about verification and fact-checking processes for a [[NewsMediaOrganization]] or other fact-checking [[Organization]].
+
+## Usage Example
+
+```typescript
+interface NewsMediaOrganization {
+  $context?: 'schema.org'
+  $type: 'NewsMediaOrganization'
+  masthead?: CreativeWork | string
+  missionCoveragePrioritiesPolicy?: CreativeWork | string
+  noBylinesPolicy?: CreativeWork | string
+  verificationFactCheckingPolicy?: CreativeWork | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "NewsMediaOrganization",
+  "name": "Example NewsMediaOrganization",
+  "description": "An example of the NewsMediaOrganization type",
+  "url": "https://example.com/newsmediaorganization",
+  "identifier": "example-newsmediaorganization-1"
+}
+```
+
+## Notes
+
+- NewsMediaOrganization inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

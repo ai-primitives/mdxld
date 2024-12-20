@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LakeBodyOfWater
+title: LakeBodyOfWater
+description: A lake (for example, Lake Pontrachain).
+properties:
+
+subClasses:
+
+parentClass: BodyOfWater
+---
+
+# LakeBodyOfWater
+
+A lake (for example, Lake Pontrachain).
+
+## Type Hierarchy
+
+LakeBodyOfWater is a type of BodyOfWater.
+
+### Direct Subtypes
+
+No types directly inherit from LakeBodyOfWater.
+
+## Properties
+
+LakeBodyOfWater defines the following properties in addition to those inherited from BodyOfWater:
+
+
+
+## Usage Example
+
+```typescript
+interface LakeBodyOfWater {
+  $context?: 'schema.org'
+  $type: 'LakeBodyOfWater'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LakeBodyOfWater",
+  "name": "Example LakeBodyOfWater",
+  "description": "An example of the LakeBodyOfWater type",
+  "url": "https://example.com/lakebodyofwater",
+  "identifier": "example-lakebodyofwater-1"
+}
+```
+
+## Notes
+
+- LakeBodyOfWater inherits all properties from BodyOfWater
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PhysicalTherapy
+title: PhysicalTherapy
+description: A process of progressive physical care and rehabilitation aimed at improving a health condition.
+properties:
+
+subClasses:
+
+parentClass: MedicalTherapy
+---
+
+# PhysicalTherapy
+
+A process of progressive physical care and rehabilitation aimed at improving a health condition.
+
+## Type Hierarchy
+
+PhysicalTherapy is a type of MedicalTherapy.
+
+### Direct Subtypes
+
+No types directly inherit from PhysicalTherapy.
+
+## Properties
+
+PhysicalTherapy defines the following properties in addition to those inherited from MedicalTherapy:
+
+
+
+## Usage Example
+
+```typescript
+interface PhysicalTherapy {
+  $context?: 'schema.org'
+  $type: 'PhysicalTherapy'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PhysicalTherapy",
+  "name": "Example PhysicalTherapy",
+  "description": "An example of the PhysicalTherapy type",
+  "url": "https://example.com/physicaltherapy",
+  "identifier": "example-physicaltherapy-1"
+}
+```
+
+## Notes
+
+- PhysicalTherapy inherits all properties from MedicalTherapy
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

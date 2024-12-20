@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalTrialDesign
+title: MedicalTrialDesign
+description: Design models for medical trials. Enumerated type.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# MedicalTrialDesign
+
+Design models for medical trials. Enumerated type.
+
+## Type Hierarchy
+
+MedicalTrialDesign is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalTrialDesign.
+
+## Properties
+
+MedicalTrialDesign defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalTrialDesign {
+  $context?: 'schema.org'
+  $type: 'MedicalTrialDesign'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalTrialDesign",
+  "name": "Example MedicalTrialDesign",
+  "description": "An example of the MedicalTrialDesign type",
+  "url": "https://example.com/medicaltrialdesign",
+  "identifier": "example-medicaltrialdesign-1"
+}
+```
+
+## Notes
+
+- MedicalTrialDesign inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

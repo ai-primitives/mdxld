@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AgreeAction
+title: AgreeAction
+description: The act of expressing a consistency of opinion with the object. An agent agrees to/about an object (a proposition, topic or theme) with participants.
+properties:
+
+subClasses:
+
+parentClass: ReactAction
+---
+
+# AgreeAction
+
+The act of expressing a consistency of opinion with the object. An agent agrees to/about an object (a proposition, topic or theme) with participants.
+
+## Type Hierarchy
+
+AgreeAction is a type of ReactAction.
+
+### Direct Subtypes
+
+No types directly inherit from AgreeAction.
+
+## Properties
+
+AgreeAction defines the following properties in addition to those inherited from ReactAction:
+
+
+
+## Usage Example
+
+```typescript
+interface AgreeAction {
+  $context?: 'schema.org'
+  $type: 'AgreeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AgreeAction",
+  "name": "Example AgreeAction",
+  "description": "An example of the AgreeAction type",
+  "url": "https://example.com/agreeaction",
+  "identifier": "example-agreeaction-1"
+}
+```
+
+## Notes
+
+- AgreeAction inherits all properties from ReactAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

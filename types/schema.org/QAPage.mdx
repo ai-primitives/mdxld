@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: QAPage
+title: QAPage
+description: A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in a question answering site or documenting Frequently Asked Questions (FAQs).
+properties:
+
+subClasses:
+
+parentClass: WebPage
+---
+
+# QAPage
+
+A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in a question answering site or documenting Frequently Asked Questions (FAQs).
+
+## Type Hierarchy
+
+QAPage is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from QAPage.
+
+## Properties
+
+QAPage defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface QAPage {
+  $context?: 'schema.org'
+  $type: 'QAPage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "QAPage",
+  "name": "Example QAPage",
+  "description": "An example of the QAPage type",
+  "url": "https://example.com/qapage",
+  "identifier": "example-qapage-1"
+}
+```
+
+## Notes
+
+- QAPage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

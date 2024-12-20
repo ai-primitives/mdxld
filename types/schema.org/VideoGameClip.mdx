@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: VideoGameClip
+title: VideoGameClip
+description: A short segment/part of a video game.
+properties:
+
+subClasses:
+
+parentClass: Clip
+---
+
+# VideoGameClip
+
+A short segment/part of a video game.
+
+## Type Hierarchy
+
+VideoGameClip is a type of Clip.
+
+### Direct Subtypes
+
+No types directly inherit from VideoGameClip.
+
+## Properties
+
+VideoGameClip defines the following properties in addition to those inherited from Clip:
+
+
+
+## Usage Example
+
+```typescript
+interface VideoGameClip {
+  $context?: 'schema.org'
+  $type: 'VideoGameClip'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VideoGameClip",
+  "name": "Example VideoGameClip",
+  "description": "An example of the VideoGameClip type",
+  "url": "https://example.com/videogameclip",
+  "identifier": "example-videogameclip-1"
+}
+```
+
+## Notes
+
+- VideoGameClip inherits all properties from Clip
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: LiveBlogPosting
+title: LiveBlogPosting
+description: A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.
+properties:
+  - coverageEndTime
+  - coverageStartTime
+  - liveBlogUpdate
+subClasses:
+
+parentClass: BlogPosting
+---
+
+# LiveBlogPosting
+
+A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.
+
+## Type Hierarchy
+
+LiveBlogPosting is a type of BlogPosting.
+
+### Direct Subtypes
+
+No types directly inherit from LiveBlogPosting.
+
+## Properties
+
+LiveBlogPosting defines the following properties in addition to those inherited from BlogPosting:
+
+- coverageEndTime: The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
+- coverageStartTime: The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.
+- liveBlogUpdate: An update to the LiveBlog.
+
+## Usage Example
+
+```typescript
+interface LiveBlogPosting {
+  $context?: 'schema.org'
+  $type: 'LiveBlogPosting'
+  coverageEndTime?: string
+  coverageStartTime?: string
+  liveBlogUpdate?: BlogPosting
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LiveBlogPosting",
+  "name": "Example LiveBlogPosting",
+  "description": "An example of the LiveBlogPosting type",
+  "url": "https://example.com/liveblogposting",
+  "identifier": "example-liveblogposting-1"
+}
+```
+
+## Notes
+
+- LiveBlogPosting inherits all properties from BlogPosting
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

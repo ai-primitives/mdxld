@@ -1,0 +1,83 @@
+---
+$context: schema.org
+$type: MusicComposition
+title: MusicComposition
+description: A musical composition.
+properties:
+  - firstPerformance
+  - includedComposition
+  - iswcCode
+  - lyricist
+  - lyrics
+  - musicArrangement
+  - musicCompositionForm
+  - musicalKey
+  - recordedAs
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# MusicComposition
+
+A musical composition.
+
+## Type Hierarchy
+
+MusicComposition is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from MusicComposition.
+
+## Properties
+
+MusicComposition defines the following properties in addition to those inherited from CreativeWork:
+
+- firstPerformance: The date and place the work was first performed.
+- includedComposition: Smaller compositions included in this work (e.g. a movement in a symphony).
+- iswcCode: The International Standard Musical Work Code for the composition.
+- lyricist: The person who wrote the words.
+- lyrics: The words in the song.
+- musicalKey: The key, mode, or scale this composition uses.
+- musicArrangement: An arrangement derived from the composition.
+- musicCompositionForm: The type of composition (e.g. overture, sonata, symphony, etc.).
+- recordedAs: An audio recording of the work.
+
+## Usage Example
+
+```typescript
+interface MusicComposition {
+  $context?: 'schema.org'
+  $type: 'MusicComposition'
+  firstPerformance?: Event
+  includedComposition?: MusicComposition
+  iswcCode?: string
+  lyricist?: Person
+  lyrics?: CreativeWork
+  musicalKey?: string
+  musicArrangement?: MusicComposition
+  musicCompositionForm?: string
+  recordedAs?: MusicRecording
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicComposition",
+  "name": "Example MusicComposition",
+  "description": "An example of the MusicComposition type",
+  "url": "https://example.com/musiccomposition",
+  "identifier": "example-musiccomposition-1"
+}
+```
+
+## Notes
+
+- MusicComposition inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

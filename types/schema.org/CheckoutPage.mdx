@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CheckoutPage
+title: CheckoutPage
+description: Web page type: Checkout page.
+properties:
+
+subClasses:
+
+parentClass: WebPage
+---
+
+# CheckoutPage
+
+Web page type: Checkout page.
+
+## Type Hierarchy
+
+CheckoutPage is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from CheckoutPage.
+
+## Properties
+
+CheckoutPage defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface CheckoutPage {
+  $context?: 'schema.org'
+  $type: 'CheckoutPage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CheckoutPage",
+  "name": "Example CheckoutPage",
+  "description": "An example of the CheckoutPage type",
+  "url": "https://example.com/checkoutpage",
+  "identifier": "example-checkoutpage-1"
+}
+```
+
+## Notes
+
+- CheckoutPage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

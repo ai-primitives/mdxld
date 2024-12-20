@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: Vein
+title: Vein
+description: A type of blood vessel that specifically carries blood to the heart.
+properties:
+  - drainsTo
+  - tributary
+subClasses:
+
+parentClass: Vessel
+---
+
+# Vein
+
+A type of blood vessel that specifically carries blood to the heart.
+
+## Type Hierarchy
+
+Vein is a type of Vessel.
+
+### Direct Subtypes
+
+No types directly inherit from Vein.
+
+## Properties
+
+Vein defines the following properties in addition to those inherited from Vessel:
+
+- drainsTo: The vasculature that the vein drains into.
+- tributary: The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.
+
+## Usage Example
+
+```typescript
+interface Vein {
+  $context?: 'schema.org'
+  $type: 'Vein'
+  drainsTo?: Vessel
+  tributary?: AnatomicalStructure
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Vein",
+  "name": "Example Vein",
+  "description": "An example of the Vein type",
+  "url": "https://example.com/vein",
+  "identifier": "example-vein-1"
+}
+```
+
+## Notes
+
+- Vein inherits all properties from Vessel
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

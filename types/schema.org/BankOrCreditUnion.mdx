@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BankOrCreditUnion
+title: BankOrCreditUnion
+description: Bank or credit union.
+properties:
+
+subClasses:
+
+parentClass: FinancialService
+---
+
+# BankOrCreditUnion
+
+Bank or credit union.
+
+## Type Hierarchy
+
+BankOrCreditUnion is a type of FinancialService.
+
+### Direct Subtypes
+
+No types directly inherit from BankOrCreditUnion.
+
+## Properties
+
+BankOrCreditUnion defines the following properties in addition to those inherited from FinancialService:
+
+
+
+## Usage Example
+
+```typescript
+interface BankOrCreditUnion {
+  $context?: 'schema.org'
+  $type: 'BankOrCreditUnion'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BankOrCreditUnion",
+  "name": "Example BankOrCreditUnion",
+  "description": "An example of the BankOrCreditUnion type",
+  "url": "https://example.com/bankorcreditunion",
+  "identifier": "example-bankorcreditunion-1"
+}
+```
+
+## Notes
+
+- BankOrCreditUnion inherits all properties from FinancialService
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

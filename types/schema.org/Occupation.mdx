@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Occupation
+title: Occupation
+description: A profession, may involve prolonged training and/or a formal qualification.
+properties:
+  - occupationLocation
+subClasses:
+
+parentClass: Intangible
+---
+
+# Occupation
+
+A profession, may involve prolonged training and/or a formal qualification.
+
+## Type Hierarchy
+
+Occupation is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Occupation.
+
+## Properties
+
+Occupation defines the following properties in addition to those inherited from Intangible:
+
+- occupationLocation:  The region/country for which this occupational description is appropriate. Note that educational requirements and qualifications can vary between jurisdictions.
+
+## Usage Example
+
+```typescript
+interface Occupation {
+  $context?: 'schema.org'
+  $type: 'Occupation'
+  occupationLocation?: AdministrativeArea
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Occupation",
+  "name": "Example Occupation",
+  "description": "An example of the Occupation type",
+  "url": "https://example.com/occupation",
+  "identifier": "example-occupation-1"
+}
+```
+
+## Notes
+
+- Occupation inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

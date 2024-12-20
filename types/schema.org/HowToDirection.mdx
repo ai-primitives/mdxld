@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: HowToDirection
+title: HowToDirection
+description: A direction indicating a single action to do in the instructions for how to achieve a result.
+properties:
+  - afterMedia
+  - beforeMedia
+  - duringMedia
+subClasses:
+
+
+---
+
+# HowToDirection
+
+A direction indicating a single action to do in the instructions for how to achieve a result.
+
+## Type Hierarchy
+
+HowToDirection is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from HowToDirection.
+
+## Properties
+
+HowToDirection defines the following properties in addition to those inherited from Thing:
+
+- afterMedia: A media object representing the circumstances after performing this direction.
+- beforeMedia: A media object representing the circumstances before performing this direction.
+- duringMedia: A media object representing the circumstances while performing this direction.
+
+## Usage Example
+
+```typescript
+interface HowToDirection {
+  $context?: 'schema.org'
+  $type: 'HowToDirection'
+  afterMedia?: MediaObject | string
+  beforeMedia?: MediaObject | string
+  duringMedia?: MediaObject | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HowToDirection",
+  "name": "Example HowToDirection",
+  "description": "An example of the HowToDirection type",
+  "url": "https://example.com/howtodirection",
+  "identifier": "example-howtodirection-1"
+}
+```
+
+## Notes
+
+- HowToDirection inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

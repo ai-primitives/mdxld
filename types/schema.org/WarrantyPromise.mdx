@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: WarrantyPromise
+title: WarrantyPromise
+description: A structured value representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.
+properties:
+  - durationOfWarranty
+  - warrantyScope
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# WarrantyPromise
+
+A structured value representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.
+
+## Type Hierarchy
+
+WarrantyPromise is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from WarrantyPromise.
+
+## Properties
+
+WarrantyPromise defines the following properties in addition to those inherited from StructuredValue:
+
+- durationOfWarranty: The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
+- warrantyScope: The scope of the warranty promise.
+
+## Usage Example
+
+```typescript
+interface WarrantyPromise {
+  $context?: 'schema.org'
+  $type: 'WarrantyPromise'
+  durationOfWarranty?: QuantitativeValue
+  warrantyScope?: WarrantyScope
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WarrantyPromise",
+  "name": "Example WarrantyPromise",
+  "description": "An example of the WarrantyPromise type",
+  "url": "https://example.com/warrantypromise",
+  "identifier": "example-warrantypromise-1"
+}
+```
+
+## Notes
+
+- WarrantyPromise inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BuyAction
+title: BuyAction
+description: The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.
+properties:
+  - vendor
+subClasses:
+
+parentClass: TradeAction
+---
+
+# BuyAction
+
+The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.
+
+## Type Hierarchy
+
+BuyAction is a type of TradeAction.
+
+### Direct Subtypes
+
+No types directly inherit from BuyAction.
+
+## Properties
+
+BuyAction defines the following properties in addition to those inherited from TradeAction:
+
+- vendor: 'vendor' is an earlier term for 'seller'.
+
+## Usage Example
+
+```typescript
+interface BuyAction {
+  $context?: 'schema.org'
+  $type: 'BuyAction'
+  vendor?: Organization | Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BuyAction",
+  "name": "Example BuyAction",
+  "description": "An example of the BuyAction type",
+  "url": "https://example.com/buyaction",
+  "identifier": "example-buyaction-1"
+}
+```
+
+## Notes
+
+- BuyAction inherits all properties from TradeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,86 @@
+---
+$context: schema.org
+$type: FoodEstablishment
+title: FoodEstablishment
+description: A food-related business.
+properties:
+  - acceptsReservations
+  - hasMenu
+  - menu
+  - servesCuisine
+subClasses:
+  - Bakery
+  - BarOrPub
+  - Brewery
+  - CafeOrCoffeeShop
+  - Distillery
+  - FastFoodRestaurant
+  - IceCreamShop
+  - Restaurant
+  - Winery
+parentClass: LocalBusiness
+---
+
+# FoodEstablishment
+
+A food-related business.
+
+## Type Hierarchy
+
+FoodEstablishment is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from FoodEstablishment:
+
+- Bakery: A bakery.
+- BarOrPub: A bar or pub.
+- Brewery: Brewery.
+- CafeOrCoffeeShop: A cafe or coffee shop.
+- Distillery: A distillery.
+- FastFoodRestaurant: A fast-food restaurant.
+- IceCreamShop: An ice cream shop.
+- Restaurant: A restaurant.
+- Winery: A winery.
+
+## Properties
+
+FoodEstablishment defines the following properties in addition to those inherited from LocalBusiness:
+
+- acceptsReservations: Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.
+- hasMenu: Either the actual menu as a structured representation, as text, or a URL of the menu.
+- menu: Either the actual menu as a structured representation, as text, or a URL of the menu.
+- servesCuisine: The cuisine of the restaurant.
+
+## Usage Example
+
+```typescript
+interface FoodEstablishment {
+  $context?: 'schema.org'
+  $type: 'FoodEstablishment'
+  acceptsReservations?: boolean | string
+  hasMenu?: Menu | string
+  menu?: Menu | string
+  servesCuisine?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FoodEstablishment",
+  "name": "Example FoodEstablishment",
+  "description": "An example of the FoodEstablishment type",
+  "url": "https://example.com/foodestablishment",
+  "identifier": "example-foodestablishment-1"
+}
+```
+
+## Notes
+
+- FoodEstablishment inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

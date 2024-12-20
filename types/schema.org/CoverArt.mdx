@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CoverArt
+title: CoverArt
+description: The artwork on the outer surface of a CreativeWork.
+properties:
+
+subClasses:
+
+parentClass: VisualArtwork
+---
+
+# CoverArt
+
+The artwork on the outer surface of a CreativeWork.
+
+## Type Hierarchy
+
+CoverArt is a type of VisualArtwork.
+
+### Direct Subtypes
+
+No types directly inherit from CoverArt.
+
+## Properties
+
+CoverArt defines the following properties in addition to those inherited from VisualArtwork:
+
+
+
+## Usage Example
+
+```typescript
+interface CoverArt {
+  $context?: 'schema.org'
+  $type: 'CoverArt'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CoverArt",
+  "name": "Example CoverArt",
+  "description": "An example of the CoverArt type",
+  "url": "https://example.com/coverart",
+  "identifier": "example-coverart-1"
+}
+```
+
+## Notes
+
+- CoverArt inherits all properties from VisualArtwork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

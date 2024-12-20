@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UserBlocks
+title: UserBlocks
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+
+subClasses:
+
+parentClass: UserInteraction
+---
+
+# UserBlocks
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserBlocks is a type of UserInteraction.
+
+### Direct Subtypes
+
+No types directly inherit from UserBlocks.
+
+## Properties
+
+UserBlocks defines the following properties in addition to those inherited from UserInteraction:
+
+
+
+## Usage Example
+
+```typescript
+interface UserBlocks {
+  $context?: 'schema.org'
+  $type: 'UserBlocks'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserBlocks",
+  "name": "Example UserBlocks",
+  "description": "An example of the UserBlocks type",
+  "url": "https://example.com/userblocks",
+  "identifier": "example-userblocks-1"
+}
+```
+
+## Notes
+
+- UserBlocks inherits all properties from UserInteraction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WinAction
+title: WinAction
+description: The act of achieving victory in a competitive activity.
+properties:
+  - loser
+subClasses:
+
+parentClass: AchieveAction
+---
+
+# WinAction
+
+The act of achieving victory in a competitive activity.
+
+## Type Hierarchy
+
+WinAction is a type of AchieveAction.
+
+### Direct Subtypes
+
+No types directly inherit from WinAction.
+
+## Properties
+
+WinAction defines the following properties in addition to those inherited from AchieveAction:
+
+- loser: A sub property of participant. The loser of the action.
+
+## Usage Example
+
+```typescript
+interface WinAction {
+  $context?: 'schema.org'
+  $type: 'WinAction'
+  loser?: Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WinAction",
+  "name": "Example WinAction",
+  "description": "An example of the WinAction type",
+  "url": "https://example.com/winaction",
+  "identifier": "example-winaction-1"
+}
+```
+
+## Notes
+
+- WinAction inherits all properties from AchieveAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

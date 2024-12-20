@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: Nerve
+title: Nerve
+description: A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.
+properties:
+  - branch
+  - nerveMotor
+  - sensoryUnit
+  - sourcedFrom
+subClasses:
+
+parentClass: AnatomicalStructure
+---
+
+# Nerve
+
+A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.
+
+## Type Hierarchy
+
+Nerve is a type of AnatomicalStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Nerve.
+
+## Properties
+
+Nerve defines the following properties in addition to those inherited from AnatomicalStructure:
+
+- branch: The branches that delineate from the nerve bundle. Not to be confused with [[branchOf]].
+- nerveMotor: The neurological pathway extension that involves muscle control.
+- sensoryUnit: The neurological pathway extension that inputs and sends information to the brain or spinal cord.
+- sourcedFrom: The neurological pathway that originates the neurons.
+
+## Usage Example
+
+```typescript
+interface Nerve {
+  $context?: 'schema.org'
+  $type: 'Nerve'
+  branch?: AnatomicalStructure
+  nerveMotor?: Muscle
+  sensoryUnit?: AnatomicalStructure | SuperficialAnatomy
+  sourcedFrom?: BrainStructure
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Nerve",
+  "name": "Example Nerve",
+  "description": "An example of the Nerve type",
+  "url": "https://example.com/nerve",
+  "identifier": "example-nerve-1"
+}
+```
+
+## Notes
+
+- Nerve inherits all properties from AnatomicalStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

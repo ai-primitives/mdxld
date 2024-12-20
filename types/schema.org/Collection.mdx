@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Collection
+title: Collection
+description: A collection of items, e.g. creative works or products.
+properties:
+  - [object Object]
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Collection
+
+A collection of items, e.g. creative works or products.
+
+## Type Hierarchy
+
+Collection is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Collection.
+
+## Properties
+
+Collection defines the following properties in addition to those inherited from CreativeWork:
+
+- [object Object]: [object Object]
+
+## Usage Example
+
+```typescript
+interface Collection {
+  $context?: 'schema.org'
+  $type: 'Collection'
+  [object Object]?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Collection",
+  "name": "Example Collection",
+  "description": "An example of the Collection type",
+  "url": "https://example.com/collection",
+  "identifier": "example-collection-1"
+}
+```
+
+## Notes
+
+- Collection inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

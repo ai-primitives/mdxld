@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DepartmentStore
+title: DepartmentStore
+description: A department store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# DepartmentStore
+
+A department store.
+
+## Type Hierarchy
+
+DepartmentStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from DepartmentStore.
+
+## Properties
+
+DepartmentStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface DepartmentStore {
+  $context?: 'schema.org'
+  $type: 'DepartmentStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DepartmentStore",
+  "name": "Example DepartmentStore",
+  "description": "An example of the DepartmentStore type",
+  "url": "https://example.com/departmentstore",
+  "identifier": "example-departmentstore-1"
+}
+```
+
+## Notes
+
+- DepartmentStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

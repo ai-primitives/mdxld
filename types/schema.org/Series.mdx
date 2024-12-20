@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Series
+title: Series
+description: A Series in schema.org is a group of related items, typically but not necessarily of the same kind. See also [[CreativeWorkSeries]], [[EventSeries]].
+properties:
+
+subClasses:
+
+parentClass: Intangible
+---
+
+# Series
+
+A Series in schema.org is a group of related items, typically but not necessarily of the same kind. See also [[CreativeWorkSeries]], [[EventSeries]].
+
+## Type Hierarchy
+
+Series is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Series.
+
+## Properties
+
+Series defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface Series {
+  $context?: 'schema.org'
+  $type: 'Series'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Series",
+  "name": "Example Series",
+  "description": "An example of the Series type",
+  "url": "https://example.com/series",
+  "identifier": "example-series-1"
+}
+```
+
+## Notes
+
+- Series inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

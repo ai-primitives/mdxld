@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TheaterEvent
+title: TheaterEvent
+description: Event type: Theater performance.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# TheaterEvent
+
+Event type: Theater performance.
+
+## Type Hierarchy
+
+TheaterEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from TheaterEvent.
+
+## Properties
+
+TheaterEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface TheaterEvent {
+  $context?: 'schema.org'
+  $type: 'TheaterEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TheaterEvent",
+  "name": "Example TheaterEvent",
+  "description": "An example of the TheaterEvent type",
+  "url": "https://example.com/theaterevent",
+  "identifier": "example-theaterevent-1"
+}
+```
+
+## Notes
+
+- TheaterEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

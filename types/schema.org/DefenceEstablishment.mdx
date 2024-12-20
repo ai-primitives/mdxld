@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DefenceEstablishment
+title: DefenceEstablishment
+description: A defence establishment, such as an army or navy base.
+properties:
+
+subClasses:
+
+parentClass: GovernmentBuilding
+---
+
+# DefenceEstablishment
+
+A defence establishment, such as an army or navy base.
+
+## Type Hierarchy
+
+DefenceEstablishment is a type of GovernmentBuilding.
+
+### Direct Subtypes
+
+No types directly inherit from DefenceEstablishment.
+
+## Properties
+
+DefenceEstablishment defines the following properties in addition to those inherited from GovernmentBuilding:
+
+
+
+## Usage Example
+
+```typescript
+interface DefenceEstablishment {
+  $context?: 'schema.org'
+  $type: 'DefenceEstablishment'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DefenceEstablishment",
+  "name": "Example DefenceEstablishment",
+  "description": "An example of the DefenceEstablishment type",
+  "url": "https://example.com/defenceestablishment",
+  "identifier": "example-defenceestablishment-1"
+}
+```
+
+## Notes
+
+- DefenceEstablishment inherits all properties from GovernmentBuilding
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

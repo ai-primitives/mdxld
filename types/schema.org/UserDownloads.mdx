@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UserDownloads
+title: UserDownloads
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+
+subClasses:
+
+parentClass: UserInteraction
+---
+
+# UserDownloads
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserDownloads is a type of UserInteraction.
+
+### Direct Subtypes
+
+No types directly inherit from UserDownloads.
+
+## Properties
+
+UserDownloads defines the following properties in addition to those inherited from UserInteraction:
+
+
+
+## Usage Example
+
+```typescript
+interface UserDownloads {
+  $context?: 'schema.org'
+  $type: 'UserDownloads'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserDownloads",
+  "name": "Example UserDownloads",
+  "description": "An example of the UserDownloads type",
+  "url": "https://example.com/userdownloads",
+  "identifier": "example-userdownloads-1"
+}
+```
+
+## Notes
+
+- UserDownloads inherits all properties from UserInteraction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

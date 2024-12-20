@@ -1,0 +1,77 @@
+---
+$context: schema.org
+$type: ExercisePlan
+title: ExercisePlan
+description: Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.
+properties:
+  - activityDuration
+  - activityFrequency
+  - additionalVariable
+  - intensity
+  - repetitions
+  - restPeriods
+  - workload
+subClasses:
+
+
+---
+
+# ExercisePlan
+
+Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.
+
+## Type Hierarchy
+
+ExercisePlan is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from ExercisePlan.
+
+## Properties
+
+ExercisePlan defines the following properties in addition to those inherited from Thing:
+
+- activityDuration: Length of time to engage in the activity.
+- activityFrequency: How often one should engage in the activity.
+- additionalVariable: Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.
+- intensity: Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.
+- repetitions: Number of times one should repeat the activity.
+- restPeriods: How often one should break from the activity.
+- workload: Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
+
+## Usage Example
+
+```typescript
+interface ExercisePlan {
+  $context?: 'schema.org'
+  $type: 'ExercisePlan'
+  activityDuration?: Duration | QuantitativeValue
+  activityFrequency?: QuantitativeValue | string
+  additionalVariable?: string
+  intensity?: QuantitativeValue | string
+  repetitions?: QuantitativeValue | number
+  restPeriods?: QuantitativeValue | string
+  workload?: Energy | QuantitativeValue
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ExercisePlan",
+  "name": "Example ExercisePlan",
+  "description": "An example of the ExercisePlan type",
+  "url": "https://example.com/exerciseplan",
+  "identifier": "example-exerciseplan-1"
+}
+```
+
+## Notes
+
+- ExercisePlan inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

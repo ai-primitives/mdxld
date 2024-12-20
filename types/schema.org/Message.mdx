@@ -1,0 +1,79 @@
+---
+$context: schema.org
+$type: Message
+title: Message
+description: A single message from a sender to one or more organizations or people.
+properties:
+  - bccRecipient
+  - ccRecipient
+  - dateRead
+  - dateReceived
+  - dateSent
+  - messageAttachment
+  - toRecipient
+subClasses:
+  - EmailMessage
+parentClass: CreativeWork
+---
+
+# Message
+
+A single message from a sender to one or more organizations or people.
+
+## Type Hierarchy
+
+Message is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from Message:
+
+- EmailMessage: An email message.
+
+## Properties
+
+Message defines the following properties in addition to those inherited from CreativeWork:
+
+- bccRecipient: A sub property of recipient. The recipient blind copied on a message.
+- ccRecipient: A sub property of recipient. The recipient copied on a message.
+- dateRead: The date/time at which the message has been read by the recipient if a single recipient exists.
+- dateReceived: The date/time the message was received if a single recipient exists.
+- dateSent: The date/time at which the message was sent.
+- messageAttachment: A CreativeWork attached to the message.
+- toRecipient: A sub property of recipient. The recipient who was directly sent the message.
+
+## Usage Example
+
+```typescript
+interface Message {
+  $context?: 'schema.org'
+  $type: 'Message'
+  bccRecipient?: ContactPoint | Organization | Person
+  ccRecipient?: ContactPoint | Organization | Person
+  dateRead?: string
+  dateReceived?: string
+  dateSent?: string
+  messageAttachment?: CreativeWork
+  toRecipient?: Audience | ContactPoint | Organization | Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Message",
+  "name": "Example Message",
+  "description": "An example of the Message type",
+  "url": "https://example.com/message",
+  "identifier": "example-message-1"
+}
+```
+
+## Notes
+
+- Message inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

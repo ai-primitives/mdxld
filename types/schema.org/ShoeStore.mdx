@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ShoeStore
+title: ShoeStore
+description: A shoe store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# ShoeStore
+
+A shoe store.
+
+## Type Hierarchy
+
+ShoeStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from ShoeStore.
+
+## Properties
+
+ShoeStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface ShoeStore {
+  $context?: 'schema.org'
+  $type: 'ShoeStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ShoeStore",
+  "name": "Example ShoeStore",
+  "description": "An example of the ShoeStore type",
+  "url": "https://example.com/shoestore",
+  "identifier": "example-shoestore-1"
+}
+```
+
+## Notes
+
+- ShoeStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

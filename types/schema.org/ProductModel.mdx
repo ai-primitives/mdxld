@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: ProductModel
+title: ProductModel
+description: A datasheet or vendor specification of a product (in the sense of a prototypical description).
+properties:
+  - predecessorOf
+  - successorOf
+subClasses:
+
+parentClass: Product
+---
+
+# ProductModel
+
+A datasheet or vendor specification of a product (in the sense of a prototypical description).
+
+## Type Hierarchy
+
+ProductModel is a type of Product.
+
+### Direct Subtypes
+
+No types directly inherit from ProductModel.
+
+## Properties
+
+ProductModel defines the following properties in addition to those inherited from Product:
+
+- predecessorOf: A pointer from a previous, often discontinued variant of the product to its newer variant.
+- successorOf: A pointer from a newer variant of a product  to its previous, often discontinued predecessor.
+
+## Usage Example
+
+```typescript
+interface ProductModel {
+  $context?: 'schema.org'
+  $type: 'ProductModel'
+  predecessorOf?: ProductModel
+  successorOf?: ProductModel
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ProductModel",
+  "name": "Example ProductModel",
+  "description": "An example of the ProductModel type",
+  "url": "https://example.com/productmodel",
+  "identifier": "example-productmodel-1"
+}
+```
+
+## Notes
+
+- ProductModel inherits all properties from Product
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

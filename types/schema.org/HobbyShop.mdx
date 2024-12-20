@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HobbyShop
+title: HobbyShop
+description: A store that sells materials useful or necessary for various hobbies.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# HobbyShop
+
+A store that sells materials useful or necessary for various hobbies.
+
+## Type Hierarchy
+
+HobbyShop is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from HobbyShop.
+
+## Properties
+
+HobbyShop defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface HobbyShop {
+  $context?: 'schema.org'
+  $type: 'HobbyShop'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HobbyShop",
+  "name": "Example HobbyShop",
+  "description": "An example of the HobbyShop type",
+  "url": "https://example.com/hobbyshop",
+  "identifier": "example-hobbyshop-1"
+}
+```
+
+## Notes
+
+- HobbyShop inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

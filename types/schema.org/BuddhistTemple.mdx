@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BuddhistTemple
+title: BuddhistTemple
+description: A Buddhist temple.
+properties:
+
+subClasses:
+
+parentClass: PlaceOfWorship
+---
+
+# BuddhistTemple
+
+A Buddhist temple.
+
+## Type Hierarchy
+
+BuddhistTemple is a type of PlaceOfWorship.
+
+### Direct Subtypes
+
+No types directly inherit from BuddhistTemple.
+
+## Properties
+
+BuddhistTemple defines the following properties in addition to those inherited from PlaceOfWorship:
+
+
+
+## Usage Example
+
+```typescript
+interface BuddhistTemple {
+  $context?: 'schema.org'
+  $type: 'BuddhistTemple'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BuddhistTemple",
+  "name": "Example BuddhistTemple",
+  "description": "An example of the BuddhistTemple type",
+  "url": "https://example.com/buddhisttemple",
+  "identifier": "example-buddhisttemple-1"
+}
+```
+
+## Notes
+
+- BuddhistTemple inherits all properties from PlaceOfWorship
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

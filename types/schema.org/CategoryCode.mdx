@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CategoryCode
+title: CategoryCode
+description: A Category Code.
+properties:
+  - inCodeSet
+subClasses:
+
+parentClass: DefinedTerm
+---
+
+# CategoryCode
+
+A Category Code.
+
+## Type Hierarchy
+
+CategoryCode is a type of DefinedTerm.
+
+### Direct Subtypes
+
+No types directly inherit from CategoryCode.
+
+## Properties
+
+CategoryCode defines the following properties in addition to those inherited from DefinedTerm:
+
+- inCodeSet: A [[CategoryCodeSet]] that contains this category code.
+
+## Usage Example
+
+```typescript
+interface CategoryCode {
+  $context?: 'schema.org'
+  $type: 'CategoryCode'
+  inCodeSet?: CategoryCodeSet | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CategoryCode",
+  "name": "Example CategoryCode",
+  "description": "An example of the CategoryCode type",
+  "url": "https://example.com/categorycode",
+  "identifier": "example-categorycode-1"
+}
+```
+
+## Notes
+
+- CategoryCode inherits all properties from DefinedTerm
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

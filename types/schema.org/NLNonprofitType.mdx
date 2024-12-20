@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: NLNonprofitType
+title: NLNonprofitType
+description: NLNonprofitType: Non-profit organization type originating from the Netherlands.
+properties:
+
+subClasses:
+
+parentClass: NonprofitType
+---
+
+# NLNonprofitType
+
+NLNonprofitType: Non-profit organization type originating from the Netherlands.
+
+## Type Hierarchy
+
+NLNonprofitType is a type of NonprofitType.
+
+### Direct Subtypes
+
+No types directly inherit from NLNonprofitType.
+
+## Properties
+
+NLNonprofitType defines the following properties in addition to those inherited from NonprofitType:
+
+
+
+## Usage Example
+
+```typescript
+interface NLNonprofitType {
+  $context?: 'schema.org'
+  $type: 'NLNonprofitType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "NLNonprofitType",
+  "name": "Example NLNonprofitType",
+  "description": "An example of the NLNonprofitType type",
+  "url": "https://example.com/nlnonprofittype",
+  "identifier": "example-nlnonprofittype-1"
+}
+```
+
+## Notes
+
+- NLNonprofitType inherits all properties from NonprofitType
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

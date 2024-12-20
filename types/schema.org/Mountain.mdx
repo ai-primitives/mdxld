@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Mountain
+title: Mountain
+description: A mountain, like Mount Whitney or Mount Everest.
+properties:
+
+subClasses:
+
+parentClass: Landform
+---
+
+# Mountain
+
+A mountain, like Mount Whitney or Mount Everest.
+
+## Type Hierarchy
+
+Mountain is a type of Landform.
+
+### Direct Subtypes
+
+No types directly inherit from Mountain.
+
+## Properties
+
+Mountain defines the following properties in addition to those inherited from Landform:
+
+
+
+## Usage Example
+
+```typescript
+interface Mountain {
+  $context?: 'schema.org'
+  $type: 'Mountain'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Mountain",
+  "name": "Example Mountain",
+  "description": "An example of the Mountain type",
+  "url": "https://example.com/mountain",
+  "identifier": "example-mountain-1"
+}
+```
+
+## Notes
+
+- Mountain inherits all properties from Landform
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

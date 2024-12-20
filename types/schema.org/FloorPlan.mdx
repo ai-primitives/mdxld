@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: FloorPlan
+title: FloorPlan
+description: A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams) and offers for rental or sale. In typical use, some [[ApartmentComplex]] has an [[accommodationFloorPlan]] which is a [[FloorPlan]].  A FloorPlan is always in the context of a particular place, either a larger [[ApartmentComplex]] or a single [[Apartment]]. The visual/spatial aspects of a floor plan (i.e. room layout, [see wikipedia](https://en.wikipedia.org/wiki/Floor_plan)) can be indicated using [[image]]. 
+properties:
+  - isPlanForApartment
+  - layoutImage
+subClasses:
+
+parentClass: Intangible
+---
+
+# FloorPlan
+
+A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams) and offers for rental or sale. In typical use, some [[ApartmentComplex]] has an [[accommodationFloorPlan]] which is a [[FloorPlan]].  A FloorPlan is always in the context of a particular place, either a larger [[ApartmentComplex]] or a single [[Apartment]]. The visual/spatial aspects of a floor plan (i.e. room layout, [see wikipedia](https://en.wikipedia.org/wiki/Floor_plan)) can be indicated using [[image]]. 
+
+## Type Hierarchy
+
+FloorPlan is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from FloorPlan.
+
+## Properties
+
+FloorPlan defines the following properties in addition to those inherited from Intangible:
+
+- isPlanForApartment: Indicates some accommodation that this floor plan describes.
+- layoutImage: A schematic image showing the floorplan layout.
+
+## Usage Example
+
+```typescript
+interface FloorPlan {
+  $context?: 'schema.org'
+  $type: 'FloorPlan'
+  isPlanForApartment?: Accommodation
+  layoutImage?: ImageObject | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FloorPlan",
+  "name": "Example FloorPlan",
+  "description": "An example of the FloorPlan type",
+  "url": "https://example.com/floorplan",
+  "identifier": "example-floorplan-1"
+}
+```
+
+## Notes
+
+- FloorPlan inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HardwareStore
+title: HardwareStore
+description: A hardware store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# HardwareStore
+
+A hardware store.
+
+## Type Hierarchy
+
+HardwareStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from HardwareStore.
+
+## Properties
+
+HardwareStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface HardwareStore {
+  $context?: 'schema.org'
+  $type: 'HardwareStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HardwareStore",
+  "name": "Example HardwareStore",
+  "description": "An example of the HardwareStore type",
+  "url": "https://example.com/hardwarestore",
+  "identifier": "example-hardwarestore-1"
+}
+```
+
+## Notes
+
+- HardwareStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

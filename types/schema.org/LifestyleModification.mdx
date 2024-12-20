@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: LifestyleModification
+title: LifestyleModification
+description: A process of care involving exercise, changes to diet, fitness routines, and other lifestyle changes aimed at improving a health condition.
+properties:
+
+subClasses:
+  - PhysicalActivity
+parentClass: MedicalEntity
+---
+
+# LifestyleModification
+
+A process of care involving exercise, changes to diet, fitness routines, and other lifestyle changes aimed at improving a health condition.
+
+## Type Hierarchy
+
+LifestyleModification is a type of MedicalEntity.
+
+### Direct Subtypes
+
+The following types directly inherit from LifestyleModification:
+
+- PhysicalActivity: Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.
+
+## Properties
+
+LifestyleModification defines the following properties in addition to those inherited from MedicalEntity:
+
+
+
+## Usage Example
+
+```typescript
+interface LifestyleModification {
+  $context?: 'schema.org'
+  $type: 'LifestyleModification'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LifestyleModification",
+  "name": "Example LifestyleModification",
+  "description": "An example of the LifestyleModification type",
+  "url": "https://example.com/lifestylemodification",
+  "identifier": "example-lifestylemodification-1"
+}
+```
+
+## Notes
+
+- LifestyleModification inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

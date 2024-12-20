@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: IndividualPhysician
+title: IndividualPhysician
+description: An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]]. 
+The [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.
+properties:
+  - practicesAt
+subClasses:
+
+parentClass: Physician
+---
+
+# IndividualPhysician
+
+An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]]. 
+The [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.
+
+## Type Hierarchy
+
+IndividualPhysician is a type of Physician.
+
+### Direct Subtypes
+
+No types directly inherit from IndividualPhysician.
+
+## Properties
+
+IndividualPhysician defines the following properties in addition to those inherited from Physician:
+
+- practicesAt: A [[MedicalOrganization]] where the [[IndividualPhysician]] practices.
+
+## Usage Example
+
+```typescript
+interface IndividualPhysician {
+  $context?: 'schema.org'
+  $type: 'IndividualPhysician'
+  practicesAt?: MedicalOrganization
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "IndividualPhysician",
+  "name": "Example IndividualPhysician",
+  "description": "An example of the IndividualPhysician type",
+  "url": "https://example.com/individualphysician",
+  "identifier": "example-individualphysician-1"
+}
+```
+
+## Notes
+
+- IndividualPhysician inherits all properties from Physician
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

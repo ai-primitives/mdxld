@@ -1,0 +1,77 @@
+---
+$context: schema.org
+$type: UserInteraction
+title: UserInteraction
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+
+subClasses:
+  - UserBlocks
+  - UserCheckins
+  - UserComments
+  - UserDownloads
+  - UserLikes
+  - UserPageVisits
+  - UserPlays
+  - UserPlusOnes
+  - UserTweets
+parentClass: Event
+---
+
+# UserInteraction
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserInteraction is a type of Event.
+
+### Direct Subtypes
+
+The following types directly inherit from UserInteraction:
+
+- UserBlocks: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+- UserCheckins: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+- UserComments: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+- UserDownloads: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+- UserLikes: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+- UserPageVisits: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+- UserPlays: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+- UserPlusOnes: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+- UserTweets: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Properties
+
+UserInteraction defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface UserInteraction {
+  $context?: 'schema.org'
+  $type: 'UserInteraction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserInteraction",
+  "name": "Example UserInteraction",
+  "description": "An example of the UserInteraction type",
+  "url": "https://example.com/userinteraction",
+  "identifier": "example-userinteraction-1"
+}
+```
+
+## Notes
+
+- UserInteraction inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

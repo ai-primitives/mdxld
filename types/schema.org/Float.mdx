@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Float
+title: Float
+description: Data type: Floating number.
+properties:
+
+subClasses:
+
+parentClass: Number
+---
+
+# Float
+
+Data type: Floating number.
+
+## Type Hierarchy
+
+Float is a type of Number.
+
+### Direct Subtypes
+
+No types directly inherit from Float.
+
+## Properties
+
+Float defines the following properties in addition to those inherited from Number:
+
+
+
+## Usage Example
+
+```typescript
+interface Float {
+  $context?: 'schema.org'
+  $type: 'Float'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Float",
+  "name": "Example Float",
+  "description": "An example of the Float type",
+  "url": "https://example.com/float",
+  "identifier": "example-float-1"
+}
+```
+
+## Notes
+
+- Float inherits all properties from Number
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

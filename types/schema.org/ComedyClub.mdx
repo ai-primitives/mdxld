@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ComedyClub
+title: ComedyClub
+description: A comedy club.
+properties:
+
+subClasses:
+
+parentClass: EntertainmentBusiness
+---
+
+# ComedyClub
+
+A comedy club.
+
+## Type Hierarchy
+
+ComedyClub is a type of EntertainmentBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from ComedyClub.
+
+## Properties
+
+ComedyClub defines the following properties in addition to those inherited from EntertainmentBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface ComedyClub {
+  $context?: 'schema.org'
+  $type: 'ComedyClub'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ComedyClub",
+  "name": "Example ComedyClub",
+  "description": "An example of the ComedyClub type",
+  "url": "https://example.com/comedyclub",
+  "identifier": "example-comedyclub-1"
+}
+```
+
+## Notes
+
+- ComedyClub inherits all properties from EntertainmentBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

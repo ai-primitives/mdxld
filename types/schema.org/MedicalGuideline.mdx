@@ -1,0 +1,72 @@
+---
+$context: schema.org
+$type: MedicalGuideline
+title: MedicalGuideline
+description: Any recommendation made by a standard society (e.g. ACC/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.
+properties:
+  - evidenceLevel
+  - evidenceOrigin
+  - guidelineDate
+  - guidelineSubject
+subClasses:
+  - MedicalGuidelineContraindication
+  - MedicalGuidelineRecommendation
+parentClass: MedicalEntity
+---
+
+# MedicalGuideline
+
+Any recommendation made by a standard society (e.g. ACC/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.
+
+## Type Hierarchy
+
+MedicalGuideline is a type of MedicalEntity.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalGuideline:
+
+- MedicalGuidelineContraindication: A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.
+- MedicalGuidelineRecommendation: A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.
+
+## Properties
+
+MedicalGuideline defines the following properties in addition to those inherited from MedicalEntity:
+
+- evidenceLevel: Strength of evidence of the data used to formulate the guideline (enumerated).
+- evidenceOrigin: Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
+- guidelineDate: Date on which this guideline's recommendation was made.
+- guidelineSubject: The medical conditions, treatments, etc. that are the subject of the guideline.
+
+## Usage Example
+
+```typescript
+interface MedicalGuideline {
+  $context?: 'schema.org'
+  $type: 'MedicalGuideline'
+  evidenceLevel?: MedicalEvidenceLevel
+  evidenceOrigin?: string
+  guidelineDate?: string
+  guidelineSubject?: MedicalEntity
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalGuideline",
+  "name": "Example MedicalGuideline",
+  "description": "An example of the MedicalGuideline type",
+  "url": "https://example.com/medicalguideline",
+  "identifier": "example-medicalguideline-1"
+}
+```
+
+## Notes
+
+- MedicalGuideline inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

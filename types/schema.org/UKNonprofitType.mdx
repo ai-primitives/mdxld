@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UKNonprofitType
+title: UKNonprofitType
+description: UKNonprofitType: Non-profit organization type originating from the United Kingdom.
+properties:
+
+subClasses:
+
+parentClass: NonprofitType
+---
+
+# UKNonprofitType
+
+UKNonprofitType: Non-profit organization type originating from the United Kingdom.
+
+## Type Hierarchy
+
+UKNonprofitType is a type of NonprofitType.
+
+### Direct Subtypes
+
+No types directly inherit from UKNonprofitType.
+
+## Properties
+
+UKNonprofitType defines the following properties in addition to those inherited from NonprofitType:
+
+
+
+## Usage Example
+
+```typescript
+interface UKNonprofitType {
+  $context?: 'schema.org'
+  $type: 'UKNonprofitType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UKNonprofitType",
+  "name": "Example UKNonprofitType",
+  "description": "An example of the UKNonprofitType type",
+  "url": "https://example.com/uknonprofittype",
+  "identifier": "example-uknonprofittype-1"
+}
+```
+
+## Notes
+
+- UKNonprofitType inherits all properties from NonprofitType
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

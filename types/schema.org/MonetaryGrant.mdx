@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MonetaryGrant
+title: MonetaryGrant
+description: A monetary grant.
+properties:
+
+subClasses:
+
+parentClass: Grant
+---
+
+# MonetaryGrant
+
+A monetary grant.
+
+## Type Hierarchy
+
+MonetaryGrant is a type of Grant.
+
+### Direct Subtypes
+
+No types directly inherit from MonetaryGrant.
+
+## Properties
+
+MonetaryGrant defines the following properties in addition to those inherited from Grant:
+
+
+
+## Usage Example
+
+```typescript
+interface MonetaryGrant {
+  $context?: 'schema.org'
+  $type: 'MonetaryGrant'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MonetaryGrant",
+  "name": "Example MonetaryGrant",
+  "description": "An example of the MonetaryGrant type",
+  "url": "https://example.com/monetarygrant",
+  "identifier": "example-monetarygrant-1"
+}
+```
+
+## Notes
+
+- MonetaryGrant inherits all properties from Grant
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

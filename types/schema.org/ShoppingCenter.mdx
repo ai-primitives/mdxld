@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ShoppingCenter
+title: ShoppingCenter
+description: A shopping center or mall.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# ShoppingCenter
+
+A shopping center or mall.
+
+## Type Hierarchy
+
+ShoppingCenter is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from ShoppingCenter.
+
+## Properties
+
+ShoppingCenter defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface ShoppingCenter {
+  $context?: 'schema.org'
+  $type: 'ShoppingCenter'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ShoppingCenter",
+  "name": "Example ShoppingCenter",
+  "description": "An example of the ShoppingCenter type",
+  "url": "https://example.com/shoppingcenter",
+  "identifier": "example-shoppingcenter-1"
+}
+```
+
+## Notes
+
+- ShoppingCenter inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

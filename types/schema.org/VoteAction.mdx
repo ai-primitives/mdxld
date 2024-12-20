@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: VoteAction
+title: VoteAction
+description: The act of expressing a preference from a fixed/finite/structured set of choices/options.
+properties:
+  - candidate
+subClasses:
+
+parentClass: ChooseAction
+---
+
+# VoteAction
+
+The act of expressing a preference from a fixed/finite/structured set of choices/options.
+
+## Type Hierarchy
+
+VoteAction is a type of ChooseAction.
+
+### Direct Subtypes
+
+No types directly inherit from VoteAction.
+
+## Properties
+
+VoteAction defines the following properties in addition to those inherited from ChooseAction:
+
+- candidate: A sub property of object. The candidate subject of this action.
+
+## Usage Example
+
+```typescript
+interface VoteAction {
+  $context?: 'schema.org'
+  $type: 'VoteAction'
+  candidate?: Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VoteAction",
+  "name": "Example VoteAction",
+  "description": "An example of the VoteAction type",
+  "url": "https://example.com/voteaction",
+  "identifier": "example-voteaction-1"
+}
+```
+
+## Notes
+
+- VoteAction inherits all properties from ChooseAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

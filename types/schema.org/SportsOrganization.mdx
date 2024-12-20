@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: SportsOrganization
+title: SportsOrganization
+description: Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations.
+properties:
+
+subClasses:
+  - SportsTeam
+parentClass: Organization
+---
+
+# SportsOrganization
+
+Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations.
+
+## Type Hierarchy
+
+SportsOrganization is a type of Organization.
+
+### Direct Subtypes
+
+The following types directly inherit from SportsOrganization:
+
+- SportsTeam: Organization: Sports team.
+
+## Properties
+
+SportsOrganization defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface SportsOrganization {
+  $context?: 'schema.org'
+  $type: 'SportsOrganization'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SportsOrganization",
+  "name": "Example SportsOrganization",
+  "description": "An example of the SportsOrganization type",
+  "url": "https://example.com/sportsorganization",
+  "identifier": "example-sportsorganization-1"
+}
+```
+
+## Notes
+
+- SportsOrganization inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

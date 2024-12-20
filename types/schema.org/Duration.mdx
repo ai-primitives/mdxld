@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Duration
+title: Duration
+description: Quantity: Duration (use [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601)).
+properties:
+
+subClasses:
+
+parentClass: Quantity
+---
+
+# Duration
+
+Quantity: Duration (use [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601)).
+
+## Type Hierarchy
+
+Duration is a type of Quantity.
+
+### Direct Subtypes
+
+No types directly inherit from Duration.
+
+## Properties
+
+Duration defines the following properties in addition to those inherited from Quantity:
+
+
+
+## Usage Example
+
+```typescript
+interface Duration {
+  $context?: 'schema.org'
+  $type: 'Duration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Duration",
+  "name": "Example Duration",
+  "description": "An example of the Duration type",
+  "url": "https://example.com/duration",
+  "identifier": "example-duration-1"
+}
+```
+
+## Notes
+
+- Duration inherits all properties from Quantity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

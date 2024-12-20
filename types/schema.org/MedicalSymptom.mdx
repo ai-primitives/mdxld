@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalSymptom
+title: MedicalSymptom
+description: Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.
+properties:
+
+subClasses:
+
+parentClass: MedicalSignOrSymptom
+---
+
+# MedicalSymptom
+
+Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.
+
+## Type Hierarchy
+
+MedicalSymptom is a type of MedicalSignOrSymptom.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalSymptom.
+
+## Properties
+
+MedicalSymptom defines the following properties in addition to those inherited from MedicalSignOrSymptom:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalSymptom {
+  $context?: 'schema.org'
+  $type: 'MedicalSymptom'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalSymptom",
+  "name": "Example MedicalSymptom",
+  "description": "An example of the MedicalSymptom type",
+  "url": "https://example.com/medicalsymptom",
+  "identifier": "example-medicalsymptom-1"
+}
+```
+
+## Notes
+
+- MedicalSymptom inherits all properties from MedicalSignOrSymptom
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

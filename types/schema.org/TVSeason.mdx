@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TVSeason
+title: TVSeason
+description: Season dedicated to TV broadcast and associated online delivery.
+properties:
+
+subClasses:
+
+
+---
+
+# TVSeason
+
+Season dedicated to TV broadcast and associated online delivery.
+
+## Type Hierarchy
+
+TVSeason is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from TVSeason.
+
+## Properties
+
+TVSeason defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface TVSeason {
+  $context?: 'schema.org'
+  $type: 'TVSeason'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TVSeason",
+  "name": "Example TVSeason",
+  "description": "An example of the TVSeason type",
+  "url": "https://example.com/tvseason",
+  "identifier": "example-tvseason-1"
+}
+```
+
+## Notes
+
+- TVSeason inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

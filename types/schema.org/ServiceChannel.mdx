@@ -1,0 +1,77 @@
+---
+$context: schema.org
+$type: ServiceChannel
+title: ServiceChannel
+description: A means for accessing a service, e.g. a government office location, web site, or phone number.
+properties:
+  - processingTime
+  - providesService
+  - serviceLocation
+  - servicePhone
+  - servicePostalAddress
+  - serviceSmsNumber
+  - serviceUrl
+subClasses:
+
+parentClass: Intangible
+---
+
+# ServiceChannel
+
+A means for accessing a service, e.g. a government office location, web site, or phone number.
+
+## Type Hierarchy
+
+ServiceChannel is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from ServiceChannel.
+
+## Properties
+
+ServiceChannel defines the following properties in addition to those inherited from Intangible:
+
+- processingTime: Estimated processing time for the service using this channel.
+- providesService: The service provided by this channel.
+- serviceLocation: The location (e.g. civic structure, local business, etc.) where a person can go to access the service.
+- servicePhone: The phone number to use to access the service.
+- servicePostalAddress: The address for accessing the service by mail.
+- serviceSmsNumber: The number to access the service by text message.
+- serviceUrl: The website to access the service.
+
+## Usage Example
+
+```typescript
+interface ServiceChannel {
+  $context?: 'schema.org'
+  $type: 'ServiceChannel'
+  processingTime?: Duration
+  providesService?: Service
+  serviceLocation?: Place
+  servicePhone?: ContactPoint
+  servicePostalAddress?: PostalAddress
+  serviceSmsNumber?: ContactPoint
+  serviceUrl?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ServiceChannel",
+  "name": "Example ServiceChannel",
+  "description": "An example of the ServiceChannel type",
+  "url": "https://example.com/servicechannel",
+  "identifier": "example-servicechannel-1"
+}
+```
+
+## Notes
+
+- ServiceChannel inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

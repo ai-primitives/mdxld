@@ -1,0 +1,107 @@
+---
+$context: schema.org
+$type: WebPage
+title: WebPage
+description: A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb</code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.
+properties:
+  - breadcrumb
+  - lastReviewed
+  - mainContentOfPage
+  - primaryImageOfPage
+  - relatedLink
+  - reviewedBy
+  - significantLink
+  - significantLinks
+  - specialty
+subClasses:
+  - AboutPage
+  - CheckoutPage
+  - CollectionPage
+  - ContactPage
+  - FAQPage
+  - ItemPage
+  - MedicalWebPage
+  - ProfilePage
+  - QAPage
+  - RealEstateListing
+  - SearchResultsPage
+parentClass: CreativeWork
+---
+
+# WebPage
+
+A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb</code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.
+
+## Type Hierarchy
+
+WebPage is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from WebPage:
+
+- AboutPage: Web page type: About page.
+- CheckoutPage: Web page type: Checkout page.
+- CollectionPage: Web page type: Collection page.
+- ContactPage: Web page type: Contact page.
+- FAQPage: A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).
+- ItemPage: A page devoted to a single item, such as a particular product or hotel.
+- MedicalWebPage: A web page that provides medical information.
+- ProfilePage: Web page type: Profile page.
+- QAPage: A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in a question answering site or documenting Frequently Asked Questions (FAQs).
+- RealEstateListing: A [[RealEstateListing]] is a listing that describes one or more real-estate [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).
+  The [[RealEstateListing]] type itself represents the overall listing, as manifested in some [[WebPage]].
+  
+- SearchResultsPage: Web page type: Search results page.
+
+## Properties
+
+WebPage defines the following properties in addition to those inherited from CreativeWork:
+
+- breadcrumb: A set of links that can help a user understand and navigate a website hierarchy.
+- lastReviewed: Date on which the content on this web page was last reviewed for accuracy and/or completeness.
+- mainContentOfPage: Indicates if this web page element is the main subject of the page.
+- primaryImageOfPage: Indicates the main image on the page.
+- relatedLink: A link related to this web page, for example to other related web pages.
+- reviewedBy: People or organizations that have reviewed the content on this web page for accuracy and/or completeness.
+- significantLink: One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
+- significantLinks: The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
+- specialty: One of the domain specialities to which this web page's content applies.
+
+## Usage Example
+
+```typescript
+interface WebPage {
+  $context?: 'schema.org'
+  $type: 'WebPage'
+  breadcrumb?: BreadcrumbList | string
+  lastReviewed?: string
+  mainContentOfPage?: WebPageElement
+  primaryImageOfPage?: ImageObject
+  relatedLink?: string
+  reviewedBy?: Organization | Person
+  significantLink?: string
+  significantLinks?: string
+  specialty?: Specialty
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WebPage",
+  "name": "Example WebPage",
+  "description": "An example of the WebPage type",
+  "url": "https://example.com/webpage",
+  "identifier": "example-webpage-1"
+}
+```
+
+## Notes
+
+- WebPage inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

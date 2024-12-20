@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SportsClub
+title: SportsClub
+description: A sports club.
+properties:
+
+subClasses:
+
+parentClass: SportsActivityLocation
+---
+
+# SportsClub
+
+A sports club.
+
+## Type Hierarchy
+
+SportsClub is a type of SportsActivityLocation.
+
+### Direct Subtypes
+
+No types directly inherit from SportsClub.
+
+## Properties
+
+SportsClub defines the following properties in addition to those inherited from SportsActivityLocation:
+
+
+
+## Usage Example
+
+```typescript
+interface SportsClub {
+  $context?: 'schema.org'
+  $type: 'SportsClub'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SportsClub",
+  "name": "Example SportsClub",
+  "description": "An example of the SportsClub type",
+  "url": "https://example.com/sportsclub",
+  "identifier": "example-sportsclub-1"
+}
+```
+
+## Notes
+
+- SportsClub inherits all properties from SportsActivityLocation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,83 @@
+---
+$context: schema.org
+$type: Offer
+title: Offer
+description: An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\n\nNote: As the [[businessFunction]] property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.\n\nFor [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see [Check Digit calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and [validation guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from [GS1](http://www.gs1.org/).
+properties:
+  - addOn
+  - checkoutPageURLTemplate
+  - offeredBy
+  - priceValidUntil
+  - shippingDetails
+subClasses:
+  - AggregateOffer
+  - OfferForLease
+  - OfferForPurchase
+parentClass: Intangible
+---
+
+# Offer
+
+An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\n\nNote: As the [[businessFunction]] property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.\n\nFor [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see [Check Digit calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and [validation guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from [GS1](http://www.gs1.org/).
+
+## Type Hierarchy
+
+Offer is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from Offer:
+
+- AggregateOffer: When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.\n\nNote: AggregateOffers are normally expected to associate multiple offers that all share the same defined [[businessFunction]] value, or default to http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly defined.
+- OfferForLease: An [[OfferForLease]] in Schema.org represents an [[Offer]] to lease out something, i.e. an [[Offer]] whose
+  [[businessFunction]] is [lease out](http://purl.org/goodrelations/v1#LeaseOut.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for
+  background on the underlying concepts.
+  
+- OfferForPurchase: An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose
+  [[businessFunction]] is [sell](http://purl.org/goodrelations/v1#Sell.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for
+  background on the underlying concepts.
+  
+
+## Properties
+
+Offer defines the following properties in addition to those inherited from Intangible:
+
+- addOn: An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are available for a surcharge).
+- checkoutPageURLTemplate: A URL template (RFC 6570) for a checkout page for an offer. This approach allows merchants to specify a URL for online checkout of the offered product, by interpolating parameters such as the logged in user ID, product ID, quantity, discount code etc. Parameter naming and standardization are not specified here.
+- offeredBy: A pointer to the organization or person making the offer.
+- priceValidUntil: The date after which the price is no longer available.
+- shippingDetails: Indicates information about the shipping policies and options associated with an [[Offer]].
+
+## Usage Example
+
+```typescript
+interface Offer {
+  $context?: 'schema.org'
+  $type: 'Offer'
+  addOn?: Offer
+  checkoutPageURLTemplate?: string
+  offeredBy?: Organization | Person
+  priceValidUntil?: string
+  shippingDetails?: OfferShippingDetails
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Offer",
+  "name": "Example Offer",
+  "description": "An example of the Offer type",
+  "url": "https://example.com/offer",
+  "identifier": "example-offer-1"
+}
+```
+
+## Notes
+
+- Offer inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

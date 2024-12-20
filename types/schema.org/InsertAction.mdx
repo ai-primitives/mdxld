@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: InsertAction
+title: InsertAction
+description: The act of adding at a specific location in an ordered collection.
+properties:
+
+subClasses:
+  - AppendAction
+  - PrependAction
+parentClass: AddAction
+---
+
+# InsertAction
+
+The act of adding at a specific location in an ordered collection.
+
+## Type Hierarchy
+
+InsertAction is a type of AddAction.
+
+### Direct Subtypes
+
+The following types directly inherit from InsertAction:
+
+- AppendAction: The act of inserting at the end if an ordered collection.
+- PrependAction: The act of inserting at the beginning if an ordered collection.
+
+## Properties
+
+InsertAction defines the following properties in addition to those inherited from AddAction:
+
+
+
+## Usage Example
+
+```typescript
+interface InsertAction {
+  $context?: 'schema.org'
+  $type: 'InsertAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InsertAction",
+  "name": "Example InsertAction",
+  "description": "An example of the InsertAction type",
+  "url": "https://example.com/insertaction",
+  "identifier": "example-insertaction-1"
+}
+```
+
+## Notes
+
+- InsertAction inherits all properties from AddAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

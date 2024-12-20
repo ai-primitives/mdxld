@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: IPTCDigitalSourceEnumeration
+title: IPTCDigitalSourceEnumeration
+description: <a href="https://www.iptc.org/">IPTC</a> "Digital Source" codes for use with the [[digitalSourceType]] property, providing information about the source for a digital media object.
+In general these codes are not declared here to be mutually exclusive, although some combinations would be contradictory if applied simultaneously, or might be considered mutually incompatible by upstream maintainers of the definitions. See the IPTC <a href="https://www.iptc.org/std/photometadata/documentation/userguide/">documentation</a>
+ for <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">detailed definitions</a> of all terms.
+properties:
+
+subClasses:
+
+parentClass: MediaEnumeration
+---
+
+# IPTCDigitalSourceEnumeration
+
+<a href="https://www.iptc.org/">IPTC</a> "Digital Source" codes for use with the [[digitalSourceType]] property, providing information about the source for a digital media object.
+In general these codes are not declared here to be mutually exclusive, although some combinations would be contradictory if applied simultaneously, or might be considered mutually incompatible by upstream maintainers of the definitions. See the IPTC <a href="https://www.iptc.org/std/photometadata/documentation/userguide/">documentation</a>
+ for <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">detailed definitions</a> of all terms.
+
+## Type Hierarchy
+
+IPTCDigitalSourceEnumeration is a type of MediaEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from IPTCDigitalSourceEnumeration.
+
+## Properties
+
+IPTCDigitalSourceEnumeration defines the following properties in addition to those inherited from MediaEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface IPTCDigitalSourceEnumeration {
+  $context?: 'schema.org'
+  $type: 'IPTCDigitalSourceEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "IPTCDigitalSourceEnumeration",
+  "name": "Example IPTCDigitalSourceEnumeration",
+  "description": "An example of the IPTCDigitalSourceEnumeration type",
+  "url": "https://example.com/iptcdigitalsourceenumeration",
+  "identifier": "example-iptcdigitalsourceenumeration-1"
+}
+```
+
+## Notes
+
+- IPTCDigitalSourceEnumeration inherits all properties from MediaEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

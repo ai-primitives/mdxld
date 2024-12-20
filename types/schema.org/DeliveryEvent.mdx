@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: DeliveryEvent
+title: DeliveryEvent
+description: An event involving the delivery of an item.
+properties:
+  - accessCode
+  - availableFrom
+  - availableThrough
+subClasses:
+
+parentClass: Event
+---
+
+# DeliveryEvent
+
+An event involving the delivery of an item.
+
+## Type Hierarchy
+
+DeliveryEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from DeliveryEvent.
+
+## Properties
+
+DeliveryEvent defines the following properties in addition to those inherited from Event:
+
+- accessCode: Password, PIN, or access code needed for delivery (e.g. from a locker).
+- availableFrom: When the item is available for pickup from the store, locker, etc.
+- availableThrough: After this date, the item will no longer be available for pickup.
+
+## Usage Example
+
+```typescript
+interface DeliveryEvent {
+  $context?: 'schema.org'
+  $type: 'DeliveryEvent'
+  accessCode?: string
+  availableFrom?: string
+  availableThrough?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DeliveryEvent",
+  "name": "Example DeliveryEvent",
+  "description": "An example of the DeliveryEvent type",
+  "url": "https://example.com/deliveryevent",
+  "identifier": "example-deliveryevent-1"
+}
+```
+
+## Notes
+
+- DeliveryEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

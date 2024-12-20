@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: RentAction
+title: RentAction
+description: The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.
+properties:
+  - landlord
+  - realEstateAgent
+subClasses:
+
+parentClass: TradeAction
+---
+
+# RentAction
+
+The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.
+
+## Type Hierarchy
+
+RentAction is a type of TradeAction.
+
+### Direct Subtypes
+
+No types directly inherit from RentAction.
+
+## Properties
+
+RentAction defines the following properties in addition to those inherited from TradeAction:
+
+- landlord: A sub property of participant. The owner of the real estate property.
+- realEstateAgent: A sub property of participant. The real estate agent involved in the action.
+
+## Usage Example
+
+```typescript
+interface RentAction {
+  $context?: 'schema.org'
+  $type: 'RentAction'
+  landlord?: Organization | Person
+  realEstateAgent?: RealEstateAgent
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RentAction",
+  "name": "Example RentAction",
+  "description": "An example of the RentAction type",
+  "url": "https://example.com/rentaction",
+  "identifier": "example-rentaction-1"
+}
+```
+
+## Notes
+
+- RentAction inherits all properties from TradeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

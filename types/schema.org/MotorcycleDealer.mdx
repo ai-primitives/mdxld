@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MotorcycleDealer
+title: MotorcycleDealer
+description: A motorcycle dealer.
+properties:
+
+subClasses:
+
+parentClass: AutomotiveBusiness
+---
+
+# MotorcycleDealer
+
+A motorcycle dealer.
+
+## Type Hierarchy
+
+MotorcycleDealer is a type of AutomotiveBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from MotorcycleDealer.
+
+## Properties
+
+MotorcycleDealer defines the following properties in addition to those inherited from AutomotiveBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface MotorcycleDealer {
+  $context?: 'schema.org'
+  $type: 'MotorcycleDealer'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MotorcycleDealer",
+  "name": "Example MotorcycleDealer",
+  "description": "An example of the MotorcycleDealer type",
+  "url": "https://example.com/motorcycledealer",
+  "identifier": "example-motorcycledealer-1"
+}
+```
+
+## Notes
+
+- MotorcycleDealer inherits all properties from AutomotiveBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

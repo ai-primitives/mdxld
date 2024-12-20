@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CafeOrCoffeeShop
+title: CafeOrCoffeeShop
+description: A cafe or coffee shop.
+properties:
+
+subClasses:
+
+parentClass: FoodEstablishment
+---
+
+# CafeOrCoffeeShop
+
+A cafe or coffee shop.
+
+## Type Hierarchy
+
+CafeOrCoffeeShop is a type of FoodEstablishment.
+
+### Direct Subtypes
+
+No types directly inherit from CafeOrCoffeeShop.
+
+## Properties
+
+CafeOrCoffeeShop defines the following properties in addition to those inherited from FoodEstablishment:
+
+
+
+## Usage Example
+
+```typescript
+interface CafeOrCoffeeShop {
+  $context?: 'schema.org'
+  $type: 'CafeOrCoffeeShop'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CafeOrCoffeeShop",
+  "name": "Example CafeOrCoffeeShop",
+  "description": "An example of the CafeOrCoffeeShop type",
+  "url": "https://example.com/cafeorcoffeeshop",
+  "identifier": "example-cafeorcoffeeshop-1"
+}
+```
+
+## Notes
+
+- CafeOrCoffeeShop inherits all properties from FoodEstablishment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

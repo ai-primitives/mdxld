@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PaymentChargeSpecification
+title: PaymentChargeSpecification
+description: The costs of settling the payment using a particular payment method.
+properties:
+  - appliesToPaymentMethod
+subClasses:
+
+parentClass: PriceSpecification
+---
+
+# PaymentChargeSpecification
+
+The costs of settling the payment using a particular payment method.
+
+## Type Hierarchy
+
+PaymentChargeSpecification is a type of PriceSpecification.
+
+### Direct Subtypes
+
+No types directly inherit from PaymentChargeSpecification.
+
+## Properties
+
+PaymentChargeSpecification defines the following properties in addition to those inherited from PriceSpecification:
+
+- appliesToPaymentMethod: The payment method(s) to which the payment charge specification applies.
+
+## Usage Example
+
+```typescript
+interface PaymentChargeSpecification {
+  $context?: 'schema.org'
+  $type: 'PaymentChargeSpecification'
+  appliesToPaymentMethod?: PaymentMethod
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PaymentChargeSpecification",
+  "name": "Example PaymentChargeSpecification",
+  "description": "An example of the PaymentChargeSpecification type",
+  "url": "https://example.com/paymentchargespecification",
+  "identifier": "example-paymentchargespecification-1"
+}
+```
+
+## Notes
+
+- PaymentChargeSpecification inherits all properties from PriceSpecification
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

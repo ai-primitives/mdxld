@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HowToTool
+title: HowToTool
+description: A tool used (but not consumed) when performing instructions for how to achieve a result.
+properties:
+
+subClasses:
+
+parentClass: HowToItem
+---
+
+# HowToTool
+
+A tool used (but not consumed) when performing instructions for how to achieve a result.
+
+## Type Hierarchy
+
+HowToTool is a type of HowToItem.
+
+### Direct Subtypes
+
+No types directly inherit from HowToTool.
+
+## Properties
+
+HowToTool defines the following properties in addition to those inherited from HowToItem:
+
+
+
+## Usage Example
+
+```typescript
+interface HowToTool {
+  $context?: 'schema.org'
+  $type: 'HowToTool'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HowToTool",
+  "name": "Example HowToTool",
+  "description": "An example of the HowToTool type",
+  "url": "https://example.com/howtotool",
+  "identifier": "example-howtotool-1"
+}
+```
+
+## Notes
+
+- HowToTool inherits all properties from HowToItem
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

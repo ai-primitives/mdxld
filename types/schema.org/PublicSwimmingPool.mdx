@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PublicSwimmingPool
+title: PublicSwimmingPool
+description: A public swimming pool.
+properties:
+
+subClasses:
+
+parentClass: SportsActivityLocation
+---
+
+# PublicSwimmingPool
+
+A public swimming pool.
+
+## Type Hierarchy
+
+PublicSwimmingPool is a type of SportsActivityLocation.
+
+### Direct Subtypes
+
+No types directly inherit from PublicSwimmingPool.
+
+## Properties
+
+PublicSwimmingPool defines the following properties in addition to those inherited from SportsActivityLocation:
+
+
+
+## Usage Example
+
+```typescript
+interface PublicSwimmingPool {
+  $context?: 'schema.org'
+  $type: 'PublicSwimmingPool'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PublicSwimmingPool",
+  "name": "Example PublicSwimmingPool",
+  "description": "An example of the PublicSwimmingPool type",
+  "url": "https://example.com/publicswimmingpool",
+  "identifier": "example-publicswimmingpool-1"
+}
+```
+
+## Notes
+
+- PublicSwimmingPool inherits all properties from SportsActivityLocation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

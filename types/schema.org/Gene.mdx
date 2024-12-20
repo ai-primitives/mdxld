@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Gene
+title: Gene
+description: A discrete unit of inheritance which affects one or more biological traits (Source: [https://en.wikipedia.org/wiki/Gene](https://en.wikipedia.org/wiki/Gene)). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype).
+properties:
+  - alternativeOf
+  - encodesBioChemEntity
+  - expressedIn
+subClasses:
+
+parentClass: BioChemEntity
+---
+
+# Gene
+
+A discrete unit of inheritance which affects one or more biological traits (Source: [https://en.wikipedia.org/wiki/Gene](https://en.wikipedia.org/wiki/Gene)). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype).
+
+## Type Hierarchy
+
+Gene is a type of BioChemEntity.
+
+### Direct Subtypes
+
+No types directly inherit from Gene.
+
+## Properties
+
+Gene defines the following properties in addition to those inherited from BioChemEntity:
+
+- alternativeOf: Another gene which is a variation of this one.
+- encodesBioChemEntity: Another BioChemEntity encoded by this one. 
+- expressedIn: Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.
+
+## Usage Example
+
+```typescript
+interface Gene {
+  $context?: 'schema.org'
+  $type: 'Gene'
+  alternativeOf?: Gene
+  encodesBioChemEntity?: BioChemEntity
+  expressedIn?: AnatomicalStructure | AnatomicalSystem | BioChemEntity | DefinedTerm
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Gene",
+  "name": "Example Gene",
+  "description": "An example of the Gene type",
+  "url": "https://example.com/gene",
+  "identifier": "example-gene-1"
+}
+```
+
+## Notes
+
+- Gene inherits all properties from BioChemEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

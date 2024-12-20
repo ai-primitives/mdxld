@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CheckInAction
+title: CheckInAction
+description: The act of an agent communicating (service provider, social media, etc) their arrival by registering/confirming for a previously reserved service (e.g. flight check-in) or at a place (e.g. hotel), possibly resulting in a result (boarding pass, etc).\n\nRelated actions:\n\n* [[CheckOutAction]]: The antonym of CheckInAction.\n* [[ArriveAction]]: Unlike ArriveAction, CheckInAction implies that the agent is informing/confirming the start of a previously reserved service.\n* [[ConfirmAction]]: Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming the *start* of a previously reserved service rather than its validity/existence.
+properties:
+
+subClasses:
+
+parentClass: CommunicateAction
+---
+
+# CheckInAction
+
+The act of an agent communicating (service provider, social media, etc) their arrival by registering/confirming for a previously reserved service (e.g. flight check-in) or at a place (e.g. hotel), possibly resulting in a result (boarding pass, etc).\n\nRelated actions:\n\n* [[CheckOutAction]]: The antonym of CheckInAction.\n* [[ArriveAction]]: Unlike ArriveAction, CheckInAction implies that the agent is informing/confirming the start of a previously reserved service.\n* [[ConfirmAction]]: Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming the *start* of a previously reserved service rather than its validity/existence.
+
+## Type Hierarchy
+
+CheckInAction is a type of CommunicateAction.
+
+### Direct Subtypes
+
+No types directly inherit from CheckInAction.
+
+## Properties
+
+CheckInAction defines the following properties in addition to those inherited from CommunicateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface CheckInAction {
+  $context?: 'schema.org'
+  $type: 'CheckInAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CheckInAction",
+  "name": "Example CheckInAction",
+  "description": "An example of the CheckInAction type",
+  "url": "https://example.com/checkinaction",
+  "identifier": "example-checkinaction-1"
+}
+```
+
+## Notes
+
+- CheckInAction inherits all properties from CommunicateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

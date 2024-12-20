@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WatchAction
+title: WatchAction
+description: The act of consuming dynamic/moving visual content.
+properties:
+
+subClasses:
+
+parentClass: ConsumeAction
+---
+
+# WatchAction
+
+The act of consuming dynamic/moving visual content.
+
+## Type Hierarchy
+
+WatchAction is a type of ConsumeAction.
+
+### Direct Subtypes
+
+No types directly inherit from WatchAction.
+
+## Properties
+
+WatchAction defines the following properties in addition to those inherited from ConsumeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface WatchAction {
+  $context?: 'schema.org'
+  $type: 'WatchAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WatchAction",
+  "name": "Example WatchAction",
+  "description": "An example of the WatchAction type",
+  "url": "https://example.com/watchaction",
+  "identifier": "example-watchaction-1"
+}
+```
+
+## Notes
+
+- WatchAction inherits all properties from ConsumeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

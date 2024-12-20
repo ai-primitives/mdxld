@@ -1,0 +1,66 @@
+---
+$context: schema.org
+$type: MedicalRiskEstimator
+title: MedicalRiskEstimator
+description: Any rule set or interactive tool for estimating the risk of developing a complication or condition.
+properties:
+  - estimatesRiskOf
+  - includedRiskFactor
+subClasses:
+  - MedicalRiskCalculator
+  - MedicalRiskScore
+parentClass: MedicalEntity
+---
+
+# MedicalRiskEstimator
+
+Any rule set or interactive tool for estimating the risk of developing a complication or condition.
+
+## Type Hierarchy
+
+MedicalRiskEstimator is a type of MedicalEntity.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalRiskEstimator:
+
+- MedicalRiskCalculator: A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.
+- MedicalRiskScore: A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.
+
+## Properties
+
+MedicalRiskEstimator defines the following properties in addition to those inherited from MedicalEntity:
+
+- estimatesRiskOf: The condition, complication, or symptom whose risk is being estimated.
+- includedRiskFactor: A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.
+
+## Usage Example
+
+```typescript
+interface MedicalRiskEstimator {
+  $context?: 'schema.org'
+  $type: 'MedicalRiskEstimator'
+  estimatesRiskOf?: MedicalEntity
+  includedRiskFactor?: MedicalRiskFactor
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalRiskEstimator",
+  "name": "Example MedicalRiskEstimator",
+  "description": "An example of the MedicalRiskEstimator type",
+  "url": "https://example.com/medicalriskestimator",
+  "identifier": "example-medicalriskestimator-1"
+}
+```
+
+## Notes
+
+- MedicalRiskEstimator inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

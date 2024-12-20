@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: DefinedTermSet
+title: DefinedTermSet
+description: A set of defined terms, for example a set of categories or a classification scheme, a glossary, dictionary or enumeration.
+properties:
+
+subClasses:
+  - CategoryCodeSet
+parentClass: CreativeWork
+---
+
+# DefinedTermSet
+
+A set of defined terms, for example a set of categories or a classification scheme, a glossary, dictionary or enumeration.
+
+## Type Hierarchy
+
+DefinedTermSet is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from DefinedTermSet:
+
+- CategoryCodeSet: A set of Category Code values.
+
+## Properties
+
+DefinedTermSet defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface DefinedTermSet {
+  $context?: 'schema.org'
+  $type: 'DefinedTermSet'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DefinedTermSet",
+  "name": "Example DefinedTermSet",
+  "description": "An example of the DefinedTermSet type",
+  "url": "https://example.com/definedtermset",
+  "identifier": "example-definedtermset-1"
+}
+```
+
+## Notes
+
+- DefinedTermSet inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

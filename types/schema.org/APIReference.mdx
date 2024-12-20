@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: APIReference
+title: APIReference
+description: Reference documentation for application programming interfaces (APIs).
+properties:
+  - assembly
+  - assemblyVersion
+  - executableLibraryName
+  - programmingModel
+  - targetPlatform
+subClasses:
+
+parentClass: TechArticle
+---
+
+# APIReference
+
+Reference documentation for application programming interfaces (APIs).
+
+## Type Hierarchy
+
+APIReference is a type of TechArticle.
+
+### Direct Subtypes
+
+No types directly inherit from APIReference.
+
+## Properties
+
+APIReference defines the following properties in addition to those inherited from TechArticle:
+
+- assembly: Library file name, e.g., mscorlib.dll, system.web.dll.
+- assemblyVersion: Associated product/technology version. E.g., .NET Framework 4.5.
+- executableLibraryName: Library file name, e.g., mscorlib.dll, system.web.dll.
+- programmingModel: Indicates whether API is managed or unmanaged.
+- targetPlatform: Type of app development: phone, Metro style, desktop, XBox, etc.
+
+## Usage Example
+
+```typescript
+interface APIReference {
+  $context?: 'schema.org'
+  $type: 'APIReference'
+  assembly?: string
+  assemblyVersion?: string
+  executableLibraryName?: string
+  programmingModel?: string
+  targetPlatform?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "APIReference",
+  "name": "Example APIReference",
+  "description": "An example of the APIReference type",
+  "url": "https://example.com/apireference",
+  "identifier": "example-apireference-1"
+}
+```
+
+## Notes
+
+- APIReference inherits all properties from TechArticle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: FMRadioChannel
+title: FMRadioChannel
+description: A radio channel that uses FM.
+properties:
+
+subClasses:
+
+parentClass: RadioChannel
+---
+
+# FMRadioChannel
+
+A radio channel that uses FM.
+
+## Type Hierarchy
+
+FMRadioChannel is a type of RadioChannel.
+
+### Direct Subtypes
+
+No types directly inherit from FMRadioChannel.
+
+## Properties
+
+FMRadioChannel defines the following properties in addition to those inherited from RadioChannel:
+
+
+
+## Usage Example
+
+```typescript
+interface FMRadioChannel {
+  $context?: 'schema.org'
+  $type: 'FMRadioChannel'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FMRadioChannel",
+  "name": "Example FMRadioChannel",
+  "description": "An example of the FMRadioChannel type",
+  "url": "https://example.com/fmradiochannel",
+  "identifier": "example-fmradiochannel-1"
+}
+```
+
+## Notes
+
+- FMRadioChannel inherits all properties from RadioChannel
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

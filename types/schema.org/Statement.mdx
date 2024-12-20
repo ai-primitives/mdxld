@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Statement
+title: Statement
+description: A statement about something, for example a fun or interesting fact. If known, the main entity this statement is about can be indicated using mainEntity. For more formal claims (e.g. in Fact Checking), consider using [[Claim]] instead. Use the [[text]] property to capture the text of the statement.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Statement
+
+A statement about something, for example a fun or interesting fact. If known, the main entity this statement is about can be indicated using mainEntity. For more formal claims (e.g. in Fact Checking), consider using [[Claim]] instead. Use the [[text]] property to capture the text of the statement.
+
+## Type Hierarchy
+
+Statement is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Statement.
+
+## Properties
+
+Statement defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Statement {
+  $context?: 'schema.org'
+  $type: 'Statement'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Statement",
+  "name": "Example Statement",
+  "description": "An example of the Statement type",
+  "url": "https://example.com/statement",
+  "identifier": "example-statement-1"
+}
+```
+
+## Notes
+
+- Statement inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

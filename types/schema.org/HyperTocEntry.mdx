@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: HyperTocEntry
+title: HyperTocEntry
+description: A HyperToEntry is an item within a [[HyperToc]], which represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. The media object itself is indicated using [[associatedMedia]]. Each section of interest within that content can be described with a [[HyperTocEntry]], with associated [[startOffset]] and [[endOffset]]. When several entries are all from the same file, [[associatedMedia]] is used on the overarching [[HyperTocEntry]]; if the content has been split into multiple files, they can be referenced using [[associatedMedia]] on each [[HyperTocEntry]].
+properties:
+  - tocContinuation
+  - utterances
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# HyperTocEntry
+
+A HyperToEntry is an item within a [[HyperToc]], which represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. The media object itself is indicated using [[associatedMedia]]. Each section of interest within that content can be described with a [[HyperTocEntry]], with associated [[startOffset]] and [[endOffset]]. When several entries are all from the same file, [[associatedMedia]] is used on the overarching [[HyperTocEntry]]; if the content has been split into multiple files, they can be referenced using [[associatedMedia]] on each [[HyperTocEntry]].
+
+## Type Hierarchy
+
+HyperTocEntry is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from HyperTocEntry.
+
+## Properties
+
+HyperTocEntry defines the following properties in addition to those inherited from CreativeWork:
+
+- tocContinuation: A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or render.
+- utterances: Text of an utterances (spoken words, lyrics etc.) that occurs at a certain section of a media object, represented as a [[HyperTocEntry]].
+
+## Usage Example
+
+```typescript
+interface HyperTocEntry {
+  $context?: 'schema.org'
+  $type: 'HyperTocEntry'
+  tocContinuation?: HyperTocEntry
+  utterances?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HyperTocEntry",
+  "name": "Example HyperTocEntry",
+  "description": "An example of the HyperTocEntry type",
+  "url": "https://example.com/hypertocentry",
+  "identifier": "example-hypertocentry-1"
+}
+```
+
+## Notes
+
+- HyperTocEntry inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

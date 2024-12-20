@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MovingCompany
+title: MovingCompany
+description: A moving company.
+properties:
+
+subClasses:
+
+parentClass: HomeAndConstructionBusiness
+---
+
+# MovingCompany
+
+A moving company.
+
+## Type Hierarchy
+
+MovingCompany is a type of HomeAndConstructionBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from MovingCompany.
+
+## Properties
+
+MovingCompany defines the following properties in addition to those inherited from HomeAndConstructionBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface MovingCompany {
+  $context?: 'schema.org'
+  $type: 'MovingCompany'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MovingCompany",
+  "name": "Example MovingCompany",
+  "description": "An example of the MovingCompany type",
+  "url": "https://example.com/movingcompany",
+  "identifier": "example-movingcompany-1"
+}
+```
+
+## Notes
+
+- MovingCompany inherits all properties from HomeAndConstructionBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

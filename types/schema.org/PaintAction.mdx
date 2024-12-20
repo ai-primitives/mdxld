@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PaintAction
+title: PaintAction
+description: The act of producing a painting, typically with paint and canvas as instruments.
+properties:
+
+subClasses:
+
+parentClass: CreateAction
+---
+
+# PaintAction
+
+The act of producing a painting, typically with paint and canvas as instruments.
+
+## Type Hierarchy
+
+PaintAction is a type of CreateAction.
+
+### Direct Subtypes
+
+No types directly inherit from PaintAction.
+
+## Properties
+
+PaintAction defines the following properties in addition to those inherited from CreateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface PaintAction {
+  $context?: 'schema.org'
+  $type: 'PaintAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PaintAction",
+  "name": "Example PaintAction",
+  "description": "An example of the PaintAction type",
+  "url": "https://example.com/paintaction",
+  "identifier": "example-paintaction-1"
+}
+```
+
+## Notes
+
+- PaintAction inherits all properties from CreateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

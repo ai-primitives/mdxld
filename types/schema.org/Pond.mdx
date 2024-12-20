@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Pond
+title: Pond
+description: A pond.
+properties:
+
+subClasses:
+
+parentClass: BodyOfWater
+---
+
+# Pond
+
+A pond.
+
+## Type Hierarchy
+
+Pond is a type of BodyOfWater.
+
+### Direct Subtypes
+
+No types directly inherit from Pond.
+
+## Properties
+
+Pond defines the following properties in addition to those inherited from BodyOfWater:
+
+
+
+## Usage Example
+
+```typescript
+interface Pond {
+  $context?: 'schema.org'
+  $type: 'Pond'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Pond",
+  "name": "Example Pond",
+  "description": "An example of the Pond type",
+  "url": "https://example.com/pond",
+  "identifier": "example-pond-1"
+}
+```
+
+## Notes
+
+- Pond inherits all properties from BodyOfWater
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

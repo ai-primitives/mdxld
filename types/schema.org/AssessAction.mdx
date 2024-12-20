@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: AssessAction
+title: AssessAction
+description: The act of forming one's opinion, reaction or sentiment.
+properties:
+
+subClasses:
+  - ChooseAction
+  - IgnoreAction
+  - ReactAction
+  - ReviewAction
+parentClass: Action
+---
+
+# AssessAction
+
+The act of forming one's opinion, reaction or sentiment.
+
+## Type Hierarchy
+
+AssessAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from AssessAction:
+
+- ChooseAction: The act of expressing a preference from a set of options or a large or unbounded set of choices/options.
+- IgnoreAction: The act of intentionally disregarding the object. An agent ignores an object.
+- ReactAction: The act of responding instinctively and emotionally to an object, expressing a sentiment.
+- ReviewAction: The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.
+
+## Properties
+
+AssessAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface AssessAction {
+  $context?: 'schema.org'
+  $type: 'AssessAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AssessAction",
+  "name": "Example AssessAction",
+  "description": "An example of the AssessAction type",
+  "url": "https://example.com/assessaction",
+  "identifier": "example-assessaction-1"
+}
+```
+
+## Notes
+
+- AssessAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

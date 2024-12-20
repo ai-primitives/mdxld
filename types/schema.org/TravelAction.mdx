@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TravelAction
+title: TravelAction
+description: The act of traveling from a fromLocation to a destination by a specified mode of transport, optionally with participants.
+properties:
+
+subClasses:
+
+parentClass: MoveAction
+---
+
+# TravelAction
+
+The act of traveling from a fromLocation to a destination by a specified mode of transport, optionally with participants.
+
+## Type Hierarchy
+
+TravelAction is a type of MoveAction.
+
+### Direct Subtypes
+
+No types directly inherit from TravelAction.
+
+## Properties
+
+TravelAction defines the following properties in addition to those inherited from MoveAction:
+
+
+
+## Usage Example
+
+```typescript
+interface TravelAction {
+  $context?: 'schema.org'
+  $type: 'TravelAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TravelAction",
+  "name": "Example TravelAction",
+  "description": "An example of the TravelAction type",
+  "url": "https://example.com/travelaction",
+  "identifier": "example-travelaction-1"
+}
+```
+
+## Notes
+
+- TravelAction inherits all properties from MoveAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

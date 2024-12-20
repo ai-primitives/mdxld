@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HyperToc
+title: HyperToc
+description: A HyperToc represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. Items in the table of contents are indicated using the [[tocEntry]] property, and typed [[HyperTocEntry]]. For cases where the same larger work is split into multiple files, [[associatedMedia]] can be used on individual [[HyperTocEntry]] items.
+properties:
+  - tocEntry
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# HyperToc
+
+A HyperToc represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. Items in the table of contents are indicated using the [[tocEntry]] property, and typed [[HyperTocEntry]]. For cases where the same larger work is split into multiple files, [[associatedMedia]] can be used on individual [[HyperTocEntry]] items.
+
+## Type Hierarchy
+
+HyperToc is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from HyperToc.
+
+## Properties
+
+HyperToc defines the following properties in addition to those inherited from CreativeWork:
+
+- tocEntry: Indicates a [[HyperTocEntry]] in a [[HyperToc]].
+
+## Usage Example
+
+```typescript
+interface HyperToc {
+  $context?: 'schema.org'
+  $type: 'HyperToc'
+  tocEntry?: HyperTocEntry
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HyperToc",
+  "name": "Example HyperToc",
+  "description": "An example of the HyperToc type",
+  "url": "https://example.com/hypertoc",
+  "identifier": "example-hypertoc-1"
+}
+```
+
+## Notes
+
+- HyperToc inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

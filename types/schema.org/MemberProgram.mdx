@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MemberProgram
+title: MemberProgram
+description: A MemberProgram defines a loyalty (or membership) program that provides its members with certain benefits, for example better pricing, free shipping or returns, or the ability to earn loyalty points. Member programs may have multiple tiers, for example silver and gold members, each with different benefits.
+properties:
+  - hasTiers
+subClasses:
+
+parentClass: Intangible
+---
+
+# MemberProgram
+
+A MemberProgram defines a loyalty (or membership) program that provides its members with certain benefits, for example better pricing, free shipping or returns, or the ability to earn loyalty points. Member programs may have multiple tiers, for example silver and gold members, each with different benefits.
+
+## Type Hierarchy
+
+MemberProgram is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from MemberProgram.
+
+## Properties
+
+MemberProgram defines the following properties in addition to those inherited from Intangible:
+
+- hasTiers: The tiers of a member program.
+
+## Usage Example
+
+```typescript
+interface MemberProgram {
+  $context?: 'schema.org'
+  $type: 'MemberProgram'
+  hasTiers?: MemberProgramTier
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MemberProgram",
+  "name": "Example MemberProgram",
+  "description": "An example of the MemberProgram type",
+  "url": "https://example.com/memberprogram",
+  "identifier": "example-memberprogram-1"
+}
+```
+
+## Notes
+
+- MemberProgram inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

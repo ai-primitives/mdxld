@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DepartAction
+title: DepartAction
+description: The act of  departing from a place. An agent departs from a fromLocation for a destination, optionally with participants.
+properties:
+
+subClasses:
+
+parentClass: MoveAction
+---
+
+# DepartAction
+
+The act of  departing from a place. An agent departs from a fromLocation for a destination, optionally with participants.
+
+## Type Hierarchy
+
+DepartAction is a type of MoveAction.
+
+### Direct Subtypes
+
+No types directly inherit from DepartAction.
+
+## Properties
+
+DepartAction defines the following properties in addition to those inherited from MoveAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DepartAction {
+  $context?: 'schema.org'
+  $type: 'DepartAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DepartAction",
+  "name": "Example DepartAction",
+  "description": "An example of the DepartAction type",
+  "url": "https://example.com/departaction",
+  "identifier": "example-departaction-1"
+}
+```
+
+## Notes
+
+- DepartAction inherits all properties from MoveAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

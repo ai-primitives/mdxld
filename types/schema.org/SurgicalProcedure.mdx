@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SurgicalProcedure
+title: SurgicalProcedure
+description: A medical procedure involving an incision with instruments; performed for diagnose, or therapeutic purposes.
+properties:
+
+subClasses:
+
+parentClass: MedicalProcedure
+---
+
+# SurgicalProcedure
+
+A medical procedure involving an incision with instruments; performed for diagnose, or therapeutic purposes.
+
+## Type Hierarchy
+
+SurgicalProcedure is a type of MedicalProcedure.
+
+### Direct Subtypes
+
+No types directly inherit from SurgicalProcedure.
+
+## Properties
+
+SurgicalProcedure defines the following properties in addition to those inherited from MedicalProcedure:
+
+
+
+## Usage Example
+
+```typescript
+interface SurgicalProcedure {
+  $context?: 'schema.org'
+  $type: 'SurgicalProcedure'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SurgicalProcedure",
+  "name": "Example SurgicalProcedure",
+  "description": "An example of the SurgicalProcedure type",
+  "url": "https://example.com/surgicalprocedure",
+  "identifier": "example-surgicalprocedure-1"
+}
+```
+
+## Notes
+
+- SurgicalProcedure inherits all properties from MedicalProcedure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

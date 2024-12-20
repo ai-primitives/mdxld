@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: MedicalOrganization
+title: MedicalOrganization
+description: A medical organization (physical or not), such as hospital, institution or clinic.
+properties:
+  - isAcceptingNewPatients
+subClasses:
+  - DiagnosticLab
+  - VeterinaryCare
+parentClass: Organization
+---
+
+# MedicalOrganization
+
+A medical organization (physical or not), such as hospital, institution or clinic.
+
+## Type Hierarchy
+
+MedicalOrganization is a type of Organization.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalOrganization:
+
+- DiagnosticLab: A medical laboratory that offers on-site or off-site diagnostic services.
+- VeterinaryCare: A vet's office.
+
+## Properties
+
+MedicalOrganization defines the following properties in addition to those inherited from Organization:
+
+- isAcceptingNewPatients: Whether the provider is accepting new patients.
+
+## Usage Example
+
+```typescript
+interface MedicalOrganization {
+  $context?: 'schema.org'
+  $type: 'MedicalOrganization'
+  isAcceptingNewPatients?: boolean
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalOrganization",
+  "name": "Example MedicalOrganization",
+  "description": "An example of the MedicalOrganization type",
+  "url": "https://example.com/medicalorganization",
+  "identifier": "example-medicalorganization-1"
+}
+```
+
+## Notes
+
+- MedicalOrganization inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

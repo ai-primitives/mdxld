@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BoatTerminal
+title: BoatTerminal
+description: A terminal for boats, ships, and other water vessels.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# BoatTerminal
+
+A terminal for boats, ships, and other water vessels.
+
+## Type Hierarchy
+
+BoatTerminal is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from BoatTerminal.
+
+## Properties
+
+BoatTerminal defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface BoatTerminal {
+  $context?: 'schema.org'
+  $type: 'BoatTerminal'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BoatTerminal",
+  "name": "Example BoatTerminal",
+  "description": "An example of the BoatTerminal type",
+  "url": "https://example.com/boatterminal",
+  "identifier": "example-boatterminal-1"
+}
+```
+
+## Notes
+
+- BoatTerminal inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

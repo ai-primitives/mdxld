@@ -1,0 +1,73 @@
+---
+$context: schema.org
+$type: QuantitativeValueDistribution
+title: QuantitativeValueDistribution
+description: A statistical distribution of values.
+properties:
+  - median
+  - percentile10
+  - percentile25
+  - percentile75
+  - percentile90
+subClasses:
+  - MonetaryAmountDistribution
+parentClass: StructuredValue
+---
+
+# QuantitativeValueDistribution
+
+A statistical distribution of values.
+
+## Type Hierarchy
+
+QuantitativeValueDistribution is a type of StructuredValue.
+
+### Direct Subtypes
+
+The following types directly inherit from QuantitativeValueDistribution:
+
+- MonetaryAmountDistribution: A statistical distribution of monetary amounts.
+
+## Properties
+
+QuantitativeValueDistribution defines the following properties in addition to those inherited from StructuredValue:
+
+- median: The median value.
+- percentile10: The 10th percentile value.
+- percentile25: The 25th percentile value.
+- percentile75: The 75th percentile value.
+- percentile90: The 90th percentile value.
+
+## Usage Example
+
+```typescript
+interface QuantitativeValueDistribution {
+  $context?: 'schema.org'
+  $type: 'QuantitativeValueDistribution'
+  median?: number
+  percentile10?: number
+  percentile25?: number
+  percentile75?: number
+  percentile90?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "QuantitativeValueDistribution",
+  "name": "Example QuantitativeValueDistribution",
+  "description": "An example of the QuantitativeValueDistribution type",
+  "url": "https://example.com/quantitativevaluedistribution",
+  "identifier": "example-quantitativevaluedistribution-1"
+}
+```
+
+## Notes
+
+- QuantitativeValueDistribution inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

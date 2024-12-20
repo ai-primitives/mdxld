@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Dentist
+title: Dentist
+description: A dentist.
+properties:
+
+subClasses:
+
+
+---
+
+# Dentist
+
+A dentist.
+
+## Type Hierarchy
+
+Dentist is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from Dentist.
+
+## Properties
+
+Dentist defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface Dentist {
+  $context?: 'schema.org'
+  $type: 'Dentist'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Dentist",
+  "name": "Example Dentist",
+  "description": "An example of the Dentist type",
+  "url": "https://example.com/dentist",
+  "identifier": "example-dentist-1"
+}
+```
+
+## Notes
+
+- Dentist inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

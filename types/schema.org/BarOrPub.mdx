@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BarOrPub
+title: BarOrPub
+description: A bar or pub.
+properties:
+
+subClasses:
+
+parentClass: FoodEstablishment
+---
+
+# BarOrPub
+
+A bar or pub.
+
+## Type Hierarchy
+
+BarOrPub is a type of FoodEstablishment.
+
+### Direct Subtypes
+
+No types directly inherit from BarOrPub.
+
+## Properties
+
+BarOrPub defines the following properties in addition to those inherited from FoodEstablishment:
+
+
+
+## Usage Example
+
+```typescript
+interface BarOrPub {
+  $context?: 'schema.org'
+  $type: 'BarOrPub'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BarOrPub",
+  "name": "Example BarOrPub",
+  "description": "An example of the BarOrPub type",
+  "url": "https://example.com/barorpub",
+  "identifier": "example-barorpub-1"
+}
+```
+
+## Notes
+
+- BarOrPub inherits all properties from FoodEstablishment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

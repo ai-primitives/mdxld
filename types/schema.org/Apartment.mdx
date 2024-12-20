@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Apartment
+title: Apartment
+description: An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).
+properties:
+
+subClasses:
+
+parentClass: Accommodation
+---
+
+# Apartment
+
+An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).
+
+## Type Hierarchy
+
+Apartment is a type of Accommodation.
+
+### Direct Subtypes
+
+No types directly inherit from Apartment.
+
+## Properties
+
+Apartment defines the following properties in addition to those inherited from Accommodation:
+
+
+
+## Usage Example
+
+```typescript
+interface Apartment {
+  $context?: 'schema.org'
+  $type: 'Apartment'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Apartment",
+  "name": "Example Apartment",
+  "description": "An example of the Apartment type",
+  "url": "https://example.com/apartment",
+  "identifier": "example-apartment-1"
+}
+```
+
+## Notes
+
+- Apartment inherits all properties from Accommodation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

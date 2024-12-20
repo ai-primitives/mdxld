@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Country
+title: Country
+description: A country.
+properties:
+
+subClasses:
+
+parentClass: AdministrativeArea
+---
+
+# Country
+
+A country.
+
+## Type Hierarchy
+
+Country is a type of AdministrativeArea.
+
+### Direct Subtypes
+
+No types directly inherit from Country.
+
+## Properties
+
+Country defines the following properties in addition to those inherited from AdministrativeArea:
+
+
+
+## Usage Example
+
+```typescript
+interface Country {
+  $context?: 'schema.org'
+  $type: 'Country'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Country",
+  "name": "Example Country",
+  "description": "An example of the Country type",
+  "url": "https://example.com/country",
+  "identifier": "example-country-1"
+}
+```
+
+## Notes
+
+- Country inherits all properties from AdministrativeArea
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

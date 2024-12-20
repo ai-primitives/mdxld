@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Play
+title: Play
+description: A play is a form of literature, usually consisting of dialogue between characters, intended for theatrical performance rather than just reading. Note: A performance of a Play would be a [[TheaterEvent]] or [[BroadcastEvent]] - the *Play* being the [[workPerformed]].
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Play
+
+A play is a form of literature, usually consisting of dialogue between characters, intended for theatrical performance rather than just reading. Note: A performance of a Play would be a [[TheaterEvent]] or [[BroadcastEvent]] - the *Play* being the [[workPerformed]].
+
+## Type Hierarchy
+
+Play is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Play.
+
+## Properties
+
+Play defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Play {
+  $context?: 'schema.org'
+  $type: 'Play'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Play",
+  "name": "Example Play",
+  "description": "An example of the Play type",
+  "url": "https://example.com/play",
+  "identifier": "example-play-1"
+}
+```
+
+## Notes
+
+- Play inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

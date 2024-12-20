@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PublicationVolume
+title: PublicationVolume
+description: A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+properties:
+  - volumeNumber
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# PublicationVolume
+
+A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+
+## Type Hierarchy
+
+PublicationVolume is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from PublicationVolume.
+
+## Properties
+
+PublicationVolume defines the following properties in addition to those inherited from CreativeWork:
+
+- volumeNumber: Identifies the volume of publication or multi-part work; for example, "iii" or "2".
+
+## Usage Example
+
+```typescript
+interface PublicationVolume {
+  $context?: 'schema.org'
+  $type: 'PublicationVolume'
+  volumeNumber?: number | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PublicationVolume",
+  "name": "Example PublicationVolume",
+  "description": "An example of the PublicationVolume type",
+  "url": "https://example.com/publicationvolume",
+  "identifier": "example-publicationvolume-1"
+}
+```
+
+## Notes
+
+- PublicationVolume inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

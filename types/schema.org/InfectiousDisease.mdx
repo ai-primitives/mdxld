@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: InfectiousDisease
+title: InfectiousDisease
+description: An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease.
+properties:
+  - infectiousAgent
+  - infectiousAgentClass
+  - transmissionMethod
+subClasses:
+
+parentClass: MedicalCondition
+---
+
+# InfectiousDisease
+
+An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease.
+
+## Type Hierarchy
+
+InfectiousDisease is a type of MedicalCondition.
+
+### Direct Subtypes
+
+No types directly inherit from InfectiousDisease.
+
+## Properties
+
+InfectiousDisease defines the following properties in addition to those inherited from MedicalCondition:
+
+- infectiousAgent: The actual infectious agent, such as a specific bacterium.
+- infectiousAgentClass: The class of infectious agent (bacteria, prion, etc.) that causes the disease.
+- transmissionMethod: How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
+
+## Usage Example
+
+```typescript
+interface InfectiousDisease {
+  $context?: 'schema.org'
+  $type: 'InfectiousDisease'
+  infectiousAgent?: string
+  infectiousAgentClass?: InfectiousAgentClass
+  transmissionMethod?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InfectiousDisease",
+  "name": "Example InfectiousDisease",
+  "description": "An example of the InfectiousDisease type",
+  "url": "https://example.com/infectiousdisease",
+  "identifier": "example-infectiousdisease-1"
+}
+```
+
+## Notes
+
+- InfectiousDisease inherits all properties from MedicalCondition
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

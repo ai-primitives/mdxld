@@ -1,0 +1,74 @@
+---
+$context: schema.org
+$type: TrainTrip
+title: TrainTrip
+description: A trip on a commercial train line.
+properties:
+  - arrivalPlatform
+  - arrivalStation
+  - departurePlatform
+  - departureStation
+  - trainName
+  - trainNumber
+subClasses:
+
+parentClass: Trip
+---
+
+# TrainTrip
+
+A trip on a commercial train line.
+
+## Type Hierarchy
+
+TrainTrip is a type of Trip.
+
+### Direct Subtypes
+
+No types directly inherit from TrainTrip.
+
+## Properties
+
+TrainTrip defines the following properties in addition to those inherited from Trip:
+
+- arrivalPlatform: The platform where the train arrives.
+- arrivalStation: The station where the train trip ends.
+- departurePlatform: The platform from which the train departs.
+- departureStation: The station from which the train departs.
+- trainName: The name of the train (e.g. The Orient Express).
+- trainNumber: The unique identifier for the train.
+
+## Usage Example
+
+```typescript
+interface TrainTrip {
+  $context?: 'schema.org'
+  $type: 'TrainTrip'
+  arrivalPlatform?: string
+  arrivalStation?: TrainStation
+  departurePlatform?: string
+  departureStation?: TrainStation
+  trainName?: string
+  trainNumber?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TrainTrip",
+  "name": "Example TrainTrip",
+  "description": "An example of the TrainTrip type",
+  "url": "https://example.com/traintrip",
+  "identifier": "example-traintrip-1"
+}
+```
+
+## Notes
+
+- TrainTrip inherits all properties from Trip
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

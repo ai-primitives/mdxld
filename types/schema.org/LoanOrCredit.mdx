@@ -1,0 +1,79 @@
+---
+$context: schema.org
+$type: LoanOrCredit
+title: LoanOrCredit
+description: A financial product for the loaning of an amount of money, or line of credit, under agreed terms and charges.
+properties:
+  - gracePeriod
+  - loanRepaymentForm
+  - loanTerm
+  - loanType
+  - recourseLoan
+  - renegotiableLoan
+  - requiredCollateral
+subClasses:
+  - MortgageLoan
+parentClass: FinancialProduct
+---
+
+# LoanOrCredit
+
+A financial product for the loaning of an amount of money, or line of credit, under agreed terms and charges.
+
+## Type Hierarchy
+
+LoanOrCredit is a type of FinancialProduct.
+
+### Direct Subtypes
+
+The following types directly inherit from LoanOrCredit:
+
+- MortgageLoan: A loan in which property or real estate is used as collateral. (A loan securitized against some real estate.)
+
+## Properties
+
+LoanOrCredit defines the following properties in addition to those inherited from FinancialProduct:
+
+- gracePeriod: The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to pay) is deemed to have occurred.
+- loanRepaymentForm: A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally include part principal plus interest in each payment.
+- loanTerm: The duration of the loan or credit agreement.
+- loanType: The type of a loan or credit.
+- recourseLoan: The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.
+- renegotiableLoan: Whether the terms for payment of interest can be renegotiated during the life of the loan.
+- requiredCollateral: Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities, etc.)
+
+## Usage Example
+
+```typescript
+interface LoanOrCredit {
+  $context?: 'schema.org'
+  $type: 'LoanOrCredit'
+  gracePeriod?: Duration
+  loanRepaymentForm?: RepaymentSpecification
+  loanTerm?: QuantitativeValue
+  loanType?: string
+  recourseLoan?: boolean
+  renegotiableLoan?: boolean
+  requiredCollateral?: Thing | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LoanOrCredit",
+  "name": "Example LoanOrCredit",
+  "description": "An example of the LoanOrCredit type",
+  "url": "https://example.com/loanorcredit",
+  "identifier": "example-loanorcredit-1"
+}
+```
+
+## Notes
+
+- LoanOrCredit inherits all properties from FinancialProduct
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DriveWheelConfigurationValue
+title: DriveWheelConfigurationValue
+description: A value indicating which roadwheels will receive torque.
+properties:
+
+subClasses:
+
+parentClass: QualitativeValue
+---
+
+# DriveWheelConfigurationValue
+
+A value indicating which roadwheels will receive torque.
+
+## Type Hierarchy
+
+DriveWheelConfigurationValue is a type of QualitativeValue.
+
+### Direct Subtypes
+
+No types directly inherit from DriveWheelConfigurationValue.
+
+## Properties
+
+DriveWheelConfigurationValue defines the following properties in addition to those inherited from QualitativeValue:
+
+
+
+## Usage Example
+
+```typescript
+interface DriveWheelConfigurationValue {
+  $context?: 'schema.org'
+  $type: 'DriveWheelConfigurationValue'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DriveWheelConfigurationValue",
+  "name": "Example DriveWheelConfigurationValue",
+  "description": "An example of the DriveWheelConfigurationValue type",
+  "url": "https://example.com/drivewheelconfigurationvalue",
+  "identifier": "example-drivewheelconfigurationvalue-1"
+}
+```
+
+## Notes
+
+- DriveWheelConfigurationValue inherits all properties from QualitativeValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

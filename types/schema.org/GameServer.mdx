@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: GameServer
+title: GameServer
+description: Server that provides game interaction in a multiplayer game.
+properties:
+  - game
+  - playersOnline
+  - serverStatus
+subClasses:
+
+parentClass: Intangible
+---
+
+# GameServer
+
+Server that provides game interaction in a multiplayer game.
+
+## Type Hierarchy
+
+GameServer is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from GameServer.
+
+## Properties
+
+GameServer defines the following properties in addition to those inherited from Intangible:
+
+- game: Video game which is played on this server.
+- playersOnline: Number of players on the server.
+- serverStatus: Status of a game server.
+
+## Usage Example
+
+```typescript
+interface GameServer {
+  $context?: 'schema.org'
+  $type: 'GameServer'
+  game?: VideoGame
+  playersOnline?: number
+  serverStatus?: GameServerStatus
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GameServer",
+  "name": "Example GameServer",
+  "description": "An example of the GameServer type",
+  "url": "https://example.com/gameserver",
+  "identifier": "example-gameserver-1"
+}
+```
+
+## Notes
+
+- GameServer inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

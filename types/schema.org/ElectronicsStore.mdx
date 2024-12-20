@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ElectronicsStore
+title: ElectronicsStore
+description: An electronics store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# ElectronicsStore
+
+An electronics store.
+
+## Type Hierarchy
+
+ElectronicsStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from ElectronicsStore.
+
+## Properties
+
+ElectronicsStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface ElectronicsStore {
+  $context?: 'schema.org'
+  $type: 'ElectronicsStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ElectronicsStore",
+  "name": "Example ElectronicsStore",
+  "description": "An example of the ElectronicsStore type",
+  "url": "https://example.com/electronicsstore",
+  "identifier": "example-electronicsstore-1"
+}
+```
+
+## Notes
+
+- ElectronicsStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

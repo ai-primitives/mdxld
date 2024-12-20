@@ -1,0 +1,69 @@
+---
+$context: schema.org
+$type: FundingAgency
+title: FundingAgency
+description: A FundingAgency is an organization that implements one or more [[FundingScheme]]s and manages
+    the granting process (via [[Grant]]s, typically [[MonetaryGrant]]s).
+    A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc.
+    
+Examples of funding agencies include ERC, REA, NIH, Bill and Melinda Gates Foundation, ...
+    
+properties:
+
+subClasses:
+
+parentClass: Project
+---
+
+# FundingAgency
+
+A FundingAgency is an organization that implements one or more [[FundingScheme]]s and manages
+    the granting process (via [[Grant]]s, typically [[MonetaryGrant]]s).
+    A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc.
+    
+Examples of funding agencies include ERC, REA, NIH, Bill and Melinda Gates Foundation, ...
+    
+
+## Type Hierarchy
+
+FundingAgency is a type of Project.
+
+### Direct Subtypes
+
+No types directly inherit from FundingAgency.
+
+## Properties
+
+FundingAgency defines the following properties in addition to those inherited from Project:
+
+
+
+## Usage Example
+
+```typescript
+interface FundingAgency {
+  $context?: 'schema.org'
+  $type: 'FundingAgency'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FundingAgency",
+  "name": "Example FundingAgency",
+  "description": "An example of the FundingAgency type",
+  "url": "https://example.com/fundingagency",
+  "identifier": "example-fundingagency-1"
+}
+```
+
+## Notes
+
+- FundingAgency inherits all properties from Project
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

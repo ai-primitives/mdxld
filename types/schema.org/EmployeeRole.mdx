@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EmployeeRole
+title: EmployeeRole
+description: A subclass of OrganizationRole used to describe employee relationships.
+properties:
+
+subClasses:
+
+parentClass: OrganizationRole
+---
+
+# EmployeeRole
+
+A subclass of OrganizationRole used to describe employee relationships.
+
+## Type Hierarchy
+
+EmployeeRole is a type of OrganizationRole.
+
+### Direct Subtypes
+
+No types directly inherit from EmployeeRole.
+
+## Properties
+
+EmployeeRole defines the following properties in addition to those inherited from OrganizationRole:
+
+
+
+## Usage Example
+
+```typescript
+interface EmployeeRole {
+  $context?: 'schema.org'
+  $type: 'EmployeeRole'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EmployeeRole",
+  "name": "Example EmployeeRole",
+  "description": "An example of the EmployeeRole type",
+  "url": "https://example.com/employeerole",
+  "identifier": "example-employeerole-1"
+}
+```
+
+## Notes
+
+- EmployeeRole inherits all properties from OrganizationRole
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

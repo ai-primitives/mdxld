@@ -1,0 +1,73 @@
+---
+$context: schema.org
+$type: StatusEnumeration
+title: StatusEnumeration
+description: Lists or enumerations dealing with status types.
+properties:
+
+subClasses:
+  - ActionStatusType
+  - EventStatusType
+  - GameServerStatus
+  - LegalForceStatus
+  - OrderStatus
+  - PaymentStatusType
+  - ReservationStatusType
+parentClass: Enumeration
+---
+
+# StatusEnumeration
+
+Lists or enumerations dealing with status types.
+
+## Type Hierarchy
+
+StatusEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+The following types directly inherit from StatusEnumeration:
+
+- ActionStatusType: The status of an Action.
+- EventStatusType: EventStatusType is an enumeration type whose instances represent several states that an Event may be in.
+- GameServerStatus: Status of a game server.
+- LegalForceStatus: A list of possible statuses for the legal force of a legislation.
+- OrderStatus: Enumerated status values for Order.
+- PaymentStatusType: A specific payment status. For example, PaymentDue, PaymentComplete, etc.
+- ReservationStatusType: Enumerated status values for Reservation.
+
+## Properties
+
+StatusEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface StatusEnumeration {
+  $context?: 'schema.org'
+  $type: 'StatusEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "StatusEnumeration",
+  "name": "Example StatusEnumeration",
+  "description": "An example of the StatusEnumeration type",
+  "url": "https://example.com/statusenumeration",
+  "identifier": "example-statusenumeration-1"
+}
+```
+
+## Notes
+
+- StatusEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

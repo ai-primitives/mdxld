@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Car
+title: Car
+description: A car is a wheeled, self-powered motor vehicle used for transportation.
+properties:
+
+subClasses:
+
+parentClass: Vehicle
+---
+
+# Car
+
+A car is a wheeled, self-powered motor vehicle used for transportation.
+
+## Type Hierarchy
+
+Car is a type of Vehicle.
+
+### Direct Subtypes
+
+No types directly inherit from Car.
+
+## Properties
+
+Car defines the following properties in addition to those inherited from Vehicle:
+
+
+
+## Usage Example
+
+```typescript
+interface Car {
+  $context?: 'schema.org'
+  $type: 'Car'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Car",
+  "name": "Example Car",
+  "description": "An example of the Car type",
+  "url": "https://example.com/car",
+  "identifier": "example-car-1"
+}
+```
+
+## Notes
+
+- Car inherits all properties from Vehicle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

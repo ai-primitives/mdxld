@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: EnergyEfficiencyEnumeration
+title: EnergyEfficiencyEnumeration
+description: Enumerates energy efficiency levels (also known as "classes" or "ratings") and certifications that are part of several international energy efficiency standards.
+properties:
+
+subClasses:
+  - EUEnergyEfficiencyEnumeration
+  - EnergyStarEnergyEfficiencyEnumeration
+parentClass: Enumeration
+---
+
+# EnergyEfficiencyEnumeration
+
+Enumerates energy efficiency levels (also known as "classes" or "ratings") and certifications that are part of several international energy efficiency standards.
+
+## Type Hierarchy
+
+EnergyEfficiencyEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+The following types directly inherit from EnergyEfficiencyEnumeration:
+
+- EnergyStarEnergyEfficiencyEnumeration: Used to indicate whether a product is EnergyStar certified.
+- EUEnergyEfficiencyEnumeration: Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++ as defined in EU directive 2017/1369.
+
+## Properties
+
+EnergyEfficiencyEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface EnergyEfficiencyEnumeration {
+  $context?: 'schema.org'
+  $type: 'EnergyEfficiencyEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EnergyEfficiencyEnumeration",
+  "name": "Example EnergyEfficiencyEnumeration",
+  "description": "An example of the EnergyEfficiencyEnumeration type",
+  "url": "https://example.com/energyefficiencyenumeration",
+  "identifier": "example-energyefficiencyenumeration-1"
+}
+```
+
+## Notes
+
+- EnergyEfficiencyEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

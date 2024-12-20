@@ -1,0 +1,75 @@
+---
+$context: schema.org
+$type: TradeAction
+title: TradeAction
+description: The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.
+properties:
+
+subClasses:
+  - BuyAction
+  - OrderAction
+  - PayAction
+  - PreOrderAction
+  - QuoteAction
+  - RentAction
+  - SellAction
+  - TipAction
+parentClass: Action
+---
+
+# TradeAction
+
+The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.
+
+## Type Hierarchy
+
+TradeAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from TradeAction:
+
+- BuyAction: The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.
+- OrderAction: An agent orders an object/product/service to be delivered/sent.
+- PayAction: An agent pays a price to a participant.
+- PreOrderAction: An agent orders a (not yet released) object/product/service to be delivered/sent.
+- QuoteAction: An agent quotes/estimates/appraises an object/product/service with a price at a location/store.
+- RentAction: The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.
+- SellAction: The act of taking money from a buyer in exchange for goods or services rendered. An agent sells an object, product, or service to a buyer for a price. Reciprocal of BuyAction.
+- TipAction: The act of giving money voluntarily to a beneficiary in recognition of services rendered.
+
+## Properties
+
+TradeAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface TradeAction {
+  $context?: 'schema.org'
+  $type: 'TradeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TradeAction",
+  "name": "Example TradeAction",
+  "description": "An example of the TradeAction type",
+  "url": "https://example.com/tradeaction",
+  "identifier": "example-tradeaction-1"
+}
+```
+
+## Notes
+
+- TradeAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

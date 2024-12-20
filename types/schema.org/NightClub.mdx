@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: NightClub
+title: NightClub
+description: A nightclub or discotheque.
+properties:
+
+subClasses:
+
+parentClass: EntertainmentBusiness
+---
+
+# NightClub
+
+A nightclub or discotheque.
+
+## Type Hierarchy
+
+NightClub is a type of EntertainmentBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from NightClub.
+
+## Properties
+
+NightClub defines the following properties in addition to those inherited from EntertainmentBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface NightClub {
+  $context?: 'schema.org'
+  $type: 'NightClub'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "NightClub",
+  "name": "Example NightClub",
+  "description": "An example of the NightClub type",
+  "url": "https://example.com/nightclub",
+  "identifier": "example-nightclub-1"
+}
+```
+
+## Notes
+
+- NightClub inherits all properties from EntertainmentBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

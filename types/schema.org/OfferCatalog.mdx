@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OfferCatalog
+title: OfferCatalog
+description: An OfferCatalog is an ItemList that contains related Offers and/or further OfferCatalogs that are offeredBy the same provider.
+properties:
+
+subClasses:
+
+parentClass: ItemList
+---
+
+# OfferCatalog
+
+An OfferCatalog is an ItemList that contains related Offers and/or further OfferCatalogs that are offeredBy the same provider.
+
+## Type Hierarchy
+
+OfferCatalog is a type of ItemList.
+
+### Direct Subtypes
+
+No types directly inherit from OfferCatalog.
+
+## Properties
+
+OfferCatalog defines the following properties in addition to those inherited from ItemList:
+
+
+
+## Usage Example
+
+```typescript
+interface OfferCatalog {
+  $context?: 'schema.org'
+  $type: 'OfferCatalog'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OfferCatalog",
+  "name": "Example OfferCatalog",
+  "description": "An example of the OfferCatalog type",
+  "url": "https://example.com/offercatalog",
+  "identifier": "example-offercatalog-1"
+}
+```
+
+## Notes
+
+- OfferCatalog inherits all properties from ItemList
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

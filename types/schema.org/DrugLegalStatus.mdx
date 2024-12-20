@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DrugLegalStatus
+title: DrugLegalStatus
+description: The legal availability status of a medical drug.
+properties:
+
+subClasses:
+
+parentClass: MedicalIntangible
+---
+
+# DrugLegalStatus
+
+The legal availability status of a medical drug.
+
+## Type Hierarchy
+
+DrugLegalStatus is a type of MedicalIntangible.
+
+### Direct Subtypes
+
+No types directly inherit from DrugLegalStatus.
+
+## Properties
+
+DrugLegalStatus defines the following properties in addition to those inherited from MedicalIntangible:
+
+
+
+## Usage Example
+
+```typescript
+interface DrugLegalStatus {
+  $context?: 'schema.org'
+  $type: 'DrugLegalStatus'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DrugLegalStatus",
+  "name": "Example DrugLegalStatus",
+  "description": "An example of the DrugLegalStatus type",
+  "url": "https://example.com/druglegalstatus",
+  "identifier": "example-druglegalstatus-1"
+}
+```
+
+## Notes
+
+- DrugLegalStatus inherits all properties from MedicalIntangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

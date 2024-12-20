@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DepositAccount
+title: DepositAccount
+description: A type of Bank Account with a main purpose of depositing funds to gain interest or other benefits.
+properties:
+
+subClasses:
+
+
+---
+
+# DepositAccount
+
+A type of Bank Account with a main purpose of depositing funds to gain interest or other benefits.
+
+## Type Hierarchy
+
+DepositAccount is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from DepositAccount.
+
+## Properties
+
+DepositAccount defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface DepositAccount {
+  $context?: 'schema.org'
+  $type: 'DepositAccount'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DepositAccount",
+  "name": "Example DepositAccount",
+  "description": "An example of the DepositAccount type",
+  "url": "https://example.com/depositaccount",
+  "identifier": "example-depositaccount-1"
+}
+```
+
+## Notes
+
+- DepositAccount inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

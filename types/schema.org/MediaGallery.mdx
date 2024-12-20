@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: MediaGallery
+title: MediaGallery
+description: Web page type: Media gallery page. A mixed-media page that can contain media such as images, videos, and other multimedia.
+properties:
+
+subClasses:
+  - ImageGallery
+  - VideoGallery
+parentClass: CollectionPage
+---
+
+# MediaGallery
+
+Web page type: Media gallery page. A mixed-media page that can contain media such as images, videos, and other multimedia.
+
+## Type Hierarchy
+
+MediaGallery is a type of CollectionPage.
+
+### Direct Subtypes
+
+The following types directly inherit from MediaGallery:
+
+- ImageGallery: Web page type: Image gallery page.
+- VideoGallery: Web page type: Video gallery page.
+
+## Properties
+
+MediaGallery defines the following properties in addition to those inherited from CollectionPage:
+
+
+
+## Usage Example
+
+```typescript
+interface MediaGallery {
+  $context?: 'schema.org'
+  $type: 'MediaGallery'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MediaGallery",
+  "name": "Example MediaGallery",
+  "description": "An example of the MediaGallery type",
+  "url": "https://example.com/mediagallery",
+  "identifier": "example-mediagallery-1"
+}
+```
+
+## Notes
+
+- MediaGallery inherits all properties from CollectionPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

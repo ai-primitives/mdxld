@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Crematorium
+title: Crematorium
+description: A crematorium.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# Crematorium
+
+A crematorium.
+
+## Type Hierarchy
+
+Crematorium is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Crematorium.
+
+## Properties
+
+Crematorium defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface Crematorium {
+  $context?: 'schema.org'
+  $type: 'Crematorium'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Crematorium",
+  "name": "Example Crematorium",
+  "description": "An example of the Crematorium type",
+  "url": "https://example.com/crematorium",
+  "identifier": "example-crematorium-1"
+}
+```
+
+## Notes
+
+- Crematorium inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

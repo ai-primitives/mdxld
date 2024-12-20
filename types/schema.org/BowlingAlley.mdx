@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BowlingAlley
+title: BowlingAlley
+description: A bowling alley.
+properties:
+
+subClasses:
+
+parentClass: SportsActivityLocation
+---
+
+# BowlingAlley
+
+A bowling alley.
+
+## Type Hierarchy
+
+BowlingAlley is a type of SportsActivityLocation.
+
+### Direct Subtypes
+
+No types directly inherit from BowlingAlley.
+
+## Properties
+
+BowlingAlley defines the following properties in addition to those inherited from SportsActivityLocation:
+
+
+
+## Usage Example
+
+```typescript
+interface BowlingAlley {
+  $context?: 'schema.org'
+  $type: 'BowlingAlley'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BowlingAlley",
+  "name": "Example BowlingAlley",
+  "description": "An example of the BowlingAlley type",
+  "url": "https://example.com/bowlingalley",
+  "identifier": "example-bowlingalley-1"
+}
+```
+
+## Notes
+
+- BowlingAlley inherits all properties from SportsActivityLocation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

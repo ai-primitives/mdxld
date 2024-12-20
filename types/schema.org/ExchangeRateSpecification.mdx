@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: ExchangeRateSpecification
+title: ExchangeRateSpecification
+description: A structured value representing exchange rate.
+properties:
+  - currentExchangeRate
+  - exchangeRateSpread
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# ExchangeRateSpecification
+
+A structured value representing exchange rate.
+
+## Type Hierarchy
+
+ExchangeRateSpecification is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from ExchangeRateSpecification.
+
+## Properties
+
+ExchangeRateSpecification defines the following properties in addition to those inherited from StructuredValue:
+
+- currentExchangeRate: The current price of a currency.
+- exchangeRateSpread: The difference between the price at which a broker or other intermediary buys and sells foreign currency.
+
+## Usage Example
+
+```typescript
+interface ExchangeRateSpecification {
+  $context?: 'schema.org'
+  $type: 'ExchangeRateSpecification'
+  currentExchangeRate?: UnitPriceSpecification
+  exchangeRateSpread?: MonetaryAmount | number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ExchangeRateSpecification",
+  "name": "Example ExchangeRateSpecification",
+  "description": "An example of the ExchangeRateSpecification type",
+  "url": "https://example.com/exchangeratespecification",
+  "identifier": "example-exchangeratespecification-1"
+}
+```
+
+## Notes
+
+- ExchangeRateSpecification inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

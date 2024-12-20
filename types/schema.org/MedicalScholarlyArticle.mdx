@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalScholarlyArticle
+title: MedicalScholarlyArticle
+description: A scholarly article in the medical domain.
+properties:
+  - publicationType
+subClasses:
+
+parentClass: ScholarlyArticle
+---
+
+# MedicalScholarlyArticle
+
+A scholarly article in the medical domain.
+
+## Type Hierarchy
+
+MedicalScholarlyArticle is a type of ScholarlyArticle.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalScholarlyArticle.
+
+## Properties
+
+MedicalScholarlyArticle defines the following properties in addition to those inherited from ScholarlyArticle:
+
+- publicationType: The type of the medical article, taken from the US NLM MeSH publication type catalog. See also [MeSH documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).
+
+## Usage Example
+
+```typescript
+interface MedicalScholarlyArticle {
+  $context?: 'schema.org'
+  $type: 'MedicalScholarlyArticle'
+  publicationType?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalScholarlyArticle",
+  "name": "Example MedicalScholarlyArticle",
+  "description": "An example of the MedicalScholarlyArticle type",
+  "url": "https://example.com/medicalscholarlyarticle",
+  "identifier": "example-medicalscholarlyarticle-1"
+}
+```
+
+## Notes
+
+- MedicalScholarlyArticle inherits all properties from ScholarlyArticle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

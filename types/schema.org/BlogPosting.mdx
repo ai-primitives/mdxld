@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: BlogPosting
+title: BlogPosting
+description: A blog post.
+properties:
+
+subClasses:
+  - LiveBlogPosting
+parentClass: SocialMediaPosting
+---
+
+# BlogPosting
+
+A blog post.
+
+## Type Hierarchy
+
+BlogPosting is a type of SocialMediaPosting.
+
+### Direct Subtypes
+
+The following types directly inherit from BlogPosting:
+
+- LiveBlogPosting: A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.
+
+## Properties
+
+BlogPosting defines the following properties in addition to those inherited from SocialMediaPosting:
+
+
+
+## Usage Example
+
+```typescript
+interface BlogPosting {
+  $context?: 'schema.org'
+  $type: 'BlogPosting'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BlogPosting",
+  "name": "Example BlogPosting",
+  "description": "An example of the BlogPosting type",
+  "url": "https://example.com/blogposting",
+  "identifier": "example-blogposting-1"
+}
+```
+
+## Notes
+
+- BlogPosting inherits all properties from SocialMediaPosting
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

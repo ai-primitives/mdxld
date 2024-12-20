@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CategoryCodeSet
+title: CategoryCodeSet
+description: A set of Category Code values.
+properties:
+  - hasCategoryCode
+subClasses:
+
+parentClass: DefinedTermSet
+---
+
+# CategoryCodeSet
+
+A set of Category Code values.
+
+## Type Hierarchy
+
+CategoryCodeSet is a type of DefinedTermSet.
+
+### Direct Subtypes
+
+No types directly inherit from CategoryCodeSet.
+
+## Properties
+
+CategoryCodeSet defines the following properties in addition to those inherited from DefinedTermSet:
+
+- hasCategoryCode: A Category code contained in this code set.
+
+## Usage Example
+
+```typescript
+interface CategoryCodeSet {
+  $context?: 'schema.org'
+  $type: 'CategoryCodeSet'
+  hasCategoryCode?: CategoryCode
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CategoryCodeSet",
+  "name": "Example CategoryCodeSet",
+  "description": "An example of the CategoryCodeSet type",
+  "url": "https://example.com/categorycodeset",
+  "identifier": "example-categorycodeset-1"
+}
+```
+
+## Notes
+
+- CategoryCodeSet inherits all properties from DefinedTermSet
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

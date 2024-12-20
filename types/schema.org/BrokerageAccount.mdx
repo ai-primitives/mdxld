@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BrokerageAccount
+title: BrokerageAccount
+description: An account that allows an investor to deposit funds and place investment orders with a licensed broker or brokerage firm.
+properties:
+
+subClasses:
+
+parentClass: InvestmentOrDeposit
+---
+
+# BrokerageAccount
+
+An account that allows an investor to deposit funds and place investment orders with a licensed broker or brokerage firm.
+
+## Type Hierarchy
+
+BrokerageAccount is a type of InvestmentOrDeposit.
+
+### Direct Subtypes
+
+No types directly inherit from BrokerageAccount.
+
+## Properties
+
+BrokerageAccount defines the following properties in addition to those inherited from InvestmentOrDeposit:
+
+
+
+## Usage Example
+
+```typescript
+interface BrokerageAccount {
+  $context?: 'schema.org'
+  $type: 'BrokerageAccount'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BrokerageAccount",
+  "name": "Example BrokerageAccount",
+  "description": "An example of the BrokerageAccount type",
+  "url": "https://example.com/brokerageaccount",
+  "identifier": "example-brokerageaccount-1"
+}
+```
+
+## Notes
+
+- BrokerageAccount inherits all properties from InvestmentOrDeposit
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

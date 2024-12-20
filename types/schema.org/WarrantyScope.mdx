@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: WarrantyScope
+title: WarrantyScope
+description: A range of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#Labor-BringIn\n* http://purl.org/goodrelations/v1#PartsAndLabor-BringIn\n* http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
+      
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# WarrantyScope
+
+A range of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#Labor-BringIn\n* http://purl.org/goodrelations/v1#PartsAndLabor-BringIn\n* http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
+      
+
+## Type Hierarchy
+
+WarrantyScope is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from WarrantyScope.
+
+## Properties
+
+WarrantyScope defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface WarrantyScope {
+  $context?: 'schema.org'
+  $type: 'WarrantyScope'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WarrantyScope",
+  "name": "Example WarrantyScope",
+  "description": "An example of the WarrantyScope type",
+  "url": "https://example.com/warrantyscope",
+  "identifier": "example-warrantyscope-1"
+}
+```
+
+## Notes
+
+- WarrantyScope inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

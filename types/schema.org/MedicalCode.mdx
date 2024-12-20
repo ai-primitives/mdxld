@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalCode
+title: MedicalCode
+description: A code for a medical entity.
+properties:
+  - codingSystem
+subClasses:
+
+
+---
+
+# MedicalCode
+
+A code for a medical entity.
+
+## Type Hierarchy
+
+MedicalCode is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalCode.
+
+## Properties
+
+MedicalCode defines the following properties in addition to those inherited from Thing:
+
+- codingSystem: The coding system, e.g. 'ICD-10'.
+
+## Usage Example
+
+```typescript
+interface MedicalCode {
+  $context?: 'schema.org'
+  $type: 'MedicalCode'
+  codingSystem?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalCode",
+  "name": "Example MedicalCode",
+  "description": "An example of the MedicalCode type",
+  "url": "https://example.com/medicalcode",
+  "identifier": "example-medicalcode-1"
+}
+```
+
+## Notes
+
+- MedicalCode inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

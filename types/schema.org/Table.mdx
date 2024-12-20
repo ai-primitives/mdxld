@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Table
+title: Table
+description: A table on a Web page.
+properties:
+
+subClasses:
+
+parentClass: WebPageElement
+---
+
+# Table
+
+A table on a Web page.
+
+## Type Hierarchy
+
+Table is a type of WebPageElement.
+
+### Direct Subtypes
+
+No types directly inherit from Table.
+
+## Properties
+
+Table defines the following properties in addition to those inherited from WebPageElement:
+
+
+
+## Usage Example
+
+```typescript
+interface Table {
+  $context?: 'schema.org'
+  $type: 'Table'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Table",
+  "name": "Example Table",
+  "description": "An example of the Table type",
+  "url": "https://example.com/table",
+  "identifier": "example-table-1"
+}
+```
+
+## Notes
+
+- Table inherits all properties from WebPageElement
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

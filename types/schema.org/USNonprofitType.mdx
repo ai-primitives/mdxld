@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: USNonprofitType
+title: USNonprofitType
+description: USNonprofitType: Non-profit organization type originating from the United States.
+properties:
+
+subClasses:
+
+parentClass: NonprofitType
+---
+
+# USNonprofitType
+
+USNonprofitType: Non-profit organization type originating from the United States.
+
+## Type Hierarchy
+
+USNonprofitType is a type of NonprofitType.
+
+### Direct Subtypes
+
+No types directly inherit from USNonprofitType.
+
+## Properties
+
+USNonprofitType defines the following properties in addition to those inherited from NonprofitType:
+
+
+
+## Usage Example
+
+```typescript
+interface USNonprofitType {
+  $context?: 'schema.org'
+  $type: 'USNonprofitType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "USNonprofitType",
+  "name": "Example USNonprofitType",
+  "description": "An example of the USNonprofitType type",
+  "url": "https://example.com/usnonprofittype",
+  "identifier": "example-usnonprofittype-1"
+}
+```
+
+## Notes
+
+- USNonprofitType inherits all properties from NonprofitType
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

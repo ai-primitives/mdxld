@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LiteraryEvent
+title: LiteraryEvent
+description: Event type: Literary event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# LiteraryEvent
+
+Event type: Literary event.
+
+## Type Hierarchy
+
+LiteraryEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from LiteraryEvent.
+
+## Properties
+
+LiteraryEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface LiteraryEvent {
+  $context?: 'schema.org'
+  $type: 'LiteraryEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LiteraryEvent",
+  "name": "Example LiteraryEvent",
+  "description": "An example of the LiteraryEvent type",
+  "url": "https://example.com/literaryevent",
+  "identifier": "example-literaryevent-1"
+}
+```
+
+## Notes
+
+- LiteraryEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

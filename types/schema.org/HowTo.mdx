@@ -1,0 +1,64 @@
+---
+$context: schema.org
+$type: HowTo
+title: HowTo
+description: Instructions that explain how to achieve a result by performing a sequence of steps.
+properties:
+  - step
+  - yield
+subClasses:
+  - Recipe
+parentClass: CreativeWork
+---
+
+# HowTo
+
+Instructions that explain how to achieve a result by performing a sequence of steps.
+
+## Type Hierarchy
+
+HowTo is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from HowTo:
+
+- Recipe: A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.
+
+## Properties
+
+HowTo defines the following properties in addition to those inherited from CreativeWork:
+
+- step: A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.
+- yield: The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.
+
+## Usage Example
+
+```typescript
+interface HowTo {
+  $context?: 'schema.org'
+  $type: 'HowTo'
+  step?: CreativeWork | HowToSection | HowToStep | string
+  yield?: QuantitativeValue | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HowTo",
+  "name": "Example HowTo",
+  "description": "An example of the HowTo type",
+  "url": "https://example.com/howto",
+  "identifier": "example-howto-1"
+}
+```
+
+## Notes
+
+- HowTo inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

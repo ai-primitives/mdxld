@@ -1,0 +1,64 @@
+---
+$context: schema.org
+$type: VideoObject
+title: VideoObject
+description: A video file.
+properties:
+  - videoFrameSize
+  - videoQuality
+subClasses:
+  - VideoObjectSnapshot
+parentClass: MediaObject
+---
+
+# VideoObject
+
+A video file.
+
+## Type Hierarchy
+
+VideoObject is a type of MediaObject.
+
+### Direct Subtypes
+
+The following types directly inherit from VideoObject:
+
+- VideoObjectSnapshot: A specific and exact (byte-for-byte) version of a [[VideoObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.
+
+## Properties
+
+VideoObject defines the following properties in addition to those inherited from MediaObject:
+
+- videoFrameSize: The frame size of the video.
+- videoQuality: The quality of the video.
+
+## Usage Example
+
+```typescript
+interface VideoObject {
+  $context?: 'schema.org'
+  $type: 'VideoObject'
+  videoFrameSize?: string
+  videoQuality?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VideoObject",
+  "name": "Example VideoObject",
+  "description": "An example of the VideoObject type",
+  "url": "https://example.com/videoobject",
+  "identifier": "example-videoobject-1"
+}
+```
+
+## Notes
+
+- VideoObject inherits all properties from MediaObject
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

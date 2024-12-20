@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HealthAspectEnumeration
+title: HealthAspectEnumeration
+description: HealthAspectEnumeration enumerates several aspects of health content online, each of which might be described using [[hasHealthAspect]] and [[HealthTopicContent]].
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# HealthAspectEnumeration
+
+HealthAspectEnumeration enumerates several aspects of health content online, each of which might be described using [[hasHealthAspect]] and [[HealthTopicContent]].
+
+## Type Hierarchy
+
+HealthAspectEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from HealthAspectEnumeration.
+
+## Properties
+
+HealthAspectEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface HealthAspectEnumeration {
+  $context?: 'schema.org'
+  $type: 'HealthAspectEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HealthAspectEnumeration",
+  "name": "Example HealthAspectEnumeration",
+  "description": "An example of the HealthAspectEnumeration type",
+  "url": "https://example.com/healthaspectenumeration",
+  "identifier": "example-healthaspectenumeration-1"
+}
+```
+
+## Notes
+
+- HealthAspectEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

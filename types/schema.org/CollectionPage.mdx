@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: CollectionPage
+title: CollectionPage
+description: Web page type: Collection page.
+properties:
+
+subClasses:
+  - MediaGallery
+parentClass: WebPage
+---
+
+# CollectionPage
+
+Web page type: Collection page.
+
+## Type Hierarchy
+
+CollectionPage is a type of WebPage.
+
+### Direct Subtypes
+
+The following types directly inherit from CollectionPage:
+
+- MediaGallery: Web page type: Media gallery page. A mixed-media page that can contain media such as images, videos, and other multimedia.
+
+## Properties
+
+CollectionPage defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface CollectionPage {
+  $context?: 'schema.org'
+  $type: 'CollectionPage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CollectionPage",
+  "name": "Example CollectionPage",
+  "description": "An example of the CollectionPage type",
+  "url": "https://example.com/collectionpage",
+  "identifier": "example-collectionpage-1"
+}
+```
+
+## Notes
+
+- CollectionPage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

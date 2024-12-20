@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ResumeAction
+title: ResumeAction
+description: The act of resuming a device or application which was formerly paused (e.g. resume music playback or resume a timer).
+properties:
+
+subClasses:
+
+parentClass: ControlAction
+---
+
+# ResumeAction
+
+The act of resuming a device or application which was formerly paused (e.g. resume music playback or resume a timer).
+
+## Type Hierarchy
+
+ResumeAction is a type of ControlAction.
+
+### Direct Subtypes
+
+No types directly inherit from ResumeAction.
+
+## Properties
+
+ResumeAction defines the following properties in addition to those inherited from ControlAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ResumeAction {
+  $context?: 'schema.org'
+  $type: 'ResumeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ResumeAction",
+  "name": "Example ResumeAction",
+  "description": "An example of the ResumeAction type",
+  "url": "https://example.com/resumeaction",
+  "identifier": "example-resumeaction-1"
+}
+```
+
+## Notes
+
+- ResumeAction inherits all properties from ControlAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

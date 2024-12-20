@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DataType
+title: DataType
+description: The basic data types such as Integers, Strings, etc.
+properties:
+
+subClasses:
+
+parentClass: rdfs:Class
+---
+
+# DataType
+
+The basic data types such as Integers, Strings, etc.
+
+## Type Hierarchy
+
+DataType is a type of rdfs:Class.
+
+### Direct Subtypes
+
+No types directly inherit from DataType.
+
+## Properties
+
+DataType defines the following properties in addition to those inherited from rdfs:Class:
+
+
+
+## Usage Example
+
+```typescript
+interface DataType {
+  $context?: 'schema.org'
+  $type: 'DataType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DataType",
+  "name": "Example DataType",
+  "description": "An example of the DataType type",
+  "url": "https://example.com/datatype",
+  "identifier": "example-datatype-1"
+}
+```
+
+## Notes
+
+- DataType inherits all properties from rdfs:Class
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

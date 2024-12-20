@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GeneralContractor
+title: GeneralContractor
+description: A general contractor.
+properties:
+
+subClasses:
+
+parentClass: HomeAndConstructionBusiness
+---
+
+# GeneralContractor
+
+A general contractor.
+
+## Type Hierarchy
+
+GeneralContractor is a type of HomeAndConstructionBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from GeneralContractor.
+
+## Properties
+
+GeneralContractor defines the following properties in addition to those inherited from HomeAndConstructionBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface GeneralContractor {
+  $context?: 'schema.org'
+  $type: 'GeneralContractor'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GeneralContractor",
+  "name": "Example GeneralContractor",
+  "description": "An example of the GeneralContractor type",
+  "url": "https://example.com/generalcontractor",
+  "identifier": "example-generalcontractor-1"
+}
+```
+
+## Notes
+
+- GeneralContractor inherits all properties from HomeAndConstructionBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

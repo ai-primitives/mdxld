@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Plumber
+title: Plumber
+description: A plumbing service.
+properties:
+
+subClasses:
+
+parentClass: HomeAndConstructionBusiness
+---
+
+# Plumber
+
+A plumbing service.
+
+## Type Hierarchy
+
+Plumber is a type of HomeAndConstructionBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from Plumber.
+
+## Properties
+
+Plumber defines the following properties in addition to those inherited from HomeAndConstructionBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface Plumber {
+  $context?: 'schema.org'
+  $type: 'Plumber'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Plumber",
+  "name": "Example Plumber",
+  "description": "An example of the Plumber type",
+  "url": "https://example.com/plumber",
+  "identifier": "example-plumber-1"
+}
+```
+
+## Notes
+
+- Plumber inherits all properties from HomeAndConstructionBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

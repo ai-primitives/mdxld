@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PriceTypeEnumeration
+title: PriceTypeEnumeration
+description: Enumerates different price types, for example list price, invoice price, and sale price.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# PriceTypeEnumeration
+
+Enumerates different price types, for example list price, invoice price, and sale price.
+
+## Type Hierarchy
+
+PriceTypeEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from PriceTypeEnumeration.
+
+## Properties
+
+PriceTypeEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface PriceTypeEnumeration {
+  $context?: 'schema.org'
+  $type: 'PriceTypeEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PriceTypeEnumeration",
+  "name": "Example PriceTypeEnumeration",
+  "description": "An example of the PriceTypeEnumeration type",
+  "url": "https://example.com/pricetypeenumeration",
+  "identifier": "example-pricetypeenumeration-1"
+}
+```
+
+## Notes
+
+- PriceTypeEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

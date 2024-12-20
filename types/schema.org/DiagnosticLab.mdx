@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DiagnosticLab
+title: DiagnosticLab
+description: A medical laboratory that offers on-site or off-site diagnostic services.
+properties:
+  - availableTest
+subClasses:
+
+parentClass: MedicalOrganization
+---
+
+# DiagnosticLab
+
+A medical laboratory that offers on-site or off-site diagnostic services.
+
+## Type Hierarchy
+
+DiagnosticLab is a type of MedicalOrganization.
+
+### Direct Subtypes
+
+No types directly inherit from DiagnosticLab.
+
+## Properties
+
+DiagnosticLab defines the following properties in addition to those inherited from MedicalOrganization:
+
+- availableTest: A diagnostic test or procedure offered by this lab.
+
+## Usage Example
+
+```typescript
+interface DiagnosticLab {
+  $context?: 'schema.org'
+  $type: 'DiagnosticLab'
+  availableTest?: MedicalTest
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DiagnosticLab",
+  "name": "Example DiagnosticLab",
+  "description": "An example of the DiagnosticLab type",
+  "url": "https://example.com/diagnosticlab",
+  "identifier": "example-diagnosticlab-1"
+}
+```
+
+## Notes
+
+- DiagnosticLab inherits all properties from MedicalOrganization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

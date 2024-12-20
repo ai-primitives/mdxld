@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UserPlays
+title: UserPlays
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+
+subClasses:
+
+parentClass: UserInteraction
+---
+
+# UserPlays
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserPlays is a type of UserInteraction.
+
+### Direct Subtypes
+
+No types directly inherit from UserPlays.
+
+## Properties
+
+UserPlays defines the following properties in addition to those inherited from UserInteraction:
+
+
+
+## Usage Example
+
+```typescript
+interface UserPlays {
+  $context?: 'schema.org'
+  $type: 'UserPlays'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserPlays",
+  "name": "Example UserPlays",
+  "description": "An example of the UserPlays type",
+  "url": "https://example.com/userplays",
+  "identifier": "example-userplays-1"
+}
+```
+
+## Notes
+
+- UserPlays inherits all properties from UserInteraction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

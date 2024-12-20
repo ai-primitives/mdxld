@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Drawing
+title: Drawing
+description: A picture or diagram made with a pencil, pen, or crayon rather than paint.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Drawing
+
+A picture or diagram made with a pencil, pen, or crayon rather than paint.
+
+## Type Hierarchy
+
+Drawing is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Drawing.
+
+## Properties
+
+Drawing defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Drawing {
+  $context?: 'schema.org'
+  $type: 'Drawing'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Drawing",
+  "name": "Example Drawing",
+  "description": "An example of the Drawing type",
+  "url": "https://example.com/drawing",
+  "identifier": "example-drawing-1"
+}
+```
+
+## Notes
+
+- Drawing inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

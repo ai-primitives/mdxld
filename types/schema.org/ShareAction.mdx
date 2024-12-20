@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ShareAction
+title: ShareAction
+description: The act of distributing content to people for their amusement or edification.
+properties:
+
+subClasses:
+
+parentClass: CommunicateAction
+---
+
+# ShareAction
+
+The act of distributing content to people for their amusement or edification.
+
+## Type Hierarchy
+
+ShareAction is a type of CommunicateAction.
+
+### Direct Subtypes
+
+No types directly inherit from ShareAction.
+
+## Properties
+
+ShareAction defines the following properties in addition to those inherited from CommunicateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ShareAction {
+  $context?: 'schema.org'
+  $type: 'ShareAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ShareAction",
+  "name": "Example ShareAction",
+  "description": "An example of the ShareAction type",
+  "url": "https://example.com/shareaction",
+  "identifier": "example-shareaction-1"
+}
+```
+
+## Notes
+
+- ShareAction inherits all properties from CommunicateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

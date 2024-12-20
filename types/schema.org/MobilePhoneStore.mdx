@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MobilePhoneStore
+title: MobilePhoneStore
+description: A store that sells mobile phones and related accessories.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# MobilePhoneStore
+
+A store that sells mobile phones and related accessories.
+
+## Type Hierarchy
+
+MobilePhoneStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from MobilePhoneStore.
+
+## Properties
+
+MobilePhoneStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface MobilePhoneStore {
+  $context?: 'schema.org'
+  $type: 'MobilePhoneStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MobilePhoneStore",
+  "name": "Example MobilePhoneStore",
+  "description": "An example of the MobilePhoneStore type",
+  "url": "https://example.com/mobilephonestore",
+  "identifier": "example-mobilephonestore-1"
+}
+```
+
+## Notes
+
+- MobilePhoneStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

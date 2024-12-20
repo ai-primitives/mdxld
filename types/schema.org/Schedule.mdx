@@ -1,0 +1,88 @@
+---
+$context: schema.org
+$type: Schedule
+title: Schedule
+description: A schedule defines a repeating time period used to describe a regularly occurring [[Event]]. At a minimum a schedule will specify [[repeatFrequency]] which describes the interval between occurrences of the event. Additional information can be provided to specify the schedule more precisely.
+      This includes identifying the day(s) of the week or month when the recurring event will take place, in addition to its start and end time. Schedules may also
+      have start and end dates to indicate when they are active, e.g. to define a limited calendar of events.
+properties:
+  - byDay
+  - byMonth
+  - byMonthDay
+  - byMonthWeek
+  - exceptDate
+  - repeatCount
+  - repeatFrequency
+  - scheduleTimezone
+subClasses:
+
+parentClass: Intangible
+---
+
+# Schedule
+
+A schedule defines a repeating time period used to describe a regularly occurring [[Event]]. At a minimum a schedule will specify [[repeatFrequency]] which describes the interval between occurrences of the event. Additional information can be provided to specify the schedule more precisely.
+      This includes identifying the day(s) of the week or month when the recurring event will take place, in addition to its start and end time. Schedules may also
+      have start and end dates to indicate when they are active, e.g. to define a limited calendar of events.
+
+## Type Hierarchy
+
+Schedule is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Schedule.
+
+## Properties
+
+Schedule defines the following properties in addition to those inherited from Intangible:
+
+- byDay: Defines the day(s) of the week on which a recurring [[Event]] takes place. May be specified using either [[DayOfWeek]], or alternatively [[Text]] conforming to iCal's syntax for byDay recurrence rules.
+- byMonth: Defines the month(s) of the year on which a recurring [[Event]] takes place. Specified as an [[Integer]] between 1-12. January is 1.
+- byMonthDay: Defines the day(s) of the month on which a recurring [[Event]] takes place. Specified as an [[Integer]] between 1-31.
+- byMonthWeek: Defines the week(s) of the month on which a recurring Event takes place. Specified as an Integer between 1-5. For clarity, byMonthWeek is best used in conjunction with byDay to indicate concepts like the first and third Mondays of a month.
+- exceptDate: Defines a [[Date]] or [[DateTime]] during which a scheduled [[Event]] will not take place. The property allows exceptions to
+      a [[Schedule]] to be specified. If an exception is specified as a [[DateTime]] then only the event that would have started at that specific date and time
+      should be excluded from the schedule. If an exception is specified as a [[Date]] then any event that is scheduled for that 24 hour period should be
+      excluded from the schedule. This allows a whole day to be excluded from the schedule without having to itemise every scheduled event.
+- repeatCount: Defines the number of times a recurring [[Event]] will take place.
+- repeatFrequency: Defines the frequency at which [[Event]]s will occur according to a schedule [[Schedule]]. The intervals between
+      events should be defined as a [[Duration]] of time.
+- scheduleTimezone: Indicates the timezone for which the time(s) indicated in the [[Schedule]] are given. The value provided should be among those listed in the IANA Time Zone Database.
+
+## Usage Example
+
+```typescript
+interface Schedule {
+  $context?: 'schema.org'
+  $type: 'Schedule'
+  byDay?: DayOfWeek | string
+  byMonth?: number
+  byMonthDay?: number
+  byMonthWeek?: number
+  exceptDate?: string
+  repeatCount?: number
+  repeatFrequency?: Duration | string
+  scheduleTimezone?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Schedule",
+  "name": "Example Schedule",
+  "description": "An example of the Schedule type",
+  "url": "https://example.com/schedule",
+  "identifier": "example-schedule-1"
+}
+```
+
+## Notes
+
+- Schedule inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

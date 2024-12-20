@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ExhibitionEvent
+title: ExhibitionEvent
+description: Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow, ...
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# ExhibitionEvent
+
+Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow, ...
+
+## Type Hierarchy
+
+ExhibitionEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from ExhibitionEvent.
+
+## Properties
+
+ExhibitionEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface ExhibitionEvent {
+  $context?: 'schema.org'
+  $type: 'ExhibitionEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ExhibitionEvent",
+  "name": "Example ExhibitionEvent",
+  "description": "An example of the ExhibitionEvent type",
+  "url": "https://example.com/exhibitionevent",
+  "identifier": "example-exhibitionevent-1"
+}
+```
+
+## Notes
+
+- ExhibitionEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

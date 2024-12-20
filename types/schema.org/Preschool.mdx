@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Preschool
+title: Preschool
+description: A preschool.
+properties:
+
+subClasses:
+
+parentClass: EducationalOrganization
+---
+
+# Preschool
+
+A preschool.
+
+## Type Hierarchy
+
+Preschool is a type of EducationalOrganization.
+
+### Direct Subtypes
+
+No types directly inherit from Preschool.
+
+## Properties
+
+Preschool defines the following properties in addition to those inherited from EducationalOrganization:
+
+
+
+## Usage Example
+
+```typescript
+interface Preschool {
+  $context?: 'schema.org'
+  $type: 'Preschool'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Preschool",
+  "name": "Example Preschool",
+  "description": "An example of the Preschool type",
+  "url": "https://example.com/preschool",
+  "identifier": "example-preschool-1"
+}
+```
+
+## Notes
+
+- Preschool inherits all properties from EducationalOrganization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

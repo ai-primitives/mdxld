@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: ParentAudience
+title: ParentAudience
+description: A set of characteristics describing parents, who can be interested in viewing some content.
+properties:
+  - childMaxAge
+  - childMinAge
+subClasses:
+
+parentClass: PeopleAudience
+---
+
+# ParentAudience
+
+A set of characteristics describing parents, who can be interested in viewing some content.
+
+## Type Hierarchy
+
+ParentAudience is a type of PeopleAudience.
+
+### Direct Subtypes
+
+No types directly inherit from ParentAudience.
+
+## Properties
+
+ParentAudience defines the following properties in addition to those inherited from PeopleAudience:
+
+- childMaxAge: Maximal age of the child.
+- childMinAge: Minimal age of the child.
+
+## Usage Example
+
+```typescript
+interface ParentAudience {
+  $context?: 'schema.org'
+  $type: 'ParentAudience'
+  childMaxAge?: number
+  childMinAge?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ParentAudience",
+  "name": "Example ParentAudience",
+  "description": "An example of the ParentAudience type",
+  "url": "https://example.com/parentaudience",
+  "identifier": "example-parentaudience-1"
+}
+```
+
+## Notes
+
+- ParentAudience inherits all properties from PeopleAudience
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

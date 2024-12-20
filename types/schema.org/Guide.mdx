@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Guide
+title: Guide
+description: [[Guide]] is a page or article that recommends specific products or services, or aspects of a thing for a user to consider. A [[Guide]] may represent a Buying Guide and detail aspects of products or services for a user to consider. A [[Guide]] may represent a Product Guide and recommend specific products or services. A [[Guide]] may represent a Ranked List and recommend specific products or services with ranking.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Guide
+
+[[Guide]] is a page or article that recommends specific products or services, or aspects of a thing for a user to consider. A [[Guide]] may represent a Buying Guide and detail aspects of products or services for a user to consider. A [[Guide]] may represent a Product Guide and recommend specific products or services. A [[Guide]] may represent a Ranked List and recommend specific products or services with ranking.
+
+## Type Hierarchy
+
+Guide is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Guide.
+
+## Properties
+
+Guide defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Guide {
+  $context?: 'schema.org'
+  $type: 'Guide'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Guide",
+  "name": "Example Guide",
+  "description": "An example of the Guide type",
+  "url": "https://example.com/guide",
+  "identifier": "example-guide-1"
+}
+```
+
+## Notes
+
+- Guide inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

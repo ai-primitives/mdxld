@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RadiationTherapy
+title: RadiationTherapy
+description: A process of care using radiation aimed at improving a health condition.
+properties:
+
+subClasses:
+
+parentClass: MedicalTherapy
+---
+
+# RadiationTherapy
+
+A process of care using radiation aimed at improving a health condition.
+
+## Type Hierarchy
+
+RadiationTherapy is a type of MedicalTherapy.
+
+### Direct Subtypes
+
+No types directly inherit from RadiationTherapy.
+
+## Properties
+
+RadiationTherapy defines the following properties in addition to those inherited from MedicalTherapy:
+
+
+
+## Usage Example
+
+```typescript
+interface RadiationTherapy {
+  $context?: 'schema.org'
+  $type: 'RadiationTherapy'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RadiationTherapy",
+  "name": "Example RadiationTherapy",
+  "description": "An example of the RadiationTherapy type",
+  "url": "https://example.com/radiationtherapy",
+  "identifier": "example-radiationtherapy-1"
+}
+```
+
+## Notes
+
+- RadiationTherapy inherits all properties from MedicalTherapy
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalRiskCalculator
+title: MedicalRiskCalculator
+description: A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.
+properties:
+
+subClasses:
+
+parentClass: MedicalRiskEstimator
+---
+
+# MedicalRiskCalculator
+
+A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.
+
+## Type Hierarchy
+
+MedicalRiskCalculator is a type of MedicalRiskEstimator.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalRiskCalculator.
+
+## Properties
+
+MedicalRiskCalculator defines the following properties in addition to those inherited from MedicalRiskEstimator:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalRiskCalculator {
+  $context?: 'schema.org'
+  $type: 'MedicalRiskCalculator'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalRiskCalculator",
+  "name": "Example MedicalRiskCalculator",
+  "description": "An example of the MedicalRiskCalculator type",
+  "url": "https://example.com/medicalriskcalculator",
+  "identifier": "example-medicalriskcalculator-1"
+}
+```
+
+## Notes
+
+- MedicalRiskCalculator inherits all properties from MedicalRiskEstimator
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

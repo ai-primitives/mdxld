@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: LegalValueLevel
+title: LegalValueLevel
+description: A list of possible levels for the legal validity of a legislation.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# LegalValueLevel
+
+A list of possible levels for the legal validity of a legislation.
+
+## Type Hierarchy
+
+LegalValueLevel is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from LegalValueLevel.
+
+## Properties
+
+LegalValueLevel defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface LegalValueLevel {
+  $context?: 'schema.org'
+  $type: 'LegalValueLevel'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LegalValueLevel",
+  "name": "Example LegalValueLevel",
+  "description": "An example of the LegalValueLevel type",
+  "url": "https://example.com/legalvaluelevel",
+  "identifier": "example-legalvaluelevel-1"
+}
+```
+
+## Notes
+
+- LegalValueLevel inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

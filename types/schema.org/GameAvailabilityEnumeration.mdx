@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GameAvailabilityEnumeration
+title: GameAvailabilityEnumeration
+description: For a [[VideoGame]], such as used with a [[PlayGameAction]], an enumeration of the kind of game availability offered. 
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# GameAvailabilityEnumeration
+
+For a [[VideoGame]], such as used with a [[PlayGameAction]], an enumeration of the kind of game availability offered. 
+
+## Type Hierarchy
+
+GameAvailabilityEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from GameAvailabilityEnumeration.
+
+## Properties
+
+GameAvailabilityEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface GameAvailabilityEnumeration {
+  $context?: 'schema.org'
+  $type: 'GameAvailabilityEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GameAvailabilityEnumeration",
+  "name": "Example GameAvailabilityEnumeration",
+  "description": "An example of the GameAvailabilityEnumeration type",
+  "url": "https://example.com/gameavailabilityenumeration",
+  "identifier": "example-gameavailabilityenumeration-1"
+}
+```
+
+## Notes
+
+- GameAvailabilityEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CheckOutAction
+title: CheckOutAction
+description: The act of an agent communicating (service provider, social media, etc) their departure of a previously reserved service (e.g. flight check-in) or place (e.g. hotel).\n\nRelated actions:\n\n* [[CheckInAction]]: The antonym of CheckOutAction.\n* [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.\n* [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.
+properties:
+
+subClasses:
+
+parentClass: CommunicateAction
+---
+
+# CheckOutAction
+
+The act of an agent communicating (service provider, social media, etc) their departure of a previously reserved service (e.g. flight check-in) or place (e.g. hotel).\n\nRelated actions:\n\n* [[CheckInAction]]: The antonym of CheckOutAction.\n* [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.\n* [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.
+
+## Type Hierarchy
+
+CheckOutAction is a type of CommunicateAction.
+
+### Direct Subtypes
+
+No types directly inherit from CheckOutAction.
+
+## Properties
+
+CheckOutAction defines the following properties in addition to those inherited from CommunicateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface CheckOutAction {
+  $context?: 'schema.org'
+  $type: 'CheckOutAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CheckOutAction",
+  "name": "Example CheckOutAction",
+  "description": "An example of the CheckOutAction type",
+  "url": "https://example.com/checkoutaction",
+  "identifier": "example-checkoutaction-1"
+}
+```
+
+## Notes
+
+- CheckOutAction inherits all properties from CommunicateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

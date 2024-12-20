@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SeaBodyOfWater
+title: SeaBodyOfWater
+description: A sea (for example, the Caspian sea).
+properties:
+
+subClasses:
+
+parentClass: BodyOfWater
+---
+
+# SeaBodyOfWater
+
+A sea (for example, the Caspian sea).
+
+## Type Hierarchy
+
+SeaBodyOfWater is a type of BodyOfWater.
+
+### Direct Subtypes
+
+No types directly inherit from SeaBodyOfWater.
+
+## Properties
+
+SeaBodyOfWater defines the following properties in addition to those inherited from BodyOfWater:
+
+
+
+## Usage Example
+
+```typescript
+interface SeaBodyOfWater {
+  $context?: 'schema.org'
+  $type: 'SeaBodyOfWater'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SeaBodyOfWater",
+  "name": "Example SeaBodyOfWater",
+  "description": "An example of the SeaBodyOfWater type",
+  "url": "https://example.com/seabodyofwater",
+  "identifier": "example-seabodyofwater-1"
+}
+```
+
+## Notes
+
+- SeaBodyOfWater inherits all properties from BodyOfWater
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

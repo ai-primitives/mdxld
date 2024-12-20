@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: Ticket
+title: Ticket
+description: Used to describe a ticket to an event, a flight, a bus ride, etc.
+properties:
+  - dateIssued
+  - ticketNumber
+  - ticketToken
+  - ticketedSeat
+subClasses:
+
+parentClass: Intangible
+---
+
+# Ticket
+
+Used to describe a ticket to an event, a flight, a bus ride, etc.
+
+## Type Hierarchy
+
+Ticket is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Ticket.
+
+## Properties
+
+Ticket defines the following properties in addition to those inherited from Intangible:
+
+- dateIssued: The date the ticket was issued.
+- ticketedSeat: The seat associated with the ticket.
+- ticketNumber: The unique identifier for the ticket.
+- ticketToken: Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
+
+## Usage Example
+
+```typescript
+interface Ticket {
+  $context?: 'schema.org'
+  $type: 'Ticket'
+  dateIssued?: string
+  ticketedSeat?: Seat
+  ticketNumber?: string
+  ticketToken?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Ticket",
+  "name": "Example Ticket",
+  "description": "An example of the Ticket type",
+  "url": "https://example.com/ticket",
+  "identifier": "example-ticket-1"
+}
+```
+
+## Notes
+
+- Ticket inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GamePlayMode
+title: GamePlayMode
+description: Indicates whether this game is multi-player, co-op or single-player.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# GamePlayMode
+
+Indicates whether this game is multi-player, co-op or single-player.
+
+## Type Hierarchy
+
+GamePlayMode is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from GamePlayMode.
+
+## Properties
+
+GamePlayMode defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface GamePlayMode {
+  $context?: 'schema.org'
+  $type: 'GamePlayMode'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GamePlayMode",
+  "name": "Example GamePlayMode",
+  "description": "An example of the GamePlayMode type",
+  "url": "https://example.com/gameplaymode",
+  "identifier": "example-gameplaymode-1"
+}
+```
+
+## Notes
+
+- GamePlayMode inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

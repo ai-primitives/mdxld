@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MenuItem
+title: MenuItem
+description: A food or drink item listed in a menu or menu section.
+properties:
+  - menuAddOn
+subClasses:
+
+parentClass: Intangible
+---
+
+# MenuItem
+
+A food or drink item listed in a menu or menu section.
+
+## Type Hierarchy
+
+MenuItem is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from MenuItem.
+
+## Properties
+
+MenuItem defines the following properties in addition to those inherited from Intangible:
+
+- menuAddOn: Additional menu item(s) such as a side dish of salad or side order of fries that can be added to this menu item. Additionally it can be a menu section containing allowed add-on menu items for this menu item.
+
+## Usage Example
+
+```typescript
+interface MenuItem {
+  $context?: 'schema.org'
+  $type: 'MenuItem'
+  menuAddOn?: MenuItem | MenuSection
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MenuItem",
+  "name": "Example MenuItem",
+  "description": "An example of the MenuItem type",
+  "url": "https://example.com/menuitem",
+  "identifier": "example-menuitem-1"
+}
+```
+
+## Notes
+
+- MenuItem inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

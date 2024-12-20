@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HealthPlanFormulary
+title: HealthPlanFormulary
+description: For a given health insurance plan, the specification for costs and coverage of prescription drugs.
+properties:
+  - offersPrescriptionByMail
+subClasses:
+
+parentClass: Intangible
+---
+
+# HealthPlanFormulary
+
+For a given health insurance plan, the specification for costs and coverage of prescription drugs.
+
+## Type Hierarchy
+
+HealthPlanFormulary is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from HealthPlanFormulary.
+
+## Properties
+
+HealthPlanFormulary defines the following properties in addition to those inherited from Intangible:
+
+- offersPrescriptionByMail: Whether prescriptions can be delivered by mail.
+
+## Usage Example
+
+```typescript
+interface HealthPlanFormulary {
+  $context?: 'schema.org'
+  $type: 'HealthPlanFormulary'
+  offersPrescriptionByMail?: boolean
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HealthPlanFormulary",
+  "name": "Example HealthPlanFormulary",
+  "description": "An example of the HealthPlanFormulary type",
+  "url": "https://example.com/healthplanformulary",
+  "identifier": "example-healthplanformulary-1"
+}
+```
+
+## Notes
+
+- HealthPlanFormulary inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

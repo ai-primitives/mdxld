@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: FastFoodRestaurant
+title: FastFoodRestaurant
+description: A fast-food restaurant.
+properties:
+
+subClasses:
+
+parentClass: FoodEstablishment
+---
+
+# FastFoodRestaurant
+
+A fast-food restaurant.
+
+## Type Hierarchy
+
+FastFoodRestaurant is a type of FoodEstablishment.
+
+### Direct Subtypes
+
+No types directly inherit from FastFoodRestaurant.
+
+## Properties
+
+FastFoodRestaurant defines the following properties in addition to those inherited from FoodEstablishment:
+
+
+
+## Usage Example
+
+```typescript
+interface FastFoodRestaurant {
+  $context?: 'schema.org'
+  $type: 'FastFoodRestaurant'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FastFoodRestaurant",
+  "name": "Example FastFoodRestaurant",
+  "description": "An example of the FastFoodRestaurant type",
+  "url": "https://example.com/fastfoodrestaurant",
+  "identifier": "example-fastfoodrestaurant-1"
+}
+```
+
+## Notes
+
+- FastFoodRestaurant inherits all properties from FoodEstablishment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

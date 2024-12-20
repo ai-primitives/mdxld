@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Protein
+title: Protein
+description: Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type :Protein. A protein can thus be a subclass of another protein, e.g. :Protein as a UniProt record can have multiple isoforms inside it which would also be :Protein. They can be imagined, synthetic, hypothetical or naturally occurring.
+properties:
+
+subClasses:
+
+parentClass: BioChemEntity
+---
+
+# Protein
+
+Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type :Protein. A protein can thus be a subclass of another protein, e.g. :Protein as a UniProt record can have multiple isoforms inside it which would also be :Protein. They can be imagined, synthetic, hypothetical or naturally occurring.
+
+## Type Hierarchy
+
+Protein is a type of BioChemEntity.
+
+### Direct Subtypes
+
+No types directly inherit from Protein.
+
+## Properties
+
+Protein defines the following properties in addition to those inherited from BioChemEntity:
+
+
+
+## Usage Example
+
+```typescript
+interface Protein {
+  $context?: 'schema.org'
+  $type: 'Protein'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Protein",
+  "name": "Example Protein",
+  "description": "An example of the Protein type",
+  "url": "https://example.com/protein",
+  "identifier": "example-protein-1"
+}
+```
+
+## Notes
+
+- Protein inherits all properties from BioChemEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

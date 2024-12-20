@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EventVenue
+title: EventVenue
+description: An event venue.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# EventVenue
+
+An event venue.
+
+## Type Hierarchy
+
+EventVenue is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from EventVenue.
+
+## Properties
+
+EventVenue defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface EventVenue {
+  $context?: 'schema.org'
+  $type: 'EventVenue'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EventVenue",
+  "name": "Example EventVenue",
+  "description": "An example of the EventVenue type",
+  "url": "https://example.com/eventvenue",
+  "identifier": "example-eventvenue-1"
+}
+```
+
+## Notes
+
+- EventVenue inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

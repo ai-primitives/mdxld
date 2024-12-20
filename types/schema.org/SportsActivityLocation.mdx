@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: SportsActivityLocation
+title: SportsActivityLocation
+description: A sports location, such as a playing field.
+properties:
+
+subClasses:
+  - BowlingAlley
+  - ExerciseGym
+  - GolfCourse
+  - PublicSwimmingPool
+  - SportsClub
+  - TennisComplex
+parentClass: LocalBusiness
+---
+
+# SportsActivityLocation
+
+A sports location, such as a playing field.
+
+## Type Hierarchy
+
+SportsActivityLocation is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from SportsActivityLocation:
+
+- BowlingAlley: A bowling alley.
+- ExerciseGym: A gym.
+- GolfCourse: A golf course.
+- PublicSwimmingPool: A public swimming pool.
+- SportsClub: A sports club.
+- TennisComplex: A tennis complex.
+
+## Properties
+
+SportsActivityLocation defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface SportsActivityLocation {
+  $context?: 'schema.org'
+  $type: 'SportsActivityLocation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SportsActivityLocation",
+  "name": "Example SportsActivityLocation",
+  "description": "An example of the SportsActivityLocation type",
+  "url": "https://example.com/sportsactivitylocation",
+  "identifier": "example-sportsactivitylocation-1"
+}
+```
+
+## Notes
+
+- SportsActivityLocation inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

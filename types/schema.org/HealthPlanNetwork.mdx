@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HealthPlanNetwork
+title: HealthPlanNetwork
+description: A US-style health insurance plan network.
+properties:
+  - healthPlanNetworkTier
+subClasses:
+
+parentClass: Intangible
+---
+
+# HealthPlanNetwork
+
+A US-style health insurance plan network.
+
+## Type Hierarchy
+
+HealthPlanNetwork is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from HealthPlanNetwork.
+
+## Properties
+
+HealthPlanNetwork defines the following properties in addition to those inherited from Intangible:
+
+- healthPlanNetworkTier: The tier(s) for this network.
+
+## Usage Example
+
+```typescript
+interface HealthPlanNetwork {
+  $context?: 'schema.org'
+  $type: 'HealthPlanNetwork'
+  healthPlanNetworkTier?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HealthPlanNetwork",
+  "name": "Example HealthPlanNetwork",
+  "description": "An example of the HealthPlanNetwork type",
+  "url": "https://example.com/healthplannetwork",
+  "identifier": "example-healthplannetwork-1"
+}
+```
+
+## Notes
+
+- HealthPlanNetwork inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

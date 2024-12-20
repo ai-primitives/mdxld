@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: InternetCafe
+title: InternetCafe
+description: An internet cafe.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# InternetCafe
+
+An internet cafe.
+
+## Type Hierarchy
+
+InternetCafe is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from InternetCafe.
+
+## Properties
+
+InternetCafe defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface InternetCafe {
+  $context?: 'schema.org'
+  $type: 'InternetCafe'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InternetCafe",
+  "name": "Example InternetCafe",
+  "description": "An example of the InternetCafe type",
+  "url": "https://example.com/internetcafe",
+  "identifier": "example-internetcafe-1"
+}
+```
+
+## Notes
+
+- InternetCafe inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

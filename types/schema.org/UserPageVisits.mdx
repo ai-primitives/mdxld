@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UserPageVisits
+title: UserPageVisits
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+
+subClasses:
+
+parentClass: UserInteraction
+---
+
+# UserPageVisits
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserPageVisits is a type of UserInteraction.
+
+### Direct Subtypes
+
+No types directly inherit from UserPageVisits.
+
+## Properties
+
+UserPageVisits defines the following properties in addition to those inherited from UserInteraction:
+
+
+
+## Usage Example
+
+```typescript
+interface UserPageVisits {
+  $context?: 'schema.org'
+  $type: 'UserPageVisits'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserPageVisits",
+  "name": "Example UserPageVisits",
+  "description": "An example of the UserPageVisits type",
+  "url": "https://example.com/userpagevisits",
+  "identifier": "example-userpagevisits-1"
+}
+```
+
+## Notes
+
+- UserPageVisits inherits all properties from UserInteraction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

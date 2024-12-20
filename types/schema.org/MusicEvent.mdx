@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MusicEvent
+title: MusicEvent
+description: Event type: Music event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# MusicEvent
+
+Event type: Music event.
+
+## Type Hierarchy
+
+MusicEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from MusicEvent.
+
+## Properties
+
+MusicEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface MusicEvent {
+  $context?: 'schema.org'
+  $type: 'MusicEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicEvent",
+  "name": "Example MusicEvent",
+  "description": "An example of the MusicEvent type",
+  "url": "https://example.com/musicevent",
+  "identifier": "example-musicevent-1"
+}
+```
+
+## Notes
+
+- MusicEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

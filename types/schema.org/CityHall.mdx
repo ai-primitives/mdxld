@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CityHall
+title: CityHall
+description: A city hall.
+properties:
+
+subClasses:
+
+parentClass: GovernmentBuilding
+---
+
+# CityHall
+
+A city hall.
+
+## Type Hierarchy
+
+CityHall is a type of GovernmentBuilding.
+
+### Direct Subtypes
+
+No types directly inherit from CityHall.
+
+## Properties
+
+CityHall defines the following properties in addition to those inherited from GovernmentBuilding:
+
+
+
+## Usage Example
+
+```typescript
+interface CityHall {
+  $context?: 'schema.org'
+  $type: 'CityHall'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CityHall",
+  "name": "Example CityHall",
+  "description": "An example of the CityHall type",
+  "url": "https://example.com/cityhall",
+  "identifier": "example-cityhall-1"
+}
+```
+
+## Notes
+
+- CityHall inherits all properties from GovernmentBuilding
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

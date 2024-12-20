@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EmploymentAgency
+title: EmploymentAgency
+description: An employment agency.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# EmploymentAgency
+
+An employment agency.
+
+## Type Hierarchy
+
+EmploymentAgency is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from EmploymentAgency.
+
+## Properties
+
+EmploymentAgency defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface EmploymentAgency {
+  $context?: 'schema.org'
+  $type: 'EmploymentAgency'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EmploymentAgency",
+  "name": "Example EmploymentAgency",
+  "description": "An example of the EmploymentAgency type",
+  "url": "https://example.com/employmentagency",
+  "identifier": "example-employmentagency-1"
+}
+```
+
+## Notes
+
+- EmploymentAgency inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

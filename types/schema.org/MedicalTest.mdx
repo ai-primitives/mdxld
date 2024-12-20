@@ -1,0 +1,79 @@
+---
+$context: schema.org
+$type: MedicalTest
+title: MedicalTest
+description: Any medical test, typically performed for diagnostic purposes.
+properties:
+  - affectedBy
+  - normalRange
+  - signDetected
+  - usedToDiagnose
+  - usesDevice
+subClasses:
+  - BloodTest
+  - ImagingTest
+  - MedicalTestPanel
+  - PathologyTest
+parentClass: MedicalEntity
+---
+
+# MedicalTest
+
+Any medical test, typically performed for diagnostic purposes.
+
+## Type Hierarchy
+
+MedicalTest is a type of MedicalEntity.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalTest:
+
+- BloodTest: A medical test performed on a sample of a patient's blood.
+- ImagingTest: Any medical imaging modality typically used for diagnostic purposes.
+- MedicalTestPanel: Any collection of tests commonly ordered together.
+- PathologyTest: A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.
+
+## Properties
+
+MedicalTest defines the following properties in addition to those inherited from MedicalEntity:
+
+- affectedBy: Drugs that affect the test's results.
+- normalRange: Range of acceptable values for a typical patient, when applicable.
+- signDetected: A sign detected by the test.
+- usedToDiagnose: A condition the test is used to diagnose.
+- usesDevice: Device used to perform the test.
+
+## Usage Example
+
+```typescript
+interface MedicalTest {
+  $context?: 'schema.org'
+  $type: 'MedicalTest'
+  affectedBy?: Drug
+  normalRange?: MedicalEnumeration | string
+  signDetected?: MedicalSign
+  usedToDiagnose?: MedicalCondition
+  usesDevice?: MedicalDevice
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalTest",
+  "name": "Example MedicalTest",
+  "description": "An example of the MedicalTest type",
+  "url": "https://example.com/medicaltest",
+  "identifier": "example-medicaltest-1"
+}
+```
+
+## Notes
+
+- MedicalTest inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

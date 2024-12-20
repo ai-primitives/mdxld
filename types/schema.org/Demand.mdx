@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Demand
+title: Demand
+description: A demand entity represents the public, not necessarily binding, not necessarily exclusive, announcement by an organization or person to seek a certain type of goods or services. For describing demand using this type, the very same properties used for Offer apply.
+properties:
+
+subClasses:
+
+parentClass: Intangible
+---
+
+# Demand
+
+A demand entity represents the public, not necessarily binding, not necessarily exclusive, announcement by an organization or person to seek a certain type of goods or services. For describing demand using this type, the very same properties used for Offer apply.
+
+## Type Hierarchy
+
+Demand is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Demand.
+
+## Properties
+
+Demand defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface Demand {
+  $context?: 'schema.org'
+  $type: 'Demand'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Demand",
+  "name": "Example Demand",
+  "description": "An example of the Demand type",
+  "url": "https://example.com/demand",
+  "identifier": "example-demand-1"
+}
+```
+
+## Notes
+
+- Demand inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

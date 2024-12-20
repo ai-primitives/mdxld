@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BusStation
+title: BusStation
+description: A bus station.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# BusStation
+
+A bus station.
+
+## Type Hierarchy
+
+BusStation is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from BusStation.
+
+## Properties
+
+BusStation defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface BusStation {
+  $context?: 'schema.org'
+  $type: 'BusStation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BusStation",
+  "name": "Example BusStation",
+  "description": "An example of the BusStation type",
+  "url": "https://example.com/busstation",
+  "identifier": "example-busstation-1"
+}
+```
+
+## Notes
+
+- BusStation inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

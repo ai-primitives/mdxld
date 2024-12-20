@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BackgroundNewsArticle
+title: BackgroundNewsArticle
+description: A [[NewsArticle]] providing historical context, definition and detail on a specific topic (aka "explainer" or "backgrounder"). For example, an in-depth article or frequently-asked-questions ([FAQ](https://en.wikipedia.org/wiki/FAQ)) document on topics such as Climate Change or the European Union. Other kinds of background material from a non-news setting are often described using [[Book]] or [[Article]], in particular [[ScholarlyArticle]]. See also [[NewsArticle]] for related vocabulary from a learning/education perspective.
+properties:
+
+subClasses:
+
+parentClass: NewsArticle
+---
+
+# BackgroundNewsArticle
+
+A [[NewsArticle]] providing historical context, definition and detail on a specific topic (aka "explainer" or "backgrounder"). For example, an in-depth article or frequently-asked-questions ([FAQ](https://en.wikipedia.org/wiki/FAQ)) document on topics such as Climate Change or the European Union. Other kinds of background material from a non-news setting are often described using [[Book]] or [[Article]], in particular [[ScholarlyArticle]]. See also [[NewsArticle]] for related vocabulary from a learning/education perspective.
+
+## Type Hierarchy
+
+BackgroundNewsArticle is a type of NewsArticle.
+
+### Direct Subtypes
+
+No types directly inherit from BackgroundNewsArticle.
+
+## Properties
+
+BackgroundNewsArticle defines the following properties in addition to those inherited from NewsArticle:
+
+
+
+## Usage Example
+
+```typescript
+interface BackgroundNewsArticle {
+  $context?: 'schema.org'
+  $type: 'BackgroundNewsArticle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BackgroundNewsArticle",
+  "name": "Example BackgroundNewsArticle",
+  "description": "An example of the BackgroundNewsArticle type",
+  "url": "https://example.com/backgroundnewsarticle",
+  "identifier": "example-backgroundnewsarticle-1"
+}
+```
+
+## Notes
+
+- BackgroundNewsArticle inherits all properties from NewsArticle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

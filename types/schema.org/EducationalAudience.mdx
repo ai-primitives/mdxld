@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EducationalAudience
+title: EducationalAudience
+description: An EducationalAudience.
+properties:
+  - educationalRole
+subClasses:
+
+parentClass: Audience
+---
+
+# EducationalAudience
+
+An EducationalAudience.
+
+## Type Hierarchy
+
+EducationalAudience is a type of Audience.
+
+### Direct Subtypes
+
+No types directly inherit from EducationalAudience.
+
+## Properties
+
+EducationalAudience defines the following properties in addition to those inherited from Audience:
+
+- educationalRole: An educationalRole of an EducationalAudience.
+
+## Usage Example
+
+```typescript
+interface EducationalAudience {
+  $context?: 'schema.org'
+  $type: 'EducationalAudience'
+  educationalRole?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EducationalAudience",
+  "name": "Example EducationalAudience",
+  "description": "An example of the EducationalAudience type",
+  "url": "https://example.com/educationalaudience",
+  "identifier": "example-educationalaudience-1"
+}
+```
+
+## Notes
+
+- EducationalAudience inherits all properties from Audience
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

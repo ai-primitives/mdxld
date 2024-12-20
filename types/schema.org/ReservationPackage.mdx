@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ReservationPackage
+title: ReservationPackage
+description: A group of multiple reservations with common values for all sub-reservations.
+properties:
+  - subReservation
+subClasses:
+
+parentClass: Reservation
+---
+
+# ReservationPackage
+
+A group of multiple reservations with common values for all sub-reservations.
+
+## Type Hierarchy
+
+ReservationPackage is a type of Reservation.
+
+### Direct Subtypes
+
+No types directly inherit from ReservationPackage.
+
+## Properties
+
+ReservationPackage defines the following properties in addition to those inherited from Reservation:
+
+- subReservation: The individual reservations included in the package. Typically a repeated property.
+
+## Usage Example
+
+```typescript
+interface ReservationPackage {
+  $context?: 'schema.org'
+  $type: 'ReservationPackage'
+  subReservation?: Reservation
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReservationPackage",
+  "name": "Example ReservationPackage",
+  "description": "An example of the ReservationPackage type",
+  "url": "https://example.com/reservationpackage",
+  "identifier": "example-reservationpackage-1"
+}
+```
+
+## Notes
+
+- ReservationPackage inherits all properties from Reservation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

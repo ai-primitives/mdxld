@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Notary
+title: Notary
+description: A notary.
+properties:
+
+subClasses:
+
+parentClass: LegalService
+---
+
+# Notary
+
+A notary.
+
+## Type Hierarchy
+
+Notary is a type of LegalService.
+
+### Direct Subtypes
+
+No types directly inherit from Notary.
+
+## Properties
+
+Notary defines the following properties in addition to those inherited from LegalService:
+
+
+
+## Usage Example
+
+```typescript
+interface Notary {
+  $context?: 'schema.org'
+  $type: 'Notary'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Notary",
+  "name": "Example Notary",
+  "description": "An example of the Notary type",
+  "url": "https://example.com/notary",
+  "identifier": "example-notary-1"
+}
+```
+
+## Notes
+
+- Notary inherits all properties from LegalService
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ChildrensEvent
+title: ChildrensEvent
+description: Event type: Children's event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# ChildrensEvent
+
+Event type: Children's event.
+
+## Type Hierarchy
+
+ChildrensEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from ChildrensEvent.
+
+## Properties
+
+ChildrensEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface ChildrensEvent {
+  $context?: 'schema.org'
+  $type: 'ChildrensEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ChildrensEvent",
+  "name": "Example ChildrensEvent",
+  "description": "An example of the ChildrensEvent type",
+  "url": "https://example.com/childrensevent",
+  "identifier": "example-childrensevent-1"
+}
+```
+
+## Notes
+
+- ChildrensEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

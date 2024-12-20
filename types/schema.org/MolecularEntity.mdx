@@ -1,0 +1,77 @@
+---
+$context: schema.org
+$type: MolecularEntity
+title: MolecularEntity
+description: Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.
+properties:
+  - inChI
+  - inChIKey
+  - iupacName
+  - molecularFormula
+  - molecularWeight
+  - monoisotopicMolecularWeight
+  - smiles
+subClasses:
+
+parentClass: BioChemEntity
+---
+
+# MolecularEntity
+
+Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.
+
+## Type Hierarchy
+
+MolecularEntity is a type of BioChemEntity.
+
+### Direct Subtypes
+
+No types directly inherit from MolecularEntity.
+
+## Properties
+
+MolecularEntity defines the following properties in addition to those inherited from BioChemEntity:
+
+- inChI: Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.
+- inChIKey: InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
+- iupacName: Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).
+- molecularFormula: The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
+- molecularWeight: This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.
+- monoisotopicMolecularWeight: The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units in the form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as '&lt;QuantitativeValue&gt;.
+- smiles: A specification in form of a line notation for describing the structure of chemical species using short ASCII strings.  Double bond stereochemistry \ indicators may need to be escaped in the string in formats where the backslash is an escape character.
+
+## Usage Example
+
+```typescript
+interface MolecularEntity {
+  $context?: 'schema.org'
+  $type: 'MolecularEntity'
+  inChI?: string
+  inChIKey?: string
+  iupacName?: string
+  molecularFormula?: string
+  molecularWeight?: QuantitativeValue | string
+  monoisotopicMolecularWeight?: QuantitativeValue | string
+  smiles?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MolecularEntity",
+  "name": "Example MolecularEntity",
+  "description": "An example of the MolecularEntity type",
+  "url": "https://example.com/molecularentity",
+  "identifier": "example-molecularentity-1"
+}
+```
+
+## Notes
+
+- MolecularEntity inherits all properties from BioChemEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,73 @@
+---
+$context: schema.org
+$type: Dataset
+title: Dataset
+description: A body of structured information describing some topic(s) of interest.
+properties:
+  - catalog
+  - datasetTimeInterval
+  - distribution
+  - includedDataCatalog
+  - includedInDataCatalog
+subClasses:
+  - DataFeed
+parentClass: CreativeWork
+---
+
+# Dataset
+
+A body of structured information describing some topic(s) of interest.
+
+## Type Hierarchy
+
+Dataset is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from Dataset:
+
+- DataFeed: A single feed providing structured information about one or more entities or topics.
+
+## Properties
+
+Dataset defines the following properties in addition to those inherited from CreativeWork:
+
+- catalog: A data catalog which contains this dataset.
+- datasetTimeInterval: The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).
+- distribution: A downloadable form of this dataset, at a specific location, in a specific format. This property can be repeated if different variations are available. There is no expectation that different downloadable distributions must contain exactly equivalent information (see also [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this point). Different distributions might include or exclude different subsets of the entire dataset, for example.
+- includedDataCatalog: A data catalog which contains this dataset (this property was previously 'catalog', preferred name is now 'includedInDataCatalog').
+- includedInDataCatalog: A data catalog which contains this dataset.
+
+## Usage Example
+
+```typescript
+interface Dataset {
+  $context?: 'schema.org'
+  $type: 'Dataset'
+  catalog?: DataCatalog
+  datasetTimeInterval?: string
+  distribution?: DataDownload
+  includedDataCatalog?: DataCatalog
+  includedInDataCatalog?: DataCatalog
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Dataset",
+  "name": "Example Dataset",
+  "description": "An example of the Dataset type",
+  "url": "https://example.com/dataset",
+  "identifier": "example-dataset-1"
+}
+```
+
+## Notes
+
+- Dataset inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

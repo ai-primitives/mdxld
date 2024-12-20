@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: MedicalTherapy
+title: MedicalTherapy
+description: Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition.
+properties:
+  - duplicateTherapy
+subClasses:
+  - OccupationalTherapy
+  - PhysicalTherapy
+  - RadiationTherapy
+parentClass: TherapeuticProcedure
+---
+
+# MedicalTherapy
+
+Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition.
+
+## Type Hierarchy
+
+MedicalTherapy is a type of TherapeuticProcedure.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalTherapy:
+
+- OccupationalTherapy: A treatment of people with physical, emotional, or social problems, using purposeful activity to help them overcome or learn to deal with their problems.
+- PhysicalTherapy: A process of progressive physical care and rehabilitation aimed at improving a health condition.
+- RadiationTherapy: A process of care using radiation aimed at improving a health condition.
+
+## Properties
+
+MedicalTherapy defines the following properties in addition to those inherited from TherapeuticProcedure:
+
+- duplicateTherapy: A therapy that duplicates or overlaps this one.
+
+## Usage Example
+
+```typescript
+interface MedicalTherapy {
+  $context?: 'schema.org'
+  $type: 'MedicalTherapy'
+  duplicateTherapy?: MedicalTherapy
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalTherapy",
+  "name": "Example MedicalTherapy",
+  "description": "An example of the MedicalTherapy type",
+  "url": "https://example.com/medicaltherapy",
+  "identifier": "example-medicaltherapy-1"
+}
+```
+
+## Notes
+
+- MedicalTherapy inherits all properties from TherapeuticProcedure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

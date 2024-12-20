@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: NoteDigitalDocument
+title: NoteDigitalDocument
+description: A file containing a note, primarily for the author.
+properties:
+
+subClasses:
+
+parentClass: DigitalDocument
+---
+
+# NoteDigitalDocument
+
+A file containing a note, primarily for the author.
+
+## Type Hierarchy
+
+NoteDigitalDocument is a type of DigitalDocument.
+
+### Direct Subtypes
+
+No types directly inherit from NoteDigitalDocument.
+
+## Properties
+
+NoteDigitalDocument defines the following properties in addition to those inherited from DigitalDocument:
+
+
+
+## Usage Example
+
+```typescript
+interface NoteDigitalDocument {
+  $context?: 'schema.org'
+  $type: 'NoteDigitalDocument'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "NoteDigitalDocument",
+  "name": "Example NoteDigitalDocument",
+  "description": "An example of the NoteDigitalDocument type",
+  "url": "https://example.com/notedigitaldocument",
+  "identifier": "example-notedigitaldocument-1"
+}
+```
+
+## Notes
+
+- NoteDigitalDocument inherits all properties from DigitalDocument
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

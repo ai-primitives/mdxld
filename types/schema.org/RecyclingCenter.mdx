@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RecyclingCenter
+title: RecyclingCenter
+description: A recycling center.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# RecyclingCenter
+
+A recycling center.
+
+## Type Hierarchy
+
+RecyclingCenter is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from RecyclingCenter.
+
+## Properties
+
+RecyclingCenter defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface RecyclingCenter {
+  $context?: 'schema.org'
+  $type: 'RecyclingCenter'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RecyclingCenter",
+  "name": "Example RecyclingCenter",
+  "description": "An example of the RecyclingCenter type",
+  "url": "https://example.com/recyclingcenter",
+  "identifier": "example-recyclingcenter-1"
+}
+```
+
+## Notes
+
+- RecyclingCenter inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

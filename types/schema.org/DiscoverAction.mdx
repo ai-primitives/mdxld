@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DiscoverAction
+title: DiscoverAction
+description: The act of discovering/finding an object.
+properties:
+
+subClasses:
+
+parentClass: FindAction
+---
+
+# DiscoverAction
+
+The act of discovering/finding an object.
+
+## Type Hierarchy
+
+DiscoverAction is a type of FindAction.
+
+### Direct Subtypes
+
+No types directly inherit from DiscoverAction.
+
+## Properties
+
+DiscoverAction defines the following properties in addition to those inherited from FindAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DiscoverAction {
+  $context?: 'schema.org'
+  $type: 'DiscoverAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DiscoverAction",
+  "name": "Example DiscoverAction",
+  "description": "An example of the DiscoverAction type",
+  "url": "https://example.com/discoveraction",
+  "identifier": "example-discoveraction-1"
+}
+```
+
+## Notes
+
+- DiscoverAction inherits all properties from FindAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

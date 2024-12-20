@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DislikeAction
+title: DislikeAction
+description: The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.
+properties:
+
+subClasses:
+
+parentClass: ReactAction
+---
+
+# DislikeAction
+
+The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.
+
+## Type Hierarchy
+
+DislikeAction is a type of ReactAction.
+
+### Direct Subtypes
+
+No types directly inherit from DislikeAction.
+
+## Properties
+
+DislikeAction defines the following properties in addition to those inherited from ReactAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DislikeAction {
+  $context?: 'schema.org'
+  $type: 'DislikeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DislikeAction",
+  "name": "Example DislikeAction",
+  "description": "An example of the DislikeAction type",
+  "url": "https://example.com/dislikeaction",
+  "identifier": "example-dislikeaction-1"
+}
+```
+
+## Notes
+
+- DislikeAction inherits all properties from ReactAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

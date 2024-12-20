@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Recommendation
+title: Recommendation
+description: [[Recommendation]] is a type of [[Review]] that suggests or proposes something as the best option or best course of action. Recommendations may be for products or services, or other concrete things, as in the case of a ranked list or product guide. A [[Guide]] may list multiple recommendations for different categories. For example, in a [[Guide]] about which TVs to buy, the author may have several [[Recommendation]]s.
+properties:
+
+subClasses:
+
+parentClass: Review
+---
+
+# Recommendation
+
+[[Recommendation]] is a type of [[Review]] that suggests or proposes something as the best option or best course of action. Recommendations may be for products or services, or other concrete things, as in the case of a ranked list or product guide. A [[Guide]] may list multiple recommendations for different categories. For example, in a [[Guide]] about which TVs to buy, the author may have several [[Recommendation]]s.
+
+## Type Hierarchy
+
+Recommendation is a type of Review.
+
+### Direct Subtypes
+
+No types directly inherit from Recommendation.
+
+## Properties
+
+Recommendation defines the following properties in addition to those inherited from Review:
+
+
+
+## Usage Example
+
+```typescript
+interface Recommendation {
+  $context?: 'schema.org'
+  $type: 'Recommendation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Recommendation",
+  "name": "Example Recommendation",
+  "description": "An example of the Recommendation type",
+  "url": "https://example.com/recommendation",
+  "identifier": "example-recommendation-1"
+}
+```
+
+## Notes
+
+- Recommendation inherits all properties from Review
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

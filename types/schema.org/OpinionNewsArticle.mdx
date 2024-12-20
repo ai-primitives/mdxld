@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OpinionNewsArticle
+title: OpinionNewsArticle
+description: An [[OpinionNewsArticle]] is a [[NewsArticle]] that primarily expresses opinions rather than journalistic reporting of news and events. For example, a [[NewsArticle]] consisting of a column or [[Blog]]/[[BlogPosting]] entry in the Opinions section of a news publication. 
+properties:
+
+subClasses:
+
+parentClass: NewsArticle
+---
+
+# OpinionNewsArticle
+
+An [[OpinionNewsArticle]] is a [[NewsArticle]] that primarily expresses opinions rather than journalistic reporting of news and events. For example, a [[NewsArticle]] consisting of a column or [[Blog]]/[[BlogPosting]] entry in the Opinions section of a news publication. 
+
+## Type Hierarchy
+
+OpinionNewsArticle is a type of NewsArticle.
+
+### Direct Subtypes
+
+No types directly inherit from OpinionNewsArticle.
+
+## Properties
+
+OpinionNewsArticle defines the following properties in addition to those inherited from NewsArticle:
+
+
+
+## Usage Example
+
+```typescript
+interface OpinionNewsArticle {
+  $context?: 'schema.org'
+  $type: 'OpinionNewsArticle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OpinionNewsArticle",
+  "name": "Example OpinionNewsArticle",
+  "description": "An example of the OpinionNewsArticle type",
+  "url": "https://example.com/opinionnewsarticle",
+  "identifier": "example-opinionnewsarticle-1"
+}
+```
+
+## Notes
+
+- OpinionNewsArticle inherits all properties from NewsArticle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

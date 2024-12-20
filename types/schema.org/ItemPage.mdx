@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ItemPage
+title: ItemPage
+description: A page devoted to a single item, such as a particular product or hotel.
+properties:
+
+subClasses:
+
+parentClass: WebPage
+---
+
+# ItemPage
+
+A page devoted to a single item, such as a particular product or hotel.
+
+## Type Hierarchy
+
+ItemPage is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from ItemPage.
+
+## Properties
+
+ItemPage defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface ItemPage {
+  $context?: 'schema.org'
+  $type: 'ItemPage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ItemPage",
+  "name": "Example ItemPage",
+  "description": "An example of the ItemPage type",
+  "url": "https://example.com/itempage",
+  "identifier": "example-itempage-1"
+}
+```
+
+## Notes
+
+- ItemPage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

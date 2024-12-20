@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OccupationalExperienceRequirements
+title: OccupationalExperienceRequirements
+description: Indicates employment-related experience requirements, e.g. [[monthsOfExperience]].
+properties:
+  - monthsOfExperience
+subClasses:
+
+parentClass: Intangible
+---
+
+# OccupationalExperienceRequirements
+
+Indicates employment-related experience requirements, e.g. [[monthsOfExperience]].
+
+## Type Hierarchy
+
+OccupationalExperienceRequirements is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from OccupationalExperienceRequirements.
+
+## Properties
+
+OccupationalExperienceRequirements defines the following properties in addition to those inherited from Intangible:
+
+- monthsOfExperience: Indicates the minimal number of months of experience required for a position.
+
+## Usage Example
+
+```typescript
+interface OccupationalExperienceRequirements {
+  $context?: 'schema.org'
+  $type: 'OccupationalExperienceRequirements'
+  monthsOfExperience?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OccupationalExperienceRequirements",
+  "name": "Example OccupationalExperienceRequirements",
+  "description": "An example of the OccupationalExperienceRequirements type",
+  "url": "https://example.com/occupationalexperiencerequirements",
+  "identifier": "example-occupationalexperiencerequirements-1"
+}
+```
+
+## Notes
+
+- OccupationalExperienceRequirements inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

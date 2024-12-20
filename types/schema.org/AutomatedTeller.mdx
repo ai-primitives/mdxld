@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AutomatedTeller
+title: AutomatedTeller
+description: ATM/cash machine.
+properties:
+
+subClasses:
+
+parentClass: FinancialService
+---
+
+# AutomatedTeller
+
+ATM/cash machine.
+
+## Type Hierarchy
+
+AutomatedTeller is a type of FinancialService.
+
+### Direct Subtypes
+
+No types directly inherit from AutomatedTeller.
+
+## Properties
+
+AutomatedTeller defines the following properties in addition to those inherited from FinancialService:
+
+
+
+## Usage Example
+
+```typescript
+interface AutomatedTeller {
+  $context?: 'schema.org'
+  $type: 'AutomatedTeller'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AutomatedTeller",
+  "name": "Example AutomatedTeller",
+  "description": "An example of the AutomatedTeller type",
+  "url": "https://example.com/automatedteller",
+  "identifier": "example-automatedteller-1"
+}
+```
+
+## Notes
+
+- AutomatedTeller inherits all properties from FinancialService
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

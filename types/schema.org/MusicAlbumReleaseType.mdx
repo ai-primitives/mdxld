@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MusicAlbumReleaseType
+title: MusicAlbumReleaseType
+description: The kind of release which this album is: single, EP or album.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# MusicAlbumReleaseType
+
+The kind of release which this album is: single, EP or album.
+
+## Type Hierarchy
+
+MusicAlbumReleaseType is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MusicAlbumReleaseType.
+
+## Properties
+
+MusicAlbumReleaseType defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MusicAlbumReleaseType {
+  $context?: 'schema.org'
+  $type: 'MusicAlbumReleaseType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicAlbumReleaseType",
+  "name": "Example MusicAlbumReleaseType",
+  "description": "An example of the MusicAlbumReleaseType type",
+  "url": "https://example.com/musicalbumreleasetype",
+  "identifier": "example-musicalbumreleasetype-1"
+}
+```
+
+## Notes
+
+- MusicAlbumReleaseType inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

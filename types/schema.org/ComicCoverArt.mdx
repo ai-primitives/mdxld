@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ComicCoverArt
+title: ComicCoverArt
+description: The artwork on the cover of a comic.
+properties:
+
+subClasses:
+
+
+---
+
+# ComicCoverArt
+
+The artwork on the cover of a comic.
+
+## Type Hierarchy
+
+ComicCoverArt is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from ComicCoverArt.
+
+## Properties
+
+ComicCoverArt defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface ComicCoverArt {
+  $context?: 'schema.org'
+  $type: 'ComicCoverArt'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ComicCoverArt",
+  "name": "Example ComicCoverArt",
+  "description": "An example of the ComicCoverArt type",
+  "url": "https://example.com/comiccoverart",
+  "identifier": "example-comiccoverart-1"
+}
+```
+
+## Notes
+
+- ComicCoverArt inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

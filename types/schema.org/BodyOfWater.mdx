@@ -1,0 +1,75 @@
+---
+$context: schema.org
+$type: BodyOfWater
+title: BodyOfWater
+description: A body of water, such as a sea, ocean, or lake.
+properties:
+
+subClasses:
+  - Canal
+  - LakeBodyOfWater
+  - OceanBodyOfWater
+  - Pond
+  - Reservoir
+  - RiverBodyOfWater
+  - SeaBodyOfWater
+  - Waterfall
+parentClass: Landform
+---
+
+# BodyOfWater
+
+A body of water, such as a sea, ocean, or lake.
+
+## Type Hierarchy
+
+BodyOfWater is a type of Landform.
+
+### Direct Subtypes
+
+The following types directly inherit from BodyOfWater:
+
+- Canal: A canal, like the Panama Canal.
+- LakeBodyOfWater: A lake (for example, Lake Pontrachain).
+- OceanBodyOfWater: An ocean (for example, the Pacific).
+- Pond: A pond.
+- Reservoir: A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir.
+- RiverBodyOfWater: A river (for example, the broad majestic Shannon).
+- SeaBodyOfWater: A sea (for example, the Caspian sea).
+- Waterfall: A waterfall, like Niagara.
+
+## Properties
+
+BodyOfWater defines the following properties in addition to those inherited from Landform:
+
+
+
+## Usage Example
+
+```typescript
+interface BodyOfWater {
+  $context?: 'schema.org'
+  $type: 'BodyOfWater'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BodyOfWater",
+  "name": "Example BodyOfWater",
+  "description": "An example of the BodyOfWater type",
+  "url": "https://example.com/bodyofwater",
+  "identifier": "example-bodyofwater-1"
+}
+```
+
+## Notes
+
+- BodyOfWater inherits all properties from Landform
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

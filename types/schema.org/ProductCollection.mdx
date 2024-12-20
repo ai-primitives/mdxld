@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ProductCollection
+title: ProductCollection
+description: A set of products (either [[ProductGroup]]s or specific variants) that are listed together e.g. in an [[Offer]].
+properties:
+
+subClasses:
+
+
+---
+
+# ProductCollection
+
+A set of products (either [[ProductGroup]]s or specific variants) that are listed together e.g. in an [[Offer]].
+
+## Type Hierarchy
+
+ProductCollection is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from ProductCollection.
+
+## Properties
+
+ProductCollection defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface ProductCollection {
+  $context?: 'schema.org'
+  $type: 'ProductCollection'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ProductCollection",
+  "name": "Example ProductCollection",
+  "description": "An example of the ProductCollection type",
+  "url": "https://example.com/productcollection",
+  "identifier": "example-productcollection-1"
+}
+```
+
+## Notes
+
+- ProductCollection inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

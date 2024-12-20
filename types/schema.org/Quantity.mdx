@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: Quantity
+title: Quantity
+description: Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 kg' or '4 milligrams'.
+properties:
+
+subClasses:
+  - Distance
+  - Duration
+  - Energy
+  - Mass
+parentClass: Intangible
+---
+
+# Quantity
+
+Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 kg' or '4 milligrams'.
+
+## Type Hierarchy
+
+Quantity is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from Quantity:
+
+- Distance: Properties that take Distances as values are of the form '&lt;Number&gt; &lt;Length unit of measure&gt;'. E.g., '7 ft'.
+- Duration: Quantity: Duration (use [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601)).
+- Energy: Properties that take Energy as values are of the form '&lt;Number&gt; &lt;Energy unit of measure&gt;'.
+- Mass: Properties that take Mass as values are of the form '&lt;Number&gt; &lt;Mass unit of measure&gt;'. E.g., '7 kg'.
+
+## Properties
+
+Quantity defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface Quantity {
+  $context?: 'schema.org'
+  $type: 'Quantity'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Quantity",
+  "name": "Example Quantity",
+  "description": "An example of the Quantity type",
+  "url": "https://example.com/quantity",
+  "identifier": "example-quantity-1"
+}
+```
+
+## Notes
+
+- Quantity inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

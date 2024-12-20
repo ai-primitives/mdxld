@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: OwnershipInfo
+title: OwnershipInfo
+description: A structured value providing information about when a certain organization or person owned a certain product.
+properties:
+  - acquiredFrom
+  - ownedFrom
+  - ownedThrough
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# OwnershipInfo
+
+A structured value providing information about when a certain organization or person owned a certain product.
+
+## Type Hierarchy
+
+OwnershipInfo is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from OwnershipInfo.
+
+## Properties
+
+OwnershipInfo defines the following properties in addition to those inherited from StructuredValue:
+
+- acquiredFrom: The organization or person from which the product was acquired.
+- ownedFrom: The date and time of obtaining the product.
+- ownedThrough: The date and time of giving up ownership on the product.
+
+## Usage Example
+
+```typescript
+interface OwnershipInfo {
+  $context?: 'schema.org'
+  $type: 'OwnershipInfo'
+  acquiredFrom?: Organization | Person
+  ownedFrom?: string
+  ownedThrough?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OwnershipInfo",
+  "name": "Example OwnershipInfo",
+  "description": "An example of the OwnershipInfo type",
+  "url": "https://example.com/ownershipinfo",
+  "identifier": "example-ownershipinfo-1"
+}
+```
+
+## Notes
+
+- OwnershipInfo inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

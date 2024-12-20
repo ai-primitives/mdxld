@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AnimalShelter
+title: AnimalShelter
+description: Animal shelter.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# AnimalShelter
+
+Animal shelter.
+
+## Type Hierarchy
+
+AnimalShelter is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from AnimalShelter.
+
+## Properties
+
+AnimalShelter defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface AnimalShelter {
+  $context?: 'schema.org'
+  $type: 'AnimalShelter'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AnimalShelter",
+  "name": "Example AnimalShelter",
+  "description": "An example of the AnimalShelter type",
+  "url": "https://example.com/animalshelter",
+  "identifier": "example-animalshelter-1"
+}
+```
+
+## Notes
+
+- AnimalShelter inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

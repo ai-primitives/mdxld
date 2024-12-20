@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Photograph
+title: Photograph
+description: A photograph.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Photograph
+
+A photograph.
+
+## Type Hierarchy
+
+Photograph is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Photograph.
+
+## Properties
+
+Photograph defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface Photograph {
+  $context?: 'schema.org'
+  $type: 'Photograph'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Photograph",
+  "name": "Example Photograph",
+  "description": "An example of the Photograph type",
+  "url": "https://example.com/photograph",
+  "identifier": "example-photograph-1"
+}
+```
+
+## Notes
+
+- Photograph inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

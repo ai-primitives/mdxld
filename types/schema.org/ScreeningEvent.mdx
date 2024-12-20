@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ScreeningEvent
+title: ScreeningEvent
+description: A screening of a movie or other video.
+properties:
+  - workPresented
+subClasses:
+
+parentClass: Event
+---
+
+# ScreeningEvent
+
+A screening of a movie or other video.
+
+## Type Hierarchy
+
+ScreeningEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from ScreeningEvent.
+
+## Properties
+
+ScreeningEvent defines the following properties in addition to those inherited from Event:
+
+- workPresented: The movie presented during this event.
+
+## Usage Example
+
+```typescript
+interface ScreeningEvent {
+  $context?: 'schema.org'
+  $type: 'ScreeningEvent'
+  workPresented?: Movie
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ScreeningEvent",
+  "name": "Example ScreeningEvent",
+  "description": "An example of the ScreeningEvent type",
+  "url": "https://example.com/screeningevent",
+  "identifier": "example-screeningevent-1"
+}
+```
+
+## Notes
+
+- ScreeningEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

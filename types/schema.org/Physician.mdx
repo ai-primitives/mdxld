@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: Physician
+title: Physician
+description: An individual physician or a physician's office considered as a [[MedicalOrganization]].
+properties:
+  - hospitalAffiliation
+  - usNPI
+subClasses:
+  - IndividualPhysician
+  - PhysiciansOffice
+
+---
+
+# Physician
+
+An individual physician or a physician's office considered as a [[MedicalOrganization]].
+
+## Type Hierarchy
+
+Physician is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+The following types directly inherit from Physician:
+
+- IndividualPhysician: An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]]. 
+The [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.
+- PhysiciansOffice: A doctor's office or clinic.
+
+## Properties
+
+Physician defines the following properties in addition to those inherited from Thing:
+
+- hospitalAffiliation: A hospital with which the physician or office is affiliated.
+- usNPI: A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) 
+    is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services.
+
+## Usage Example
+
+```typescript
+interface Physician {
+  $context?: 'schema.org'
+  $type: 'Physician'
+  hospitalAffiliation?: Hospital
+  usNPI?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Physician",
+  "name": "Example Physician",
+  "description": "An example of the Physician type",
+  "url": "https://example.com/physician",
+  "identifier": "example-physician-1"
+}
+```
+
+## Notes
+
+- Physician inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

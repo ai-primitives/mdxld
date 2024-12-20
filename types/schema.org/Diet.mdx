@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: Diet
+title: Diet
+description: A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.
+properties:
+  - dietFeatures
+  - endorsers
+  - expertConsiderations
+  - physiologicalBenefits
+  - risks
+subClasses:
+
+
+---
+
+# Diet
+
+A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.
+
+## Type Hierarchy
+
+Diet is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from Diet.
+
+## Properties
+
+Diet defines the following properties in addition to those inherited from Thing:
+
+- dietFeatures: Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
+- endorsers: People or organizations that endorse the plan.
+- expertConsiderations: Medical expert advice related to the plan.
+- physiologicalBenefits: Specific physiologic benefits associated to the plan.
+- risks: Specific physiologic risks associated to the diet plan.
+
+## Usage Example
+
+```typescript
+interface Diet {
+  $context?: 'schema.org'
+  $type: 'Diet'
+  dietFeatures?: string
+  endorsers?: Organization | Person
+  expertConsiderations?: string
+  physiologicalBenefits?: string
+  risks?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Diet",
+  "name": "Example Diet",
+  "description": "An example of the Diet type",
+  "url": "https://example.com/diet",
+  "identifier": "example-diet-1"
+}
+```
+
+## Notes
+
+- Diet inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Consortium
+title: Consortium
+description: A Consortium is a membership [[Organization]] whose members are typically Organizations.
+properties:
+
+subClasses:
+
+parentClass: Organization
+---
+
+# Consortium
+
+A Consortium is a membership [[Organization]] whose members are typically Organizations.
+
+## Type Hierarchy
+
+Consortium is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from Consortium.
+
+## Properties
+
+Consortium defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface Consortium {
+  $context?: 'schema.org'
+  $type: 'Consortium'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Consortium",
+  "name": "Example Consortium",
+  "description": "An example of the Consortium type",
+  "url": "https://example.com/consortium",
+  "identifier": "example-consortium-1"
+}
+```
+
+## Notes
+
+- Consortium inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

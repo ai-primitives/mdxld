@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: MemberProgramTier
+title: MemberProgramTier
+description: A MemberProgramTier specifies a tier under a loyalty (member) program, for example "gold".
+properties:
+  - hasTierBenefit
+  - hasTierRequirement
+  - isTierOf
+subClasses:
+
+parentClass: Intangible
+---
+
+# MemberProgramTier
+
+A MemberProgramTier specifies a tier under a loyalty (member) program, for example "gold".
+
+## Type Hierarchy
+
+MemberProgramTier is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from MemberProgramTier.
+
+## Properties
+
+MemberProgramTier defines the following properties in addition to those inherited from Intangible:
+
+- hasTierBenefit: A member benefit for a particular tier of a loyalty program.
+- hasTierRequirement: A requirement for a user to join a membership tier, for example: a CreditCard if the tier requires sign up for a credit card, A UnitPriceSpecification if the user is required to pay a (periodic) fee, or a MonetaryAmount if the user needs to spend a minimum amount to join the tier. If a tier is free to join then this property does not need to be specified.
+- isTierOf: The member program this tier is a part of.
+
+## Usage Example
+
+```typescript
+interface MemberProgramTier {
+  $context?: 'schema.org'
+  $type: 'MemberProgramTier'
+  hasTierBenefit?: TierBenefitEnumeration
+  hasTierRequirement?: CreditCard | MonetaryAmount | UnitPriceSpecification | string
+  isTierOf?: MemberProgram
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MemberProgramTier",
+  "name": "Example MemberProgramTier",
+  "description": "An example of the MemberProgramTier type",
+  "url": "https://example.com/memberprogramtier",
+  "identifier": "example-memberprogramtier-1"
+}
+```
+
+## Notes
+
+- MemberProgramTier inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

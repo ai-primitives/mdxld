@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: VideoGameSeries
+title: VideoGameSeries
+description: A video game series.
+properties:
+
+subClasses:
+
+parentClass: CreativeWorkSeries
+---
+
+# VideoGameSeries
+
+A video game series.
+
+## Type Hierarchy
+
+VideoGameSeries is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+No types directly inherit from VideoGameSeries.
+
+## Properties
+
+VideoGameSeries defines the following properties in addition to those inherited from CreativeWorkSeries:
+
+
+
+## Usage Example
+
+```typescript
+interface VideoGameSeries {
+  $context?: 'schema.org'
+  $type: 'VideoGameSeries'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VideoGameSeries",
+  "name": "Example VideoGameSeries",
+  "description": "An example of the VideoGameSeries type",
+  "url": "https://example.com/videogameseries",
+  "identifier": "example-videogameseries-1"
+}
+```
+
+## Notes
+
+- VideoGameSeries inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

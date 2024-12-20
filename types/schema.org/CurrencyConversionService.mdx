@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CurrencyConversionService
+title: CurrencyConversionService
+description: A service to convert funds from one currency to another currency.
+properties:
+
+subClasses:
+
+parentClass: FinancialProduct
+---
+
+# CurrencyConversionService
+
+A service to convert funds from one currency to another currency.
+
+## Type Hierarchy
+
+CurrencyConversionService is a type of FinancialProduct.
+
+### Direct Subtypes
+
+No types directly inherit from CurrencyConversionService.
+
+## Properties
+
+CurrencyConversionService defines the following properties in addition to those inherited from FinancialProduct:
+
+
+
+## Usage Example
+
+```typescript
+interface CurrencyConversionService {
+  $context?: 'schema.org'
+  $type: 'CurrencyConversionService'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CurrencyConversionService",
+  "name": "Example CurrencyConversionService",
+  "description": "An example of the CurrencyConversionService type",
+  "url": "https://example.com/currencyconversionservice",
+  "identifier": "example-currencyconversionservice-1"
+}
+```
+
+## Notes
+
+- CurrencyConversionService inherits all properties from FinancialProduct
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

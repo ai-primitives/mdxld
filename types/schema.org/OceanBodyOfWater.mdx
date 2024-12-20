@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OceanBodyOfWater
+title: OceanBodyOfWater
+description: An ocean (for example, the Pacific).
+properties:
+
+subClasses:
+
+parentClass: BodyOfWater
+---
+
+# OceanBodyOfWater
+
+An ocean (for example, the Pacific).
+
+## Type Hierarchy
+
+OceanBodyOfWater is a type of BodyOfWater.
+
+### Direct Subtypes
+
+No types directly inherit from OceanBodyOfWater.
+
+## Properties
+
+OceanBodyOfWater defines the following properties in addition to those inherited from BodyOfWater:
+
+
+
+## Usage Example
+
+```typescript
+interface OceanBodyOfWater {
+  $context?: 'schema.org'
+  $type: 'OceanBodyOfWater'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OceanBodyOfWater",
+  "name": "Example OceanBodyOfWater",
+  "description": "An example of the OceanBodyOfWater type",
+  "url": "https://example.com/oceanbodyofwater",
+  "identifier": "example-oceanbodyofwater-1"
+}
+```
+
+## Notes
+
+- OceanBodyOfWater inherits all properties from BodyOfWater
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ComedyEvent
+title: ComedyEvent
+description: Event type: Comedy event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# ComedyEvent
+
+Event type: Comedy event.
+
+## Type Hierarchy
+
+ComedyEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from ComedyEvent.
+
+## Properties
+
+ComedyEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface ComedyEvent {
+  $context?: 'schema.org'
+  $type: 'ComedyEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ComedyEvent",
+  "name": "Example ComedyEvent",
+  "description": "An example of the ComedyEvent type",
+  "url": "https://example.com/comedyevent",
+  "identifier": "example-comedyevent-1"
+}
+```
+
+## Notes
+
+- ComedyEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

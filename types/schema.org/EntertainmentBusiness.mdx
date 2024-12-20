@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: EntertainmentBusiness
+title: EntertainmentBusiness
+description: A business providing entertainment.
+properties:
+
+subClasses:
+  - AdultEntertainment
+  - AmusementPark
+  - ArtGallery
+  - Casino
+  - ComedyClub
+  - NightClub
+parentClass: LocalBusiness
+---
+
+# EntertainmentBusiness
+
+A business providing entertainment.
+
+## Type Hierarchy
+
+EntertainmentBusiness is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from EntertainmentBusiness:
+
+- AdultEntertainment: An adult entertainment establishment.
+- AmusementPark: An amusement park.
+- ArtGallery: An art gallery.
+- Casino: A casino.
+- ComedyClub: A comedy club.
+- NightClub: A nightclub or discotheque.
+
+## Properties
+
+EntertainmentBusiness defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface EntertainmentBusiness {
+  $context?: 'schema.org'
+  $type: 'EntertainmentBusiness'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EntertainmentBusiness",
+  "name": "Example EntertainmentBusiness",
+  "description": "An example of the EntertainmentBusiness type",
+  "url": "https://example.com/entertainmentbusiness",
+  "identifier": "example-entertainmentbusiness-1"
+}
+```
+
+## Notes
+
+- EntertainmentBusiness inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

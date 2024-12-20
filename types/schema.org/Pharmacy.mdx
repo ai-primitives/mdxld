@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Pharmacy
+title: Pharmacy
+description: A pharmacy or drugstore.
+properties:
+
+subClasses:
+
+
+---
+
+# Pharmacy
+
+A pharmacy or drugstore.
+
+## Type Hierarchy
+
+Pharmacy is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from Pharmacy.
+
+## Properties
+
+Pharmacy defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface Pharmacy {
+  $context?: 'schema.org'
+  $type: 'Pharmacy'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Pharmacy",
+  "name": "Example Pharmacy",
+  "description": "An example of the Pharmacy type",
+  "url": "https://example.com/pharmacy",
+  "identifier": "example-pharmacy-1"
+}
+```
+
+## Notes
+
+- Pharmacy inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

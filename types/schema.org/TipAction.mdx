@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TipAction
+title: TipAction
+description: The act of giving money voluntarily to a beneficiary in recognition of services rendered.
+properties:
+
+subClasses:
+
+parentClass: TradeAction
+---
+
+# TipAction
+
+The act of giving money voluntarily to a beneficiary in recognition of services rendered.
+
+## Type Hierarchy
+
+TipAction is a type of TradeAction.
+
+### Direct Subtypes
+
+No types directly inherit from TipAction.
+
+## Properties
+
+TipAction defines the following properties in addition to those inherited from TradeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface TipAction {
+  $context?: 'schema.org'
+  $type: 'TipAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TipAction",
+  "name": "Example TipAction",
+  "description": "An example of the TipAction type",
+  "url": "https://example.com/tipaction",
+  "identifier": "example-tipaction-1"
+}
+```
+
+## Notes
+
+- TipAction inherits all properties from TradeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

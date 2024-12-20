@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DrugPregnancyCategory
+title: DrugPregnancyCategory
+description: Categories that represent an assessment of the risk of fetal injury due to a drug or pharmaceutical used as directed by the mother during pregnancy.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# DrugPregnancyCategory
+
+Categories that represent an assessment of the risk of fetal injury due to a drug or pharmaceutical used as directed by the mother during pregnancy.
+
+## Type Hierarchy
+
+DrugPregnancyCategory is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from DrugPregnancyCategory.
+
+## Properties
+
+DrugPregnancyCategory defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface DrugPregnancyCategory {
+  $context?: 'schema.org'
+  $type: 'DrugPregnancyCategory'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DrugPregnancyCategory",
+  "name": "Example DrugPregnancyCategory",
+  "description": "An example of the DrugPregnancyCategory type",
+  "url": "https://example.com/drugpregnancycategory",
+  "identifier": "example-drugpregnancycategory-1"
+}
+```
+
+## Notes
+
+- DrugPregnancyCategory inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

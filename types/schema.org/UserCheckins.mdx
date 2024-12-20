@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UserCheckins
+title: UserCheckins
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+
+subClasses:
+
+parentClass: UserInteraction
+---
+
+# UserCheckins
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserCheckins is a type of UserInteraction.
+
+### Direct Subtypes
+
+No types directly inherit from UserCheckins.
+
+## Properties
+
+UserCheckins defines the following properties in addition to those inherited from UserInteraction:
+
+
+
+## Usage Example
+
+```typescript
+interface UserCheckins {
+  $context?: 'schema.org'
+  $type: 'UserCheckins'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserCheckins",
+  "name": "Example UserCheckins",
+  "description": "An example of the UserCheckins type",
+  "url": "https://example.com/usercheckins",
+  "identifier": "example-usercheckins-1"
+}
+```
+
+## Notes
+
+- UserCheckins inherits all properties from UserInteraction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

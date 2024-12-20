@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WriteAction
+title: WriteAction
+description: The act of authoring written creative content.
+properties:
+
+subClasses:
+
+parentClass: CreateAction
+---
+
+# WriteAction
+
+The act of authoring written creative content.
+
+## Type Hierarchy
+
+WriteAction is a type of CreateAction.
+
+### Direct Subtypes
+
+No types directly inherit from WriteAction.
+
+## Properties
+
+WriteAction defines the following properties in addition to those inherited from CreateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface WriteAction {
+  $context?: 'schema.org'
+  $type: 'WriteAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WriteAction",
+  "name": "Example WriteAction",
+  "description": "An example of the WriteAction type",
+  "url": "https://example.com/writeaction",
+  "identifier": "example-writeaction-1"
+}
+```
+
+## Notes
+
+- WriteAction inherits all properties from CreateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

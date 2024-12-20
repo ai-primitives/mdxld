@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: FundingScheme
+title: FundingScheme
+description: A FundingScheme combines organizational, project and policy aspects of grant-based funding
+    that sets guidelines, principles and mechanisms to support other kinds of projects and activities.
+    Funding is typically organized via [[Grant]] funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - [[FundingAgency]]s such as ERC, REA, ...
+properties:
+
+subClasses:
+
+parentClass: Organization
+---
+
+# FundingScheme
+
+A FundingScheme combines organizational, project and policy aspects of grant-based funding
+    that sets guidelines, principles and mechanisms to support other kinds of projects and activities.
+    Funding is typically organized via [[Grant]] funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - [[FundingAgency]]s such as ERC, REA, ...
+
+## Type Hierarchy
+
+FundingScheme is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from FundingScheme.
+
+## Properties
+
+FundingScheme defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface FundingScheme {
+  $context?: 'schema.org'
+  $type: 'FundingScheme'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FundingScheme",
+  "name": "Example FundingScheme",
+  "description": "An example of the FundingScheme type",
+  "url": "https://example.com/fundingscheme",
+  "identifier": "example-fundingscheme-1"
+}
+```
+
+## Notes
+
+- FundingScheme inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

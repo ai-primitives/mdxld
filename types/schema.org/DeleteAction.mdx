@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DeleteAction
+title: DeleteAction
+description: The act of editing a recipient by removing one of its objects.
+properties:
+
+subClasses:
+
+parentClass: UpdateAction
+---
+
+# DeleteAction
+
+The act of editing a recipient by removing one of its objects.
+
+## Type Hierarchy
+
+DeleteAction is a type of UpdateAction.
+
+### Direct Subtypes
+
+No types directly inherit from DeleteAction.
+
+## Properties
+
+DeleteAction defines the following properties in addition to those inherited from UpdateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DeleteAction {
+  $context?: 'schema.org'
+  $type: 'DeleteAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DeleteAction",
+  "name": "Example DeleteAction",
+  "description": "An example of the DeleteAction type",
+  "url": "https://example.com/deleteaction",
+  "identifier": "example-deleteaction-1"
+}
+```
+
+## Notes
+
+- DeleteAction inherits all properties from UpdateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

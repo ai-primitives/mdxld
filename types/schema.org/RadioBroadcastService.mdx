@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RadioBroadcastService
+title: RadioBroadcastService
+description: A delivery service through which radio content is provided via broadcast over the air or online.
+properties:
+
+subClasses:
+
+parentClass: BroadcastService
+---
+
+# RadioBroadcastService
+
+A delivery service through which radio content is provided via broadcast over the air or online.
+
+## Type Hierarchy
+
+RadioBroadcastService is a type of BroadcastService.
+
+### Direct Subtypes
+
+No types directly inherit from RadioBroadcastService.
+
+## Properties
+
+RadioBroadcastService defines the following properties in addition to those inherited from BroadcastService:
+
+
+
+## Usage Example
+
+```typescript
+interface RadioBroadcastService {
+  $context?: 'schema.org'
+  $type: 'RadioBroadcastService'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RadioBroadcastService",
+  "name": "Example RadioBroadcastService",
+  "description": "An example of the RadioBroadcastService type",
+  "url": "https://example.com/radiobroadcastservice",
+  "identifier": "example-radiobroadcastservice-1"
+}
+```
+
+## Notes
+
+- RadioBroadcastService inherits all properties from BroadcastService
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

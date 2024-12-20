@@ -1,0 +1,72 @@
+---
+$context: schema.org
+$type: BroadcastChannel
+title: BroadcastChannel
+description: A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
+properties:
+  - broadcastChannelId
+  - broadcastServiceTier
+  - inBroadcastLineup
+  - providesBroadcastService
+subClasses:
+  - RadioChannel
+  - TelevisionChannel
+parentClass: Intangible
+---
+
+# BroadcastChannel
+
+A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
+
+## Type Hierarchy
+
+BroadcastChannel is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from BroadcastChannel:
+
+- RadioChannel: A unique instance of a radio BroadcastService on a CableOrSatelliteService lineup.
+- TelevisionChannel: A unique instance of a television BroadcastService on a CableOrSatelliteService lineup.
+
+## Properties
+
+BroadcastChannel defines the following properties in addition to those inherited from Intangible:
+
+- broadcastChannelId: The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
+- broadcastServiceTier: The type of service required to have access to the channel (e.g. Standard or Premium).
+- inBroadcastLineup: The CableOrSatelliteService offering the channel.
+- providesBroadcastService: The BroadcastService offered on this channel.
+
+## Usage Example
+
+```typescript
+interface BroadcastChannel {
+  $context?: 'schema.org'
+  $type: 'BroadcastChannel'
+  broadcastChannelId?: string
+  broadcastServiceTier?: string
+  inBroadcastLineup?: CableOrSatelliteService
+  providesBroadcastService?: BroadcastService
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BroadcastChannel",
+  "name": "Example BroadcastChannel",
+  "description": "An example of the BroadcastChannel type",
+  "url": "https://example.com/broadcastchannel",
+  "identifier": "example-broadcastchannel-1"
+}
+```
+
+## Notes
+
+- BroadcastChannel inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

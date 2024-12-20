@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: InfectiousAgentClass
+title: InfectiousAgentClass
+description: Classes of agents or pathogens that transmit infectious diseases. Enumerated type.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# InfectiousAgentClass
+
+Classes of agents or pathogens that transmit infectious diseases. Enumerated type.
+
+## Type Hierarchy
+
+InfectiousAgentClass is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from InfectiousAgentClass.
+
+## Properties
+
+InfectiousAgentClass defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface InfectiousAgentClass {
+  $context?: 'schema.org'
+  $type: 'InfectiousAgentClass'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InfectiousAgentClass",
+  "name": "Example InfectiousAgentClass",
+  "description": "An example of the InfectiousAgentClass type",
+  "url": "https://example.com/infectiousagentclass",
+  "identifier": "example-infectiousagentclass-1"
+}
+```
+
+## Notes
+
+- InfectiousAgentClass inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

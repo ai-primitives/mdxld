@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: PlanAction
+title: PlanAction
+description: The act of planning the execution of an event/task/action/reservation/plan to a future date.
+properties:
+  - scheduledTime
+subClasses:
+  - CancelAction
+  - ReserveAction
+  - ScheduleAction
+parentClass: OrganizeAction
+---
+
+# PlanAction
+
+The act of planning the execution of an event/task/action/reservation/plan to a future date.
+
+## Type Hierarchy
+
+PlanAction is a type of OrganizeAction.
+
+### Direct Subtypes
+
+The following types directly inherit from PlanAction:
+
+- CancelAction: The act of asserting that a future event/action is no longer going to happen.\n\nRelated actions:\n\n* [[ConfirmAction]]: The antonym of CancelAction.
+- ReserveAction: Reserving a concrete object.\n\nRelated actions:\n\n* [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot / spatial allocation.
+- ScheduleAction: Scheduling future actions, events, or tasks.\n\nRelated actions:\n\n* [[ReserveAction]]: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation.
+
+## Properties
+
+PlanAction defines the following properties in addition to those inherited from OrganizeAction:
+
+- scheduledTime: The time the object is scheduled to.
+
+## Usage Example
+
+```typescript
+interface PlanAction {
+  $context?: 'schema.org'
+  $type: 'PlanAction'
+  scheduledTime?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PlanAction",
+  "name": "Example PlanAction",
+  "description": "An example of the PlanAction type",
+  "url": "https://example.com/planaction",
+  "identifier": "example-planaction-1"
+}
+```
+
+## Notes
+
+- PlanAction inherits all properties from OrganizeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

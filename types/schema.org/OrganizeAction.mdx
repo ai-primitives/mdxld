@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: OrganizeAction
+title: OrganizeAction
+description: The act of manipulating/administering/supervising/controlling one or more objects.
+properties:
+
+subClasses:
+  - AllocateAction
+  - ApplyAction
+  - BookmarkAction
+  - PlanAction
+parentClass: Action
+---
+
+# OrganizeAction
+
+The act of manipulating/administering/supervising/controlling one or more objects.
+
+## Type Hierarchy
+
+OrganizeAction is a type of Action.
+
+### Direct Subtypes
+
+The following types directly inherit from OrganizeAction:
+
+- AllocateAction: The act of organizing tasks/objects/events by associating resources to it.
+- ApplyAction: The act of registering to an organization/service without the guarantee to receive it.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.
+- BookmarkAction: An agent bookmarks/flags/labels/tags/marks an object.
+- PlanAction: The act of planning the execution of an event/task/action/reservation/plan to a future date.
+
+## Properties
+
+OrganizeAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface OrganizeAction {
+  $context?: 'schema.org'
+  $type: 'OrganizeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OrganizeAction",
+  "name": "Example OrganizeAction",
+  "description": "An example of the OrganizeAction type",
+  "url": "https://example.com/organizeaction",
+  "identifier": "example-organizeaction-1"
+}
+```
+
+## Notes
+
+- OrganizeAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

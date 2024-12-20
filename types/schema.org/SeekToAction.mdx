@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SeekToAction
+title: SeekToAction
+description: This is the [[Action]] of navigating to a specific [[startOffset]] timestamp within a [[VideoObject]], typically represented with a URL template structure.
+properties:
+
+subClasses:
+
+parentClass: Action
+---
+
+# SeekToAction
+
+This is the [[Action]] of navigating to a specific [[startOffset]] timestamp within a [[VideoObject]], typically represented with a URL template structure.
+
+## Type Hierarchy
+
+SeekToAction is a type of Action.
+
+### Direct Subtypes
+
+No types directly inherit from SeekToAction.
+
+## Properties
+
+SeekToAction defines the following properties in addition to those inherited from Action:
+
+
+
+## Usage Example
+
+```typescript
+interface SeekToAction {
+  $context?: 'schema.org'
+  $type: 'SeekToAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SeekToAction",
+  "name": "Example SeekToAction",
+  "description": "An example of the SeekToAction type",
+  "url": "https://example.com/seektoaction",
+  "identifier": "example-seektoaction-1"
+}
+```
+
+## Notes
+
+- SeekToAction inherits all properties from Action
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

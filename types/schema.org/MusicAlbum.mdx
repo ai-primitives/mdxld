@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: MusicAlbum
+title: MusicAlbum
+description: A collection of music tracks.
+properties:
+  - albumProductionType
+  - albumRelease
+  - albumReleaseType
+subClasses:
+
+parentClass: MusicPlaylist
+---
+
+# MusicAlbum
+
+A collection of music tracks.
+
+## Type Hierarchy
+
+MusicAlbum is a type of MusicPlaylist.
+
+### Direct Subtypes
+
+No types directly inherit from MusicAlbum.
+
+## Properties
+
+MusicAlbum defines the following properties in addition to those inherited from MusicPlaylist:
+
+- albumProductionType: Classification of the album by its type of content: soundtrack, live album, studio album, etc.
+- albumRelease: A release of this album.
+- albumReleaseType: The kind of release which this album is: single, EP or album.
+
+## Usage Example
+
+```typescript
+interface MusicAlbum {
+  $context?: 'schema.org'
+  $type: 'MusicAlbum'
+  albumProductionType?: MusicAlbumProductionType
+  albumRelease?: MusicRelease
+  albumReleaseType?: MusicAlbumReleaseType
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicAlbum",
+  "name": "Example MusicAlbum",
+  "description": "An example of the MusicAlbum type",
+  "url": "https://example.com/musicalbum",
+  "identifier": "example-musicalbum-1"
+}
+```
+
+## Notes
+
+- MusicAlbum inherits all properties from MusicPlaylist
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

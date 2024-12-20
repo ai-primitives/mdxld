@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SteeringPositionValue
+title: SteeringPositionValue
+description: A value indicating a steering position.
+properties:
+
+subClasses:
+
+parentClass: QualitativeValue
+---
+
+# SteeringPositionValue
+
+A value indicating a steering position.
+
+## Type Hierarchy
+
+SteeringPositionValue is a type of QualitativeValue.
+
+### Direct Subtypes
+
+No types directly inherit from SteeringPositionValue.
+
+## Properties
+
+SteeringPositionValue defines the following properties in addition to those inherited from QualitativeValue:
+
+
+
+## Usage Example
+
+```typescript
+interface SteeringPositionValue {
+  $context?: 'schema.org'
+  $type: 'SteeringPositionValue'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SteeringPositionValue",
+  "name": "Example SteeringPositionValue",
+  "description": "An example of the SteeringPositionValue type",
+  "url": "https://example.com/steeringpositionvalue",
+  "identifier": "example-steeringpositionvalue-1"
+}
+```
+
+## Notes
+
+- SteeringPositionValue inherits all properties from QualitativeValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

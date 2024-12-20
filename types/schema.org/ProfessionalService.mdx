@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: ProfessionalService
+title: ProfessionalService
+description: Original definition: "provider of professional services."\n\nThe general [[ProfessionalService]] type for local businesses was deprecated due to confusion with [[Service]]. For reference, the types that it included were: [[Dentist]],
+        [[AccountingService]], [[Attorney]], [[Notary]], as well as types for several kinds of [[HomeAndConstructionBusiness]]: [[Electrician]], [[GeneralContractor]],
+        [[HousePainter]], [[Locksmith]], [[Plumber]], [[RoofingContractor]]. [[LegalService]] was introduced as a more inclusive supertype of [[Attorney]].
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# ProfessionalService
+
+Original definition: "provider of professional services."\n\nThe general [[ProfessionalService]] type for local businesses was deprecated due to confusion with [[Service]]. For reference, the types that it included were: [[Dentist]],
+        [[AccountingService]], [[Attorney]], [[Notary]], as well as types for several kinds of [[HomeAndConstructionBusiness]]: [[Electrician]], [[GeneralContractor]],
+        [[HousePainter]], [[Locksmith]], [[Plumber]], [[RoofingContractor]]. [[LegalService]] was introduced as a more inclusive supertype of [[Attorney]].
+
+## Type Hierarchy
+
+ProfessionalService is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from ProfessionalService.
+
+## Properties
+
+ProfessionalService defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface ProfessionalService {
+  $context?: 'schema.org'
+  $type: 'ProfessionalService'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ProfessionalService",
+  "name": "Example ProfessionalService",
+  "description": "An example of the ProfessionalService type",
+  "url": "https://example.com/professionalservice",
+  "identifier": "example-professionalservice-1"
+}
+```
+
+## Notes
+
+- ProfessionalService inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

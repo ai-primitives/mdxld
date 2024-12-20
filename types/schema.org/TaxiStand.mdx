@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TaxiStand
+title: TaxiStand
+description: A taxi stand.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# TaxiStand
+
+A taxi stand.
+
+## Type Hierarchy
+
+TaxiStand is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from TaxiStand.
+
+## Properties
+
+TaxiStand defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface TaxiStand {
+  $context?: 'schema.org'
+  $type: 'TaxiStand'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TaxiStand",
+  "name": "Example TaxiStand",
+  "description": "An example of the TaxiStand type",
+  "url": "https://example.com/taxistand",
+  "identifier": "example-taxistand-1"
+}
+```
+
+## Notes
+
+- TaxiStand inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

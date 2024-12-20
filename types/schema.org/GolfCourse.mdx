@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GolfCourse
+title: GolfCourse
+description: A golf course.
+properties:
+
+subClasses:
+
+parentClass: SportsActivityLocation
+---
+
+# GolfCourse
+
+A golf course.
+
+## Type Hierarchy
+
+GolfCourse is a type of SportsActivityLocation.
+
+### Direct Subtypes
+
+No types directly inherit from GolfCourse.
+
+## Properties
+
+GolfCourse defines the following properties in addition to those inherited from SportsActivityLocation:
+
+
+
+## Usage Example
+
+```typescript
+interface GolfCourse {
+  $context?: 'schema.org'
+  $type: 'GolfCourse'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GolfCourse",
+  "name": "Example GolfCourse",
+  "description": "An example of the GolfCourse type",
+  "url": "https://example.com/golfcourse",
+  "identifier": "example-golfcourse-1"
+}
+```
+
+## Notes
+
+- GolfCourse inherits all properties from SportsActivityLocation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

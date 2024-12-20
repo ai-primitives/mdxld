@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SpeakableSpecification
+title: SpeakableSpecification
+description: A SpeakableSpecification indicates (typically via [[xpath]] or [[cssSelector]]) sections of a document that are highlighted as particularly [[speakable]]. Instances of this type are expected to be used primarily as values of the [[speakable]] property.
+properties:
+
+subClasses:
+
+parentClass: Intangible
+---
+
+# SpeakableSpecification
+
+A SpeakableSpecification indicates (typically via [[xpath]] or [[cssSelector]]) sections of a document that are highlighted as particularly [[speakable]]. Instances of this type are expected to be used primarily as values of the [[speakable]] property.
+
+## Type Hierarchy
+
+SpeakableSpecification is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from SpeakableSpecification.
+
+## Properties
+
+SpeakableSpecification defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface SpeakableSpecification {
+  $context?: 'schema.org'
+  $type: 'SpeakableSpecification'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SpeakableSpecification",
+  "name": "Example SpeakableSpecification",
+  "description": "An example of the SpeakableSpecification type",
+  "url": "https://example.com/speakablespecification",
+  "identifier": "example-speakablespecification-1"
+}
+```
+
+## Notes
+
+- SpeakableSpecification inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

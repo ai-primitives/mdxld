@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RejectAction
+title: RejectAction
+description: The act of rejecting to/adopting an object.\n\nRelated actions:\n\n* [[AcceptAction]]: The antonym of RejectAction.
+properties:
+
+subClasses:
+
+parentClass: AllocateAction
+---
+
+# RejectAction
+
+The act of rejecting to/adopting an object.\n\nRelated actions:\n\n* [[AcceptAction]]: The antonym of RejectAction.
+
+## Type Hierarchy
+
+RejectAction is a type of AllocateAction.
+
+### Direct Subtypes
+
+No types directly inherit from RejectAction.
+
+## Properties
+
+RejectAction defines the following properties in addition to those inherited from AllocateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface RejectAction {
+  $context?: 'schema.org'
+  $type: 'RejectAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RejectAction",
+  "name": "Example RejectAction",
+  "description": "An example of the RejectAction type",
+  "url": "https://example.com/rejectaction",
+  "identifier": "example-rejectaction-1"
+}
+```
+
+## Notes
+
+- RejectAction inherits all properties from AllocateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

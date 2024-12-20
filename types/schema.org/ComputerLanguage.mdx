@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ComputerLanguage
+title: ComputerLanguage
+description: This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the [[Language]] type.
+properties:
+
+subClasses:
+
+parentClass: Intangible
+---
+
+# ComputerLanguage
+
+This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the [[Language]] type.
+
+## Type Hierarchy
+
+ComputerLanguage is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from ComputerLanguage.
+
+## Properties
+
+ComputerLanguage defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface ComputerLanguage {
+  $context?: 'schema.org'
+  $type: 'ComputerLanguage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ComputerLanguage",
+  "name": "Example ComputerLanguage",
+  "description": "An example of the ComputerLanguage type",
+  "url": "https://example.com/computerlanguage",
+  "identifier": "example-computerlanguage-1"
+}
+```
+
+## Notes
+
+- ComputerLanguage inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

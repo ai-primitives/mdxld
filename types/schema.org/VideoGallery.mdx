@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: VideoGallery
+title: VideoGallery
+description: Web page type: Video gallery page.
+properties:
+
+subClasses:
+
+parentClass: MediaGallery
+---
+
+# VideoGallery
+
+Web page type: Video gallery page.
+
+## Type Hierarchy
+
+VideoGallery is a type of MediaGallery.
+
+### Direct Subtypes
+
+No types directly inherit from VideoGallery.
+
+## Properties
+
+VideoGallery defines the following properties in addition to those inherited from MediaGallery:
+
+
+
+## Usage Example
+
+```typescript
+interface VideoGallery {
+  $context?: 'schema.org'
+  $type: 'VideoGallery'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VideoGallery",
+  "name": "Example VideoGallery",
+  "description": "An example of the VideoGallery type",
+  "url": "https://example.com/videogallery",
+  "identifier": "example-videogallery-1"
+}
+```
+
+## Notes
+
+- VideoGallery inherits all properties from MediaGallery
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MoneyTransfer
+title: MoneyTransfer
+description: The act of transferring money from one place to another place. This may occur electronically or physically.
+properties:
+  - beneficiaryBank
+subClasses:
+
+parentClass: TransferAction
+---
+
+# MoneyTransfer
+
+The act of transferring money from one place to another place. This may occur electronically or physically.
+
+## Type Hierarchy
+
+MoneyTransfer is a type of TransferAction.
+
+### Direct Subtypes
+
+No types directly inherit from MoneyTransfer.
+
+## Properties
+
+MoneyTransfer defines the following properties in addition to those inherited from TransferAction:
+
+- beneficiaryBank: A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the beneficiary.
+
+## Usage Example
+
+```typescript
+interface MoneyTransfer {
+  $context?: 'schema.org'
+  $type: 'MoneyTransfer'
+  beneficiaryBank?: BankOrCreditUnion | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MoneyTransfer",
+  "name": "Example MoneyTransfer",
+  "description": "An example of the MoneyTransfer type",
+  "url": "https://example.com/moneytransfer",
+  "identifier": "example-moneytransfer-1"
+}
+```
+
+## Notes
+
+- MoneyTransfer inherits all properties from TransferAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

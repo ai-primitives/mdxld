@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AcceptAction
+title: AcceptAction
+description: The act of committing to/adopting an object.\n\nRelated actions:\n\n* [[RejectAction]]: The antonym of AcceptAction.
+properties:
+
+subClasses:
+
+parentClass: AllocateAction
+---
+
+# AcceptAction
+
+The act of committing to/adopting an object.\n\nRelated actions:\n\n* [[RejectAction]]: The antonym of AcceptAction.
+
+## Type Hierarchy
+
+AcceptAction is a type of AllocateAction.
+
+### Direct Subtypes
+
+No types directly inherit from AcceptAction.
+
+## Properties
+
+AcceptAction defines the following properties in addition to those inherited from AllocateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface AcceptAction {
+  $context?: 'schema.org'
+  $type: 'AcceptAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AcceptAction",
+  "name": "Example AcceptAction",
+  "description": "An example of the AcceptAction type",
+  "url": "https://example.com/acceptaction",
+  "identifier": "example-acceptaction-1"
+}
+```
+
+## Notes
+
+- AcceptAction inherits all properties from AllocateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

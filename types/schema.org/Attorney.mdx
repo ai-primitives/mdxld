@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Attorney
+title: Attorney
+description: Professional service: Attorney. \n\nThis type is deprecated - [[LegalService]] is more inclusive and less ambiguous.
+properties:
+
+subClasses:
+
+parentClass: LegalService
+---
+
+# Attorney
+
+Professional service: Attorney. \n\nThis type is deprecated - [[LegalService]] is more inclusive and less ambiguous.
+
+## Type Hierarchy
+
+Attorney is a type of LegalService.
+
+### Direct Subtypes
+
+No types directly inherit from Attorney.
+
+## Properties
+
+Attorney defines the following properties in addition to those inherited from LegalService:
+
+
+
+## Usage Example
+
+```typescript
+interface Attorney {
+  $context?: 'schema.org'
+  $type: 'Attorney'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Attorney",
+  "name": "Example Attorney",
+  "description": "An example of the Attorney type",
+  "url": "https://example.com/attorney",
+  "identifier": "example-attorney-1"
+}
+```
+
+## Notes
+
+- Attorney inherits all properties from LegalService
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

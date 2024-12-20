@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BedType
+title: BedType
+description: A type of bed. This is used for indicating the bed or beds available in an accommodation.
+properties:
+
+subClasses:
+
+parentClass: QualitativeValue
+---
+
+# BedType
+
+A type of bed. This is used for indicating the bed or beds available in an accommodation.
+
+## Type Hierarchy
+
+BedType is a type of QualitativeValue.
+
+### Direct Subtypes
+
+No types directly inherit from BedType.
+
+## Properties
+
+BedType defines the following properties in addition to those inherited from QualitativeValue:
+
+
+
+## Usage Example
+
+```typescript
+interface BedType {
+  $context?: 'schema.org'
+  $type: 'BedType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BedType",
+  "name": "Example BedType",
+  "description": "An example of the BedType type",
+  "url": "https://example.com/bedtype",
+  "identifier": "example-bedtype-1"
+}
+```
+
+## Notes
+
+- BedType inherits all properties from QualitativeValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

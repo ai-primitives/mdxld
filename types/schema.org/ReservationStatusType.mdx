@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ReservationStatusType
+title: ReservationStatusType
+description: Enumerated status values for Reservation.
+properties:
+
+subClasses:
+
+parentClass: StatusEnumeration
+---
+
+# ReservationStatusType
+
+Enumerated status values for Reservation.
+
+## Type Hierarchy
+
+ReservationStatusType is a type of StatusEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from ReservationStatusType.
+
+## Properties
+
+ReservationStatusType defines the following properties in addition to those inherited from StatusEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface ReservationStatusType {
+  $context?: 'schema.org'
+  $type: 'ReservationStatusType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReservationStatusType",
+  "name": "Example ReservationStatusType",
+  "description": "An example of the ReservationStatusType type",
+  "url": "https://example.com/reservationstatustype",
+  "identifier": "example-reservationstatustype-1"
+}
+```
+
+## Notes
+
+- ReservationStatusType inherits all properties from StatusEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

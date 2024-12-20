@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ShortStory
+title: ShortStory
+description: Short story or tale. A brief work of literature, usually written in narrative prose.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# ShortStory
+
+Short story or tale. A brief work of literature, usually written in narrative prose.
+
+## Type Hierarchy
+
+ShortStory is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from ShortStory.
+
+## Properties
+
+ShortStory defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface ShortStory {
+  $context?: 'schema.org'
+  $type: 'ShortStory'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ShortStory",
+  "name": "Example ShortStory",
+  "description": "An example of the ShortStory type",
+  "url": "https://example.com/shortstory",
+  "identifier": "example-shortstory-1"
+}
+```
+
+## Notes
+
+- ShortStory inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

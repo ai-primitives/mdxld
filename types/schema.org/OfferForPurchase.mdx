@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: OfferForPurchase
+title: OfferForPurchase
+description: An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose
+  [[businessFunction]] is [sell](http://purl.org/goodrelations/v1#Sell.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for
+  background on the underlying concepts.
+  
+properties:
+
+subClasses:
+
+parentClass: Offer
+---
+
+# OfferForPurchase
+
+An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose
+  [[businessFunction]] is [sell](http://purl.org/goodrelations/v1#Sell.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for
+  background on the underlying concepts.
+  
+
+## Type Hierarchy
+
+OfferForPurchase is a type of Offer.
+
+### Direct Subtypes
+
+No types directly inherit from OfferForPurchase.
+
+## Properties
+
+OfferForPurchase defines the following properties in addition to those inherited from Offer:
+
+
+
+## Usage Example
+
+```typescript
+interface OfferForPurchase {
+  $context?: 'schema.org'
+  $type: 'OfferForPurchase'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OfferForPurchase",
+  "name": "Example OfferForPurchase",
+  "description": "An example of the OfferForPurchase type",
+  "url": "https://example.com/offerforpurchase",
+  "identifier": "example-offerforpurchase-1"
+}
+```
+
+## Notes
+
+- OfferForPurchase inherits all properties from Offer
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

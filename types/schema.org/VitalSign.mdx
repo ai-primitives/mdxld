@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: VitalSign
+title: VitalSign
+description: Vital signs are measures of various physiological functions in order to assess the most basic body functions.
+properties:
+
+subClasses:
+
+parentClass: MedicalSign
+---
+
+# VitalSign
+
+Vital signs are measures of various physiological functions in order to assess the most basic body functions.
+
+## Type Hierarchy
+
+VitalSign is a type of MedicalSign.
+
+### Direct Subtypes
+
+No types directly inherit from VitalSign.
+
+## Properties
+
+VitalSign defines the following properties in addition to those inherited from MedicalSign:
+
+
+
+## Usage Example
+
+```typescript
+interface VitalSign {
+  $context?: 'schema.org'
+  $type: 'VitalSign'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "VitalSign",
+  "name": "Example VitalSign",
+  "description": "An example of the VitalSign type",
+  "url": "https://example.com/vitalsign",
+  "identifier": "example-vitalsign-1"
+}
+```
+
+## Notes
+
+- VitalSign inherits all properties from MedicalSign
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

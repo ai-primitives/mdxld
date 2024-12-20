@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Mass
+title: Mass
+description: Properties that take Mass as values are of the form '&lt;Number&gt; &lt;Mass unit of measure&gt;'. E.g., '7 kg'.
+properties:
+
+subClasses:
+
+parentClass: Quantity
+---
+
+# Mass
+
+Properties that take Mass as values are of the form '&lt;Number&gt; &lt;Mass unit of measure&gt;'. E.g., '7 kg'.
+
+## Type Hierarchy
+
+Mass is a type of Quantity.
+
+### Direct Subtypes
+
+No types directly inherit from Mass.
+
+## Properties
+
+Mass defines the following properties in addition to those inherited from Quantity:
+
+
+
+## Usage Example
+
+```typescript
+interface Mass {
+  $context?: 'schema.org'
+  $type: 'Mass'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Mass",
+  "name": "Example Mass",
+  "description": "An example of the Mass type",
+  "url": "https://example.com/mass",
+  "identifier": "example-mass-1"
+}
+```
+
+## Notes
+
+- Mass inherits all properties from Quantity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

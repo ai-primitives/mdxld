@@ -1,0 +1,92 @@
+---
+$context: schema.org
+$type: MerchantReturnPolicy
+title: MerchantReturnPolicy
+description: A MerchantReturnPolicy provides information about product return policies associated with an [[Organization]], [[Product]], or [[Offer]].
+properties:
+  - applicableCountry
+  - customerRemorseReturnFees
+  - customerRemorseReturnLabelSource
+  - customerRemorseReturnShippingFeesAmount
+  - inStoreReturnsOffered
+  - itemDefectReturnFees
+  - itemDefectReturnLabelSource
+  - itemDefectReturnShippingFeesAmount
+  - merchantReturnLink
+  - returnLabelSource
+  - returnPolicyCountry
+  - returnPolicySeasonalOverride
+subClasses:
+
+parentClass: Intangible
+---
+
+# MerchantReturnPolicy
+
+A MerchantReturnPolicy provides information about product return policies associated with an [[Organization]], [[Product]], or [[Offer]].
+
+## Type Hierarchy
+
+MerchantReturnPolicy is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from MerchantReturnPolicy.
+
+## Properties
+
+MerchantReturnPolicy defines the following properties in addition to those inherited from Intangible:
+
+- applicableCountry: A country where a particular merchant return policy applies to, for example the two-letter ISO 3166-1 alpha-2 country code.
+- customerRemorseReturnFees: The type of return fees if the product is returned due to customer remorse.
+- customerRemorseReturnLabelSource: The method (from an enumeration) by which the customer obtains a return shipping label for a product returned due to customer remorse.
+- customerRemorseReturnShippingFeesAmount: The amount of shipping costs if a product is returned due to customer remorse. Applicable when property [[customerRemorseReturnFees]] equals [[ReturnShippingFees]].
+- inStoreReturnsOffered: Are in-store returns offered? (For more advanced return methods use the [[returnMethod]] property.)
+- itemDefectReturnFees: The type of return fees for returns of defect products.
+- itemDefectReturnLabelSource: The method (from an enumeration) by which the customer obtains a return shipping label for a defect product.
+- itemDefectReturnShippingFeesAmount: Amount of shipping costs for defect product returns. Applicable when property [[itemDefectReturnFees]] equals [[ReturnShippingFees]].
+- merchantReturnLink: Specifies a Web page or service by URL, for product returns.
+- returnLabelSource: The method (from an enumeration) by which the customer obtains a return shipping label for a product returned for any reason.
+- returnPolicyCountry: The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]]. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where the product was originally shipped from or sent to.
+- returnPolicySeasonalOverride: Seasonal override of a return policy.
+
+## Usage Example
+
+```typescript
+interface MerchantReturnPolicy {
+  $context?: 'schema.org'
+  $type: 'MerchantReturnPolicy'
+  applicableCountry?: Country | string
+  customerRemorseReturnFees?: ReturnFeesEnumeration
+  customerRemorseReturnLabelSource?: ReturnLabelSourceEnumeration
+  customerRemorseReturnShippingFeesAmount?: MonetaryAmount
+  inStoreReturnsOffered?: boolean
+  itemDefectReturnFees?: ReturnFeesEnumeration
+  itemDefectReturnLabelSource?: ReturnLabelSourceEnumeration
+  itemDefectReturnShippingFeesAmount?: MonetaryAmount
+  merchantReturnLink?: string
+  returnLabelSource?: ReturnLabelSourceEnumeration
+  returnPolicyCountry?: Country | string
+  returnPolicySeasonalOverride?: MerchantReturnPolicySeasonalOverride
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MerchantReturnPolicy",
+  "name": "Example MerchantReturnPolicy",
+  "description": "An example of the MerchantReturnPolicy type",
+  "url": "https://example.com/merchantreturnpolicy",
+  "identifier": "example-merchantreturnpolicy-1"
+}
+```
+
+## Notes
+
+- MerchantReturnPolicy inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EmailMessage
+title: EmailMessage
+description: An email message.
+properties:
+
+subClasses:
+
+parentClass: Message
+---
+
+# EmailMessage
+
+An email message.
+
+## Type Hierarchy
+
+EmailMessage is a type of Message.
+
+### Direct Subtypes
+
+No types directly inherit from EmailMessage.
+
+## Properties
+
+EmailMessage defines the following properties in addition to those inherited from Message:
+
+
+
+## Usage Example
+
+```typescript
+interface EmailMessage {
+  $context?: 'schema.org'
+  $type: 'EmailMessage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EmailMessage",
+  "name": "Example EmailMessage",
+  "description": "An example of the EmailMessage type",
+  "url": "https://example.com/emailmessage",
+  "identifier": "example-emailmessage-1"
+}
+```
+
+## Notes
+
+- EmailMessage inherits all properties from Message
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

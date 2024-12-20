@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: ComicIssue
+title: ComicIssue
+description: Individual comic issues are serially published as
+    	part of a larger series. For the sake of consistency, even one-shot issues
+    	belong to a series comprised of a single issue. All comic issues can be
+    	uniquely identified by: the combination of the name and volume number of the
+    	series to which the issue belongs; the issue number; and the variant
+    	description of the issue (if any).
+properties:
+  - variantCover
+subClasses:
+
+parentClass: PublicationIssue
+---
+
+# ComicIssue
+
+Individual comic issues are serially published as
+    	part of a larger series. For the sake of consistency, even one-shot issues
+    	belong to a series comprised of a single issue. All comic issues can be
+    	uniquely identified by: the combination of the name and volume number of the
+    	series to which the issue belongs; the issue number; and the variant
+    	description of the issue (if any).
+
+## Type Hierarchy
+
+ComicIssue is a type of PublicationIssue.
+
+### Direct Subtypes
+
+No types directly inherit from ComicIssue.
+
+## Properties
+
+ComicIssue defines the following properties in addition to those inherited from PublicationIssue:
+
+- variantCover: A description of the variant cover
+    	for the issue, if the issue is a variant printing. For example, "Bryan Hitch
+    	Variant Cover" or "2nd Printing Variant".
+
+## Usage Example
+
+```typescript
+interface ComicIssue {
+  $context?: 'schema.org'
+  $type: 'ComicIssue'
+  variantCover?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ComicIssue",
+  "name": "Example ComicIssue",
+  "description": "An example of the ComicIssue type",
+  "url": "https://example.com/comicissue",
+  "identifier": "example-comicissue-1"
+}
+```
+
+## Notes
+
+- ComicIssue inherits all properties from PublicationIssue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

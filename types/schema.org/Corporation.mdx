@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Corporation
+title: Corporation
+description: Organization: A business corporation.
+properties:
+  - tickerSymbol
+subClasses:
+
+parentClass: Organization
+---
+
+# Corporation
+
+Organization: A business corporation.
+
+## Type Hierarchy
+
+Corporation is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from Corporation.
+
+## Properties
+
+Corporation defines the following properties in addition to those inherited from Organization:
+
+- tickerSymbol: The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we recommend using the controlled vocabulary of Market Identifier Codes (MIC) specified in ISO 15022.
+
+## Usage Example
+
+```typescript
+interface Corporation {
+  $context?: 'schema.org'
+  $type: 'Corporation'
+  tickerSymbol?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Corporation",
+  "name": "Example Corporation",
+  "description": "An example of the Corporation type",
+  "url": "https://example.com/corporation",
+  "identifier": "example-corporation-1"
+}
+```
+
+## Notes
+
+- Corporation inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DataFeedItem
+title: DataFeedItem
+description: A single item within a larger data feed.
+properties:
+  - dateDeleted
+subClasses:
+
+parentClass: Intangible
+---
+
+# DataFeedItem
+
+A single item within a larger data feed.
+
+## Type Hierarchy
+
+DataFeedItem is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from DataFeedItem.
+
+## Properties
+
+DataFeedItem defines the following properties in addition to those inherited from Intangible:
+
+- dateDeleted: The datetime the item was removed from the DataFeed.
+
+## Usage Example
+
+```typescript
+interface DataFeedItem {
+  $context?: 'schema.org'
+  $type: 'DataFeedItem'
+  dateDeleted?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DataFeedItem",
+  "name": "Example DataFeedItem",
+  "description": "An example of the DataFeedItem type",
+  "url": "https://example.com/datafeeditem",
+  "identifier": "example-datafeeditem-1"
+}
+```
+
+## Notes
+
+- DataFeedItem inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

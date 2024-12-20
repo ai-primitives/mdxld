@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Ligament
+title: Ligament
+description: A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.
+properties:
+
+subClasses:
+
+parentClass: AnatomicalStructure
+---
+
+# Ligament
+
+A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.
+
+## Type Hierarchy
+
+Ligament is a type of AnatomicalStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Ligament.
+
+## Properties
+
+Ligament defines the following properties in addition to those inherited from AnatomicalStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface Ligament {
+  $context?: 'schema.org'
+  $type: 'Ligament'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Ligament",
+  "name": "Example Ligament",
+  "description": "An example of the Ligament type",
+  "url": "https://example.com/ligament",
+  "identifier": "example-ligament-1"
+}
+```
+
+## Notes
+
+- Ligament inherits all properties from AnatomicalStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

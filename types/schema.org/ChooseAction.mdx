@@ -1,0 +1,64 @@
+---
+$context: schema.org
+$type: ChooseAction
+title: ChooseAction
+description: The act of expressing a preference from a set of options or a large or unbounded set of choices/options.
+properties:
+  - actionOption
+  - option
+subClasses:
+  - VoteAction
+parentClass: AssessAction
+---
+
+# ChooseAction
+
+The act of expressing a preference from a set of options or a large or unbounded set of choices/options.
+
+## Type Hierarchy
+
+ChooseAction is a type of AssessAction.
+
+### Direct Subtypes
+
+The following types directly inherit from ChooseAction:
+
+- VoteAction: The act of expressing a preference from a fixed/finite/structured set of choices/options.
+
+## Properties
+
+ChooseAction defines the following properties in addition to those inherited from AssessAction:
+
+- actionOption: A sub property of object. The options subject to this action.
+- option: A sub property of object. The options subject to this action.
+
+## Usage Example
+
+```typescript
+interface ChooseAction {
+  $context?: 'schema.org'
+  $type: 'ChooseAction'
+  actionOption?: Thing | string
+  option?: Thing | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ChooseAction",
+  "name": "Example ChooseAction",
+  "description": "An example of the ChooseAction type",
+  "url": "https://example.com/chooseaction",
+  "identifier": "example-chooseaction-1"
+}
+```
+
+## Notes
+
+- ChooseAction inherits all properties from AssessAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MusicStore
+title: MusicStore
+description: A music store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# MusicStore
+
+A music store.
+
+## Type Hierarchy
+
+MusicStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from MusicStore.
+
+## Properties
+
+MusicStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface MusicStore {
+  $context?: 'schema.org'
+  $type: 'MusicStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MusicStore",
+  "name": "Example MusicStore",
+  "description": "An example of the MusicStore type",
+  "url": "https://example.com/musicstore",
+  "identifier": "example-musicstore-1"
+}
+```
+
+## Notes
+
+- MusicStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

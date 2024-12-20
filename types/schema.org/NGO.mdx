@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: NGO
+title: NGO
+description: Organization: Non-governmental Organization.
+properties:
+
+subClasses:
+
+parentClass: Organization
+---
+
+# NGO
+
+Organization: Non-governmental Organization.
+
+## Type Hierarchy
+
+NGO is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from NGO.
+
+## Properties
+
+NGO defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface NGO {
+  $context?: 'schema.org'
+  $type: 'NGO'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "NGO",
+  "name": "Example NGO",
+  "description": "An example of the NGO type",
+  "url": "https://example.com/ngo",
+  "identifier": "example-ngo-1"
+}
+```
+
+## Notes
+
+- NGO inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

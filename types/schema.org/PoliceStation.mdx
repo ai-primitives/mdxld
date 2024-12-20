@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PoliceStation
+title: PoliceStation
+description: A police station.
+properties:
+
+subClasses:
+
+
+---
+
+# PoliceStation
+
+A police station.
+
+## Type Hierarchy
+
+PoliceStation is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from PoliceStation.
+
+## Properties
+
+PoliceStation defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface PoliceStation {
+  $context?: 'schema.org'
+  $type: 'PoliceStation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PoliceStation",
+  "name": "Example PoliceStation",
+  "description": "An example of the PoliceStation type",
+  "url": "https://example.com/policestation",
+  "identifier": "example-policestation-1"
+}
+```
+
+## Notes
+
+- PoliceStation inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

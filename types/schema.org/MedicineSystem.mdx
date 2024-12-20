@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicineSystem
+title: MedicineSystem
+description: Systems of medical practice.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# MedicineSystem
+
+Systems of medical practice.
+
+## Type Hierarchy
+
+MedicineSystem is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MedicineSystem.
+
+## Properties
+
+MedicineSystem defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicineSystem {
+  $context?: 'schema.org'
+  $type: 'MedicineSystem'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicineSystem",
+  "name": "Example MedicineSystem",
+  "description": "An example of the MedicineSystem type",
+  "url": "https://example.com/medicinesystem",
+  "identifier": "example-medicinesystem-1"
+}
+```
+
+## Notes
+
+- MedicineSystem inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

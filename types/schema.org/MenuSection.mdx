@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MenuSection
+title: MenuSection
+description: A sub-grouping of food or drink items in a menu. E.g. courses (such as 'Dinner', 'Breakfast', etc.), specific type of dishes (such as 'Meat', 'Vegan', 'Drinks', etc.), or some other classification made by the menu provider.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# MenuSection
+
+A sub-grouping of food or drink items in a menu. E.g. courses (such as 'Dinner', 'Breakfast', etc.), specific type of dishes (such as 'Meat', 'Vegan', 'Drinks', etc.), or some other classification made by the menu provider.
+
+## Type Hierarchy
+
+MenuSection is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from MenuSection.
+
+## Properties
+
+MenuSection defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface MenuSection {
+  $context?: 'schema.org'
+  $type: 'MenuSection'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MenuSection",
+  "name": "Example MenuSection",
+  "description": "An example of the MenuSection type",
+  "url": "https://example.com/menusection",
+  "identifier": "example-menusection-1"
+}
+```
+
+## Notes
+
+- MenuSection inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

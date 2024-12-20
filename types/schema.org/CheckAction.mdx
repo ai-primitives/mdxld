@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CheckAction
+title: CheckAction
+description: An agent inspects, determines, investigates, inquires, or examines an object's accuracy, quality, condition, or state.
+properties:
+
+subClasses:
+
+parentClass: FindAction
+---
+
+# CheckAction
+
+An agent inspects, determines, investigates, inquires, or examines an object's accuracy, quality, condition, or state.
+
+## Type Hierarchy
+
+CheckAction is a type of FindAction.
+
+### Direct Subtypes
+
+No types directly inherit from CheckAction.
+
+## Properties
+
+CheckAction defines the following properties in addition to those inherited from FindAction:
+
+
+
+## Usage Example
+
+```typescript
+interface CheckAction {
+  $context?: 'schema.org'
+  $type: 'CheckAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CheckAction",
+  "name": "Example CheckAction",
+  "description": "An example of the CheckAction type",
+  "url": "https://example.com/checkaction",
+  "identifier": "example-checkaction-1"
+}
+```
+
+## Notes
+
+- CheckAction inherits all properties from FindAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

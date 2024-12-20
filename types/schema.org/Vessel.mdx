@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Vessel
+title: Vessel
+description: A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.
+properties:
+
+subClasses:
+  - Artery
+  - LymphaticVessel
+  - Vein
+parentClass: AnatomicalStructure
+---
+
+# Vessel
+
+A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.
+
+## Type Hierarchy
+
+Vessel is a type of AnatomicalStructure.
+
+### Direct Subtypes
+
+The following types directly inherit from Vessel:
+
+- Artery: A type of blood vessel that specifically carries blood away from the heart.
+- LymphaticVessel: A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.
+- Vein: A type of blood vessel that specifically carries blood to the heart.
+
+## Properties
+
+Vessel defines the following properties in addition to those inherited from AnatomicalStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface Vessel {
+  $context?: 'schema.org'
+  $type: 'Vessel'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Vessel",
+  "name": "Example Vessel",
+  "description": "An example of the Vessel type",
+  "url": "https://example.com/vessel",
+  "identifier": "example-vessel-1"
+}
+```
+
+## Notes
+
+- Vessel inherits all properties from AnatomicalStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

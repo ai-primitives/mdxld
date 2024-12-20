@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalTestPanel
+title: MedicalTestPanel
+description: Any collection of tests commonly ordered together.
+properties:
+  - subTest
+subClasses:
+
+parentClass: MedicalTest
+---
+
+# MedicalTestPanel
+
+Any collection of tests commonly ordered together.
+
+## Type Hierarchy
+
+MedicalTestPanel is a type of MedicalTest.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalTestPanel.
+
+## Properties
+
+MedicalTestPanel defines the following properties in addition to those inherited from MedicalTest:
+
+- subTest: A component test of the panel.
+
+## Usage Example
+
+```typescript
+interface MedicalTestPanel {
+  $context?: 'schema.org'
+  $type: 'MedicalTestPanel'
+  subTest?: MedicalTest
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalTestPanel",
+  "name": "Example MedicalTestPanel",
+  "description": "An example of the MedicalTestPanel type",
+  "url": "https://example.com/medicaltestpanel",
+  "identifier": "example-medicaltestpanel-1"
+}
+```
+
+## Notes
+
+- MedicalTestPanel inherits all properties from MedicalTest
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EducationEvent
+title: EducationEvent
+description: Event type: Education event.
+properties:
+
+subClasses:
+
+parentClass: Event
+---
+
+# EducationEvent
+
+Event type: Education event.
+
+## Type Hierarchy
+
+EducationEvent is a type of Event.
+
+### Direct Subtypes
+
+No types directly inherit from EducationEvent.
+
+## Properties
+
+EducationEvent defines the following properties in addition to those inherited from Event:
+
+
+
+## Usage Example
+
+```typescript
+interface EducationEvent {
+  $context?: 'schema.org'
+  $type: 'EducationEvent'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EducationEvent",
+  "name": "Example EducationEvent",
+  "description": "An example of the EducationEvent type",
+  "url": "https://example.com/educationevent",
+  "identifier": "example-educationevent-1"
+}
+```
+
+## Notes
+
+- EducationEvent inherits all properties from Event
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

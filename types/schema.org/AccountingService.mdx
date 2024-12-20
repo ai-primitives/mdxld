@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: AccountingService
+title: AccountingService
+description: Accountancy business.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
+      
+properties:
+
+subClasses:
+
+parentClass: FinancialService
+---
+
+# AccountingService
+
+Accountancy business.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
+      
+
+## Type Hierarchy
+
+AccountingService is a type of FinancialService.
+
+### Direct Subtypes
+
+No types directly inherit from AccountingService.
+
+## Properties
+
+AccountingService defines the following properties in addition to those inherited from FinancialService:
+
+
+
+## Usage Example
+
+```typescript
+interface AccountingService {
+  $context?: 'schema.org'
+  $type: 'AccountingService'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AccountingService",
+  "name": "Example AccountingService",
+  "description": "An example of the AccountingService type",
+  "url": "https://example.com/accountingservice",
+  "identifier": "example-accountingservice-1"
+}
+```
+
+## Notes
+
+- AccountingService inherits all properties from FinancialService
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

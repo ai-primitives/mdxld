@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalEvidenceLevel
+title: MedicalEvidenceLevel
+description: Level of evidence for a medical guideline. Enumerated type.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# MedicalEvidenceLevel
+
+Level of evidence for a medical guideline. Enumerated type.
+
+## Type Hierarchy
+
+MedicalEvidenceLevel is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalEvidenceLevel.
+
+## Properties
+
+MedicalEvidenceLevel defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalEvidenceLevel {
+  $context?: 'schema.org'
+  $type: 'MedicalEvidenceLevel'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalEvidenceLevel",
+  "name": "Example MedicalEvidenceLevel",
+  "description": "An example of the MedicalEvidenceLevel type",
+  "url": "https://example.com/medicalevidencelevel",
+  "identifier": "example-medicalevidencelevel-1"
+}
+```
+
+## Notes
+
+- MedicalEvidenceLevel inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

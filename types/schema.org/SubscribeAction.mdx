@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SubscribeAction
+title: SubscribeAction
+description: The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates pushed to.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, SubscribeAction implies that the subscriber acts as a passive agent being constantly/actively pushed for updates.\n* [[RegisterAction]]: Unlike RegisterAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.\n* [[JoinAction]]: Unlike JoinAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.
+properties:
+
+subClasses:
+
+parentClass: InteractAction
+---
+
+# SubscribeAction
+
+The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates pushed to.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, SubscribeAction implies that the subscriber acts as a passive agent being constantly/actively pushed for updates.\n* [[RegisterAction]]: Unlike RegisterAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.\n* [[JoinAction]]: Unlike JoinAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.
+
+## Type Hierarchy
+
+SubscribeAction is a type of InteractAction.
+
+### Direct Subtypes
+
+No types directly inherit from SubscribeAction.
+
+## Properties
+
+SubscribeAction defines the following properties in addition to those inherited from InteractAction:
+
+
+
+## Usage Example
+
+```typescript
+interface SubscribeAction {
+  $context?: 'schema.org'
+  $type: 'SubscribeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SubscribeAction",
+  "name": "Example SubscribeAction",
+  "description": "An example of the SubscribeAction type",
+  "url": "https://example.com/subscribeaction",
+  "identifier": "example-subscribeaction-1"
+}
+```
+
+## Notes
+
+- SubscribeAction inherits all properties from InteractAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

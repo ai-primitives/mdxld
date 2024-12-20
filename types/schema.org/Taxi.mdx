@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Taxi
+title: Taxi
+description: A taxi.
+properties:
+
+subClasses:
+
+parentClass: Service
+---
+
+# Taxi
+
+A taxi.
+
+## Type Hierarchy
+
+Taxi is a type of Service.
+
+### Direct Subtypes
+
+No types directly inherit from Taxi.
+
+## Properties
+
+Taxi defines the following properties in addition to those inherited from Service:
+
+
+
+## Usage Example
+
+```typescript
+interface Taxi {
+  $context?: 'schema.org'
+  $type: 'Taxi'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Taxi",
+  "name": "Example Taxi",
+  "description": "An example of the Taxi type",
+  "url": "https://example.com/taxi",
+  "identifier": "example-taxi-1"
+}
+```
+
+## Notes
+
+- Taxi inherits all properties from Service
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

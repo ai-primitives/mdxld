@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AnalysisNewsArticle
+title: AnalysisNewsArticle
+description: An AnalysisNewsArticle is a [[NewsArticle]] that, while based on factual reporting, incorporates the expertise of the author/producer, offering interpretations and conclusions.
+properties:
+
+subClasses:
+
+parentClass: NewsArticle
+---
+
+# AnalysisNewsArticle
+
+An AnalysisNewsArticle is a [[NewsArticle]] that, while based on factual reporting, incorporates the expertise of the author/producer, offering interpretations and conclusions.
+
+## Type Hierarchy
+
+AnalysisNewsArticle is a type of NewsArticle.
+
+### Direct Subtypes
+
+No types directly inherit from AnalysisNewsArticle.
+
+## Properties
+
+AnalysisNewsArticle defines the following properties in addition to those inherited from NewsArticle:
+
+
+
+## Usage Example
+
+```typescript
+interface AnalysisNewsArticle {
+  $context?: 'schema.org'
+  $type: 'AnalysisNewsArticle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AnalysisNewsArticle",
+  "name": "Example AnalysisNewsArticle",
+  "description": "An example of the AnalysisNewsArticle type",
+  "url": "https://example.com/analysisnewsarticle",
+  "identifier": "example-analysisnewsarticle-1"
+}
+```
+
+## Notes
+
+- AnalysisNewsArticle inherits all properties from NewsArticle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

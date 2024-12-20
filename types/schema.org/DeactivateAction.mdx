@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DeactivateAction
+title: DeactivateAction
+description: The act of stopping or deactivating a device or application (e.g. stopping a timer or turning off a flashlight).
+properties:
+
+subClasses:
+
+parentClass: ControlAction
+---
+
+# DeactivateAction
+
+The act of stopping or deactivating a device or application (e.g. stopping a timer or turning off a flashlight).
+
+## Type Hierarchy
+
+DeactivateAction is a type of ControlAction.
+
+### Direct Subtypes
+
+No types directly inherit from DeactivateAction.
+
+## Properties
+
+DeactivateAction defines the following properties in addition to those inherited from ControlAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DeactivateAction {
+  $context?: 'schema.org'
+  $type: 'DeactivateAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DeactivateAction",
+  "name": "Example DeactivateAction",
+  "description": "An example of the DeactivateAction type",
+  "url": "https://example.com/deactivateaction",
+  "identifier": "example-deactivateaction-1"
+}
+```
+
+## Notes
+
+- DeactivateAction inherits all properties from ControlAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

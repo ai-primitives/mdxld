@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: RestrictedDiet
+title: RestrictedDiet
+description: A diet restricted to certain foods or preparations for cultural, religious, health or lifestyle reasons. 
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# RestrictedDiet
+
+A diet restricted to certain foods or preparations for cultural, religious, health or lifestyle reasons. 
+
+## Type Hierarchy
+
+RestrictedDiet is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from RestrictedDiet.
+
+## Properties
+
+RestrictedDiet defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface RestrictedDiet {
+  $context?: 'schema.org'
+  $type: 'RestrictedDiet'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RestrictedDiet",
+  "name": "Example RestrictedDiet",
+  "description": "An example of the RestrictedDiet type",
+  "url": "https://example.com/restricteddiet",
+  "identifier": "example-restricteddiet-1"
+}
+```
+
+## Notes
+
+- RestrictedDiet inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

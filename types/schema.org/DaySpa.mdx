@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DaySpa
+title: DaySpa
+description: A day spa.
+properties:
+
+subClasses:
+
+parentClass: HealthAndBeautyBusiness
+---
+
+# DaySpa
+
+A day spa.
+
+## Type Hierarchy
+
+DaySpa is a type of HealthAndBeautyBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from DaySpa.
+
+## Properties
+
+DaySpa defines the following properties in addition to those inherited from HealthAndBeautyBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface DaySpa {
+  $context?: 'schema.org'
+  $type: 'DaySpa'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DaySpa",
+  "name": "Example DaySpa",
+  "description": "An example of the DaySpa type",
+  "url": "https://example.com/dayspa",
+  "identifier": "example-dayspa-1"
+}
+```
+
+## Notes
+
+- DaySpa inherits all properties from HealthAndBeautyBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

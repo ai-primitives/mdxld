@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DanceGroup
+title: DanceGroup
+description: A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance.
+properties:
+
+subClasses:
+
+parentClass: PerformingGroup
+---
+
+# DanceGroup
+
+A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance.
+
+## Type Hierarchy
+
+DanceGroup is a type of PerformingGroup.
+
+### Direct Subtypes
+
+No types directly inherit from DanceGroup.
+
+## Properties
+
+DanceGroup defines the following properties in addition to those inherited from PerformingGroup:
+
+
+
+## Usage Example
+
+```typescript
+interface DanceGroup {
+  $context?: 'schema.org'
+  $type: 'DanceGroup'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DanceGroup",
+  "name": "Example DanceGroup",
+  "description": "An example of the DanceGroup type",
+  "url": "https://example.com/dancegroup",
+  "identifier": "example-dancegroup-1"
+}
+```
+
+## Notes
+
+- DanceGroup inherits all properties from PerformingGroup
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

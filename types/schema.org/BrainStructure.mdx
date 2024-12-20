@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BrainStructure
+title: BrainStructure
+description: Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.
+properties:
+
+subClasses:
+
+parentClass: AnatomicalStructure
+---
+
+# BrainStructure
+
+Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.
+
+## Type Hierarchy
+
+BrainStructure is a type of AnatomicalStructure.
+
+### Direct Subtypes
+
+No types directly inherit from BrainStructure.
+
+## Properties
+
+BrainStructure defines the following properties in addition to those inherited from AnatomicalStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface BrainStructure {
+  $context?: 'schema.org'
+  $type: 'BrainStructure'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BrainStructure",
+  "name": "Example BrainStructure",
+  "description": "An example of the BrainStructure type",
+  "url": "https://example.com/brainstructure",
+  "identifier": "example-brainstructure-1"
+}
+```
+
+## Notes
+
+- BrainStructure inherits all properties from AnatomicalStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

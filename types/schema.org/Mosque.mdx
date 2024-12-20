@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Mosque
+title: Mosque
+description: A mosque.
+properties:
+
+subClasses:
+
+parentClass: PlaceOfWorship
+---
+
+# Mosque
+
+A mosque.
+
+## Type Hierarchy
+
+Mosque is a type of PlaceOfWorship.
+
+### Direct Subtypes
+
+No types directly inherit from Mosque.
+
+## Properties
+
+Mosque defines the following properties in addition to those inherited from PlaceOfWorship:
+
+
+
+## Usage Example
+
+```typescript
+interface Mosque {
+  $context?: 'schema.org'
+  $type: 'Mosque'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Mosque",
+  "name": "Example Mosque",
+  "description": "An example of the Mosque type",
+  "url": "https://example.com/mosque",
+  "identifier": "example-mosque-1"
+}
+```
+
+## Notes
+
+- Mosque inherits all properties from PlaceOfWorship
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

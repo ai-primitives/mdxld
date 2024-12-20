@@ -1,0 +1,69 @@
+---
+$context: schema.org
+$type: PlaceOfWorship
+title: PlaceOfWorship
+description: Place of worship, such as a church, synagogue, or mosque.
+properties:
+
+subClasses:
+  - BuddhistTemple
+  - Church
+  - HinduTemple
+  - Mosque
+  - Synagogue
+parentClass: CivicStructure
+---
+
+# PlaceOfWorship
+
+Place of worship, such as a church, synagogue, or mosque.
+
+## Type Hierarchy
+
+PlaceOfWorship is a type of CivicStructure.
+
+### Direct Subtypes
+
+The following types directly inherit from PlaceOfWorship:
+
+- BuddhistTemple: A Buddhist temple.
+- Church: A church.
+- HinduTemple: A Hindu temple.
+- Mosque: A mosque.
+- Synagogue: A synagogue.
+
+## Properties
+
+PlaceOfWorship defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface PlaceOfWorship {
+  $context?: 'schema.org'
+  $type: 'PlaceOfWorship'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PlaceOfWorship",
+  "name": "Example PlaceOfWorship",
+  "description": "An example of the PlaceOfWorship type",
+  "url": "https://example.com/placeofworship",
+  "identifier": "example-placeofworship-1"
+}
+```
+
+## Notes
+
+- PlaceOfWorship inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

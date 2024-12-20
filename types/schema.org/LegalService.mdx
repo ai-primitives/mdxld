@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: LegalService
+title: LegalService
+description: A LegalService is a business that provides legally-oriented services, advice and representation, e.g. law firms.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
+properties:
+
+subClasses:
+  - Attorney
+  - Notary
+parentClass: LocalBusiness
+---
+
+# LegalService
+
+A LegalService is a business that provides legally-oriented services, advice and representation, e.g. law firms.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
+
+## Type Hierarchy
+
+LegalService is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from LegalService:
+
+- Attorney: Professional service: Attorney. \n\nThis type is deprecated - [[LegalService]] is more inclusive and less ambiguous.
+- Notary: A notary.
+
+## Properties
+
+LegalService defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface LegalService {
+  $context?: 'schema.org'
+  $type: 'LegalService'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LegalService",
+  "name": "Example LegalService",
+  "description": "An example of the LegalService type",
+  "url": "https://example.com/legalservice",
+  "identifier": "example-legalservice-1"
+}
+```
+
+## Notes
+
+- LegalService inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

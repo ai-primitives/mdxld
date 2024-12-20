@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Reservoir
+title: Reservoir
+description: A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir.
+properties:
+
+subClasses:
+
+parentClass: BodyOfWater
+---
+
+# Reservoir
+
+A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir.
+
+## Type Hierarchy
+
+Reservoir is a type of BodyOfWater.
+
+### Direct Subtypes
+
+No types directly inherit from Reservoir.
+
+## Properties
+
+Reservoir defines the following properties in addition to those inherited from BodyOfWater:
+
+
+
+## Usage Example
+
+```typescript
+interface Reservoir {
+  $context?: 'schema.org'
+  $type: 'Reservoir'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Reservoir",
+  "name": "Example Reservoir",
+  "description": "An example of the Reservoir type",
+  "url": "https://example.com/reservoir",
+  "identifier": "example-reservoir-1"
+}
+```
+
+## Notes
+
+- Reservoir inherits all properties from BodyOfWater
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Locksmith
+title: Locksmith
+description: A locksmith.
+properties:
+
+subClasses:
+
+parentClass: HomeAndConstructionBusiness
+---
+
+# Locksmith
+
+A locksmith.
+
+## Type Hierarchy
+
+Locksmith is a type of HomeAndConstructionBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from Locksmith.
+
+## Properties
+
+Locksmith defines the following properties in addition to those inherited from HomeAndConstructionBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface Locksmith {
+  $context?: 'schema.org'
+  $type: 'Locksmith'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Locksmith",
+  "name": "Example Locksmith",
+  "description": "An example of the Locksmith type",
+  "url": "https://example.com/locksmith",
+  "identifier": "example-locksmith-1"
+}
+```
+
+## Notes
+
+- Locksmith inherits all properties from HomeAndConstructionBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

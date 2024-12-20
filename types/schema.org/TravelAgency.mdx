@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TravelAgency
+title: TravelAgency
+description: A travel agency.
+properties:
+
+subClasses:
+
+parentClass: LocalBusiness
+---
+
+# TravelAgency
+
+A travel agency.
+
+## Type Hierarchy
+
+TravelAgency is a type of LocalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from TravelAgency.
+
+## Properties
+
+TravelAgency defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface TravelAgency {
+  $context?: 'schema.org'
+  $type: 'TravelAgency'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TravelAgency",
+  "name": "Example TravelAgency",
+  "description": "An example of the TravelAgency type",
+  "url": "https://example.com/travelagency",
+  "identifier": "example-travelagency-1"
+}
+```
+
+## Notes
+
+- TravelAgency inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

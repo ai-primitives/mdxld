@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: InvestmentFund
+title: InvestmentFund
+description: A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.
+properties:
+
+subClasses:
+
+parentClass: InvestmentOrDeposit
+---
+
+# InvestmentFund
+
+A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.
+
+## Type Hierarchy
+
+InvestmentFund is a type of InvestmentOrDeposit.
+
+### Direct Subtypes
+
+No types directly inherit from InvestmentFund.
+
+## Properties
+
+InvestmentFund defines the following properties in addition to those inherited from InvestmentOrDeposit:
+
+
+
+## Usage Example
+
+```typescript
+interface InvestmentFund {
+  $context?: 'schema.org'
+  $type: 'InvestmentFund'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InvestmentFund",
+  "name": "Example InvestmentFund",
+  "description": "An example of the InvestmentFund type",
+  "url": "https://example.com/investmentfund",
+  "identifier": "example-investmentfund-1"
+}
+```
+
+## Notes
+
+- InvestmentFund inherits all properties from InvestmentOrDeposit
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

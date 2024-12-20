@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DataDownload
+title: DataDownload
+description: All or part of a [[Dataset]] in downloadable form. 
+properties:
+
+subClasses:
+
+parentClass: MediaObject
+---
+
+# DataDownload
+
+All or part of a [[Dataset]] in downloadable form. 
+
+## Type Hierarchy
+
+DataDownload is a type of MediaObject.
+
+### Direct Subtypes
+
+No types directly inherit from DataDownload.
+
+## Properties
+
+DataDownload defines the following properties in addition to those inherited from MediaObject:
+
+
+
+## Usage Example
+
+```typescript
+interface DataDownload {
+  $context?: 'schema.org'
+  $type: 'DataDownload'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DataDownload",
+  "name": "Example DataDownload",
+  "description": "An example of the DataDownload type",
+  "url": "https://example.com/datadownload",
+  "identifier": "example-datadownload-1"
+}
+```
+
+## Notes
+
+- DataDownload inherits all properties from MediaObject
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: PerformingGroup
+title: PerformingGroup
+description: A performance group, such as a band, an orchestra, or a circus.
+properties:
+
+subClasses:
+  - DanceGroup
+  - MusicGroup
+  - TheaterGroup
+parentClass: Organization
+---
+
+# PerformingGroup
+
+A performance group, such as a band, an orchestra, or a circus.
+
+## Type Hierarchy
+
+PerformingGroup is a type of Organization.
+
+### Direct Subtypes
+
+The following types directly inherit from PerformingGroup:
+
+- DanceGroup: A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance.
+- MusicGroup: A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.
+- TheaterGroup: A theater group or company, for example, the Royal Shakespeare Company or Druid Theatre.
+
+## Properties
+
+PerformingGroup defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface PerformingGroup {
+  $context?: 'schema.org'
+  $type: 'PerformingGroup'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PerformingGroup",
+  "name": "Example PerformingGroup",
+  "description": "An example of the PerformingGroup type",
+  "url": "https://example.com/performinggroup",
+  "identifier": "example-performinggroup-1"
+}
+```
+
+## Notes
+
+- PerformingGroup inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DigitalPlatformEnumeration
+title: DigitalPlatformEnumeration
+description: Enumerates some common technology platforms, for use with properties such as [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable code is not enumerated here, textual or URL values can be used instead. These codes are at a fairly high level and do not deal with versioning and other nuance. Additional codes can be suggested [in github](https://github.com/schemaorg/schemaorg/issues/3057). 
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# DigitalPlatformEnumeration
+
+Enumerates some common technology platforms, for use with properties such as [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable code is not enumerated here, textual or URL values can be used instead. These codes are at a fairly high level and do not deal with versioning and other nuance. Additional codes can be suggested [in github](https://github.com/schemaorg/schemaorg/issues/3057). 
+
+## Type Hierarchy
+
+DigitalPlatformEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from DigitalPlatformEnumeration.
+
+## Properties
+
+DigitalPlatformEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface DigitalPlatformEnumeration {
+  $context?: 'schema.org'
+  $type: 'DigitalPlatformEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DigitalPlatformEnumeration",
+  "name": "Example DigitalPlatformEnumeration",
+  "description": "An example of the DigitalPlatformEnumeration type",
+  "url": "https://example.com/digitalplatformenumeration",
+  "identifier": "example-digitalplatformenumeration-1"
+}
+```
+
+## Notes
+
+- DigitalPlatformEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

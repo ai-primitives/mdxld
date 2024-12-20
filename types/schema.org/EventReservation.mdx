@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EventReservation
+title: EventReservation
+description: A reservation for an event like a concert, sporting event, or lecture.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+properties:
+
+subClasses:
+
+parentClass: Reservation
+---
+
+# EventReservation
+
+A reservation for an event like a concert, sporting event, or lecture.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+
+## Type Hierarchy
+
+EventReservation is a type of Reservation.
+
+### Direct Subtypes
+
+No types directly inherit from EventReservation.
+
+## Properties
+
+EventReservation defines the following properties in addition to those inherited from Reservation:
+
+
+
+## Usage Example
+
+```typescript
+interface EventReservation {
+  $context?: 'schema.org'
+  $type: 'EventReservation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EventReservation",
+  "name": "Example EventReservation",
+  "description": "An example of the EventReservation type",
+  "url": "https://example.com/eventreservation",
+  "identifier": "example-eventreservation-1"
+}
+```
+
+## Notes
+
+- EventReservation inherits all properties from Reservation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

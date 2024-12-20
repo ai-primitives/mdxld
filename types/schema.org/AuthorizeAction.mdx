@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AuthorizeAction
+title: AuthorizeAction
+description: The act of granting permission to an object.
+properties:
+
+subClasses:
+
+parentClass: AllocateAction
+---
+
+# AuthorizeAction
+
+The act of granting permission to an object.
+
+## Type Hierarchy
+
+AuthorizeAction is a type of AllocateAction.
+
+### Direct Subtypes
+
+No types directly inherit from AuthorizeAction.
+
+## Properties
+
+AuthorizeAction defines the following properties in addition to those inherited from AllocateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface AuthorizeAction {
+  $context?: 'schema.org'
+  $type: 'AuthorizeAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AuthorizeAction",
+  "name": "Example AuthorizeAction",
+  "description": "An example of the AuthorizeAction type",
+  "url": "https://example.com/authorizeaction",
+  "identifier": "example-authorizeaction-1"
+}
+```
+
+## Notes
+
+- AuthorizeAction inherits all properties from AllocateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

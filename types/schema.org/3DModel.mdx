@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: 3DModel
+title: 3DModel
+description: A 3D model represents some kind of 3D content, which may have [[encoding]]s in one or more [[MediaObject]]s. Many 3D formats are available (e.g. see [Wikipedia](https://en.wikipedia.org/wiki/Category:3D_graphics_file_formats)); specific encoding formats can be represented using the [[encodingFormat]] property applied to the relevant [[MediaObject]]. For the
+case of a single file published after Zip compression, the convention of appending '+zip' to the [[encodingFormat]] can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using [[3DModel]].
+properties:
+  - isResizable
+subClasses:
+
+parentClass: MediaObject
+---
+
+# 3DModel
+
+A 3D model represents some kind of 3D content, which may have [[encoding]]s in one or more [[MediaObject]]s. Many 3D formats are available (e.g. see [Wikipedia](https://en.wikipedia.org/wiki/Category:3D_graphics_file_formats)); specific encoding formats can be represented using the [[encodingFormat]] property applied to the relevant [[MediaObject]]. For the
+case of a single file published after Zip compression, the convention of appending '+zip' to the [[encodingFormat]] can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using [[3DModel]].
+
+## Type Hierarchy
+
+3DModel is a type of MediaObject.
+
+### Direct Subtypes
+
+No types directly inherit from 3DModel.
+
+## Properties
+
+3DModel defines the following properties in addition to those inherited from MediaObject:
+
+- isResizable: Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect reality.
+
+## Usage Example
+
+```typescript
+interface 3DModel {
+  $context?: 'schema.org'
+  $type: '3DModel'
+  isResizable?: boolean
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "3DModel",
+  "name": "Example 3DModel",
+  "description": "An example of the 3DModel type",
+  "url": "https://example.com/3dmodel",
+  "identifier": "example-3dmodel-1"
+}
+```
+
+## Notes
+
+- 3DModel inherits all properties from MediaObject
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

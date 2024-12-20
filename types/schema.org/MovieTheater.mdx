@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MovieTheater
+title: MovieTheater
+description: A movie theater.
+properties:
+  - screenCount
+subClasses:
+
+
+---
+
+# MovieTheater
+
+A movie theater.
+
+## Type Hierarchy
+
+MovieTheater is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from MovieTheater.
+
+## Properties
+
+MovieTheater defines the following properties in addition to those inherited from Thing:
+
+- screenCount: The number of screens in the movie theater.
+
+## Usage Example
+
+```typescript
+interface MovieTheater {
+  $context?: 'schema.org'
+  $type: 'MovieTheater'
+  screenCount?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MovieTheater",
+  "name": "Example MovieTheater",
+  "description": "An example of the MovieTheater type",
+  "url": "https://example.com/movietheater",
+  "identifier": "example-movietheater-1"
+}
+```
+
+## Notes
+
+- MovieTheater inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

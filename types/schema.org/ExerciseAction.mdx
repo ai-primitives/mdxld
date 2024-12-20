@@ -1,0 +1,83 @@
+---
+$context: schema.org
+$type: ExerciseAction
+title: ExerciseAction
+description: The act of participating in exertive activity for the purposes of improving health and fitness.
+properties:
+  - course
+  - diet
+  - exerciseCourse
+  - exercisePlan
+  - exerciseRelatedDiet
+  - opponent
+  - sportsActivityLocation
+  - sportsEvent
+  - sportsTeam
+subClasses:
+
+parentClass: PlayAction
+---
+
+# ExerciseAction
+
+The act of participating in exertive activity for the purposes of improving health and fitness.
+
+## Type Hierarchy
+
+ExerciseAction is a type of PlayAction.
+
+### Direct Subtypes
+
+No types directly inherit from ExerciseAction.
+
+## Properties
+
+ExerciseAction defines the following properties in addition to those inherited from PlayAction:
+
+- course: A sub property of location. The course where this action was taken.
+- diet: A sub property of instrument. The diet used in this action.
+- exerciseCourse: A sub property of location. The course where this action was taken.
+- exercisePlan: A sub property of instrument. The exercise plan used on this action.
+- exerciseRelatedDiet: A sub property of instrument. The diet used in this action.
+- opponent: A sub property of participant. The opponent on this action.
+- sportsActivityLocation: A sub property of location. The sports activity location where this action occurred.
+- sportsEvent: A sub property of location. The sports event where this action occurred.
+- sportsTeam: A sub property of participant. The sports team that participated on this action.
+
+## Usage Example
+
+```typescript
+interface ExerciseAction {
+  $context?: 'schema.org'
+  $type: 'ExerciseAction'
+  course?: Place
+  diet?: Diet
+  exerciseCourse?: Place
+  exercisePlan?: ExercisePlan
+  exerciseRelatedDiet?: Diet
+  opponent?: Person
+  sportsActivityLocation?: SportsActivityLocation
+  sportsEvent?: SportsEvent
+  sportsTeam?: SportsTeam
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ExerciseAction",
+  "name": "Example ExerciseAction",
+  "description": "An example of the ExerciseAction type",
+  "url": "https://example.com/exerciseaction",
+  "identifier": "example-exerciseaction-1"
+}
+```
+
+## Notes
+
+- ExerciseAction inherits all properties from PlayAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

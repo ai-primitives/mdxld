@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WPFooter
+title: WPFooter
+description: The footer section of the page.
+properties:
+
+subClasses:
+
+parentClass: WebPageElement
+---
+
+# WPFooter
+
+The footer section of the page.
+
+## Type Hierarchy
+
+WPFooter is a type of WebPageElement.
+
+### Direct Subtypes
+
+No types directly inherit from WPFooter.
+
+## Properties
+
+WPFooter defines the following properties in addition to those inherited from WebPageElement:
+
+
+
+## Usage Example
+
+```typescript
+interface WPFooter {
+  $context?: 'schema.org'
+  $type: 'WPFooter'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WPFooter",
+  "name": "Example WPFooter",
+  "description": "An example of the WPFooter type",
+  "url": "https://example.com/wpfooter",
+  "identifier": "example-wpfooter-1"
+}
+```
+
+## Notes
+
+- WPFooter inherits all properties from WebPageElement
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

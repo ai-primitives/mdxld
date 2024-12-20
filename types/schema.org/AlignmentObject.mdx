@@ -1,0 +1,75 @@
+---
+$context: schema.org
+$type: AlignmentObject
+title: AlignmentObject
+description: An intangible item that describes an alignment between a learning resource and a node in an educational framework.
+
+Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
+properties:
+  - alignmentType
+  - educationalFramework
+  - targetDescription
+  - targetName
+  - targetUrl
+subClasses:
+
+parentClass: Intangible
+---
+
+# AlignmentObject
+
+An intangible item that describes an alignment between a learning resource and a node in an educational framework.
+
+Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
+
+## Type Hierarchy
+
+AlignmentObject is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from AlignmentObject.
+
+## Properties
+
+AlignmentObject defines the following properties in addition to those inherited from Intangible:
+
+- alignmentType: A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
+- educationalFramework: The framework to which the resource being described is aligned.
+- targetDescription: The description of a node in an established educational framework.
+- targetName: The name of a node in an established educational framework.
+- targetUrl: The URL of a node in an established educational framework.
+
+## Usage Example
+
+```typescript
+interface AlignmentObject {
+  $context?: 'schema.org'
+  $type: 'AlignmentObject'
+  alignmentType?: string
+  educationalFramework?: string
+  targetDescription?: string
+  targetName?: string
+  targetUrl?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AlignmentObject",
+  "name": "Example AlignmentObject",
+  "description": "An example of the AlignmentObject type",
+  "url": "https://example.com/alignmentobject",
+  "identifier": "example-alignmentobject-1"
+}
+```
+
+## Notes
+
+- AlignmentObject inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

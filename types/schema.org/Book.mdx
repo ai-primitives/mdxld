@@ -1,0 +1,74 @@
+---
+$context: schema.org
+$type: Book
+title: Book
+description: A book.
+properties:
+  - abridged
+  - bookEdition
+  - bookFormat
+  - illustrator
+  - isbn
+  - numberOfPages
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Book
+
+A book.
+
+## Type Hierarchy
+
+Book is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Book.
+
+## Properties
+
+Book defines the following properties in addition to those inherited from CreativeWork:
+
+- abridged: Indicates whether the book is an abridged edition.
+- bookEdition: The edition of the book.
+- bookFormat: The format of the book.
+- illustrator: The illustrator of the book.
+- isbn: The ISBN of the book.
+- numberOfPages: The number of pages in the book.
+
+## Usage Example
+
+```typescript
+interface Book {
+  $context?: 'schema.org'
+  $type: 'Book'
+  abridged?: boolean
+  bookEdition?: string
+  bookFormat?: BookFormatType
+  illustrator?: Person
+  isbn?: string
+  numberOfPages?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Book",
+  "name": "Example Book",
+  "description": "An example of the Book type",
+  "url": "https://example.com/book",
+  "identifier": "example-book-1"
+}
+```
+
+## Notes
+
+- Book inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

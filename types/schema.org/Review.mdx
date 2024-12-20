@@ -1,0 +1,86 @@
+---
+$context: schema.org
+$type: Review
+title: Review
+description: A review of an item - for example, of a restaurant, movie, or store.
+properties:
+  - associatedClaimReview
+  - associatedMediaReview
+  - associatedReview
+  - reviewBody
+  - reviewRating
+subClasses:
+  - ClaimReview
+  - CriticReview
+  - EmployerReview
+  - MediaReview
+  - Recommendation
+  - UserReview
+parentClass: CreativeWork
+---
+
+# Review
+
+A review of an item - for example, of a restaurant, movie, or store.
+
+## Type Hierarchy
+
+Review is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from Review:
+
+- ClaimReview: A fact-checking review of claims made (or reported) in some creative work (referenced via itemReviewed).
+- CriticReview: A [[CriticReview]] is a more specialized form of Review written or published by a source that is recognized for its reviewing activities. These can include online columns, travel and food guides, TV and radio shows, blogs and other independent Web sites. [[CriticReview]]s are typically more in-depth and professionally written. For simpler, casually written user/visitor/viewer/customer reviews, it is more appropriate to use the [[UserReview]] type. Review aggregator sites such as Metacritic already separate out the site's user reviews from selected critic reviews that originate from third-party sources.
+- EmployerReview: An [[EmployerReview]] is a review of an [[Organization]] regarding its role as an employer, written by a current or former employee of that organization.
+- MediaReview: A [[MediaReview]] is a more specialized form of Review dedicated to the evaluation of media content online, typically in the context of fact-checking and misinformation.
+    For more general reviews of media in the broader sense, use [[UserReview]], [[CriticReview]] or other [[Review]] types. This definition is
+    a work in progress. While the [[MediaManipulationRatingEnumeration]] list reflects significant community review amongst fact-checkers and others working
+    to combat misinformation, the specific structures for representing media objects, their versions and publication context, are still evolving. Similarly, best practices for the relationship between [[MediaReview]] and [[ClaimReview]] markup have not yet been finalized.
+- Recommendation: [[Recommendation]] is a type of [[Review]] that suggests or proposes something as the best option or best course of action. Recommendations may be for products or services, or other concrete things, as in the case of a ranked list or product guide. A [[Guide]] may list multiple recommendations for different categories. For example, in a [[Guide]] about which TVs to buy, the author may have several [[Recommendation]]s.
+- UserReview: A review created by an end-user (e.g. consumer, purchaser, attendee etc.), in contrast with [[CriticReview]].
+
+## Properties
+
+Review defines the following properties in addition to those inherited from CreativeWork:
+
+- associatedClaimReview: An associated [[ClaimReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
+- associatedMediaReview: An associated [[MediaReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].
+- associatedReview: An associated [[Review]].
+- reviewBody: The actual body of the review.
+- reviewRating: The rating given in this review. Note that reviews can themselves be rated. The ```reviewRating``` applies to rating given by the review. The [[aggregateRating]] property applies to the review itself, as a creative work.
+
+## Usage Example
+
+```typescript
+interface Review {
+  $context?: 'schema.org'
+  $type: 'Review'
+  associatedClaimReview?: Review
+  associatedMediaReview?: Review
+  associatedReview?: Review
+  reviewBody?: string
+  reviewRating?: Rating
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Review",
+  "name": "Example Review",
+  "description": "An example of the Review type",
+  "url": "https://example.com/review",
+  "identifier": "example-review-1"
+}
+```
+
+## Notes
+
+- Review inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

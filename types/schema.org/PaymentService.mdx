@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PaymentService
+title: PaymentService
+description: A Service to transfer funds from a person or organization to a beneficiary person or organization.
+properties:
+
+subClasses:
+
+
+---
+
+# PaymentService
+
+A Service to transfer funds from a person or organization to a beneficiary person or organization.
+
+## Type Hierarchy
+
+PaymentService is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from PaymentService.
+
+## Properties
+
+PaymentService defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface PaymentService {
+  $context?: 'schema.org'
+  $type: 'PaymentService'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PaymentService",
+  "name": "Example PaymentService",
+  "description": "An example of the PaymentService type",
+  "url": "https://example.com/paymentservice",
+  "identifier": "example-paymentservice-1"
+}
+```
+
+## Notes
+
+- PaymentService inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ReplyAction
+title: ReplyAction
+description: The act of responding to a question/message asked/sent by the object. Related to [[AskAction]].\n\nRelated actions:\n\n* [[AskAction]]: Appears generally as an origin of a ReplyAction.
+properties:
+
+subClasses:
+
+parentClass: CommunicateAction
+---
+
+# ReplyAction
+
+The act of responding to a question/message asked/sent by the object. Related to [[AskAction]].\n\nRelated actions:\n\n* [[AskAction]]: Appears generally as an origin of a ReplyAction.
+
+## Type Hierarchy
+
+ReplyAction is a type of CommunicateAction.
+
+### Direct Subtypes
+
+No types directly inherit from ReplyAction.
+
+## Properties
+
+ReplyAction defines the following properties in addition to those inherited from CommunicateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ReplyAction {
+  $context?: 'schema.org'
+  $type: 'ReplyAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReplyAction",
+  "name": "Example ReplyAction",
+  "description": "An example of the ReplyAction type",
+  "url": "https://example.com/replyaction",
+  "identifier": "example-replyaction-1"
+}
+```
+
+## Notes
+
+- ReplyAction inherits all properties from CommunicateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

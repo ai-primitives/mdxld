@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ListenAction
+title: ListenAction
+description: The act of consuming audio content.
+properties:
+
+subClasses:
+
+parentClass: ConsumeAction
+---
+
+# ListenAction
+
+The act of consuming audio content.
+
+## Type Hierarchy
+
+ListenAction is a type of ConsumeAction.
+
+### Direct Subtypes
+
+No types directly inherit from ListenAction.
+
+## Properties
+
+ListenAction defines the following properties in addition to those inherited from ConsumeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ListenAction {
+  $context?: 'schema.org'
+  $type: 'ListenAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ListenAction",
+  "name": "Example ListenAction",
+  "description": "An example of the ListenAction type",
+  "url": "https://example.com/listenaction",
+  "identifier": "example-listenaction-1"
+}
+```
+
+## Notes
+
+- ListenAction inherits all properties from ConsumeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

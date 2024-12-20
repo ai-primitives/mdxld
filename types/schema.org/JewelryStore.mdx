@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: JewelryStore
+title: JewelryStore
+description: A jewelry store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# JewelryStore
+
+A jewelry store.
+
+## Type Hierarchy
+
+JewelryStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from JewelryStore.
+
+## Properties
+
+JewelryStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface JewelryStore {
+  $context?: 'schema.org'
+  $type: 'JewelryStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "JewelryStore",
+  "name": "Example JewelryStore",
+  "description": "An example of the JewelryStore type",
+  "url": "https://example.com/jewelrystore",
+  "identifier": "example-jewelrystore-1"
+}
+```
+
+## Notes
+
+- JewelryStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

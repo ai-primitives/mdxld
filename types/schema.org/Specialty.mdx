@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Specialty
+title: Specialty
+description: Any branch of a field in which people typically develop specific expertise, usually after significant study, time, and effort.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# Specialty
+
+Any branch of a field in which people typically develop specific expertise, usually after significant study, time, and effort.
+
+## Type Hierarchy
+
+Specialty is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from Specialty.
+
+## Properties
+
+Specialty defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface Specialty {
+  $context?: 'schema.org'
+  $type: 'Specialty'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Specialty",
+  "name": "Example Specialty",
+  "description": "An example of the Specialty type",
+  "url": "https://example.com/specialty",
+  "identifier": "example-specialty-1"
+}
+```
+
+## Notes
+
+- Specialty inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

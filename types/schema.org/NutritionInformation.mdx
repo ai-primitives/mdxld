@@ -1,0 +1,92 @@
+---
+$context: schema.org
+$type: NutritionInformation
+title: NutritionInformation
+description: Nutritional information about the recipe.
+properties:
+  - calories
+  - carbohydrateContent
+  - cholesterolContent
+  - fatContent
+  - fiberContent
+  - proteinContent
+  - saturatedFatContent
+  - servingSize
+  - sodiumContent
+  - sugarContent
+  - transFatContent
+  - unsaturatedFatContent
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# NutritionInformation
+
+Nutritional information about the recipe.
+
+## Type Hierarchy
+
+NutritionInformation is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from NutritionInformation.
+
+## Properties
+
+NutritionInformation defines the following properties in addition to those inherited from StructuredValue:
+
+- calories: The number of calories.
+- carbohydrateContent: The number of grams of carbohydrates.
+- cholesterolContent: The number of milligrams of cholesterol.
+- fatContent: The number of grams of fat.
+- fiberContent: The number of grams of fiber.
+- proteinContent: The number of grams of protein.
+- saturatedFatContent: The number of grams of saturated fat.
+- servingSize: The serving size, in terms of the number of volume or mass.
+- sodiumContent: The number of milligrams of sodium.
+- sugarContent: The number of grams of sugar.
+- transFatContent: The number of grams of trans fat.
+- unsaturatedFatContent: The number of grams of unsaturated fat.
+
+## Usage Example
+
+```typescript
+interface NutritionInformation {
+  $context?: 'schema.org'
+  $type: 'NutritionInformation'
+  calories?: Energy
+  carbohydrateContent?: Mass
+  cholesterolContent?: Mass
+  fatContent?: Mass
+  fiberContent?: Mass
+  proteinContent?: Mass
+  saturatedFatContent?: Mass
+  servingSize?: string
+  sodiumContent?: Mass
+  sugarContent?: Mass
+  transFatContent?: Mass
+  unsaturatedFatContent?: Mass
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "NutritionInformation",
+  "name": "Example NutritionInformation",
+  "description": "An example of the NutritionInformation type",
+  "url": "https://example.com/nutritioninformation",
+  "identifier": "example-nutritioninformation-1"
+}
+```
+
+## Notes
+
+- NutritionInformation inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AmusementPark
+title: AmusementPark
+description: An amusement park.
+properties:
+
+subClasses:
+
+parentClass: EntertainmentBusiness
+---
+
+# AmusementPark
+
+An amusement park.
+
+## Type Hierarchy
+
+AmusementPark is a type of EntertainmentBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from AmusementPark.
+
+## Properties
+
+AmusementPark defines the following properties in addition to those inherited from EntertainmentBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface AmusementPark {
+  $context?: 'schema.org'
+  $type: 'AmusementPark'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AmusementPark",
+  "name": "Example AmusementPark",
+  "description": "An example of the AmusementPark type",
+  "url": "https://example.com/amusementpark",
+  "identifier": "example-amusementpark-1"
+}
+```
+
+## Notes
+
+- AmusementPark inherits all properties from EntertainmentBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

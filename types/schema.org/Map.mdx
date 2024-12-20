@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Map
+title: Map
+description: A map.
+properties:
+  - mapType
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# Map
+
+A map.
+
+## Type Hierarchy
+
+Map is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from Map.
+
+## Properties
+
+Map defines the following properties in addition to those inherited from CreativeWork:
+
+- mapType: Indicates the kind of Map, from the MapCategoryType Enumeration.
+
+## Usage Example
+
+```typescript
+interface Map {
+  $context?: 'schema.org'
+  $type: 'Map'
+  mapType?: MapCategoryType
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Map",
+  "name": "Example Map",
+  "description": "An example of the Map type",
+  "url": "https://example.com/map",
+  "identifier": "example-map-1"
+}
+```
+
+## Notes
+
+- Map inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

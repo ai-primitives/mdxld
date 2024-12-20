@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MonetaryAmount
+title: MonetaryAmount
+description: A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc.
+properties:
+
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# MonetaryAmount
+
+A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc.
+
+## Type Hierarchy
+
+MonetaryAmount is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from MonetaryAmount.
+
+## Properties
+
+MonetaryAmount defines the following properties in addition to those inherited from StructuredValue:
+
+
+
+## Usage Example
+
+```typescript
+interface MonetaryAmount {
+  $context?: 'schema.org'
+  $type: 'MonetaryAmount'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MonetaryAmount",
+  "name": "Example MonetaryAmount",
+  "description": "An example of the MonetaryAmount type",
+  "url": "https://example.com/monetaryamount",
+  "identifier": "example-monetaryamount-1"
+}
+```
+
+## Notes
+
+- MonetaryAmount inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

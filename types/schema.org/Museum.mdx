@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Museum
+title: Museum
+description: A museum.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# Museum
+
+A museum.
+
+## Type Hierarchy
+
+Museum is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Museum.
+
+## Properties
+
+Museum defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface Museum {
+  $context?: 'schema.org'
+  $type: 'Museum'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Museum",
+  "name": "Example Museum",
+  "description": "An example of the Museum type",
+  "url": "https://example.com/museum",
+  "identifier": "example-museum-1"
+}
+```
+
+## Notes
+
+- Museum inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

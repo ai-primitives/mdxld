@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PoliticalParty
+title: PoliticalParty
+description: Organization: Political Party.
+properties:
+
+subClasses:
+
+parentClass: Organization
+---
+
+# PoliticalParty
+
+Organization: Political Party.
+
+## Type Hierarchy
+
+PoliticalParty is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from PoliticalParty.
+
+## Properties
+
+PoliticalParty defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface PoliticalParty {
+  $context?: 'schema.org'
+  $type: 'PoliticalParty'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PoliticalParty",
+  "name": "Example PoliticalParty",
+  "description": "An example of the PoliticalParty type",
+  "url": "https://example.com/politicalparty",
+  "identifier": "example-politicalparty-1"
+}
+```
+
+## Notes
+
+- PoliticalParty inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

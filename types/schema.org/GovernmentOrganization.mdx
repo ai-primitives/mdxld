@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GovernmentOrganization
+title: GovernmentOrganization
+description: A governmental organization or agency.
+properties:
+
+subClasses:
+
+parentClass: Organization
+---
+
+# GovernmentOrganization
+
+A governmental organization or agency.
+
+## Type Hierarchy
+
+GovernmentOrganization is a type of Organization.
+
+### Direct Subtypes
+
+No types directly inherit from GovernmentOrganization.
+
+## Properties
+
+GovernmentOrganization defines the following properties in addition to those inherited from Organization:
+
+
+
+## Usage Example
+
+```typescript
+interface GovernmentOrganization {
+  $context?: 'schema.org'
+  $type: 'GovernmentOrganization'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GovernmentOrganization",
+  "name": "Example GovernmentOrganization",
+  "description": "An example of the GovernmentOrganization type",
+  "url": "https://example.com/governmentorganization",
+  "identifier": "example-governmentorganization-1"
+}
+```
+
+## Notes
+
+- GovernmentOrganization inherits all properties from Organization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

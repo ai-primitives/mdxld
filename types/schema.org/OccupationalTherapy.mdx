@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: OccupationalTherapy
+title: OccupationalTherapy
+description: A treatment of people with physical, emotional, or social problems, using purposeful activity to help them overcome or learn to deal with their problems.
+properties:
+
+subClasses:
+
+parentClass: MedicalTherapy
+---
+
+# OccupationalTherapy
+
+A treatment of people with physical, emotional, or social problems, using purposeful activity to help them overcome or learn to deal with their problems.
+
+## Type Hierarchy
+
+OccupationalTherapy is a type of MedicalTherapy.
+
+### Direct Subtypes
+
+No types directly inherit from OccupationalTherapy.
+
+## Properties
+
+OccupationalTherapy defines the following properties in addition to those inherited from MedicalTherapy:
+
+
+
+## Usage Example
+
+```typescript
+interface OccupationalTherapy {
+  $context?: 'schema.org'
+  $type: 'OccupationalTherapy'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OccupationalTherapy",
+  "name": "Example OccupationalTherapy",
+  "description": "An example of the OccupationalTherapy type",
+  "url": "https://example.com/occupationaltherapy",
+  "identifier": "example-occupationaltherapy-1"
+}
+```
+
+## Notes
+
+- OccupationalTherapy inherits all properties from MedicalTherapy
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Episode
+title: Episode
+description: A media episode (e.g. TV, radio, video game) which can be part of a series or season.
+properties:
+  - episodeNumber
+subClasses:
+  - PodcastEpisode
+  - RadioEpisode
+  - TVEpisode
+parentClass: CreativeWork
+---
+
+# Episode
+
+A media episode (e.g. TV, radio, video game) which can be part of a series or season.
+
+## Type Hierarchy
+
+Episode is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from Episode:
+
+- PodcastEpisode: A single episode of a podcast series.
+- RadioEpisode: A radio episode which can be part of a series or season.
+- TVEpisode: A TV episode which can be part of a series or season.
+
+## Properties
+
+Episode defines the following properties in addition to those inherited from CreativeWork:
+
+- episodeNumber: Position of the episode within an ordered group of episodes.
+
+## Usage Example
+
+```typescript
+interface Episode {
+  $context?: 'schema.org'
+  $type: 'Episode'
+  episodeNumber?: number | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Episode",
+  "name": "Example Episode",
+  "description": "An example of the Episode type",
+  "url": "https://example.com/episode",
+  "identifier": "example-episode-1"
+}
+```
+
+## Notes
+
+- Episode inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

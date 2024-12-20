@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PaymentMethodType
+title: PaymentMethodType
+description: The type of payment method, only for generic payment types, specific forms of payments, like card payment should be expressed using subclasses of PaymentMethod.
+properties:
+
+subClasses:
+
+parentClass: Enumeration
+---
+
+# PaymentMethodType
+
+The type of payment method, only for generic payment types, specific forms of payments, like card payment should be expressed using subclasses of PaymentMethod.
+
+## Type Hierarchy
+
+PaymentMethodType is a type of Enumeration.
+
+### Direct Subtypes
+
+No types directly inherit from PaymentMethodType.
+
+## Properties
+
+PaymentMethodType defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface PaymentMethodType {
+  $context?: 'schema.org'
+  $type: 'PaymentMethodType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PaymentMethodType",
+  "name": "Example PaymentMethodType",
+  "description": "An example of the PaymentMethodType type",
+  "url": "https://example.com/paymentmethodtype",
+  "identifier": "example-paymentmethodtype-1"
+}
+```
+
+## Notes
+
+- PaymentMethodType inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

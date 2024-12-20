@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Motorcycle
+title: Motorcycle
+description: A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.
+properties:
+
+subClasses:
+
+parentClass: Vehicle
+---
+
+# Motorcycle
+
+A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.
+
+## Type Hierarchy
+
+Motorcycle is a type of Vehicle.
+
+### Direct Subtypes
+
+No types directly inherit from Motorcycle.
+
+## Properties
+
+Motorcycle defines the following properties in addition to those inherited from Vehicle:
+
+
+
+## Usage Example
+
+```typescript
+interface Motorcycle {
+  $context?: 'schema.org'
+  $type: 'Motorcycle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Motorcycle",
+  "name": "Example Motorcycle",
+  "description": "An example of the Motorcycle type",
+  "url": "https://example.com/motorcycle",
+  "identifier": "example-motorcycle-1"
+}
+```
+
+## Notes
+
+- Motorcycle inherits all properties from Vehicle
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

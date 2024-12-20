@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TireShop
+title: TireShop
+description: A tire shop.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# TireShop
+
+A tire shop.
+
+## Type Hierarchy
+
+TireShop is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from TireShop.
+
+## Properties
+
+TireShop defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface TireShop {
+  $context?: 'schema.org'
+  $type: 'TireShop'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TireShop",
+  "name": "Example TireShop",
+  "description": "An example of the TireShop type",
+  "url": "https://example.com/tireshop",
+  "identifier": "example-tireshop-1"
+}
+```
+
+## Notes
+
+- TireShop inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

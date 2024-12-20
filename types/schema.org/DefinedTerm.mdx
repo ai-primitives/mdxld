@@ -1,0 +1,64 @@
+---
+$context: schema.org
+$type: DefinedTerm
+title: DefinedTerm
+description: A word, name, acronym, phrase, etc. with a formal definition. Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term.
+properties:
+  - inDefinedTermSet
+  - termCode
+subClasses:
+  - CategoryCode
+parentClass: Intangible
+---
+
+# DefinedTerm
+
+A word, name, acronym, phrase, etc. with a formal definition. Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term.
+
+## Type Hierarchy
+
+DefinedTerm is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from DefinedTerm:
+
+- CategoryCode: A Category Code.
+
+## Properties
+
+DefinedTerm defines the following properties in addition to those inherited from Intangible:
+
+- inDefinedTermSet: A [[DefinedTermSet]] that contains this term.
+- termCode: A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]].
+
+## Usage Example
+
+```typescript
+interface DefinedTerm {
+  $context?: 'schema.org'
+  $type: 'DefinedTerm'
+  inDefinedTermSet?: DefinedTermSet | string
+  termCode?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DefinedTerm",
+  "name": "Example DefinedTerm",
+  "description": "An example of the DefinedTerm type",
+  "url": "https://example.com/definedterm",
+  "identifier": "example-definedterm-1"
+}
+```
+
+## Notes
+
+- DefinedTerm inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

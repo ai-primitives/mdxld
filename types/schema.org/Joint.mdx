@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Joint
+title: Joint
+description: The anatomical location at which two or more bones make contact.
+properties:
+  - biomechnicalClass
+  - functionalClass
+  - structuralClass
+subClasses:
+
+parentClass: AnatomicalStructure
+---
+
+# Joint
+
+The anatomical location at which two or more bones make contact.
+
+## Type Hierarchy
+
+Joint is a type of AnatomicalStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Joint.
+
+## Properties
+
+Joint defines the following properties in addition to those inherited from AnatomicalStructure:
+
+- biomechnicalClass: The biomechanical properties of the bone.
+- functionalClass: The degree of mobility the joint allows.
+- structuralClass: The name given to how bone physically connects to each other.
+
+## Usage Example
+
+```typescript
+interface Joint {
+  $context?: 'schema.org'
+  $type: 'Joint'
+  biomechnicalClass?: string
+  functionalClass?: MedicalEntity | string
+  structuralClass?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Joint",
+  "name": "Example Joint",
+  "description": "An example of the Joint type",
+  "url": "https://example.com/joint",
+  "identifier": "example-joint-1"
+}
+```
+
+## Notes
+
+- Joint inherits all properties from AnatomicalStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

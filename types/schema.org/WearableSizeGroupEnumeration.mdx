@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WearableSizeGroupEnumeration
+title: WearableSizeGroupEnumeration
+description: Enumerates common size groups (also known as "size types") for wearable products.
+properties:
+
+subClasses:
+
+parentClass: SizeGroupEnumeration
+---
+
+# WearableSizeGroupEnumeration
+
+Enumerates common size groups (also known as "size types") for wearable products.
+
+## Type Hierarchy
+
+WearableSizeGroupEnumeration is a type of SizeGroupEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from WearableSizeGroupEnumeration.
+
+## Properties
+
+WearableSizeGroupEnumeration defines the following properties in addition to those inherited from SizeGroupEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface WearableSizeGroupEnumeration {
+  $context?: 'schema.org'
+  $type: 'WearableSizeGroupEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WearableSizeGroupEnumeration",
+  "name": "Example WearableSizeGroupEnumeration",
+  "description": "An example of the WearableSizeGroupEnumeration type",
+  "url": "https://example.com/wearablesizegroupenumeration",
+  "identifier": "example-wearablesizegroupenumeration-1"
+}
+```
+
+## Notes
+
+- WearableSizeGroupEnumeration inherits all properties from SizeGroupEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

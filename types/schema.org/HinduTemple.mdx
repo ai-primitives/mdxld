@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HinduTemple
+title: HinduTemple
+description: A Hindu temple.
+properties:
+
+subClasses:
+
+parentClass: PlaceOfWorship
+---
+
+# HinduTemple
+
+A Hindu temple.
+
+## Type Hierarchy
+
+HinduTemple is a type of PlaceOfWorship.
+
+### Direct Subtypes
+
+No types directly inherit from HinduTemple.
+
+## Properties
+
+HinduTemple defines the following properties in addition to those inherited from PlaceOfWorship:
+
+
+
+## Usage Example
+
+```typescript
+interface HinduTemple {
+  $context?: 'schema.org'
+  $type: 'HinduTemple'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HinduTemple",
+  "name": "Example HinduTemple",
+  "description": "An example of the HinduTemple type",
+  "url": "https://example.com/hindutemple",
+  "identifier": "example-hindutemple-1"
+}
+```
+
+## Notes
+
+- HinduTemple inherits all properties from PlaceOfWorship
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

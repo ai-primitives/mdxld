@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: RsvpAction
+title: RsvpAction
+description: The act of notifying an event organizer as to whether you expect to attend the event.
+properties:
+  - additionalNumberOfGuests
+  - rsvpResponse
+subClasses:
+
+parentClass: InformAction
+---
+
+# RsvpAction
+
+The act of notifying an event organizer as to whether you expect to attend the event.
+
+## Type Hierarchy
+
+RsvpAction is a type of InformAction.
+
+### Direct Subtypes
+
+No types directly inherit from RsvpAction.
+
+## Properties
+
+RsvpAction defines the following properties in addition to those inherited from InformAction:
+
+- additionalNumberOfGuests: If responding yes, the number of guests who will attend in addition to the invitee.
+- rsvpResponse: The response (yes, no, maybe) to the RSVP.
+
+## Usage Example
+
+```typescript
+interface RsvpAction {
+  $context?: 'schema.org'
+  $type: 'RsvpAction'
+  additionalNumberOfGuests?: number
+  rsvpResponse?: RsvpResponseType
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "RsvpAction",
+  "name": "Example RsvpAction",
+  "description": "An example of the RsvpAction type",
+  "url": "https://example.com/rsvpaction",
+  "identifier": "example-rsvpaction-1"
+}
+```
+
+## Notes
+
+- RsvpAction inherits all properties from InformAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

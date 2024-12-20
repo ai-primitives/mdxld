@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: IgnoreAction
+title: IgnoreAction
+description: The act of intentionally disregarding the object. An agent ignores an object.
+properties:
+
+subClasses:
+
+parentClass: AssessAction
+---
+
+# IgnoreAction
+
+The act of intentionally disregarding the object. An agent ignores an object.
+
+## Type Hierarchy
+
+IgnoreAction is a type of AssessAction.
+
+### Direct Subtypes
+
+No types directly inherit from IgnoreAction.
+
+## Properties
+
+IgnoreAction defines the following properties in addition to those inherited from AssessAction:
+
+
+
+## Usage Example
+
+```typescript
+interface IgnoreAction {
+  $context?: 'schema.org'
+  $type: 'IgnoreAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "IgnoreAction",
+  "name": "Example IgnoreAction",
+  "description": "An example of the IgnoreAction type",
+  "url": "https://example.com/ignoreaction",
+  "identifier": "example-ignoreaction-1"
+}
+```
+
+## Notes
+
+- IgnoreAction inherits all properties from AssessAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

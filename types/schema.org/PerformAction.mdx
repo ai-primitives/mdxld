@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PerformAction
+title: PerformAction
+description: The act of participating in performance arts.
+properties:
+  - entertainmentBusiness
+subClasses:
+
+parentClass: PlayAction
+---
+
+# PerformAction
+
+The act of participating in performance arts.
+
+## Type Hierarchy
+
+PerformAction is a type of PlayAction.
+
+### Direct Subtypes
+
+No types directly inherit from PerformAction.
+
+## Properties
+
+PerformAction defines the following properties in addition to those inherited from PlayAction:
+
+- entertainmentBusiness: A sub property of location. The entertainment business where the action occurred.
+
+## Usage Example
+
+```typescript
+interface PerformAction {
+  $context?: 'schema.org'
+  $type: 'PerformAction'
+  entertainmentBusiness?: EntertainmentBusiness
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PerformAction",
+  "name": "Example PerformAction",
+  "description": "An example of the PerformAction type",
+  "url": "https://example.com/performaction",
+  "identifier": "example-performaction-1"
+}
+```
+
+## Notes
+
+- PerformAction inherits all properties from PlayAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

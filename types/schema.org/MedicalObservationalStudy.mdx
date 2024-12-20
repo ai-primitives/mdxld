@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalObservationalStudy
+title: MedicalObservationalStudy
+description: An observational study is a type of medical study that attempts to infer the possible effect of a treatment through observation of a cohort of subjects over a period of time. In an observational study, the assignment of subjects into treatment groups versus control groups is outside the control of the investigator. This is in contrast with controlled studies, such as the randomized controlled trials represented by MedicalTrial, where each subject is randomly assigned to a treatment group or a control group before the start of the treatment.
+properties:
+  - studyDesign
+subClasses:
+
+parentClass: MedicalStudy
+---
+
+# MedicalObservationalStudy
+
+An observational study is a type of medical study that attempts to infer the possible effect of a treatment through observation of a cohort of subjects over a period of time. In an observational study, the assignment of subjects into treatment groups versus control groups is outside the control of the investigator. This is in contrast with controlled studies, such as the randomized controlled trials represented by MedicalTrial, where each subject is randomly assigned to a treatment group or a control group before the start of the treatment.
+
+## Type Hierarchy
+
+MedicalObservationalStudy is a type of MedicalStudy.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalObservationalStudy.
+
+## Properties
+
+MedicalObservationalStudy defines the following properties in addition to those inherited from MedicalStudy:
+
+- studyDesign: Specifics about the observational study design (enumerated).
+
+## Usage Example
+
+```typescript
+interface MedicalObservationalStudy {
+  $context?: 'schema.org'
+  $type: 'MedicalObservationalStudy'
+  studyDesign?: MedicalObservationalStudyDesign
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalObservationalStudy",
+  "name": "Example MedicalObservationalStudy",
+  "description": "An example of the MedicalObservationalStudy type",
+  "url": "https://example.com/medicalobservationalstudy",
+  "identifier": "example-medicalobservationalstudy-1"
+}
+```
+
+## Notes
+
+- MedicalObservationalStudy inherits all properties from MedicalStudy
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

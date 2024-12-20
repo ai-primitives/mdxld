@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: OrderItem
+title: OrderItem
+description: An order item is a line of an order. It includes the quantity and shipping details of a bought offer.
+properties:
+  - orderItemNumber
+  - orderItemStatus
+  - orderQuantity
+subClasses:
+
+parentClass: Intangible
+---
+
+# OrderItem
+
+An order item is a line of an order. It includes the quantity and shipping details of a bought offer.
+
+## Type Hierarchy
+
+OrderItem is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from OrderItem.
+
+## Properties
+
+OrderItem defines the following properties in addition to those inherited from Intangible:
+
+- orderItemNumber: The identifier of the order item.
+- orderItemStatus: The current status of the order item.
+- orderQuantity: The number of the item ordered. If the property is not set, assume the quantity is one.
+
+## Usage Example
+
+```typescript
+interface OrderItem {
+  $context?: 'schema.org'
+  $type: 'OrderItem'
+  orderItemNumber?: string
+  orderItemStatus?: OrderStatus
+  orderQuantity?: QuantitativeValue | number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OrderItem",
+  "name": "Example OrderItem",
+  "description": "An example of the OrderItem type",
+  "url": "https://example.com/orderitem",
+  "identifier": "example-orderitem-1"
+}
+```
+
+## Notes
+
+- OrderItem inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

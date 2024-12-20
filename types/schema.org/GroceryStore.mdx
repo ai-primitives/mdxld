@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GroceryStore
+title: GroceryStore
+description: A grocery store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# GroceryStore
+
+A grocery store.
+
+## Type Hierarchy
+
+GroceryStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from GroceryStore.
+
+## Properties
+
+GroceryStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface GroceryStore {
+  $context?: 'schema.org'
+  $type: 'GroceryStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GroceryStore",
+  "name": "Example GroceryStore",
+  "description": "An example of the GroceryStore type",
+  "url": "https://example.com/grocerystore",
+  "identifier": "example-grocerystore-1"
+}
+```
+
+## Notes
+
+- GroceryStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

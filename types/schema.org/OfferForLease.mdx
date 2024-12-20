@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: OfferForLease
+title: OfferForLease
+description: An [[OfferForLease]] in Schema.org represents an [[Offer]] to lease out something, i.e. an [[Offer]] whose
+  [[businessFunction]] is [lease out](http://purl.org/goodrelations/v1#LeaseOut.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for
+  background on the underlying concepts.
+  
+properties:
+
+subClasses:
+
+parentClass: Offer
+---
+
+# OfferForLease
+
+An [[OfferForLease]] in Schema.org represents an [[Offer]] to lease out something, i.e. an [[Offer]] whose
+  [[businessFunction]] is [lease out](http://purl.org/goodrelations/v1#LeaseOut.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for
+  background on the underlying concepts.
+  
+
+## Type Hierarchy
+
+OfferForLease is a type of Offer.
+
+### Direct Subtypes
+
+No types directly inherit from OfferForLease.
+
+## Properties
+
+OfferForLease defines the following properties in addition to those inherited from Offer:
+
+
+
+## Usage Example
+
+```typescript
+interface OfferForLease {
+  $context?: 'schema.org'
+  $type: 'OfferForLease'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OfferForLease",
+  "name": "Example OfferForLease",
+  "description": "An example of the OfferForLease type",
+  "url": "https://example.com/offerforlease",
+  "identifier": "example-offerforlease-1"
+}
+```
+
+## Notes
+
+- OfferForLease inherits all properties from Offer
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

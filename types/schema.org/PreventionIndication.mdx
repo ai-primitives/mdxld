@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PreventionIndication
+title: PreventionIndication
+description: An indication for preventing an underlying condition, symptom, etc.
+properties:
+
+subClasses:
+
+parentClass: MedicalIndication
+---
+
+# PreventionIndication
+
+An indication for preventing an underlying condition, symptom, etc.
+
+## Type Hierarchy
+
+PreventionIndication is a type of MedicalIndication.
+
+### Direct Subtypes
+
+No types directly inherit from PreventionIndication.
+
+## Properties
+
+PreventionIndication defines the following properties in addition to those inherited from MedicalIndication:
+
+
+
+## Usage Example
+
+```typescript
+interface PreventionIndication {
+  $context?: 'schema.org'
+  $type: 'PreventionIndication'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PreventionIndication",
+  "name": "Example PreventionIndication",
+  "description": "An example of the PreventionIndication type",
+  "url": "https://example.com/preventionindication",
+  "identifier": "example-preventionindication-1"
+}
+```
+
+## Notes
+
+- PreventionIndication inherits all properties from MedicalIndication
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

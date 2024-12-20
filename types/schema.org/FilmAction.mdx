@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: FilmAction
+title: FilmAction
+description: The act of capturing sound and moving images on film, video, or digitally.
+properties:
+
+subClasses:
+
+parentClass: CreateAction
+---
+
+# FilmAction
+
+The act of capturing sound and moving images on film, video, or digitally.
+
+## Type Hierarchy
+
+FilmAction is a type of CreateAction.
+
+### Direct Subtypes
+
+No types directly inherit from FilmAction.
+
+## Properties
+
+FilmAction defines the following properties in addition to those inherited from CreateAction:
+
+
+
+## Usage Example
+
+```typescript
+interface FilmAction {
+  $context?: 'schema.org'
+  $type: 'FilmAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FilmAction",
+  "name": "Example FilmAction",
+  "description": "An example of the FilmAction type",
+  "url": "https://example.com/filmaction",
+  "identifier": "example-filmaction-1"
+}
+```
+
+## Notes
+
+- FilmAction inherits all properties from CreateAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

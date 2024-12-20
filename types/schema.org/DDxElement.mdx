@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DDxElement
+title: DDxElement
+description: An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.
+properties:
+  - distinguishingSign
+subClasses:
+
+parentClass: MedicalIntangible
+---
+
+# DDxElement
+
+An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.
+
+## Type Hierarchy
+
+DDxElement is a type of MedicalIntangible.
+
+### Direct Subtypes
+
+No types directly inherit from DDxElement.
+
+## Properties
+
+DDxElement defines the following properties in addition to those inherited from MedicalIntangible:
+
+- distinguishingSign: One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential diagnosis.
+
+## Usage Example
+
+```typescript
+interface DDxElement {
+  $context?: 'schema.org'
+  $type: 'DDxElement'
+  distinguishingSign?: MedicalSignOrSymptom
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DDxElement",
+  "name": "Example DDxElement",
+  "description": "An example of the DDxElement type",
+  "url": "https://example.com/ddxelement",
+  "identifier": "example-ddxelement-1"
+}
+```
+
+## Notes
+
+- DDxElement inherits all properties from MedicalIntangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

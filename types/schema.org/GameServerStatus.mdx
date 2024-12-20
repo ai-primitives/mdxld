@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: GameServerStatus
+title: GameServerStatus
+description: Status of a game server.
+properties:
+
+subClasses:
+
+parentClass: StatusEnumeration
+---
+
+# GameServerStatus
+
+Status of a game server.
+
+## Type Hierarchy
+
+GameServerStatus is a type of StatusEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from GameServerStatus.
+
+## Properties
+
+GameServerStatus defines the following properties in addition to those inherited from StatusEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface GameServerStatus {
+  $context?: 'schema.org'
+  $type: 'GameServerStatus'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GameServerStatus",
+  "name": "Example GameServerStatus",
+  "description": "An example of the GameServerStatus type",
+  "url": "https://example.com/gameserverstatus",
+  "identifier": "example-gameserverstatus-1"
+}
+```
+
+## Notes
+
+- GameServerStatus inherits all properties from StatusEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

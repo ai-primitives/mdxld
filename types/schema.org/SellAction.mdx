@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SellAction
+title: SellAction
+description: The act of taking money from a buyer in exchange for goods or services rendered. An agent sells an object, product, or service to a buyer for a price. Reciprocal of BuyAction.
+properties:
+  - buyer
+subClasses:
+
+parentClass: TradeAction
+---
+
+# SellAction
+
+The act of taking money from a buyer in exchange for goods or services rendered. An agent sells an object, product, or service to a buyer for a price. Reciprocal of BuyAction.
+
+## Type Hierarchy
+
+SellAction is a type of TradeAction.
+
+### Direct Subtypes
+
+No types directly inherit from SellAction.
+
+## Properties
+
+SellAction defines the following properties in addition to those inherited from TradeAction:
+
+- buyer: A sub property of participant. The participant/person/organization that bought the object.
+
+## Usage Example
+
+```typescript
+interface SellAction {
+  $context?: 'schema.org'
+  $type: 'SellAction'
+  buyer?: Organization | Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SellAction",
+  "name": "Example SellAction",
+  "description": "An example of the SellAction type",
+  "url": "https://example.com/sellaction",
+  "identifier": "example-sellaction-1"
+}
+```
+
+## Notes
+
+- SellAction inherits all properties from TradeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

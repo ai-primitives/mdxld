@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Playground
+title: Playground
+description: A playground.
+properties:
+
+subClasses:
+
+parentClass: CivicStructure
+---
+
+# Playground
+
+A playground.
+
+## Type Hierarchy
+
+Playground is a type of CivicStructure.
+
+### Direct Subtypes
+
+No types directly inherit from Playground.
+
+## Properties
+
+Playground defines the following properties in addition to those inherited from CivicStructure:
+
+
+
+## Usage Example
+
+```typescript
+interface Playground {
+  $context?: 'schema.org'
+  $type: 'Playground'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Playground",
+  "name": "Example Playground",
+  "description": "An example of the Playground type",
+  "url": "https://example.com/playground",
+  "identifier": "example-playground-1"
+}
+```
+
+## Notes
+
+- Playground inherits all properties from CivicStructure
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

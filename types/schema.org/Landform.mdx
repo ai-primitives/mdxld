@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: Landform
+title: Landform
+description: A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins.
+properties:
+
+subClasses:
+  - BodyOfWater
+  - Continent
+  - Mountain
+  - Volcano
+parentClass: Place
+---
+
+# Landform
+
+A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins.
+
+## Type Hierarchy
+
+Landform is a type of Place.
+
+### Direct Subtypes
+
+The following types directly inherit from Landform:
+
+- BodyOfWater: A body of water, such as a sea, ocean, or lake.
+- Continent: One of the continents (for example, Europe or Africa).
+- Mountain: A mountain, like Mount Whitney or Mount Everest.
+- Volcano: A volcano, like Fujisan.
+
+## Properties
+
+Landform defines the following properties in addition to those inherited from Place:
+
+
+
+## Usage Example
+
+```typescript
+interface Landform {
+  $context?: 'schema.org'
+  $type: 'Landform'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Landform",
+  "name": "Example Landform",
+  "description": "An example of the Landform type",
+  "url": "https://example.com/landform",
+  "identifier": "example-landform-1"
+}
+```
+
+## Notes
+
+- Landform inherits all properties from Place
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

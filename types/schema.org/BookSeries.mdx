@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BookSeries
+title: BookSeries
+description: A series of books. Included books can be indicated with the hasPart property.
+properties:
+
+subClasses:
+
+parentClass: CreativeWorkSeries
+---
+
+# BookSeries
+
+A series of books. Included books can be indicated with the hasPart property.
+
+## Type Hierarchy
+
+BookSeries is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+No types directly inherit from BookSeries.
+
+## Properties
+
+BookSeries defines the following properties in addition to those inherited from CreativeWorkSeries:
+
+
+
+## Usage Example
+
+```typescript
+interface BookSeries {
+  $context?: 'schema.org'
+  $type: 'BookSeries'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BookSeries",
+  "name": "Example BookSeries",
+  "description": "An example of the BookSeries type",
+  "url": "https://example.com/bookseries",
+  "identifier": "example-bookseries-1"
+}
+```
+
+## Notes
+
+- BookSeries inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

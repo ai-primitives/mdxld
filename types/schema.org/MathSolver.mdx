@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MathSolver
+title: MathSolver
+description: A math solver which is capable of solving a subset of mathematical problems.
+properties:
+  - mathExpression
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# MathSolver
+
+A math solver which is capable of solving a subset of mathematical problems.
+
+## Type Hierarchy
+
+MathSolver is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from MathSolver.
+
+## Properties
+
+MathSolver defines the following properties in addition to those inherited from CreativeWork:
+
+- mathExpression: A mathematical expression (e.g. 'x^2-3x=0') that may be solved for a specific variable, simplified, or transformed. This can take many formats, e.g. LaTeX, Ascii-Math, or math as you would write with a keyboard.
+
+## Usage Example
+
+```typescript
+interface MathSolver {
+  $context?: 'schema.org'
+  $type: 'MathSolver'
+  mathExpression?: SolveMathAction | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MathSolver",
+  "name": "Example MathSolver",
+  "description": "An example of the MathSolver type",
+  "url": "https://example.com/mathsolver",
+  "identifier": "example-mathsolver-1"
+}
+```
+
+## Notes
+
+- MathSolver inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

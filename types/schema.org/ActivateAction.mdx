@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ActivateAction
+title: ActivateAction
+description: The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight).
+properties:
+
+subClasses:
+
+parentClass: ControlAction
+---
+
+# ActivateAction
+
+The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight).
+
+## Type Hierarchy
+
+ActivateAction is a type of ControlAction.
+
+### Direct Subtypes
+
+No types directly inherit from ActivateAction.
+
+## Properties
+
+ActivateAction defines the following properties in addition to those inherited from ControlAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ActivateAction {
+  $context?: 'schema.org'
+  $type: 'ActivateAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ActivateAction",
+  "name": "Example ActivateAction",
+  "description": "An example of the ActivateAction type",
+  "url": "https://example.com/activateaction",
+  "identifier": "example-activateaction-1"
+}
+```
+
+## Notes
+
+- ActivateAction inherits all properties from ControlAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

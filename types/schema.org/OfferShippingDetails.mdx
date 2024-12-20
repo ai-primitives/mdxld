@@ -1,0 +1,84 @@
+---
+$context: schema.org
+$type: OfferShippingDetails
+title: OfferShippingDetails
+description: OfferShippingDetails represents information about shipping destinations.
+
+Multiple of these entities can be used to represent different shipping rates for different destinations:
+
+One entity for Alaska/Hawaii. A different one for continental US. A different one for all France.
+
+Multiple of these entities can be used to represent different shipping costs and delivery times.
+
+Two entities that are identical but differ in rate and time:
+
+E.g. Cheaper and slower: $5 in 5-7 days
+or Fast and expensive: $15 in 1-2 days.
+properties:
+  - shippingOrigin
+  - shippingSettingsLink
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# OfferShippingDetails
+
+OfferShippingDetails represents information about shipping destinations.
+
+Multiple of these entities can be used to represent different shipping rates for different destinations:
+
+One entity for Alaska/Hawaii. A different one for continental US. A different one for all France.
+
+Multiple of these entities can be used to represent different shipping costs and delivery times.
+
+Two entities that are identical but differ in rate and time:
+
+E.g. Cheaper and slower: $5 in 5-7 days
+or Fast and expensive: $15 in 1-2 days.
+
+## Type Hierarchy
+
+OfferShippingDetails is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from OfferShippingDetails.
+
+## Properties
+
+OfferShippingDetails defines the following properties in addition to those inherited from StructuredValue:
+
+- shippingOrigin: Indicates the origin of a shipment, i.e. where it should be coming from.
+- shippingSettingsLink: Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]] details.
+
+## Usage Example
+
+```typescript
+interface OfferShippingDetails {
+  $context?: 'schema.org'
+  $type: 'OfferShippingDetails'
+  shippingOrigin?: DefinedRegion
+  shippingSettingsLink?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OfferShippingDetails",
+  "name": "Example OfferShippingDetails",
+  "description": "An example of the OfferShippingDetails type",
+  "url": "https://example.com/offershippingdetails",
+  "identifier": "example-offershippingdetails-1"
+}
+```
+
+## Notes
+
+- OfferShippingDetails inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

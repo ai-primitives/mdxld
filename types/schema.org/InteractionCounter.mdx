@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: InteractionCounter
+title: InteractionCounter
+description: A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.
+properties:
+  - interactionService
+  - interactionType
+  - userInteractionCount
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# InteractionCounter
+
+A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.
+
+## Type Hierarchy
+
+InteractionCounter is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from InteractionCounter.
+
+## Properties
+
+InteractionCounter defines the following properties in addition to those inherited from StructuredValue:
+
+- interactionService: The WebSite or SoftwareApplication where the interactions took place.
+- interactionType: The Action representing the type of interaction. For up votes, +1s, etc. use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use the most specific Action.
+- userInteractionCount: The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
+
+## Usage Example
+
+```typescript
+interface InteractionCounter {
+  $context?: 'schema.org'
+  $type: 'InteractionCounter'
+  interactionService?: SoftwareApplication | WebSite
+  interactionType?: Action
+  userInteractionCount?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "InteractionCounter",
+  "name": "Example InteractionCounter",
+  "description": "An example of the InteractionCounter type",
+  "url": "https://example.com/interactioncounter",
+  "identifier": "example-interactioncounter-1"
+}
+```
+
+## Notes
+
+- InteractionCounter inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

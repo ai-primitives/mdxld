@@ -1,0 +1,134 @@
+---
+$context: schema.org
+$type: JobPosting
+title: JobPosting
+description: A listing that describes a job opening in a certain organization.
+properties:
+  - applicantLocationRequirements
+  - applicationContact
+  - benefits
+  - directApply
+  - eligibilityToWorkRequirement
+  - employerOverview
+  - employmentType
+  - employmentUnit
+  - experienceInPlaceOfEducation
+  - hiringOrganization
+  - incentiveCompensation
+  - incentives
+  - industry
+  - jobBenefits
+  - jobImmediateStart
+  - jobLocation
+  - jobLocationType
+  - jobStartDate
+  - physicalRequirement
+  - relevantOccupation
+  - securityClearanceRequirement
+  - sensoryRequirement
+  - specialCommitments
+  - title
+  - totalJobOpenings
+  - workHours
+subClasses:
+
+parentClass: Intangible
+---
+
+# JobPosting
+
+A listing that describes a job opening in a certain organization.
+
+## Type Hierarchy
+
+JobPosting is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from JobPosting.
+
+## Properties
+
+JobPosting defines the following properties in addition to those inherited from Intangible:
+
+- applicantLocationRequirements: The location(s) applicants can apply from. This is usually used for telecommuting jobs where the applicant does not need to be in a physical office. Note: This should not be used for citizenship or work visa requirements.
+- applicationContact: Contact details for further information relevant to this job posting.
+- benefits: Description of benefits associated with the job.
+- directApply: Indicates whether an [[url]] that is associated with a [[JobPosting]] enables direct application for the job, via the posting website. A job posting is considered to have directApply of [[True]] if an application process for the specified job can be directly initiated via the url(s) given (noting that e.g. multiple internet domains might nevertheless be involved at an implementation level). A value of [[False]] is appropriate if there is no clear path to applying directly online for the specified job, navigating directly from the JobPosting url(s) supplied.
+- eligibilityToWorkRequirement: The legal requirements such as citizenship, visa and other documentation required for an applicant to this job.
+- employerOverview: A description of the employer, career opportunities and work environment for this position.
+- employmentType: Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).
+- employmentUnit: Indicates the department, unit and/or facility where the employee reports and/or in which the job is to be performed.
+- experienceInPlaceOfEducation: Indicates whether a [[JobPosting]] will accept experience (as indicated by [[OccupationalExperienceRequirements]]) in place of its formal educational qualifications (as indicated by [[educationRequirements]]). If true, indicates that satisfying one of these requirements is sufficient.
+- hiringOrganization: Organization or Person offering the job position.
+- incentiveCompensation: Description of bonus and commission compensation aspects of the job.
+- incentives: Description of bonus and commission compensation aspects of the job.
+- industry: The industry associated with the job position.
+- jobBenefits: Description of benefits associated with the job.
+- jobImmediateStart: An indicator as to whether a position is available for an immediate start.
+- jobLocation: A (typically single) geographic location associated with the job position.
+- jobLocationType: A description of the job location (e.g. TELECOMMUTE for telecommute jobs).
+- jobStartDate: The date on which a successful applicant for this job would be expected to start work. Choose a specific date in the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.
+- physicalRequirement: A description of the types of physical activity associated with the job. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.
+- relevantOccupation: The Occupation for the JobPosting.
+- securityClearanceRequirement: A description of any security clearance requirements of the job.
+- sensoryRequirement: A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.
+- specialCommitments: Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.
+- title: The title of the job.
+- totalJobOpenings: The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions is unclear or not known.
+- workHours: The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).
+
+## Usage Example
+
+```typescript
+interface JobPosting {
+  $context?: 'schema.org'
+  $type: 'JobPosting'
+  applicantLocationRequirements?: AdministrativeArea
+  applicationContact?: ContactPoint
+  benefits?: string
+  directApply?: boolean
+  eligibilityToWorkRequirement?: string
+  employerOverview?: string
+  employmentType?: string
+  employmentUnit?: Organization
+  experienceInPlaceOfEducation?: boolean
+  hiringOrganization?: Organization | Person
+  incentiveCompensation?: string
+  incentives?: string
+  industry?: DefinedTerm | string
+  jobBenefits?: string
+  jobImmediateStart?: boolean
+  jobLocation?: Place
+  jobLocationType?: string
+  jobStartDate?: string
+  physicalRequirement?: DefinedTerm | string
+  relevantOccupation?: Occupation
+  securityClearanceRequirement?: string
+  sensoryRequirement?: DefinedTerm | string
+  specialCommitments?: string
+  title?: string
+  totalJobOpenings?: number
+  workHours?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "JobPosting",
+  "name": "Example JobPosting",
+  "description": "An example of the JobPosting type",
+  "url": "https://example.com/jobposting",
+  "identifier": "example-jobposting-1"
+}
+```
+
+## Notes
+
+- JobPosting inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,86 @@
+---
+$context: schema.org
+$type: LodgingBusiness
+title: LodgingBusiness
+description: A lodging business, such as a motel, hotel, or inn.
+properties:
+
+subClasses:
+  - BedAndBreakfast
+  - Hostel
+  - Hotel
+  - Motel
+  - Resort
+  - VacationRental
+parentClass: LocalBusiness
+---
+
+# LodgingBusiness
+
+A lodging business, such as a motel, hotel, or inn.
+
+## Type Hierarchy
+
+LodgingBusiness is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from LodgingBusiness:
+
+- BedAndBreakfast: Bed and breakfast.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+- Hostel: A hostel - cheap accommodation, often in shared dormitories.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+- Hotel: A hotel is an establishment that provides lodging paid on a short-term basis (source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+- Motel: A motel.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+- Resort: A resort is a place used for relaxation or recreation, attracting visitors for holidays or vacations. Resorts are places, towns or sometimes commercial establishments operated by a single company (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Resort">http://en.wikipedia.org/wiki/Resort</a>).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+    
+- VacationRental: A kind of lodging business that focuses on renting single properties for limited time.
+
+## Properties
+
+LodgingBusiness defines the following properties in addition to those inherited from LocalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface LodgingBusiness {
+  $context?: 'schema.org'
+  $type: 'LodgingBusiness'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LodgingBusiness",
+  "name": "Example LodgingBusiness",
+  "description": "An example of the LodgingBusiness type",
+  "url": "https://example.com/lodgingbusiness",
+  "identifier": "example-lodgingbusiness-1"
+}
+```
+
+## Notes
+
+- LodgingBusiness inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

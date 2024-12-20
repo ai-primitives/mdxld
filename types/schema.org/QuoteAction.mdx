@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: QuoteAction
+title: QuoteAction
+description: An agent quotes/estimates/appraises an object/product/service with a price at a location/store.
+properties:
+
+subClasses:
+
+parentClass: TradeAction
+---
+
+# QuoteAction
+
+An agent quotes/estimates/appraises an object/product/service with a price at a location/store.
+
+## Type Hierarchy
+
+QuoteAction is a type of TradeAction.
+
+### Direct Subtypes
+
+No types directly inherit from QuoteAction.
+
+## Properties
+
+QuoteAction defines the following properties in addition to those inherited from TradeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface QuoteAction {
+  $context?: 'schema.org'
+  $type: 'QuoteAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "QuoteAction",
+  "name": "Example QuoteAction",
+  "description": "An example of the QuoteAction type",
+  "url": "https://example.com/quoteaction",
+  "identifier": "example-quoteaction-1"
+}
+```
+
+## Notes
+
+- QuoteAction inherits all properties from TradeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

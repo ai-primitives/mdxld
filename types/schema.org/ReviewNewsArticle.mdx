@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ReviewNewsArticle
+title: ReviewNewsArticle
+description: A [[NewsArticle]] and [[CriticReview]] providing a professional critic's assessment of a service, product, performance, or artistic or literary work.
+properties:
+
+subClasses:
+
+
+---
+
+# ReviewNewsArticle
+
+A [[NewsArticle]] and [[CriticReview]] providing a professional critic's assessment of a service, product, performance, or artistic or literary work.
+
+## Type Hierarchy
+
+ReviewNewsArticle is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from ReviewNewsArticle.
+
+## Properties
+
+ReviewNewsArticle defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface ReviewNewsArticle {
+  $context?: 'schema.org'
+  $type: 'ReviewNewsArticle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReviewNewsArticle",
+  "name": "Example ReviewNewsArticle",
+  "description": "An example of the ReviewNewsArticle type",
+  "url": "https://example.com/reviewnewsarticle",
+  "identifier": "example-reviewnewsarticle-1"
+}
+```
+
+## Notes
+
+- ReviewNewsArticle inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

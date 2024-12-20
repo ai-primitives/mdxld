@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: CreditCard
+title: CreditCard
+description: A card payment method of a particular brand or name.  Used to mark up a particular payment method and/or the financial product/service that supplies the card account.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#AmericanExpress\n* http://purl.org/goodrelations/v1#DinersClub\n* http://purl.org/goodrelations/v1#Discover\n* http://purl.org/goodrelations/v1#JCB\n* http://purl.org/goodrelations/v1#MasterCard\n* http://purl.org/goodrelations/v1#VISA
+       
+properties:
+
+subClasses:
+
+
+---
+
+# CreditCard
+
+A card payment method of a particular brand or name.  Used to mark up a particular payment method and/or the financial product/service that supplies the card account.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#AmericanExpress\n* http://purl.org/goodrelations/v1#DinersClub\n* http://purl.org/goodrelations/v1#Discover\n* http://purl.org/goodrelations/v1#JCB\n* http://purl.org/goodrelations/v1#MasterCard\n* http://purl.org/goodrelations/v1#VISA
+       
+
+## Type Hierarchy
+
+CreditCard is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from CreditCard.
+
+## Properties
+
+CreditCard defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface CreditCard {
+  $context?: 'schema.org'
+  $type: 'CreditCard'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CreditCard",
+  "name": "Example CreditCard",
+  "description": "An example of the CreditCard type",
+  "url": "https://example.com/creditcard",
+  "identifier": "example-creditcard-1"
+}
+```
+
+## Notes
+
+- CreditCard inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: BefriendAction
+title: BefriendAction
+description: The act of forming a personal connection with someone (object) mutually/bidirectionally/symmetrically.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.
+properties:
+
+subClasses:
+
+parentClass: InteractAction
+---
+
+# BefriendAction
+
+The act of forming a personal connection with someone (object) mutually/bidirectionally/symmetrically.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.
+
+## Type Hierarchy
+
+BefriendAction is a type of InteractAction.
+
+### Direct Subtypes
+
+No types directly inherit from BefriendAction.
+
+## Properties
+
+BefriendAction defines the following properties in addition to those inherited from InteractAction:
+
+
+
+## Usage Example
+
+```typescript
+interface BefriendAction {
+  $context?: 'schema.org'
+  $type: 'BefriendAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BefriendAction",
+  "name": "Example BefriendAction",
+  "description": "An example of the BefriendAction type",
+  "url": "https://example.com/befriendaction",
+  "identifier": "example-befriendaction-1"
+}
+```
+
+## Notes
+
+- BefriendAction inherits all properties from InteractAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

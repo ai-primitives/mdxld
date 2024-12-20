@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Quiz
+title: Quiz
+description: Quiz: A test of knowledge, skills and abilities.
+properties:
+
+subClasses:
+
+parentClass: LearningResource
+---
+
+# Quiz
+
+Quiz: A test of knowledge, skills and abilities.
+
+## Type Hierarchy
+
+Quiz is a type of LearningResource.
+
+### Direct Subtypes
+
+No types directly inherit from Quiz.
+
+## Properties
+
+Quiz defines the following properties in addition to those inherited from LearningResource:
+
+
+
+## Usage Example
+
+```typescript
+interface Quiz {
+  $context?: 'schema.org'
+  $type: 'Quiz'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Quiz",
+  "name": "Example Quiz",
+  "description": "An example of the Quiz type",
+  "url": "https://example.com/quiz",
+  "identifier": "example-quiz-1"
+}
+```
+
+## Notes
+
+- Quiz inherits all properties from LearningResource
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

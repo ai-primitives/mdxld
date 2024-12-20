@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MediaReviewItem
+title: MediaReviewItem
+description: Represents an item or group of closely related items treated as a unit for the sake of evaluation in a [[MediaReview]]. Authorship etc. apply to the items rather than to the curation/grouping or reviewing party.
+properties:
+  - mediaItemAppearance
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# MediaReviewItem
+
+Represents an item or group of closely related items treated as a unit for the sake of evaluation in a [[MediaReview]]. Authorship etc. apply to the items rather than to the curation/grouping or reviewing party.
+
+## Type Hierarchy
+
+MediaReviewItem is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from MediaReviewItem.
+
+## Properties
+
+MediaReviewItem defines the following properties in addition to those inherited from CreativeWork:
+
+- mediaItemAppearance: In the context of a [[MediaReview]], indicates specific media item(s) that are grouped using a [[MediaReviewItem]].
+
+## Usage Example
+
+```typescript
+interface MediaReviewItem {
+  $context?: 'schema.org'
+  $type: 'MediaReviewItem'
+  mediaItemAppearance?: MediaObject
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MediaReviewItem",
+  "name": "Example MediaReviewItem",
+  "description": "An example of the MediaReviewItem type",
+  "url": "https://example.com/mediareviewitem",
+  "identifier": "example-mediareviewitem-1"
+}
+```
+
+## Notes
+
+- MediaReviewItem inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

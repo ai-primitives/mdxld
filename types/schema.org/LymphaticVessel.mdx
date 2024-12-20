@@ -1,0 +1,62 @@
+---
+$context: schema.org
+$type: LymphaticVessel
+title: LymphaticVessel
+description: A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.
+properties:
+  - originatesFrom
+  - runsTo
+subClasses:
+
+parentClass: Vessel
+---
+
+# LymphaticVessel
+
+A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.
+
+## Type Hierarchy
+
+LymphaticVessel is a type of Vessel.
+
+### Direct Subtypes
+
+No types directly inherit from LymphaticVessel.
+
+## Properties
+
+LymphaticVessel defines the following properties in addition to those inherited from Vessel:
+
+- originatesFrom: The vasculature the lymphatic structure originates, or afferents, from.
+- runsTo: The vasculature the lymphatic structure runs, or efferents, to.
+
+## Usage Example
+
+```typescript
+interface LymphaticVessel {
+  $context?: 'schema.org'
+  $type: 'LymphaticVessel'
+  originatesFrom?: Vessel
+  runsTo?: Vessel
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LymphaticVessel",
+  "name": "Example LymphaticVessel",
+  "description": "An example of the LymphaticVessel type",
+  "url": "https://example.com/lymphaticvessel",
+  "identifier": "example-lymphaticvessel-1"
+}
+```
+
+## Notes
+
+- LymphaticVessel inherits all properties from Vessel
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: UserComments
+title: UserComments
+description: UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+properties:
+  - commentText
+  - commentTime
+  - discusses
+  - replyToUrl
+subClasses:
+
+parentClass: UserInteraction
+---
+
+# UserComments
+
+UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
+
+## Type Hierarchy
+
+UserComments is a type of UserInteraction.
+
+### Direct Subtypes
+
+No types directly inherit from UserComments.
+
+## Properties
+
+UserComments defines the following properties in addition to those inherited from UserInteraction:
+
+- commentText: The text of the UserComment.
+- commentTime: The time at which the UserComment was made.
+- discusses: Specifies the CreativeWork associated with the UserComment.
+- replyToUrl: The URL at which a reply may be posted to the specified UserComment.
+
+## Usage Example
+
+```typescript
+interface UserComments {
+  $context?: 'schema.org'
+  $type: 'UserComments'
+  commentText?: string
+  commentTime?: string
+  discusses?: CreativeWork
+  replyToUrl?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserComments",
+  "name": "Example UserComments",
+  "description": "An example of the UserComments type",
+  "url": "https://example.com/usercomments",
+  "identifier": "example-usercomments-1"
+}
+```
+
+## Notes
+
+- UserComments inherits all properties from UserInteraction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

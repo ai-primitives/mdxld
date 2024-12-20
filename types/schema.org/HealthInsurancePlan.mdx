@@ -1,0 +1,77 @@
+---
+$context: schema.org
+$type: HealthInsurancePlan
+title: HealthInsurancePlan
+description: A US-style health insurance plan, including PPOs, EPOs, and HMOs.
+properties:
+  - benefitsSummaryUrl
+  - healthPlanDrugOption
+  - healthPlanId
+  - healthPlanMarketingUrl
+  - includesHealthPlanFormulary
+  - includesHealthPlanNetwork
+  - usesHealthPlanIdStandard
+subClasses:
+
+parentClass: Intangible
+---
+
+# HealthInsurancePlan
+
+A US-style health insurance plan, including PPOs, EPOs, and HMOs.
+
+## Type Hierarchy
+
+HealthInsurancePlan is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from HealthInsurancePlan.
+
+## Properties
+
+HealthInsurancePlan defines the following properties in addition to those inherited from Intangible:
+
+- benefitsSummaryUrl: The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation.
+- healthPlanDrugOption: TODO.
+- healthPlanId: The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)
+- healthPlanMarketingUrl: The URL that goes directly to the plan brochure for the specific standard plan or plan variation.
+- includesHealthPlanFormulary: Formularies covered by this plan.
+- includesHealthPlanNetwork: Networks covered by this plan.
+- usesHealthPlanIdStandard: The standard for interpreting the Plan ID. The preferred is "HIOS". See the Centers for Medicare & Medicaid Services for more details.
+
+## Usage Example
+
+```typescript
+interface HealthInsurancePlan {
+  $context?: 'schema.org'
+  $type: 'HealthInsurancePlan'
+  benefitsSummaryUrl?: string
+  healthPlanDrugOption?: string
+  healthPlanId?: string
+  healthPlanMarketingUrl?: string
+  includesHealthPlanFormulary?: HealthPlanFormulary
+  includesHealthPlanNetwork?: HealthPlanNetwork
+  usesHealthPlanIdStandard?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HealthInsurancePlan",
+  "name": "Example HealthInsurancePlan",
+  "description": "An example of the HealthInsurancePlan type",
+  "url": "https://example.com/healthinsuranceplan",
+  "identifier": "example-healthinsuranceplan-1"
+}
+```
+
+## Notes
+
+- HealthInsurancePlan inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

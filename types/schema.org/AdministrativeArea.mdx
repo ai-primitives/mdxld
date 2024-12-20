@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: AdministrativeArea
+title: AdministrativeArea
+description: A geographical region, typically under the jurisdiction of a particular government.
+properties:
+
+subClasses:
+  - City
+  - Country
+  - SchoolDistrict
+  - State
+parentClass: Place
+---
+
+# AdministrativeArea
+
+A geographical region, typically under the jurisdiction of a particular government.
+
+## Type Hierarchy
+
+AdministrativeArea is a type of Place.
+
+### Direct Subtypes
+
+The following types directly inherit from AdministrativeArea:
+
+- City: A city or town.
+- Country: A country.
+- SchoolDistrict: A School District is an administrative area for the administration of schools.
+- State: A state or province of a country.
+
+## Properties
+
+AdministrativeArea defines the following properties in addition to those inherited from Place:
+
+
+
+## Usage Example
+
+```typescript
+interface AdministrativeArea {
+  $context?: 'schema.org'
+  $type: 'AdministrativeArea'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AdministrativeArea",
+  "name": "Example AdministrativeArea",
+  "description": "An example of the AdministrativeArea type",
+  "url": "https://example.com/administrativearea",
+  "identifier": "example-administrativearea-1"
+}
+```
+
+## Notes
+
+- AdministrativeArea inherits all properties from Place
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

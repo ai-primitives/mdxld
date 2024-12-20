@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: AutoRepair
+title: AutoRepair
+description: Car repair business.
+properties:
+
+subClasses:
+
+parentClass: AutomotiveBusiness
+---
+
+# AutoRepair
+
+Car repair business.
+
+## Type Hierarchy
+
+AutoRepair is a type of AutomotiveBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from AutoRepair.
+
+## Properties
+
+AutoRepair defines the following properties in addition to those inherited from AutomotiveBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface AutoRepair {
+  $context?: 'schema.org'
+  $type: 'AutoRepair'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AutoRepair",
+  "name": "Example AutoRepair",
+  "description": "An example of the AutoRepair type",
+  "url": "https://example.com/autorepair",
+  "identifier": "example-autorepair-1"
+}
+```
+
+## Notes
+
+- AutoRepair inherits all properties from AutomotiveBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

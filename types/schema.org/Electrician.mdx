@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Electrician
+title: Electrician
+description: An electrician.
+properties:
+
+subClasses:
+
+parentClass: HomeAndConstructionBusiness
+---
+
+# Electrician
+
+An electrician.
+
+## Type Hierarchy
+
+Electrician is a type of HomeAndConstructionBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from Electrician.
+
+## Properties
+
+Electrician defines the following properties in addition to those inherited from HomeAndConstructionBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface Electrician {
+  $context?: 'schema.org'
+  $type: 'Electrician'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Electrician",
+  "name": "Example Electrician",
+  "description": "An example of the Electrician type",
+  "url": "https://example.com/electrician",
+  "identifier": "example-electrician-1"
+}
+```
+
+## Notes
+
+- Electrician inherits all properties from HomeAndConstructionBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

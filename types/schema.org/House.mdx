@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: House
+title: House
+description: A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/House">http://en.wikipedia.org/wiki/House</a>).
+properties:
+
+subClasses:
+  - SingleFamilyResidence
+parentClass: Accommodation
+---
+
+# House
+
+A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/House">http://en.wikipedia.org/wiki/House</a>).
+
+## Type Hierarchy
+
+House is a type of Accommodation.
+
+### Direct Subtypes
+
+The following types directly inherit from House:
+
+- SingleFamilyResidence: Residence type: Single-family home.
+
+## Properties
+
+House defines the following properties in addition to those inherited from Accommodation:
+
+
+
+## Usage Example
+
+```typescript
+interface House {
+  $context?: 'schema.org'
+  $type: 'House'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "House",
+  "name": "Example House",
+  "description": "An example of the House type",
+  "url": "https://example.com/house",
+  "identifier": "example-house-1"
+}
+```
+
+## Notes
+
+- House inherits all properties from Accommodation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: HousePainter
+title: HousePainter
+description: A house painting service.
+properties:
+
+subClasses:
+
+parentClass: HomeAndConstructionBusiness
+---
+
+# HousePainter
+
+A house painting service.
+
+## Type Hierarchy
+
+HousePainter is a type of HomeAndConstructionBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from HousePainter.
+
+## Properties
+
+HousePainter defines the following properties in addition to those inherited from HomeAndConstructionBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface HousePainter {
+  $context?: 'schema.org'
+  $type: 'HousePainter'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HousePainter",
+  "name": "Example HousePainter",
+  "description": "An example of the HousePainter type",
+  "url": "https://example.com/housepainter",
+  "identifier": "example-housepainter-1"
+}
+```
+
+## Notes
+
+- HousePainter inherits all properties from HomeAndConstructionBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

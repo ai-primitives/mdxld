@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Energy
+title: Energy
+description: Properties that take Energy as values are of the form '&lt;Number&gt; &lt;Energy unit of measure&gt;'.
+properties:
+
+subClasses:
+
+parentClass: Quantity
+---
+
+# Energy
+
+Properties that take Energy as values are of the form '&lt;Number&gt; &lt;Energy unit of measure&gt;'.
+
+## Type Hierarchy
+
+Energy is a type of Quantity.
+
+### Direct Subtypes
+
+No types directly inherit from Energy.
+
+## Properties
+
+Energy defines the following properties in addition to those inherited from Quantity:
+
+
+
+## Usage Example
+
+```typescript
+interface Energy {
+  $context?: 'schema.org'
+  $type: 'Energy'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Energy",
+  "name": "Example Energy",
+  "description": "An example of the Energy type",
+  "url": "https://example.com/energy",
+  "identifier": "example-energy-1"
+}
+```
+
+## Notes
+
+- Energy inherits all properties from Quantity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

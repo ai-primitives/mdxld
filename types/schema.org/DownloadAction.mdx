@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DownloadAction
+title: DownloadAction
+description: The act of downloading an object.
+properties:
+
+subClasses:
+
+parentClass: TransferAction
+---
+
+# DownloadAction
+
+The act of downloading an object.
+
+## Type Hierarchy
+
+DownloadAction is a type of TransferAction.
+
+### Direct Subtypes
+
+No types directly inherit from DownloadAction.
+
+## Properties
+
+DownloadAction defines the following properties in addition to those inherited from TransferAction:
+
+
+
+## Usage Example
+
+```typescript
+interface DownloadAction {
+  $context?: 'schema.org'
+  $type: 'DownloadAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DownloadAction",
+  "name": "Example DownloadAction",
+  "description": "An example of the DownloadAction type",
+  "url": "https://example.com/downloadaction",
+  "identifier": "example-downloadaction-1"
+}
+```
+
+## Notes
+
+- DownloadAction inherits all properties from TransferAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

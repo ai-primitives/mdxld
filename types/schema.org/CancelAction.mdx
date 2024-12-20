@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: CancelAction
+title: CancelAction
+description: The act of asserting that a future event/action is no longer going to happen.\n\nRelated actions:\n\n* [[ConfirmAction]]: The antonym of CancelAction.
+properties:
+
+subClasses:
+
+parentClass: PlanAction
+---
+
+# CancelAction
+
+The act of asserting that a future event/action is no longer going to happen.\n\nRelated actions:\n\n* [[ConfirmAction]]: The antonym of CancelAction.
+
+## Type Hierarchy
+
+CancelAction is a type of PlanAction.
+
+### Direct Subtypes
+
+No types directly inherit from CancelAction.
+
+## Properties
+
+CancelAction defines the following properties in addition to those inherited from PlanAction:
+
+
+
+## Usage Example
+
+```typescript
+interface CancelAction {
+  $context?: 'schema.org'
+  $type: 'CancelAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CancelAction",
+  "name": "Example CancelAction",
+  "description": "An example of the CancelAction type",
+  "url": "https://example.com/cancelaction",
+  "identifier": "example-cancelaction-1"
+}
+```
+
+## Notes
+
+- CancelAction inherits all properties from PlanAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

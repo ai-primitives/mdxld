@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ContactPage
+title: ContactPage
+description: Web page type: Contact page.
+properties:
+
+subClasses:
+
+parentClass: WebPage
+---
+
+# ContactPage
+
+Web page type: Contact page.
+
+## Type Hierarchy
+
+ContactPage is a type of WebPage.
+
+### Direct Subtypes
+
+No types directly inherit from ContactPage.
+
+## Properties
+
+ContactPage defines the following properties in addition to those inherited from WebPage:
+
+
+
+## Usage Example
+
+```typescript
+interface ContactPage {
+  $context?: 'schema.org'
+  $type: 'ContactPage'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ContactPage",
+  "name": "Example ContactPage",
+  "description": "An example of the ContactPage type",
+  "url": "https://example.com/contactpage",
+  "identifier": "example-contactpage-1"
+}
+```
+
+## Notes
+
+- ContactPage inherits all properties from WebPage
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

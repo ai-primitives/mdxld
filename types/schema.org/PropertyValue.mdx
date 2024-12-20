@@ -1,0 +1,66 @@
+---
+$context: schema.org
+$type: PropertyValue
+title: PropertyValue
+description: A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.\n\n Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.
+    
+properties:
+  - propertyID
+subClasses:
+  - LocationFeatureSpecification
+parentClass: StructuredValue
+---
+
+# PropertyValue
+
+A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.\n\n Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.
+    
+
+## Type Hierarchy
+
+PropertyValue is a type of StructuredValue.
+
+### Direct Subtypes
+
+The following types directly inherit from PropertyValue:
+
+- LocationFeatureSpecification: Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.
+
+## Properties
+
+PropertyValue defines the following properties in addition to those inherited from StructuredValue:
+
+- propertyID: A commonly used identifier for the characteristic represented by the property, e.g. a manufacturer or a standard code for a property. propertyID can be
+(1) a prefixed string, mainly meant to be used with standards for product properties; (2) a site-specific, non-prefixed string (e.g. the primary key of the property or the vendor-specific ID of the property), or (3)
+a URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry).
+Standards bodies should promote a standard prefix for the identifiers of properties from their standards.
+
+## Usage Example
+
+```typescript
+interface PropertyValue {
+  $context?: 'schema.org'
+  $type: 'PropertyValue'
+  propertyID?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PropertyValue",
+  "name": "Example PropertyValue",
+  "description": "An example of the PropertyValue type",
+  "url": "https://example.com/propertyvalue",
+  "identifier": "example-propertyvalue-1"
+}
+```
+
+## Notes
+
+- PropertyValue inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

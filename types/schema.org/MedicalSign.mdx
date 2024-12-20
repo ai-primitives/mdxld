@@ -1,0 +1,64 @@
+---
+$context: schema.org
+$type: MedicalSign
+title: MedicalSign
+description: Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.
+properties:
+  - identifyingExam
+  - identifyingTest
+subClasses:
+  - VitalSign
+parentClass: MedicalSignOrSymptom
+---
+
+# MedicalSign
+
+Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.
+
+## Type Hierarchy
+
+MedicalSign is a type of MedicalSignOrSymptom.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalSign:
+
+- VitalSign: Vital signs are measures of various physiological functions in order to assess the most basic body functions.
+
+## Properties
+
+MedicalSign defines the following properties in addition to those inherited from MedicalSignOrSymptom:
+
+- identifyingExam: A physical examination that can identify this sign.
+- identifyingTest: A diagnostic test that can identify this sign.
+
+## Usage Example
+
+```typescript
+interface MedicalSign {
+  $context?: 'schema.org'
+  $type: 'MedicalSign'
+  identifyingExam?: PhysicalExam
+  identifyingTest?: MedicalTest
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalSign",
+  "name": "Example MedicalSign",
+  "description": "An example of the MedicalSign type",
+  "url": "https://example.com/medicalsign",
+  "identifier": "example-medicalsign-1"
+}
+```
+
+## Notes
+
+- MedicalSign inherits all properties from MedicalSignOrSymptom
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

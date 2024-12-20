@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: QuantitativeValue
+title: QuantitativeValue
+description:  A point value or interval for product characteristics and other purposes.
+properties:
+
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# QuantitativeValue
+
+ A point value or interval for product characteristics and other purposes.
+
+## Type Hierarchy
+
+QuantitativeValue is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from QuantitativeValue.
+
+## Properties
+
+QuantitativeValue defines the following properties in addition to those inherited from StructuredValue:
+
+
+
+## Usage Example
+
+```typescript
+interface QuantitativeValue {
+  $context?: 'schema.org'
+  $type: 'QuantitativeValue'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "QuantitativeValue",
+  "name": "Example QuantitativeValue",
+  "description": "An example of the QuantitativeValue type",
+  "url": "https://example.com/quantitativevalue",
+  "identifier": "example-quantitativevalue-1"
+}
+```
+
+## Notes
+
+- QuantitativeValue inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

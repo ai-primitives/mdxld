@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TVSeries
+title: TVSeries
+description: CreativeWorkSeries dedicated to TV broadcast and associated online delivery.
+properties:
+
+subClasses:
+
+
+---
+
+# TVSeries
+
+CreativeWorkSeries dedicated to TV broadcast and associated online delivery.
+
+## Type Hierarchy
+
+TVSeries is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from TVSeries.
+
+## Properties
+
+TVSeries defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface TVSeries {
+  $context?: 'schema.org'
+  $type: 'TVSeries'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TVSeries",
+  "name": "Example TVSeries",
+  "description": "An example of the TVSeries type",
+  "url": "https://example.com/tvseries",
+  "identifier": "example-tvseries-1"
+}
+```
+
+## Notes
+
+- TVSeries inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,71 @@
+---
+$context: schema.org
+$type: EducationalOrganization
+title: EducationalOrganization
+description: An educational organization.
+properties:
+
+subClasses:
+  - CollegeOrUniversity
+  - ElementarySchool
+  - HighSchool
+  - MiddleSchool
+  - Preschool
+  - School
+
+---
+
+# EducationalOrganization
+
+An educational organization.
+
+## Type Hierarchy
+
+EducationalOrganization is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+The following types directly inherit from EducationalOrganization:
+
+- CollegeOrUniversity: A college, university, or other third-level educational institution.
+- ElementarySchool: An elementary school.
+- HighSchool: A high school.
+- MiddleSchool: A middle school (typically for children aged around 11-14, although this varies somewhat).
+- Preschool: A preschool.
+- School: A school.
+
+## Properties
+
+EducationalOrganization defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface EducationalOrganization {
+  $context?: 'schema.org'
+  $type: 'EducationalOrganization'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EducationalOrganization",
+  "name": "Example EducationalOrganization",
+  "description": "An example of the EducationalOrganization type",
+  "url": "https://example.com/educationalorganization",
+  "identifier": "example-educationalorganization-1"
+}
+```
+
+## Notes
+
+- EducationalOrganization inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

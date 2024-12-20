@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: ProgramMembership
+title: ProgramMembership
+description: Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.
+properties:
+  - membershipNumber
+  - program
+  - programName
+subClasses:
+
+parentClass: Intangible
+---
+
+# ProgramMembership
+
+Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.
+
+## Type Hierarchy
+
+ProgramMembership is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from ProgramMembership.
+
+## Properties
+
+ProgramMembership defines the following properties in addition to those inherited from Intangible:
+
+- membershipNumber: A unique identifier for the membership.
+- program: The [MemberProgram](https://schema.org/MemberProgram) associated with a [ProgramMembership](https://schema.org/ProgramMembership).
+- programName: The program providing the membership. It is preferable to use [:program](https://schema.org/program) instead.
+
+## Usage Example
+
+```typescript
+interface ProgramMembership {
+  $context?: 'schema.org'
+  $type: 'ProgramMembership'
+  membershipNumber?: string
+  program?: MemberProgram
+  programName?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ProgramMembership",
+  "name": "Example ProgramMembership",
+  "description": "An example of the ProgramMembership type",
+  "url": "https://example.com/programmembership",
+  "identifier": "example-programmembership-1"
+}
+```
+
+## Notes
+
+- ProgramMembership inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

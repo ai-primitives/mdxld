@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MonetaryAmountDistribution
+title: MonetaryAmountDistribution
+description: A statistical distribution of monetary amounts.
+properties:
+
+subClasses:
+
+parentClass: QuantitativeValueDistribution
+---
+
+# MonetaryAmountDistribution
+
+A statistical distribution of monetary amounts.
+
+## Type Hierarchy
+
+MonetaryAmountDistribution is a type of QuantitativeValueDistribution.
+
+### Direct Subtypes
+
+No types directly inherit from MonetaryAmountDistribution.
+
+## Properties
+
+MonetaryAmountDistribution defines the following properties in addition to those inherited from QuantitativeValueDistribution:
+
+
+
+## Usage Example
+
+```typescript
+interface MonetaryAmountDistribution {
+  $context?: 'schema.org'
+  $type: 'MonetaryAmountDistribution'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MonetaryAmountDistribution",
+  "name": "Example MonetaryAmountDistribution",
+  "description": "An example of the MonetaryAmountDistribution type",
+  "url": "https://example.com/monetaryamountdistribution",
+  "identifier": "example-monetaryamountdistribution-1"
+}
+```
+
+## Notes
+
+- MonetaryAmountDistribution inherits all properties from QuantitativeValueDistribution
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

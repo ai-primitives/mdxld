@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: MedicalSignOrSymptom
+title: MedicalSignOrSymptom
+description: Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.
+properties:
+
+subClasses:
+  - MedicalSign
+  - MedicalSymptom
+parentClass: MedicalCondition
+---
+
+# MedicalSignOrSymptom
+
+Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.
+
+## Type Hierarchy
+
+MedicalSignOrSymptom is a type of MedicalCondition.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalSignOrSymptom:
+
+- MedicalSign: Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.
+- MedicalSymptom: Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.
+
+## Properties
+
+MedicalSignOrSymptom defines the following properties in addition to those inherited from MedicalCondition:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalSignOrSymptom {
+  $context?: 'schema.org'
+  $type: 'MedicalSignOrSymptom'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalSignOrSymptom",
+  "name": "Example MedicalSignOrSymptom",
+  "description": "An example of the MedicalSignOrSymptom type",
+  "url": "https://example.com/medicalsignorsymptom",
+  "identifier": "example-medicalsignorsymptom-1"
+}
+```
+
+## Notes
+
+- MedicalSignOrSymptom inherits all properties from MedicalCondition
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

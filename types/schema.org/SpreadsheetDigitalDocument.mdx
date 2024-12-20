@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SpreadsheetDigitalDocument
+title: SpreadsheetDigitalDocument
+description: A spreadsheet file.
+properties:
+
+subClasses:
+
+parentClass: DigitalDocument
+---
+
+# SpreadsheetDigitalDocument
+
+A spreadsheet file.
+
+## Type Hierarchy
+
+SpreadsheetDigitalDocument is a type of DigitalDocument.
+
+### Direct Subtypes
+
+No types directly inherit from SpreadsheetDigitalDocument.
+
+## Properties
+
+SpreadsheetDigitalDocument defines the following properties in addition to those inherited from DigitalDocument:
+
+
+
+## Usage Example
+
+```typescript
+interface SpreadsheetDigitalDocument {
+  $context?: 'schema.org'
+  $type: 'SpreadsheetDigitalDocument'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SpreadsheetDigitalDocument",
+  "name": "Example SpreadsheetDigitalDocument",
+  "description": "An example of the SpreadsheetDigitalDocument type",
+  "url": "https://example.com/spreadsheetdigitaldocument",
+  "identifier": "example-spreadsheetdigitaldocument-1"
+}
+```
+
+## Notes
+
+- SpreadsheetDigitalDocument inherits all properties from DigitalDocument
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

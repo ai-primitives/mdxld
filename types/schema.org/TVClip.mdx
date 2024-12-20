@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: TVClip
+title: TVClip
+description: A short TV program or a segment/part of a TV program.
+properties:
+
+subClasses:
+
+parentClass: Clip
+---
+
+# TVClip
+
+A short TV program or a segment/part of a TV program.
+
+## Type Hierarchy
+
+TVClip is a type of Clip.
+
+### Direct Subtypes
+
+No types directly inherit from TVClip.
+
+## Properties
+
+TVClip defines the following properties in addition to those inherited from Clip:
+
+
+
+## Usage Example
+
+```typescript
+interface TVClip {
+  $context?: 'schema.org'
+  $type: 'TVClip'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TVClip",
+  "name": "Example TVClip",
+  "description": "An example of the TVClip type",
+  "url": "https://example.com/tvclip",
+  "identifier": "example-tvclip-1"
+}
+```
+
+## Notes
+
+- TVClip inherits all properties from Clip
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

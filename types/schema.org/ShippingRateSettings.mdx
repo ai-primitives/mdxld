@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ShippingRateSettings
+title: ShippingRateSettings
+description: A ShippingRateSettings represents re-usable pieces of shipping information. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for [[shippingLabel]].
+properties:
+  - freeShippingThreshold
+subClasses:
+
+parentClass: StructuredValue
+---
+
+# ShippingRateSettings
+
+A ShippingRateSettings represents re-usable pieces of shipping information. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for [[shippingLabel]].
+
+## Type Hierarchy
+
+ShippingRateSettings is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from ShippingRateSettings.
+
+## Properties
+
+ShippingRateSettings defines the following properties in addition to those inherited from StructuredValue:
+
+- freeShippingThreshold: A monetary value above (or at) which the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]] matching this [[ShippingRateSettings]].
+
+## Usage Example
+
+```typescript
+interface ShippingRateSettings {
+  $context?: 'schema.org'
+  $type: 'ShippingRateSettings'
+  freeShippingThreshold?: DeliveryChargeSpecification | MonetaryAmount
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ShippingRateSettings",
+  "name": "Example ShippingRateSettings",
+  "description": "An example of the ShippingRateSettings type",
+  "url": "https://example.com/shippingratesettings",
+  "identifier": "example-shippingratesettings-1"
+}
+```
+
+## Notes
+
+- ShippingRateSettings inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

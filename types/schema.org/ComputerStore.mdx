@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ComputerStore
+title: ComputerStore
+description: A computer store.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# ComputerStore
+
+A computer store.
+
+## Type Hierarchy
+
+ComputerStore is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from ComputerStore.
+
+## Properties
+
+ComputerStore defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface ComputerStore {
+  $context?: 'schema.org'
+  $type: 'ComputerStore'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ComputerStore",
+  "name": "Example ComputerStore",
+  "description": "An example of the ComputerStore type",
+  "url": "https://example.com/computerstore",
+  "identifier": "example-computerstore-1"
+}
+```
+
+## Notes
+
+- ComputerStore inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

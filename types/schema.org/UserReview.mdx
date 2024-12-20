@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: UserReview
+title: UserReview
+description: A review created by an end-user (e.g. consumer, purchaser, attendee etc.), in contrast with [[CriticReview]].
+properties:
+
+subClasses:
+
+parentClass: Review
+---
+
+# UserReview
+
+A review created by an end-user (e.g. consumer, purchaser, attendee etc.), in contrast with [[CriticReview]].
+
+## Type Hierarchy
+
+UserReview is a type of Review.
+
+### Direct Subtypes
+
+No types directly inherit from UserReview.
+
+## Properties
+
+UserReview defines the following properties in addition to those inherited from Review:
+
+
+
+## Usage Example
+
+```typescript
+interface UserReview {
+  $context?: 'schema.org'
+  $type: 'UserReview'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "UserReview",
+  "name": "Example UserReview",
+  "description": "An example of the UserReview type",
+  "url": "https://example.com/userreview",
+  "identifier": "example-userreview-1"
+}
+```
+
+## Notes
+
+- UserReview inherits all properties from Review
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

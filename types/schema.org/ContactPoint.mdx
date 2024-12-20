@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: ContactPoint
+title: ContactPoint
+description: A contact point&#x2014;for example, a Customer Complaints department.
+properties:
+  - contactOption
+  - contactType
+  - productSupported
+subClasses:
+  - PostalAddress
+parentClass: StructuredValue
+---
+
+# ContactPoint
+
+A contact point&#x2014;for example, a Customer Complaints department.
+
+## Type Hierarchy
+
+ContactPoint is a type of StructuredValue.
+
+### Direct Subtypes
+
+The following types directly inherit from ContactPoint:
+
+- PostalAddress: The mailing address.
+
+## Properties
+
+ContactPoint defines the following properties in addition to those inherited from StructuredValue:
+
+- contactOption: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).
+- contactType: A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.
+- productSupported: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
+
+## Usage Example
+
+```typescript
+interface ContactPoint {
+  $context?: 'schema.org'
+  $type: 'ContactPoint'
+  contactOption?: ContactPointOption
+  contactType?: string
+  productSupported?: Product | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ContactPoint",
+  "name": "Example ContactPoint",
+  "description": "An example of the ContactPoint type",
+  "url": "https://example.com/contactpoint",
+  "identifier": "example-contactpoint-1"
+}
+```
+
+## Notes
+
+- ContactPoint inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

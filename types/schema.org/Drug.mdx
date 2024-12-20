@@ -1,0 +1,119 @@
+---
+$context: schema.org
+$type: Drug
+title: Drug
+description: A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.
+properties:
+  - administrationRoute
+  - alcoholWarning
+  - availableStrength
+  - breastfeedingWarning
+  - clincalPharmacology
+  - clinicalPharmacology
+  - dosageForm
+  - drugClass
+  - foodWarning
+  - includedInHealthInsurancePlan
+  - interactingDrug
+  - isAvailableGenerically
+  - labelDetails
+  - overdosage
+  - pregnancyCategory
+  - pregnancyWarning
+  - prescribingInfo
+  - prescriptionStatus
+  - relatedDrug
+  - rxcui
+  - warning
+subClasses:
+
+
+---
+
+# Drug
+
+A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.
+
+## Type Hierarchy
+
+Drug is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from Drug.
+
+## Properties
+
+Drug defines the following properties in addition to those inherited from Thing:
+
+- administrationRoute: A route by which this drug may be administered, e.g. 'oral'.
+- alcoholWarning: Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
+- availableStrength: An available dosage strength for the drug.
+- breastfeedingWarning: Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
+- clincalPharmacology: Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+- clinicalPharmacology: Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+- dosageForm: A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
+- drugClass: The class of drug this belongs to (e.g., statins).
+- foodWarning: Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
+- includedInHealthInsurancePlan: The insurance plans that cover this drug.
+- interactingDrug: Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.
+- isAvailableGenerically: True if the drug is available in a generic form (regardless of name).
+- labelDetails: Link to the drug's label details.
+- overdosage: Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
+- pregnancyCategory: Pregnancy category of this drug.
+- pregnancyWarning: Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
+- prescribingInfo: Link to prescribing information for the drug.
+- prescriptionStatus: Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
+- relatedDrug: Any other drug related to this one, for example commonly-prescribed alternatives.
+- rxcui: The RxCUI drug identifier from RXNORM.
+- warning: Any FDA or other warnings about the drug (text or URL).
+
+## Usage Example
+
+```typescript
+interface Drug {
+  $context?: 'schema.org'
+  $type: 'Drug'
+  administrationRoute?: string
+  alcoholWarning?: string
+  availableStrength?: DrugStrength
+  breastfeedingWarning?: string
+  clincalPharmacology?: string
+  clinicalPharmacology?: string
+  dosageForm?: string
+  drugClass?: DrugClass
+  foodWarning?: string
+  includedInHealthInsurancePlan?: HealthInsurancePlan
+  interactingDrug?: Drug
+  isAvailableGenerically?: boolean
+  labelDetails?: string
+  overdosage?: string
+  pregnancyCategory?: DrugPregnancyCategory
+  pregnancyWarning?: string
+  prescribingInfo?: string
+  prescriptionStatus?: DrugPrescriptionStatus | string
+  relatedDrug?: Drug
+  rxcui?: string
+  warning?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Drug",
+  "name": "Example Drug",
+  "description": "An example of the Drug type",
+  "url": "https://example.com/drug",
+  "identifier": "example-drug-1"
+}
+```
+
+## Notes
+
+- Drug inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

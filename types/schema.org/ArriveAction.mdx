@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ArriveAction
+title: ArriveAction
+description: The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants.
+properties:
+
+subClasses:
+
+parentClass: MoveAction
+---
+
+# ArriveAction
+
+The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants.
+
+## Type Hierarchy
+
+ArriveAction is a type of MoveAction.
+
+### Direct Subtypes
+
+No types directly inherit from ArriveAction.
+
+## Properties
+
+ArriveAction defines the following properties in addition to those inherited from MoveAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ArriveAction {
+  $context?: 'schema.org'
+  $type: 'ArriveAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ArriveAction",
+  "name": "Example ArriveAction",
+  "description": "An example of the ArriveAction type",
+  "url": "https://example.com/arriveaction",
+  "identifier": "example-arriveaction-1"
+}
+```
+
+## Notes
+
+- ArriveAction inherits all properties from MoveAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

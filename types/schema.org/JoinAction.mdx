@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: JoinAction
+title: JoinAction
+description: An agent joins an event/group with participants/friends at a location.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, JoinAction refers to joining a group/team of people.\n* [[SubscribeAction]]: Unlike SubscribeAction, JoinAction does not imply that you'll be receiving updates.\n* [[FollowAction]]: Unlike FollowAction, JoinAction does not imply that you'll be polling for updates.
+properties:
+
+subClasses:
+
+parentClass: InteractAction
+---
+
+# JoinAction
+
+An agent joins an event/group with participants/friends at a location.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, JoinAction refers to joining a group/team of people.\n* [[SubscribeAction]]: Unlike SubscribeAction, JoinAction does not imply that you'll be receiving updates.\n* [[FollowAction]]: Unlike FollowAction, JoinAction does not imply that you'll be polling for updates.
+
+## Type Hierarchy
+
+JoinAction is a type of InteractAction.
+
+### Direct Subtypes
+
+No types directly inherit from JoinAction.
+
+## Properties
+
+JoinAction defines the following properties in addition to those inherited from InteractAction:
+
+
+
+## Usage Example
+
+```typescript
+interface JoinAction {
+  $context?: 'schema.org'
+  $type: 'JoinAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "JoinAction",
+  "name": "Example JoinAction",
+  "description": "An example of the JoinAction type",
+  "url": "https://example.com/joinaction",
+  "identifier": "example-joinaction-1"
+}
+```
+
+## Notes
+
+- JoinAction inherits all properties from InteractAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

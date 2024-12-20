@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ApplyAction
+title: ApplyAction
+description: The act of registering to an organization/service without the guarantee to receive it.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.
+properties:
+
+subClasses:
+
+parentClass: OrganizeAction
+---
+
+# ApplyAction
+
+The act of registering to an organization/service without the guarantee to receive it.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.
+
+## Type Hierarchy
+
+ApplyAction is a type of OrganizeAction.
+
+### Direct Subtypes
+
+No types directly inherit from ApplyAction.
+
+## Properties
+
+ApplyAction defines the following properties in addition to those inherited from OrganizeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ApplyAction {
+  $context?: 'schema.org'
+  $type: 'ApplyAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ApplyAction",
+  "name": "Example ApplyAction",
+  "description": "An example of the ApplyAction type",
+  "url": "https://example.com/applyaction",
+  "identifier": "example-applyaction-1"
+}
+```
+
+## Notes
+
+- ApplyAction inherits all properties from OrganizeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

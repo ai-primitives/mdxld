@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: GeoCircle
+title: GeoCircle
+description: A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape
+          it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
+          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
+       
+properties:
+  - geoMidpoint
+  - geoRadius
+subClasses:
+
+parentClass: GeoShape
+---
+
+# GeoCircle
+
+A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape
+          it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
+          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
+       
+
+## Type Hierarchy
+
+GeoCircle is a type of GeoShape.
+
+### Direct Subtypes
+
+No types directly inherit from GeoCircle.
+
+## Properties
+
+GeoCircle defines the following properties in addition to those inherited from GeoShape:
+
+- geoMidpoint: Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
+- geoRadius: Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).
+
+## Usage Example
+
+```typescript
+interface GeoCircle {
+  $context?: 'schema.org'
+  $type: 'GeoCircle'
+  geoMidpoint?: GeoCoordinates
+  geoRadius?: Distance | number | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GeoCircle",
+  "name": "Example GeoCircle",
+  "description": "An example of the GeoCircle type",
+  "url": "https://example.com/geocircle",
+  "identifier": "example-geocircle-1"
+}
+```
+
+## Notes
+
+- GeoCircle inherits all properties from GeoShape
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WPSideBar
+title: WPSideBar
+description: A sidebar section of the page.
+properties:
+
+subClasses:
+
+parentClass: WebPageElement
+---
+
+# WPSideBar
+
+A sidebar section of the page.
+
+## Type Hierarchy
+
+WPSideBar is a type of WebPageElement.
+
+### Direct Subtypes
+
+No types directly inherit from WPSideBar.
+
+## Properties
+
+WPSideBar defines the following properties in addition to those inherited from WebPageElement:
+
+
+
+## Usage Example
+
+```typescript
+interface WPSideBar {
+  $context?: 'schema.org'
+  $type: 'WPSideBar'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WPSideBar",
+  "name": "Example WPSideBar",
+  "description": "An example of the WPSideBar type",
+  "url": "https://example.com/wpsidebar",
+  "identifier": "example-wpsidebar-1"
+}
+```
+
+## Notes
+
+- WPSideBar inherits all properties from WebPageElement
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

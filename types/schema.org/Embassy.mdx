@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Embassy
+title: Embassy
+description: An embassy.
+properties:
+
+subClasses:
+
+parentClass: GovernmentBuilding
+---
+
+# Embassy
+
+An embassy.
+
+## Type Hierarchy
+
+Embassy is a type of GovernmentBuilding.
+
+### Direct Subtypes
+
+No types directly inherit from Embassy.
+
+## Properties
+
+Embassy defines the following properties in addition to those inherited from GovernmentBuilding:
+
+
+
+## Usage Example
+
+```typescript
+interface Embassy {
+  $context?: 'schema.org'
+  $type: 'Embassy'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Embassy",
+  "name": "Example Embassy",
+  "description": "An example of the Embassy type",
+  "url": "https://example.com/embassy",
+  "identifier": "example-embassy-1"
+}
+```
+
+## Notes
+
+- Embassy inherits all properties from GovernmentBuilding
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WantAction
+title: WantAction
+description: The act of expressing a desire about the object. An agent wants an object.
+properties:
+
+subClasses:
+
+parentClass: ReactAction
+---
+
+# WantAction
+
+The act of expressing a desire about the object. An agent wants an object.
+
+## Type Hierarchy
+
+WantAction is a type of ReactAction.
+
+### Direct Subtypes
+
+No types directly inherit from WantAction.
+
+## Properties
+
+WantAction defines the following properties in addition to those inherited from ReactAction:
+
+
+
+## Usage Example
+
+```typescript
+interface WantAction {
+  $context?: 'schema.org'
+  $type: 'WantAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WantAction",
+  "name": "Example WantAction",
+  "description": "An example of the WantAction type",
+  "url": "https://example.com/wantaction",
+  "identifier": "example-wantaction-1"
+}
+```
+
+## Notes
+
+- WantAction inherits all properties from ReactAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

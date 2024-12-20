@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: ScholarlyArticle
+title: ScholarlyArticle
+description: A scholarly article.
+properties:
+
+subClasses:
+  - MedicalScholarlyArticle
+parentClass: Article
+---
+
+# ScholarlyArticle
+
+A scholarly article.
+
+## Type Hierarchy
+
+ScholarlyArticle is a type of Article.
+
+### Direct Subtypes
+
+The following types directly inherit from ScholarlyArticle:
+
+- MedicalScholarlyArticle: A scholarly article in the medical domain.
+
+## Properties
+
+ScholarlyArticle defines the following properties in addition to those inherited from Article:
+
+
+
+## Usage Example
+
+```typescript
+interface ScholarlyArticle {
+  $context?: 'schema.org'
+  $type: 'ScholarlyArticle'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ScholarlyArticle",
+  "name": "Example ScholarlyArticle",
+  "description": "An example of the ScholarlyArticle type",
+  "url": "https://example.com/scholarlyarticle",
+  "identifier": "example-scholarlyarticle-1"
+}
+```
+
+## Notes
+
+- ScholarlyArticle inherits all properties from Article
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

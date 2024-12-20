@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: ComicStory
+title: ComicStory
+description: The term "story" is any indivisible, re-printable
+    	unit of a comic, including the interior stories, covers, and backmatter. Most
+    	comics have at least two stories: a cover (ComicCoverArt) and an interior story.
+properties:
+
+subClasses:
+
+parentClass: CreativeWork
+---
+
+# ComicStory
+
+The term "story" is any indivisible, re-printable
+    	unit of a comic, including the interior stories, covers, and backmatter. Most
+    	comics have at least two stories: a cover (ComicCoverArt) and an interior story.
+
+## Type Hierarchy
+
+ComicStory is a type of CreativeWork.
+
+### Direct Subtypes
+
+No types directly inherit from ComicStory.
+
+## Properties
+
+ComicStory defines the following properties in addition to those inherited from CreativeWork:
+
+
+
+## Usage Example
+
+```typescript
+interface ComicStory {
+  $context?: 'schema.org'
+  $type: 'ComicStory'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ComicStory",
+  "name": "Example ComicStory",
+  "description": "An example of the ComicStory type",
+  "url": "https://example.com/comicstory",
+  "identifier": "example-comicstory-1"
+}
+```
+
+## Notes
+
+- ComicStory inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

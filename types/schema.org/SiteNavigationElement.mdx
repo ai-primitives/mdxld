@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: SiteNavigationElement
+title: SiteNavigationElement
+description: A navigation element of the page.
+properties:
+
+subClasses:
+
+parentClass: WebPageElement
+---
+
+# SiteNavigationElement
+
+A navigation element of the page.
+
+## Type Hierarchy
+
+SiteNavigationElement is a type of WebPageElement.
+
+### Direct Subtypes
+
+No types directly inherit from SiteNavigationElement.
+
+## Properties
+
+SiteNavigationElement defines the following properties in addition to those inherited from WebPageElement:
+
+
+
+## Usage Example
+
+```typescript
+interface SiteNavigationElement {
+  $context?: 'schema.org'
+  $type: 'SiteNavigationElement'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SiteNavigationElement",
+  "name": "Example SiteNavigationElement",
+  "description": "An example of the SiteNavigationElement type",
+  "url": "https://example.com/sitenavigationelement",
+  "identifier": "example-sitenavigationelement-1"
+}
+```
+
+## Notes
+
+- SiteNavigationElement inherits all properties from WebPageElement
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

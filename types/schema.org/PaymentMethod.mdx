@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: PaymentMethod
+title: PaymentMethod
+description: A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction. The following legacy values should be accepted:
+    \n\n* http://purl.org/goodrelations/v1#ByBankTransferInAdvance\n* http://purl.org/goodrelations/v1#ByInvoice\n* http://purl.org/goodrelations/v1#Cash\n* http://purl.org/goodrelations/v1#CheckInAdvance\n* http://purl.org/goodrelations/v1#COD\n* http://purl.org/goodrelations/v1#DirectDebit\n* http://purl.org/goodrelations/v1#GoogleCheckout\n* http://purl.org/goodrelations/v1#PayPal\n* http://purl.org/goodrelations/v1#PaySwarm\n\nStructured values are recommended for newer payment methods.
+properties:
+  - paymentMethodType
+subClasses:
+
+parentClass: Intangible
+---
+
+# PaymentMethod
+
+A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction. The following legacy values should be accepted:
+    \n\n* http://purl.org/goodrelations/v1#ByBankTransferInAdvance\n* http://purl.org/goodrelations/v1#ByInvoice\n* http://purl.org/goodrelations/v1#Cash\n* http://purl.org/goodrelations/v1#CheckInAdvance\n* http://purl.org/goodrelations/v1#COD\n* http://purl.org/goodrelations/v1#DirectDebit\n* http://purl.org/goodrelations/v1#GoogleCheckout\n* http://purl.org/goodrelations/v1#PayPal\n* http://purl.org/goodrelations/v1#PaySwarm\n\nStructured values are recommended for newer payment methods.
+
+## Type Hierarchy
+
+PaymentMethod is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from PaymentMethod.
+
+## Properties
+
+PaymentMethod defines the following properties in addition to those inherited from Intangible:
+
+- paymentMethodType: The type of a payment method.
+
+## Usage Example
+
+```typescript
+interface PaymentMethod {
+  $context?: 'schema.org'
+  $type: 'PaymentMethod'
+  paymentMethodType?: PaymentMethodType
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PaymentMethod",
+  "name": "Example PaymentMethod",
+  "description": "An example of the PaymentMethod type",
+  "url": "https://example.com/paymentmethod",
+  "identifier": "example-paymentmethod-1"
+}
+```
+
+## Notes
+
+- PaymentMethod inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

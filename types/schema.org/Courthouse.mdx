@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Courthouse
+title: Courthouse
+description: A courthouse.
+properties:
+
+subClasses:
+
+parentClass: GovernmentBuilding
+---
+
+# Courthouse
+
+A courthouse.
+
+## Type Hierarchy
+
+Courthouse is a type of GovernmentBuilding.
+
+### Direct Subtypes
+
+No types directly inherit from Courthouse.
+
+## Properties
+
+Courthouse defines the following properties in addition to those inherited from GovernmentBuilding:
+
+
+
+## Usage Example
+
+```typescript
+interface Courthouse {
+  $context?: 'schema.org'
+  $type: 'Courthouse'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Courthouse",
+  "name": "Example Courthouse",
+  "description": "An example of the Courthouse type",
+  "url": "https://example.com/courthouse",
+  "identifier": "example-courthouse-1"
+}
+```
+
+## Notes
+
+- Courthouse inherits all properties from GovernmentBuilding
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

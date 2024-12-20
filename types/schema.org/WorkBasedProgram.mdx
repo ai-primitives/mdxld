@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: WorkBasedProgram
+title: WorkBasedProgram
+description: A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.
+properties:
+
+subClasses:
+
+parentClass: EducationalOccupationalProgram
+---
+
+# WorkBasedProgram
+
+A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.
+
+## Type Hierarchy
+
+WorkBasedProgram is a type of EducationalOccupationalProgram.
+
+### Direct Subtypes
+
+No types directly inherit from WorkBasedProgram.
+
+## Properties
+
+WorkBasedProgram defines the following properties in addition to those inherited from EducationalOccupationalProgram:
+
+
+
+## Usage Example
+
+```typescript
+interface WorkBasedProgram {
+  $context?: 'schema.org'
+  $type: 'WorkBasedProgram'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "WorkBasedProgram",
+  "name": "Example WorkBasedProgram",
+  "description": "An example of the WorkBasedProgram type",
+  "url": "https://example.com/workbasedprogram",
+  "identifier": "example-workbasedprogram-1"
+}
+```
+
+## Notes
+
+- WorkBasedProgram inherits all properties from EducationalOccupationalProgram
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

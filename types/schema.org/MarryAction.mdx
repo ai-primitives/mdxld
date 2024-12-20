@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MarryAction
+title: MarryAction
+description: The act of marrying a person.
+properties:
+
+subClasses:
+
+parentClass: InteractAction
+---
+
+# MarryAction
+
+The act of marrying a person.
+
+## Type Hierarchy
+
+MarryAction is a type of InteractAction.
+
+### Direct Subtypes
+
+No types directly inherit from MarryAction.
+
+## Properties
+
+MarryAction defines the following properties in addition to those inherited from InteractAction:
+
+
+
+## Usage Example
+
+```typescript
+interface MarryAction {
+  $context?: 'schema.org'
+  $type: 'MarryAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MarryAction",
+  "name": "Example MarryAction",
+  "description": "An example of the MarryAction type",
+  "url": "https://example.com/marryaction",
+  "identifier": "example-marryaction-1"
+}
+```
+
+## Notes
+
+- MarryAction inherits all properties from InteractAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

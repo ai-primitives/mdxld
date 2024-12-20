@@ -1,0 +1,73 @@
+---
+$context: schema.org
+$type: Clip
+title: Clip
+description: A short TV or radio program or a segment/part of a program.
+properties:
+  - clipNumber
+  - endOffset
+  - partOfEpisode
+subClasses:
+  - MovieClip
+  - RadioClip
+  - TVClip
+  - VideoGameClip
+parentClass: CreativeWork
+---
+
+# Clip
+
+A short TV or radio program or a segment/part of a program.
+
+## Type Hierarchy
+
+Clip is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from Clip:
+
+- MovieClip: A short segment/part of a movie.
+- RadioClip: A short radio program or a segment/part of a radio program.
+- TVClip: A short TV program or a segment/part of a TV program.
+- VideoGameClip: A short segment/part of a video game.
+
+## Properties
+
+Clip defines the following properties in addition to those inherited from CreativeWork:
+
+- clipNumber: Position of the clip within an ordered group of clips.
+- endOffset: The end time of the clip expressed as the number of seconds from the beginning of the work.
+- partOfEpisode: The episode to which this clip belongs.
+
+## Usage Example
+
+```typescript
+interface Clip {
+  $context?: 'schema.org'
+  $type: 'Clip'
+  clipNumber?: number | string
+  endOffset?: HyperTocEntry | number
+  partOfEpisode?: Episode
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Clip",
+  "name": "Example Clip",
+  "description": "An example of the Clip type",
+  "url": "https://example.com/clip",
+  "identifier": "example-clip-1"
+}
+```
+
+## Notes
+
+- Clip inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

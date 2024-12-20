@@ -1,0 +1,67 @@
+---
+$context: schema.org
+$type: DigitalDocument
+title: DigitalDocument
+description: An electronic file or document.
+properties:
+  - hasDigitalDocumentPermission
+subClasses:
+  - NoteDigitalDocument
+  - PresentationDigitalDocument
+  - SpreadsheetDigitalDocument
+  - TextDigitalDocument
+parentClass: CreativeWork
+---
+
+# DigitalDocument
+
+An electronic file or document.
+
+## Type Hierarchy
+
+DigitalDocument is a type of CreativeWork.
+
+### Direct Subtypes
+
+The following types directly inherit from DigitalDocument:
+
+- NoteDigitalDocument: A file containing a note, primarily for the author.
+- PresentationDigitalDocument: A file containing slides or used for a presentation.
+- SpreadsheetDigitalDocument: A spreadsheet file.
+- TextDigitalDocument: A file composed primarily of text.
+
+## Properties
+
+DigitalDocument defines the following properties in addition to those inherited from CreativeWork:
+
+- hasDigitalDocumentPermission: A permission related to the access to this document (e.g. permission to read or write an electronic document). For a public document, specify a grantee with an Audience with audienceType equal to "public".
+
+## Usage Example
+
+```typescript
+interface DigitalDocument {
+  $context?: 'schema.org'
+  $type: 'DigitalDocument'
+  hasDigitalDocumentPermission?: DigitalDocumentPermission
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DigitalDocument",
+  "name": "Example DigitalDocument",
+  "description": "An example of the DigitalDocument type",
+  "url": "https://example.com/digitaldocument",
+  "identifier": "example-digitaldocument-1"
+}
+```
+
+## Notes
+
+- DigitalDocument inherits all properties from CreativeWork
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

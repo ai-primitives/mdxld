@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: DrugClass
+title: DrugClass
+description: A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.
+properties:
+
+subClasses:
+
+parentClass: MedicalEntity
+---
+
+# DrugClass
+
+A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.
+
+## Type Hierarchy
+
+DrugClass is a type of MedicalEntity.
+
+### Direct Subtypes
+
+No types directly inherit from DrugClass.
+
+## Properties
+
+DrugClass defines the following properties in addition to those inherited from MedicalEntity:
+
+
+
+## Usage Example
+
+```typescript
+interface DrugClass {
+  $context?: 'schema.org'
+  $type: 'DrugClass'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "DrugClass",
+  "name": "Example DrugClass",
+  "description": "An example of the DrugClass type",
+  "url": "https://example.com/drugclass",
+  "identifier": "example-drugclass-1"
+}
+```
+
+## Notes
+
+- DrugClass inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

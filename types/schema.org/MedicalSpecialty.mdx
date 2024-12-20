@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalSpecialty
+title: MedicalSpecialty
+description: Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.
+properties:
+
+subClasses:
+
+
+---
+
+# MedicalSpecialty
+
+Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.
+
+## Type Hierarchy
+
+MedicalSpecialty is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalSpecialty.
+
+## Properties
+
+MedicalSpecialty defines the following properties in addition to those inherited from Thing:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalSpecialty {
+  $context?: 'schema.org'
+  $type: 'MedicalSpecialty'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalSpecialty",
+  "name": "Example MedicalSpecialty",
+  "description": "An example of the MedicalSpecialty type",
+  "url": "https://example.com/medicalspecialty",
+  "identifier": "example-medicalspecialty-1"
+}
+```
+
+## Notes
+
+- MedicalSpecialty inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

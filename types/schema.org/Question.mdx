@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: Question
+title: Question
+description: A specific question - e.g. from a user seeking answers online, or collected in a Frequently Asked Questions (FAQ) document.
+properties:
+  - acceptedAnswer
+  - answerCount
+  - suggestedAnswer
+subClasses:
+
+parentClass: Comment
+---
+
+# Question
+
+A specific question - e.g. from a user seeking answers online, or collected in a Frequently Asked Questions (FAQ) document.
+
+## Type Hierarchy
+
+Question is a type of Comment.
+
+### Direct Subtypes
+
+No types directly inherit from Question.
+
+## Properties
+
+Question defines the following properties in addition to those inherited from Comment:
+
+- acceptedAnswer: The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.
+- answerCount: The number of answers this question has received.
+- suggestedAnswer: An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.
+
+## Usage Example
+
+```typescript
+interface Question {
+  $context?: 'schema.org'
+  $type: 'Question'
+  acceptedAnswer?: Answer | ItemList
+  answerCount?: number
+  suggestedAnswer?: Answer | ItemList
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Question",
+  "name": "Example Question",
+  "description": "An example of the Question type",
+  "url": "https://example.com/question",
+  "identifier": "example-question-1"
+}
+```
+
+## Notes
+
+- Question inherits all properties from Comment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

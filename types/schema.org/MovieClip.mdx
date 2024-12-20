@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MovieClip
+title: MovieClip
+description: A short segment/part of a movie.
+properties:
+
+subClasses:
+
+parentClass: Clip
+---
+
+# MovieClip
+
+A short segment/part of a movie.
+
+## Type Hierarchy
+
+MovieClip is a type of Clip.
+
+### Direct Subtypes
+
+No types directly inherit from MovieClip.
+
+## Properties
+
+MovieClip defines the following properties in addition to those inherited from Clip:
+
+
+
+## Usage Example
+
+```typescript
+interface MovieClip {
+  $context?: 'schema.org'
+  $type: 'MovieClip'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MovieClip",
+  "name": "Example MovieClip",
+  "description": "An example of the MovieClip type",
+  "url": "https://example.com/movieclip",
+  "identifier": "example-movieclip-1"
+}
+```
+
+## Notes
+
+- MovieClip inherits all properties from Clip
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

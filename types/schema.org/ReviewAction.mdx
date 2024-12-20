@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ReviewAction
+title: ReviewAction
+description: The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.
+properties:
+  - resultReview
+subClasses:
+
+parentClass: AssessAction
+---
+
+# ReviewAction
+
+The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.
+
+## Type Hierarchy
+
+ReviewAction is a type of AssessAction.
+
+### Direct Subtypes
+
+No types directly inherit from ReviewAction.
+
+## Properties
+
+ReviewAction defines the following properties in addition to those inherited from AssessAction:
+
+- resultReview: A sub property of result. The review that resulted in the performing of the action.
+
+## Usage Example
+
+```typescript
+interface ReviewAction {
+  $context?: 'schema.org'
+  $type: 'ReviewAction'
+  resultReview?: Review
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ReviewAction",
+  "name": "Example ReviewAction",
+  "description": "An example of the ReviewAction type",
+  "url": "https://example.com/reviewaction",
+  "identifier": "example-reviewaction-1"
+}
+```
+
+## Notes
+
+- ReviewAction inherits all properties from AssessAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

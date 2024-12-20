@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PayAction
+title: PayAction
+description: An agent pays a price to a participant.
+properties:
+
+subClasses:
+
+parentClass: TradeAction
+---
+
+# PayAction
+
+An agent pays a price to a participant.
+
+## Type Hierarchy
+
+PayAction is a type of TradeAction.
+
+### Direct Subtypes
+
+No types directly inherit from PayAction.
+
+## Properties
+
+PayAction defines the following properties in addition to those inherited from TradeAction:
+
+
+
+## Usage Example
+
+```typescript
+interface PayAction {
+  $context?: 'schema.org'
+  $type: 'PayAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PayAction",
+  "name": "Example PayAction",
+  "description": "An example of the PayAction type",
+  "url": "https://example.com/payaction",
+  "identifier": "example-payaction-1"
+}
+```
+
+## Notes
+
+- PayAction inherits all properties from TradeAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

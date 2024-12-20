@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: OrganizationRole
+title: OrganizationRole
+description: A subclass of Role used to describe roles within organizations.
+properties:
+  - numberedPosition
+subClasses:
+  - EmployeeRole
+parentClass: Role
+---
+
+# OrganizationRole
+
+A subclass of Role used to describe roles within organizations.
+
+## Type Hierarchy
+
+OrganizationRole is a type of Role.
+
+### Direct Subtypes
+
+The following types directly inherit from OrganizationRole:
+
+- EmployeeRole: A subclass of OrganizationRole used to describe employee relationships.
+
+## Properties
+
+OrganizationRole defines the following properties in addition to those inherited from Role:
+
+- numberedPosition: A number associated with a role in an organization, for example, the number on an athlete's jersey.
+
+## Usage Example
+
+```typescript
+interface OrganizationRole {
+  $context?: 'schema.org'
+  $type: 'OrganizationRole'
+  numberedPosition?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "OrganizationRole",
+  "name": "Example OrganizationRole",
+  "description": "An example of the OrganizationRole type",
+  "url": "https://example.com/organizationrole",
+  "identifier": "example-organizationrole-1"
+}
+```
+
+## Notes
+
+- OrganizationRole inherits all properties from Role
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

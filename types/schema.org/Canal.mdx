@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Canal
+title: Canal
+description: A canal, like the Panama Canal.
+properties:
+
+subClasses:
+
+parentClass: BodyOfWater
+---
+
+# Canal
+
+A canal, like the Panama Canal.
+
+## Type Hierarchy
+
+Canal is a type of BodyOfWater.
+
+### Direct Subtypes
+
+No types directly inherit from Canal.
+
+## Properties
+
+Canal defines the following properties in addition to those inherited from BodyOfWater:
+
+
+
+## Usage Example
+
+```typescript
+interface Canal {
+  $context?: 'schema.org'
+  $type: 'Canal'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Canal",
+  "name": "Example Canal",
+  "description": "An example of the Canal type",
+  "url": "https://example.com/canal",
+  "identifier": "example-canal-1"
+}
+```
+
+## Notes
+
+- Canal inherits all properties from BodyOfWater
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

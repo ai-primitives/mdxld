@@ -1,0 +1,97 @@
+---
+$context: schema.org
+$type: EducationalOccupationalProgram
+title: EducationalOccupationalProgram
+description: A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities (e.g., job, courses) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity (e.g., a job), or sometimes a higher educational opportunity (e.g., an advanced degree).
+properties:
+  - applicationDeadline
+  - applicationStartDate
+  - educationalProgramMode
+  - hasCourse
+  - maximumEnrollment
+  - programPrerequisites
+  - programType
+  - salaryUponCompletion
+  - termDuration
+  - termsPerYear
+  - timeOfDay
+  - timeToComplete
+  - typicalCreditsPerTerm
+subClasses:
+  - WorkBasedProgram
+parentClass: Intangible
+---
+
+# EducationalOccupationalProgram
+
+A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities (e.g., job, courses) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity (e.g., a job), or sometimes a higher educational opportunity (e.g., an advanced degree).
+
+## Type Hierarchy
+
+EducationalOccupationalProgram is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from EducationalOccupationalProgram:
+
+- WorkBasedProgram: A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.
+
+## Properties
+
+EducationalOccupationalProgram defines the following properties in addition to those inherited from Intangible:
+
+- applicationDeadline: The date on which the program stops collecting applications for the next enrollment cycle. Flexible application deadlines (for example, a program with rolling admissions) can be described in a textual string, rather than as a DateTime.
+- applicationStartDate: The date at which the program begins collecting applications for the next enrollment cycle.
+- educationalProgramMode: Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
+- hasCourse: A course or class that is one of the learning opportunities that constitute an educational / occupational program. No information is implied about whether the course is mandatory or optional; no guarantee is implied about whether the course will be available to everyone on the program.
+- maximumEnrollment: The maximum number of students who may be enrolled in the program.
+- programPrerequisites: Prerequisites for enrolling in the program.
+- programType: The type of educational or occupational program. For example, classroom, internship, alternance, etc.
+- salaryUponCompletion: The expected salary upon completing the training.
+- termDuration: The amount of time in a term as defined by the institution. A term is a length of time where students take one or more classes. Semesters and quarters are common units for term.
+- termsPerYear: The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example, if the student can only take 2 semesters for the program in one year, then termsPerYear should be 2.
+- timeOfDay: The time of day the program normally runs. For example, "evenings".
+- timeToComplete: The expected length of time to complete the program if attending full-time.
+- typicalCreditsPerTerm: The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined by the institution.
+
+## Usage Example
+
+```typescript
+interface EducationalOccupationalProgram {
+  $context?: 'schema.org'
+  $type: 'EducationalOccupationalProgram'
+  applicationDeadline?: string
+  applicationStartDate?: string
+  educationalProgramMode?: string
+  hasCourse?: Course
+  maximumEnrollment?: number
+  programPrerequisites?: AlignmentObject | Course | EducationalOccupationalCredential | string
+  programType?: DefinedTerm | string
+  salaryUponCompletion?: MonetaryAmountDistribution
+  termDuration?: Duration
+  termsPerYear?: number
+  timeOfDay?: string
+  timeToComplete?: Duration
+  typicalCreditsPerTerm?: StructuredValue | number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EducationalOccupationalProgram",
+  "name": "Example EducationalOccupationalProgram",
+  "description": "An example of the EducationalOccupationalProgram type",
+  "url": "https://example.com/educationaloccupationalprogram",
+  "identifier": "example-educationaloccupationalprogram-1"
+}
+```
+
+## Notes
+
+- EducationalOccupationalProgram inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

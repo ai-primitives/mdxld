@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalContraindication
+title: MedicalContraindication
+description: A condition or factor that serves as a reason to withhold a certain medical therapy. Contraindications can be absolute (there are no reasonable circumstances for undertaking a course of action) or relative (the patient is at higher risk of complications, but these risks may be outweighed by other considerations or mitigated by other measures).
+properties:
+
+subClasses:
+
+parentClass: MedicalEntity
+---
+
+# MedicalContraindication
+
+A condition or factor that serves as a reason to withhold a certain medical therapy. Contraindications can be absolute (there are no reasonable circumstances for undertaking a course of action) or relative (the patient is at higher risk of complications, but these risks may be outweighed by other considerations or mitigated by other measures).
+
+## Type Hierarchy
+
+MedicalContraindication is a type of MedicalEntity.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalContraindication.
+
+## Properties
+
+MedicalContraindication defines the following properties in addition to those inherited from MedicalEntity:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalContraindication {
+  $context?: 'schema.org'
+  $type: 'MedicalContraindication'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalContraindication",
+  "name": "Example MedicalContraindication",
+  "description": "An example of the MedicalContraindication type",
+  "url": "https://example.com/medicalcontraindication",
+  "identifier": "example-medicalcontraindication-1"
+}
+```
+
+## Notes
+
+- MedicalContraindication inherits all properties from MedicalEntity
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

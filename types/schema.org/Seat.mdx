@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: Seat
+title: Seat
+description: Used to describe a seat, such as a reserved seat in an event reservation.
+properties:
+  - seatNumber
+  - seatRow
+  - seatSection
+  - seatingType
+subClasses:
+
+parentClass: Intangible
+---
+
+# Seat
+
+Used to describe a seat, such as a reserved seat in an event reservation.
+
+## Type Hierarchy
+
+Seat is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Seat.
+
+## Properties
+
+Seat defines the following properties in addition to those inherited from Intangible:
+
+- seatingType: The type/class of the seat.
+- seatNumber: The location of the reserved seat (e.g., 27).
+- seatRow: The row location of the reserved seat (e.g., B).
+- seatSection: The section location of the reserved seat (e.g. Orchestra).
+
+## Usage Example
+
+```typescript
+interface Seat {
+  $context?: 'schema.org'
+  $type: 'Seat'
+  seatingType?: QualitativeValue | string
+  seatNumber?: string
+  seatRow?: string
+  seatSection?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Seat",
+  "name": "Example Seat",
+  "description": "An example of the Seat type",
+  "url": "https://example.com/seat",
+  "identifier": "example-seat-1"
+}
+```
+
+## Notes
+
+- Seat inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

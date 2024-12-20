@@ -1,0 +1,73 @@
+---
+$context: schema.org
+$type: GeoShape
+title: GeoShape
+description: The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.
+properties:
+  - box
+  - circle
+  - line
+  - polygon
+subClasses:
+  - GeoCircle
+parentClass: StructuredValue
+---
+
+# GeoShape
+
+The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.
+
+## Type Hierarchy
+
+GeoShape is a type of StructuredValue.
+
+### Direct Subtypes
+
+The following types directly inherit from GeoShape:
+
+- GeoCircle: A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape
+          it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
+          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
+       
+
+## Properties
+
+GeoShape defines the following properties in addition to those inherited from StructuredValue:
+
+- box: A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.
+- circle: A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.
+- line: A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.
+- polygon: A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.
+
+## Usage Example
+
+```typescript
+interface GeoShape {
+  $context?: 'schema.org'
+  $type: 'GeoShape'
+  box?: string
+  circle?: string
+  line?: string
+  polygon?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "GeoShape",
+  "name": "Example GeoShape",
+  "description": "An example of the GeoShape type",
+  "url": "https://example.com/geoshape",
+  "identifier": "example-geoshape-1"
+}
+```
+
+## Notes
+
+- GeoShape inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

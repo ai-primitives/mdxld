@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: MeasurementTypeEnumeration
+title: MeasurementTypeEnumeration
+description: Enumeration of common measurement types (or dimensions), for example "chest" for a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.
+properties:
+
+subClasses:
+  - BodyMeasurementTypeEnumeration
+  - WearableMeasurementTypeEnumeration
+parentClass: Enumeration
+---
+
+# MeasurementTypeEnumeration
+
+Enumeration of common measurement types (or dimensions), for example "chest" for a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.
+
+## Type Hierarchy
+
+MeasurementTypeEnumeration is a type of Enumeration.
+
+### Direct Subtypes
+
+The following types directly inherit from MeasurementTypeEnumeration:
+
+- BodyMeasurementTypeEnumeration: Enumerates types (or dimensions) of a person's body measurements, for example for fitting of clothes.
+- WearableMeasurementTypeEnumeration: Enumerates common types of measurement for wearables products.
+
+## Properties
+
+MeasurementTypeEnumeration defines the following properties in addition to those inherited from Enumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MeasurementTypeEnumeration {
+  $context?: 'schema.org'
+  $type: 'MeasurementTypeEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MeasurementTypeEnumeration",
+  "name": "Example MeasurementTypeEnumeration",
+  "description": "An example of the MeasurementTypeEnumeration type",
+  "url": "https://example.com/measurementtypeenumeration",
+  "identifier": "example-measurementtypeenumeration-1"
+}
+```
+
+## Notes
+
+- MeasurementTypeEnumeration inherits all properties from Enumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Answer
+title: Answer
+description: An answer offered to a question; perhaps correct, perhaps opinionated or wrong.
+properties:
+  - answerExplanation
+subClasses:
+
+parentClass: Comment
+---
+
+# Answer
+
+An answer offered to a question; perhaps correct, perhaps opinionated or wrong.
+
+## Type Hierarchy
+
+Answer is a type of Comment.
+
+### Direct Subtypes
+
+No types directly inherit from Answer.
+
+## Properties
+
+Answer defines the following properties in addition to those inherited from Comment:
+
+- answerExplanation: A step-by-step or full explanation about Answer. Can outline how this Answer was achieved or contain more broad clarification or statement about it. 
+
+## Usage Example
+
+```typescript
+interface Answer {
+  $context?: 'schema.org'
+  $type: 'Answer'
+  answerExplanation?: Comment | WebContent
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Answer",
+  "name": "Example Answer",
+  "description": "An example of the Answer type",
+  "url": "https://example.com/answer",
+  "identifier": "example-answer-1"
+}
+```
+
+## Notes
+
+- Answer inherits all properties from Comment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

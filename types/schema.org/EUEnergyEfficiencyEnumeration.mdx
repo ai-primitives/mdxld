@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: EUEnergyEfficiencyEnumeration
+title: EUEnergyEfficiencyEnumeration
+description: Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++ as defined in EU directive 2017/1369.
+properties:
+
+subClasses:
+
+parentClass: EnergyEfficiencyEnumeration
+---
+
+# EUEnergyEfficiencyEnumeration
+
+Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++ as defined in EU directive 2017/1369.
+
+## Type Hierarchy
+
+EUEnergyEfficiencyEnumeration is a type of EnergyEfficiencyEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from EUEnergyEfficiencyEnumeration.
+
+## Properties
+
+EUEnergyEfficiencyEnumeration defines the following properties in addition to those inherited from EnergyEfficiencyEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface EUEnergyEfficiencyEnumeration {
+  $context?: 'schema.org'
+  $type: 'EUEnergyEfficiencyEnumeration'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EUEnergyEfficiencyEnumeration",
+  "name": "Example EUEnergyEfficiencyEnumeration",
+  "description": "An example of the EUEnergyEfficiencyEnumeration type",
+  "url": "https://example.com/euenergyefficiencyenumeration",
+  "identifier": "example-euenergyefficiencyenumeration-1"
+}
+```
+
+## Notes
+
+- EUEnergyEfficiencyEnumeration inherits all properties from EnergyEfficiencyEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

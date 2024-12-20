@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: PawnShop
+title: PawnShop
+description: A shop that will buy, or lend money against the security of, personal possessions.
+properties:
+
+subClasses:
+
+parentClass: Store
+---
+
+# PawnShop
+
+A shop that will buy, or lend money against the security of, personal possessions.
+
+## Type Hierarchy
+
+PawnShop is a type of Store.
+
+### Direct Subtypes
+
+No types directly inherit from PawnShop.
+
+## Properties
+
+PawnShop defines the following properties in addition to those inherited from Store:
+
+
+
+## Usage Example
+
+```typescript
+interface PawnShop {
+  $context?: 'schema.org'
+  $type: 'PawnShop'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PawnShop",
+  "name": "Example PawnShop",
+  "description": "An example of the PawnShop type",
+  "url": "https://example.com/pawnshop",
+  "identifier": "example-pawnshop-1"
+}
+```
+
+## Notes
+
+- PawnShop inherits all properties from Store
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Brand
+title: Brand
+description: A brand is a name used by an organization or business person for labeling a product, product group, or similar.
+properties:
+
+subClasses:
+
+parentClass: Intangible
+---
+
+# Brand
+
+A brand is a name used by an organization or business person for labeling a product, product group, or similar.
+
+## Type Hierarchy
+
+Brand is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from Brand.
+
+## Properties
+
+Brand defines the following properties in addition to those inherited from Intangible:
+
+
+
+## Usage Example
+
+```typescript
+interface Brand {
+  $context?: 'schema.org'
+  $type: 'Brand'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Brand",
+  "name": "Example Brand",
+  "description": "An example of the Brand type",
+  "url": "https://example.com/brand",
+  "identifier": "example-brand-1"
+}
+```
+
+## Notes
+
+- Brand inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

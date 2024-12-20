@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: Optician
+title: Optician
+description: A store that sells reading glasses and similar devices for improving vision.
+properties:
+
+subClasses:
+
+parentClass: MedicalBusiness
+---
+
+# Optician
+
+A store that sells reading glasses and similar devices for improving vision.
+
+## Type Hierarchy
+
+Optician is a type of MedicalBusiness.
+
+### Direct Subtypes
+
+No types directly inherit from Optician.
+
+## Properties
+
+Optician defines the following properties in addition to those inherited from MedicalBusiness:
+
+
+
+## Usage Example
+
+```typescript
+interface Optician {
+  $context?: 'schema.org'
+  $type: 'Optician'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Optician",
+  "name": "Example Optician",
+  "description": "An example of the Optician type",
+  "url": "https://example.com/optician",
+  "identifier": "example-optician-1"
+}
+```
+
+## Notes
+
+- Optician inherits all properties from MedicalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

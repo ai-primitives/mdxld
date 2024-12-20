@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: MedicalDevicePurpose
+title: MedicalDevicePurpose
+description: Categories of medical devices, organized by the purpose or intended use of the device.
+properties:
+
+subClasses:
+
+parentClass: MedicalEnumeration
+---
+
+# MedicalDevicePurpose
+
+Categories of medical devices, organized by the purpose or intended use of the device.
+
+## Type Hierarchy
+
+MedicalDevicePurpose is a type of MedicalEnumeration.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalDevicePurpose.
+
+## Properties
+
+MedicalDevicePurpose defines the following properties in addition to those inherited from MedicalEnumeration:
+
+
+
+## Usage Example
+
+```typescript
+interface MedicalDevicePurpose {
+  $context?: 'schema.org'
+  $type: 'MedicalDevicePurpose'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalDevicePurpose",
+  "name": "Example MedicalDevicePurpose",
+  "description": "An example of the MedicalDevicePurpose type",
+  "url": "https://example.com/medicaldevicepurpose",
+  "identifier": "example-medicaldevicepurpose-1"
+}
+```
+
+## Notes
+
+- MedicalDevicePurpose inherits all properties from MedicalEnumeration
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

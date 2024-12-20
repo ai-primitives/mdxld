@@ -1,0 +1,59 @@
+---
+$context: schema.org
+$type: ConfirmAction
+title: ConfirmAction
+description: The act of notifying someone that a future event/action is going to happen as expected.\n\nRelated actions:\n\n* [[CancelAction]]: The antonym of ConfirmAction.
+properties:
+
+subClasses:
+
+parentClass: InformAction
+---
+
+# ConfirmAction
+
+The act of notifying someone that a future event/action is going to happen as expected.\n\nRelated actions:\n\n* [[CancelAction]]: The antonym of ConfirmAction.
+
+## Type Hierarchy
+
+ConfirmAction is a type of InformAction.
+
+### Direct Subtypes
+
+No types directly inherit from ConfirmAction.
+
+## Properties
+
+ConfirmAction defines the following properties in addition to those inherited from InformAction:
+
+
+
+## Usage Example
+
+```typescript
+interface ConfirmAction {
+  $context?: 'schema.org'
+  $type: 'ConfirmAction'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ConfirmAction",
+  "name": "Example ConfirmAction",
+  "description": "An example of the ConfirmAction type",
+  "url": "https://example.com/confirmaction",
+  "identifier": "example-confirmaction-1"
+}
+```
+
+## Notes
+
+- ConfirmAction inherits all properties from InformAction
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface
