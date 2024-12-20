@@ -1,17 +1,7 @@
 import { parse as parseYAML, stringify as stringifyYAML } from 'yaml'
 import type { MDXLD, ParseOptions, SpecialProperty } from './types.js'
 
-const SPECIAL_PROPERTIES: SpecialProperty[] = [
-  'type',
-  'context',
-  'id',
-  'language',
-  'base',
-  'vocab',
-  'list',
-  'set',
-  'reverse',
-]
+const SPECIAL_PROPERTIES: SpecialProperty[] = ['type', 'context', 'id', 'language', 'base', 'vocab', 'list', 'set', 'reverse']
 
 function extractFrontmatter(mdx: string): { frontmatter: string; content: string } {
   // Check for proper frontmatter delimiters
@@ -94,7 +84,7 @@ export function parse(mdx: string, options: ParseOptions = {}): MDXLD {
   if (!frontmatter) {
     return {
       data: {},
-      content
+      content,
     }
   }
 
@@ -103,21 +93,16 @@ export function parse(mdx: string, options: ParseOptions = {}): MDXLD {
     const yaml = parseYAML(frontmatter, {
       strict: true,
       schema: 'core',
-      logLevel: 'error'
+      logLevel: 'error',
     })
 
-    if (
-      typeof yaml !== 'object' ||
-      yaml === null ||
-      Array.isArray(yaml) ||
-      Object.keys(yaml).length === 0
-    ) {
+    if (typeof yaml !== 'object' || yaml === null || Array.isArray(yaml) || Object.keys(yaml).length === 0) {
       throw new Error('Failed to parse YAML frontmatter')
     }
 
     return {
       ...processFrontmatter(yaml as Record<string, unknown>, options),
-      content
+      content,
     }
   } catch (error) {
     throw new Error(`Failed to parse YAML frontmatter: ${error instanceof Error ? error.message : String(error)}`)
@@ -140,9 +125,7 @@ export function stringify(mdxld: MDXLD, options?: { useAtPrefix?: boolean }): st
 
   Object.assign(orderedFrontmatter, data)
 
-  const escapedFrontmatter = Object.fromEntries(
-    Object.entries(orderedFrontmatter).map(([key, value]) => [escapeAtPrefix(key), value])
-  )
+  const escapedFrontmatter = Object.fromEntries(Object.entries(orderedFrontmatter).map(([key, value]) => [escapeAtPrefix(key), value]))
 
   const yamlString = unescapeAtPrefix(stringifyYAML(escapedFrontmatter))
   return `---\n${yamlString}---\n${content}`

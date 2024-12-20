@@ -11,6 +11,7 @@
 ## Implementation
 
 ### Core Features ✅
+
 - [x] YAML-LD frontmatter parsing
   - [x] Type-safe parsing with TypeScript
   - [x] Support for $ and @ property prefixes
@@ -24,12 +25,14 @@
   - [x] Error handling
 
 ### Documentation 🚧
+
 - [x] Update README with features and examples
 - [ ] Complete API documentation
 - [ ] Add examples directory
 - [ ] Update CONTRIBUTING.md
 
 ### CI/CD 🚧
+
 - [x] Set up GitHub Actions workflow
 - [x] Configure semantic-release
 - [x] Add test coverage reporting
@@ -37,6 +40,7 @@
 - [x] Fix package exports configuration
 
 ### Future Enhancements 🎯
+
 - [ ] Simplify/reduce the embedded context size
 - [ ] Add JSON-LD context validation
 - [ ] Support for custom remark plugins

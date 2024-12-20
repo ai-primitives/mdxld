@@ -44,7 +44,7 @@ function convertAtToDollar(obj: JsonValue | JsonLdContextDocument): JsonValue {
   }
 
   if (Array.isArray(obj)) {
-    return obj.map(item => convertAtToDollar(item))
+    return obj.map((item) => convertAtToDollar(item))
   }
 
   const result: Record<string, JsonValue> = {}
@@ -98,7 +98,7 @@ async function transformContext(content: string): Promise<TransformOutput> {
     const json5Options = {
       space: 2,
       quote: '"',
-      replacer: null
+      replacer: null,
     }
 
     console.log('Stringifying to JSON5...')
@@ -107,7 +107,7 @@ async function transformContext(content: string): Promise<TransformOutput> {
 
     return {
       content: output,
-      size: output.length
+      size: output.length,
     }
   } catch (error) {
     console.error('Error in transformContext:', error instanceof Error ? error.message : String(error))
@@ -161,7 +161,7 @@ export async function buildContexts(): Promise<void> {
     console.log(`Reading source directory: ${SOURCE_DIR}`)
     const files = await fs.readdir(SOURCE_DIR)
     console.log('All files in source directory:', files)
-    const contextFiles = files.filter(file => file.endsWith('.jsonld'))
+    const contextFiles = files.filter((file) => file.endsWith('.jsonld'))
     console.log('Found context files:', contextFiles)
 
     if (contextFiles.length === 0) {
@@ -176,9 +176,7 @@ export async function buildContexts(): Promise<void> {
       const baseName = path.basename(file, '.jsonld')
       console.log(`\nProcessing ${baseName}...`)
 
-      const safeIdentifier = baseName
-        .replace(/[.-]/g, '_')
-        .toLowerCase()
+      const safeIdentifier = baseName.replace(/[.-]/g, '_').toLowerCase()
       console.log(`Safe identifier: ${safeIdentifier}`)
 
       try {
@@ -224,7 +222,6 @@ export default {
     console.log('\nWriting index.ts...')
     await fs.writeFile(indexPath, indexContent)
     console.log('Successfully generated index.ts with context exports')
-
   } catch (error) {
     console.error('Error in buildContexts:', error instanceof Error ? error.message : String(error))
     console.error('Stack trace:', error instanceof Error ? error.stack : 'No stack trace available')

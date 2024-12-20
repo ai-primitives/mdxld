@@ -22,9 +22,9 @@ author: John Doe
         data: {
           title: 'My Document',
           description: 'A sample document',
-          author: 'John Doe'
+          author: 'John Doe',
         },
-        content: '\n# Hello World'
+        content: '\n# Hello World',
       })
     })
 
@@ -42,9 +42,9 @@ title: My Document
         type: 'https://mdx.org.ai/Document',
         context: 'https://schema.org',
         data: {
-          title: 'My Document'
+          title: 'My Document',
         },
-        content: '\n# Hello World'
+        content: '\n# Hello World',
       })
     })
 
@@ -65,12 +65,14 @@ content`
     it('should handle missing or invalid frontmatter', () => {
       expect(parse('# No frontmatter')).toEqual({
         data: {},
-        content: '# No frontmatter'
+        content: '# No frontmatter',
       })
 
-      expect(() => parse(`---
+      expect(() =>
+        parse(`---
 invalid: [
----`)).toThrow('Failed to parse YAML frontmatter')
+---`),
+      ).toThrow('Failed to parse YAML frontmatter')
     })
   })
 
@@ -80,9 +82,9 @@ invalid: [
         type: 'https://mdx.org.ai/Document',
         context: 'https://schema.org',
         data: {
-          title: 'My Document'
+          title: 'My Document',
         },
-        content: '# Hello World'
+        content: '# Hello World',
       }
 
       const result = stringify(input)
@@ -98,7 +100,7 @@ title: My Document
       const input: MDXLD = {
         type: 'https://mdx.org.ai/Document',
         data: {},
-        content: 'content'
+        content: 'content',
       }
 
       const result = stringify(input, { useAtPrefix: true })

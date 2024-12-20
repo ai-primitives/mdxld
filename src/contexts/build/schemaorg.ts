@@ -50,7 +50,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#changes',
       },
-      'rdfs:comment': 'Another legislation that this legislation changes. This encompasses the notions of amendment, replacement, correction, repeal, or other types of change. This may be a direct change (textual or non-textual amendment) or a consequential or indirect change. The property is to be used to express the existence of a change relationship between two acts rather than the existence of a consolidated version of the text that shows the result of the change. For consolidation relationships, use the <a href="/legislationConsolidates">legislationConsolidates</a> property.',
+      'rdfs:comment':
+        'Another legislation that this legislation changes. This encompasses the notions of amendment, replacement, correction, repeal, or other types of change. This may be a direct change (textual or non-textual amendment) or a consequential or indirect change. The property is to be used to express the existence of a change relationship between two acts rather than the existence of a consolidated version of the text that shows the result of the change. For consolidation relationships, use the <a href="/legislationConsolidates">legislationConsolidates</a> property.',
       'rdfs:label': 'legislationChanges',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/ELI',
@@ -74,7 +75,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:interactionStatistic',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.',
+      'rdfs:comment':
+        'The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.',
       'rdfs:label': 'interactionStatistic',
       'schema:domainIncludes': [
         {
@@ -117,7 +119,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Article',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).',
+      'rdfs:comment':
+        'An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).',
       'rdfs:label': 'Article',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -185,7 +188,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:printPage',
       $type: 'rdf:Property',
-      'rdfs:comment': 'If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).',
+      'rdfs:comment':
+        'If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).',
       'rdfs:label': 'printPage',
       'schema:domainIncludes': {
         $id: 'schema:NewsArticle',
@@ -253,7 +257,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ScheduleAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Scheduling future actions, events, or tasks.\\n\\nRelated actions:\\n\\n* [[ReserveAction]]: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation.',
+      'rdfs:comment':
+        'Scheduling future actions, events, or tasks.\\n\\nRelated actions:\\n\\n* [[ReserveAction]]: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation.',
       'rdfs:label': 'ScheduleAction',
       'rdfs:subClassOf': {
         $id: 'schema:PlanAction',
@@ -327,7 +332,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:numberOfItems',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.',
+      'rdfs:comment':
+        'The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.',
       'rdfs:label': 'numberOfItems',
       'schema:domainIncludes': {
         $id: 'schema:ItemList',
@@ -577,7 +583,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalGuidelineContraindication',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.',
+      'rdfs:comment':
+        'A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.',
       'rdfs:label': 'MedicalGuidelineContraindication',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalGuideline',
@@ -636,7 +643,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TradeAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.',
+      'rdfs:comment':
+        'The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.',
       'rdfs:label': 'TradeAction',
       'rdfs:subClassOf': {
         $id: 'schema:Action',
@@ -779,7 +787,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:hasTierRequirement',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A requirement for a user to join a membership tier, for example: a CreditCard if the tier requires sign up for a credit card, A UnitPriceSpecification if the user is required to pay a (periodic) fee, or a MonetaryAmount if the user needs to spend a minimum amount to join the tier. If a tier is free to join then this property does not need to be specified.',
+      'rdfs:comment':
+        'A requirement for a user to join a membership tier, for example: a CreditCard if the tier requires sign up for a credit card, A UnitPriceSpecification if the user is required to pay a (periodic) fee, or a MonetaryAmount if the user needs to spend a minimum amount to join the tier. If a tier is free to join then this property does not need to be specified.',
       'rdfs:label': 'hasTierRequirement',
       'schema:domainIncludes': {
         $id: 'schema:MemberProgramTier',
@@ -814,7 +823,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DataDrivenMediaDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/dataDrivenMedia">data driven media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/dataDrivenMedia">data driven media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'DataDrivenMediaDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -829,7 +839,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ReviewAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.',
+      'rdfs:comment':
+        'The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.',
       'rdfs:label': 'ReviewAction',
       'rdfs:subClassOf': {
         $id: 'schema:AssessAction',
@@ -838,7 +849,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MediaReview',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [[MediaReview]] is a more specialized form of Review dedicated to the evaluation of media content online, typically in the context of fact-checking and misinformation.\n    For more general reviews of media in the broader sense, use [[UserReview]], [[CriticReview]] or other [[Review]] types. This definition is\n    a work in progress. While the [[MediaManipulationRatingEnumeration]] list reflects significant community review amongst fact-checkers and others working\n    to combat misinformation, the specific structures for representing media objects, their versions and publication context, are still evolving. Similarly, best practices for the relationship between [[MediaReview]] and [[ClaimReview]] markup have not yet been finalized.',
+      'rdfs:comment':
+        'A [[MediaReview]] is a more specialized form of Review dedicated to the evaluation of media content online, typically in the context of fact-checking and misinformation.\n    For more general reviews of media in the broader sense, use [[UserReview]], [[CriticReview]] or other [[Review]] types. This definition is\n    a work in progress. While the [[MediaManipulationRatingEnumeration]] list reflects significant community review amongst fact-checkers and others working\n    to combat misinformation, the specific structures for representing media objects, their versions and publication context, are still evolving. Similarly, best practices for the relationship between [[MediaReview]] and [[ClaimReview]] markup have not yet been finalized.',
       'rdfs:label': 'MediaReview',
       'rdfs:subClassOf': {
         $id: 'schema:Review',
@@ -853,7 +865,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CourseInstance',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An instance of a [[Course]] which is distinct from other instances because it is offered at a different time or location or through different media or modes of study or to a specific section of students.',
+      'rdfs:comment':
+        'An instance of a [[Course]] which is distinct from other instances because it is offered at a different time or location or through different media or modes of study or to a specific section of students.',
       'rdfs:label': 'CourseInstance',
       'rdfs:subClassOf': {
         $id: 'schema:Event',
@@ -877,7 +890,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:disambiguatingDescription',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.',
+      'rdfs:comment':
+        'A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.',
       'rdfs:label': 'disambiguatingDescription',
       'rdfs:subPropertyOf': {
         $id: 'schema:description',
@@ -907,7 +921,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:certificationStatus',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the current status of a certification: active or inactive. See also  [gs1:certificationStatus](https://www.gs1.org/voc/certificationStatus).',
+      'rdfs:comment':
+        'Indicates the current status of a certification: active or inactive. See also  [gs1:certificationStatus](https://www.gs1.org/voc/certificationStatus).',
       'rdfs:label': 'certificationStatus',
       'schema:domainIncludes': {
         $id: 'schema:Certification',
@@ -922,7 +937,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:itemOffered',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.',
+      'rdfs:comment':
+        'An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.',
       'rdfs:label': 'itemOffered',
       'schema:domainIncludes': [
         {
@@ -962,7 +978,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:physicalRequirement',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A description of the types of physical activity associated with the job. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.',
+      'rdfs:comment':
+        'A description of the types of physical activity associated with the job. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.',
       'rdfs:label': 'physicalRequirement',
       'schema:domainIncludes': {
         $id: 'schema:JobPosting',
@@ -988,7 +1005,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LocalBusiness',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.',
+      'rdfs:comment':
+        'A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.',
       'rdfs:label': 'LocalBusiness',
       'rdfs:subClassOf': [
         {
@@ -1071,7 +1089,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:vehicleSeatingCapacity',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.\\n\\nTypical unit code(s): C62 for persons.',
+      'rdfs:comment':
+        'The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.\\n\\nTypical unit code(s): C62 for persons.',
       'rdfs:label': 'vehicleSeatingCapacity',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -1091,7 +1110,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Geriatric',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that is concerned with the diagnosis and treatment of diseases, debilities and provision of care to the aged.',
+      'rdfs:comment':
+        'A specific branch of medical science that is concerned with the diagnosis and treatment of diseases, debilities and provision of care to the aged.',
       'rdfs:label': 'Geriatric',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -1132,7 +1152,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PercutaneousProcedure',
       $type: 'schema:MedicalProcedureType',
-      'rdfs:comment': 'A type of medical procedure that involves percutaneous techniques, where access to organs or tissue is achieved via needle-puncture of the skin. For example, catheter-based procedures like stent delivery.',
+      'rdfs:comment':
+        'A type of medical procedure that involves percutaneous techniques, where access to organs or tissue is achieved via needle-puncture of the skin. For example, catheter-based procedures like stent delivery.',
       'rdfs:label': 'PercutaneousProcedure',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -1318,7 +1339,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CheckOutAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of an agent communicating (service provider, social media, etc) their departure of a previously reserved service (e.g. flight check-in) or place (e.g. hotel).\\n\\nRelated actions:\\n\\n* [[CheckInAction]]: The antonym of CheckOutAction.\\n* [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.\\n* [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.',
+      'rdfs:comment':
+        'The act of an agent communicating (service provider, social media, etc) their departure of a previously reserved service (e.g. flight check-in) or place (e.g. hotel).\\n\\nRelated actions:\\n\\n* [[CheckInAction]]: The antonym of CheckOutAction.\\n* [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.\\n* [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.',
       'rdfs:label': 'CheckOutAction',
       'rdfs:subClassOf': {
         $id: 'schema:CommunicateAction',
@@ -1397,7 +1419,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:emissionsCO2',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value, since there is no UN/CEFACT Common Code for "g/km".',
+      'rdfs:comment':
+        'The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value, since there is no UN/CEFACT Common Code for "g/km".',
       'rdfs:label': 'emissionsCO2',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -1444,7 +1467,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Order',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer.',
+      'rdfs:comment':
+        'An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer.',
       'rdfs:label': 'Order',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -1500,7 +1524,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:broadcastFrequency',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and FM radio channels, e.g. "87 FM".',
+      'rdfs:comment':
+        'The frequency used for over-the-air broadcasts. Numeric values or simple ranges, e.g. 87-99. In addition a shortcut idiom is supported for frequencies of AM and FM radio channels, e.g. "87 FM".',
       'rdfs:label': 'broadcastFrequency',
       'schema:domainIncludes': [
         {
@@ -1525,7 +1550,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DigitalPlatformEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Enumerates some common technology platforms, for use with properties such as [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable code is not enumerated here, textual or URL values can be used instead. These codes are at a fairly high level and do not deal with versioning and other nuance. Additional codes can be suggested [in github](https://github.com/schemaorg/schemaorg/issues/3057). ',
+      'rdfs:comment':
+        'Enumerates some common technology platforms, for use with properties such as [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable code is not enumerated here, textual or URL values can be used instead. These codes are at a fairly high level and do not deal with versioning and other nuance. Additional codes can be suggested [in github](https://github.com/schemaorg/schemaorg/issues/3057). ',
       'rdfs:label': 'DigitalPlatformEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -1664,7 +1690,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalGuideline',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Any recommendation made by a standard society (e.g. ACC/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.',
+      'rdfs:comment':
+        'Any recommendation made by a standard society (e.g. ACC/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.',
       'rdfs:label': 'MedicalGuideline',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -1780,7 +1807,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:beneficiaryBank',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the beneficiary.',
+      'rdfs:comment':
+        'A bank or bank’s branch, financial institution or international financial institution operating the beneficiary’s bank account or releasing funds for the beneficiary.',
       'rdfs:label': 'beneficiaryBank',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -1806,7 +1834,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:knowsAbout',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]] descriptions.',
+      'rdfs:comment':
+        'Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]] descriptions.',
       'rdfs:label': 'knowsAbout',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/TP',
@@ -1897,7 +1926,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:additionalProperty',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\\n\\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.\n',
+      'rdfs:comment':
+        'A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\\n\\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.\n',
       'rdfs:label': 'additionalProperty',
       'schema:domainIncludes': [
         {
@@ -2001,7 +2031,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Hotel',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A hotel is an establishment that provides lodging paid on a short-term basis (source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
+      'rdfs:comment':
+        'A hotel is an establishment that provides lodging paid on a short-term basis (source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
       'rdfs:label': 'Hotel',
       'rdfs:subClassOf': {
         $id: 'schema:LodgingBusiness',
@@ -2105,7 +2136,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:publishingPrinciples',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].\n\nWhile such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.\n',
+      'rdfs:comment':
+        'The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].\n\nWhile such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.\n',
       'rdfs:label': 'publishingPrinciples',
       'schema:domainIncludes': [
         {
@@ -2145,7 +2177,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:price',
       $type: 'rdf:Property',
-      'rdfs:comment': "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\\n\\nUsage guidelines:\\n\\n* Use the [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. \"USD\"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. \"BTC\"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. \"Ithaca HOUR\") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in the value.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.\\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a \"content=\" attribute for publishing simple machine-readable values alongside more human-friendly formatting.\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n      ",
+      'rdfs:comment':
+        "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\\n\\nUsage guidelines:\\n\\n* Use the [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. \"USD\"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. \"BTC\"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. \"Ithaca HOUR\") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in the value.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.\\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a \"content=\" attribute for publishing simple machine-readable values alongside more human-friendly formatting.\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n      ",
       'rdfs:label': 'price',
       'schema:domainIncludes': [
         {
@@ -2205,7 +2238,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:mobileUrl',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The [[mobileUrl]] property is provided for specific situations in which data consumers need to determine whether one of several provided URLs is a dedicated \'mobile site\'.\n\nTo discourage over-use, and reflecting intial usecases, the property is expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The general trend in web technology is towards [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) in which content can be flexibly adapted to a wide range of browsing environments. Pages and sites referenced with the long-established [[url]] property should ideally also be usable on a wide variety of devices, including mobile phones. In most cases, it would be pointless and counter productive to attempt to update all [[url]] markup to use [[mobileUrl]] for more mobile-oriented pages. The property is intended for the case when items (primarily [[Product]] and [[Offer]]) have extra URLs hosted on an additional "mobile site" alongside the main one. It should not be taken as an endorsement of this publication style.\n    ',
+      'rdfs:comment':
+        'The [[mobileUrl]] property is provided for specific situations in which data consumers need to determine whether one of several provided URLs is a dedicated \'mobile site\'.\n\nTo discourage over-use, and reflecting intial usecases, the property is expected only on [[Product]] and [[Offer]], rather than [[Thing]]. The general trend in web technology is towards [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) in which content can be flexibly adapted to a wide range of browsing environments. Pages and sites referenced with the long-established [[url]] property should ideally also be usable on a wide variety of devices, including mobile phones. In most cases, it would be pointless and counter productive to attempt to update all [[url]] markup to use [[mobileUrl]] for more mobile-oriented pages. The property is intended for the case when items (primarily [[Product]] and [[Offer]]) have extra URLs hosted on an additional "mobile site" alongside the main one. It should not be taken as an endorsement of this publication style.\n    ',
       'rdfs:label': 'mobileUrl',
       'schema:domainIncludes': [
         {
@@ -2266,7 +2300,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:actor',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.',
+      'rdfs:comment':
+        'An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.',
       'rdfs:label': 'actor',
       'schema:domainIncludes': [
         {
@@ -2318,7 +2353,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:smiles',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A specification in form of a line notation for describing the structure of chemical species using short ASCII strings.  Double bond stereochemistry \\ indicators may need to be escaped in the string in formats where the backslash is an escape character.',
+      'rdfs:comment':
+        'A specification in form of a line notation for describing the structure of chemical species using short ASCII strings.  Double bond stereochemistry \\ indicators may need to be escaped in the string in formats where the backslash is an escape character.',
       'rdfs:label': 'smiles',
       'rdfs:subPropertyOf': {
         $id: 'schema:hasRepresentation',
@@ -2344,10 +2380,7 @@ export const schemaorg: Record<string, any> = {
     },
     {
       $id: 'schema:Text',
-      $type: [
-        'schema:DataType',
-        'rdfs:Class',
-      ],
+      $type: ['schema:DataType', 'rdfs:Class'],
       'rdfs:comment': 'Data type: Text.',
       'rdfs:label': 'Text',
     },
@@ -2378,7 +2411,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EducationalOccupationalCredential',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An educational or occupational credential. A diploma, academic degree, certification, qualification, badge, etc., that may be awarded to a person or other entity that meets the requirements defined by the credentialer.',
+      'rdfs:comment':
+        'An educational or occupational credential. A diploma, academic degree, certification, qualification, badge, etc., that may be awarded to a person or other entity that meets the requirements defined by the credentialer.',
       'rdfs:label': 'EducationalOccupationalCredential',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -2402,7 +2436,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:payload',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n\\n* Note 1: Many databases specify the permitted TOTAL weight instead, which is the sum of [[weight]] and [[payload]]\\n* Note 2: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 3: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\\n* Note 4: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
+      'rdfs:comment':
+        'The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n\\n* Note 1: Many databases specify the permitted TOTAL weight instead, which is the sum of [[weight]] and [[payload]]\\n* Note 2: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 3: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\\n* Note 4: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
       'rdfs:label': 'payload',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -2420,7 +2455,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DangerousGoodConsideration',
       $type: 'schema:AdultOrientedEnumeration',
-      'rdfs:comment': 'The item is dangerous and requires careful handling and/or special training of the user. See also the [UN Model Classification](https://unece.org/DAM/trans/danger/publi/unrec/rev17/English/02EREv17_Part2.pdf) defining the 9 classes of dangerous goods such as explosives, gases, flammables, and more.',
+      'rdfs:comment':
+        'The item is dangerous and requires careful handling and/or special training of the user. See also the [UN Model Classification](https://unece.org/DAM/trans/danger/publi/unrec/rev17/English/02EREv17_Part2.pdf) defining the 9 classes of dangerous goods such as explosives, gases, flammables, and more.',
       'rdfs:label': 'DangerousGoodConsideration',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -2432,7 +2468,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:coverageStartTime',
       $type: 'rdf:Property',
-      'rdfs:comment': "The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.",
+      'rdfs:comment':
+        "The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.",
       'rdfs:label': 'coverageStartTime',
       'schema:domainIncludes': {
         $id: 'schema:LiveBlogPosting',
@@ -2453,7 +2490,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:byDay',
       $type: 'rdf:Property',
-      'rdfs:comment': "Defines the day(s) of the week on which a recurring [[Event]] takes place. May be specified using either [[DayOfWeek]], or alternatively [[Text]] conforming to iCal's syntax for byDay recurrence rules.",
+      'rdfs:comment':
+        "Defines the day(s) of the week on which a recurring [[Event]] takes place. May be specified using either [[DayOfWeek]], or alternatively [[Text]] conforming to iCal's syntax for byDay recurrence rules.",
       'rdfs:label': 'byDay',
       'schema:domainIncludes': {
         $id: 'schema:Schedule',
@@ -2669,7 +2707,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BusOrCoach',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury buses, usually in service for long distance travel.',
+      'rdfs:comment':
+        'A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury buses, usually in service for long distance travel.',
       'rdfs:label': 'BusOrCoach',
       'rdfs:subClassOf': {
         $id: 'schema:Vehicle',
@@ -2684,7 +2723,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PriceSpecification',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use [[MonetaryAmount]] to describe independent amounts of money such as a salary, credit card limits, etc.',
+      'rdfs:comment':
+        'A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use [[MonetaryAmount]] to describe independent amounts of money such as a salary, credit card limits, etc.',
       'rdfs:label': 'PriceSpecification',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -2722,7 +2762,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:relatedStructure',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.',
+      'rdfs:comment':
+        'Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.',
       'rdfs:label': 'relatedStructure',
       'schema:domainIncludes': {
         $id: 'schema:AnatomicalSystem',
@@ -2737,7 +2778,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MerchantReturnPolicy',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A MerchantReturnPolicy provides information about product return policies associated with an [[Organization]], [[Product]], or [[Offer]].',
+      'rdfs:comment':
+        'A MerchantReturnPolicy provides information about product return policies associated with an [[Organization]], [[Product]], or [[Offer]].',
       'rdfs:label': 'MerchantReturnPolicy',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -2862,7 +2904,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:contentReferenceTime',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.',
+      'rdfs:comment':
+        'The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.',
       'rdfs:label': 'contentReferenceTime',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -2888,10 +2931,7 @@ export const schemaorg: Record<string, any> = {
     },
     {
       $id: 'schema:Date',
-      $type: [
-        'schema:DataType',
-        'rdfs:Class',
-      ],
+      $type: ['schema:DataType', 'rdfs:Class'],
       'rdfs:comment': 'A date value in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).',
       'rdfs:label': 'Date',
     },
@@ -2995,7 +3035,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Guide',
       $type: 'rdfs:Class',
-      'rdfs:comment': '[[Guide]] is a page or article that recommends specific products or services, or aspects of a thing for a user to consider. A [[Guide]] may represent a Buying Guide and detail aspects of products or services for a user to consider. A [[Guide]] may represent a Product Guide and recommend specific products or services. A [[Guide]] may represent a Ranked List and recommend specific products or services with ranking.',
+      'rdfs:comment':
+        '[[Guide]] is a page or article that recommends specific products or services, or aspects of a thing for a user to consider. A [[Guide]] may represent a Buying Guide and detail aspects of products or services for a user to consider. A [[Guide]] may represent a Product Guide and recommend specific products or services. A [[Guide]] may represent a Ranked List and recommend specific products or services with ranking.',
       'rdfs:label': 'Guide',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -3010,7 +3051,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:StructuredValue',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.',
+      'rdfs:comment':
+        'Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.',
       'rdfs:label': 'StructuredValue',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -3164,7 +3206,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:serialNumber',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.',
+      'rdfs:comment':
+        'The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.',
       'rdfs:label': 'serialNumber',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -3205,7 +3248,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:model',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.',
+      'rdfs:comment':
+        'The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.',
       'rdfs:label': 'model',
       'schema:domainIncludes': {
         $id: 'schema:Product',
@@ -3249,7 +3293,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:isicV4',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.',
+      'rdfs:comment':
+        'The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.',
       'rdfs:label': 'isicV4',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -3272,7 +3317,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Vessel',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.',
+      'rdfs:comment':
+        'A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.',
       'rdfs:label': 'Vessel',
       'rdfs:subClassOf': {
         $id: 'schema:AnatomicalStructure',
@@ -3284,7 +3330,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:hasCourse',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A course or class that is one of the learning opportunities that constitute an educational / occupational program. No information is implied about whether the course is mandatory or optional; no guarantee is implied about whether the course will be available to everyone on the program.',
+      'rdfs:comment':
+        'A course or class that is one of the learning opportunities that constitute an educational / occupational program. No information is implied about whether the course is mandatory or optional; no guarantee is implied about whether the course will be available to everyone on the program.',
       'rdfs:label': 'hasCourse',
       'schema:domainIncludes': {
         $id: 'schema:EducationalOccupationalProgram',
@@ -3334,7 +3381,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:contactType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.',
+      'rdfs:comment':
+        'A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.',
       'rdfs:label': 'contactType',
       'schema:domainIncludes': {
         $id: 'schema:ContactPoint',
@@ -3346,7 +3394,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CompositeSyntheticDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/compositeSynthetic">composite synthetic</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/compositeSynthetic">composite synthetic</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'CompositeSyntheticDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -3361,7 +3410,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:fileFormat',
       $type: 'rdf:Property',
-      'rdfs:comment': "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
+      'rdfs:comment':
+        "Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
       'rdfs:label': 'fileFormat',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -3381,7 +3431,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:membershipPointsEarned',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)',
+      'rdfs:comment':
+        'The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)',
       'rdfs:label': 'membershipPointsEarned',
       'schema:domainIncludes': [
         {
@@ -3521,7 +3572,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Urologic',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that is concerned with the diagnosis and treatment of diseases pertaining to the urinary tract and the urogenital system.',
+      'rdfs:comment':
+        'A specific branch of medical science that is concerned with the diagnosis and treatment of diseases pertaining to the urinary tract and the urogenital system.',
       'rdfs:label': 'Urologic',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -3530,7 +3582,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:aspect',
       $type: 'rdf:Property',
-      'rdfs:comment': "An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.",
+      'rdfs:comment':
+        "An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.",
       'rdfs:label': 'aspect',
       'schema:domainIncludes': {
         $id: 'schema:MedicalWebPage',
@@ -3635,7 +3688,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:applicationDeadline',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The date on which the program stops collecting applications for the next enrollment cycle. Flexible application deadlines (for example, a program with rolling admissions) can be described in a textual string, rather than as a DateTime.',
+      'rdfs:comment':
+        'The date on which the program stops collecting applications for the next enrollment cycle. Flexible application deadlines (for example, a program with rolling admissions) can be described in a textual string, rather than as a DateTime.',
       'rdfs:label': 'applicationDeadline',
       'schema:domainIncludes': {
         $id: 'schema:EducationalOccupationalProgram',
@@ -3658,7 +3712,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:additionalVariable',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.',
+      'rdfs:comment':
+        'Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.',
       'rdfs:label': 'additionalVariable',
       'schema:domainIncludes': {
         $id: 'schema:ExercisePlan',
@@ -3724,7 +3779,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ComicIssue',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Individual comic issues are serially published as\n    \tpart of a larger series. For the sake of consistency, even one-shot issues\n    \tbelong to a series comprised of a single issue. All comic issues can be\n    \tuniquely identified by: the combination of the name and volume number of the\n    \tseries to which the issue belongs; the issue number; and the variant\n    \tdescription of the issue (if any).',
+      'rdfs:comment':
+        'Individual comic issues are serially published as\n    \tpart of a larger series. For the sake of consistency, even one-shot issues\n    \tbelong to a series comprised of a single issue. All comic issues can be\n    \tuniquely identified by: the combination of the name and volume number of the\n    \tseries to which the issue belongs; the issue number; and the variant\n    \tdescription of the issue (if any).',
       'rdfs:label': 'ComicIssue',
       'rdfs:subClassOf': {
         $id: 'schema:PublicationIssue',
@@ -3810,7 +3866,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:StatisticalVariable',
       $type: 'rdfs:Class',
-      'rdfs:comment': '[[StatisticalVariable]] represents any type of statistical metric that can be measured at a place and time. The usage pattern for [[StatisticalVariable]] is typically expressed using [[Observation]] with an explicit [[populationType]], which is a type, typically drawn from Schema.org. Each [[StatisticalVariable]] is marked as a [[ConstraintNode]], meaning that some properties (those listed using [[constraintProperty]]) serve in this setting solely to define the statistical variable rather than literally describe a specific person, place or thing. For example, a [[StatisticalVariable]] Median_Height_Person_Female representing the median height of women, could be written as follows: the population type is [[Person]]; the measuredProperty [[height]]; the [[statType]] [[median]]; the [[gender]] [[Female]]. It is important to note that there are many kinds of scientific quantitative observation which are not fully, perfectly or unambiguously described following this pattern, or with solely Schema.org terminology. The approach taken here is designed to allow partial, incremental or minimal description of [[StatisticalVariable]]s, and the use of detailed sets of entity and property IDs from external repositories. The [[measurementMethod]], [[unitCode]] and [[unitText]] properties can also be used to clarify the specific nature and notation of an observed measurement. ',
+      'rdfs:comment':
+        '[[StatisticalVariable]] represents any type of statistical metric that can be measured at a place and time. The usage pattern for [[StatisticalVariable]] is typically expressed using [[Observation]] with an explicit [[populationType]], which is a type, typically drawn from Schema.org. Each [[StatisticalVariable]] is marked as a [[ConstraintNode]], meaning that some properties (those listed using [[constraintProperty]]) serve in this setting solely to define the statistical variable rather than literally describe a specific person, place or thing. For example, a [[StatisticalVariable]] Median_Height_Person_Female representing the median height of women, could be written as follows: the population type is [[Person]]; the measuredProperty [[height]]; the [[statType]] [[median]]; the [[gender]] [[Female]]. It is important to note that there are many kinds of scientific quantitative observation which are not fully, perfectly or unambiguously described following this pattern, or with solely Schema.org terminology. The approach taken here is designed to allow partial, incremental or minimal description of [[StatisticalVariable]]s, and the use of detailed sets of entity and property IDs from external repositories. The [[measurementMethod]], [[unitCode]] and [[unitText]] properties can also be used to clarify the specific nature and notation of an observed measurement. ',
       'rdfs:label': 'StatisticalVariable',
       'rdfs:subClassOf': {
         $id: 'schema:ConstraintNode',
@@ -3842,7 +3899,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:prepTime',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).',
+      'rdfs:comment':
+        'The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).',
       'rdfs:label': 'prepTime',
       'schema:domainIncludes': [
         {
@@ -3926,7 +3984,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BreadcrumbList',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A BreadcrumbList is an ItemList consisting of a chain of linked Web pages, typically described using at least their URL and their name, and typically ending with the current page.\\n\\nThe [[position]] property is used to reconstruct the order of the items in a BreadcrumbList. The convention is that a breadcrumb list has an [[itemListOrder]] of [[ItemListOrderAscending]] (lower values listed first), and that the first items in this list correspond to the \"top\" or beginning of the breadcrumb trail, e.g. with a site or section homepage. The specific values of 'position' are not assigned meaning for a BreadcrumbList, but they should be integers, e.g. beginning with '1' for the first item in the list.\n      ",
+      'rdfs:comment':
+        "A BreadcrumbList is an ItemList consisting of a chain of linked Web pages, typically described using at least their URL and their name, and typically ending with the current page.\\n\\nThe [[position]] property is used to reconstruct the order of the items in a BreadcrumbList. The convention is that a breadcrumb list has an [[itemListOrder]] of [[ItemListOrderAscending]] (lower values listed first), and that the first items in this list correspond to the \"top\" or beginning of the breadcrumb trail, e.g. with a site or section homepage. The specific values of 'position' are not assigned meaning for a BreadcrumbList, but they should be integers, e.g. beginning with '1' for the first item in the list.\n      ",
       'rdfs:label': 'BreadcrumbList',
       'rdfs:subClassOf': {
         $id: 'schema:ItemList',
@@ -3935,7 +3994,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:copyrightNotice',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Text of a notice appropriate for describing the copyright aspects of this Creative Work, ideally indicating the owner of the copyright for the Work.',
+      'rdfs:comment':
+        'Text of a notice appropriate for describing the copyright aspects of this Creative Work, ideally indicating the owner of the copyright for the Work.',
       'rdfs:label': 'copyrightNotice',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -3977,7 +4037,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserComments',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserComments',
       'rdfs:subClassOf': {
         $id: 'schema:UserInteraction',
@@ -4229,7 +4290,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:originalMediaLink',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]] content, e.g. video file.',
+      'rdfs:comment':
+        'Link to the page containing an original version of the content, or directly to an online copy of the original [[MediaObject]] content, e.g. video file.',
       'rdfs:label': 'originalMediaLink',
       'schema:domainIncludes': {
         $id: 'schema:MediaReview',
@@ -4264,7 +4326,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PrimaryCare',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': "The medical care by a physician, or other health-care professional, who is the patient's first contact with the health-care system and who may recommend a specialist if necessary.",
+      'rdfs:comment':
+        "The medical care by a physician, or other health-care professional, who is the patient's first contact with the health-care system and who may recommend a specialist if necessary.",
       'rdfs:label': 'PrimaryCare',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -4335,7 +4398,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:GovernmentBenefitsType',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'GovernmentBenefitsType enumerates several kinds of government benefits to support the COVID-19 situation. Note that this structure may not capture all benefits offered.',
+      'rdfs:comment':
+        'GovernmentBenefitsType enumerates several kinds of government benefits to support the COVID-19 situation. Note that this structure may not capture all benefits offered.',
       'rdfs:label': 'GovernmentBenefitsType',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -4579,7 +4643,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DayOfWeek',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.\n\nOriginally, URLs from [GoodRelations](http://purl.org/goodrelations/v1) were used (for [[Monday]], [[Tuesday]], [[Wednesday]], [[Thursday]], [[Friday]], [[Saturday]], [[Sunday]] plus a special entry for [[PublicHolidays]]); these have now been integrated directly into schema.org.\n      ',
+      'rdfs:comment':
+        'The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.\n\nOriginally, URLs from [GoodRelations](http://purl.org/goodrelations/v1) were used (for [[Monday]], [[Tuesday]], [[Wednesday]], [[Thursday]], [[Friday]], [[Saturday]], [[Sunday]] plus a special entry for [[PublicHolidays]]); these have now been integrated directly into schema.org.\n      ',
       'rdfs:label': 'DayOfWeek',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -4591,7 +4656,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:vehicleIdentificationNumber',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.',
+      'rdfs:comment':
+        'The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.',
       'rdfs:label': 'vehicleIdentificationNumber',
       'rdfs:subPropertyOf': {
         $id: 'schema:serialNumber',
@@ -4609,7 +4675,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DrugCost',
       $type: 'rdfs:Class',
-      'rdfs:comment': "The cost per unit of a medical drug. Note that this type is not meant to represent the price in an offer of a drug for sale; see the Offer type for that. This type will typically be used to tag wholesale or average retail cost of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending on how and where they are paid for, so while this type captures some of the variables, costs should be used with caution by consumers of this schema's markup.",
+      'rdfs:comment':
+        "The cost per unit of a medical drug. Note that this type is not meant to represent the price in an offer of a drug for sale; see the Offer type for that. This type will typically be used to tag wholesale or average retail cost of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending on how and where they are paid for, so while this type captures some of the variables, costs should be used with caution by consumers of this schema's markup.",
       'rdfs:label': 'DrugCost',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -4621,7 +4688,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Landform',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins.',
+      'rdfs:comment':
+        'A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins.',
       'rdfs:label': 'Landform',
       'rdfs:subClassOf': {
         $id: 'schema:Place',
@@ -4713,7 +4781,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoEquals',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior of the other" (a symmetric relationship).',
+      'rdfs:comment':
+        'Represents spatial relations in which two geometries (or the places they represent) are topologically equal, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are topologically equal if their interiors intersect and no part of the interior or boundary of one geometry intersects the exterior of the other" (a symmetric relationship).',
       'rdfs:label': 'geoEquals',
       'schema:domainIncludes': [
         {
@@ -4781,7 +4850,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:hasEnergyConsumptionDetails',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Defines the energy efficiency Category (also known as "class" or "rating") for a product according to an international energy efficiency standard.',
+      'rdfs:comment':
+        'Defines the energy efficiency Category (also known as "class" or "rating") for a product according to an international energy efficiency standard.',
       'rdfs:label': 'hasEnergyConsumptionDetails',
       'schema:domainIncludes': {
         $id: 'schema:Product',
@@ -4799,7 +4869,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:interactionType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The Action representing the type of interaction. For up votes, +1s, etc. use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use the most specific Action.',
+      'rdfs:comment':
+        'The Action representing the type of interaction. For up votes, +1s, etc. use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use the most specific Action.',
       'rdfs:label': 'interactionType',
       'schema:domainIncludes': {
         $id: 'schema:InteractionCounter',
@@ -4823,7 +4894,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:diversityPolicy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on both staffing and sources, typically providing staffing data.',
+      'rdfs:comment':
+        'Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on both staffing and sources, typically providing staffing data.',
       'rdfs:label': 'diversityPolicy',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/TP',
@@ -4859,10 +4931,7 @@ export const schemaorg: Record<string, any> = {
     },
     {
       $id: 'schema:Boolean',
-      $type: [
-        'schema:DataType',
-        'rdfs:Class',
-      ],
+      $type: ['schema:DataType', 'rdfs:Class'],
       'rdfs:comment': 'Boolean: True or False.',
       'rdfs:label': 'Boolean',
     },
@@ -4961,7 +5030,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:actionPlatform',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.',
+      'rdfs:comment':
+        'The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.',
       'rdfs:label': 'actionPlatform',
       'schema:domainIncludes': {
         $id: 'schema:EntryPoint',
@@ -4981,7 +5051,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OccupationalTherapy',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A treatment of people with physical, emotional, or social problems, using purposeful activity to help them overcome or learn to deal with their problems.',
+      'rdfs:comment':
+        'A treatment of people with physical, emotional, or social problems, using purposeful activity to help them overcome or learn to deal with their problems.',
       'rdfs:label': 'OccupationalTherapy',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalTherapy',
@@ -5002,7 +5073,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Midwifery',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A nurse-like health profession that deals with pregnancy, childbirth, and the postpartum period (including care of the newborn), besides sexual and reproductive health of women throughout their lives.',
+      'rdfs:comment':
+        'A nurse-like health profession that deals with pregnancy, childbirth, and the postpartum period (including care of the newborn), besides sexual and reproductive health of women throughout their lives.',
       'rdfs:label': 'Midwifery',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -5023,7 +5095,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AskPublicNewsArticle',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [[NewsArticle]] expressing an open call by a [[NewsMediaOrganization]] asking the public for input, insights, clarifications, anecdotes, documentation, etc., on an issue, for reporting purposes.',
+      'rdfs:comment':
+        'A [[NewsArticle]] expressing an open call by a [[NewsMediaOrganization]] asking the public for input, insights, clarifications, anecdotes, documentation, etc., on an issue, for reporting purposes.',
       'rdfs:label': 'AskPublicNewsArticle',
       'rdfs:subClassOf': {
         $id: 'schema:NewsArticle',
@@ -5099,7 +5172,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:educationalAlignment',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An alignment to an established educational framework.\n\nThis property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.',
+      'rdfs:comment':
+        'An alignment to an established educational framework.\n\nThis property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.',
       'rdfs:label': 'educationalAlignment',
       'schema:domainIncludes': [
         {
@@ -5142,7 +5216,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:titleEIDR',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television.\n\nFor example, the motion picture known as "Ghostbusters" has a titleEIDR of  "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls "edits". See [[editEIDR]].\n\nSince schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.\n',
+      'rdfs:comment':
+        'An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television.\n\nFor example, the motion picture known as "Ghostbusters" has a titleEIDR of  "10.5240/7EC7-228A-510A-053E-CBB8-J". This title (or work) may have several variants, which EIDR calls "edits". See [[editEIDR]].\n\nSince schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.\n',
       'rdfs:label': 'titleEIDR',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -5249,7 +5324,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserDownloads',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserDownloads',
       'rdfs:subClassOf': {
         $id: 'schema:UserInteraction',
@@ -5311,7 +5387,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ConstraintNode',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The ConstraintNode type is provided to support usecases in which a node in a structured data graph is described with properties which appear to describe a single entity, but are being used in a situation where they serve a more abstract purpose. A [[ConstraintNode]] can be described using [[constraintProperty]] and [[numConstraints]]. These constraint properties can serve a\n    variety of purposes, and their values may sometimes be understood to indicate sets of possible values rather than single, exact and specific values.',
+      'rdfs:comment':
+        'The ConstraintNode type is provided to support usecases in which a node in a structured data graph is described with properties which appear to describe a single entity, but are being used in a situation where they serve a more abstract purpose. A [[ConstraintNode]] can be described using [[constraintProperty]] and [[numConstraints]]. These constraint properties can serve a\n    variety of purposes, and their values may sometimes be understood to indicate sets of possible values rather than single, exact and specific values.',
       'rdfs:label': 'ConstraintNode',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -5446,7 +5523,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Obstetric',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that specializes in the care of women during the prenatal and postnatal care and with the delivery of the child.',
+      'rdfs:comment':
+        'A specific branch of medical science that specializes in the care of women during the prenatal and postnatal care and with the delivery of the child.',
       'rdfs:label': 'Obstetric',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -5458,7 +5536,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:temporal',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The "temporal" property can be used in cases where more specific properties\n(e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate.',
+      'rdfs:comment':
+        'The "temporal" property can be used in cases where more specific properties\n(e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate.',
       'rdfs:label': 'temporal',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -5475,7 +5554,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:subOrganization',
       $type: 'rdf:Property',
-      'rdfs:comment': "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.",
+      'rdfs:comment':
+        "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.",
       'rdfs:label': 'subOrganization',
       'schema:domainIncludes': {
         $id: 'schema:Organization',
@@ -5511,7 +5591,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:clinicalPharmacology',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).',
+      'rdfs:comment':
+        'Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).',
       'rdfs:label': 'clinicalPharmacology',
       'schema:domainIncludes': {
         $id: 'schema:Drug',
@@ -5541,7 +5622,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalContraindication',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A condition or factor that serves as a reason to withhold a certain medical therapy. Contraindications can be absolute (there are no reasonable circumstances for undertaking a course of action) or relative (the patient is at higher risk of complications, but these risks may be outweighed by other considerations or mitigated by other measures).',
+      'rdfs:comment':
+        'A condition or factor that serves as a reason to withhold a certain medical therapy. Contraindications can be absolute (there are no reasonable circumstances for undertaking a course of action) or relative (the patient is at higher risk of complications, but these risks may be outweighed by other considerations or mitigated by other measures).',
       'rdfs:label': 'MedicalContraindication',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -5553,7 +5635,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:addOn',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are available for a surcharge).',
+      'rdfs:comment':
+        'An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are available for a surcharge).',
       'rdfs:label': 'addOn',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -5568,7 +5651,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OfferForLease',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An [[OfferForLease]] in Schema.org represents an [[Offer]] to lease out something, i.e. an [[Offer]] whose\n  [[businessFunction]] is [lease out](http://purl.org/goodrelations/v1#LeaseOut.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for\n  background on the underlying concepts.\n  ',
+      'rdfs:comment':
+        'An [[OfferForLease]] in Schema.org represents an [[Offer]] to lease out something, i.e. an [[Offer]] whose\n  [[businessFunction]] is [lease out](http://purl.org/goodrelations/v1#LeaseOut.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for\n  background on the underlying concepts.\n  ',
       'rdfs:label': 'OfferForLease',
       'rdfs:subClassOf': {
         $id: 'schema:Offer',
@@ -5639,7 +5723,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:knowsLanguage',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).',
+      'rdfs:comment':
+        'Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).',
       'rdfs:label': 'knowsLanguage',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/TP',
@@ -5770,7 +5855,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:HealthTopicContent',
       $type: 'rdfs:Class',
-      'rdfs:comment': '[[HealthTopicContent]] is [[WebContent]] that is about some aspect of a health topic, e.g. a condition, its symptoms or treatments. Such content may be comprised of several parts or sections and use different types of media. Multiple instances of [[WebContent]] (and hence [[HealthTopicContent]]) can be related using [[hasPart]] / [[isPartOf]] where there is some kind of content hierarchy, and their content described with [[about]] and [[mentions]] e.g. building upon the existing [[MedicalCondition]] vocabulary.\n  ',
+      'rdfs:comment':
+        '[[HealthTopicContent]] is [[WebContent]] that is about some aspect of a health topic, e.g. a condition, its symptoms or treatments. Such content may be comprised of several parts or sections and use different types of media. Multiple instances of [[WebContent]] (and hence [[HealthTopicContent]]) can be related using [[hasPart]] / [[isPartOf]] where there is some kind of content hierarchy, and their content described with [[about]] and [[mentions]] e.g. building upon the existing [[MedicalCondition]] vocabulary.\n  ',
       'rdfs:label': 'HealthTopicContent',
       'rdfs:subClassOf': {
         $id: 'schema:WebContent',
@@ -5794,7 +5880,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:energyEfficiencyScaleMin',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.',
+      'rdfs:comment':
+        'Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.',
       'rdfs:label': 'energyEfficiencyScaleMin',
       'schema:domainIncludes': {
         $id: 'schema:EnergyConsumptionDetails',
@@ -5851,7 +5938,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OpinionNewsArticle',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An [[OpinionNewsArticle]] is a [[NewsArticle]] that primarily expresses opinions rather than journalistic reporting of news and events. For example, a [[NewsArticle]] consisting of a column or [[Blog]]/[[BlogPosting]] entry in the Opinions section of a news publication. ',
+      'rdfs:comment':
+        'An [[OpinionNewsArticle]] is a [[NewsArticle]] that primarily expresses opinions rather than journalistic reporting of news and events. For example, a [[NewsArticle]] consisting of a column or [[Blog]]/[[BlogPosting]] entry in the Opinions section of a news publication. ',
       'rdfs:label': 'OpinionNewsArticle',
       'rdfs:subClassOf': {
         $id: 'schema:NewsArticle',
@@ -5951,7 +6039,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:iso6523Code',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An organization identifier as defined in [ISO 6523(-1)](https://en.wikipedia.org/wiki/ISO/IEC_6523). The identifier should be in the `XXXX:YYYYYY:ZZZ` or `XXXX:YYYYYY`format. Where `XXXX` is a 4 digit _ICD_ (International Code Designator), `YYYYYY` is an _OID_ (Organization Identifier) with all formatting characters (dots, dashes, spaces) removed with a maximal length of 35 characters, and `ZZZ` is an optional OPI (Organization Part Identifier) with a maximum length of 35 characters. The various components (ICD, OID, OPI) are joined with a colon character (ASCII `0x3a`). Note that many existing organization identifiers defined as attributes like [leiCode](https://schema.org/leiCode) (`0199`), [duns](https://schema.org/duns) (`0060`) or [GLN](https://schema.org/globalLocationNumber) (`0088`) can be expressed using ISO-6523. If possible, ISO-6523 codes should be preferred to populating [vatID](https://schema.org/vatID) or [taxID](https://schema.org/taxID), as ISO identifiers are less ambiguous.',
+      'rdfs:comment':
+        'An organization identifier as defined in [ISO 6523(-1)](https://en.wikipedia.org/wiki/ISO/IEC_6523). The identifier should be in the `XXXX:YYYYYY:ZZZ` or `XXXX:YYYYYY`format. Where `XXXX` is a 4 digit _ICD_ (International Code Designator), `YYYYYY` is an _OID_ (Organization Identifier) with all formatting characters (dots, dashes, spaces) removed with a maximal length of 35 characters, and `ZZZ` is an optional OPI (Organization Part Identifier) with a maximum length of 35 characters. The various components (ICD, OID, OPI) are joined with a colon character (ASCII `0x3a`). Note that many existing organization identifiers defined as attributes like [leiCode](https://schema.org/leiCode) (`0199`), [duns](https://schema.org/duns) (`0060`) or [GLN](https://schema.org/globalLocationNumber) (`0088`) can be expressed using ISO-6523. If possible, ISO-6523 codes should be preferred to populating [vatID](https://schema.org/vatID) or [taxID](https://schema.org/taxID), as ISO identifiers are less ambiguous.',
       'rdfs:label': 'iso6523Code',
       'schema:domainIncludes': {
         $id: 'schema:Organization',
@@ -6010,7 +6099,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PlayAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of playing/exercising/training/performing for enjoyment, leisure, recreation, competition or exercise.\\n\\nRelated actions:\\n\\n* [[ListenAction]]: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.\\n* [[WatchAction]]: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content.',
+      'rdfs:comment':
+        'The act of playing/exercising/training/performing for enjoyment, leisure, recreation, competition or exercise.\\n\\nRelated actions:\\n\\n* [[ListenAction]]: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.\\n* [[WatchAction]]: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content.',
       'rdfs:label': 'PlayAction',
       'rdfs:subClassOf': {
         $id: 'schema:Action',
@@ -6107,7 +6197,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Newspaper',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.',
+      'rdfs:comment':
+        'A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.',
       'rdfs:label': 'Newspaper',
       'rdfs:subClassOf': {
         $id: 'schema:Periodical',
@@ -6163,7 +6254,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BedAndBreakfast',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Bed and breakfast.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
+      'rdfs:comment':
+        'Bed and breakfast.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
       'rdfs:label': 'BedAndBreakfast',
       'rdfs:subClassOf': {
         $id: 'schema:LodgingBusiness',
@@ -6172,7 +6264,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:hasMeasurement',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.',
+      'rdfs:comment':
+        'A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.',
       'rdfs:label': 'hasMeasurement',
       'schema:domainIncludes': [
         {
@@ -6201,7 +6294,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:possibleComplication',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.',
+      'rdfs:comment':
+        'A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.',
       'rdfs:label': 'possibleComplication',
       'schema:domainIncludes': {
         $id: 'schema:MedicalCondition',
@@ -6330,7 +6424,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SizeSystemEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Enumerates common size systems for different categories of products, for example "EN-13402" or "UK" for wearables or "Imperial" for screws.',
+      'rdfs:comment':
+        'Enumerates common size systems for different categories of products, for example "EN-13402" or "UK" for wearables or "Imperial" for screws.',
       'rdfs:label': 'SizeSystemEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -6366,7 +6461,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CriticReview',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A [[CriticReview]] is a more specialized form of Review written or published by a source that is recognized for its reviewing activities. These can include online columns, travel and food guides, TV and radio shows, blogs and other independent Web sites. [[CriticReview]]s are typically more in-depth and professionally written. For simpler, casually written user/visitor/viewer/customer reviews, it is more appropriate to use the [[UserReview]] type. Review aggregator sites such as Metacritic already separate out the site's user reviews from selected critic reviews that originate from third-party sources.",
+      'rdfs:comment':
+        "A [[CriticReview]] is a more specialized form of Review written or published by a source that is recognized for its reviewing activities. These can include online columns, travel and food guides, TV and radio shows, blogs and other independent Web sites. [[CriticReview]]s are typically more in-depth and professionally written. For simpler, casually written user/visitor/viewer/customer reviews, it is more appropriate to use the [[UserReview]] type. Review aggregator sites such as Metacritic already separate out the site's user reviews from selected critic reviews that originate from third-party sources.",
       'rdfs:label': 'CriticReview',
       'rdfs:subClassOf': {
         $id: 'schema:Review',
@@ -6444,7 +6540,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cssSelector',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".',
+      'rdfs:comment':
+        'A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".',
       'rdfs:label': 'cssSelector',
       'schema:domainIncludes': [
         {
@@ -6521,7 +6618,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:courseMode',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).',
+      'rdfs:comment':
+        'The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).',
       'rdfs:label': 'courseMode',
       'schema:domainIncludes': {
         $id: 'schema:CourseInstance',
@@ -6612,7 +6710,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:enginePower',
       $type: 'rdf:Property',
-      'rdfs:comment': "The power of the vehicle's engine.\n    Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)\\n\\n* Note 1: There are many different ways of measuring an engine's power. For an overview, see  [http://en.wikipedia.org/wiki/Horsepower#Engine\\_power\\_test\\_codes](http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes).\\n* Note 2: You can link to information about how the given value has been determined using the [[valueReference]] property.\\n* Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.",
+      'rdfs:comment':
+        "The power of the vehicle's engine.\n    Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)\\n\\n* Note 1: There are many different ways of measuring an engine's power. For an overview, see  [http://en.wikipedia.org/wiki/Horsepower#Engine\\_power\\_test\\_codes](http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes).\\n* Note 2: You can link to information about how the given value has been determined using the [[valueReference]] property.\\n* Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.",
       'rdfs:label': 'enginePower',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -6680,7 +6779,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:floorSize',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The size of the accommodation, e.g. in square meter or squarefoot.\nTypical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard.',
+      'rdfs:comment':
+        'The size of the accommodation, e.g. in square meter or squarefoot.\nTypical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard.',
       'rdfs:label': 'floorSize',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/STI_Accommodation_Ontology',
@@ -6734,7 +6834,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PublicationEvent',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type, e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.',
+      'rdfs:comment':
+        'A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type, e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.',
       'rdfs:label': 'PublicationEvent',
       'rdfs:subClassOf': {
         $id: 'schema:Event',
@@ -6842,7 +6943,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ComputerLanguage',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the [[Language]] type.',
+      'rdfs:comment':
+        'This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the [[Language]] type.',
       'rdfs:label': 'ComputerLanguage',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -6863,7 +6965,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:inverseOf',
       $type: 'rdf:Property',
-      'rdfs:comment': "Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.",
+      'rdfs:comment':
+        "Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.",
       'rdfs:label': 'inverseOf',
       'schema:domainIncludes': {
         $id: 'schema:Property',
@@ -6922,7 +7025,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:addressCountry',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.',
+      'rdfs:comment':
+        'The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.',
       'rdfs:label': 'addressCountry',
       'schema:domainIncludes': [
         {
@@ -7159,7 +7263,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Certification',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A Certification is an official and authoritative statement about a subject, for example a product, service, person, or organization. A certification is typically issued by an indendent certification body, for example a professional organization or government. It formally attests certain characteristics about the subject, for example Organizations can be ISO certified, Food products can be certified Organic or Vegan, a Person can be a certified professional, a Place can be certified for food processing. There are certifications for many domains: regulatory, organizational, recycling, food, efficiency, educational, ecological, etc. A certification is a form of credential, as are accreditations and licenses. Mapped from the [gs1:CertificationDetails](https://www.gs1.org/voc/CertificationDetails) class in the GS1 Web Vocabulary.',
+      'rdfs:comment':
+        'A Certification is an official and authoritative statement about a subject, for example a product, service, person, or organization. A certification is typically issued by an indendent certification body, for example a professional organization or government. It formally attests certain characteristics about the subject, for example Organizations can be ISO certified, Food products can be certified Organic or Vegan, a Person can be a certified professional, a Place can be certified for food processing. There are certifications for many domains: regulatory, organizational, recycling, food, efficiency, educational, ecological, etc. A certification is a form of credential, as are accreditations and licenses. Mapped from the [gs1:CertificationDetails](https://www.gs1.org/voc/CertificationDetails) class in the GS1 Web Vocabulary.',
       'rdfs:label': 'Certification',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -7192,7 +7297,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ImageObjectSnapshot',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A specific and exact (byte-for-byte) version of an [[ImageObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata (e.g. XMP, EXIF) the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.",
+      'rdfs:comment':
+        "A specific and exact (byte-for-byte) version of an [[ImageObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata (e.g. XMP, EXIF) the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.",
       'rdfs:label': 'ImageObjectSnapshot',
       'rdfs:subClassOf': {
         $id: 'schema:ImageObject',
@@ -7207,7 +7313,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:expressedIn',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.',
+      'rdfs:comment':
+        'Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.',
       'rdfs:label': 'expressedIn',
       'schema:domainIncludes': {
         $id: 'schema:Gene',
@@ -7236,7 +7343,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Game',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.',
+      'rdfs:comment':
+        'The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.',
       'rdfs:label': 'Game',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -7245,7 +7353,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MinorHumanEditsDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/minorHumanEdits">minor human edits</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/minorHumanEdits">minor human edits</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'MinorHumanEditsDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -7260,7 +7369,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:recognizedBy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An organization that acknowledges the validity, value or utility of a credential. Note: recognition may include a process of quality assurance or accreditation.',
+      'rdfs:comment':
+        'An organization that acknowledges the validity, value or utility of a credential. Note: recognition may include a process of quality assurance or accreditation.',
       'rdfs:label': 'recognizedBy',
       'schema:domainIncludes': {
         $id: 'schema:EducationalOccupationalCredential',
@@ -7290,7 +7400,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TouristTrip',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A tourist trip. A created itinerary of visits to one or more places of interest ([[TouristAttraction]]/[[TouristDestination]]) often linked by a similar theme, geographic area, or interest to a particular [[touristType]]. The [UNWTO](http://www2.unwto.org/) defines tourism trip as the Trip taken by visitors.\n  (See examples below.)',
+      'rdfs:comment':
+        'A tourist trip. A created itinerary of visits to one or more places of interest ([[TouristAttraction]]/[[TouristDestination]]) often linked by a similar theme, geographic area, or interest to a particular [[touristType]]. The [UNWTO](http://www2.unwto.org/) defines tourism trip as the Trip taken by visitors.\n  (See examples below.)',
       'rdfs:label': 'TouristTrip',
       'rdfs:subClassOf': {
         $id: 'schema:Trip',
@@ -7340,7 +7451,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:openingHours',
       $type: 'rdf:Property',
-      'rdfs:comment': "The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\\n\\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \\n* Here is an example: <code>&lt;time itemprop=\"openingHours\" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.",
+      'rdfs:comment':
+        "The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\\n\\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \\n* Here is an example: <code>&lt;time itemprop=\"openingHours\" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.",
       'rdfs:label': 'openingHours',
       'schema:domainIncludes': [
         {
@@ -7369,7 +7481,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:prescriptionStatus',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.',
+      'rdfs:comment':
+        'Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.',
       'rdfs:label': 'prescriptionStatus',
       'schema:domainIncludes': {
         $id: 'schema:Drug',
@@ -7401,7 +7514,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:productSupported',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").',
+      'rdfs:comment':
+        'The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").',
       'rdfs:label': 'productSupported',
       'schema:domainIncludes': {
         $id: 'schema:ContactPoint',
@@ -7418,7 +7532,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CohortStudy',
       $type: 'schema:MedicalObservationalStudyDesign',
-      'rdfs:comment': 'Also known as a panel study. A cohort study is a form of longitudinal study used in medicine and social science. It is one type of study design and should be compared with a cross-sectional study.  A cohort is a group of people who share a common characteristic or experience within a defined period (e.g., are born, leave school, lose their job, are exposed to a drug or a vaccine, etc.). The comparison group may be the general population from which the cohort is drawn, or it may be another cohort of persons thought to have had little or no exposure to the substance under investigation, but otherwise similar. Alternatively, subgroups within the cohort may be compared with each other.',
+      'rdfs:comment':
+        'Also known as a panel study. A cohort study is a form of longitudinal study used in medicine and social science. It is one type of study design and should be compared with a cross-sectional study.  A cohort is a group of people who share a common characteristic or experience within a defined period (e.g., are born, leave school, lose their job, are exposed to a drug or a vaccine, etc.). The comparison group may be the general population from which the cohort is drawn, or it may be another cohort of persons thought to have had little or no exposure to the substance under investigation, but otherwise similar. Alternatively, subgroups within the cohort may be compared with each other.',
       'rdfs:label': 'CohortStudy',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -7427,7 +7542,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:validIn',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]]. ',
+      'rdfs:comment':
+        'The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]]. ',
       'rdfs:label': 'validIn',
       'schema:domainIncludes': [
         {
@@ -7450,7 +7566,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CompoundPriceSpecification',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A compound price specification is one that bundles multiple prices that all apply in combination for different dimensions of consumption. Use the name property of the attached unit price specification for indicating the dimension of a price component (e.g. "electricity" or "final cleaning").',
+      'rdfs:comment':
+        'A compound price specification is one that bundles multiple prices that all apply in combination for different dimensions of consumption. Use the name property of the attached unit price specification for indicating the dimension of a price component (e.g. "electricity" or "final cleaning").',
       'rdfs:label': 'CompoundPriceSpecification',
       'rdfs:subClassOf': {
         $id: 'schema:PriceSpecification',
@@ -7538,7 +7655,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Action',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.\\n\\nSee also [blog post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and [Actions overview document](https://schema.org/docs/actions.html).',
+      'rdfs:comment':
+        'An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.\\n\\nSee also [blog post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and [Actions overview document](https://schema.org/docs/actions.html).',
       'rdfs:label': 'Action',
       'rdfs:subClassOf': {
         $id: 'schema:Thing',
@@ -7565,7 +7683,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OriginalMediaContent',
       $type: 'schema:MediaManipulationRatingEnumeration',
-      'rdfs:comment': "Content coded 'as original media content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'original': No evidence the footage has been misleadingly altered or manipulated, though it may contain false or misleading claims.\n\nFor an [[ImageObject]] to be 'original': No evidence the image has been misleadingly altered or manipulated, though it may still contain false or misleading claims.\n\nFor an [[ImageObject]] with embedded text to be 'original': No evidence the image has been misleadingly altered or manipulated, though it may still contain false or misleading claims.\n\nFor an [[AudioObject]] to be 'original': No evidence the audio has been misleadingly altered or manipulated, though it may contain false or misleading claims.\n",
+      'rdfs:comment':
+        "Content coded 'as original media content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'original': No evidence the footage has been misleadingly altered or manipulated, though it may contain false or misleading claims.\n\nFor an [[ImageObject]] to be 'original': No evidence the image has been misleadingly altered or manipulated, though it may still contain false or misleading claims.\n\nFor an [[ImageObject]] with embedded text to be 'original': No evidence the image has been misleadingly altered or manipulated, though it may still contain false or misleading claims.\n\nFor an [[AudioObject]] to be 'original': No evidence the audio has been misleadingly altered or manipulated, though it may contain false or misleading claims.\n",
       'rdfs:label': 'OriginalMediaContent',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -7577,7 +7696,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ineligibleRegion',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\\n\\nSee also [[eligibleRegion]].\n      ',
+      'rdfs:comment':
+        'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\\n\\nSee also [[eligibleRegion]].\n      ',
       'rdfs:label': 'ineligibleRegion',
       'schema:domainIncludes': [
         {
@@ -7677,7 +7797,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CommunicateAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.',
+      'rdfs:comment':
+        'The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.',
       'rdfs:label': 'CommunicateAction',
       'rdfs:subClassOf': {
         $id: 'schema:InteractAction',
@@ -7686,7 +7807,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accommodationCategory',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields  for suggested values).',
+      'rdfs:comment':
+        'Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields  for suggested values).',
       'rdfs:label': 'accommodationCategory',
       'rdfs:subPropertyOf': {
         $id: 'schema:category',
@@ -7810,7 +7932,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DefinitiveLegalValue',
       $type: 'schema:LegalValueLevel',
-      'rdfs:comment': 'Indicates a document for which the text is conclusively what the law says and is legally binding. (E.g. the digitally signed version of an Official Journal.)\n  Something "Definitive" is considered to be also [[AuthoritativeLegalValue]].',
+      'rdfs:comment':
+        'Indicates a document for which the text is conclusively what the law says and is legally binding. (E.g. the digitally signed version of an Official Journal.)\n  Something "Definitive" is considered to be also [[AuthoritativeLegalValue]].',
       'rdfs:label': 'DefinitiveLegalValue',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/ELI',
@@ -7872,7 +7995,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://purl.org/ontology/bibo/issn',
       },
-      'rdfs:comment': 'The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.',
+      'rdfs:comment':
+        'The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.',
       'rdfs:label': 'issn',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -7913,7 +8037,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:petsAllowed',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.',
+      'rdfs:comment':
+        'Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.',
       'rdfs:label': 'petsAllowed',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/STI_Accommodation_Ontology',
@@ -8004,7 +8129,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:dateline',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A [dateline](https://en.wikipedia.org/wiki/Dateline) is a brief piece of text included in news articles that describes where and when the story was written or filed though the date is often omitted. Sometimes only a placename is provided.\n\nStructured representations of dateline-related information can also be expressed more explicitly using [[locationCreated]] (which represents where a work was created, e.g. where a news report was written).  For location depicted or described in the content, use [[contentLocation]].\n\nDateline summaries are oriented more towards human readers than towards automated processing, and can vary substantially. Some examples: "BEIRUT, Lebanon, June 2.", "Paris, France", "December 19, 2017 11:43AM Reporting from Washington", "Beijing/Moscow", "QUEZON CITY, Philippines".\n      ',
+      'rdfs:comment':
+        'A [dateline](https://en.wikipedia.org/wiki/Dateline) is a brief piece of text included in news articles that describes where and when the story was written or filed though the date is often omitted. Sometimes only a placename is provided.\n\nStructured representations of dateline-related information can also be expressed more explicitly using [[locationCreated]] (which represents where a work was created, e.g. where a news report was written).  For location depicted or described in the content, use [[contentLocation]].\n\nDateline summaries are oriented more towards human readers than towards automated processing, and can vary substantially. Some examples: "BEIRUT, Lebanon, June 2.", "Paris, France", "December 19, 2017 11:43AM Reporting from Washington", "Beijing/Moscow", "QUEZON CITY, Philippines".\n      ',
       'rdfs:label': 'dateline',
       'schema:domainIncludes': {
         $id: 'schema:NewsArticle',
@@ -8186,7 +8312,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:itemListElement',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\\n\\nText values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.\\n\\nNote: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a \'position\' property in such cases.',
+      'rdfs:comment':
+        'For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem.\\n\\nText values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.\\n\\nNote: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a \'position\' property in such cases.',
       'rdfs:label': 'itemListElement',
       'schema:domainIncludes': {
         $id: 'schema:ItemList',
@@ -8292,7 +8419,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:encodingFormat',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.\n\nIn cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.\n\nUnregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.',
+      'rdfs:comment':
+        'Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.\n\nIn cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.\n\nUnregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.',
       'rdfs:label': 'encodingFormat',
       'schema:domainIncludes': [
         {
@@ -8350,7 +8478,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:polygon',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.',
+      'rdfs:comment':
+        'A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.',
       'rdfs:label': 'polygon',
       'schema:domainIncludes': {
         $id: 'schema:GeoShape',
@@ -8386,7 +8515,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accessibilitySummary',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as "short descriptions are present but long descriptions will be needed for non-visual users" or "short descriptions are present and no long descriptions are needed".',
+      'rdfs:comment':
+        'A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as "short descriptions are present but long descriptions will be needed for non-visual users" or "short descriptions are present and no long descriptions are needed".',
       'rdfs:label': 'accessibilitySummary',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -8456,7 +8586,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:propertyID',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A commonly used identifier for the characteristic represented by the property, e.g. a manufacturer or a standard code for a property. propertyID can be\n(1) a prefixed string, mainly meant to be used with standards for product properties; (2) a site-specific, non-prefixed string (e.g. the primary key of the property or the vendor-specific ID of the property), or (3)\na URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry).\nStandards bodies should promote a standard prefix for the identifiers of properties from their standards.',
+      'rdfs:comment':
+        'A commonly used identifier for the characteristic represented by the property, e.g. a manufacturer or a standard code for a property. propertyID can be\n(1) a prefixed string, mainly meant to be used with standards for product properties; (2) a site-specific, non-prefixed string (e.g. the primary key of the property or the vendor-specific ID of the property), or (3)\na URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry).\nStandards bodies should promote a standard prefix for the identifiers of properties from their standards.',
       'rdfs:label': 'propertyID',
       'schema:domainIncludes': {
         $id: 'schema:PropertyValue',
@@ -8482,7 +8613,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ConfirmAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of notifying someone that a future event/action is going to happen as expected.\\n\\nRelated actions:\\n\\n* [[CancelAction]]: The antonym of ConfirmAction.',
+      'rdfs:comment':
+        'The act of notifying someone that a future event/action is going to happen as expected.\\n\\nRelated actions:\\n\\n* [[CancelAction]]: The antonym of ConfirmAction.',
       'rdfs:label': 'ConfirmAction',
       'rdfs:subClassOf': {
         $id: 'schema:InformAction',
@@ -8543,7 +8675,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:readonlyValue',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.',
+      'rdfs:comment':
+        'Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.',
       'rdfs:label': 'readonlyValue',
       'schema:domainIncludes': {
         $id: 'schema:PropertyValueSpecification',
@@ -8555,7 +8688,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:callSign',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.',
+      'rdfs:comment':
+        'A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.',
       'rdfs:label': 'callSign',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -8596,7 +8730,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LendAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of providing an object under an agreement that it will be returned at a later date. Reciprocal of BorrowAction.\\n\\nRelated actions:\\n\\n* [[BorrowAction]]: Reciprocal of LendAction.',
+      'rdfs:comment':
+        'The act of providing an object under an agreement that it will be returned at a later date. Reciprocal of BorrowAction.\\n\\nRelated actions:\\n\\n* [[BorrowAction]]: Reciprocal of LendAction.',
       'rdfs:label': 'LendAction',
       'rdfs:subClassOf': {
         $id: 'schema:TransferAction',
@@ -8605,7 +8740,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalBusiness',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include different businesses run by health professionals.',
+      'rdfs:comment':
+        'A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include different businesses run by health professionals.',
       'rdfs:label': 'MedicalBusiness',
       'rdfs:subClassOf': {
         $id: 'schema:LocalBusiness',
@@ -8740,7 +8876,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SelfCareHealthAspect',
       $type: 'schema:HealthAspectEnumeration',
-      'rdfs:comment': 'Self care actions or measures that can be taken to sooth, health or avoid a topic. This may be carried at home and can be carried/managed by the person itself.',
+      'rdfs:comment':
+        'Self care actions or measures that can be taken to sooth, health or avoid a topic. This may be carried at home and can be carried/managed by the person itself.',
       'rdfs:label': 'SelfCareHealthAspect',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -8752,7 +8889,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MolecularEntity',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.',
+      'rdfs:comment':
+        'Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.',
       'rdfs:label': 'MolecularEntity',
       'rdfs:subClassOf': {
         $id: 'schema:BioChemEntity',
@@ -8791,7 +8929,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:RegularPrice',
       $type: 'schema:PriceTypeEnumeration',
-      'rdfs:comment': 'Represents the regular price of an offered product. This is usually the advertised price before a temporary sale. Once the sale period ends the advertised price will go back to the regular price.',
+      'rdfs:comment':
+        'Represents the regular price of an offered product. This is usually the advertised price before a temporary sale. Once the sale period ends the advertised price will go back to the regular price.',
       'rdfs:label': 'RegularPrice',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -8912,7 +9051,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:fuelConsumption',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).\\n\\n* Note 1: There are unfortunately no standard unit codes for liters per 100 km.  Use [[unitText]] to indicate the unit of measurement, e.g. L/100 km.\\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel consumption to another value.',
+      'rdfs:comment':
+        'The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).\\n\\n* Note 1: There are unfortunately no standard unit codes for liters per 100 km.  Use [[unitText]] to indicate the unit of measurement, e.g. L/100 km.\\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel consumption to another value.',
       'rdfs:label': 'fuelConsumption',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -9179,7 +9319,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ChemicalSubstance',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: [ChEBI:59999](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999)).",
+      'rdfs:comment':
+        "A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: [ChEBI:59999](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999)).",
       'rdfs:label': 'ChemicalSubstance',
       'rdfs:subClassOf': {
         $id: 'schema:BioChemEntity',
@@ -9273,7 +9414,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:endTime',
       $type: 'rdf:Property',
-      'rdfs:comment': "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\\n\\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+      'rdfs:comment':
+        "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\\n\\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
       'rdfs:label': 'endTime',
       'schema:domainIncludes': [
         {
@@ -9389,7 +9531,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DefinedRegion',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes.\n\nExamples: a delivery destination when shopping. Region where regional pricing is configured.\n\nRequirement 1:\nCountry: US\nStates: "NY", "CA"\n\nRequirement 2:\nCountry: US\nPostalCode Set: { [94000-94585], [97000, 97999], [13000, 13599]}\n{ [12345, 12345], [78945, 78945], }\nRegion = state, canton, prefecture, autonomous community...\n',
+      'rdfs:comment':
+        'A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes.\n\nExamples: a delivery destination when shopping. Region where regional pricing is configured.\n\nRequirement 1:\nCountry: US\nStates: "NY", "CA"\n\nRequirement 2:\nCountry: US\nPostalCode Set: { [94000-94585], [97000, 97999], [13000, 13599]}\n{ [12345, 12345], [78945, 78945], }\nRegion = state, canton, prefecture, autonomous community...\n',
       'rdfs:label': 'DefinedRegion',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -9492,7 +9635,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FAQPage',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).',
+      'rdfs:comment':
+        'A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).',
       'rdfs:label': 'FAQPage',
       'rdfs:subClassOf': {
         $id: 'schema:WebPage',
@@ -9555,7 +9699,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:workFeatured',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A work featured in some event, e.g. exhibited in an ExhibitionEvent.\n       Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).',
+      'rdfs:comment':
+        'A work featured in some event, e.g. exhibited in an ExhibitionEvent.\n       Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).',
       'rdfs:label': 'workFeatured',
       'schema:domainIncludes': {
         $id: 'schema:Event',
@@ -9631,7 +9776,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LiveBlogPosting',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.',
+      'rdfs:comment':
+        'A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.',
       'rdfs:label': 'LiveBlogPosting',
       'rdfs:subClassOf': {
         $id: 'schema:BlogPosting',
@@ -9685,7 +9831,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:broker',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.',
+      'rdfs:comment':
+        'An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.',
       'rdfs:label': 'broker',
       'schema:domainIncludes': [
         {
@@ -9713,7 +9860,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MemberProgram',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A MemberProgram defines a loyalty (or membership) program that provides its members with certain benefits, for example better pricing, free shipping or returns, or the ability to earn loyalty points. Member programs may have multiple tiers, for example silver and gold members, each with different benefits.',
+      'rdfs:comment':
+        'A MemberProgram defines a loyalty (or membership) program that provides its members with certain benefits, for example better pricing, free shipping or returns, or the ability to earn loyalty points. Member programs may have multiple tiers, for example silver and gold members, each with different benefits.',
       'rdfs:label': 'MemberProgram',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -9749,7 +9897,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:VirtualLocation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An online or virtual location for attending events. For example, one may attend an online seminar or educational event. While a virtual location may be used as the location of an event, virtual locations should not be confused with physical locations in the real world.',
+      'rdfs:comment':
+        'An online or virtual location for attending events. For example, one may attend an online seminar or educational event. While a virtual location may be used as the location of an event, virtual locations should not be confused with physical locations in the real world.',
       'rdfs:label': 'VirtualLocation',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -9785,7 +9934,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:freeShippingThreshold',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A monetary value above (or at) which the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]] matching this [[ShippingRateSettings]].',
+      'rdfs:comment':
+        'A monetary value above (or at) which the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]] matching this [[ShippingRateSettings]].',
       'rdfs:label': 'freeShippingThreshold',
       'schema:domainIncludes': {
         $id: 'schema:ShippingRateSettings',
@@ -9817,7 +9967,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Homeopathic',
       $type: 'schema:MedicineSystem',
-      'rdfs:comment': 'A system of medicine based on the principle that a disease can be cured by a substance that produces similar symptoms in healthy people.',
+      'rdfs:comment':
+        'A system of medicine based on the principle that a disease can be cured by a substance that produces similar symptoms in healthy people.',
       'rdfs:label': 'Homeopathic',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -9900,7 +10051,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:tickerSymbol',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we recommend using the controlled vocabulary of Market Identifier Codes (MIC) specified in ISO 15022.',
+      'rdfs:comment':
+        'The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we recommend using the controlled vocabulary of Market Identifier Codes (MIC) specified in ISO 15022.',
       'rdfs:label': 'tickerSymbol',
       'schema:domainIncludes': {
         $id: 'schema:Corporation',
@@ -9979,7 +10131,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:maximumVirtualAttendeeCapacity',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The maximum virtual attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects, in the case of a [[MixedEventAttendanceMode]]). ',
+      'rdfs:comment':
+        'The maximum virtual attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects, in the case of a [[MixedEventAttendanceMode]]). ',
       'rdfs:label': 'maximumVirtualAttendeeCapacity',
       'schema:domainIncludes': {
         $id: 'schema:Event',
@@ -10033,7 +10186,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:subEvent',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.',
+      'rdfs:comment':
+        'An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.',
       'rdfs:label': 'subEvent',
       'schema:domainIncludes': {
         $id: 'schema:Event',
@@ -10100,7 +10254,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:occupancy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal maximum but defines the permitted usage as per the contractual agreement (e.g. a double room used by a single person).\nTypical unit code(s): C62 for person.',
+      'rdfs:comment':
+        'The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal maximum but defines the permitted usage as per the contractual agreement (e.g. a double room used by a single person).\nTypical unit code(s): C62 for person.',
       'rdfs:label': 'occupancy',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/STI_Accommodation_Ontology',
@@ -10189,7 +10344,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:shippingRate',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most appropriate.',
+      'rdfs:comment':
+        'The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most appropriate.',
       'rdfs:label': 'shippingRate',
       'schema:domainIncludes': [
         {
@@ -10284,7 +10440,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ReplyAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of responding to a question/message asked/sent by the object. Related to [[AskAction]].\\n\\nRelated actions:\\n\\n* [[AskAction]]: Appears generally as an origin of a ReplyAction.',
+      'rdfs:comment':
+        'The act of responding to a question/message asked/sent by the object. Related to [[AskAction]].\\n\\nRelated actions:\\n\\n* [[AskAction]]: Appears generally as an origin of a ReplyAction.',
       'rdfs:label': 'ReplyAction',
       'rdfs:subClassOf': {
         $id: 'schema:CommunicateAction',
@@ -10353,7 +10510,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FinancialProduct',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry.',
+      'rdfs:comment':
+        'A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry.',
       'rdfs:label': 'FinancialProduct',
       'rdfs:subClassOf': {
         $id: 'schema:Service',
@@ -10395,7 +10553,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:validForMemberTier',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.',
+      'rdfs:comment':
+        'The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.',
       'rdfs:label': 'validForMemberTier',
       'schema:domainIncludes': [
         {
@@ -10421,7 +10580,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:branchCode',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.\\n\\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.\n      ',
+      'rdfs:comment':
+        'A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.\\n\\nFor example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.\n      ',
       'rdfs:label': 'branchCode',
       'schema:domainIncludes': {
         $id: 'schema:Place',
@@ -10448,7 +10608,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:namedPosition',
       $type: 'rdf:Property',
-      'rdfs:comment': "A position played, performed or filled by a person or organization, as part of an organization. For example, an athlete in a SportsTeam might play in the position named 'Quarterback'.",
+      'rdfs:comment':
+        "A position played, performed or filled by a person or organization, as part of an organization. For example, an athlete in a SportsTeam might play in the position named 'Quarterback'.",
       'rdfs:label': 'namedPosition',
       'schema:domainIncludes': {
         $id: 'schema:Role',
@@ -10545,7 +10706,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TrainReservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A reservation for train travel.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
+      'rdfs:comment':
+        'A reservation for train travel.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
       'rdfs:label': 'TrainReservation',
       'rdfs:subClassOf': {
         $id: 'schema:Reservation',
@@ -10596,7 +10758,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Language',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in [BCP 47](https://en.wikipedia.org/wiki/IETF_language_tag) can be used via the [[alternateName]] property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using [[ComputerLanguage]].',
+      'rdfs:comment':
+        'Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in [BCP 47](https://en.wikipedia.org/wiki/IETF_language_tag) can be used via the [[alternateName]] property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using [[ComputerLanguage]].',
       'rdfs:label': 'Language',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -10605,7 +10768,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cvdNumC19OverflowPats',
       $type: 'rdf:Property',
-      'rdfs:comment': 'numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed.',
+      'rdfs:comment':
+        'numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed.',
       'rdfs:label': 'cvdNumC19OverflowPats',
       'schema:domainIncludes': {
         $id: 'schema:CDCPMDRecord',
@@ -10772,7 +10936,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BusinessFunction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The business function specifies the type of activity or access (i.e., the bundle of rights) offered by the organization or business person through the offer. Typical are sell, rental or lease, maintenance or repair, manufacture / produce, recycle / dispose, engineering / construction, or installation. Proprietary specifications of access rights are also instances of this class.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#ConstructionInstallation\\n* http://purl.org/goodrelations/v1#Dispose\\n* http://purl.org/goodrelations/v1#LeaseOut\\n* http://purl.org/goodrelations/v1#Maintain\\n* http://purl.org/goodrelations/v1#ProvideService\\n* http://purl.org/goodrelations/v1#Repair\\n* http://purl.org/goodrelations/v1#Sell\\n* http://purl.org/goodrelations/v1#Buy\n        ',
+      'rdfs:comment':
+        'The business function specifies the type of activity or access (i.e., the bundle of rights) offered by the organization or business person through the offer. Typical are sell, rental or lease, maintenance or repair, manufacture / produce, recycle / dispose, engineering / construction, or installation. Proprietary specifications of access rights are also instances of this class.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#ConstructionInstallation\\n* http://purl.org/goodrelations/v1#Dispose\\n* http://purl.org/goodrelations/v1#LeaseOut\\n* http://purl.org/goodrelations/v1#Maintain\\n* http://purl.org/goodrelations/v1#ProvideService\\n* http://purl.org/goodrelations/v1#Repair\\n* http://purl.org/goodrelations/v1#Sell\\n* http://purl.org/goodrelations/v1#Buy\n        ',
       'rdfs:label': 'BusinessFunction',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -10784,7 +10949,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ethicsPolicy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards of behavior expected by the organization.',
+      'rdfs:comment':
+        'Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards of behavior expected by the organization.',
       'rdfs:label': 'ethicsPolicy',
       'schema:domainIncludes': [
         {
@@ -10812,7 +10978,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Blog',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [blog](https://en.wikipedia.org/wiki/Blog), sometimes known as a "weblog". Note that the individual posts ([[BlogPosting]]s) in a [[Blog]] are often colloquially referred to by the same term.',
+      'rdfs:comment':
+        'A [blog](https://en.wikipedia.org/wiki/Blog), sometimes known as a "weblog". Note that the individual posts ([[BlogPosting]]s) in a [[Blog]] are often colloquially referred to by the same term.',
       'rdfs:label': 'Blog',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -10848,7 +11015,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BoatReservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A reservation for boat travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
+      'rdfs:comment':
+        'A reservation for boat travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
       'rdfs:label': 'BoatReservation',
       'rdfs:subClassOf': {
         $id: 'schema:Reservation',
@@ -10898,7 +11066,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:currency',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The currency in which the monetary amount is expressed.\\n\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".',
+      'rdfs:comment':
+        'The currency in which the monetary amount is expressed.\\n\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".',
       'rdfs:label': 'currency',
       'schema:domainIncludes': [
         {
@@ -10978,7 +11147,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:InvestmentOrDeposit',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A type of financial product that typically requires the client to transfer funds to a financial service in return for potential beneficial financial return.',
+      'rdfs:comment':
+        'A type of financial product that typically requires the client to transfer funds to a financial service in return for potential beneficial financial return.',
       'rdfs:label': 'InvestmentOrDeposit',
       'rdfs:subClassOf': {
         $id: 'schema:FinancialProduct',
@@ -10990,7 +11160,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Campground',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A camping site, campsite, or [[Campground]] is a place used for overnight stay in the outdoors, typically containing individual [[CampingPitch]] locations. \\n\\n\nIn British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites (source: Wikipedia, see [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite)).\\n\\n\n\nSee also the dedicated [document on the use of schema.org for marking up hotels and other forms of accommodations](/docs/hotels.html).\n',
+      'rdfs:comment':
+        'A camping site, campsite, or [[Campground]] is a place used for overnight stay in the outdoors, typically containing individual [[CampingPitch]] locations. \\n\\n\nIn British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites (source: Wikipedia, see [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite)).\\n\\n\n\nSee also the dedicated [document on the use of schema.org for marking up hotels and other forms of accommodations](/docs/hotels.html).\n',
       'rdfs:label': 'Campground',
       'rdfs:subClassOf': [
         {
@@ -11089,7 +11260,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:certificationIdentification',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Identifier of a certification instance (as registered with an independent certification body). Typically this identifier can be used to consult and verify the certification instance. See also [gs1:certificationIdentification](https://www.gs1.org/voc/certificationIdentification).',
+      'rdfs:comment':
+        'Identifier of a certification instance (as registered with an independent certification body). Typically this identifier can be used to consult and verify the certification instance. See also [gs1:certificationIdentification](https://www.gs1.org/voc/certificationIdentification).',
       'rdfs:label': 'certificationIdentification',
       'schema:domainIncludes': {
         $id: 'schema:Certification',
@@ -11112,7 +11284,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:commentCount',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.',
+      'rdfs:comment':
+        'The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.',
       'rdfs:label': 'commentCount',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -11165,7 +11338,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ItemList',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A list of items of any sort&#x2014;for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting.',
+      'rdfs:comment':
+        'A list of items of any sort&#x2014;for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting.',
       'rdfs:label': 'ItemList',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -11207,7 +11381,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:NegativeFilmDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/negativeFilm">negative film</a></a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/negativeFilm">negative film</a></a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'NegativeFilmDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -11222,7 +11397,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Physiotherapy',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'The practice of treatment of disease, injury, or deformity by physical methods such as massage, heat treatment, and exercise rather than by drugs or surgery.',
+      'rdfs:comment':
+        'The practice of treatment of disease, injury, or deformity by physical methods such as massage, heat treatment, and exercise rather than by drugs or surgery.',
       'rdfs:label': 'Physiotherapy',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -11417,7 +11593,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TrainedAlgorithmicMediaDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia">trained algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia">trained algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'TrainedAlgorithmicMediaDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -11432,7 +11609,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SeeDoctorHealthAspect',
       $type: 'schema:HealthAspectEnumeration',
-      'rdfs:comment': 'Information about questions that may be asked, when to see a professional, measures before seeing a doctor or content about the first consultation.',
+      'rdfs:comment':
+        'Information about questions that may be asked, when to see a professional, measures before seeing a doctor or content about the first consultation.',
       'rdfs:label': 'SeeDoctorHealthAspect',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -11485,7 +11663,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:lowPrice',
       $type: 'rdf:Property',
-      'rdfs:comment': "The lowest price of all offers available.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+      'rdfs:comment':
+        "The lowest price of all offers available.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
       'rdfs:label': 'lowPrice',
       'schema:domainIncludes': {
         $id: 'schema:AggregateOffer',
@@ -11517,7 +11696,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:certificationRating',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Rating of a certification instance (as defined by an independent certification body). Typically this rating can be used to rate the level to which the requirements of the certification instance are fulfilled. See also [gs1:certificationValue](https://www.gs1.org/voc/certificationValue).',
+      'rdfs:comment':
+        'Rating of a certification instance (as defined by an independent certification body). Typically this rating can be used to rate the level to which the requirements of the certification instance are fulfilled. See also [gs1:certificationValue](https://www.gs1.org/voc/certificationValue).',
       'rdfs:label': 'certificationRating',
       'schema:domainIncludes': {
         $id: 'schema:Certification',
@@ -11594,7 +11774,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:feesAndCommissionsSpecification',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.',
+      'rdfs:comment':
+        'Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.',
       'rdfs:label': 'feesAndCommissionsSpecification',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -11664,7 +11845,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:itinerary',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination order is important use [[ItemList]] to specify that order (see examples).',
+      'rdfs:comment':
+        'Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination order is important use [[ItemList]] to specify that order (see examples).',
       'rdfs:label': 'itinerary',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Tourism',
@@ -11824,7 +12006,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DietarySupplement',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.',
+      'rdfs:comment':
+        'A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.',
       'rdfs:label': 'DietarySupplement',
       'rdfs:subClassOf': [
         {
@@ -11969,7 +12152,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:QAPage',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in a question answering site or documenting Frequently Asked Questions (FAQs).',
+      'rdfs:comment':
+        'A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in a question answering site or documenting Frequently Asked Questions (FAQs).',
       'rdfs:label': 'QAPage',
       'rdfs:subClassOf': {
         $id: 'schema:WebPage',
@@ -11978,7 +12162,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MediaManipulationRatingEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': " Codes for use with the [[mediaAuthenticityCategory]] property, indicating the authenticity of a media object (in the context of how it was published or shared). In general these codes are not mutually exclusive, although some combinations (such as 'original' versus 'transformed', 'edited' and 'staged') would be contradictory if applied in the same [[MediaReview]]. Note that the application of these codes is with regard to a piece of media shared or published in a particular context.",
+      'rdfs:comment':
+        " Codes for use with the [[mediaAuthenticityCategory]] property, indicating the authenticity of a media object (in the context of how it was published or shared). In general these codes are not mutually exclusive, although some combinations (such as 'original' versus 'transformed', 'edited' and 'staged') would be contradictory if applied in the same [[MediaReview]]. Note that the application of these codes is with regard to a piece of media shared or published in a particular context.",
       'rdfs:label': 'MediaManipulationRatingEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -12047,7 +12232,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:alignmentType',
       $type: 'rdf:Property',
-      'rdfs:comment': "A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.",
+      'rdfs:comment':
+        "A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.",
       'rdfs:label': 'alignmentType',
       'schema:domainIncludes': {
         $id: 'schema:AlignmentObject',
@@ -12103,7 +12289,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CDCPMDRecord',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A CDCPMDRecord is a data structure representing a record in a CDC tabular data format\n      used for hospital data reporting. See [documentation](/docs/cdc-covid.html) for details, and the linked CDC materials for authoritative\n      definitions used as the source here.\n      ',
+      'rdfs:comment':
+        'A CDCPMDRecord is a data structure representing a record in a CDC tabular data format\n      used for hospital data reporting. See [documentation](/docs/cdc-covid.html) for details, and the linked CDC materials for authoritative\n      definitions used as the source here.\n      ',
       'rdfs:label': 'CDCPMDRecord',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -12140,7 +12327,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DDxElement',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.',
+      'rdfs:comment':
+        'An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.',
       'rdfs:label': 'DDxElement',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalIntangible',
@@ -12295,7 +12483,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:fuelCapacity',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.\\n\\nTypical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles).',
+      'rdfs:comment':
+        'The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.\\n\\nTypical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles).',
       'rdfs:label': 'fuelCapacity',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -12398,7 +12587,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoWithin',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
+      'rdfs:comment':
+        'Represents a relationship between two geometries (or the places they represent), relating a geometry to one that contains it, i.e. it is inside (i.e. within) its interior. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
       'rdfs:label': 'geoWithin',
       'schema:domainIncludes': [
         {
@@ -12519,7 +12709,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cargoVolume',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.\\n\\nTypical unit code(s): LTR for liters, FTQ for cubic foot/feet\\n\\nNote: You can use [[minValue]] and [[maxValue]] to indicate ranges.',
+      'rdfs:comment':
+        'The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.\\n\\nTypical unit code(s): LTR for liters, FTQ for cubic foot/feet\\n\\nNote: You can use [[minValue]] and [[maxValue]] to indicate ranges.',
       'rdfs:label': 'cargoVolume',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -12549,7 +12740,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Offer',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\\n\\nNote: As the [[businessFunction]] property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.\\n\\nFor [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see [Check Digit calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and [validation guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from [GS1](http://www.gs1.org/).',
+      'rdfs:comment':
+        'An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\\n\\nNote: As the [[businessFunction]] property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.\\n\\nFor [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see [Check Digit calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and [validation guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from [GS1](http://www.gs1.org/).',
       'rdfs:label': 'Offer',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -12578,7 +12770,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:estimatedSalary',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry, job title, and location. Estimated salaries  are often computed by outside organizations rather than the hiring organization, who may not have committed to the estimated value.',
+      'rdfs:comment':
+        'An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry, job title, and location. Estimated salaries  are often computed by outside organizations rather than the hiring organization, who may not have committed to the estimated value.',
       'rdfs:label': 'estimatedSalary',
       'schema:domainIncludes': [
         {
@@ -12731,7 +12924,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:priceType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or as a free form text string for price types that are not already predefined in PriceTypeEnumeration.',
+      'rdfs:comment':
+        'Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or as a free form text string for price types that are not already predefined in PriceTypeEnumeration.',
       'rdfs:label': 'priceType',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -12777,7 +12971,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:occupationalCredentialAwarded',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.',
+      'rdfs:comment':
+        'A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.',
       'rdfs:label': 'occupationalCredentialAwarded',
       'schema:domainIncludes': [
         {
@@ -12858,7 +13053,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AlgorithmicMediaDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia">algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia">algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'AlgorithmicMediaDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -12873,7 +13069,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ApprovedIndication',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.',
+      'rdfs:comment':
+        'An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.',
       'rdfs:label': 'ApprovedIndication',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalIndication',
@@ -12991,7 +13188,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cutoffTime',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day. For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).',
+      'rdfs:comment':
+        'Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day. For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).',
       'rdfs:label': 'cutoffTime',
       'schema:domainIncludes': {
         $id: 'schema:ShippingDeliveryTime',
@@ -13054,7 +13252,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Course',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A description of an educational course which may be offered as distinct instances which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.',
+      'rdfs:comment':
+        'A description of an educational course which may be offered as distinct instances which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.',
       'rdfs:label': 'Course',
       'rdfs:subClassOf': [
         {
@@ -13089,7 +13288,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AudiobookFormat',
       $type: 'schema:BookFormatType',
-      'rdfs:comment': "Book format: Audiobook. This is an enumerated value for use with the bookFormat property. There is also a type 'Audiobook' in the bib extension which includes Audiobook specific properties.",
+      'rdfs:comment':
+        "Book format: Audiobook. This is an enumerated value for use with the bookFormat property. There is also a type 'Audiobook' in the bib extension which includes Audiobook specific properties.",
       'rdfs:label': 'AudiobookFormat',
     },
     {
@@ -13198,7 +13398,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:salaryCurrency',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary information in this job posting or for this employee.',
+      'rdfs:comment':
+        'The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)) used for the main salary information in this job posting or for this employee.',
       'rdfs:label': 'salaryCurrency',
       'schema:domainIncludes': [
         {
@@ -13215,7 +13416,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:WorkBasedProgram',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.',
+      'rdfs:comment':
+        'A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.',
       'rdfs:label': 'WorkBasedProgram',
       'rdfs:subClassOf': {
         $id: 'schema:EducationalOccupationalProgram',
@@ -13271,7 +13473,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:serviceOperator',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.',
+      'rdfs:comment':
+        'The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.',
       'rdfs:label': 'serviceOperator',
       'schema:domainIncludes': {
         $id: 'schema:GovernmentService',
@@ -13283,7 +13486,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:termsPerYear',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example, if the student can only take 2 semesters for the program in one year, then termsPerYear should be 2.',
+      'rdfs:comment':
+        'The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example, if the student can only take 2 semesters for the program in one year, then termsPerYear should be 2.',
       'rdfs:label': 'termsPerYear',
       'schema:domainIncludes': {
         $id: 'schema:EducationalOccupationalProgram',
@@ -13373,7 +13577,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UnRegisterAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of un-registering from a service.\\n\\nRelated actions:\\n\\n* [[RegisterAction]]: antonym of UnRegisterAction.\\n* [[LeaveAction]]: Unlike LeaveAction, UnRegisterAction implies that you are unregistering from a service you were previously registered, rather than leaving a team/group of people.',
+      'rdfs:comment':
+        'The act of un-registering from a service.\\n\\nRelated actions:\\n\\n* [[RegisterAction]]: antonym of UnRegisterAction.\\n* [[LeaveAction]]: Unlike LeaveAction, UnRegisterAction implies that you are unregistering from a service you were previously registered, rather than leaving a team/group of people.',
       'rdfs:label': 'UnRegisterAction',
       'rdfs:subClassOf': {
         $id: 'schema:InteractAction',
@@ -13400,7 +13605,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:parentItem',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.',
+      'rdfs:comment':
+        'The parent of a question, answer or item in general. Typically used for Q/A discussion threads e.g. a chain of comments with the first comment being an [[Article]] or other [[CreativeWork]]. See also [[comment]] which points from something to a comment about it.',
       'rdfs:label': 'parentItem',
       'schema:domainIncludes': [
         {
@@ -13502,7 +13708,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:xpath',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".',
+      'rdfs:comment':
+        'An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".',
       'rdfs:label': 'xpath',
       'schema:domainIncludes': [
         {
@@ -13522,7 +13729,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PhysicalActivity',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.',
+      'rdfs:comment':
+        'Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.',
       'rdfs:label': 'PhysicalActivity',
       'rdfs:subClassOf': {
         $id: 'schema:LifestyleModification',
@@ -13569,7 +13777,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:artMedium',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)',
+      'rdfs:comment':
+        'The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)',
       'rdfs:label': 'artMedium',
       'rdfs:subPropertyOf': {
         $id: 'schema:material',
@@ -13686,7 +13895,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Play',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A play is a form of literature, usually consisting of dialogue between characters, intended for theatrical performance rather than just reading. Note: A performance of a Play would be a [[TheaterEvent]] or [[BroadcastEvent]] - the *Play* being the [[workPerformed]].',
+      'rdfs:comment':
+        'A play is a form of literature, usually consisting of dialogue between characters, intended for theatrical performance rather than just reading. Note: A performance of a Play would be a [[TheaterEvent]] or [[BroadcastEvent]] - the *Play* being the [[workPerformed]].',
       'rdfs:label': 'Play',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -13704,7 +13914,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'dcterms:identifier',
       },
-      'rdfs:comment': 'The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ',
+      'rdfs:comment':
+        'The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ',
       'rdfs:label': 'identifier',
       'schema:domainIncludes': {
         $id: 'schema:Thing',
@@ -13724,7 +13935,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:bed',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use bed directly with a text.\n      If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.',
+      'rdfs:comment':
+        'The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use bed directly with a text.\n      If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.',
       'rdfs:label': 'bed',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/STI_Accommodation_Ontology',
@@ -13755,7 +13967,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:returnPolicyCountry',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]]. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where the product was originally shipped from or sent to.',
+      'rdfs:comment':
+        'The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]]. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where the product was originally shipped from or sent to.',
       'rdfs:label': 'returnPolicyCountry',
       'schema:domainIncludes': {
         $id: 'schema:MerchantReturnPolicy',
@@ -13852,7 +14065,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:expectsAcceptanceOf',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.',
+      'rdfs:comment':
+        'An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.',
       'rdfs:label': 'expectsAcceptanceOf',
       'schema:domainIncludes': [
         {
@@ -13967,7 +14181,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:coursePrerequisites',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may be a pre-requisite competency, referenced using [[AlignmentObject]].',
+      'rdfs:comment':
+        'Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may be a pre-requisite competency, referenced using [[AlignmentObject]].',
       'rdfs:label': 'coursePrerequisites',
       'schema:domainIncludes': {
         $id: 'schema:Course',
@@ -13987,7 +14202,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PrintDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/print">print</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/print">print</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'PrintDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -14160,7 +14376,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Nonprofit501c1',
       $type: 'schema:USNonprofitType',
-      'rdfs:comment': 'Nonprofit501c1: Non-profit type referring to Corporations Organized Under Act of Congress, including Federal Credit Unions and National Farm Loan Associations.',
+      'rdfs:comment':
+        'Nonprofit501c1: Non-profit type referring to Corporations Organized Under Act of Congress, including Federal Credit Unions and National Farm Loan Associations.',
       'rdfs:label': 'Nonprofit501c1',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -14172,7 +14389,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:isBasedOnUrl',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.',
+      'rdfs:comment':
+        'A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.',
       'rdfs:label': 'isBasedOnUrl',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -14195,7 +14413,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OfferForPurchase',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose\n  [[businessFunction]] is [sell](http://purl.org/goodrelations/v1#Sell.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for\n  background on the underlying concepts.\n  ',
+      'rdfs:comment':
+        'An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose\n  [[businessFunction]] is [sell](http://purl.org/goodrelations/v1#Sell.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for\n  background on the underlying concepts.\n  ',
       'rdfs:label': 'OfferForPurchase',
       'rdfs:subClassOf': {
         $id: 'schema:Offer',
@@ -14352,7 +14571,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:mathExpression',
       $type: 'rdf:Property',
-      'rdfs:comment': "A mathematical expression (e.g. 'x^2-3x=0') that may be solved for a specific variable, simplified, or transformed. This can take many formats, e.g. LaTeX, Ascii-Math, or math as you would write with a keyboard.",
+      'rdfs:comment':
+        "A mathematical expression (e.g. 'x^2-3x=0') that may be solved for a specific variable, simplified, or transformed. This can take many formats, e.g. LaTeX, Ascii-Math, or math as you would write with a keyboard.",
       'rdfs:label': 'mathExpression',
       'schema:domainIncludes': {
         $id: 'schema:MathSolver',
@@ -14464,7 +14684,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:numConstraints',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the number of constraints property values defined for a particular [[ConstraintNode]] such as [[StatisticalVariable]]. This helps applications understand if they have access to a sufficiently complete description of a [[StatisticalVariable]] or other construct that is defined using properties on template-style nodes.',
+      'rdfs:comment':
+        'Indicates the number of constraints property values defined for a particular [[ConstraintNode]] such as [[StatisticalVariable]]. This helps applications understand if they have access to a sufficiently complete description of a [[StatisticalVariable]] or other construct that is defined using properties on template-style nodes.',
       'rdfs:label': 'numConstraints',
       'schema:domainIncludes': {
         $id: 'schema:ConstraintNode',
@@ -14656,7 +14877,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:circle',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.',
+      'rdfs:comment':
+        'A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.',
       'rdfs:label': 'circle',
       'schema:domainIncludes': {
         $id: 'schema:GeoShape',
@@ -14668,7 +14890,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BodyMeasurementHand',
       $type: 'schema:BodyMeasurementTypeEnumeration',
-      'rdfs:comment': 'Maximum hand girth (measured over the knuckles of the open right hand excluding thumb, fingers together). Used, for example, to fit gloves.',
+      'rdfs:comment':
+        'Maximum hand girth (measured over the knuckles of the open right hand excluding thumb, fingers together). Used, for example, to fit gloves.',
       'rdfs:label': 'BodyMeasurementHand',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -14680,7 +14903,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:HealthAspectEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'HealthAspectEnumeration enumerates several aspects of health content online, each of which might be described using [[hasHealthAspect]] and [[HealthTopicContent]].',
+      'rdfs:comment':
+        'HealthAspectEnumeration enumerates several aspects of health content online, each of which might be described using [[hasHealthAspect]] and [[HealthTopicContent]].',
       'rdfs:label': 'HealthAspectEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -14695,7 +14919,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:unitCode',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.',
+      'rdfs:comment':
+        'The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.',
       'rdfs:label': 'unitCode',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -14792,7 +15017,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EventSeries',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A series of [[Event]]s. Included events can relate with the series using the [[superEvent]] property.\n\nAn EventSeries is a collection of events that share some unifying characteristic. For example, "The Olympic Games" is a series, which\nis repeated regularly. The "2012 London Olympics" can be presented both as an [[Event]] in the series "Olympic Games", and as an\n[[EventSeries]] that included a number of sporting competitions as Events.\n\nThe nature of the association between the events in an [[EventSeries]] can vary, but typical examples could\ninclude a thematic event series (e.g. topical meetups or classes), or a series of regular events that share a location, attendee group and/or organizers.\n\nEventSeries has been defined as a kind of Event to make it easy for publishers to use it in an Event context without\nworrying about which kinds of series are really event-like enough to call an Event. In general an EventSeries\nmay seem more Event-like when the period of time is compact and when aspects such as location are fixed, but\nit may also sometimes prove useful to describe a longer-term series as an Event.\n   ',
+      'rdfs:comment':
+        'A series of [[Event]]s. Included events can relate with the series using the [[superEvent]] property.\n\nAn EventSeries is a collection of events that share some unifying characteristic. For example, "The Olympic Games" is a series, which\nis repeated regularly. The "2012 London Olympics" can be presented both as an [[Event]] in the series "Olympic Games", and as an\n[[EventSeries]] that included a number of sporting competitions as Events.\n\nThe nature of the association between the events in an [[EventSeries]] can vary, but typical examples could\ninclude a thematic event series (e.g. topical meetups or classes), or a series of regular events that share a location, attendee group and/or organizers.\n\nEventSeries has been defined as a kind of Event to make it easy for publishers to use it in an Event context without\nworrying about which kinds of series are really event-like enough to call an Event. In general an EventSeries\nmay seem more Event-like when the period of time is compact and when aspects such as location are fixed, but\nit may also sometimes prove useful to describe a longer-term series as an Event.\n   ',
       'rdfs:label': 'EventSeries',
       'rdfs:subClassOf': [
         {
@@ -14812,7 +15038,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AdvertiserContentArticle',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An [[Article]] that an external entity has paid to place or to produce to its specifications. Includes [advertorials](https://en.wikipedia.org/wiki/Advertorial), sponsored content, native advertising and other paid content.',
+      'rdfs:comment':
+        'An [[Article]] that an external entity has paid to place or to produce to its specifications. Includes [advertorials](https://en.wikipedia.org/wiki/Advertorial), sponsored content, native advertising and other paid content.',
       'rdfs:label': 'AdvertiserContentArticle',
       'rdfs:subClassOf': {
         $id: 'schema:Article',
@@ -15020,7 +15247,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:measuredProperty',
       $type: 'rdf:Property',
-      'rdfs:comment': "The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).",
+      'rdfs:comment':
+        "The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).",
       'rdfs:label': 'measuredProperty',
       'schema:domainIncludes': [
         {
@@ -15043,7 +15271,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Claim',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [[Claim]] in Schema.org represents a specific, factually-oriented claim that could be the [[itemReviewed]] in a [[ClaimReview]]. The content of a claim can be summarized with the [[text]] property. Variations on well known claims can have their common identity indicated via [[sameAs]] links, and summarized with a [[name]]. Ideally, a [[Claim]] description includes enough contextual information to minimize the risk of ambiguity or inclarity. In practice, many claims are better understood in the context in which they appear or the interpretations provided by claim reviews.\n\n  Beyond [[ClaimReview]], the Claim type can be associated with related creative works - for example a [[ScholarlyArticle]] or [[Question]] might be [[about]] some [[Claim]].\n\n  At this time, Schema.org does not define any types of relationship between claims. This is a natural area for future exploration.\n  ',
+      'rdfs:comment':
+        'A [[Claim]] in Schema.org represents a specific, factually-oriented claim that could be the [[itemReviewed]] in a [[ClaimReview]]. The content of a claim can be summarized with the [[text]] property. Variations on well known claims can have their common identity indicated via [[sameAs]] links, and summarized with a [[name]]. Ideally, a [[Claim]] description includes enough contextual information to minimize the risk of ambiguity or inclarity. In practice, many claims are better understood in the context in which they appear or the interpretations provided by claim reviews.\n\n  Beyond [[ClaimReview]], the Claim type can be associated with related creative works - for example a [[ScholarlyArticle]] or [[Question]] might be [[about]] some [[Claim]].\n\n  At this time, Schema.org does not define any types of relationship between claims. This is a natural area for future exploration.\n  ',
       'rdfs:label': 'Claim',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -15124,7 +15353,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Nonprofit501c12',
       $type: 'schema:USNonprofitType',
-      'rdfs:comment': 'Nonprofit501c12: Non-profit type referring to Benevolent Life Insurance Associations, Mutual Ditch or Irrigation Companies, Mutual or Cooperative Telephone Companies.',
+      'rdfs:comment':
+        'Nonprofit501c12: Non-profit type referring to Benevolent Life Insurance Associations, Mutual Ditch or Irrigation Companies, Mutual or Cooperative Telephone Companies.',
       'rdfs:label': 'Nonprofit501c12',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -15136,7 +15366,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:keywords',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.',
+      'rdfs:comment':
+        'Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.',
       'rdfs:label': 'keywords',
       'schema:domainIncludes': [
         {
@@ -15348,7 +15579,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalRiskScore',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.',
+      'rdfs:comment':
+        'A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.',
       'rdfs:label': 'MedicalRiskScore',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalRiskEstimator',
@@ -15360,7 +15592,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LinkRole',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A Role that represents a Web link, e.g. as expressed via the 'url' property. Its linkRelationship property can indicate URL-based and plain textual link types, e.g. those in IANA link registry or others such as 'amphtml'. This structure provides a placeholder where details from HTML's link element can be represented outside of HTML, e.g. in JSON-LD feeds.",
+      'rdfs:comment':
+        "A Role that represents a Web link, e.g. as expressed via the 'url' property. Its linkRelationship property can indicate URL-based and plain textual link types, e.g. those in IANA link registry or others such as 'amphtml'. This structure provides a placeholder where details from HTML's link element can be represented outside of HTML, e.g. in JSON-LD feeds.",
       'rdfs:label': 'LinkRole',
       'rdfs:subClassOf': {
         $id: 'schema:Role',
@@ -15375,7 +15608,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:courseWorkload',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The amount of work expected of students taking the course, often provided as a figure per week or per month, and may be broken down by type. For example, "2 hours of lectures, 1 hour of lab work and 3 hours of independent study per week".',
+      'rdfs:comment':
+        'The amount of work expected of students taking the course, often provided as a figure per week or per month, and may be broken down by type. For example, "2 hours of lectures, 1 hour of lab work and 3 hours of independent study per week".',
       'rdfs:label': 'courseWorkload',
       'schema:domainIncludes': {
         $id: 'schema:CourseInstance',
@@ -15393,7 +15627,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:size',
       $type: 'rdf:Property',
-      'rdfs:comment': "A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured [[SizeSpecification]]; in other cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be more applicable. ",
+      'rdfs:comment':
+        "A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured [[SizeSpecification]]; in other cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be more applicable. ",
       'rdfs:label': 'size',
       'schema:domainIncludes': [
         {
@@ -15501,7 +15736,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TakeAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of gaining ownership of an object from an origin. Reciprocal of GiveAction.\\n\\nRelated actions:\\n\\n* [[GiveAction]]: The reciprocal of TakeAction.\\n* [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership has been transferred.',
+      'rdfs:comment':
+        'The act of gaining ownership of an object from an origin. Reciprocal of GiveAction.\\n\\nRelated actions:\\n\\n* [[GiveAction]]: The reciprocal of TakeAction.\\n* [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership has been transferred.',
       'rdfs:label': 'TakeAction',
       'rdfs:subClassOf': {
         $id: 'schema:TransferAction',
@@ -15513,7 +15749,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#implements',
       },
-      'rdfs:comment': 'Indicates that this legislation (or part of a legislation) somehow transfers another legislation in a different legislative context. This is an informative link, and it has no legal value. For legally-binding links of transposition, use the <a href="/legislationTransposes">legislationTransposes</a> property. For example an informative consolidated law of a European Union\'s member state "applies" the consolidated version of the European Directive implemented in it.',
+      'rdfs:comment':
+        'Indicates that this legislation (or part of a legislation) somehow transfers another legislation in a different legislative context. This is an informative link, and it has no legal value. For legally-binding links of transposition, use the <a href="/legislationTransposes">legislationTransposes</a> property. For example an informative consolidated law of a European Union\'s member state "applies" the consolidated version of the European Directive implemented in it.',
       'rdfs:label': 'legislationApplies',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/ELI',
@@ -15577,7 +15814,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CrossSectional',
       $type: 'schema:MedicalObservationalStudyDesign',
-      'rdfs:comment': "Studies carried out on pre-existing data (usually from 'snapshot' surveys), such as that collected by the Census Bureau. Sometimes called Prevalence Studies.",
+      'rdfs:comment':
+        "Studies carried out on pre-existing data (usually from 'snapshot' surveys), such as that collected by the Census Bureau. Sometimes called Prevalence Studies.",
       'rdfs:label': 'CrossSectional',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -15586,7 +15824,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BorrowAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.\\n\\nRelated actions:\\n\\n* [[LendAction]]: Reciprocal of BorrowAction.',
+      'rdfs:comment':
+        'The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.\\n\\nRelated actions:\\n\\n* [[LendAction]]: Reciprocal of BorrowAction.',
       'rdfs:label': 'BorrowAction',
       'rdfs:subClassOf': {
         $id: 'schema:TransferAction',
@@ -15595,7 +15834,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Pathology',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that is concerned with the study of the cause, origin and nature of a disease state, including its consequences as a result of manifestation of the disease. In clinical care, the term is used to designate a branch of medicine using laboratory tests to diagnose and determine the prognostic significance of illness.',
+      'rdfs:comment':
+        'A specific branch of medical science that is concerned with the study of the cause, origin and nature of a disease state, including its consequences as a result of manifestation of the disease. In clinical care, the term is used to designate a branch of medicine using laboratory tests to diagnose and determine the prognostic significance of illness.',
       'rdfs:label': 'Pathology',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -15645,7 +15885,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:artEdition',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, \'artEdition\' refers to the total number of copies (in this example "20").',
+      'rdfs:comment':
+        'The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, \'artEdition\' refers to the total number of copies (in this example "20").',
       'rdfs:label': 'artEdition',
       'schema:domainIncludes': {
         $id: 'schema:VisualArtwork',
@@ -15662,7 +15903,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:totalJobOpenings',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions is unclear or not known.',
+      'rdfs:comment':
+        'The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions is unclear or not known.',
       'rdfs:label': 'totalJobOpenings',
       'schema:domainIncludes': {
         $id: 'schema:JobPosting',
@@ -15718,7 +15960,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EducationalOccupationalProgram',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities (e.g., job, courses) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity (e.g., a job), or sometimes a higher educational opportunity (e.g., an advanced degree).',
+      'rdfs:comment':
+        'A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities (e.g., job, courses) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity (e.g., a job), or sometimes a higher educational opportunity (e.g., an advanced degree).',
       'rdfs:label': 'EducationalOccupationalProgram',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -15808,7 +16051,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EventRescheduled',
       $type: 'schema:EventStatusType',
-      'rdfs:comment': "The event has been rescheduled. The event's previousStartDate should be set to the old date and the startDate should be set to the event's new date. (If the event has been rescheduled multiple times, the previousStartDate property may be repeated.)",
+      'rdfs:comment':
+        "The event has been rescheduled. The event's previousStartDate should be set to the old date and the startDate should be set to the event's new date. (If the event has been rescheduled multiple times, the previousStartDate property may be repeated.)",
       'rdfs:label': 'EventRescheduled',
     },
     {
@@ -15826,7 +16070,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:floorLevel',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The floor level for an [[Accommodation]] in a multi-storey building. Since counting\n  systems [vary internationally](https://en.wikipedia.org/wiki/Storey#Consecutive_number_floor_designations), the local system should be used where possible.',
+      'rdfs:comment':
+        'The floor level for an [[Accommodation]] in a multi-storey building. Since counting\n  systems [vary internationally](https://en.wikipedia.org/wiki/Storey#Consecutive_number_floor_designations), the local system should be used where possible.',
       'rdfs:label': 'floorLevel',
       'schema:domainIncludes': {
         $id: 'schema:Accommodation',
@@ -15893,7 +16138,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Recipe',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.',
+      'rdfs:comment':
+        'A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.',
       'rdfs:label': 'Recipe',
       'rdfs:subClassOf': {
         $id: 'schema:HowTo',
@@ -16007,7 +16253,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ComicSeries',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A sequential publication of comic stories under a\n    \tunifying title, for example "The Amazing Spider-Man" or "Groo the\n    \tWanderer".',
+      'rdfs:comment':
+        'A sequential publication of comic stories under a\n    \tunifying title, for example "The Amazing Spider-Man" or "Groo the\n    \tWanderer".',
       'rdfs:label': 'ComicSeries',
       'rdfs:subClassOf': {
         $id: 'schema:Periodical',
@@ -16019,7 +16266,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PublicHolidays',
       $type: 'schema:DayOfWeek',
-      'rdfs:comment': 'This stands for any day that is a public holiday; it is a placeholder for all official public holidays in some particular location. While not technically a "day of the week", it can be used with [[OpeningHoursSpecification]]. In the context of an opening hours specification it can be used to indicate opening hours on public holidays, overriding general opening hours for the day of the week on which a public holiday occurs.',
+      'rdfs:comment':
+        'This stands for any day that is a public holiday; it is a placeholder for all official public holidays in some particular location. While not technically a "day of the week", it can be used with [[OpeningHoursSpecification]]. In the context of an opening hours specification it can be used to indicate opening hours on public holidays, overriding general opening hours for the day of the week on which a public holiday occurs.',
       'rdfs:label': 'PublicHolidays',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsClass',
@@ -16116,7 +16364,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PublicToilet',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A public toilet is a room or small building containing one or more toilets (and possibly also urinals) which is available for use by the general public, or by customers or employees of certain businesses.',
+      'rdfs:comment':
+        'A public toilet is a room or small building containing one or more toilets (and possibly also urinals) which is available for use by the general public, or by customers or employees of certain businesses.',
       'rdfs:label': 'PublicToilet',
       'rdfs:subClassOf': {
         $id: 'schema:CivicStructure',
@@ -16193,7 +16442,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TrackAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An agent tracks an object for updates.\\n\\nRelated actions:\\n\\n* [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.\\n* [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.',
+      'rdfs:comment':
+        'An agent tracks an object for updates.\\n\\nRelated actions:\\n\\n* [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.\\n* [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.',
       'rdfs:label': 'TrackAction',
       'rdfs:subClassOf': {
         $id: 'schema:FindAction',
@@ -16202,7 +16452,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MediaEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'MediaEnumeration enumerations are lists of codes, labels etc. useful for describing media objects. They may be reflections of externally developed lists, or created at schema.org, or a combination.',
+      'rdfs:comment':
+        'MediaEnumeration enumerations are lists of codes, labels etc. useful for describing media objects. They may be reflections of externally developed lists, or created at schema.org, or a combination.',
       'rdfs:label': 'MediaEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -16256,7 +16507,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:eligibleQuantity',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.',
+      'rdfs:comment':
+        'The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.',
       'rdfs:label': 'eligibleQuantity',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -16279,7 +16531,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ReserveAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Reserving a concrete object.\\n\\nRelated actions:\\n\\n* [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot / spatial allocation.',
+      'rdfs:comment':
+        'Reserving a concrete object.\\n\\nRelated actions:\\n\\n* [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot / spatial allocation.',
       'rdfs:label': 'ReserveAction',
       'rdfs:subClassOf': {
         $id: 'schema:PlanAction',
@@ -16288,7 +16541,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ShippingRateSettings',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A ShippingRateSettings represents re-usable pieces of shipping information. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for [[shippingLabel]].',
+      'rdfs:comment':
+        'A ShippingRateSettings represents re-usable pieces of shipping information. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for [[shippingLabel]].',
       'rdfs:label': 'ShippingRateSettings',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -16388,7 +16642,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:starRating',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).',
+      'rdfs:comment':
+        'An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).',
       'rdfs:label': 'starRating',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/STI_Accommodation_Ontology',
@@ -16450,7 +16705,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:numberOfBathroomsTotal',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See also [[numberOfRooms]].',
+      'rdfs:comment':
+        'The total integer number of bathrooms in some [[Accommodation]], following real estate conventions as [documented in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field): "The simple sum of the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See also [[numberOfRooms]].',
       'rdfs:label': 'numberOfBathroomsTotal',
       'schema:domainIncludes': [
         {
@@ -16523,7 +16779,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:engineDisplacement',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. \\n\\nTypical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic inches\\n* Note 1: You can link to information about how the given value has been determined using the [[valueReference]] property.\\n* Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.',
+      'rdfs:comment':
+        'The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. \\n\\nTypical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic inches\\n* Note 1: You can link to information about how the given value has been determined using the [[valueReference]] property.\\n* Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.',
       'rdfs:label': 'engineDisplacement',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -16582,7 +16839,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LeisureTimeActivity',
       $type: 'schema:PhysicalActivityCategory',
-      'rdfs:comment': 'Any physical activity engaged in for recreational purposes. Examples may include ballroom dancing, roller skating, canoeing, fishing, etc.',
+      'rdfs:comment':
+        'Any physical activity engaged in for recreational purposes. Examples may include ballroom dancing, roller skating, canoeing, fishing, etc.',
       'rdfs:label': 'LeisureTimeActivity',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -16632,7 +16890,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DigitalArtDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/digitalArt">digital art</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/digitalArt">digital art</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'DigitalArtDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -16684,7 +16943,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:previousStartDate',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Used in conjunction with eventStatus for rescheduled or cancelled events. This property contains the previously scheduled start date. For rescheduled events, the startDate property should be used for the newly scheduled start date. In the (rare) case of an event that has been postponed and rescheduled multiple times, this field may be repeated.',
+      'rdfs:comment':
+        'Used in conjunction with eventStatus for rescheduled or cancelled events. This property contains the previously scheduled start date. For rescheduled events, the startDate property should be used for the newly scheduled start date. In the (rare) case of an event that has been postponed and rescheduled multiple times, this field may be repeated.',
       'rdfs:label': 'previousStartDate',
       'schema:domainIncludes': {
         $id: 'schema:Event',
@@ -16708,7 +16968,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentClass': {
         $id: 'dcmitype:Event',
       },
-      'rdfs:comment': 'An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the [[offers]] property. Repeated events may be structured as separate Event objects.',
+      'rdfs:comment':
+        'An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the [[offers]] property. Repeated events may be structured as separate Event objects.',
       'rdfs:label': 'Event',
       'rdfs:subClassOf': {
         $id: 'schema:Thing',
@@ -16732,7 +16993,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SexualContentConsideration',
       $type: 'schema:AdultOrientedEnumeration',
-      'rdfs:comment': 'The item contains sexually oriented content such as nudity, suggestive or explicit material, or related online services, or is intended to enhance sexual activity. Examples: Erotic videos or magazine, sexual enhancement devices, sex toys.',
+      'rdfs:comment':
+        'The item contains sexually oriented content such as nudity, suggestive or explicit material, or related online services, or is intended to enhance sexual activity. Examples: Erotic videos or magazine, sexual enhancement devices, sex toys.',
       'rdfs:label': 'SexualContentConsideration',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -16851,7 +17113,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:menuAddOn',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Additional menu item(s) such as a side dish of salad or side order of fries that can be added to this menu item. Additionally it can be a menu section containing allowed add-on menu items for this menu item.',
+      'rdfs:comment':
+        'Additional menu item(s) such as a side dish of salad or side order of fries that can be added to this menu item. Additionally it can be a menu section containing allowed add-on menu items for this menu item.',
       'rdfs:label': 'menuAddOn',
       'schema:domainIncludes': {
         $id: 'schema:MenuItem',
@@ -16871,7 +17134,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ExercisePlan',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.',
+      'rdfs:comment':
+        'Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.',
       'rdfs:label': 'ExercisePlan',
       'rdfs:subClassOf': [
         {
@@ -16918,7 +17182,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Schedule',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A schedule defines a repeating time period used to describe a regularly occurring [[Event]]. At a minimum a schedule will specify [[repeatFrequency]] which describes the interval between occurrences of the event. Additional information can be provided to specify the schedule more precisely.\n      This includes identifying the day(s) of the week or month when the recurring event will take place, in addition to its start and end time. Schedules may also\n      have start and end dates to indicate when they are active, e.g. to define a limited calendar of events.',
+      'rdfs:comment':
+        'A schedule defines a repeating time period used to describe a regularly occurring [[Event]]. At a minimum a schedule will specify [[repeatFrequency]] which describes the interval between occurrences of the event. Additional information can be provided to specify the schedule more precisely.\n      This includes identifying the day(s) of the week or month when the recurring event will take place, in addition to its start and end time. Schedules may also\n      have start and end dates to indicate when they are active, e.g. to define a limited calendar of events.',
       'rdfs:label': 'Schedule',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -16945,7 +17210,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:backstory',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.',
+      'rdfs:comment':
+        'For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.',
       'rdfs:label': 'backstory',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/TP',
@@ -16983,7 +17249,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:mileageFromOdometer',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The total distance travelled by the particular vehicle since its initial production, as read from its odometer.\\n\\nTypical unit code(s): KMT for kilometers, SMI for statute miles.',
+      'rdfs:comment':
+        'The total distance travelled by the particular vehicle since its initial production, as read from its odometer.\\n\\nTypical unit code(s): KMT for kilometers, SMI for statute miles.',
       'rdfs:label': 'mileageFromOdometer',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -17018,7 +17285,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:editEIDR',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing a specific edit / edition for a work of film or television.\n\nFor example, the motion picture known as "Ghostbusters" whose [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J" has several edits, e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and "10.5240/8A35-3BEE-6497-5D12-9E4F-3".\n\nSince schema.org types like [[Movie]] and [[TVEpisode]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.\n',
+      'rdfs:comment':
+        'An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing a specific edit / edition for a work of film or television.\n\nFor example, the motion picture known as "Ghostbusters" whose [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J" has several edits, e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and "10.5240/8A35-3BEE-6497-5D12-9E4F-3".\n\nSince schema.org types like [[Movie]] and [[TVEpisode]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.\n',
       'rdfs:label': 'editEIDR',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -17077,7 +17345,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:elevation',
       $type: 'rdf:Property',
-      'rdfs:comment': "The elevation of a location ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be of the form 'NUMBER UNIT\\_OF\\_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters.",
+      'rdfs:comment':
+        "The elevation of a location ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). Values may be of the form 'NUMBER UNIT\\_OF\\_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters.",
       'rdfs:label': 'elevation',
       'schema:domainIncludes': [
         {
@@ -17111,7 +17380,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'dcterms:spatial',
       },
-      'rdfs:comment': 'The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of\n      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates\n      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.',
+      'rdfs:comment':
+        'The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of\n      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates\n      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.',
       'rdfs:label': 'spatialCoverage',
       'rdfs:subPropertyOf': {
         $id: 'schema:contentLocation',
@@ -17126,7 +17396,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:safetyConsideration',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.',
+      'rdfs:comment':
+        'Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.',
       'rdfs:label': 'safetyConsideration',
       'schema:domainIncludes': {
         $id: 'schema:DietarySupplement',
@@ -17294,7 +17565,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Suite',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Suite_(hotel)">http://en.wikipedia.org/wiki/Suite_(hotel)</a>).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
+      'rdfs:comment':
+        'A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Suite_(hotel)">http://en.wikipedia.org/wiki/Suite_(hotel)</a>).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
       'rdfs:label': 'Suite',
       'rdfs:subClassOf': {
         $id: 'schema:Accommodation',
@@ -17306,7 +17578,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BodyMeasurementFoot',
       $type: 'schema:BodyMeasurementTypeEnumeration',
-      'rdfs:comment': 'Foot length (measured between end of the most prominent toe and the most prominent part of the heel). Used, for example, to measure socks.',
+      'rdfs:comment':
+        'Foot length (measured between end of the most prominent toe and the most prominent part of the heel). Used, for example, to measure socks.',
       'rdfs:label': 'BodyMeasurementFoot',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -17339,7 +17612,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoCovers',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
+      'rdfs:comment':
+        'Represents a relationship between two geometries (or the places they represent), relating a covering geometry to a covered geometry. "Every point of b is a point of (the interior or boundary of) a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
       'rdfs:label': 'geoCovers',
       'schema:domainIncludes': [
         {
@@ -17388,7 +17662,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AlignmentObject',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An intangible item that describes an alignment between a learning resource and a node in an educational framework.\n\nShould not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.',
+      'rdfs:comment':
+        'An intangible item that describes an alignment between a learning resource and a node in an educational framework.\n\nShould not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.',
       'rdfs:label': 'AlignmentObject',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -17436,7 +17711,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:sdPublisher',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The\n[[sdPublisher]] property helps make such practices more explicit.',
+      'rdfs:comment':
+        'Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The\n[[sdPublisher]] property helps make such practices more explicit.',
       'rdfs:label': 'sdPublisher',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -17468,7 +17744,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DisagreeAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of expressing a difference of opinion with the object. An agent disagrees to/about an object (a proposition, topic or theme) with participants.',
+      'rdfs:comment':
+        'The act of expressing a difference of opinion with the object. An agent disagrees to/about an object (a proposition, topic or theme) with participants.',
       'rdfs:label': 'DisagreeAction',
       'rdfs:subClassOf': {
         $id: 'schema:ReactAction',
@@ -17521,7 +17798,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Resort',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A resort is a place used for relaxation or recreation, attracting visitors for holidays or vacations. Resorts are places, towns or sometimes commercial establishments operated by a single company (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Resort">http://en.wikipedia.org/wiki/Resort</a>).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n    ',
+      'rdfs:comment':
+        'A resort is a place used for relaxation or recreation, attracting visitors for holidays or vacations. Resorts are places, towns or sometimes commercial establishments operated by a single company (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Resort">http://en.wikipedia.org/wiki/Resort</a>).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n    ',
       'rdfs:label': 'Resort',
       'rdfs:subClassOf': {
         $id: 'schema:LodgingBusiness',
@@ -17533,7 +17811,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:artist',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The primary artist for a work\n    \tin a medium other than pencils or digital line art--for example, if the\n    \tprimary artwork is done in watercolors or digital paints.',
+      'rdfs:comment':
+        'The primary artist for a work\n    \tin a medium other than pencils or digital line art--for example, if the\n    \tprimary artwork is done in watercolors or digital paints.',
       'rdfs:label': 'artist',
       'schema:domainIncludes': [
         {
@@ -17556,7 +17835,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:asin',
       $type: 'rdf:Property',
-      'rdfs:comment': "An Amazon Standard Identification Number (ASIN) is a 10-character alphanumeric unique identifier assigned by Amazon.com and its partners for product identification within the Amazon organization (summary from [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s article).\n\nNote also that this is a definition for how to include ASINs in Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details.\nASINs are most commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too.",
+      'rdfs:comment':
+        "An Amazon Standard Identification Number (ASIN) is a 10-character alphanumeric unique identifier assigned by Amazon.com and its partners for product identification within the Amazon organization (summary from [Wikipedia](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number)'s article).\n\nNote also that this is a definition for how to include ASINs in Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details.\nASINs are most commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too.",
       'rdfs:label': 'asin',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -17637,7 +17917,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Toxicologic',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that is concerned with poisons, their nature, effects and detection and involved in the treatment of poisoning.',
+      'rdfs:comment':
+        'A specific branch of medical science that is concerned with poisons, their nature, effects and detection and involved in the treatment of poisoning.',
       'rdfs:label': 'Toxicologic',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -17646,7 +17927,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:statType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the kind of statistic represented by a [[StatisticalVariable]], e.g. mean, count etc. The value of statType is a property, either from within Schema.org (e.g. [[median]], [[marginOfError]], [[maxValue]], [[minValue]]) or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. ',
+      'rdfs:comment':
+        'Indicates the kind of statistic represented by a [[StatisticalVariable]], e.g. mean, count etc. The value of statType is a property, either from within Schema.org (e.g. [[median]], [[marginOfError]], [[maxValue]], [[minValue]]) or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. ',
       'rdfs:label': 'statType',
       'schema:domainIncludes': {
         $id: 'schema:StatisticalVariable',
@@ -17748,7 +18030,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:checkoutPageURLTemplate',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A URL template (RFC 6570) for a checkout page for an offer. This approach allows merchants to specify a URL for online checkout of the offered product, by interpolating parameters such as the logged in user ID, product ID, quantity, discount code etc. Parameter naming and standardization are not specified here.',
+      'rdfs:comment':
+        'A URL template (RFC 6570) for a checkout page for an offer. This approach allows merchants to specify a URL for online checkout of the offered product, by interpolating parameters such as the logged in user ID, product ID, quantity, discount code etc. Parameter naming and standardization are not specified here.',
       'rdfs:label': 'checkoutPageURLTemplate',
       'schema:domainIncludes': {
         $id: 'schema:Offer',
@@ -17775,7 +18058,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:gtin13',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.',
+      'rdfs:comment':
+        'The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.',
       'rdfs:label': 'gtin13',
       'rdfs:subPropertyOf': [
         {
@@ -17806,7 +18090,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:significance',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions or courses of treatment.',
+      'rdfs:comment':
+        'The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions or courses of treatment.',
       'rdfs:label': 'significance',
       'schema:domainIncludes': {
         $id: 'schema:SuperficialAnatomy',
@@ -17888,7 +18173,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:skills',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is either claimed by a person, an organization or desired or required to fulfill a role or to work in an occupation.',
+      'rdfs:comment':
+        'A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is either claimed by a person, an organization or desired or required to fulfill a role or to work in an occupation.',
       'rdfs:label': 'skills',
       'schema:domainIncludes': [
         {
@@ -17939,7 +18225,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserPageVisits',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserPageVisits',
       'rdfs:subClassOf': {
         $id: 'schema:UserInteraction',
@@ -18015,7 +18302,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Product',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.',
+      'rdfs:comment':
+        'Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.',
       'rdfs:label': 'Product',
       'rdfs:subClassOf': {
         $id: 'schema:Thing',
@@ -18027,7 +18315,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:totalTime',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).',
+      'rdfs:comment':
+        'The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).',
       'rdfs:label': 'totalTime',
       'schema:domainIncludes': [
         {
@@ -18100,7 +18389,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LifestyleModification',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A process of care involving exercise, changes to diet, fitness routines, and other lifestyle changes aimed at improving a health condition.',
+      'rdfs:comment':
+        'A process of care involving exercise, changes to diet, fitness routines, and other lifestyle changes aimed at improving a health condition.',
       'rdfs:label': 'LifestyleModification',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -18162,7 +18452,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MoveAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of an agent relocating to a place.\\n\\nRelated actions:\\n\\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.',
+      'rdfs:comment':
+        'The act of an agent relocating to a place.\\n\\nRelated actions:\\n\\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.',
       'rdfs:label': 'MoveAction',
       'rdfs:subClassOf': {
         $id: 'schema:Action',
@@ -18214,7 +18505,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:interactingDrug',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.',
+      'rdfs:comment':
+        'Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.',
       'rdfs:label': 'interactingDrug',
       'schema:domainIncludes': {
         $id: 'schema:Drug',
@@ -18265,7 +18557,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalTrial',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A medical trial is a type of medical study that uses a scientific process to compare the safety and efficacy of medical therapies or medical procedures. In general, medical trials are controlled and subjects are allocated at random to the different treatment and/or control groups.',
+      'rdfs:comment':
+        'A medical trial is a type of medical study that uses a scientific process to compare the safety and efficacy of medical therapies or medical procedures. In general, medical trials are controlled and subjects are allocated at random to the different treatment and/or control groups.',
       'rdfs:label': 'MedicalTrial',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalStudy',
@@ -18286,7 +18579,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AgreeAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of expressing a consistency of opinion with the object. An agent agrees to/about an object (a proposition, topic or theme) with participants.',
+      'rdfs:comment':
+        'The act of expressing a consistency of opinion with the object. An agent agrees to/about an object (a proposition, topic or theme) with participants.',
       'rdfs:label': 'AgreeAction',
       'rdfs:subClassOf': {
         $id: 'schema:ReactAction',
@@ -18397,7 +18691,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:roofLoad',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle.\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n\\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]]\\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
+      'rdfs:comment':
+        'The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle.\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n\\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]]\\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
       'rdfs:label': 'roofLoad',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -18458,7 +18753,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentClass': {
         $id: 'http://purl.bioontology.org/ontology/SNOMEDCT/50731006',
       },
-      'rdfs:comment': 'A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques.',
+      'rdfs:comment':
+        'A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques.',
       'rdfs:label': 'MedicalProcedure',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -18519,7 +18815,8 @@ export const schemaorg: Record<string, any> = {
       $type: 'rdfs:Class',
       'rdfs:comment': {
         $language: 'en',
-        $value: 'An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections.',
+        $value:
+          'An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections.',
       },
       'rdfs:label': {
         $language: 'en',
@@ -18538,7 +18835,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EmployerReview',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An [[EmployerReview]] is a review of an [[Organization]] regarding its role as an employer, written by a current or former employee of that organization.',
+      'rdfs:comment':
+        'An [[EmployerReview]] is a review of an [[Organization]] regarding its role as an employer, written by a current or former employee of that organization.',
       'rdfs:label': 'EmployerReview',
       'rdfs:subClassOf': {
         $id: 'schema:Review',
@@ -18553,7 +18851,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SatiricalArticle',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An [[Article]] whose content is primarily [[satirical]](https://en.wikipedia.org/wiki/Satire) in nature, i.e. unlikely to be literally true. A satirical article is sometimes but not necessarily also a [[NewsArticle]]. [[ScholarlyArticle]]s are also sometimes satirized.',
+      'rdfs:comment':
+        'An [[Article]] whose content is primarily [[satirical]](https://en.wikipedia.org/wiki/Satire) in nature, i.e. unlikely to be literally true. A satirical article is sometimes but not necessarily also a [[NewsArticle]]. [[ScholarlyArticle]]s are also sometimes satirized.',
       'rdfs:label': 'SatiricalArticle',
       'rdfs:subClassOf': {
         $id: 'schema:Article',
@@ -18571,7 +18870,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:clincalPharmacology',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).',
+      'rdfs:comment':
+        'Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).',
       'rdfs:label': 'clincalPharmacology',
       'schema:domainIncludes': {
         $id: 'schema:Drug',
@@ -18589,7 +18889,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:applicantLocationRequirements',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The location(s) applicants can apply from. This is usually used for telecommuting jobs where the applicant does not need to be in a physical office. Note: This should not be used for citizenship or work visa requirements.',
+      'rdfs:comment':
+        'The location(s) applicants can apply from. This is usually used for telecommuting jobs where the applicant does not need to be in a physical office. Note: This should not be used for citizenship or work visa requirements.',
       'rdfs:label': 'applicantLocationRequirements',
       'schema:domainIncludes': {
         $id: 'schema:JobPosting',
@@ -18733,7 +19034,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:RecommendedDoseSchedule',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.",
+      'rdfs:comment':
+        "A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.",
       'rdfs:label': 'RecommendedDoseSchedule',
       'rdfs:subClassOf': {
         $id: 'schema:DoseSchedule',
@@ -18745,7 +19047,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:constraintProperty',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates a property used as a constraint. For example, in the definition of a [[StatisticalVariable]]. The value is a property, either from within Schema.org or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. ',
+      'rdfs:comment':
+        'Indicates a property used as a constraint. For example, in the definition of a [[StatisticalVariable]]. The value is a property, either from within Schema.org or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. ',
       'rdfs:label': 'constraintProperty',
       'schema:domainIncludes': {
         $id: 'schema:ConstraintNode',
@@ -18810,7 +19113,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UnclassifiedAdultConsideration',
       $type: 'schema:AdultOrientedEnumeration',
-      'rdfs:comment': 'The item is suitable only for adults, without indicating why. Due to widespread use of "adult" as a euphemism for "sexual", many such items are likely suited also for the SexualContentConsideration code.',
+      'rdfs:comment':
+        'The item is suitable only for adults, without indicating why. Due to widespread use of "adult" as a euphemism for "sexual", many such items are likely suited also for the SexualContentConsideration code.',
       'rdfs:label': 'UnclassifiedAdultConsideration',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -18846,7 +19150,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:directApply',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates whether an [[url]] that is associated with a [[JobPosting]] enables direct application for the job, via the posting website. A job posting is considered to have directApply of [[True]] if an application process for the specified job can be directly initiated via the url(s) given (noting that e.g. multiple internet domains might nevertheless be involved at an implementation level). A value of [[False]] is appropriate if there is no clear path to applying directly online for the specified job, navigating directly from the JobPosting url(s) supplied.',
+      'rdfs:comment':
+        'Indicates whether an [[url]] that is associated with a [[JobPosting]] enables direct application for the job, via the posting website. A job posting is considered to have directApply of [[True]] if an application process for the specified job can be directly initiated via the url(s) given (noting that e.g. multiple internet domains might nevertheless be involved at an implementation level). A value of [[False]] is appropriate if there is no clear path to applying directly online for the specified job, navigating directly from the JobPosting url(s) supplied.',
       'rdfs:label': 'directApply',
       'schema:domainIncludes': {
         $id: 'schema:JobPosting',
@@ -18925,7 +19230,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:positiveNotes',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Provides positive considerations regarding something, for example product highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.\n\nIn the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described.\n\nThe property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most positive is at the beginning of the list).',
+      'rdfs:comment':
+        'Provides positive considerations regarding something, for example product highlights or (alongside [[negativeNotes]]) pro/con lists for reviews.\n\nIn the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described.\n\nThe property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most positive is at the beginning of the list).',
       'rdfs:label': 'positiveNotes',
       'schema:domainIncludes': [
         {
@@ -19054,7 +19360,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:discountCurrency',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The currency of the discount.\\n\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".',
+      'rdfs:comment':
+        'The currency of the discount.\\n\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".',
       'rdfs:label': 'discountCurrency',
       'schema:domainIncludes': {
         $id: 'schema:Order',
@@ -19420,7 +19727,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MonetaryAmount',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc.',
+      'rdfs:comment':
+        'A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc.',
       'rdfs:label': 'MonetaryAmount',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -19530,7 +19838,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:byMonthWeek',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Defines the week(s) of the month on which a recurring Event takes place. Specified as an Integer between 1-5. For clarity, byMonthWeek is best used in conjunction with byDay to indicate concepts like the first and third Mondays of a month.',
+      'rdfs:comment':
+        'Defines the week(s) of the month on which a recurring Event takes place. Specified as an Integer between 1-5. For clarity, byMonthWeek is best used in conjunction with byDay to indicate concepts like the first and third Mondays of a month.',
       'rdfs:label': 'byMonthWeek',
       'schema:domainIncludes': {
         $id: 'schema:Schedule',
@@ -19575,7 +19884,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:line',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.',
+      'rdfs:comment':
+        'A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.',
       'rdfs:label': 'line',
       'schema:domainIncludes': {
         $id: 'schema:GeoShape',
@@ -19587,7 +19897,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:hasDriveThroughService',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.',
+      'rdfs:comment':
+        'Indicates whether some facility (e.g. [[FoodEstablishment]], [[CovidTestingFacility]]) offers a service that can be used by driving through in a car. In the case of [[CovidTestingFacility]] such facilities could potentially help with social distancing from other potentially-infected users.',
       'rdfs:label': 'hasDriveThroughService',
       'schema:domainIncludes': {
         $id: 'schema:Place',
@@ -19605,7 +19916,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FDAcategoryA',
       $type: 'schema:DrugPregnancyCategory',
-      'rdfs:comment': 'A designation by the US FDA signifying that adequate and well-controlled studies have failed to demonstrate a risk to the fetus in the first trimester of pregnancy (and there is no evidence of risk in later trimesters).',
+      'rdfs:comment':
+        'A designation by the US FDA signifying that adequate and well-controlled studies have failed to demonstrate a risk to the fetus in the first trimester of pregnancy (and there is no evidence of risk in later trimesters).',
       'rdfs:label': 'FDAcategoryA',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -19623,7 +19935,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MeetingRoom',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A meeting room, conference room, or conference hall is a room provided for singular events such as business conferences and meetings (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Conference_hall">http://en.wikipedia.org/wiki/Conference_hall</a>).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
+      'rdfs:comment':
+        'A meeting room, conference room, or conference hall is a room provided for singular events such as business conferences and meetings (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Conference_hall">http://en.wikipedia.org/wiki/Conference_hall</a>).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
       'rdfs:label': 'MeetingRoom',
       'rdfs:subClassOf': {
         $id: 'schema:Room',
@@ -19635,7 +19948,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ProgramMembership',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.',
+      'rdfs:comment':
+        'Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.',
       'rdfs:label': 'ProgramMembership',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -19680,7 +19994,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Role',
       $type: 'rdfs:Class',
-      'rdfs:comment': "Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\\n\\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html).",
+      'rdfs:comment':
+        "Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\\n\\nSee also [blog post](http://blog.schema.org/2014/06/introducing-role.html).",
       'rdfs:label': 'Role',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -19788,7 +20103,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:directors',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.',
+      'rdfs:comment':
+        'A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.',
       'rdfs:label': 'directors',
       'schema:domainIncludes': [
         {
@@ -19886,7 +20202,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ratingExplanation',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]].',
+      'rdfs:comment':
+        'A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in the rating. This is particularly applicable to ratings associated with "fact check" markup using [[ClaimReview]].',
       'rdfs:label': 'ratingExplanation',
       'schema:domainIncludes': {
         $id: 'schema:Rating',
@@ -19958,7 +20275,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoCrosses',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses b: they have some but not all interior points in common, and the dimension of the intersection is less than that of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
+      'rdfs:comment':
+        'Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: "a crosses b: they have some but not all interior points in common, and the dimension of the intersection is less than that of at least one of them". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
       'rdfs:label': 'geoCrosses',
       'schema:domainIncludes': [
         {
@@ -20007,7 +20325,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:isUnlabelledFallback',
       $type: 'rdf:Property',
-      'rdfs:comment': "This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.",
+      'rdfs:comment':
+        "This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.",
       'rdfs:label': 'isUnlabelledFallback',
       'schema:domainIncludes': [
         {
@@ -20071,7 +20390,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:StatisticalPopulation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A StatisticalPopulation is a set of instances of a certain given type that satisfy some set of constraints. The property [[populationType]] is used to specify the type. Any property that can be used on instances of that type can appear on the statistical population. For example, a [[StatisticalPopulation]] representing all [[Person]]s with a [[homeLocation]] of East Podunk California would be described by applying the appropriate [[homeLocation]] and [[populationType]] properties to a [[StatisticalPopulation]] item that stands for that set of people.\nThe properties [[numConstraints]] and [[constraintProperty]] are used to specify which of the populations properties are used to specify the population. Note that the sense of "population" used here is the general sense of a statistical\npopulation, and does not imply that the population consists of people. For example, a [[populationType]] of [[Event]] or [[NewsArticle]] could be used. See also [[Observation]], where a [[populationType]] such as [[Person]] or [[Event]] can be indicated directly. In most cases it may be better to use [[StatisticalVariable]] instead of [[StatisticalPopulation]].',
+      'rdfs:comment':
+        'A StatisticalPopulation is a set of instances of a certain given type that satisfy some set of constraints. The property [[populationType]] is used to specify the type. Any property that can be used on instances of that type can appear on the statistical population. For example, a [[StatisticalPopulation]] representing all [[Person]]s with a [[homeLocation]] of East Podunk California would be described by applying the appropriate [[homeLocation]] and [[populationType]] properties to a [[StatisticalPopulation]] item that stands for that set of people.\nThe properties [[numConstraints]] and [[constraintProperty]] are used to specify which of the populations properties are used to specify the population. Note that the sense of "population" used here is the general sense of a statistical\npopulation, and does not imply that the population consists of people. For example, a [[populationType]] of [[Event]] or [[NewsArticle]] could be used. See also [[Observation]], where a [[populationType]] such as [[Person]] or [[Event]] can be indicated directly. In most cases it may be better to use [[StatisticalVariable]] instead of [[StatisticalPopulation]].',
       'rdfs:label': 'StatisticalPopulation',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -20231,7 +20551,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Accommodation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.\nFor more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
+      'rdfs:comment':
+        'An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.\nFor more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
       'rdfs:label': 'Accommodation',
       'rdfs:subClassOf': {
         $id: 'schema:Place',
@@ -20243,7 +20564,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Apartment',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).',
+      'rdfs:comment':
+        'An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).',
       'rdfs:label': 'Apartment',
       'rdfs:subClassOf': {
         $id: 'schema:Accommodation',
@@ -20255,7 +20577,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DatedMoneySpecification',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.",
+      'rdfs:comment':
+        "A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.",
       'rdfs:label': 'DatedMoneySpecification',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -20267,7 +20590,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PatientExperienceHealthAspect',
       $type: 'schema:HealthAspectEnumeration',
-      'rdfs:comment': 'Content about the real life experience of patients or people that have lived a similar experience about the topic. May be forums, topics, Q-and-A and related material.',
+      'rdfs:comment':
+        'Content about the real life experience of patients or people that have lived a similar experience about the topic. May be forums, topics, Q-and-A and related material.',
       'rdfs:label': 'PatientExperienceHealthAspect',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -20359,7 +20683,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:department',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.',
+      'rdfs:comment':
+        'A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.',
       'rdfs:label': 'department',
       'schema:domainIncludes': {
         $id: 'schema:Organization',
@@ -20438,7 +20763,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:occupationalCategory',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\\n\nNote: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.',
+      'rdfs:comment':
+        'A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\\n\nNote: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.',
       'rdfs:label': 'occupationalCategory',
       'schema:domainIncludes': [
         {
@@ -20501,7 +20827,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:roleName',
       $type: 'rdf:Property',
-      'rdfs:comment': "A role played, performed or filled by a person or organization. For example, the team of creators for a comic book might fill the roles named 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the position named 'Quarterback'.",
+      'rdfs:comment':
+        "A role played, performed or filled by a person or organization. For example, the team of creators for a comic book might fill the roles named 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the position named 'Quarterback'.",
       'rdfs:label': 'roleName',
       'schema:domainIncludes': {
         $id: 'schema:Role',
@@ -20536,7 +20863,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:measurementMethod',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].',
+      'rdfs:comment':
+        'A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].',
       'rdfs:label': 'measurementMethod',
       'rdfs:subPropertyOf': {
         $id: 'schema:measurementTechnique',
@@ -20767,7 +21095,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:sensoryRequirement',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.',
+      'rdfs:comment':
+        'A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.',
       'rdfs:label': 'sensoryRequirement',
       'schema:domainIncludes': {
         $id: 'schema:JobPosting',
@@ -20793,7 +21122,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserCheckins',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserCheckins',
       'rdfs:subClassOf': {
         $id: 'schema:UserInteraction',
@@ -20838,7 +21168,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PostalCodeRangeSpecification',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Indicates a range of postal codes, usually defined as the set of valid codes between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.',
+      'rdfs:comment':
+        'Indicates a range of postal codes, usually defined as the set of valid codes between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.',
       'rdfs:label': 'PostalCodeRangeSpecification',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -20850,7 +21181,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Hostel',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A hostel - cheap accommodation, often in shared dormitories.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
+      'rdfs:comment':
+        'A hostel - cheap accommodation, often in shared dormitories.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
       'rdfs:label': 'Hostel',
       'rdfs:subClassOf': {
         $id: 'schema:LodgingBusiness',
@@ -20921,7 +21253,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:adverseOutcome',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.',
+      'rdfs:comment':
+        'A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.',
       'rdfs:label': 'adverseOutcome',
       'schema:domainIncludes': [
         {
@@ -20978,7 +21311,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CovidTestingFacility',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus\n      disease is available. If the facility is being made available from an established [[Pharmacy]], [[Hotel]], or other\n      non-medical organization, multiple types can be listed. This makes it easier to re-use existing schema.org information\n      about that place, e.g. contact info, address, opening hours. Note that in an emergency, such information may not always be reliable.\n      ',
+      'rdfs:comment':
+        'A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus\n      disease is available. If the facility is being made available from an established [[Pharmacy]], [[Hotel]], or other\n      non-medical organization, multiple types can be listed. This makes it easier to re-use existing schema.org information\n      about that place, e.g. contact info, address, opening hours. Note that in an emergency, such information may not always be reliable.\n      ',
       'rdfs:label': 'CovidTestingFacility',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalClinic',
@@ -21002,7 +21336,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FlightReservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A reservation for air travel.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
+      'rdfs:comment':
+        'A reservation for air travel.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
       'rdfs:label': 'FlightReservation',
       'rdfs:subClassOf': {
         $id: 'schema:Reservation',
@@ -21011,7 +21346,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoOverlaps',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents a relationship between two geometries (or the places they represent), relating a geometry to another that geospatially overlaps it, i.e. they have some but not all points in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
+      'rdfs:comment':
+        'Represents a relationship between two geometries (or the places they represent), relating a geometry to another that geospatially overlaps it, i.e. they have some but not all points in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
       'rdfs:label': 'geoOverlaps',
       'schema:domainIncludes': [
         {
@@ -21050,7 +21386,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:comprisedOf',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Specifying something physically contained by something else. Typically used here for the underlying anatomical structures, such as organs, that comprise the anatomical system.',
+      'rdfs:comment':
+        'Specifying something physically contained by something else. Typically used here for the underlying anatomical structures, such as organs, that comprise the anatomical system.',
       'rdfs:label': 'comprisedOf',
       'schema:domainIncludes': {
         $id: 'schema:AnatomicalSystem',
@@ -21096,7 +21433,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Recommendation',
       $type: 'rdfs:Class',
-      'rdfs:comment': '[[Recommendation]] is a type of [[Review]] that suggests or proposes something as the best option or best course of action. Recommendations may be for products or services, or other concrete things, as in the case of a ranked list or product guide. A [[Guide]] may list multiple recommendations for different categories. For example, in a [[Guide]] about which TVs to buy, the author may have several [[Recommendation]]s.',
+      'rdfs:comment':
+        '[[Recommendation]] is a type of [[Review]] that suggests or proposes something as the best option or best course of action. Recommendations may be for products or services, or other concrete things, as in the case of a ranked list or product guide. A [[Guide]] may list multiple recommendations for different categories. For example, in a [[Guide]] about which TVs to buy, the author may have several [[Recommendation]]s.',
       'rdfs:label': 'Recommendation',
       'rdfs:subClassOf': {
         $id: 'schema:Review',
@@ -21111,7 +21449,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:recipeInstructions',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with HowToStep and/or HowToSection items.',
+      'rdfs:comment':
+        'A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with HowToStep and/or HowToSection items.',
       'rdfs:label': 'recipeInstructions',
       'rdfs:subPropertyOf': {
         $id: 'schema:step',
@@ -21256,7 +21595,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Genetic',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that pertains to hereditary transmission and the variation of inherited characteristics and disorders.',
+      'rdfs:comment':
+        'A specific branch of medical science that pertains to hereditary transmission and the variation of inherited characteristics and disorders.',
       'rdfs:label': 'Genetic',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -21289,7 +21629,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cvdNumTotBeds',
       $type: 'rdf:Property',
-      'rdfs:comment': 'numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge) beds used for inpatients or outpatients.',
+      'rdfs:comment':
+        'numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge) beds used for inpatients or outpatients.',
       'rdfs:label': 'cvdNumTotBeds',
       'schema:domainIncludes': {
         $id: 'schema:CDCPMDRecord',
@@ -21447,7 +21788,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DigitalCaptureDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/digitalCapture">digital capture</a></a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/digitalCapture">digital capture</a></a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'DigitalCaptureDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -21474,7 +21816,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LikeAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of expressing a positive sentiment about the object. An agent likes an object (a proposition, topic or theme) with participants.',
+      'rdfs:comment':
+        'The act of expressing a positive sentiment about the object. An agent likes an object (a proposition, topic or theme) with participants.',
       'rdfs:label': 'LikeAction',
       'rdfs:subClassOf': {
         $id: 'schema:ReactAction',
@@ -21495,7 +21838,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:NarcoticConsideration',
       $type: 'schema:AdultOrientedEnumeration',
-      'rdfs:comment': 'Item is a narcotic as defined by the [1961 UN convention](https://www.incb.org/incb/en/narcotic-drugs/Yellowlist/yellow-list.html), for example marijuana or heroin.',
+      'rdfs:comment':
+        'Item is a narcotic as defined by the [1961 UN convention](https://www.incb.org/incb/en/narcotic-drugs/Yellowlist/yellow-list.html), for example marijuana or heroin.',
       'rdfs:label': 'NarcoticConsideration',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -21540,7 +21884,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:GiveAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': "The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\\n\\nRelated actions:\\n\\n* [[TakeAction]]: Reciprocal of GiveAction.\\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you).",
+      'rdfs:comment':
+        "The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\\n\\nRelated actions:\\n\\n* [[TakeAction]]: Reciprocal of GiveAction.\\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you).",
       'rdfs:label': 'GiveAction',
       'rdfs:subClassOf': {
         $id: 'schema:TransferAction',
@@ -21566,7 +21911,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ProductGroup',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A ProductGroup represents a group of [[Product]]s that vary only in certain well-described ways, such as by [[size]], [[color]], [[material]] etc.\n\nWhile a ProductGroup itself is not directly offered for sale, the various varying products that it represents can be. The ProductGroup serves as a prototype or template, standing in for all of the products who have an [[isVariantOf]] relationship to it. As such, properties (including additional types) can be applied to the ProductGroup to represent characteristics shared by each of the (possibly very many) variants. Properties that reference a ProductGroup are not included in this mechanism; neither are the following specific properties [[variesBy]], [[hasVariant]], [[url]]. ',
+      'rdfs:comment':
+        'A ProductGroup represents a group of [[Product]]s that vary only in certain well-described ways, such as by [[size]], [[color]], [[material]] etc.\n\nWhile a ProductGroup itself is not directly offered for sale, the various varying products that it represents can be. The ProductGroup serves as a prototype or template, standing in for all of the products who have an [[isVariantOf]] relationship to it. As such, properties (including additional types) can be applied to the ProductGroup to represent characteristics shared by each of the (possibly very many) variants. Properties that reference a ProductGroup are not included in this mechanism; neither are the following specific properties [[variesBy]], [[hasVariant]], [[url]]. ',
       'rdfs:label': 'ProductGroup',
       'rdfs:subClassOf': {
         $id: 'schema:Product',
@@ -21632,7 +21978,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LegislationObject',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.',
+      'rdfs:comment':
+        'A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.',
       'rdfs:label': 'LegislationObject',
       'rdfs:subClassOf': [
         {
@@ -21658,7 +22005,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Emergency',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that deals with the evaluation and initial treatment of medical conditions caused by trauma or sudden illness.',
+      'rdfs:comment':
+        'A specific branch of medical science that deals with the evaluation and initial treatment of medical conditions caused by trauma or sudden illness.',
       'rdfs:label': 'Emergency',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -21682,7 +22030,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:educationalProgramMode',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).',
+      'rdfs:comment':
+        'Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).',
       'rdfs:label': 'educationalProgramMode',
       'schema:domainIncludes': {
         $id: 'schema:EducationalOccupationalProgram',
@@ -21722,7 +22071,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:seatingCapacity',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.\\n\\nTypical unit code(s): C62 for persons.',
+      'rdfs:comment':
+        'The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.\\n\\nTypical unit code(s): C62 for persons.',
       'rdfs:label': 'seatingCapacity',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -21771,7 +22121,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:pattern',
       $type: 'rdf:Property',
-      'rdfs:comment': "A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'. Values are typically expressed as text, although links to controlled value schemes are also supported.",
+      'rdfs:comment':
+        "A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'. Values are typically expressed as text, although links to controlled value schemes are also supported.",
       'rdfs:label': 'pattern',
       'schema:domainIncludes': [
         {
@@ -21814,7 +22165,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DrugPregnancyCategory',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Categories that represent an assessment of the risk of fetal injury due to a drug or pharmaceutical used as directed by the mother during pregnancy.',
+      'rdfs:comment':
+        'Categories that represent an assessment of the risk of fetal injury due to a drug or pharmaceutical used as directed by the mother during pregnancy.',
       'rdfs:label': 'DrugPregnancyCategory',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEnumeration',
@@ -21847,7 +22199,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MultiFrameComputationalCaptureDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia">algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia">algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'MultiFrameComputationalCaptureDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -21874,7 +22227,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:associatedClaimReview',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An associated [[ClaimReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].',
+      'rdfs:comment':
+        'An associated [[ClaimReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].',
       'rdfs:label': 'associatedClaimReview',
       'rdfs:subPropertyOf': {
         $id: 'schema:associatedReview',
@@ -22064,7 +22418,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:variableMeasured',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The variableMeasured property can indicate (repeated as necessary) the  variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue, or more explicitly as a [[StatisticalVariable]].',
+      'rdfs:comment':
+        'The variableMeasured property can indicate (repeated as necessary) the  variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue, or more explicitly as a [[StatisticalVariable]].',
       'rdfs:label': 'variableMeasured',
       'schema:domainIncludes': [
         {
@@ -22110,7 +22465,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:box',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.',
+      'rdfs:comment':
+        'A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.',
       'rdfs:label': 'box',
       'schema:domainIncludes': {
         $id: 'schema:GeoShape',
@@ -22122,7 +22478,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:loanPaymentFrequency',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a period of time.',
+      'rdfs:comment':
+        'Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a period of time.',
       'rdfs:label': 'loanPaymentFrequency',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -22217,7 +22574,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:differentialDiagnosis',
       $type: 'rdf:Property',
-      'rdfs:comment': 'One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.',
+      'rdfs:comment':
+        'One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.',
       'rdfs:label': 'differentialDiagnosis',
       'schema:domainIncludes': {
         $id: 'schema:MedicalCondition',
@@ -22232,7 +22590,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:httpMethod',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.',
+      'rdfs:comment':
+        'An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.',
       'rdfs:label': 'httpMethod',
       'schema:domainIncludes': {
         $id: 'schema:EntryPoint',
@@ -22283,7 +22642,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Room',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A room is a distinguishable space within a structure, usually separated from other spaces by interior walls (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Room">http://en.wikipedia.org/wiki/Room</a>).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
+      'rdfs:comment':
+        'A room is a distinguishable space within a structure, usually separated from other spaces by interior walls (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Room">http://en.wikipedia.org/wiki/Room</a>).\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
       'rdfs:label': 'Room',
       'rdfs:subClassOf': {
         $id: 'schema:Accommodation',
@@ -22333,7 +22693,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:noBylinesPolicy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement explaining when authors of articles are not named in bylines.',
+      'rdfs:comment':
+        'For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement explaining when authors of articles are not named in bylines.',
       'rdfs:label': 'noBylinesPolicy',
       'rdfs:subPropertyOf': {
         $id: 'schema:publishingPrinciples',
@@ -22362,7 +22723,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SpecialAnnouncement',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A SpecialAnnouncement combines a simple date-stamped textual information update\n      with contextualized Web links and other structured data.  It represents an information update made by a\n      locally-oriented organization, for example schools, pharmacies, healthcare providers,  community groups, police,\n      local government.\n\nFor work in progress guidelines on Coronavirus-related markup see [this doc](https://docs.google.com/document/d/14ikaGCKxo50rRM7nvKSlbUpjyIk2WMQd3IkB1lItlrM/edit#).\n\nThe motivating scenario for SpecialAnnouncement is the [Coronavirus pandemic](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic), and the initial vocabulary is oriented to this urgent situation. Schema.org\nexpect to improve the markup iteratively as it is deployed and as feedback emerges from use. In addition to our\nusual [Github entry](https://github.com/schemaorg/schemaorg/issues/2490), feedback comments can also be provided in [this document](https://docs.google.com/document/d/1fpdFFxk8s87CWwACs53SGkYv3aafSxz_DTtOQxMrBJQ/edit#).\n\n\nWhile this schema is designed to communicate urgent crisis-related information, it is not the same as an emergency warning technology like [CAP](https://en.wikipedia.org/wiki/Common_Alerting_Protocol), although there may be overlaps. The intent is to cover\nthe kinds of everyday practical information being posted to existing websites during an emergency situation.\n\nSeveral kinds of information can be provided:\n\nWe encourage the provision of "name", "text", "datePosted", "expires" (if appropriate), "category" and\n"url" as a simple baseline. It is important to provide a value for "category" where possible, most ideally as a well known\nURL from Wikipedia or Wikidata. In the case of the 2019-2020 Coronavirus pandemic, this should be "https://en.wikipedia.org/w/index.php?title=2019-20\\_coronavirus\\_pandemic" or "https://www.wikidata.org/wiki/Q81068910".\n\nFor many of the possible properties, values can either be simple links or an inline description, depending on whether a summary is available. For a link, provide just the URL of the appropriate page as the property\'s value. For an inline description, use a [[WebContent]] type, and provide the url as a property of that, alongside at least a simple "[[text]]" summary of the page. It is\nunlikely that a single SpecialAnnouncement will need all of the possible properties simultaneously.\n\nWe expect that in many cases the page referenced might contain more specialized structured data, e.g. contact info, [[openingHours]], [[Event]], [[FAQPage]] etc. By linking to those pages from a [[SpecialAnnouncement]] you can help make it clearer that the events are related to the situation (e.g. Coronavirus) indicated by the [[category]] property of the [[SpecialAnnouncement]].\n\nMany [[SpecialAnnouncement]]s will relate to particular regions and to identifiable local organizations. Use [[spatialCoverage]] for the region, and [[announcementLocation]] to indicate specific [[LocalBusiness]]es and [[CivicStructure]]s. If the announcement affects both a particular region and a specific location (for example, a library closure that serves an entire region), use both [[spatialCoverage]] and [[announcementLocation]].\n\nThe [[about]] property can be used to indicate entities that are the focus of the announcement. We now recommend using [[about]] only\nfor representing non-location entities (e.g. a [[Course]] or a [[RadioStation]]). For places, use [[announcementLocation]] and [[spatialCoverage]]. Consumers of this markup should be aware that the initial design encouraged the use of [[about]] for locations too.\n\nThe basic content of [[SpecialAnnouncement]] is similar to that of an [RSS](https://en.wikipedia.org/wiki/RSS) or [Atom](https://en.wikipedia.org/wiki/Atom_(Web_standard)) feed. For publishers without such feeds, basic feed-like information can be shared by posting\n[[SpecialAnnouncement]] updates in a page, e.g. using JSON-LD. For sites with Atom/RSS functionality, you can point to a feed\nwith the [[webFeed]] property. This can be a simple URL, or an inline [[DataFeed]] object, with [[encodingFormat]] providing\nmedia type information, e.g. "application/rss+xml" or "application/atom+xml".\n',
+      'rdfs:comment':
+        'A SpecialAnnouncement combines a simple date-stamped textual information update\n      with contextualized Web links and other structured data.  It represents an information update made by a\n      locally-oriented organization, for example schools, pharmacies, healthcare providers,  community groups, police,\n      local government.\n\nFor work in progress guidelines on Coronavirus-related markup see [this doc](https://docs.google.com/document/d/14ikaGCKxo50rRM7nvKSlbUpjyIk2WMQd3IkB1lItlrM/edit#).\n\nThe motivating scenario for SpecialAnnouncement is the [Coronavirus pandemic](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic), and the initial vocabulary is oriented to this urgent situation. Schema.org\nexpect to improve the markup iteratively as it is deployed and as feedback emerges from use. In addition to our\nusual [Github entry](https://github.com/schemaorg/schemaorg/issues/2490), feedback comments can also be provided in [this document](https://docs.google.com/document/d/1fpdFFxk8s87CWwACs53SGkYv3aafSxz_DTtOQxMrBJQ/edit#).\n\n\nWhile this schema is designed to communicate urgent crisis-related information, it is not the same as an emergency warning technology like [CAP](https://en.wikipedia.org/wiki/Common_Alerting_Protocol), although there may be overlaps. The intent is to cover\nthe kinds of everyday practical information being posted to existing websites during an emergency situation.\n\nSeveral kinds of information can be provided:\n\nWe encourage the provision of "name", "text", "datePosted", "expires" (if appropriate), "category" and\n"url" as a simple baseline. It is important to provide a value for "category" where possible, most ideally as a well known\nURL from Wikipedia or Wikidata. In the case of the 2019-2020 Coronavirus pandemic, this should be "https://en.wikipedia.org/w/index.php?title=2019-20\\_coronavirus\\_pandemic" or "https://www.wikidata.org/wiki/Q81068910".\n\nFor many of the possible properties, values can either be simple links or an inline description, depending on whether a summary is available. For a link, provide just the URL of the appropriate page as the property\'s value. For an inline description, use a [[WebContent]] type, and provide the url as a property of that, alongside at least a simple "[[text]]" summary of the page. It is\nunlikely that a single SpecialAnnouncement will need all of the possible properties simultaneously.\n\nWe expect that in many cases the page referenced might contain more specialized structured data, e.g. contact info, [[openingHours]], [[Event]], [[FAQPage]] etc. By linking to those pages from a [[SpecialAnnouncement]] you can help make it clearer that the events are related to the situation (e.g. Coronavirus) indicated by the [[category]] property of the [[SpecialAnnouncement]].\n\nMany [[SpecialAnnouncement]]s will relate to particular regions and to identifiable local organizations. Use [[spatialCoverage]] for the region, and [[announcementLocation]] to indicate specific [[LocalBusiness]]es and [[CivicStructure]]s. If the announcement affects both a particular region and a specific location (for example, a library closure that serves an entire region), use both [[spatialCoverage]] and [[announcementLocation]].\n\nThe [[about]] property can be used to indicate entities that are the focus of the announcement. We now recommend using [[about]] only\nfor representing non-location entities (e.g. a [[Course]] or a [[RadioStation]]). For places, use [[announcementLocation]] and [[spatialCoverage]]. Consumers of this markup should be aware that the initial design encouraged the use of [[about]] for locations too.\n\nThe basic content of [[SpecialAnnouncement]] is similar to that of an [RSS](https://en.wikipedia.org/wiki/RSS) or [Atom](https://en.wikipedia.org/wiki/Atom_(Web_standard)) feed. For publishers without such feeds, basic feed-like information can be shared by posting\n[[SpecialAnnouncement]] updates in a page, e.g. using JSON-LD. For sites with Atom/RSS functionality, you can point to a feed\nwith the [[webFeed]] property. This can be a simple URL, or an inline [[DataFeed]] object, with [[encodingFormat]] providing\nmedia type information, e.g. "application/rss+xml" or "application/atom+xml".\n',
       'rdfs:label': 'SpecialAnnouncement',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -22414,17 +22776,16 @@ export const schemaorg: Record<string, any> = {
     },
     {
       $id: 'schema:Time',
-      $type: [
-        'schema:DataType',
-        'rdfs:Class',
-      ],
-      'rdfs:comment': 'A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] (see [XML schema for details](http://www.w3.org/TR/xmlschema-2/#time)).',
+      $type: ['schema:DataType', 'rdfs:Class'],
+      'rdfs:comment':
+        'A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] (see [XML schema for details](http://www.w3.org/TR/xmlschema-2/#time)).',
       'rdfs:label': 'Time',
     },
     {
       $id: 'schema:HowOrWhereHealthAspect',
       $type: 'schema:HealthAspectEnumeration',
-      'rdfs:comment': 'Information about how or where to find a topic. Also may contain location data that can be used for where to look for help if the topic is observed.',
+      'rdfs:comment':
+        'Information about how or where to find a topic. Also may contain location data that can be used for where to look for help if the topic is observed.',
       'rdfs:label': 'HowOrWhereHealthAspect',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -22478,7 +22839,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:translator',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.',
+      'rdfs:comment':
+        'Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.',
       'rdfs:label': 'translator',
       'schema:domainIncludes': [
         {
@@ -22500,7 +22862,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ParcelService',
       $type: 'schema:DeliveryMethod',
-      'rdfs:comment': 'A private parcel service as the delivery mode available for a certain offer.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#DHL\\n* http://purl.org/goodrelations/v1#FederalExpress\\n* http://purl.org/goodrelations/v1#UPS\n      ',
+      'rdfs:comment':
+        'A private parcel service as the delivery mode available for a certain offer.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#DHL\\n* http://purl.org/goodrelations/v1#FederalExpress\\n* http://purl.org/goodrelations/v1#UPS\n      ',
       'rdfs:label': 'ParcelService',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsClass',
@@ -22550,7 +22913,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PlasticSurgery',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that pertains to therapeutic or cosmetic repair or re-formation of missing, injured or malformed tissues or body parts by manual and instrumental means.',
+      'rdfs:comment':
+        'A specific branch of medical science that pertains to therapeutic or cosmetic repair or re-formation of missing, injured or malformed tissues or body parts by manual and instrumental means.',
       'rdfs:label': 'PlasticSurgery',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -22562,7 +22926,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:acceptedAnswer',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.',
+      'rdfs:comment':
+        'The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.',
       'rdfs:label': 'acceptedAnswer',
       'rdfs:subPropertyOf': {
         $id: 'schema:suggestedAnswer',
@@ -22647,7 +23012,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EnergyEfficiencyEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Enumerates energy efficiency levels (also known as "classes" or "ratings") and certifications that are part of several international energy efficiency standards.',
+      'rdfs:comment':
+        'Enumerates energy efficiency levels (also known as "classes" or "ratings") and certifications that are part of several international energy efficiency standards.',
       'rdfs:label': 'EnergyEfficiencyEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -22707,7 +23073,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:GeoCircle',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape\n          it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.\n          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.\n       ",
+      'rdfs:comment':
+        "A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape\n          it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.\n          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.\n       ",
       'rdfs:label': 'GeoCircle',
       'rdfs:subClassOf': {
         $id: 'schema:GeoShape',
@@ -22758,7 +23125,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:unnamedSourcesPolicy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.',
+      'rdfs:comment':
+        'For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.',
       'rdfs:label': 'unnamedSourcesPolicy',
       'rdfs:subPropertyOf': {
         $id: 'schema:publishingPrinciples',
@@ -22816,7 +23184,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:tocContinuation',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or render.',
+      'rdfs:comment':
+        'A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or render.',
       'rdfs:label': 'tocContinuation',
       'schema:domainIncludes': {
         $id: 'schema:HyperTocEntry',
@@ -22834,7 +23203,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:WorkersUnion',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.',
+      'rdfs:comment':
+        'A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.',
       'rdfs:label': 'WorkersUnion',
       'rdfs:subClassOf': {
         $id: 'schema:Organization',
@@ -22879,7 +23249,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EndorsementRating',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An EndorsementRating is a rating that expresses some level of endorsement, for example inclusion in a "critic\'s pick" blog, a\n"Like" or "+1" on a social network. It can be considered the [[result]] of an [[EndorseAction]] in which the [[object]] of the action is rated positively by\nsome [[agent]]. As is common elsewhere in schema.org, it is sometimes more useful to describe the results of such an action without explicitly describing the [[Action]].\n\nAn [[EndorsementRating]] may be part of a numeric scale or organized system, but this is not required: having an explicit type for indicating a positive,\nendorsement rating is particularly useful in the absence of numeric scales as it helps consumers understand that the rating is broadly positive.\n',
+      'rdfs:comment':
+        'An EndorsementRating is a rating that expresses some level of endorsement, for example inclusion in a "critic\'s pick" blog, a\n"Like" or "+1" on a social network. It can be considered the [[result]] of an [[EndorseAction]] in which the [[object]] of the action is rated positively by\nsome [[agent]]. As is common elsewhere in schema.org, it is sometimes more useful to describe the results of such an action without explicitly describing the [[Action]].\n\nAn [[EndorsementRating]] may be part of a numeric scale or organized system, but this is not required: having an explicit type for indicating a positive,\nendorsement rating is particularly useful in the absence of numeric scales as it helps consumers understand that the rating is broadly positive.\n',
       'rdfs:label': 'EndorsementRating',
       'rdfs:subClassOf': {
         $id: 'schema:Rating',
@@ -23060,7 +23431,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalSpecialty',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.',
+      'rdfs:comment':
+        'Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.',
       'rdfs:label': 'MedicalSpecialty',
       'rdfs:subClassOf': [
         {
@@ -23089,7 +23461,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:WebContent',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'WebContent is a type representing all [[WebPage]], [[WebSite]] and [[WebPageElement]] content. It is sometimes the case that detailed distinctions between Web pages, sites and their parts are not always important or obvious. The  [[WebContent]] type makes it easier to describe Web-addressable content without requiring such distinctions to always be stated. (The intent is that the existing types [[WebPage]], [[WebSite]] and [[WebPageElement]] will eventually be declared as subtypes of [[WebContent]].)',
+      'rdfs:comment':
+        'WebContent is a type representing all [[WebPage]], [[WebSite]] and [[WebPageElement]] content. It is sometimes the case that detailed distinctions between Web pages, sites and their parts are not always important or obvious. The  [[WebContent]] type makes it easier to describe Web-addressable content without requiring such distinctions to always be stated. (The intent is that the existing types [[WebPage]], [[WebSite]] and [[WebPageElement]] will eventually be declared as subtypes of [[WebContent]].)',
       'rdfs:label': 'WebContent',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -23122,7 +23495,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ComicStory',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The term "story" is any indivisible, re-printable\n    \tunit of a comic, including the interior stories, covers, and backmatter. Most\n    \tcomics have at least two stories: a cover (ComicCoverArt) and an interior story.',
+      'rdfs:comment':
+        'The term "story" is any indivisible, re-printable\n    \tunit of a comic, including the interior stories, covers, and backmatter. Most\n    \tcomics have at least two stories: a cover (ComicCoverArt) and an interior story.',
       'rdfs:label': 'ComicStory',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -23263,7 +23637,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:blogPosts',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates a post that is part of a [[Blog]]. Note that historically, what we term a "Blog" was once known as a "weblog", and that what we term a "BlogPosting" is now often colloquially referred to as a "blog".',
+      'rdfs:comment':
+        'Indicates a post that is part of a [[Blog]]. Note that historically, what we term a "Blog" was once known as a "weblog", and that what we term a "BlogPosting" is now often colloquially referred to as a "blog".',
       'rdfs:label': 'blogPosts',
       'schema:domainIncludes': {
         $id: 'schema:Blog',
@@ -23308,7 +23683,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TransformedContent',
       $type: 'schema:MediaManipulationRatingEnumeration',
-      'rdfs:comment': "Content coded 'transformed content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'transformed content':  or all of the video has been manipulated to transform the footage itself. This category includes using tools like the Adobe Suite to change the speed of the video, add or remove visual elements or dub audio. Deepfakes are also a subset of transformation.\n\nFor an [[ImageObject]] to be 'transformed content': Adding or deleting visual elements to give the image a different meaning with the intention to mislead.\n\nFor an [[ImageObject]] with embedded text to be 'transformed content': Adding or deleting visual elements to give the image a different meaning with the intention to mislead.\n\nFor an [[AudioObject]] to be 'transformed content': Part or all of the audio has been manipulated to alter the words or sounds, or the audio has been synthetically generated, such as to create a sound-alike voice.\n",
+      'rdfs:comment':
+        "Content coded 'transformed content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'transformed content':  or all of the video has been manipulated to transform the footage itself. This category includes using tools like the Adobe Suite to change the speed of the video, add or remove visual elements or dub audio. Deepfakes are also a subset of transformation.\n\nFor an [[ImageObject]] to be 'transformed content': Adding or deleting visual elements to give the image a different meaning with the intention to mislead.\n\nFor an [[ImageObject]] with embedded text to be 'transformed content': Adding or deleting visual elements to give the image a different meaning with the intention to mislead.\n\nFor an [[AudioObject]] to be 'transformed content': Part or all of the audio has been manipulated to alter the words or sounds, or the audio has been synthetically generated, such as to create a sound-alike voice.\n",
       'rdfs:label': 'TransformedContent',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -23459,7 +23835,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FundingAgency',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A FundingAgency is an organization that implements one or more [[FundingScheme]]s and manages\n    the granting process (via [[Grant]]s, typically [[MonetaryGrant]]s).\n    A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc.\n    \nExamples of funding agencies include ERC, REA, NIH, Bill and Melinda Gates Foundation, ...\n    ',
+      'rdfs:comment':
+        'A FundingAgency is an organization that implements one or more [[FundingScheme]]s and manages\n    the granting process (via [[Grant]]s, typically [[MonetaryGrant]]s).\n    A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc.\n    \nExamples of funding agencies include ERC, REA, NIH, Bill and Melinda Gates Foundation, ...\n    ',
       'rdfs:label': 'FundingAgency',
       'rdfs:subClassOf': {
         $id: 'schema:Project',
@@ -23497,7 +23874,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:defaultValue',
       $type: 'rdf:Property',
-      'rdfs:comment': "The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.",
+      'rdfs:comment':
+        "The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.",
       'rdfs:label': 'defaultValue',
       'schema:domainIncludes': {
         $id: 'schema:PropertyValueSpecification',
@@ -23526,7 +23904,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LegalService',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A LegalService is a business that provides legally-oriented services, advice and representation, e.g. law firms.\\n\\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\\(s).',
+      'rdfs:comment':
+        'A LegalService is a business that provides legally-oriented services, advice and representation, e.g. law firms.\\n\\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\\(s).',
       'rdfs:label': 'LegalService',
       'rdfs:subClassOf': {
         $id: 'schema:LocalBusiness',
@@ -23590,7 +23969,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CompleteDataFeed',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [[CompleteDataFeed]] is a [[DataFeed]] whose standard representation includes content for every item currently in the feed.\n\nThis is the equivalent of Atom\'s element as defined in Feed Paging and Archiving [RFC 5005](https://tools.ietf.org/html/rfc5005), for example (and as defined for Atom), when using data from a feed that represents a collection of items that varies over time (e.g. "Top Twenty Records") there is no need to have newer entries mixed in alongside older, obsolete entries. By marking this feed as a CompleteDataFeed, old entries can be safely discarded when the feed is refreshed, since we can assume the feed has provided descriptions for all current items.',
+      'rdfs:comment':
+        'A [[CompleteDataFeed]] is a [[DataFeed]] whose standard representation includes content for every item currently in the feed.\n\nThis is the equivalent of Atom\'s element as defined in Feed Paging and Archiving [RFC 5005](https://tools.ietf.org/html/rfc5005), for example (and as defined for Atom), when using data from a feed that represents a collection of items that varies over time (e.g. "Top Twenty Records") there is no need to have newer entries mixed in alongside older, obsolete entries. By marking this feed as a CompleteDataFeed, old entries can be safely discarded when the feed is refreshed, since we can assume the feed has provided descriptions for all current items.',
       'rdfs:label': 'CompleteDataFeed',
       'rdfs:subClassOf': {
         $id: 'schema:DataFeed',
@@ -23620,7 +24000,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BedDetails',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An entity holding detailed information about the available bed types, e.g. the quantity of twin beds for a hotel room. For the single case of just one bed of a certain type, you can use bed directly with a text. See also [[BedType]] (under development).',
+      'rdfs:comment':
+        'An entity holding detailed information about the available bed types, e.g. the quantity of twin beds for a hotel room. For the single case of just one bed of a certain type, you can use bed directly with a text. See also [[BedType]] (under development).',
       'rdfs:label': 'BedDetails',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -23653,7 +24034,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:intensity',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.',
+      'rdfs:comment':
+        'Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.',
       'rdfs:label': 'intensity',
       'schema:domainIncludes': {
         $id: 'schema:ExercisePlan',
@@ -23688,7 +24070,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CompositeCaptureDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/compositeCapture">composite capture</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/compositeCapture">composite capture</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'CompositeCaptureDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -23736,7 +24119,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AerobicActivity',
       $type: 'schema:PhysicalActivityCategory',
-      'rdfs:comment': 'Physical activity of relatively low intensity that depends primarily on the aerobic energy-generating process; during activity, the aerobic metabolism uses oxygen to adequately meet energy demands during exercise.',
+      'rdfs:comment':
+        'Physical activity of relatively low intensity that depends primarily on the aerobic energy-generating process; during activity, the aerobic metabolism uses oxygen to adequately meet energy demands during exercise.',
       'rdfs:label': 'AerobicActivity',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -23789,7 +24173,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:3DModel',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A 3D model represents some kind of 3D content, which may have [[encoding]]s in one or more [[MediaObject]]s. Many 3D formats are available (e.g. see [Wikipedia](https://en.wikipedia.org/wiki/Category:3D_graphics_file_formats)); specific encoding formats can be represented using the [[encodingFormat]] property applied to the relevant [[MediaObject]]. For the\ncase of a single file published after Zip compression, the convention of appending '+zip' to the [[encodingFormat]] can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using [[3DModel]].",
+      'rdfs:comment':
+        "A 3D model represents some kind of 3D content, which may have [[encoding]]s in one or more [[MediaObject]]s. Many 3D formats are available (e.g. see [Wikipedia](https://en.wikipedia.org/wiki/Category:3D_graphics_file_formats)); specific encoding formats can be represented using the [[encodingFormat]] property applied to the relevant [[MediaObject]]. For the\ncase of a single file published after Zip compression, the convention of appending '+zip' to the [[encodingFormat]] can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using [[3DModel]].",
       'rdfs:label': '3DModel',
       'rdfs:subClassOf': {
         $id: 'schema:MediaObject',
@@ -23834,7 +24219,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:dietFeatures',
       $type: 'rdf:Property',
-      'rdfs:comment': "Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.",
+      'rdfs:comment':
+        "Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.",
       'rdfs:label': 'dietFeatures',
       'schema:domainIncludes': {
         $id: 'schema:Diet',
@@ -23864,7 +24250,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DeliveryMethod',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A delivery method is a standardized procedure for transferring the product or service to the destination of fulfillment chosen by the customer. Delivery methods are characterized by the means of transportation used, and by the organization or group that is the contracting party for the sending organization or person.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#DeliveryModeDirectDownload\\n* http://purl.org/goodrelations/v1#DeliveryModeFreight\\n* http://purl.org/goodrelations/v1#DeliveryModeMail\\n* http://purl.org/goodrelations/v1#DeliveryModeOwnFleet\\n* http://purl.org/goodrelations/v1#DeliveryModePickUp\\n* http://purl.org/goodrelations/v1#DHL\\n* http://purl.org/goodrelations/v1#FederalExpress\\n* http://purl.org/goodrelations/v1#UPS\n        ',
+      'rdfs:comment':
+        'A delivery method is a standardized procedure for transferring the product or service to the destination of fulfillment chosen by the customer. Delivery methods are characterized by the means of transportation used, and by the organization or group that is the contracting party for the sending organization or person.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#DeliveryModeDirectDownload\\n* http://purl.org/goodrelations/v1#DeliveryModeFreight\\n* http://purl.org/goodrelations/v1#DeliveryModeMail\\n* http://purl.org/goodrelations/v1#DeliveryModeOwnFleet\\n* http://purl.org/goodrelations/v1#DeliveryModePickUp\\n* http://purl.org/goodrelations/v1#DHL\\n* http://purl.org/goodrelations/v1#FederalExpress\\n* http://purl.org/goodrelations/v1#UPS\n        ',
       'rdfs:label': 'DeliveryMethod',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -23888,7 +24275,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LeaveAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An agent leaves an event / group with participants/friends at a location.\\n\\nRelated actions:\\n\\n* [[JoinAction]]: The antonym of LeaveAction.\\n* [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.',
+      'rdfs:comment':
+        'An agent leaves an event / group with participants/friends at a location.\\n\\nRelated actions:\\n\\n* [[JoinAction]]: The antonym of LeaveAction.\\n* [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.',
       'rdfs:label': 'LeaveAction',
       'rdfs:subClassOf': {
         $id: 'schema:InteractAction',
@@ -23978,7 +24366,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Nonprofit501c3',
       $type: 'schema:USNonprofitType',
-      'rdfs:comment': 'Nonprofit501c3: Non-profit type referring to Religious, Educational, Charitable, Scientific, Literary, Testing for Public Safety, Fostering National or International Amateur Sports Competition, or Prevention of Cruelty to Children or Animals Organizations.',
+      'rdfs:comment':
+        'Nonprofit501c3: Non-profit type referring to Religious, Educational, Charitable, Scientific, Literary, Testing for Public Safety, Fostering National or International Amateur Sports Competition, or Prevention of Cruelty to Children or Animals Organizations.',
       'rdfs:label': 'Nonprofit501c3',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -23990,7 +24379,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:molecularWeight',
       $type: 'rdf:Property',
-      'rdfs:comment': "This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.",
+      'rdfs:comment':
+        "This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '&lt;Number&gt; &lt;unit&gt;', for example '12 amu' or as '&lt;QuantitativeValue&gt;.",
       'rdfs:label': 'molecularWeight',
       'schema:domainIncludes': {
         $id: 'schema:MolecularEntity',
@@ -24046,7 +24436,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:inChI',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.',
+      'rdfs:comment':
+        'Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.',
       'rdfs:label': 'inChI',
       'rdfs:subPropertyOf': {
         $id: 'schema:hasRepresentation',
@@ -24067,7 +24458,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:originalMediaContextDescription',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].',
+      'rdfs:comment':
+        'Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].',
       'rdfs:label': 'originalMediaContextDescription',
       'rdfs:subPropertyOf': {
         $id: 'schema:description',
@@ -24088,7 +24480,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:numberOfAvailableAccommodationUnits',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].',
+      'rdfs:comment':
+        'Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].',
       'rdfs:label': 'numberOfAvailableAccommodationUnits',
       'schema:domainIncludes': [
         {
@@ -24123,7 +24516,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Downpayment',
       $type: 'schema:PriceComponentTypeEnumeration',
-      'rdfs:comment': 'Represents the downpayment (up-front payment) price component of the total price for an offered product that has additional installment payments.',
+      'rdfs:comment':
+        'Represents the downpayment (up-front payment) price component of the total price for an offered product that has additional installment payments.',
       'rdfs:label': 'Downpayment',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -24150,7 +24544,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DislikeAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.',
+      'rdfs:comment':
+        'The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.',
       'rdfs:label': 'DislikeAction',
       'rdfs:subClassOf': {
         $id: 'schema:ReactAction',
@@ -24168,7 +24563,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:eduQuestionType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice", "Open ended", "Flashcard".',
+      'rdfs:comment':
+        'For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice", "Open ended", "Flashcard".',
       'rdfs:label': 'eduQuestionType',
       'schema:domainIncludes': [
         {
@@ -24494,7 +24890,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accessibilityControl',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Identifies input methods that are sufficient to fully control the described resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary).',
+      'rdfs:comment':
+        'Identifies input methods that are sufficient to fully control the described resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary).',
       'rdfs:label': 'accessibilityControl',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -24532,7 +24929,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:author',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.',
+      'rdfs:comment':
+        'The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.',
       'rdfs:label': 'author',
       'schema:domainIncludes': [
         {
@@ -24554,7 +24952,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:IPTCDigitalSourceEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': '<a href="https://www.iptc.org/">IPTC</a> "Digital Source" codes for use with the [[digitalSourceType]] property, providing information about the source for a digital media object.\nIn general these codes are not declared here to be mutually exclusive, although some combinations would be contradictory if applied simultaneously, or might be considered mutually incompatible by upstream maintainers of the definitions. See the IPTC <a href="https://www.iptc.org/std/photometadata/documentation/userguide/">documentation</a>\n for <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">detailed definitions</a> of all terms.',
+      'rdfs:comment':
+        '<a href="https://www.iptc.org/">IPTC</a> "Digital Source" codes for use with the [[digitalSourceType]] property, providing information about the source for a digital media object.\nIn general these codes are not declared here to be mutually exclusive, although some combinations would be contradictory if applied simultaneously, or might be considered mutually incompatible by upstream maintainers of the definitions. See the IPTC <a href="https://www.iptc.org/std/photometadata/documentation/userguide/">documentation</a>\n for <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">detailed definitions</a> of all terms.',
       'rdfs:label': 'IPTCDigitalSourceEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:MediaEnumeration',
@@ -24569,7 +24968,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:experienceInPlaceOfEducation',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates whether a [[JobPosting]] will accept experience (as indicated by [[OccupationalExperienceRequirements]]) in place of its formal educational qualifications (as indicated by [[educationRequirements]]). If true, indicates that satisfying one of these requirements is sufficient.',
+      'rdfs:comment':
+        'Indicates whether a [[JobPosting]] will accept experience (as indicated by [[OccupationalExperienceRequirements]]) in place of its formal educational qualifications (as indicated by [[educationRequirements]]). If true, indicates that satisfying one of these requirements is sufficient.',
       'rdfs:label': 'experienceInPlaceOfEducation',
       'schema:domainIncludes': {
         $id: 'schema:JobPosting',
@@ -24587,7 +24987,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:InfectiousDisease',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease.',
+      'rdfs:comment':
+        'An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease.',
       'rdfs:label': 'InfectiousDisease',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalCondition',
@@ -24634,7 +25035,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:RentalCarReservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A reservation for a rental car.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.',
+      'rdfs:comment':
+        'A reservation for a rental car.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.',
       'rdfs:label': 'RentalCarReservation',
       'rdfs:subClassOf': {
         $id: 'schema:Reservation',
@@ -24794,7 +25196,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TraditionalChinese',
       $type: 'schema:MedicineSystem',
-      'rdfs:comment': 'A system of medicine based on common theoretical concepts that originated in China and evolved over thousands of years, that uses herbs, acupuncture, exercise, massage, dietary therapy, and other methods to treat a wide range of conditions.',
+      'rdfs:comment':
+        'A system of medicine based on common theoretical concepts that originated in China and evolved over thousands of years, that uses herbs, acupuncture, exercise, massage, dietary therapy, and other methods to treat a wide range of conditions.',
       'rdfs:label': 'TraditionalChinese',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -24812,7 +25215,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:startTime',
       $type: 'rdf:Property',
-      'rdfs:comment': "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\\n\\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+      'rdfs:comment':
+        "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\\n\\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
       'rdfs:label': 'startTime',
       'schema:domainIncludes': [
         {
@@ -24881,7 +25285,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MeasurementTypeEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Enumeration of common measurement types (or dimensions), for example "chest" for a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.',
+      'rdfs:comment':
+        'Enumeration of common measurement types (or dimensions), for example "chest" for a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.',
       'rdfs:label': 'MeasurementTypeEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -25119,7 +25524,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Ligament',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.',
+      'rdfs:comment':
+        'A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.',
       'rdfs:label': 'Ligament',
       'rdfs:subClassOf': {
         $id: 'schema:AnatomicalStructure',
@@ -25158,7 +25564,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:correctionsPolicy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.',
+      'rdfs:comment':
+        'For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.',
       'rdfs:label': 'correctionsPolicy',
       'rdfs:subPropertyOf': {
         $id: 'schema:publishingPrinciples',
@@ -25192,7 +25599,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OfferShippingDetails',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'OfferShippingDetails represents information about shipping destinations.\n\nMultiple of these entities can be used to represent different shipping rates for different destinations:\n\nOne entity for Alaska/Hawaii. A different one for continental US. A different one for all France.\n\nMultiple of these entities can be used to represent different shipping costs and delivery times.\n\nTwo entities that are identical but differ in rate and time:\n\nE.g. Cheaper and slower: $5 in 5-7 days\nor Fast and expensive: $15 in 1-2 days.',
+      'rdfs:comment':
+        'OfferShippingDetails represents information about shipping destinations.\n\nMultiple of these entities can be used to represent different shipping rates for different destinations:\n\nOne entity for Alaska/Hawaii. A different one for continental US. A different one for all France.\n\nMultiple of these entities can be used to represent different shipping costs and delivery times.\n\nTwo entities that are identical but differ in rate and time:\n\nE.g. Cheaper and slower: $5 in 5-7 days\nor Fast and expensive: $15 in 1-2 days.',
       'rdfs:label': 'OfferShippingDetails',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -25269,7 +25677,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:additionalType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the\n    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.',
+      'rdfs:comment':
+        'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the\n    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.',
       'rdfs:label': 'additionalType',
       'rdfs:subPropertyOf': {
         $id: 'rdf:type',
@@ -25307,7 +25716,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:performTime',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).',
+      'rdfs:comment':
+        'The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).',
       'rdfs:label': 'performTime',
       'schema:domainIncludes': [
         {
@@ -25363,7 +25773,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Grant',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A grant, typically financial or otherwise quantifiable, of resources. Typically a [[funder]] sponsors some [[MonetaryAmount]] to an [[Organization]] or [[Person]],\n    sometimes not necessarily via a dedicated or long-lived [[Project]], resulting in one or more outputs, or [[fundedItem]]s. For financial sponsorship, indicate the [[funder]] of a [[MonetaryGrant]]. For non-financial support, indicate [[sponsor]] of [[Grant]]s of resources (e.g. office space).\n\nGrants support  activities directed towards some agreed collective goals, often but not always organized as [[Project]]s. Long-lived projects are sometimes sponsored by a variety of grants over time, but it is also common for a project to be associated with a single grant.\n\nThe amount of a [[Grant]] is represented using [[amount]] as a [[MonetaryAmount]].\n    ',
+      'rdfs:comment':
+        'A grant, typically financial or otherwise quantifiable, of resources. Typically a [[funder]] sponsors some [[MonetaryAmount]] to an [[Organization]] or [[Person]],\n    sometimes not necessarily via a dedicated or long-lived [[Project]], resulting in one or more outputs, or [[fundedItem]]s. For financial sponsorship, indicate the [[funder]] of a [[MonetaryGrant]]. For non-financial support, indicate [[sponsor]] of [[Grant]]s of resources (e.g. office space).\n\nGrants support  activities directed towards some agreed collective goals, often but not always organized as [[Project]]s. Long-lived projects are sometimes sponsored by a variety of grants over time, but it is also common for a project to be associated with a single grant.\n\nThe amount of a [[Grant]] is represented using [[amount]] as a [[MonetaryAmount]].\n    ',
       'rdfs:label': 'Grant',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -25415,7 +25826,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EventReservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A reservation for an event like a concert, sporting event, or lecture.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
+      'rdfs:comment':
+        'A reservation for an event like a concert, sporting event, or lecture.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
       'rdfs:label': 'EventReservation',
       'rdfs:subClassOf': {
         $id: 'schema:Reservation',
@@ -25478,7 +25890,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TouristAttraction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A tourist attraction.  In principle any Thing can be a [[TouristAttraction]], from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a [[LocalBusiness]].  This Type can be used on its own to describe a general [[TouristAttraction]], or be used as an [[additionalType]] to add tourist attraction properties to any other type.  (See examples below)',
+      'rdfs:comment':
+        'A tourist attraction.  In principle any Thing can be a [[TouristAttraction]], from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a [[LocalBusiness]].  This Type can be used on its own to describe a general [[TouristAttraction]], or be used as an [[additionalType]] to add tourist attraction properties to any other type.  (See examples below)',
       'rdfs:label': 'TouristAttraction',
       'rdfs:subClassOf': {
         $id: 'schema:Place',
@@ -25536,7 +25949,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FDAcategoryB',
       $type: 'schema:DrugPregnancyCategory',
-      'rdfs:comment': 'A designation by the US FDA signifying that animal reproduction studies have failed to demonstrate a risk to the fetus and there are no adequate and well-controlled studies in pregnant women.',
+      'rdfs:comment':
+        'A designation by the US FDA signifying that animal reproduction studies have failed to demonstrate a risk to the fetus and there are no adequate and well-controlled studies in pregnant women.',
       'rdfs:label': 'FDAcategoryB',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -25620,7 +26034,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:numberOfFullBathrooms',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).',
+      'rdfs:comment':
+        'Number of full bathrooms - The total number of full and ¾ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).',
       'rdfs:label': 'numberOfFullBathrooms',
       'schema:domainIncludes': [
         {
@@ -25663,7 +26078,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:WarrantyScope',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A range of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#Labor-BringIn\\n* http://purl.org/goodrelations/v1#PartsAndLabor-BringIn\\n* http://purl.org/goodrelations/v1#PartsAndLabor-PickUp\n      ',
+      'rdfs:comment':
+        'A range of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#Labor-BringIn\\n* http://purl.org/goodrelations/v1#PartsAndLabor-BringIn\\n* http://purl.org/goodrelations/v1#PartsAndLabor-PickUp\n      ',
       'rdfs:label': 'WarrantyScope',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -25798,7 +26214,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:vehicleTransmission',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars).',
+      'rdfs:comment':
+        'The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars).',
       'rdfs:label': 'vehicleTransmission',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -25821,7 +26238,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:highPrice',
       $type: 'rdf:Property',
-      'rdfs:comment': "The highest price of all offers available.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+      'rdfs:comment':
+        "The highest price of all offers available.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
       'rdfs:label': 'highPrice',
       'schema:domainIncludes': {
         $id: 'schema:AggregateOffer',
@@ -25895,7 +26313,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:educationalLevel',
       $type: 'rdf:Property',
-      'rdfs:comment': "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+      'rdfs:comment':
+        "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
       'rdfs:label': 'educationalLevel',
       'schema:domainIncludes': [
         {
@@ -25970,7 +26389,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cvdNumC19HOPats',
       $type: 'rdf:Property',
-      'rdfs:comment': 'numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization.',
+      'rdfs:comment':
+        'numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization.',
       'rdfs:label': 'cvdNumC19HOPats',
       'schema:domainIncludes': {
         $id: 'schema:CDCPMDRecord',
@@ -25994,7 +26414,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:claimInterpreter',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For a [[Claim]] interpreted from [[MediaObject]] content, the [[interpretedAsClaim]] property can be used to indicate a claim contained, implied or refined from the content of a [[MediaObject]].',
+      'rdfs:comment':
+        'For a [[Claim]] interpreted from [[MediaObject]] content, the [[interpretedAsClaim]] property can be used to indicate a claim contained, implied or refined from the content of a [[MediaObject]].',
       'rdfs:label': 'claimInterpreter',
       'schema:domainIncludes': {
         $id: 'schema:Claim',
@@ -26048,7 +26469,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalObservationalStudy',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An observational study is a type of medical study that attempts to infer the possible effect of a treatment through observation of a cohort of subjects over a period of time. In an observational study, the assignment of subjects into treatment groups versus control groups is outside the control of the investigator. This is in contrast with controlled studies, such as the randomized controlled trials represented by MedicalTrial, where each subject is randomly assigned to a treatment group or a control group before the start of the treatment.',
+      'rdfs:comment':
+        'An observational study is a type of medical study that attempts to infer the possible effect of a treatment through observation of a cohort of subjects over a period of time. In an observational study, the assignment of subjects into treatment groups versus control groups is outside the control of the investigator. This is in contrast with controlled studies, such as the randomized controlled trials represented by MedicalTrial, where each subject is randomly assigned to a treatment group or a control group before the start of the treatment.',
       'rdfs:label': 'MedicalObservationalStudy',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalStudy',
@@ -26116,7 +26538,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accountOverdraftLimit',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An overdraft is an extension of credit from a lending institution when an account reaches zero. An overdraft allows the individual to continue withdrawing money even if the account has no funds in it. Basically the bank allows people to borrow a set amount of money.',
+      'rdfs:comment':
+        'An overdraft is an extension of credit from a lending institution when an account reaches zero. An overdraft allows the individual to continue withdrawing money even if the account has no funds in it. Basically the bank allows people to borrow a set amount of money.',
       'rdfs:label': 'accountOverdraftLimit',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -26179,7 +26602,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FloorPlan',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams) and offers for rental or sale. In typical use, some [[ApartmentComplex]] has an [[accommodationFloorPlan]] which is a [[FloorPlan]].  A FloorPlan is always in the context of a particular place, either a larger [[ApartmentComplex]] or a single [[Apartment]]. The visual/spatial aspects of a floor plan (i.e. room layout, [see wikipedia](https://en.wikipedia.org/wiki/Floor_plan)) can be indicated using [[image]]. ',
+      'rdfs:comment':
+        'A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams) and offers for rental or sale. In typical use, some [[ApartmentComplex]] has an [[accommodationFloorPlan]] which is a [[FloorPlan]].  A FloorPlan is always in the context of a particular place, either a larger [[ApartmentComplex]] or a single [[Apartment]]. The visual/spatial aspects of a floor plan (i.e. room layout, [see wikipedia](https://en.wikipedia.org/wiki/Floor_plan)) can be indicated using [[image]]. ',
       'rdfs:label': 'FloorPlan',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -26288,7 +26712,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:diagram',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.',
+      'rdfs:comment':
+        'An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.',
       'rdfs:label': 'diagram',
       'schema:domainIncludes': {
         $id: 'schema:AnatomicalStructure',
@@ -26559,7 +26984,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:usNPI',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) \n    is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services.',
+      'rdfs:comment':
+        'A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) \n    is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services.',
       'rdfs:label': 'usNPI',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -26660,7 +27086,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:hasEnergyEfficiencyCategory',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Defines the energy efficiency Category (which could be either a rating out of range of values or a yes/no certification) for a product according to an international energy efficiency standard.',
+      'rdfs:comment':
+        'Defines the energy efficiency Category (which could be either a rating out of range of values or a yes/no certification) for a product according to an international energy efficiency standard.',
       'rdfs:label': 'hasEnergyEfficiencyCategory',
       'schema:domainIncludes': {
         $id: 'schema:EnergyConsumptionDetails',
@@ -26693,7 +27120,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:hasGS1DigitalLink',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProduct]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>)  should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly.',
+      'rdfs:comment':
+        'The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProduct]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>)  should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly.',
       'rdfs:label': 'hasGS1DigitalLink',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -26737,7 +27165,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Gynecologic',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that pertains to the health care of women, particularly in the diagnosis and treatment of disorders affecting the female reproductive system.',
+      'rdfs:comment':
+        'A specific branch of medical science that pertains to the health care of women, particularly in the diagnosis and treatment of disorders affecting the female reproductive system.',
       'rdfs:label': 'Gynecologic',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -26749,7 +27178,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:vehicleSpecialUsage',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale.',
+      'rdfs:comment':
+        'Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale.',
       'rdfs:label': 'vehicleSpecialUsage',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -26874,7 +27304,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:transitTimeLabel',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).',
+      'rdfs:comment':
+        'Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).',
       'rdfs:label': 'transitTimeLabel',
       'schema:domainIncludes': [
         {
@@ -26894,7 +27325,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:variesBy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.',
+      'rdfs:comment':
+        'Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can be referenced by their short name e.g. "color"; terms defined elsewhere can be referenced with their URIs.',
       'rdfs:label': 'variesBy',
       'schema:domainIncludes': {
         $id: 'schema:ProductGroup',
@@ -26917,7 +27349,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TouristDestination',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A tourist destination. In principle any [[Place]] can be a [[TouristDestination]] from a [[City]], Region or [[Country]] to an [[AmusementPark]] or [[Hotel]]. This Type can be used on its own to describe a general [[TouristDestination]], or be used as an [[additionalType]] to add tourist relevant properties to any other [[Place]].  A [[TouristDestination]] is defined as a [[Place]] that contains, or is colocated with, one or more [[TouristAttraction]]s, often linked by a similar theme or interest to a particular [[touristType]]. The [UNWTO](http://www2.unwto.org/) defines Destination (main destination of a tourism trip) as the place visited that is central to the decision to take the trip.\n  (See examples below.)',
+      'rdfs:comment':
+        'A tourist destination. In principle any [[Place]] can be a [[TouristDestination]] from a [[City]], Region or [[Country]] to an [[AmusementPark]] or [[Hotel]]. This Type can be used on its own to describe a general [[TouristDestination]], or be used as an [[additionalType]] to add tourist relevant properties to any other [[Place]].  A [[TouristDestination]] is defined as a [[Place]] that contains, or is colocated with, one or more [[TouristAttraction]]s, often linked by a similar theme or interest to a particular [[touristType]]. The [UNWTO](http://www2.unwto.org/) defines Destination (main destination of a tourism trip) as the place visited that is central to the decision to take the trip.\n  (See examples below.)',
       'rdfs:label': 'TouristDestination',
       'rdfs:subClassOf': {
         $id: 'schema:Place',
@@ -26952,7 +27385,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:customerRemorseReturnShippingFeesAmount',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The amount of shipping costs if a product is returned due to customer remorse. Applicable when property [[customerRemorseReturnFees]] equals [[ReturnShippingFees]].',
+      'rdfs:comment':
+        'The amount of shipping costs if a product is returned due to customer remorse. Applicable when property [[customerRemorseReturnFees]] equals [[ReturnShippingFees]].',
       'rdfs:label': 'customerRemorseReturnShippingFeesAmount',
       'schema:domainIncludes': {
         $id: 'schema:MerchantReturnPolicy',
@@ -27100,7 +27534,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:archivedAt',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates a page or other link involved in archival of a [[CreativeWork]]. In the case of [[MediaReview]], the items in a [[MediaReviewItem]] may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content.',
+      'rdfs:comment':
+        'Indicates a page or other link involved in archival of a [[CreativeWork]]. In the case of [[MediaReview]], the items in a [[MediaReviewItem]] may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content.',
       'rdfs:label': 'archivedAt',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -27211,7 +27646,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accelerationTime',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The time needed to accelerate the vehicle from a given start velocity to a given target velocity.\\n\\nTypical unit code(s): SEC for seconds\\n\\n* Note: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use "SEC" for seconds and indicate the velocities in the [[name]] of the [[QuantitativeValue]], or use [[valueReference]] with a [[QuantitativeValue]] of 0..60 mph or 0..100 km/h to specify the reference speeds.',
+      'rdfs:comment':
+        'The time needed to accelerate the vehicle from a given start velocity to a given target velocity.\\n\\nTypical unit code(s): SEC for seconds\\n\\n* Note: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use "SEC" for seconds and indicate the velocities in the [[name]] of the [[QuantitativeValue]], or use [[valueReference]] with a [[QuantitativeValue]] of 0..60 mph or 0..100 km/h to specify the reference speeds.',
       'rdfs:label': 'accelerationTime',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -27279,7 +27715,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PositiveFilmDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/positiveFilm">positive film</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/positiveFilm">positive film</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'PositiveFilmDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -27397,7 +27834,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:seriousAdverseOutcome',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.',
+      'rdfs:comment':
+        'A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.',
       'rdfs:label': 'seriousAdverseOutcome',
       'schema:domainIncludes': [
         {
@@ -27443,7 +27881,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LodgingReservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A reservation for lodging at a hotel, motel, inn, etc.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.',
+      'rdfs:comment':
+        'A reservation for lodging at a hotel, motel, inn, etc.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.',
       'rdfs:label': 'LodgingReservation',
       'rdfs:subClassOf': {
         $id: 'schema:Reservation',
@@ -27592,7 +28031,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:jobStartDate',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The date on which a successful applicant for this job would be expected to start work. Choose a specific date in the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.',
+      'rdfs:comment':
+        'The date on which a successful applicant for this job would be expected to start work. Choose a specific date in the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.',
       'rdfs:label': 'jobStartDate',
       'schema:domainIncludes': {
         $id: 'schema:JobPosting',
@@ -27621,7 +28061,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:StagedContent',
       $type: 'schema:MediaManipulationRatingEnumeration',
-      'rdfs:comment': "Content coded 'staged content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'staged content': A video that has been created using actors or similarly contrived.\n\nFor an [[ImageObject]] to be 'staged content': An image that was created using actors or similarly contrived, such as a screenshot of a fake tweet.\n\nFor an [[ImageObject]] with embedded text to be 'staged content': An image that was created using actors or similarly contrived, such as a screenshot of a fake tweet.\n\nFor an [[AudioObject]] to be 'staged content': Audio that has been created using actors or similarly contrived.\n",
+      'rdfs:comment':
+        "Content coded 'staged content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'staged content': A video that has been created using actors or similarly contrived.\n\nFor an [[ImageObject]] to be 'staged content': An image that was created using actors or similarly contrived, such as a screenshot of a fake tweet.\n\nFor an [[ImageObject]] with embedded text to be 'staged content': An image that was created using actors or similarly contrived, such as a screenshot of a fake tweet.\n\nFor an [[AudioObject]] to be 'staged content': Audio that has been created using actors or similarly contrived.\n",
       'rdfs:label': 'StagedContent',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -27764,7 +28205,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:hasDigitalDocumentPermission',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A permission related to the access to this document (e.g. permission to read or write an electronic document). For a public document, specify a grantee with an Audience with audienceType equal to "public".',
+      'rdfs:comment':
+        'A permission related to the access to this document (e.g. permission to read or write an electronic document). For a public document, specify a grantee with an Audience with audienceType equal to "public".',
       'rdfs:label': 'hasDigitalDocumentPermission',
       'schema:domainIncludes': {
         $id: 'schema:DigitalDocument',
@@ -27776,7 +28218,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cvdFacilityId',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Identifier of the NHSN facility that this data record applies to. Use [[cvdFacilityCounty]] to indicate the county. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.',
+      'rdfs:comment':
+        'Identifier of the NHSN facility that this data record applies to. Use [[cvdFacilityCounty]] to indicate the county. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.',
       'rdfs:label': 'cvdFacilityId',
       'schema:domainIncludes': {
         $id: 'schema:CDCPMDRecord',
@@ -27924,7 +28367,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalStudy',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A medical study is an umbrella type covering all kinds of research studies relating to human medicine or health, including observational studies and interventional trials and registries, randomized, controlled or not. When the specific type of study is known, use one of the extensions of this type, such as MedicalTrial or MedicalObservationalStudy. Also, note that this type should be used to mark up data that describes the study itself; to tag an article that publishes the results of a study, use MedicalScholarlyArticle. Note: use the code property of MedicalEntity to store study IDs, e.g. clinicaltrials.gov ID.',
+      'rdfs:comment':
+        'A medical study is an umbrella type covering all kinds of research studies relating to human medicine or health, including observational studies and interventional trials and registries, randomized, controlled or not. When the specific type of study is known, use one of the extensions of this type, such as MedicalTrial or MedicalObservationalStudy. Also, note that this type should be used to mark up data that describes the study itself; to tag an article that publishes the results of a study, use MedicalScholarlyArticle. Note: use the code property of MedicalEntity to store study IDs, e.g. clinicaltrials.gov ID.',
       'rdfs:label': 'MedicalStudy',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -27968,7 +28412,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FDAcategoryD',
       $type: 'schema:DrugPregnancyCategory',
-      'rdfs:comment': 'A designation by the US FDA signifying that there is positive evidence of human fetal risk based on adverse reaction data from investigational or marketing experience or studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.',
+      'rdfs:comment':
+        'A designation by the US FDA signifying that there is positive evidence of human fetal risk based on adverse reaction data from investigational or marketing experience or studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.',
       'rdfs:label': 'FDAcategoryD',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -28031,7 +28476,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ApplyAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of registering to an organization/service without the guarantee to receive it.\\n\\nRelated actions:\\n\\n* [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.',
+      'rdfs:comment':
+        'The act of registering to an organization/service without the guarantee to receive it.\\n\\nRelated actions:\\n\\n* [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.',
       'rdfs:label': 'ApplyAction',
       'rdfs:subClassOf': {
         $id: 'schema:OrganizeAction',
@@ -28052,7 +28498,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:GeoShape',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.',
+      'rdfs:comment':
+        'The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.',
       'rdfs:label': 'GeoShape',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -28120,7 +28567,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:gtin8',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.',
+      'rdfs:comment':
+        'The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.',
       'rdfs:label': 'gtin8',
       'rdfs:subPropertyOf': [
         {
@@ -28272,7 +28720,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:weightTotal',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The permitted total weight of the loaded vehicle, including passengers and cargo and the weight of the empty vehicle.\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n\\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
+      'rdfs:comment':
+        'The permitted total weight of the loaded vehicle, including passengers and cargo and the weight of the empty vehicle.\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n\\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
       'rdfs:label': 'weightTotal',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -28293,7 +28742,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#consolidates',
       },
-      'rdfs:comment': 'Indicates another legislation taken into account in this consolidated legislation (which is usually the product of an editorial process that revises the legislation). This property should be used multiple times to refer to both the original version or the previous consolidated version, and to the legislations making the change.',
+      'rdfs:comment':
+        'Indicates another legislation taken into account in this consolidated legislation (which is usually the product of an editorial process that revises the legislation). This property should be used multiple times to refer to both the original version or the previous consolidated version, and to the legislations making the change.',
       'rdfs:label': 'legislationConsolidates',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/ELI',
@@ -28339,7 +28789,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:globalLocationNumber',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.',
+      'rdfs:comment':
+        'The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.',
       'rdfs:label': 'globalLocationNumber',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -28365,7 +28816,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MaximumDoseSchedule',
       $type: 'rdfs:Class',
-      'rdfs:comment': "The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.",
+      'rdfs:comment':
+        "The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.",
       'rdfs:label': 'MaximumDoseSchedule',
       'rdfs:subClassOf': {
         $id: 'schema:DoseSchedule',
@@ -28377,7 +28829,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Syllabus',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A syllabus that describes the material covered in a course, often with several such sections per [[Course]] so that a distinct [[timeRequired]] can be provided for that section of the [[Course]].',
+      'rdfs:comment':
+        'A syllabus that describes the material covered in a course, often with several such sections per [[Course]] so that a distinct [[timeRequired]] can be provided for that section of the [[Course]].',
       'rdfs:label': 'Syllabus',
       'rdfs:subClassOf': {
         $id: 'schema:LearningResource',
@@ -28422,7 +28875,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:signOrSymptom',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.',
+      'rdfs:comment':
+        'A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.',
       'rdfs:label': 'signOrSymptom',
       'schema:domainIncludes': {
         $id: 'schema:MedicalCondition',
@@ -28466,7 +28920,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:interestRate',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.',
+      'rdfs:comment':
+        'The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.',
       'rdfs:label': 'interestRate',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -28486,7 +28941,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:gtin',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes.\n\nA correct [[gtin]] value should be a valid GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1 Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet the other rules for valid GTINs. See also [GS1\'s GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties.\n\nThe GS1 [digital link specifications](https://www.gs1.org/standards/Digital-Link/) expresses GTINs as URLs (URIs, IRIs, etc.).\nDigital Links should be populated into the [[hasGS1DigitalLink]] attribute.\n\nNote also that this is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see the GS1 documentation for authoritative details.',
+      'rdfs:comment':
+        'A Global Trade Item Number ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify trade items, including products and services, using numeric identification codes.\n\nA correct [[gtin]] value should be a valid GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1 Digital Link" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https://www.gs1.org/services/check-digit-calculator) and meet the other rules for valid GTINs. See also [GS1\'s GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) and [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for more details. Left-padding of the gtin values is not required or encouraged. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties.\n\nThe GS1 [digital link specifications](https://www.gs1.org/standards/Digital-Link/) expresses GTINs as URLs (URIs, IRIs, etc.).\nDigital Links should be populated into the [[hasGS1DigitalLink]] attribute.\n\nNote also that this is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see the GS1 documentation for authoritative details.',
       'rdfs:label': 'gtin',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -28538,7 +28994,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AuthoritativeLegalValue',
       $type: 'schema:LegalValueLevel',
-      'rdfs:comment': 'Indicates that the publisher gives some special status to the publication of the document. ("The Queens Printer" version of a UK Act of Parliament, or the PDF version of a Directive published by the EU Office of Publications.) Something "Authoritative" is considered to be also [[OfficialLegalValue]].',
+      'rdfs:comment':
+        'Indicates that the publisher gives some special status to the publication of the document. ("The Queens Printer" version of a UK Act of Parliament, or the PDF version of a Directive published by the EU Office of Publications.) Something "Authoritative" is considered to be also [[OfficialLegalValue]].',
       'rdfs:label': 'AuthoritativeLegalValue',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/ELI',
@@ -28570,7 +29027,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:interpretedAsClaim',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Used to indicate a specific claim contained, implied, translated or refined from the content of a [[MediaObject]] or other [[CreativeWork]]. The interpreting party can be indicated using [[claimInterpreter]].',
+      'rdfs:comment':
+        'Used to indicate a specific claim contained, implied, translated or refined from the content of a [[MediaObject]] or other [[CreativeWork]]. The interpreting party can be indicated using [[claimInterpreter]].',
       'rdfs:label': 'interpretedAsClaim',
       'rdfs:subPropertyOf': {
         $id: 'schema:description',
@@ -28705,7 +29163,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:VirtualRecordingDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/virtualRecording">virtual recording</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/virtualRecording">virtual recording</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'VirtualRecordingDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -28732,7 +29191,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CreativeWorkSeries',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind. CreativeWorkSeries are usually organized into some order, often chronological. Unlike [[ItemList]] which is a general purpose data structure for lists of things, the emphasis with CreativeWorkSeries is on published materials (written e.g. books and periodicals, or media such as TV, radio and games).\\n\\nSpecific subtypes are available for describing [[TVSeries]], [[RadioSeries]], [[MovieSeries]], [[BookSeries]], [[Periodical]] and [[VideoGameSeries]]. In each case, the [[hasPart]] / [[isPartOf]] properties can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely just to organize these more specific and practical subtypes.\\n\\nIt is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate.\n    ',
+      'rdfs:comment':
+        'A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind. CreativeWorkSeries are usually organized into some order, often chronological. Unlike [[ItemList]] which is a general purpose data structure for lists of things, the emphasis with CreativeWorkSeries is on published materials (written e.g. books and periodicals, or media such as TV, radio and games).\\n\\nSpecific subtypes are available for describing [[TVSeries]], [[RadioSeries]], [[MovieSeries]], [[BookSeries]], [[Periodical]] and [[VideoGameSeries]]. In each case, the [[hasPart]] / [[isPartOf]] properties can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely just to organize these more specific and practical subtypes.\\n\\nIt is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate.\n    ',
       'rdfs:label': 'CreativeWorkSeries',
       'rdfs:subClassOf': [
         {
@@ -28800,7 +29260,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:value',
       $type: 'rdf:Property',
-      'rdfs:comment': "The value of a [[QuantitativeValue]] (including [[Observation]]) or property value node.\\n\\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\\n* For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or 'StructuredValue'.\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+      'rdfs:comment':
+        "The value of a [[QuantitativeValue]] (including [[Observation]]) or property value node.\\n\\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\\n* For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', or 'StructuredValue'.\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
       'rdfs:label': 'value',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -28834,7 +29295,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OfficialLegalValue',
       $type: 'schema:LegalValueLevel',
-      'rdfs:comment': 'All the documents published by an official publisher should have at least the legal value level "OfficialLegalValue". This indicates that the document was published by an organisation with the public task of making it available (e.g. a consolidated version of an EU directive published by the EU Office of Publications).',
+      'rdfs:comment':
+        'All the documents published by an official publisher should have at least the legal value level "OfficialLegalValue". This indicates that the document was published by an organisation with the public task of making it available (e.g. a consolidated version of an EU directive published by the EU Office of Publications).',
       'rdfs:label': 'OfficialLegalValue',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/ELI',
@@ -28861,7 +29323,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:recourseLoan',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.',
+      'rdfs:comment':
+        'The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.',
       'rdfs:label': 'recourseLoan',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -28896,7 +29359,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoDisjoint',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common. They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)',
+      'rdfs:comment':
+        'Represents spatial relations in which two geometries (or the places they represent) are topologically disjoint: "they have no point in common. They form a set of disconnected geometries." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)',
       'rdfs:label': 'geoDisjoint',
       'schema:domainIncludes': [
         {
@@ -29098,7 +29562,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:WarrantyPromise',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A structured value representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.',
+      'rdfs:comment':
+        'A structured value representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.',
       'rdfs:label': 'WarrantyPromise',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -29233,7 +29698,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:NewsArticle',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A NewsArticle is an article whose content reports news, or provides background context and supporting materials for understanding the news.\n\nA more detailed overview of [schema.org News markup](/docs/news.html) is also available.\n',
+      'rdfs:comment':
+        'A NewsArticle is an article whose content reports news, or provides background context and supporting materials for understanding the news.\n\nA more detailed overview of [schema.org News markup](/docs/news.html) is also available.\n',
       'rdfs:label': 'NewsArticle',
       'rdfs:subClassOf': {
         $id: 'schema:Article',
@@ -29297,7 +29763,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:requirements',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).',
+      'rdfs:comment':
+        'Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).',
       'rdfs:label': 'requirements',
       'schema:domainIncludes': {
         $id: 'schema:SoftwareApplication',
@@ -29357,7 +29824,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:valueName',
       $type: 'rdf:Property',
-      'rdfs:comment': "Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.",
+      'rdfs:comment':
+        "Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.",
       'rdfs:label': 'valueName',
       'schema:domainIncludes': {
         $id: 'schema:PropertyValueSpecification',
@@ -29383,7 +29851,8 @@ export const schemaorg: Record<string, any> = {
       $type: 'rdfs:Class',
       'rdfs:comment': {
         $language: 'en',
-        $value: 'An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.',
+        $value:
+          'An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.',
       },
       'rdfs:label': {
         $language: 'en',
@@ -29426,7 +29895,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SellAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of taking money from a buyer in exchange for goods or services rendered. An agent sells an object, product, or service to a buyer for a price. Reciprocal of BuyAction.',
+      'rdfs:comment':
+        'The act of taking money from a buyer in exchange for goods or services rendered. An agent sells an object, product, or service to a buyer for a price. Reciprocal of BuyAction.',
       'rdfs:label': 'SellAction',
       'rdfs:subClassOf': {
         $id: 'schema:TradeAction',
@@ -29435,7 +29905,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:numberOfAccommodationUnits',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].',
+      'rdfs:comment':
+        'Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].',
       'rdfs:label': 'numberOfAccommodationUnits',
       'schema:domainIncludes': [
         {
@@ -29572,7 +30043,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalClinic',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.',
+      'rdfs:comment':
+        'A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.',
       'rdfs:label': 'MedicalClinic',
       'rdfs:subClassOf': [
         {
@@ -29589,7 +30061,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:suggestedMeasurement',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.',
+      'rdfs:comment':
+        'A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.',
       'rdfs:label': 'suggestedMeasurement',
       'schema:domainIncludes': [
         {
@@ -29630,7 +30103,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FindAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of finding an object.\\n\\nRelated actions:\\n\\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.',
+      'rdfs:comment':
+        'The act of finding an object.\\n\\nRelated actions:\\n\\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.',
       'rdfs:label': 'FindAction',
       'rdfs:subClassOf': {
         $id: 'schema:Action',
@@ -29711,7 +30185,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:trailerWeight',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The permitted weight of a trailer attached to the vehicle.\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
+      'rdfs:comment':
+        'The permitted weight of a trailer attached to the vehicle.\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
       'rdfs:label': 'trailerWeight',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -29738,7 +30213,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:creativeWorkStatus',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.',
+      'rdfs:comment':
+        'The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.',
       'rdfs:label': 'creativeWorkStatus',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -29761,7 +30237,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DecontextualizedContent',
       $type: 'schema:MediaManipulationRatingEnumeration',
-      'rdfs:comment': "Content coded 'missing context' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'missing context': Presenting unaltered video in an inaccurate manner that misrepresents the footage. For example, using incorrect dates or locations, altering the transcript or sharing brief clips from a longer video to mislead viewers. (A video rated 'original' can also be missing context.)\n\nFor an [[ImageObject]] to be 'missing context': Presenting unaltered images in an inaccurate manner to misrepresent the image and mislead the viewer. For example, a common tactic is using an unaltered image but saying it came from a different time or place. (An image rated 'original' can also be missing context.)\n\nFor an [[ImageObject]] with embedded text to be 'missing context': An unaltered image presented in an inaccurate manner to misrepresent the image and mislead the viewer. For example, a common tactic is using an unaltered image but saying it came from a different time or place. (An 'original' image with inaccurate text would generally fall in this category.)\n\nFor an [[AudioObject]] to be 'missing context': Unaltered audio presented in an inaccurate manner that misrepresents it. For example, using incorrect dates or locations, or sharing brief clips from a longer recording to mislead viewers. (Audio rated “original” can also be missing context.)\n",
+      'rdfs:comment':
+        "Content coded 'missing context' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'missing context': Presenting unaltered video in an inaccurate manner that misrepresents the footage. For example, using incorrect dates or locations, altering the transcript or sharing brief clips from a longer video to mislead viewers. (A video rated 'original' can also be missing context.)\n\nFor an [[ImageObject]] to be 'missing context': Presenting unaltered images in an inaccurate manner to misrepresent the image and mislead the viewer. For example, a common tactic is using an unaltered image but saying it came from a different time or place. (An image rated 'original' can also be missing context.)\n\nFor an [[ImageObject]] with embedded text to be 'missing context': An unaltered image presented in an inaccurate manner to misrepresent the image and mislead the viewer. For example, a common tactic is using an unaltered image but saying it came from a different time or place. (An 'original' image with inaccurate text would generally fall in this category.)\n\nFor an [[AudioObject]] to be 'missing context': Unaltered audio presented in an inaccurate manner that misrepresents it. For example, using incorrect dates or locations, or sharing brief clips from a longer recording to mislead viewers. (Audio rated “original” can also be missing context.)\n",
       'rdfs:label': 'DecontextualizedContent',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -29832,7 +30309,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#date_document',
       },
-      'rdfs:comment': 'The date of adoption or signature of the legislation. This is the date at which the text is officially aknowledged to be a legislation, even though it might not even be published or in force.',
+      'rdfs:comment':
+        'The date of adoption or signature of the legislation. This is the date at which the text is officially aknowledged to be a legislation, even though it might not even be published or in force.',
       'rdfs:label': 'legislationDate',
       'rdfs:subPropertyOf': {
         $id: 'schema:dateCreated',
@@ -29871,7 +30349,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:monoisotopicMolecularWeight',
       $type: 'rdf:Property',
-      'rdfs:comment': "The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units in the form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as '&lt;QuantitativeValue&gt;.",
+      'rdfs:comment':
+        "The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units in the form '&lt;Number&gt; &lt;unit&gt;', for example '770.230488 g/mol' or as '&lt;QuantitativeValue&gt;.",
       'rdfs:label': 'monoisotopicMolecularWeight',
       'schema:domainIncludes': {
         $id: 'schema:MolecularEntity',
@@ -29969,7 +30448,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:occupationLocation',
       $type: 'rdf:Property',
-      'rdfs:comment': ' The region/country for which this occupational description is appropriate. Note that educational requirements and qualifications can vary between jurisdictions.',
+      'rdfs:comment':
+        ' The region/country for which this occupational description is appropriate. Note that educational requirements and qualifications can vary between jurisdictions.',
       'rdfs:label': 'occupationLocation',
       'schema:domainIncludes': {
         $id: 'schema:Occupation',
@@ -30028,7 +30508,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EventMovedOnline',
       $type: 'schema:EventStatusType',
-      'rdfs:comment': 'Indicates that the event was changed to allow online participation. See [[eventAttendanceMode]] for specifics of whether it is now fully or partially online.',
+      'rdfs:comment':
+        'Indicates that the event was changed to allow online participation. See [[eventAttendanceMode]] for specifics of whether it is now fully or partially online.',
       'rdfs:label': 'EventMovedOnline',
     },
     {
@@ -30148,7 +30629,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:downPayment',
       $type: 'rdf:Property',
-      'rdfs:comment': 'a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents only a percentage of the full purchase price.',
+      'rdfs:comment':
+        'a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents only a percentage of the full purchase price.',
       'rdfs:label': 'downPayment',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -30183,7 +30665,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Psychiatric',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that is concerned with the study, treatment, and prevention of mental illness, using both medical and psychological therapies.',
+      'rdfs:comment':
+        'A specific branch of medical science that is concerned with the study, treatment, and prevention of mental illness, using both medical and psychological therapies.',
       'rdfs:label': 'Psychiatric',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -30261,7 +30744,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:InteractionCounter',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.',
+      'rdfs:comment':
+        'A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.',
       'rdfs:label': 'InteractionCounter',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -30288,7 +30772,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:priceCurrency',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\\n\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".',
+      'rdfs:comment':
+        'The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\\n\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".',
       'rdfs:label': 'priceCurrency',
       'schema:domainIncludes': [
         {
@@ -30332,7 +30817,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SuperficialAnatomy',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Anatomical features that can be observed by sight (without dissection), including the form and proportions of the human body as well as surface landmarks that correspond to deeper subcutaneous structures. Superficial anatomy plays an important role in sports medicine, phlebotomy, and other medical specialties as underlying anatomical structures can be identified through surface palpation. For example, during back surgery, superficial anatomy can be used to palpate and count vertebrae to find the site of incision. Or in phlebotomy, superficial anatomy can be used to locate an underlying vein; for example, the median cubital vein can be located by palpating the borders of the cubital fossa (such as the epicondyles of the humerus) and then looking for the superficial signs of the vein, such as size, prominence, ability to refill after depression, and feel of surrounding tissue support. As another example, in a subluxation (dislocation) of the glenohumeral joint, the bony structure becomes pronounced with the deltoid muscle failing to cover the glenohumeral joint allowing the edges of the scapula to be superficially visible. Here, the superficial anatomy is the visible edges of the scapula, implying the underlying dislocation of the joint (the related anatomical structure).',
+      'rdfs:comment':
+        'Anatomical features that can be observed by sight (without dissection), including the form and proportions of the human body as well as surface landmarks that correspond to deeper subcutaneous structures. Superficial anatomy plays an important role in sports medicine, phlebotomy, and other medical specialties as underlying anatomical structures can be identified through surface palpation. For example, during back surgery, superficial anatomy can be used to palpate and count vertebrae to find the site of incision. Or in phlebotomy, superficial anatomy can be used to locate an underlying vein; for example, the median cubital vein can be located by palpating the borders of the cubital fossa (such as the epicondyles of the humerus) and then looking for the superficial signs of the vein, such as size, prominence, ability to refill after depression, and feel of surrounding tissue support. As another example, in a subluxation (dislocation) of the glenohumeral joint, the bony structure becomes pronounced with the deltoid muscle failing to cover the glenohumeral joint allowing the edges of the scapula to be superficially visible. Here, the superficial anatomy is the visible edges of the scapula, implying the underlying dislocation of the joint (the related anatomical structure).',
       'rdfs:label': 'SuperficialAnatomy',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -30356,7 +30842,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:countryOfOrigin',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The country of origin of something, including products as well as creative  works such as movie and TV content.\n\nIn the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.\n\nIn the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.',
+      'rdfs:comment':
+        'The country of origin of something, including products as well as creative  works such as movie and TV content.\n\nIn the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.\n\nIn the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.',
       'rdfs:label': 'countryOfOrigin',
       'schema:domainIncludes': [
         {
@@ -30385,7 +30872,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:taxonRank',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs.',
+      'rdfs:comment':
+        'The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs.',
       'rdfs:label': 'taxonRank',
       'schema:domainIncludes': {
         $id: 'schema:Taxon',
@@ -30452,7 +30940,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BackgroundNewsArticle',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [[NewsArticle]] providing historical context, definition and detail on a specific topic (aka "explainer" or "backgrounder"). For example, an in-depth article or frequently-asked-questions ([FAQ](https://en.wikipedia.org/wiki/FAQ)) document on topics such as Climate Change or the European Union. Other kinds of background material from a non-news setting are often described using [[Book]] or [[Article]], in particular [[ScholarlyArticle]]. See also [[NewsArticle]] for related vocabulary from a learning/education perspective.',
+      'rdfs:comment':
+        'A [[NewsArticle]] providing historical context, definition and detail on a specific topic (aka "explainer" or "backgrounder"). For example, an in-depth article or frequently-asked-questions ([FAQ](https://en.wikipedia.org/wiki/FAQ)) document on topics such as Climate Change or the European Union. Other kinds of background material from a non-news setting are often described using [[Book]] or [[Article]], in particular [[ScholarlyArticle]]. See also [[NewsArticle]] for related vocabulary from a learning/education perspective.',
       'rdfs:label': 'BackgroundNewsArticle',
       'rdfs:subClassOf': {
         $id: 'schema:NewsArticle',
@@ -30529,7 +31018,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CampingPitch',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [[CampingPitch]] is an individual place for overnight stay in the outdoors, typically being part of a larger camping site, or [[Campground]].\\n\\n\nIn British English a campsite, or campground, is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites.\n(Source: Wikipedia, see [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite).)\\n\\n\nSee also the dedicated [document on the use of schema.org for marking up hotels and other forms of accommodations](/docs/hotels.html).\n',
+      'rdfs:comment':
+        'A [[CampingPitch]] is an individual place for overnight stay in the outdoors, typically being part of a larger camping site, or [[Campground]].\\n\\n\nIn British English a campsite, or campground, is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites.\n(Source: Wikipedia, see [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite).)\\n\\n\nSee also the dedicated [document on the use of schema.org for marking up hotels and other forms of accommodations](/docs/hotels.html).\n',
       'rdfs:label': 'CampingPitch',
       'rdfs:subClassOf': {
         $id: 'schema:Accommodation',
@@ -30568,7 +31058,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EditedOrCroppedContent',
       $type: 'schema:MediaManipulationRatingEnumeration',
-      'rdfs:comment': "Content coded 'edited or cropped content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'edited or cropped content': The video has been edited or rearranged. This category applies to time edits, including editing multiple videos together to alter the story being told or editing out large portions from a video.\n\nFor an [[ImageObject]] to be 'edited or cropped content': Presenting a part of an image from a larger whole to mislead the viewer.\n\nFor an [[ImageObject]] with embedded text to be 'edited or cropped content': Presenting a part of an image from a larger whole to mislead the viewer.\n\nFor an [[AudioObject]] to be 'edited or cropped content': The audio has been edited or rearranged. This category applies to time edits, including editing multiple audio clips together to alter the story being told or editing out large portions from the recording.\n",
+      'rdfs:comment':
+        "Content coded 'edited or cropped content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'edited or cropped content': The video has been edited or rearranged. This category applies to time edits, including editing multiple videos together to alter the story being told or editing out large portions from a video.\n\nFor an [[ImageObject]] to be 'edited or cropped content': Presenting a part of an image from a larger whole to mislead the viewer.\n\nFor an [[ImageObject]] with embedded text to be 'edited or cropped content': Presenting a part of an image from a larger whole to mislead the viewer.\n\nFor an [[AudioObject]] to be 'edited or cropped content': The audio has been edited or rearranged. This category applies to time edits, including editing multiple audio clips together to alter the story being told or editing out large portions from the recording.\n",
       'rdfs:label': 'EditedOrCroppedContent',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -30629,7 +31120,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:gtin14',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.',
+      'rdfs:comment':
+        'The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.',
       'rdfs:label': 'gtin14',
       'rdfs:subPropertyOf': [
         {
@@ -30663,7 +31155,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentClass': {
         $id: 'http://purl.org/ontology/bibo/Issue',
       },
-      'rdfs:comment': 'A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).',
+      'rdfs:comment':
+        'A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).',
       'rdfs:label': 'PublicationIssue',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -30711,7 +31204,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Enumerations related to health and the practice of medicine: A concept that is used to attribute a quality to another concept, as a qualifier, a collection of items or a listing of all of the elements of a set in medicine practice.',
+      'rdfs:comment':
+        'Enumerations related to health and the practice of medicine: A concept that is used to attribute a quality to another concept, as a qualifier, a collection of items or a listing of all of the elements of a set in medicine practice.',
       'rdfs:label': 'MedicalEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -30723,7 +31217,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalRiskFactor',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A risk factor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication.",
+      'rdfs:comment':
+        "A risk factor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication.",
       'rdfs:label': 'MedicalRiskFactor',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -30792,7 +31287,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:eventSchedule',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Associates an [[Event]] with a [[Schedule]]. There are circumstances where it is preferable to share a schedule for a series of\n      repeating events rather than data on the individual events themselves. For example, a website or application might prefer to publish a schedule for a weekly\n      gym class rather than provide data on every event. A schedule could be processed by applications to add forthcoming events to a calendar. An [[Event]] that\n      is associated with a [[Schedule]] using this property should not have [[startDate]] or [[endDate]] properties. These are instead defined within the associated\n      [[Schedule]], this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules, e.g. for different months\n      or seasons.',
+      'rdfs:comment':
+        'Associates an [[Event]] with a [[Schedule]]. There are circumstances where it is preferable to share a schedule for a series of\n      repeating events rather than data on the individual events themselves. For example, a website or application might prefer to publish a schedule for a weekly\n      gym class rather than provide data on every event. A schedule could be processed by applications to add forthcoming events to a calendar. An [[Event]] that\n      is associated with a [[Schedule]] using this property should not have [[startDate]] or [[endDate]] properties. These are instead defined within the associated\n      [[Schedule]], this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules, e.g. for different months\n      or seasons.',
       'rdfs:label': 'eventSchedule',
       'schema:domainIncludes': {
         $id: 'schema:Event',
@@ -30810,7 +31306,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:reviewRating',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The rating given in this review. Note that reviews can themselves be rated. The ```reviewRating``` applies to rating given by the review. The [[aggregateRating]] property applies to the review itself, as a creative work.',
+      'rdfs:comment':
+        'The rating given in this review. Note that reviews can themselves be rated. The ```reviewRating``` applies to rating given by the review. The [[aggregateRating]] property applies to the review itself, as a creative work.',
       'rdfs:label': 'reviewRating',
       'schema:domainIncludes': {
         $id: 'schema:Review',
@@ -30903,7 +31400,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:offers',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.\n      ',
+      'rdfs:comment':
+        'An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.\n      ',
       'rdfs:label': 'offers',
       'schema:domainIncludes': [
         {
@@ -31018,7 +31516,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CreditCard',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A card payment method of a particular brand or name.  Used to mark up a particular payment method and/or the financial product/service that supplies the card account.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#AmericanExpress\\n* http://purl.org/goodrelations/v1#DinersClub\\n* http://purl.org/goodrelations/v1#Discover\\n* http://purl.org/goodrelations/v1#JCB\\n* http://purl.org/goodrelations/v1#MasterCard\\n* http://purl.org/goodrelations/v1#VISA\n       ',
+      'rdfs:comment':
+        'A card payment method of a particular brand or name.  Used to mark up a particular payment method and/or the financial product/service that supplies the card account.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#AmericanExpress\\n* http://purl.org/goodrelations/v1#DinersClub\\n* http://purl.org/goodrelations/v1#Discover\\n* http://purl.org/goodrelations/v1#JCB\\n* http://purl.org/goodrelations/v1#MasterCard\\n* http://purl.org/goodrelations/v1#VISA\n       ',
       'rdfs:label': 'CreditCard',
       'rdfs:subClassOf': [
         {
@@ -31075,7 +31574,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ownershipFundingInfo',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news/media setting, this is with particular reference to editorial independence.   Note that the [[funder]] is also available and can be used to make basic funder information machine-readable.',
+      'rdfs:comment':
+        'For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news/media setting, this is with particular reference to editorial independence.   Note that the [[funder]] is also available and can be used to make basic funder information machine-readable.',
       'rdfs:label': 'ownershipFundingInfo',
       'rdfs:subPropertyOf': {
         $id: 'schema:publishingPrinciples',
@@ -31118,7 +31618,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#passed_by',
       },
-      'rdfs:comment': 'The person or organization that originally passed or made the law: typically parliament (for primary legislation) or government (for secondary legislation). This indicates the "legal author" of the law, as opposed to its physical author.',
+      'rdfs:comment':
+        'The person or organization that originally passed or made the law: typically parliament (for primary legislation) or government (for secondary legislation). This indicates the "legal author" of the law, as opposed to its physical author.',
       'rdfs:label': 'legislationPassedBy',
       'rdfs:subPropertyOf': {
         $id: 'schema:creator',
@@ -31269,7 +31770,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserLikes',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserLikes',
       'rdfs:subClassOf': {
         $id: 'schema:UserInteraction',
@@ -31284,7 +31786,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'dcterms:temporal',
       },
-      'rdfs:comment': 'The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written "2011/2012"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945".\n\nOpen-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.',
+      'rdfs:comment':
+        'The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written "2011/2012"). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945".\n\nOpen-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.',
       'rdfs:label': 'temporalCoverage',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -31313,7 +31816,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:playMode',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.',
+      'rdfs:comment':
+        'Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.',
       'rdfs:label': 'playMode',
       'schema:domainIncludes': [
         {
@@ -31344,10 +31848,7 @@ export const schemaorg: Record<string, any> = {
     },
     {
       $id: 'schema:DateTime',
-      $type: [
-        'schema:DataType',
-        'rdfs:Class',
-      ],
+      $type: ['schema:DataType', 'rdfs:Class'],
       'rdfs:comment': 'A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).',
       'rdfs:label': 'DateTime',
     },
@@ -31372,7 +31873,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:VideoObjectSnapshot',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A specific and exact (byte-for-byte) version of a [[VideoObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.",
+      'rdfs:comment':
+        "A specific and exact (byte-for-byte) version of a [[VideoObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.",
       'rdfs:label': 'VideoObjectSnapshot',
       'rdfs:subClassOf': {
         $id: 'schema:VideoObject',
@@ -31402,7 +31904,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FDAcategoryC',
       $type: 'schema:DrugPregnancyCategory',
-      'rdfs:comment': 'A designation by the US FDA signifying that animal reproduction studies have shown an adverse effect on the fetus and there are no adequate and well-controlled studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.',
+      'rdfs:comment':
+        'A designation by the US FDA signifying that animal reproduction studies have shown an adverse effect on the fetus and there are no adequate and well-controlled studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.',
       'rdfs:label': 'FDAcategoryC',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -31435,7 +31938,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AudioObjectSnapshot',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A specific and exact (byte-for-byte) version of an [[AudioObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.",
+      'rdfs:comment':
+        "A specific and exact (byte-for-byte) version of an [[AudioObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.",
       'rdfs:label': 'AudioObjectSnapshot',
       'rdfs:subClassOf': {
         $id: 'schema:AudioObject',
@@ -31512,7 +32016,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PsychologicalTreatment',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A process of care relying upon counseling, dialogue and communication  aimed at improving a mental health condition without use of drugs.',
+      'rdfs:comment':
+        'A process of care relying upon counseling, dialogue and communication  aimed at improving a mental health condition without use of drugs.',
       'rdfs:label': 'PsychologicalTreatment',
       'rdfs:subClassOf': {
         $id: 'schema:TherapeuticProcedure',
@@ -31527,7 +32032,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentClass': {
         $id: 'http://purl.org/ontology/bibo/Periodical',
       },
-      'rdfs:comment': 'A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).',
+      'rdfs:comment':
+        'A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).',
       'rdfs:label': 'Periodical',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWorkSeries',
@@ -31586,7 +32092,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MediaObject',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A media object, such as an image, video, audio, or text object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).",
+      'rdfs:comment':
+        "A media object, such as an image, video, audio, or text object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).",
       'rdfs:label': 'MediaObject',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -31643,7 +32150,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CheckInAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of an agent communicating (service provider, social media, etc) their arrival by registering/confirming for a previously reserved service (e.g. flight check-in) or at a place (e.g. hotel), possibly resulting in a result (boarding pass, etc).\\n\\nRelated actions:\\n\\n* [[CheckOutAction]]: The antonym of CheckInAction.\\n* [[ArriveAction]]: Unlike ArriveAction, CheckInAction implies that the agent is informing/confirming the start of a previously reserved service.\\n* [[ConfirmAction]]: Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming the *start* of a previously reserved service rather than its validity/existence.',
+      'rdfs:comment':
+        'The act of an agent communicating (service provider, social media, etc) their arrival by registering/confirming for a previously reserved service (e.g. flight check-in) or at a place (e.g. hotel), possibly resulting in a result (boarding pass, etc).\\n\\nRelated actions:\\n\\n* [[CheckOutAction]]: The antonym of CheckInAction.\\n* [[ArriveAction]]: Unlike ArriveAction, CheckInAction implies that the agent is informing/confirming the start of a previously reserved service.\\n* [[ConfirmAction]]: Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming the *start* of a previously reserved service rather than its validity/existence.',
       'rdfs:label': 'CheckInAction',
       'rdfs:subClassOf': {
         $id: 'schema:CommunicateAction',
@@ -31685,7 +32193,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Motel',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A motel.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
+      'rdfs:comment':
+        'A motel.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
       'rdfs:label': 'Motel',
       'rdfs:subClassOf': {
         $id: 'schema:LodgingBusiness',
@@ -31724,7 +32233,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Conversation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.',
+      'rdfs:comment':
+        'One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.',
       'rdfs:label': 'Conversation',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -31733,7 +32243,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AnalysisNewsArticle',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An AnalysisNewsArticle is a [[NewsArticle]] that, while based on factual reporting, incorporates the expertise of the author/producer, offering interpretations and conclusions.',
+      'rdfs:comment':
+        'An AnalysisNewsArticle is a [[NewsArticle]] that, while based on factual reporting, incorporates the expertise of the author/producer, offering interpretations and conclusions.',
       'rdfs:label': 'AnalysisNewsArticle',
       'rdfs:subClassOf': {
         $id: 'schema:NewsArticle',
@@ -31760,7 +32271,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:sizeGroup',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The size group (also known as "size type") for a product\'s size. Size groups are common in the fashion industry to define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men\'s big and tall", "petite maternity" or "regular".',
+      'rdfs:comment':
+        'The size group (also known as "size type") for a product\'s size. Size groups are common in the fashion industry to define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men\'s big and tall", "petite maternity" or "regular".',
       'rdfs:label': 'sizeGroup',
       'schema:domainIncludes': {
         $id: 'schema:SizeSpecification',
@@ -31807,7 +32319,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:answerExplanation',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A step-by-step or full explanation about Answer. Can outline how this Answer was achieved or contain more broad clarification or statement about it. ',
+      'rdfs:comment':
+        'A step-by-step or full explanation about Answer. Can outline how this Answer was achieved or contain more broad clarification or statement about it. ',
       'rdfs:label': 'answerExplanation',
       'schema:domainIncludes': {
         $id: 'schema:Answer',
@@ -31905,7 +32418,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:gender',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".',
+      'rdfs:comment':
+        'Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".',
       'rdfs:label': 'gender',
       'schema:domainIncludes': [
         {
@@ -32074,7 +32588,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalCause',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The causative agent(s) that are responsible for the pathophysiologic process that eventually results in a medical condition, symptom or sign. In this schema, unless otherwise specified this is meant to be the proximate cause of the medical condition, symptom or sign. The proximate cause is defined as the causative agent that most directly results in the medical condition, symptom or sign. For example, the HIV virus could be considered a cause of AIDS. Or in a diagnostic context, if a patient fell and sustained a hip fracture and two days later sustained a pulmonary embolism which eventuated in a cardiac arrest, the cause of the cardiac arrest (the proximate cause) would be the pulmonary embolism and not the fall. Medical causes can include cardiovascular, chemical, dermatologic, endocrine, environmental, gastroenterologic, genetic, hematologic, gynecologic, iatrogenic, infectious, musculoskeletal, neurologic, nutritional, obstetric, oncologic, otolaryngologic, pharmacologic, psychiatric, pulmonary, renal, rheumatologic, toxic, traumatic, or urologic causes; medical conditions can be causes as well.',
+      'rdfs:comment':
+        'The causative agent(s) that are responsible for the pathophysiologic process that eventually results in a medical condition, symptom or sign. In this schema, unless otherwise specified this is meant to be the proximate cause of the medical condition, symptom or sign. The proximate cause is defined as the causative agent that most directly results in the medical condition, symptom or sign. For example, the HIV virus could be considered a cause of AIDS. Or in a diagnostic context, if a patient fell and sustained a hip fracture and two days later sustained a pulmonary embolism which eventuated in a cardiac arrest, the cause of the cardiac arrest (the proximate cause) would be the pulmonary embolism and not the fall. Medical causes can include cardiovascular, chemical, dermatologic, endocrine, environmental, gastroenterologic, genetic, hematologic, gynecologic, iatrogenic, infectious, musculoskeletal, neurologic, nutritional, obstetric, oncologic, otolaryngologic, pharmacologic, psychiatric, pulmonary, renal, rheumatologic, toxic, traumatic, or urologic causes; medical conditions can be causes as well.',
       'rdfs:label': 'MedicalCause',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -32101,7 +32616,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MenuSection',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A sub-grouping of food or drink items in a menu. E.g. courses (such as 'Dinner', 'Breakfast', etc.), specific type of dishes (such as 'Meat', 'Vegan', 'Drinks', etc.), or some other classification made by the menu provider.",
+      'rdfs:comment':
+        "A sub-grouping of food or drink items in a menu. E.g. courses (such as 'Dinner', 'Breakfast', etc.), specific type of dishes (such as 'Meat', 'Vegan', 'Drinks', etc.), or some other classification made by the menu provider.",
       'rdfs:label': 'MenuSection',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -32140,7 +32656,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:sha256',
       $type: 'rdf:Property',
-      'rdfs:comment': "The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.",
+      'rdfs:comment':
+        "The [SHA-2](https://en.wikipedia.org/wiki/SHA-2) SHA256 hash of the content of the item. For example, a zero-length input has value 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'.",
       'rdfs:label': 'sha256',
       'rdfs:subPropertyOf': {
         $id: 'schema:description',
@@ -32179,7 +32696,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoContains',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents a relationship between two geometries (or the places they represent), relating a containing geometry to a contained geometry. "a contains b iff no points of b lie in the exterior of a, and at least one point of the interior of b lies in the interior of a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
+      'rdfs:comment':
+        'Represents a relationship between two geometries (or the places they represent), relating a containing geometry to a contained geometry. "a contains b iff no points of b lie in the exterior of a, and at least one point of the interior of b lies in the interior of a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
       'rdfs:label': 'geoContains',
       'schema:domainIncludes': [
         {
@@ -32201,7 +32719,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:addressRegion',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).',
+      'rdfs:comment':
+        'The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).',
       'rdfs:label': 'addressRegion',
       'schema:domainIncludes': [
         {
@@ -32242,7 +32761,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EventAttendanceModeEnumeration',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An EventAttendanceModeEnumeration value is one of potentially several modes of organising an event, relating to whether it is online or offline.',
+      'rdfs:comment':
+        'An EventAttendanceModeEnumeration value is one of potentially several modes of organising an event, relating to whether it is online or offline.',
       'rdfs:label': 'EventAttendanceModeEnumeration',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -32315,7 +32835,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserPlays',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserPlays',
       'rdfs:subClassOf': {
         $id: 'schema:UserInteraction',
@@ -32342,7 +32863,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:provider',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.',
+      'rdfs:comment':
+        'The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.',
       'rdfs:label': 'provider',
       'schema:domainIncludes': [
         {
@@ -32491,7 +33013,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:softwareRequirements',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).',
+      'rdfs:comment':
+        'Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).',
       'rdfs:label': 'softwareRequirements',
       'schema:domainIncludes': {
         $id: 'schema:SoftwareApplication',
@@ -32508,7 +33031,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:workTranslation',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A work that is a translation of the content of this work. E.g. 西遊記 has an English workTranslation “Journey to the West”, a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation Tây du ký bình khảo.',
+      'rdfs:comment':
+        'A work that is a translation of the content of this work. E.g. 西遊記 has an English workTranslation “Journey to the West”, a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation Tây du ký bình khảo.',
       'rdfs:label': 'workTranslation',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -32564,7 +33088,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MediaReviewItem',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Represents an item or group of closely related items treated as a unit for the sake of evaluation in a [[MediaReview]]. Authorship etc. apply to the items rather than to the curation/grouping or reviewing party.',
+      'rdfs:comment':
+        'Represents an item or group of closely related items treated as a unit for the sake of evaluation in a [[MediaReview]]. Authorship etc. apply to the items rather than to the curation/grouping or reviewing party.',
       'rdfs:label': 'MediaReviewItem',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -32579,7 +33104,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:sameAs',
       $type: 'rdf:Property',
-      'rdfs:comment': "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+      'rdfs:comment':
+        "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
       'rdfs:label': 'sameAs',
       'schema:domainIncludes': {
         $id: 'schema:Thing',
@@ -32646,7 +33172,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:superEvent',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.',
+      'rdfs:comment':
+        'An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.',
       'rdfs:label': 'superEvent',
       'schema:domainIncludes': {
         $id: 'schema:Event',
@@ -32739,7 +33266,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:phoneticText',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Representation of a text [[textValue]] using the specified [[speechToTextMarkup]]. For example the city name of Houston in IPA: /ˈhjuːstən/.',
+      'rdfs:comment':
+        'Representation of a text [[textValue]] using the specified [[speechToTextMarkup]]. For example the city name of Houston in IPA: /ˈhjuːstən/.',
       'rdfs:label': 'phoneticText',
       'schema:domainIncludes': {
         $id: 'schema:PronounceableText',
@@ -32772,7 +33300,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:numberOfRooms',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.\nTypical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.',
+      'rdfs:comment':
+        'The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.\nTypical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.',
       'rdfs:label': 'numberOfRooms',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/STI_Accommodation_Ontology',
@@ -32880,7 +33409,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:legislationIdentifier',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An identifier for the legislation. This can be either a string-based identifier, like the CELEX at EU level or the NOR in France, or a web-based, URL/URI identifier, like an ELI (European Legislation Identifier) or an URN-Lex.',
+      'rdfs:comment':
+        'An identifier for the legislation. This can be either a string-based identifier, like the CELEX at EU level or the NOR in France, or a web-based, URL/URI identifier, like an ELI (European Legislation Identifier) or an URN-Lex.',
       'rdfs:label': 'legislationIdentifier',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -32927,7 +33457,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:repeatFrequency',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Defines the frequency at which [[Event]]s will occur according to a schedule [[Schedule]]. The intervals between\n      events should be defined as a [[Duration]] of time.',
+      'rdfs:comment':
+        'Defines the frequency at which [[Event]]s will occur according to a schedule [[Schedule]]. The intervals between\n      events should be defined as a [[Duration]] of time.',
       'rdfs:label': 'repeatFrequency',
       'rdfs:subPropertyOf': {
         $id: 'schema:frequency',
@@ -32979,7 +33510,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:businessFunction',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.',
+      'rdfs:comment':
+        'The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.',
       'rdfs:label': 'businessFunction',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -33002,7 +33534,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:itemCondition',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.',
+      'rdfs:comment':
+        'A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.',
       'rdfs:label': 'itemCondition',
       'schema:domainIncludes': [
         {
@@ -33054,7 +33587,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'dcterms:spatial',
       },
-      'rdfs:comment': 'The "spatial" property can be used in cases when more specific properties\n(e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are not known to be appropriate.',
+      'rdfs:comment':
+        'The "spatial" property can be used in cases when more specific properties\n(e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are not known to be appropriate.',
       'rdfs:label': 'spatial',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -33126,7 +33660,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:director',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.',
+      'rdfs:comment':
+        'A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.',
       'rdfs:label': 'director',
       'schema:domainIncludes': [
         {
@@ -33212,7 +33747,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:speed',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range (indicated by [[maxValue]]) should be the maximum speed achievable under regular conditions.\\n\\nTypical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for knot\\n\\n*Note 1: Use [[minValue]] and [[maxValue]] to indicate the range. Typically, the minimal value is zero.\\n* Note 2: There are many different ways of measuring the speed range. You can link to information about how the given value has been determined using the [[valueReference]] property.',
+      'rdfs:comment':
+        'The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range (indicated by [[maxValue]]) should be the maximum speed achievable under regular conditions.\\n\\nTypical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for knot\\n\\n*Note 1: Use [[minValue]] and [[maxValue]] to indicate the range. Typically, the minimal value is zero.\\n* Note 2: There are many different ways of measuring the speed range. You can link to information about how the given value has been determined using the [[valueReference]] property.',
       'rdfs:label': 'speed',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -33349,7 +33885,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Reservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Describes a reservation for travel, dining or an event. Some reservations require tickets. \\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, restaurant reservations, flights, or rental cars, use [[Offer]].',
+      'rdfs:comment':
+        'Describes a reservation for travel, dining or an event. Some reservations require tickets. \\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, restaurant reservations, flights, or rental cars, use [[Offer]].',
       'rdfs:label': 'Reservation',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -33384,7 +33921,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:actionAccessibilityRequirement',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A set of requirements that must be fulfilled in order to perform an Action. If more than one value is specified, fulfilling one set of requirements will allow the Action to be performed.',
+      'rdfs:comment':
+        'A set of requirements that must be fulfilled in order to perform an Action. If more than one value is specified, fulfilling one set of requirements will allow the Action to be performed.',
       'rdfs:label': 'actionAccessibilityRequirement',
       'schema:domainIncludes': {
         $id: 'schema:ConsumeAction',
@@ -33414,7 +33952,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FundingScheme',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A FundingScheme combines organizational, project and policy aspects of grant-based funding\n    that sets guidelines, principles and mechanisms to support other kinds of projects and activities.\n    Funding is typically organized via [[Grant]] funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - [[FundingAgency]]s such as ERC, REA, ...',
+      'rdfs:comment':
+        'A FundingScheme combines organizational, project and policy aspects of grant-based funding\n    that sets guidelines, principles and mechanisms to support other kinds of projects and activities.\n    Funding is typically organized via [[Grant]] funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - [[FundingAgency]]s such as ERC, REA, ...',
       'rdfs:label': 'FundingScheme',
       'rdfs:subClassOf': {
         $id: 'schema:Organization',
@@ -33434,7 +33973,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:RentAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.',
+      'rdfs:comment':
+        'The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.',
       'rdfs:label': 'RentAction',
       'rdfs:subClassOf': {
         $id: 'schema:TradeAction',
@@ -33552,7 +34092,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:numberOfLoanPayments',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of months from the contractual first payment date to the maturity date.',
+      'rdfs:comment':
+        'The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of months from the contractual first payment date to the maturity date.',
       'rdfs:label': 'numberOfLoanPayments',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -33619,7 +34160,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:totalPrice',
       $type: 'rdf:Property',
-      'rdfs:comment': "The total price for the reservation or ticket, including applicable taxes, shipping, etc.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+      'rdfs:comment':
+        "The total price for the reservation or ticket, including applicable taxes, shipping, etc.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
       'rdfs:label': 'totalPrice',
       'schema:domainIncludes': [
         {
@@ -33653,7 +34195,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AnatomicalSystem',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can include circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.',
+      'rdfs:comment':
+        'An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can include circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.',
       'rdfs:label': 'AnatomicalSystem',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -33680,7 +34223,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:isVariantOf',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the kind of product that this is a variant of. In the case of [[ProductModel]], this is a pointer (from a ProductModel) to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive. In the case of a [[ProductGroup]], the group description also serves as a template, representing a set of Products that vary on explicitly defined, specific dimensions only (so it defines both a set of variants, as well as which values distinguish amongst those variants). When used with [[ProductGroup]], this property can apply to any [[Product]] included in the group.',
+      'rdfs:comment':
+        'Indicates the kind of product that this is a variant of. In the case of [[ProductModel]], this is a pointer (from a ProductModel) to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive. In the case of a [[ProductGroup]], the group description also serves as a template, representing a set of Products that vary on explicitly defined, specific dimensions only (so it defines both a set of variants, as well as which values distinguish amongst those variants). When used with [[ProductGroup]], this property can apply to any [[Product]] included in the group.',
       'rdfs:label': 'isVariantOf',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -33817,7 +34361,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:JoinAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': "An agent joins an event/group with participants/friends at a location.\\n\\nRelated actions:\\n\\n* [[RegisterAction]]: Unlike RegisterAction, JoinAction refers to joining a group/team of people.\\n* [[SubscribeAction]]: Unlike SubscribeAction, JoinAction does not imply that you'll be receiving updates.\\n* [[FollowAction]]: Unlike FollowAction, JoinAction does not imply that you'll be polling for updates.",
+      'rdfs:comment':
+        "An agent joins an event/group with participants/friends at a location.\\n\\nRelated actions:\\n\\n* [[RegisterAction]]: Unlike RegisterAction, JoinAction refers to joining a group/team of people.\\n* [[SubscribeAction]]: Unlike SubscribeAction, JoinAction does not imply that you'll be receiving updates.\\n* [[FollowAction]]: Unlike FollowAction, JoinAction does not imply that you'll be polling for updates.",
       'rdfs:label': 'JoinAction',
       'rdfs:subClassOf': {
         $id: 'schema:InteractAction',
@@ -33862,7 +34407,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Protein',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type :Protein. A protein can thus be a subclass of another protein, e.g. :Protein as a UniProt record can have multiple isoforms inside it which would also be :Protein. They can be imagined, synthetic, hypothetical or naturally occurring.',
+      'rdfs:comment':
+        'Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type :Protein. A protein can thus be a subclass of another protein, e.g. :Protein as a UniProt record can have multiple isoforms inside it which would also be :Protein. They can be imagined, synthetic, hypothetical or naturally occurring.',
       'rdfs:label': 'Protein',
       'rdfs:subClassOf': {
         $id: 'schema:BioChemEntity',
@@ -33914,7 +34460,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:GettingAccessHealthAspect',
       $type: 'schema:HealthAspectEnumeration',
-      'rdfs:comment': 'Content that discusses practical and policy aspects for getting access to specific kinds of healthcare (e.g. distribution mechanisms for vaccines).',
+      'rdfs:comment':
+        'Content that discusses practical and policy aspects for getting access to specific kinds of healthcare (e.g. distribution mechanisms for vaccines).',
       'rdfs:label': 'GettingAccessHealthAspect',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -33926,7 +34473,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TripleBlindedTrial',
       $type: 'schema:MedicalTrialDesign',
-      'rdfs:comment': 'A trial design in which neither the researcher, the person administering the therapy nor the patient knows the details of the treatment the patient was randomly assigned to.',
+      'rdfs:comment':
+        'A trial design in which neither the researcher, the person administering the therapy nor the patient knows the details of the treatment the patient was randomly assigned to.',
       'rdfs:label': 'TripleBlindedTrial',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -33947,7 +34495,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ReceiveAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of physically/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\\n\\nRelated actions:\\n\\n* [[SendAction]]: The reciprocal of ReceiveAction.\\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transferred (e.g. I can receive a package, but it does not mean the package is now mine).',
+      'rdfs:comment':
+        'The act of physically/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\\n\\nRelated actions:\\n\\n* [[SendAction]]: The reciprocal of ReceiveAction.\\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transferred (e.g. I can receive a package, but it does not mean the package is now mine).',
       'rdfs:label': 'ReceiveAction',
       'rdfs:subClassOf': {
         $id: 'schema:TransferAction',
@@ -34019,7 +34568,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:schemaVersion',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates (by URL or string) a particular version of a schema used in some CreativeWork. This property was created primarily to\n    indicate the use of a specific schema.org release, e.g. ```10.0``` as a simple string, or more explicitly via URL, ```https://schema.org/docs/releases.html#v10.0```. There may be situations in which other schemas might usefully be referenced this way, e.g. ```http://dublincore.org/specifications/dublin-core/dces/1999-07-02/``` but this has not been carefully explored in the community.',
+      'rdfs:comment':
+        'Indicates (by URL or string) a particular version of a schema used in some CreativeWork. This property was created primarily to\n    indicate the use of a specific schema.org release, e.g. ```10.0``` as a simple string, or more explicitly via URL, ```https://schema.org/docs/releases.html#v10.0```. There may be situations in which other schemas might usefully be referenced this way, e.g. ```http://dublincore.org/specifications/dublin-core/dces/1999-07-02/``` but this has not been carefully explored in the community.',
       'rdfs:label': 'schemaVersion',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -34075,7 +34625,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BusReservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A reservation for bus travel. \\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
+      'rdfs:comment':
+        'A reservation for bus travel. \\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
       'rdfs:label': 'BusReservation',
       'rdfs:subClassOf': {
         $id: 'schema:Reservation',
@@ -34093,7 +34644,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:deliveryLeadTime',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup.',
+      'rdfs:comment':
+        'The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup.',
       'rdfs:label': 'deliveryLeadTime',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -34154,7 +34706,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:distribution',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A downloadable form of this dataset, at a specific location, in a specific format. This property can be repeated if different variations are available. There is no expectation that different downloadable distributions must contain exactly equivalent information (see also [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this point). Different distributions might include or exclude different subsets of the entire dataset, for example.',
+      'rdfs:comment':
+        'A downloadable form of this dataset, at a specific location, in a specific format. This property can be repeated if different variations are available. There is no expectation that different downloadable distributions must contain exactly equivalent information (see also [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this point). Different distributions might include or exclude different subsets of the entire dataset, for example.',
       'rdfs:label': 'distribution',
       'schema:domainIncludes': {
         $id: 'schema:Dataset',
@@ -34213,7 +34766,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:embedUrl',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A URL pointing to a player for a specific video. In general, this is the information in the ```src``` element of an ```embed``` tag and should not be the same as the content of the ```loc``` tag.',
+      'rdfs:comment':
+        'A URL pointing to a player for a specific video. In general, this is the information in the ```src``` element of an ```embed``` tag and should not be the same as the content of the ```loc``` tag.',
       'rdfs:label': 'embedUrl',
       'schema:domainIncludes': {
         $id: 'schema:MediaObject',
@@ -34258,7 +34812,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:HyperToc',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A HyperToc represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. Items in the table of contents are indicated using the [[tocEntry]] property, and typed [[HyperTocEntry]]. For cases where the same larger work is split into multiple files, [[associatedMedia]] can be used on individual [[HyperTocEntry]] items.',
+      'rdfs:comment':
+        'A HyperToc represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. Items in the table of contents are indicated using the [[tocEntry]] property, and typed [[HyperTocEntry]]. For cases where the same larger work is split into multiple files, [[associatedMedia]] can be used on individual [[HyperTocEntry]] items.',
       'rdfs:label': 'HyperToc',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -34282,7 +34837,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FDAcategoryX',
       $type: 'schema:DrugPregnancyCategory',
-      'rdfs:comment': 'A designation by the US FDA signifying that studies in animals or humans have demonstrated fetal abnormalities and/or there is positive evidence of human fetal risk based on adverse reaction data from investigational or marketing experience, and the risks involved in use of the drug in pregnant women clearly outweigh potential benefits.',
+      'rdfs:comment':
+        'A designation by the US FDA signifying that studies in animals or humans have demonstrated fetal abnormalities and/or there is positive evidence of human fetal risk based on adverse reaction data from investigational or marketing experience, and the risks involved in use of the drug in pregnant women clearly outweigh potential benefits.',
       'rdfs:label': 'FDAcategoryX',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -34318,7 +34874,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:diversityStaffingReport',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported.',
+      'rdfs:comment':
+        'For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported.',
       'rdfs:label': 'diversityStaffingReport',
       'rdfs:subPropertyOf': {
         $id: 'schema:publishingPrinciples',
@@ -34401,7 +34958,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:HomeAndConstructionBusiness',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A construction business.\\n\\nA HomeAndConstructionBusiness is a [[LocalBusiness]] that provides services around homes and buildings.\\n\\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\\(s).',
+      'rdfs:comment':
+        'A construction business.\\n\\nA HomeAndConstructionBusiness is a [[LocalBusiness]] that provides services around homes and buildings.\\n\\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\\(s).',
       'rdfs:label': 'HomeAndConstructionBusiness',
       'rdfs:subClassOf': {
         $id: 'schema:LocalBusiness',
@@ -34410,7 +34968,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:RealEstateListing',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A [[RealEstateListing]] is a listing that describes one or more real-estate [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).\n  The [[RealEstateListing]] type itself represents the overall listing, as manifested in some [[WebPage]].\n  ',
+      'rdfs:comment':
+        'A [[RealEstateListing]] is a listing that describes one or more real-estate [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).\n  The [[RealEstateListing]] type itself represents the overall listing, as manifested in some [[WebPage]].\n  ',
       'rdfs:label': 'RealEstateListing',
       'rdfs:subClassOf': {
         $id: 'schema:WebPage',
@@ -34473,7 +35032,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentClass': {
         $id: 'http://purl.bioontology.org/ontology/SNOMEDCT/410942007',
       },
-      'rdfs:comment': 'A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.',
+      'rdfs:comment':
+        'A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.',
       'rdfs:label': 'Drug',
       'rdfs:subClassOf': [
         {
@@ -34514,7 +35074,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OccupationalActivity',
       $type: 'schema:PhysicalActivityCategory',
-      'rdfs:comment': 'Any physical activity engaged in for job-related purposes. Examples may include waiting tables, maid service, carrying a mailbag, picking fruits or vegetables, construction work, etc.',
+      'rdfs:comment':
+        'Any physical activity engaged in for job-related purposes. Examples may include waiting tables, maid service, carrying a mailbag, picking fruits or vegetables, construction work, etc.',
       'rdfs:label': 'OccupationalActivity',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -34648,7 +35209,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:conditionsOfAccess',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\\n\\nFor example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ". ',
+      'rdfs:comment':
+        'Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\\n\\nFor example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ". ',
       'rdfs:label': 'conditionsOfAccess',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -34705,7 +35267,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#transposes',
       },
-      'rdfs:comment': "Indicates that this legislation (or part of legislation) fulfills the objectives set by another legislation, by passing appropriate implementation measures. Typically, some legislations of European Union's member states or regions transpose European Directives. This indicates a legally binding link between the 2 legislations.",
+      'rdfs:comment':
+        "Indicates that this legislation (or part of legislation) fulfills the objectives set by another legislation, by passing appropriate implementation measures. Typically, some legislations of European Union's member states or regions transpose European Directives. This indicates a legally binding link between the 2 legislations.",
       'rdfs:label': 'legislationTransposes',
       'rdfs:subPropertyOf': {
         $id: 'schema:legislationApplies',
@@ -34732,7 +35295,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:currenciesAccepted',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The currency accepted.\\n\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".',
+      'rdfs:comment':
+        'The currency accepted.\\n\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".',
       'rdfs:label': 'currenciesAccepted',
       'schema:domainIncludes': {
         $id: 'schema:LocalBusiness',
@@ -34744,7 +35308,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalRiskCalculator',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.',
+      'rdfs:comment':
+        'A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.',
       'rdfs:label': 'MedicalRiskCalculator',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalRiskEstimator',
@@ -34765,7 +35330,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoTouches',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents spatial relations in which two geometries (or the places they represent) touch: "they have at least one boundary point in common, but no interior points." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)',
+      'rdfs:comment':
+        'Represents spatial relations in which two geometries (or the places they represent) touch: "they have at least one boundary point in common, but no interior points." (A symmetric relationship, as defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).)',
       'rdfs:label': 'geoTouches',
       'schema:domainIncludes': [
         {
@@ -34930,7 +35496,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:usageInfo',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.\n\nThis property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.',
+      'rdfs:comment':
+        'The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.\n\nThis property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.',
       'rdfs:label': 'usageInfo',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -34965,7 +35532,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#legal_value',
       },
-      'rdfs:comment': 'The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.',
+      'rdfs:comment':
+        'The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.',
       'rdfs:label': 'legislationLegalValue',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/ELI',
@@ -34998,7 +35566,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:requiresSubscription',
       $type: 'rdf:Property',
-      'rdfs:comment': "Indicates if use of the media require a subscription  (either paid or free). Allowed values are ```true``` or ```false``` (note that an earlier version had 'yes', 'no').",
+      'rdfs:comment':
+        "Indicates if use of the media require a subscription  (either paid or free). Allowed values are ```true``` or ```false``` (note that an earlier version had 'yes', 'no').",
       'rdfs:label': 'requiresSubscription',
       'schema:domainIncludes': [
         {
@@ -35097,7 +35666,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:merchantReturnDays',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].',
+      'rdfs:comment':
+        'Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].',
       'rdfs:label': 'merchantReturnDays',
       'schema:domainIncludes': [
         {
@@ -35212,7 +35782,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FollowAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': "The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates polled from.\\n\\nRelated actions:\\n\\n* [[BefriendAction]]: Unlike BefriendAction, FollowAction implies that the connection is *not* necessarily reciprocal.\\n* [[SubscribeAction]]: Unlike SubscribeAction, FollowAction implies that the follower acts as an active agent constantly/actively polling for updates.\\n* [[RegisterAction]]: Unlike RegisterAction, FollowAction implies that the agent is interested in continuing receiving updates from the object.\\n* [[JoinAction]]: Unlike JoinAction, FollowAction implies that the agent is interested in getting updates from the object.\\n* [[TrackAction]]: Unlike TrackAction, FollowAction refers to the polling of updates of all aspects of animate objects rather than the location of inanimate objects (e.g. you track a package, but you don't follow it).",
+      'rdfs:comment':
+        "The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates polled from.\\n\\nRelated actions:\\n\\n* [[BefriendAction]]: Unlike BefriendAction, FollowAction implies that the connection is *not* necessarily reciprocal.\\n* [[SubscribeAction]]: Unlike SubscribeAction, FollowAction implies that the follower acts as an active agent constantly/actively polling for updates.\\n* [[RegisterAction]]: Unlike RegisterAction, FollowAction implies that the agent is interested in continuing receiving updates from the object.\\n* [[JoinAction]]: Unlike JoinAction, FollowAction implies that the agent is interested in getting updates from the object.\\n* [[TrackAction]]: Unlike TrackAction, FollowAction refers to the polling of updates of all aspects of animate objects rather than the location of inanimate objects (e.g. you track a package, but you don't follow it).",
       'rdfs:label': 'FollowAction',
       'rdfs:subClassOf': {
         $id: 'schema:InteractAction',
@@ -35360,7 +35931,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:eligibleRegion',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\\n\\nSee also [[ineligibleRegion]].\n    ',
+      'rdfs:comment':
+        'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\\n\\nSee also [[ineligibleRegion]].\n    ',
       'rdfs:label': 'eligibleRegion',
       'rdfs:subPropertyOf': {
         $id: 'schema:areaServed',
@@ -35415,7 +35987,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accessModeSufficient',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).',
+      'rdfs:comment':
+        'A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).',
       'rdfs:label': 'accessModeSufficient',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -35430,7 +36003,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:gracePeriod',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to pay) is deemed to have occurred.',
+      'rdfs:comment':
+        'The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to pay) is deemed to have occurred.',
       'rdfs:label': 'gracePeriod',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -35451,7 +36025,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:maintainer',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on "upstream" sources. When [[maintainer]] is applied to a specific version of something e.g. a particular version or packaging of a [[Dataset]], it is always  possible that the upstream source has a different maintainer. The [[isBasedOn]] property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.\n      ',
+      'rdfs:comment':
+        'A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on "upstream" sources. When [[maintainer]] is applied to a specific version of something e.g. a particular version or packaging of a [[Dataset]], it is always  possible that the upstream source has a different maintainer. The [[isBasedOn]] property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.\n      ',
       'rdfs:label': 'maintainer',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -35513,7 +36088,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CommunityHealth',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A field of public health focusing on improving health characteristics of a defined population in relation with their geographical or environment areas.',
+      'rdfs:comment':
+        'A field of public health focusing on improving health characteristics of a defined population in relation with their geographical or environment areas.',
       'rdfs:label': 'CommunityHealth',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -35549,7 +36125,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:publicationType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The type of the medical article, taken from the US NLM MeSH publication type catalog. See also [MeSH documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).',
+      'rdfs:comment':
+        'The type of the medical article, taken from the US NLM MeSH publication type catalog. See also [MeSH documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).',
       'rdfs:label': 'publicationType',
       'schema:domainIncludes': {
         $id: 'schema:MedicalScholarlyArticle',
@@ -35624,7 +36201,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CompositeWithTrainedAlgorithmicMediaDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/compositeWithTrainedAlgorithmicMedia">composite with trained algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/compositeWithTrainedAlgorithmicMedia">composite with trained algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'CompositeWithTrainedAlgorithmicMediaDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -35648,7 +36226,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:amenityFeature',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.',
+      'rdfs:comment':
+        'An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.',
       'rdfs:label': 'amenityFeature',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/STI_Accommodation_Ontology',
@@ -35731,7 +36310,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SearchAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of searching for an object.\\n\\nRelated actions:\\n\\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.',
+      'rdfs:comment':
+        'The act of searching for an object.\\n\\nRelated actions:\\n\\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.',
       'rdfs:label': 'SearchAction',
       'rdfs:subClassOf': {
         $id: 'schema:Action',
@@ -35740,7 +36320,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SendAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': "The act of physically/electronically dispatching an object for transfer from an origin to a destination. Related actions:\\n\\n* [[ReceiveAction]]: The reciprocal of SendAction.\\n* [[GiveAction]]: Unlike GiveAction, SendAction does not imply the transfer of ownership (e.g. I can send you my laptop, but I'm not necessarily giving it to you).",
+      'rdfs:comment':
+        "The act of physically/electronically dispatching an object for transfer from an origin to a destination. Related actions:\\n\\n* [[ReceiveAction]]: The reciprocal of SendAction.\\n* [[GiveAction]]: Unlike GiveAction, SendAction does not imply the transfer of ownership (e.g. I can send you my laptop, but I'm not necessarily giving it to you).",
       'rdfs:label': 'SendAction',
       'rdfs:subClassOf': {
         $id: 'schema:TransferAction',
@@ -35749,7 +36330,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DefinedTerm',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A word, name, acronym, phrase, etc. with a formal definition. Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term.',
+      'rdfs:comment':
+        'A word, name, acronym, phrase, etc. with a formal definition. Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term.',
       'rdfs:label': 'DefinedTerm',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -35785,7 +36367,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:referenceQuantity',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.',
+      'rdfs:comment':
+        'The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.',
       'rdfs:label': 'referenceQuantity',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -35850,7 +36433,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AggregateOffer',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.\\n\\nNote: AggregateOffers are normally expected to associate multiple offers that all share the same defined [[businessFunction]] value, or default to http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly defined.',
+      'rdfs:comment':
+        'When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.\\n\\nNote: AggregateOffers are normally expected to associate multiple offers that all share the same defined [[businessFunction]] value, or default to http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly defined.',
       'rdfs:label': 'AggregateOffer',
       'rdfs:subClassOf': {
         $id: 'schema:Offer',
@@ -35895,7 +36479,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DrugClass',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.',
+      'rdfs:comment':
+        'A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.',
       'rdfs:label': 'DrugClass',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -35957,7 +36542,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Oncologic',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'A specific branch of medical science that deals with benign and malignant tumors, including the study of their development, diagnosis, treatment and prevention.',
+      'rdfs:comment':
+        'A specific branch of medical science that deals with benign and malignant tumors, including the study of their development, diagnosis, treatment and prevention.',
       'rdfs:label': 'Oncologic',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -35996,7 +36582,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:educationalCredentialAwarded',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.',
+      'rdfs:comment':
+        'A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.',
       'rdfs:label': 'educationalCredentialAwarded',
       'schema:domainIncludes': [
         {
@@ -36045,7 +36632,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:torque',
       $type: 'rdf:Property',
-      'rdfs:comment': "The torque (turning force) of the vehicle's engine.\\n\\nTypical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, or F48 for pound-force per inch\\n\\n* Note 1: You can link to information about how the given value has been determined (e.g. reference RPM) using the [[valueReference]] property.\\n* Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.",
+      'rdfs:comment':
+        "The torque (turning force) of the vehicle's engine.\\n\\nTypical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, or F48 for pound-force per inch\\n\\n* Note 1: You can link to information about how the given value has been determined (e.g. reference RPM) using the [[valueReference]] property.\\n* Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.",
       'rdfs:label': 'torque',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -36101,7 +36689,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:member',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.',
+      'rdfs:comment':
+        'A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.',
       'rdfs:label': 'member',
       'schema:domainIncludes': [
         {
@@ -36126,7 +36715,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PublicHealth',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'Branch of medicine that pertains to the health services to improve and protect community health, especially epidemiology, sanitation, immunization, and preventive medicine.',
+      'rdfs:comment':
+        'Branch of medicine that pertains to the health services to improve and protect community health, especially epidemiology, sanitation, immunization, and preventive medicine.',
       'rdfs:label': 'PublicHealth',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalBusiness',
@@ -36176,7 +36766,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:diseaseSpreadStatistics',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Statistical information about the spread of a disease, either as [[WebContent]], or\n  described directly as a [[Dataset]], or the specific [[Observation]]s in the dataset. When a [[WebContent]] URL is\n  provided, the page indicated might also contain more such markup.',
+      'rdfs:comment':
+        'Statistical information about the spread of a disease, either as [[WebContent]], or\n  described directly as a [[Dataset]], or the specific [[Observation]]s in the dataset. When a [[WebContent]] URL is\n  provided, the page indicated might also contain more such markup.',
       'rdfs:label': 'diseaseSpreadStatistics',
       'schema:domainIncludes': {
         $id: 'schema:SpecialAnnouncement',
@@ -36249,7 +36840,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:maximumPhysicalAttendeeCapacity',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The maximum physical attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline aspects, in the case of a [[MixedEventAttendanceMode]]). ',
+      'rdfs:comment':
+        'The maximum physical attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline aspects, in the case of a [[MixedEventAttendanceMode]]). ',
       'rdfs:label': 'maximumPhysicalAttendeeCapacity',
       'schema:domainIncludes': {
         $id: 'schema:Event',
@@ -36325,7 +36917,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:regionsAllowed',
       $type: 'rdf:Property',
-      'rdfs:comment': "The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).",
+      'rdfs:comment':
+        "The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in [ISO 3166 format](http://en.wikipedia.org/wiki/ISO_3166).",
       'rdfs:label': 'regionsAllowed',
       'schema:domainIncludes': {
         $id: 'schema:MediaObject',
@@ -36337,7 +36930,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:caption',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].',
+      'rdfs:comment':
+        'The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].',
       'rdfs:label': 'caption',
       'schema:domainIncludes': [
         {
@@ -36460,7 +37054,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LearningResource',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The LearningResource type can be used to indicate [[CreativeWork]]s (whether physical or digital) that have a particular and explicit orientation towards learning, education, skill acquisition, and other educational purposes.\n\n[[LearningResource]] is expected to be used as an addition to a primary type such as [[Book]], [[VideoObject]], [[Product]] etc.\n\n[[EducationEvent]] serves a similar purpose for event-like things (e.g. a [[Trip]]). A [[LearningResource]] may be created as a result of an [[EducationEvent]], for example by recording one.',
+      'rdfs:comment':
+        'The LearningResource type can be used to indicate [[CreativeWork]]s (whether physical or digital) that have a particular and explicit orientation towards learning, education, skill acquisition, and other educational purposes.\n\n[[LearningResource]] is expected to be used as an addition to a primary type such as [[Book]], [[VideoObject]], [[Product]] etc.\n\n[[EducationEvent]] serves a similar purpose for event-like things (e.g. a [[Trip]]). A [[LearningResource]] may be created as a result of an [[EducationEvent]], for example by recording one.',
       'rdfs:label': 'LearningResource',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -36475,7 +37070,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:availableLanguage',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].',
+      'rdfs:comment':
+        'A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].',
       'rdfs:label': 'availableLanguage',
       'schema:domainIncludes': [
         {
@@ -36539,7 +37135,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoIntersects',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
+      'rdfs:comment':
+        'Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
       'rdfs:label': 'geoIntersects',
       'schema:domainIncludes': [
         {
@@ -36561,7 +37158,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accessibilityAPI',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates that the resource is compatible with the referenced accessibility API. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary).',
+      'rdfs:comment':
+        'Indicates that the resource is compatible with the referenced accessibility API. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary).',
       'rdfs:label': 'accessibilityAPI',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -36630,7 +37228,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalTherapy',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition.',
+      'rdfs:comment':
+        'Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition.',
       'rdfs:label': 'MedicalTherapy',
       'rdfs:subClassOf': {
         $id: 'schema:TherapeuticProcedure',
@@ -36704,7 +37303,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:gtin12',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.',
+      'rdfs:comment':
+        'The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.',
       'rdfs:label': 'gtin12',
       'rdfs:subPropertyOf': [
         {
@@ -36792,7 +37392,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:tourBookingPage',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.',
+      'rdfs:comment':
+        'A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.',
       'rdfs:label': 'tourBookingPage',
       'schema:domainIncludes': [
         {
@@ -36930,7 +37531,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:WebPage',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb</code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.',
+      'rdfs:comment':
+        'A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb</code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.',
       'rdfs:label': 'WebPage',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -36957,7 +37559,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OnlineBusiness',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A particular online business, either standalone or the online part of a broader organization. Examples include an eCommerce site, an online travel booking site, an online learning site, an online logistics and shipping provider, an online (virtual) doctor, etc.',
+      'rdfs:comment':
+        'A particular online business, either standalone or the online part of a broader organization. Examples include an eCommerce site, an online travel booking site, an online learning site, an online logistics and shipping provider, an online (virtual) doctor, etc.',
       'rdfs:label': 'OnlineBusiness',
       'rdfs:subClassOf': {
         $id: 'schema:Organization',
@@ -36972,7 +37575,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ReviewNewsArticle',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A [[NewsArticle]] and [[CriticReview]] providing a professional critic's assessment of a service, product, performance, or artistic or literary work.",
+      'rdfs:comment':
+        "A [[NewsArticle]] and [[CriticReview]] providing a professional critic's assessment of a service, product, performance, or artistic or literary work.",
       'rdfs:label': 'ReviewNewsArticle',
       'rdfs:subClassOf': [
         {
@@ -37082,7 +37686,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:object',
       $type: 'rdf:Property',
-      'rdfs:comment': "The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read *a book*.",
+      'rdfs:comment':
+        "The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read *a book*.",
       'rdfs:label': 'object',
       'schema:domainIncludes': {
         $id: 'schema:Action',
@@ -37094,7 +37699,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accessibilityFeature',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary).',
+      'rdfs:comment':
+        'Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary).',
       'rdfs:label': 'accessibilityFeature',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -37121,7 +37727,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:vehicleInteriorType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are characterized by the material used, an interior type can also be based on vehicle usage or target audience.',
+      'rdfs:comment':
+        'The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are characterized by the material used, an interior type can also be based on vehicle usage or target audience.',
       'rdfs:label': 'vehicleInteriorType',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -37185,7 +37792,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserPlusOnes',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserPlusOnes',
       'rdfs:subClassOf': {
         $id: 'schema:UserInteraction',
@@ -37209,7 +37817,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:annualPercentageRate',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.',
+      'rdfs:comment':
+        'The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.',
       'rdfs:label': 'annualPercentageRate',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -37244,7 +37853,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Ayurvedic',
       $type: 'schema:MedicineSystem',
-      'rdfs:comment': 'A system of medicine that originated in India over thousands of years and that focuses on integrating and balancing the body, mind, and spirit.',
+      'rdfs:comment':
+        'A system of medicine that originated in India over thousands of years and that focuses on integrating and balancing the body, mind, and spirit.',
       'rdfs:label': 'Ayurvedic',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -37252,11 +37862,9 @@ export const schemaorg: Record<string, any> = {
     },
     {
       $id: 'schema:Number',
-      $type: [
-        'rdfs:Class',
-        'schema:DataType',
-      ],
-      'rdfs:comment': "Data type: Number.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+      $type: ['rdfs:Class', 'schema:DataType'],
+      'rdfs:comment':
+        "Data type: Number.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
       'rdfs:label': 'Number',
     },
     {
@@ -37350,7 +37958,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:competencyRequired',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something such as earn an Educational Occupational Credential or understand a LearningResource.',
+      'rdfs:comment':
+        'Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something such as earn an Educational Occupational Credential or understand a LearningResource.',
       'rdfs:label': 'competencyRequired',
       'schema:domainIncludes': [
         {
@@ -37381,7 +37990,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:fuelEfficiency',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).\\n\\n* Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. Use [[unitText]] to indicate the unit of measurement, e.g. mpg or km/L.\\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel economy to another value.',
+      'rdfs:comment':
+        'The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).\\n\\n* Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. Use [[unitText]] to indicate the unit of measurement, e.g. mpg or km/L.\\n* Note 2: There are two ways of indicating the fuel consumption, [[fuelConsumption]] (e.g. 8 liters per 100 km) and [[fuelEfficiency]] (e.g. 30 miles per gallon). They are reciprocal.\\n* Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use [[valueReference]] to link the value for the fuel economy to another value.',
       'rdfs:label': 'fuelEfficiency',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -37452,7 +38062,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:hasHealthAspect',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the aspect or aspects specifically addressed in some [[HealthTopicContent]]. For example, that the content is an overview, or that it talks about treatment, self-care, treatments or their side-effects.',
+      'rdfs:comment':
+        'Indicates the aspect or aspects specifically addressed in some [[HealthTopicContent]]. For example, that the content is an overview, or that it talks about treatment, self-care, treatments or their side-effects.',
       'rdfs:label': 'hasHealthAspect',
       'schema:domainIncludes': {
         $id: 'schema:HealthTopicContent',
@@ -37470,7 +38081,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:sponsor',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.',
+      'rdfs:comment':
+        'A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.',
       'rdfs:label': 'sponsor',
       'schema:domainIncludes': [
         {
@@ -37596,7 +38208,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:termDuration',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The amount of time in a term as defined by the institution. A term is a length of time where students take one or more classes. Semesters and quarters are common units for term.',
+      'rdfs:comment':
+        'The amount of time in a term as defined by the institution. A term is a length of time where students take one or more classes. Semesters and quarters are common units for term.',
       'rdfs:label': 'termDuration',
       'schema:domainIncludes': {
         $id: 'schema:EducationalOccupationalProgram',
@@ -37659,7 +38272,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SpeakableSpecification',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A SpeakableSpecification indicates (typically via [[xpath]] or [[cssSelector]]) sections of a document that are highlighted as particularly [[speakable]]. Instances of this type are expected to be used primarily as values of the [[speakable]] property.',
+      'rdfs:comment':
+        'A SpeakableSpecification indicates (typically via [[xpath]] or [[cssSelector]]) sections of a document that are highlighted as particularly [[speakable]]. Instances of this type are expected to be used primarily as values of the [[speakable]] property.',
       'rdfs:label': 'SpeakableSpecification',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -37706,7 +38320,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#version_date',
       },
-      'rdfs:comment': 'The point-in-time at which the provided description of the legislation is valid (e.g.: when looking at the law on the 2016-04-07 (= dateVersion), I get the consolidation of 2015-04-12 of the "National Insurance Contributions Act 2015")',
+      'rdfs:comment':
+        'The point-in-time at which the provided description of the legislation is valid (e.g.: when looking at the law on the 2016-04-07 (= dateVersion), I get the consolidation of 2015-04-12 of the "National Insurance Contributions Act 2015")',
       'rdfs:label': 'legislationDateVersion',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/ELI',
@@ -37804,7 +38419,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SeekToAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'This is the [[Action]] of navigating to a specific [[startOffset]] timestamp within a [[VideoObject]], typically represented with a URL template structure.',
+      'rdfs:comment':
+        'This is the [[Action]] of navigating to a specific [[startOffset]] timestamp within a [[VideoObject]], typically represented with a URL template structure.',
       'rdfs:label': 'SeekToAction',
       'rdfs:subClassOf': {
         $id: 'schema:Action',
@@ -37825,7 +38441,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:utterances',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Text of an utterances (spoken words, lyrics etc.) that occurs at a certain section of a media object, represented as a [[HyperTocEntry]].',
+      'rdfs:comment':
+        'Text of an utterances (spoken words, lyrics etc.) that occurs at a certain section of a media object, represented as a [[HyperTocEntry]].',
       'rdfs:label': 'utterances',
       'schema:domainIncludes': {
         $id: 'schema:HyperTocEntry',
@@ -37869,7 +38486,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:loanRepaymentForm',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally include part principal plus interest in each payment.',
+      'rdfs:comment':
+        'A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally include part principal plus interest in each payment.',
       'rdfs:label': 'loanRepaymentForm',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -37890,7 +38508,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cvdFacilityCounty',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Name of the County of the NHSN facility that this data record applies to. Use [[cvdFacilityId]] to identify the facility. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.',
+      'rdfs:comment':
+        'Name of the County of the NHSN facility that this data record applies to. Use [[cvdFacilityId]] to identify the facility. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.',
       'rdfs:label': 'cvdFacilityCounty',
       'schema:domainIncludes': {
         $id: 'schema:CDCPMDRecord',
@@ -37978,7 +38597,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:geoCoveredBy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
+      'rdfs:comment':
+        'Represents a relationship between two geometries (or the places they represent), relating a geometry to another that covers it. As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).',
       'rdfs:label': 'geoCoveredBy',
       'schema:domainIncludes': [
         {
@@ -38073,7 +38693,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:HowToTip',
       $type: 'rdfs:Class',
-      'rdfs:comment': "An explanation in the instructions for how to achieve a result. It provides supplementary information about a technique, supply, author's preference, etc. It can explain what could be done, or what should not be done, but doesn't specify what should be done (see HowToDirection).",
+      'rdfs:comment':
+        "An explanation in the instructions for how to achieve a result. It provides supplementary information about a technique, supply, author's preference, etc. It can explain what could be done, or what should not be done, but doesn't specify what should be done (see HowToDirection).",
       'rdfs:label': 'HowToTip',
       'rdfs:subClassOf': [
         {
@@ -38123,7 +38744,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SpeechPathology',
       $type: 'schema:MedicalSpecialty',
-      'rdfs:comment': 'The scientific study and treatment of defects, disorders, and malfunctions of speech and voice, as stuttering, lisping, or lalling, and of language disturbances, as aphasia or delayed language acquisition.',
+      'rdfs:comment':
+        'The scientific study and treatment of defects, disorders, and malfunctions of speech and voice, as stuttering, lisping, or lalling, and of language disturbances, as aphasia or delayed language acquisition.',
       'rdfs:label': 'SpeechPathology',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -38194,7 +38816,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BrainStructure',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.',
+      'rdfs:comment':
+        'Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.',
       'rdfs:label': 'BrainStructure',
       'rdfs:subClassOf': {
         $id: 'schema:AnatomicalStructure',
@@ -38221,7 +38844,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:billingIncrement',
       $type: 'rdf:Property',
-      'rdfs:comment': 'This property specifies the minimal quantity and rounding increment that will be the basis for the billing. The unit of measurement is specified by the unitCode property.',
+      'rdfs:comment':
+        'This property specifies the minimal quantity and rounding increment that will be the basis for the billing. The unit of measurement is specified by the unitCode property.',
       'rdfs:label': 'billingIncrement',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -38302,7 +38926,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:fuelType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.',
+      'rdfs:comment':
+        'The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.',
       'rdfs:label': 'fuelType',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -38330,7 +38955,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Series',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A Series in schema.org is a group of related items, typically but not necessarily of the same kind. See also [[CreativeWorkSeries]], [[EventSeries]].',
+      'rdfs:comment':
+        'A Series in schema.org is a group of related items, typically but not necessarily of the same kind. See also [[CreativeWorkSeries]], [[EventSeries]].',
       'rdfs:label': 'Series',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -38339,7 +38965,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Statement',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A statement about something, for example a fun or interesting fact. If known, the main entity this statement is about can be indicated using mainEntity. For more formal claims (e.g. in Fact Checking), consider using [[Claim]] instead. Use the [[text]] property to capture the text of the statement.',
+      'rdfs:comment':
+        'A statement about something, for example a fun or interesting fact. If known, the main entity this statement is about can be indicated using mainEntity. For more formal claims (e.g. in Fact Checking), consider using [[Claim]] instead. Use the [[text]] property to capture the text of the statement.',
       'rdfs:label': 'Statement',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -38383,7 +39010,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AskAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of posing a question / favor to someone.\\n\\nRelated actions:\\n\\n* [[ReplyAction]]: Appears generally as a response to AskAction.',
+      'rdfs:comment':
+        'The act of posing a question / favor to someone.\\n\\nRelated actions:\\n\\n* [[ReplyAction]]: Appears generally as a response to AskAction.',
       'rdfs:label': 'AskAction',
       'rdfs:subClassOf': {
         $id: 'schema:CommunicateAction',
@@ -38478,7 +39106,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Observation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Instances of the class [[Observation]] are used to specify observations about an entity at a particular time. The principal properties of an [[Observation]] are [[observationAbout]], [[measuredProperty]], [[statType]], [[value] and [[observationDate]]  and [[measuredProperty]]. Some but not all Observations represent a [[QuantitativeValue]]. Quantitative observations can be about a [[StatisticalVariable]], which is an abstract specification about which we can make observations that are grounded at a particular location and time.\n\nObservations can also encode a subset of simple RDF-like statements (its observationAbout, a StatisticalVariable, defining the measuredPoperty; its observationAbout property indicating the entity the statement is about, and [[value]] )\n\nIn the context of a quantitative knowledge graph, typical properties could include [[measuredProperty]], [[observationAbout]], [[observationDate]], [[value]], [[unitCode]], [[unitText]], [[measurementMethod]].\n    ',
+      'rdfs:comment':
+        'Instances of the class [[Observation]] are used to specify observations about an entity at a particular time. The principal properties of an [[Observation]] are [[observationAbout]], [[measuredProperty]], [[statType]], [[value] and [[observationDate]]  and [[measuredProperty]]. Some but not all Observations represent a [[QuantitativeValue]]. Quantitative observations can be about a [[StatisticalVariable]], which is an abstract specification about which we can make observations that are grounded at a particular location and time.\n\nObservations can also encode a subset of simple RDF-like statements (its observationAbout, a StatisticalVariable, defining the measuredPoperty; its observationAbout property indicating the entity the statement is about, and [[value]] )\n\nIn the context of a quantitative knowledge graph, typical properties could include [[measuredProperty]], [[observationAbout]], [[observationDate]], [[value]], [[unitCode]], [[unitText]], [[measurementMethod]].\n    ',
       'rdfs:label': 'Observation',
       'rdfs:subClassOf': [
         {
@@ -38631,7 +39260,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:actionableFeedbackPolicy',
       $type: 'rdf:Property',
-      'rdfs:comment': 'For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.',
+      'rdfs:comment':
+        'For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.',
       'rdfs:label': 'actionableFeedbackPolicy',
       'rdfs:subPropertyOf': {
         $id: 'schema:publishingPrinciples',
@@ -38785,7 +39415,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:colorSwatch',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A color swatch image, visualizing the color of a [[Product]]. Should match the textual description specified in the [[color]] property. This can be a URL or a fully described ImageObject.',
+      'rdfs:comment':
+        'A color swatch image, visualizing the color of a [[Product]]. Should match the textual description specified in the [[color]] property. This can be a URL or a fully described ImageObject.',
       'rdfs:label': 'colorSwatch',
       'rdfs:subPropertyOf': {
         $id: 'schema:image',
@@ -38985,7 +39616,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:scheduleTimezone',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the timezone for which the time(s) indicated in the [[Schedule]] are given. The value provided should be among those listed in the IANA Time Zone Database.',
+      'rdfs:comment':
+        'Indicates the timezone for which the time(s) indicated in the [[Schedule]] are given. The value provided should be among those listed in the IANA Time Zone Database.',
       'rdfs:label': 'scheduleTimezone',
       'schema:domainIncludes': {
         $id: 'schema:Schedule',
@@ -39100,7 +39732,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:GenericWebPlatform',
       $type: 'schema:DigitalPlatformEnumeration',
-      'rdfs:comment': 'Represents the generic notion of the Web Platform. More specific codes include [[MobileWebPlatform]] and [[DesktopWebPlatform]], as an incomplete list. ',
+      'rdfs:comment':
+        'Represents the generic notion of the Web Platform. More specific codes include [[MobileWebPlatform]] and [[DesktopWebPlatform]], as an incomplete list. ',
       'rdfs:label': 'GenericWebPlatform',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -39127,7 +39760,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ProfessionalService',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Original definition: "provider of professional services."\\n\\nThe general [[ProfessionalService]] type for local businesses was deprecated due to confusion with [[Service]]. For reference, the types that it included were: [[Dentist]],\n        [[AccountingService]], [[Attorney]], [[Notary]], as well as types for several kinds of [[HomeAndConstructionBusiness]]: [[Electrician]], [[GeneralContractor]],\n        [[HousePainter]], [[Locksmith]], [[Plumber]], [[RoofingContractor]]. [[LegalService]] was introduced as a more inclusive supertype of [[Attorney]].',
+      'rdfs:comment':
+        'Original definition: "provider of professional services."\\n\\nThe general [[ProfessionalService]] type for local businesses was deprecated due to confusion with [[Service]]. For reference, the types that it included were: [[Dentist]],\n        [[AccountingService]], [[Attorney]], [[Notary]], as well as types for several kinds of [[HomeAndConstructionBusiness]]: [[Electrician]], [[GeneralContractor]],\n        [[HousePainter]], [[Locksmith]], [[Plumber]], [[RoofingContractor]]. [[LegalService]] was introduced as a more inclusive supertype of [[Attorney]].',
       'rdfs:label': 'ProfessionalService',
       'rdfs:subClassOf': {
         $id: 'schema:LocalBusiness',
@@ -39151,7 +39785,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:announcementLocation',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the SpecialAnnouncement. For example, a specific testing facility or business with special opening hours. For a larger geographic region like a quarantine of an entire region, use [[spatialCoverage]].',
+      'rdfs:comment':
+        'Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the SpecialAnnouncement. For example, a specific testing facility or business with special opening hours. For a larger geographic region like a quarantine of an entire region, use [[spatialCoverage]].',
       'rdfs:label': 'announcementLocation',
       'rdfs:subPropertyOf': {
         $id: 'schema:spatialCoverage',
@@ -39177,7 +39812,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CaseSeries',
       $type: 'schema:MedicalObservationalStudyDesign',
-      'rdfs:comment': 'A case series (also known as a clinical series) is a medical research study that tracks patients with a known exposure given similar treatment or examines their medical records for exposure and outcome. A case series can be retrospective or prospective and usually involves a smaller number of patients than the more powerful case-control studies or randomized controlled trials. Case series may be consecutive or non-consecutive, depending on whether all cases presenting to the reporting authors over a period of time were included, or only a selection.',
+      'rdfs:comment':
+        'A case series (also known as a clinical series) is a medical research study that tracks patients with a known exposure given similar treatment or examines their medical records for exposure and outcome. A case series can be retrospective or prospective and usually involves a smaller number of patients than the more powerful case-control studies or randomized controlled trials. Case series may be consecutive or non-consecutive, depending on whether all cases presenting to the reporting authors over a period of time were included, or only a selection.',
       'rdfs:label': 'CaseSeries',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -39204,7 +39840,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:measurementTechnique',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A technique, method or technology used in an [[Observation]], [[StatisticalVariable]] or [[Dataset]] (or [[DataDownload]], [[DataCatalog]]), corresponding to the method used for measuring the corresponding variable(s) (for datasets, described using [[variableMeasured]]; for [[Observation]], a [[StatisticalVariable]]). Often but not necessarily each [[variableMeasured]] will have an explicit representation as (or mapping to) an property such as those defined in Schema.org, or other RDF vocabularies and "knowledge graphs". In that case the subproperty of [[variableMeasured]] called [[measuredProperty]] is applicable.\n    \nThe [[measurementTechnique]] property helps when extra clarification is needed about how a [[measuredProperty]] was measured. This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but can often serve as a high level summary for dataset discovery. \n\nFor example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". \n\nIf there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].',
+      'rdfs:comment':
+        'A technique, method or technology used in an [[Observation]], [[StatisticalVariable]] or [[Dataset]] (or [[DataDownload]], [[DataCatalog]]), corresponding to the method used for measuring the corresponding variable(s) (for datasets, described using [[variableMeasured]]; for [[Observation]], a [[StatisticalVariable]]). Often but not necessarily each [[variableMeasured]] will have an explicit representation as (or mapping to) an property such as those defined in Schema.org, or other RDF vocabularies and "knowledge graphs". In that case the subproperty of [[variableMeasured]] called [[measuredProperty]] is applicable.\n    \nThe [[measurementTechnique]] property helps when extra clarification is needed about how a [[measuredProperty]] was measured. This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but can often serve as a high level summary for dataset discovery. \n\nFor example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory". \n\nIf there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMetholdEnumeration]].',
       'rdfs:label': 'measurementTechnique',
       'schema:domainIncludes': [
         {
@@ -39259,7 +39896,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EventCancelled',
       $type: 'schema:EventStatusType',
-      'rdfs:comment': "The event has been cancelled. If the event has multiple startDate values, all are assumed to be cancelled. Either startDate or previousStartDate may be used to specify the event's cancelled date(s).",
+      'rdfs:comment':
+        "The event has been cancelled. If the event has multiple startDate values, all are assumed to be cancelled. Either startDate or previousStartDate may be used to specify the event's cancelled date(s).",
       'rdfs:label': 'EventCancelled',
     },
     {
@@ -39314,7 +39952,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:AlgorithmicallyEnhancedDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicallyEnhanced">algorithmically enhanced</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicallyEnhanced">algorithmically enhanced</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'AlgorithmicallyEnhancedDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -39374,7 +40013,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BefriendAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of forming a personal connection with someone (object) mutually/bidirectionally/symmetrically.\\n\\nRelated actions:\\n\\n* [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.',
+      'rdfs:comment':
+        'The act of forming a personal connection with someone (object) mutually/bidirectionally/symmetrically.\\n\\nRelated actions:\\n\\n* [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.',
       'rdfs:label': 'BefriendAction',
       'rdfs:subClassOf': {
         $id: 'schema:InteractAction',
@@ -39383,7 +40023,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PaymentMethod',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction. The following legacy values should be accepted:\n    \\n\\n* http://purl.org/goodrelations/v1#ByBankTransferInAdvance\\n* http://purl.org/goodrelations/v1#ByInvoice\\n* http://purl.org/goodrelations/v1#Cash\\n* http://purl.org/goodrelations/v1#CheckInAdvance\\n* http://purl.org/goodrelations/v1#COD\\n* http://purl.org/goodrelations/v1#DirectDebit\\n* http://purl.org/goodrelations/v1#GoogleCheckout\\n* http://purl.org/goodrelations/v1#PayPal\\n* http://purl.org/goodrelations/v1#PaySwarm\\n\\nStructured values are recommended for newer payment methods.',
+      'rdfs:comment':
+        'A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction. The following legacy values should be accepted:\n    \\n\\n* http://purl.org/goodrelations/v1#ByBankTransferInAdvance\\n* http://purl.org/goodrelations/v1#ByInvoice\\n* http://purl.org/goodrelations/v1#Cash\\n* http://purl.org/goodrelations/v1#CheckInAdvance\\n* http://purl.org/goodrelations/v1#COD\\n* http://purl.org/goodrelations/v1#DirectDebit\\n* http://purl.org/goodrelations/v1#GoogleCheckout\\n* http://purl.org/goodrelations/v1#PayPal\\n* http://purl.org/goodrelations/v1#PaySwarm\\n\\nStructured values are recommended for newer payment methods.',
       'rdfs:label': 'PaymentMethod',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -39579,7 +40220,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:billingDuration',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan. Type can be either a Duration or a Number (in which case the unit of measurement, for example month, is specified by the unitCode property).',
+      'rdfs:comment':
+        'Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan. Type can be either a Duration or a Number (in which case the unit of measurement, for example month, is specified by the unitCode property).',
       'rdfs:label': 'billingDuration',
       'schema:domainIncludes': {
         $id: 'schema:UnitPriceSpecification',
@@ -39617,7 +40259,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:sizeSystem',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The size system used to identify a product\'s size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").',
+      'rdfs:comment':
+        'The size system used to identify a product\'s size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").',
       'rdfs:label': 'sizeSystem',
       'schema:domainIncludes': {
         $id: 'schema:SizeSpecification',
@@ -39693,7 +40336,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserInteraction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserInteraction',
       'rdfs:subClassOf': {
         $id: 'schema:Event',
@@ -39705,7 +40349,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:numberOfPartialBathrooms',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Number of partial bathrooms - The total number of half and ¼ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsPartial field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field). ',
+      'rdfs:comment':
+        'Number of partial bathrooms - The total number of half and ¼ bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsPartial field in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field). ',
       'rdfs:label': 'numberOfPartialBathrooms',
       'schema:domainIncludes': [
         {
@@ -39760,7 +40405,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:requiredCollateral',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities, etc.)',
+      'rdfs:comment':
+        'Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities, etc.)',
       'rdfs:label': 'requiredCollateral',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/FIBO',
@@ -39801,7 +40447,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SizeSpecification',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Size related properties of a product, typically a size code ([[name]]) and optionally a [[sizeSystem]], [[sizeGroup]], and product measurements ([[hasMeasurement]]). In addition, the intended audience can be defined through [[suggestedAge]], [[suggestedGender]], and suggested body measurements ([[suggestedMeasurement]]).',
+      'rdfs:comment':
+        'Size related properties of a product, typically a size code ([[name]]) and optionally a [[sizeSystem]], [[sizeGroup]], and product measurements ([[hasMeasurement]]). In addition, the intended audience can be defined through [[suggestedAge]], [[suggestedGender]], and suggested body measurements ([[suggestedMeasurement]]).',
       'rdfs:label': 'SizeSpecification',
       'rdfs:subClassOf': {
         $id: 'schema:QualitativeValue',
@@ -39827,11 +40474,9 @@ export const schemaorg: Record<string, any> = {
     },
     {
       $id: 'schema:Radiography',
-      $type: [
-        'schema:MedicalImagingTechnique',
-        'schema:MedicalSpecialty',
-      ],
-      'rdfs:comment': 'Radiography is an imaging technique that uses electromagnetic radiation other than visible light, especially X-rays, to view the internal structure of a non-uniformly composed and opaque object such as the human body.',
+      $type: ['schema:MedicalImagingTechnique', 'schema:MedicalSpecialty'],
+      'rdfs:comment':
+        'Radiography is an imaging technique that uses electromagnetic radiation other than visible light, especially X-rays, to view the internal structure of a non-uniformly composed and opaque object such as the human body.',
       'rdfs:label': 'Radiography',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -39840,7 +40485,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:negativeNotes',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Provides negative considerations regarding something, most typically in pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry \n\nIn the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described. Since product descriptions \ntend to emphasise positive claims, it may be relatively unusual to find [[negativeNotes]] used in this way. Nevertheless for the sake of symmetry, [[negativeNotes]] can be used on [[Product]].\n\nThe property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most negative is at the beginning of the list).',
+      'rdfs:comment':
+        'Provides negative considerations regarding something, most typically in pro/con lists for reviews (alongside [[positiveNotes]]). For symmetry \n\nIn the case of a [[Review]], the property describes the [[itemReviewed]] from the perspective of the review; in the case of a [[Product]], the product itself is being described. Since product descriptions \ntend to emphasise positive claims, it may be relatively unusual to find [[negativeNotes]] used in this way. Nevertheless for the sake of symmetry, [[negativeNotes]] can be used on [[Product]].\n\nThe property values can be expressed either as unstructured text (repeated as necessary), or if ordered, as a list (in which case the most negative is at the beginning of the list).',
       'rdfs:label': 'negativeNotes',
       'schema:domainIncludes': [
         {
@@ -39883,7 +40529,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:billingStart',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.',
+      'rdfs:comment':
+        'Specifies after how much time this price (or price component) becomes valid and billing starts. Can be used, for example, to model a price increase after the first year of a subscription. The unit of measurement is specified by the unitCode property.',
       'rdfs:label': 'billingStart',
       'schema:domainIncludes': {
         $id: 'schema:UnitPriceSpecification',
@@ -39960,7 +40607,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Quotation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A quotation. Often but not necessarily from some written work, attributable to a real world author and - if associated with a fictional character - to any fictional Person. Use [[isBasedOn]] to link to source/origin. The [[recordedIn]] property can be used to reference a Quotation from an [[Event]].',
+      'rdfs:comment':
+        'A quotation. Often but not necessarily from some written work, attributable to a real world author and - if associated with a fictional character - to any fictional Person. Use [[isBasedOn]] to link to source/origin. The [[recordedIn]] property can be used to reference a Quotation from an [[Event]].',
       'rdfs:label': 'Quotation',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -39975,7 +40623,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SubscribeAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates pushed to.\\n\\nRelated actions:\\n\\n* [[FollowAction]]: Unlike FollowAction, SubscribeAction implies that the subscriber acts as a passive agent being constantly/actively pushed for updates.\\n* [[RegisterAction]]: Unlike RegisterAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.\\n* [[JoinAction]]: Unlike JoinAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.',
+      'rdfs:comment':
+        'The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates pushed to.\\n\\nRelated actions:\\n\\n* [[FollowAction]]: Unlike FollowAction, SubscribeAction implies that the subscriber acts as a passive agent being constantly/actively pushed for updates.\\n* [[RegisterAction]]: Unlike RegisterAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.\\n* [[JoinAction]]: Unlike JoinAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.',
       'rdfs:label': 'SubscribeAction',
       'rdfs:subClassOf': {
         $id: 'schema:InteractAction',
@@ -40007,7 +40656,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Comment',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the [[text]] property, and its topic via [[about]], properties shared with all CreativeWorks.",
+      'rdfs:comment':
+        "A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the [[text]] property, and its topic via [[about]], properties shared with all CreativeWorks.",
       'rdfs:label': 'Comment',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -40016,7 +40666,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:expires',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date, or a [[Certification]] the validity has expired.',
+      'rdfs:comment':
+        'Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date, or a [[Certification]] the validity has expired.',
       'rdfs:label': 'expires',
       'schema:domainIncludes': [
         {
@@ -40053,7 +40704,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#type_document',
       },
-      'rdfs:comment': 'The type of the legislation. Examples of values are "law", "act", "directive", "decree", "regulation", "statutory instrument", "loi organique", "règlement grand-ducal", etc., depending on the country.',
+      'rdfs:comment':
+        'The type of the legislation. Examples of values are "law", "act", "directive", "decree", "regulation", "statutory instrument", "loi organique", "règlement grand-ducal", etc., depending on the country.',
       'rdfs:label': 'legislationType',
       'rdfs:subPropertyOf': {
         $id: 'schema:genre',
@@ -40177,7 +40829,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:associatedDisease',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.',
+      'rdfs:comment':
+        'Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.',
       'rdfs:label': 'associatedDisease',
       'schema:domainIncludes': {
         $id: 'schema:BioChemEntity',
@@ -40252,7 +40905,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:House',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/House">http://en.wikipedia.org/wiki/House</a>).',
+      'rdfs:comment':
+        'A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/House">http://en.wikipedia.org/wiki/House</a>).',
       'rdfs:label': 'House',
       'rdfs:subClassOf': {
         $id: 'schema:Accommodation',
@@ -40322,7 +40976,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CompositeDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia">algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia">algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'CompositeDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -40358,7 +41013,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:agentInteractionStatistic',
       $type: 'rdf:Property',
-      'rdfs:comment': "The number of completed interactions for this entity, in a particular role (the 'agent'), in a particular action (indicated in the statistic), and in a particular context (i.e. interactionService).",
+      'rdfs:comment':
+        "The number of completed interactions for this entity, in a particular role (the 'agent'), in a particular action (indicated in the statistic), and in a particular context (i.e. interactionService).",
       'rdfs:label': 'agentInteractionStatistic',
       'schema:domainIncludes': [
         {
@@ -40411,7 +41067,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:shippingLabel',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).',
+      'rdfs:comment':
+        'Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).',
       'rdfs:label': 'shippingLabel',
       'schema:domainIncludes': [
         {
@@ -40478,7 +41135,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:authenticator',
       $type: 'rdf:Property',
-      'rdfs:comment': "The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription before playing media.",
+      'rdfs:comment':
+        "The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription before playing media.",
       'rdfs:label': 'authenticator',
       'schema:domainIncludes': {
         $id: 'schema:MediaSubscription',
@@ -40493,7 +41151,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:transitTime',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue, unitCode (d for DAY).',
+      'rdfs:comment':
+        'The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue, unitCode (d for DAY).',
       'rdfs:label': 'transitTime',
       'schema:domainIncludes': {
         $id: 'schema:ShippingDeliveryTime',
@@ -40529,7 +41188,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:RegisterAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': "The act of registering to be a user of a service, product or web page.\\n\\nRelated actions:\\n\\n* [[JoinAction]]: Unlike JoinAction, RegisterAction implies you are registering to be a user of a service, *not* a group/team of people.\\n* [[FollowAction]]: Unlike FollowAction, RegisterAction doesn't imply that the agent is expecting to poll for updates from the object.\\n* [[SubscribeAction]]: Unlike SubscribeAction, RegisterAction doesn't imply that the agent is expecting updates from the object.",
+      'rdfs:comment':
+        "The act of registering to be a user of a service, product or web page.\\n\\nRelated actions:\\n\\n* [[JoinAction]]: Unlike JoinAction, RegisterAction implies you are registering to be a user of a service, *not* a group/team of people.\\n* [[FollowAction]]: Unlike FollowAction, RegisterAction doesn't imply that the agent is expecting to poll for updates from the object.\\n* [[SubscribeAction]]: Unlike SubscribeAction, RegisterAction doesn't imply that the agent is expecting updates from the object.",
       'rdfs:label': 'RegisterAction',
       'rdfs:subClassOf': {
         $id: 'schema:InteractAction',
@@ -40550,7 +41210,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BusinessEntityType',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#Business\\n* http://purl.org/goodrelations/v1#Enduser\\n* http://purl.org/goodrelations/v1#PublicInstitution\\n* http://purl.org/goodrelations/v1#Reseller\n    ',
+      'rdfs:comment':
+        'A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#Business\\n* http://purl.org/goodrelations/v1#Enduser\\n* http://purl.org/goodrelations/v1#PublicInstitution\\n* http://purl.org/goodrelations/v1#Reseller\n    ',
       'rdfs:label': 'BusinessEntityType',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -40562,7 +41223,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:creditedTo',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.',
+      'rdfs:comment':
+        'The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.',
       'rdfs:label': 'creditedTo',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/MBZ',
@@ -40614,7 +41276,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:LocationFeatureSpecification',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.',
+      'rdfs:comment':
+        'Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.',
       'rdfs:label': 'LocationFeatureSpecification',
       'rdfs:subClassOf': {
         $id: 'schema:PropertyValue',
@@ -40707,7 +41370,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:WesternConventional',
       $type: 'schema:MedicineSystem',
-      'rdfs:comment': 'The conventional Western system of medicine, that aims to apply the best available evidence gained from the scientific method to clinical decision making. Also known as conventional or Western medicine.',
+      'rdfs:comment':
+        'The conventional Western system of medicine, that aims to apply the best available evidence gained from the scientific method to clinical decision making. Also known as conventional or Western medicine.',
       'rdfs:label': 'WesternConventional',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -40795,7 +41459,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:InvestmentFund',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.',
+      'rdfs:comment':
+        'A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.',
       'rdfs:label': 'InvestmentFund',
       'rdfs:subClassOf': {
         $id: 'schema:InvestmentOrDeposit',
@@ -40861,7 +41526,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ReportageNewsArticle',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The [[ReportageNewsArticle]] type is a subtype of [[NewsArticle]] representing\n news articles which are the result of journalistic news reporting conventions.\n\nIn practice many news publishers produce a wide variety of article types, many of which might be considered a [[NewsArticle]] but not a [[ReportageNewsArticle]]. For example, opinion pieces, reviews, analysis, sponsored or satirical articles, or articles that combine several of these elements.\n\nThe [[ReportageNewsArticle]] type is based on a stricter ideal for "news" as a work of journalism, with articles based on factual information either observed or verified by the author, or reported and verified from knowledgeable sources.  This often includes perspectives from multiple viewpoints on a particular issue (distinguishing news reports from public relations or propaganda).  News reports in the [[ReportageNewsArticle]] sense de-emphasize the opinion of the author, with commentary and value judgements typically expressed elsewhere.\n\nA [[ReportageNewsArticle]] which goes deeper into analysis can also be marked with an additional type of [[AnalysisNewsArticle]].\n',
+      'rdfs:comment':
+        'The [[ReportageNewsArticle]] type is a subtype of [[NewsArticle]] representing\n news articles which are the result of journalistic news reporting conventions.\n\nIn practice many news publishers produce a wide variety of article types, many of which might be considered a [[NewsArticle]] but not a [[ReportageNewsArticle]]. For example, opinion pieces, reviews, analysis, sponsored or satirical articles, or articles that combine several of these elements.\n\nThe [[ReportageNewsArticle]] type is based on a stricter ideal for "news" as a work of journalism, with articles based on factual information either observed or verified by the author, or reported and verified from knowledgeable sources.  This often includes perspectives from multiple viewpoints on a particular issue (distinguishing news reports from public relations or propaganda).  News reports in the [[ReportageNewsArticle]] sense de-emphasize the opinion of the author, with commentary and value judgements typically expressed elsewhere.\n\nA [[ReportageNewsArticle]] which goes deeper into analysis can also be marked with an additional type of [[AnalysisNewsArticle]].\n',
       'rdfs:label': 'ReportageNewsArticle',
       'rdfs:subClassOf': {
         $id: 'schema:NewsArticle',
@@ -40923,7 +41589,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:inLanguage',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].',
+      'rdfs:comment':
+        'The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].',
       'rdfs:label': 'inLanguage',
       'schema:domainIncludes': [
         {
@@ -40963,7 +41630,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:acceptsReservations',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.',
+      'rdfs:comment':
+        'Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.',
       'rdfs:label': 'acceptsReservations',
       'schema:domainIncludes': {
         $id: 'schema:FoodEstablishment',
@@ -40983,7 +41651,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:BuyAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.',
+      'rdfs:comment':
+        'The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.',
       'rdfs:label': 'BuyAction',
       'rdfs:subClassOf': {
         $id: 'schema:TradeAction',
@@ -40992,7 +41661,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:associatedMediaReview',
       $type: 'rdf:Property',
-      'rdfs:comment': 'An associated [[MediaReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].',
+      'rdfs:comment':
+        'An associated [[MediaReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[relatedClaimReview]] would be used on [[MediaReview]].',
       'rdfs:label': 'associatedMediaReview',
       'rdfs:subPropertyOf': {
         $id: 'schema:associatedReview',
@@ -41128,7 +41798,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:TaxiReservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A reservation for a taxi.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
+      'rdfs:comment':
+        'A reservation for a taxi.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].',
       'rdfs:label': 'TaxiReservation',
       'rdfs:subClassOf': {
         $id: 'schema:Reservation',
@@ -41149,7 +41820,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:HyperTocEntry',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A HyperToEntry is an item within a [[HyperToc]], which represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. The media object itself is indicated using [[associatedMedia]]. Each section of interest within that content can be described with a [[HyperTocEntry]], with associated [[startOffset]] and [[endOffset]]. When several entries are all from the same file, [[associatedMedia]] is used on the overarching [[HyperTocEntry]]; if the content has been split into multiple files, they can be referenced using [[associatedMedia]] on each [[HyperTocEntry]].',
+      'rdfs:comment':
+        'A HyperToEntry is an item within a [[HyperToc]], which represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. The media object itself is indicated using [[associatedMedia]]. Each section of interest within that content can be described with a [[HyperTocEntry]], with associated [[startOffset]] and [[endOffset]]. When several entries are all from the same file, [[associatedMedia]] is used on the overarching [[HyperTocEntry]]; if the content has been split into multiple files, they can be referenced using [[associatedMedia]] on each [[HyperTocEntry]].',
       'rdfs:label': 'HyperTocEntry',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -41164,7 +41836,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:energyEfficiencyScaleMax',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.',
+      'rdfs:comment':
+        'Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.',
       'rdfs:label': 'energyEfficiencyScaleMax',
       'schema:domainIncludes': {
         $id: 'schema:EnergyConsumptionDetails',
@@ -41236,7 +41909,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cvdNumC19OFMechVentPats',
       $type: 'rdf:Property',
-      'rdfs:comment': 'numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator.',
+      'rdfs:comment':
+        'numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator.',
       'rdfs:label': 'cvdNumC19OFMechVentPats',
       'schema:domainIncludes': {
         $id: 'schema:CDCPMDRecord',
@@ -41298,7 +41972,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:SatireOrParodyContent',
       $type: 'schema:MediaManipulationRatingEnumeration',
-      'rdfs:comment': "Content coded 'satire or parody content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'satire or parody content': A video that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the “missing context” rating.)\n\nFor an [[ImageObject]] to be 'satire or parody content': An image that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the “missing context” rating.)\n\nFor an [[ImageObject]] with embedded text to be 'satire or parody content': An image that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the “missing context” rating.)\n\nFor an [[AudioObject]] to be 'satire or parody content': Audio that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the “missing context” rating.)\n",
+      'rdfs:comment':
+        "Content coded 'satire or parody content' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'satire or parody content': A video that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the “missing context” rating.)\n\nFor an [[ImageObject]] to be 'satire or parody content': An image that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the “missing context” rating.)\n\nFor an [[ImageObject]] with embedded text to be 'satire or parody content': An image that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the “missing context” rating.)\n\nFor an [[AudioObject]] to be 'satire or parody content': Audio that was created as political or humorous commentary and is presented in that context. (Reshares of satire/parody content that do not include relevant context are more likely to fall under the “missing context” rating.)\n",
       'rdfs:label': 'SatireOrParodyContent',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -41310,7 +41985,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Demand',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A demand entity represents the public, not necessarily binding, not necessarily exclusive, announcement by an organization or person to seek a certain type of goods or services. For describing demand using this type, the very same properties used for Offer apply.',
+      'rdfs:comment':
+        'A demand entity represents the public, not necessarily binding, not necessarily exclusive, announcement by an organization or person to seek a certain type of goods or services. For describing demand using this type, the very same properties used for Offer apply.',
       'rdfs:label': 'Demand',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -41352,7 +42028,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:FoodEstablishmentReservation',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A reservation to dine at a food-related business.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.',
+      'rdfs:comment':
+        'A reservation to dine at a food-related business.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.',
       'rdfs:label': 'FoodEstablishmentReservation',
       'rdfs:subClassOf': {
         $id: 'schema:Reservation',
@@ -41361,7 +42038,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:cvdNumC19MechVentPats',
       $type: 'rdf:Property',
-      'rdfs:comment': 'numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator.',
+      'rdfs:comment':
+        'numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator.',
       'rdfs:label': 'cvdNumC19MechVentPats',
       'schema:domainIncludes': {
         $id: 'schema:CDCPMDRecord',
@@ -41379,7 +42057,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:IndividualPhysician',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]]. \nThe [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.',
+      'rdfs:comment':
+        'An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]]. \nThe [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.',
       'rdfs:label': 'IndividualPhysician',
       'rdfs:subClassOf': {
         $id: 'schema:Physician',
@@ -41403,7 +42082,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:restockingFee',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.',
+      'rdfs:comment':
+        'Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.',
       'rdfs:label': 'restockingFee',
       'schema:domainIncludes': [
         {
@@ -41636,7 +42316,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accessibilityHazard',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary).',
+      'rdfs:comment':
+        'A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary).',
       'rdfs:label': 'accessibilityHazard',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -41756,7 +42437,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:accessMode',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).',
+      'rdfs:comment':
+        'The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).',
       'rdfs:label': 'accessMode',
       'schema:domainIncludes': {
         $id: 'schema:CreativeWork',
@@ -41771,7 +42453,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:mainEntityOfPage',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.',
+      'rdfs:comment':
+        'Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.',
       'rdfs:label': 'mainEntityOfPage',
       'schema:domainIncludes': {
         $id: 'schema:Thing',
@@ -41820,7 +42503,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:tongueWeight',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR).\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n\\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
+      'rdfs:comment':
+        'The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR).\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n\\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.',
       'rdfs:label': 'tongueWeight',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -41883,7 +42567,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:isResizable',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect reality.',
+      'rdfs:comment':
+        'Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect reality.',
       'rdfs:label': 'isResizable',
       'schema:domainIncludes': {
         $id: 'schema:3DModel',
@@ -41910,7 +42595,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:newsUpdatesAndGuidelines',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page containing [[SpecialAnnouncement]] markup on a site.',
+      'rdfs:comment':
+        'Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page containing [[SpecialAnnouncement]] markup on a site.',
       'rdfs:label': 'newsUpdatesAndGuidelines',
       'schema:domainIncludes': {
         $id: 'schema:SpecialAnnouncement',
@@ -42042,7 +42728,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:OpeningHoursSpecification',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A structured value providing information about the opening hours of a place or a certain service inside a place.\\n\\n\nThe place is __open__ if the [[opens]] property is specified, and __closed__ otherwise.\\n\\nIf the value for the [[closes]] property is less than the value for the [[opens]] property then the hour range is assumed to span over the next day.\n      ',
+      'rdfs:comment':
+        'A structured value providing information about the opening hours of a place or a certain service inside a place.\\n\\n\nThe place is __open__ if the [[opens]] property is specified, and __closed__ otherwise.\\n\\nIf the value for the [[closes]] property is less than the value for the [[opens]] property then the hour range is assumed to span over the next day.\n      ',
       'rdfs:label': 'OpeningHoursSpecification',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -42069,7 +42756,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PreventionHealthAspect',
       $type: 'schema:HealthAspectEnumeration',
-      'rdfs:comment': 'Information about actions or measures that can be taken to avoid getting the topic or reaching a critical situation related to the topic.',
+      'rdfs:comment':
+        'Information about actions or measures that can be taken to avoid getting the topic or reaching a critical situation related to the topic.',
       'rdfs:label': 'PreventionHealthAspect',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -42090,7 +42778,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Longitudinal',
       $type: 'schema:MedicalObservationalStudyDesign',
-      'rdfs:comment': 'Unlike cross-sectional studies, longitudinal studies track the same people, and therefore the differences observed in those people are less likely to be the result of cultural differences across generations. Longitudinal studies are also used in medicine to uncover predictors of certain diseases.',
+      'rdfs:comment':
+        'Unlike cross-sectional studies, longitudinal studies track the same people, and therefore the differences observed in those people are less likely to be the result of cultural differences across generations. Longitudinal studies are also used in medicine to uncover predictors of certain diseases.',
       'rdfs:label': 'Longitudinal',
       'schema:isPartOf': {
         $id: 'https://health-lifesci.schema.org',
@@ -42099,7 +42788,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PaymentMethodType',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The type of payment method, only for generic payment types, specific forms of payments, like card payment should be expressed using subclasses of PaymentMethod.',
+      'rdfs:comment':
+        'The type of payment method, only for generic payment types, specific forms of payments, like card payment should be expressed using subclasses of PaymentMethod.',
       'rdfs:label': 'PaymentMethodType',
       'rdfs:subClassOf': {
         $id: 'schema:Enumeration',
@@ -42159,7 +42849,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:CancelAction',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'The act of asserting that a future event/action is no longer going to happen.\\n\\nRelated actions:\\n\\n* [[ConfirmAction]]: The antonym of CancelAction.',
+      'rdfs:comment':
+        'The act of asserting that a future event/action is no longer going to happen.\\n\\nRelated actions:\\n\\n* [[ConfirmAction]]: The antonym of CancelAction.',
       'rdfs:label': 'CancelAction',
       'rdfs:subClassOf': {
         $id: 'schema:PlanAction',
@@ -42186,7 +42877,8 @@ export const schemaorg: Record<string, any> = {
       'owl:equivalentProperty': {
         $id: 'http://data.europa.eu/eli/ontology#responsibility_of',
       },
-      'rdfs:comment': 'An individual or organization that has some kind of responsibility for the legislation. Typically the ministry who is/was in charge of elaborating the legislation, or the adressee for potential questions about the legislation once it is published.',
+      'rdfs:comment':
+        'An individual or organization that has some kind of responsibility for the legislation. Typically the ministry who is/was in charge of elaborating the legislation, or the adressee for potential questions about the legislation once it is published.',
       'rdfs:label': 'legislationResponsible',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/ELI',
@@ -42270,7 +42962,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:yearBuilt',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). ',
+      'rdfs:comment':
+        'The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field). ',
       'rdfs:label': 'yearBuilt',
       'schema:domainIncludes': {
         $id: 'schema:Accommodation',
@@ -42288,7 +42981,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserBlocks',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserBlocks',
       'rdfs:subClassOf': {
         $id: 'schema:UserInteraction',
@@ -42312,7 +43006,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ratingValue',
       $type: 'rdf:Property',
-      'rdfs:comment': "The rating for the content.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+      'rdfs:comment':
+        "The rating for the content.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
       'rdfs:label': 'ratingValue',
       'schema:domainIncludes': {
         $id: 'schema:Rating',
@@ -42359,7 +43054,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:MedicalCondition',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.',
+      'rdfs:comment':
+        'Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.',
       'rdfs:label': 'MedicalCondition',
       'rdfs:subClassOf': {
         $id: 'schema:MedicalEntity',
@@ -42371,7 +43067,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PropertyValue',
       $type: 'rdfs:Class',
-      'rdfs:comment': "A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.\\n\\n Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.\n    ",
+      'rdfs:comment':
+        "A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.\\n\\n Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.\n    ",
       'rdfs:label': 'PropertyValue',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -42398,7 +43095,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:exceptDate',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Defines a [[Date]] or [[DateTime]] during which a scheduled [[Event]] will not take place. The property allows exceptions to\n      a [[Schedule]] to be specified. If an exception is specified as a [[DateTime]] then only the event that would have started at that specific date and time\n      should be excluded from the schedule. If an exception is specified as a [[Date]] then any event that is scheduled for that 24 hour period should be\n      excluded from the schedule. This allows a whole day to be excluded from the schedule without having to itemise every scheduled event.',
+      'rdfs:comment':
+        'Defines a [[Date]] or [[DateTime]] during which a scheduled [[Event]] will not take place. The property allows exceptions to\n      a [[Schedule]] to be specified. If an exception is specified as a [[DateTime]] then only the event that would have started at that specific date and time\n      should be excluded from the schedule. If an exception is specified as a [[Date]] then any event that is scheduled for that 24 hour period should be\n      excluded from the schedule. This allows a whole day to be excluded from the schedule without having to itemise every scheduled event.',
       'rdfs:label': 'exceptDate',
       'schema:domainIncludes': {
         $id: 'schema:Schedule',
@@ -42421,7 +43119,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Project',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim.\nUse properties from [[Organization]], [[subOrganization]]/[[parentOrganization]] to indicate project sub-structures. \n   ',
+      'rdfs:comment':
+        'An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim.\nUse properties from [[Organization]], [[subOrganization]]/[[parentOrganization]] to indicate project sub-structures. \n   ',
       'rdfs:label': 'Project',
       'rdfs:subClassOf': {
         $id: 'schema:Organization',
@@ -42551,7 +43250,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:acrissCode',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.',
+      'rdfs:comment':
+        'The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.',
       'rdfs:label': 'acrissCode',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -42574,7 +43274,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:UserTweets',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
+      'rdfs:comment':
+        'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].',
       'rdfs:label': 'UserTweets',
       'rdfs:subClassOf': {
         $id: 'schema:UserInteraction',
@@ -42702,7 +43403,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:Gene',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A discrete unit of inheritance which affects one or more biological traits (Source: [https://en.wikipedia.org/wiki/Gene](https://en.wikipedia.org/wiki/Gene)). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype).',
+      'rdfs:comment':
+        'A discrete unit of inheritance which affects one or more biological traits (Source: [https://en.wikipedia.org/wiki/Gene](https://en.wikipedia.org/wiki/Gene)). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype).',
       'rdfs:label': 'Gene',
       'rdfs:subClassOf': {
         $id: 'schema:BioChemEntity',
@@ -42858,7 +43560,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:HotelRoom',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A hotel room is a single room in a hotel.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
+      'rdfs:comment':
+        'A hotel room is a single room in a hotel.\n<br /><br />\nSee also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.\n',
       'rdfs:label': 'HotelRoom',
       'rdfs:subClassOf': {
         $id: 'schema:Room',
@@ -42908,7 +43611,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:variantCover',
       $type: 'rdf:Property',
-      'rdfs:comment': 'A description of the variant cover\n    \tfor the issue, if the issue is a variant printing. For example, "Bryan Hitch\n    \tVariant Cover" or "2nd Printing Variant".',
+      'rdfs:comment':
+        'A description of the variant cover\n    \tfor the issue, if the issue is a variant printing. For example, "Bryan Hitch\n    \tVariant Cover" or "2nd Printing Variant".',
       'rdfs:label': 'variantCover',
       'schema:domainIncludes': {
         $id: 'schema:ComicIssue',
@@ -42929,7 +43633,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:PublicationVolume',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).',
+      'rdfs:comment':
+        'A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).',
       'rdfs:label': 'PublicationVolume',
       'rdfs:subClassOf': {
         $id: 'schema:CreativeWork',
@@ -42941,7 +43646,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:EnergyConsumptionDetails',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'EnergyConsumptionDetails represents information related to the energy efficiency of a product that consumes energy. The information that can be provided is based on international regulations such as for example [EU directive 2017/1369](https://eur-lex.europa.eu/eli/reg/2017/1369/oj) for energy labeling and the [Energy labeling rule](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/energy-water-use-labeling-consumer) under the Energy Policy and Conservation Act (EPCA) in the US.',
+      'rdfs:comment':
+        'EnergyConsumptionDetails represents information related to the energy efficiency of a product that consumes energy. The information that can be provided is based on international regulations such as for example [EU directive 2017/1369](https://eur-lex.europa.eu/eli/reg/2017/1369/oj) for energy labeling and the [Energy labeling rule](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/energy-water-use-labeling-consumer) under the Energy Policy and Conservation Act (EPCA) in the US.',
       'rdfs:label': 'EnergyConsumptionDetails',
       'rdfs:subClassOf': {
         $id: 'schema:Intangible',
@@ -42956,7 +43662,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:wheelbase',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The distance between the centers of the front and rear wheels.\\n\\nTypical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet.',
+      'rdfs:comment':
+        'The distance between the centers of the front and rear wheels.\\n\\nTypical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet.',
       'rdfs:label': 'wheelbase',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/Automotive_Ontology_Working_Group',
@@ -42986,7 +43693,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:DeliveryTimeSettings',
       $type: 'rdfs:Class',
-      'rdfs:comment': 'A DeliveryTimeSettings represents re-usable pieces of shipping information, relating to timing. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished (and identified/referenced) by their different values for [[transitTimeLabel]].',
+      'rdfs:comment':
+        'A DeliveryTimeSettings represents re-usable pieces of shipping information, relating to timing. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished (and identified/referenced) by their different values for [[transitTimeLabel]].',
       'rdfs:label': 'DeliveryTimeSettings',
       'rdfs:subClassOf': {
         $id: 'schema:StructuredValue',
@@ -43016,7 +43724,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:observationPeriod',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The length of time an Observation took place over. The format follows `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M is Period 3 Months, P3h is Period 3 hours.',
+      'rdfs:comment':
+        'The length of time an Observation took place over. The format follows `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M is Period 3 Months, P3h is Period 3 hours.',
       'rdfs:label': 'observationPeriod',
       'schema:domainIncludes': {
         $id: 'schema:Observation',
@@ -43081,7 +43790,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:unitText',
       $type: 'rdf:Property',
-      'rdfs:comment': "A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for\n<a href='unitCode'>unitCode</a>.",
+      'rdfs:comment':
+        "A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for\n<a href='unitCode'>unitCode</a>.",
       'rdfs:label': 'unitText',
       'schema:domainIncludes': [
         {
@@ -43122,7 +43832,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:speakable',
       $type: 'rdf:Property',
-      'rdfs:comment': "Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for text-to-speech conversion. Other sections of a page may also be usefully spoken in particular circumstances; the 'speakable' property serves to indicate the parts most likely to be generally useful for speech.\n\nThe *speakable* property can be repeated an arbitrary number of times, with three kinds of possible 'content-locator' values:\n\n1.) *id-value* URL references - uses *id-value* of an element in the page being annotated. The simplest use of *speakable* has (potentially relative) URL values, referencing identified sections of the document concerned.\n\n2.) CSS Selectors - addresses content in the annotated page, e.g. via class attribute. Use the [[cssSelector]] property.\n\n3.)  XPaths - addresses content via XPaths (assuming an XML view of the content). Use the [[xpath]] property.\n\n\nFor more sophisticated markup of speakable sections beyond simple ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this\nwe define a supporting type, [[SpeakableSpecification]]  which is defined to be a possible value of the *speakable* property.\n         ",
+      'rdfs:comment':
+        "Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for text-to-speech conversion. Other sections of a page may also be usefully spoken in particular circumstances; the 'speakable' property serves to indicate the parts most likely to be generally useful for speech.\n\nThe *speakable* property can be repeated an arbitrary number of times, with three kinds of possible 'content-locator' values:\n\n1.) *id-value* URL references - uses *id-value* of an element in the page being annotated. The simplest use of *speakable* has (potentially relative) URL values, referencing identified sections of the document concerned.\n\n2.) CSS Selectors - addresses content in the annotated page, e.g. via class attribute. Use the [[cssSelector]] property.\n\n3.)  XPaths - addresses content via XPaths (assuming an XML view of the content). Use the [[xpath]] property.\n\n\nFor more sophisticated markup of speakable sections beyond simple ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this\nwe define a supporting type, [[SpeakableSpecification]]  which is defined to be a possible value of the *speakable* property.\n         ",
       'rdfs:label': 'speakable',
       'schema:domainIncludes': [
         {
@@ -43253,7 +43964,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:specialOpeningHoursSpecification',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The special opening hours of a certain place.\\n\\nUse this to explicitly override general opening hours brought in scope by [[openingHoursSpecification]] or [[openingHours]].\n      ',
+      'rdfs:comment':
+        'The special opening hours of a certain place.\\n\\nUse this to explicitly override general opening hours brought in scope by [[openingHoursSpecification]] or [[openingHours]].\n      ',
       'rdfs:label': 'specialOpeningHoursSpecification',
       'schema:domainIncludes': {
         $id: 'schema:Place',
@@ -43265,7 +43977,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:associatedPathophysiology',
       $type: 'rdf:Property',
-      'rdfs:comment': 'If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.',
+      'rdfs:comment':
+        'If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.',
       'rdfs:label': 'associatedPathophysiology',
       'schema:domainIncludes': [
         {
@@ -43356,7 +44069,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:ScreenCaptureDigitalSource',
       $type: 'schema:IPTCDigitalSourceEnumeration',
-      'rdfs:comment': 'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia">algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
+      'rdfs:comment':
+        'Content coded as \'<a href="https://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia">algorithmic media</a>\' using the IPTC <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">digital source type</a> vocabulary.',
       'rdfs:label': 'ScreenCaptureDigitalSource',
       'schema:isPartOf': {
         $id: 'https://pending.schema.org',
@@ -43383,7 +44097,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:eligibleTransactionVolume',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.',
+      'rdfs:comment':
+        'The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.',
       'rdfs:label': 'eligibleTransactionVolume',
       'schema:contributor': {
         $id: 'https://schema.org/docs/collab/GoodRelationsTerms',
@@ -43452,7 +44167,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:populationType',
       $type: 'rdf:Property',
-      'rdfs:comment': 'Indicates the populationType common to all members of a [[StatisticalPopulation]] or all cases within the scope of a [[StatisticalVariable]].',
+      'rdfs:comment':
+        'Indicates the populationType common to all members of a [[StatisticalPopulation]] or all cases within the scope of a [[StatisticalVariable]].',
       'rdfs:label': 'populationType',
       'schema:domainIncludes': [
         {
@@ -43475,7 +44191,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:handlingTime',
       $type: 'rdf:Property',
-      'rdfs:comment': 'The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup. Typical properties: minValue, maxValue, unitCode (d for DAY).  This is by common convention assumed to mean business days (if a unitCode is used, coded as "d"), i.e. only counting days when the business normally operates.',
+      'rdfs:comment':
+        'The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup. Typical properties: minValue, maxValue, unitCode (d for DAY).  This is by common convention assumed to mean business days (if a unitCode is used, coded as "d"), i.e. only counting days when the business normally operates.',
       'rdfs:label': 'handlingTime',
       'schema:domainIncludes': {
         $id: 'schema:ShippingDeliveryTime',
@@ -43502,7 +44219,8 @@ export const schemaorg: Record<string, any> = {
     {
       $id: 'schema:flightNumber',
       $type: 'rdf:Property',
-      'rdfs:comment': "The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is 'UA', the flightNumber is 'UA110'.",
+      'rdfs:comment':
+        "The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is 'UA', the flightNumber is 'UA110'.",
       'rdfs:label': 'flightNumber',
       'rdfs:subPropertyOf': {
         $id: 'schema:identifier',
@@ -43554,4 +44272,4 @@ export const schemaorg: Record<string, any> = {
       },
     },
   ],
-} as const;
+} as const

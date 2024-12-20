@@ -57,13 +57,4 @@ export interface StringifyOptions {
 /**
  * Special properties that should be extracted to root level
  */
-export type SpecialProperty =
-  | 'type'
-  | 'context'
-  | 'id'
-  | 'language'
-  | 'base'
-  | 'vocab'
-  | 'list'
-  | 'set'
-  | 'reverse'
+export type SpecialProperty = 'type' | 'context' | 'id' | 'language' | 'base' | 'vocab' | 'list' | 'set' | 'reverse'
