@@ -1,0 +1,76 @@
+---
+$context: schema.org
+$type: MedicalClinic
+title: MedicalClinic
+description: A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.
+properties:
+  direct:
+    - name: medicalSpecialty
+      type: MedicalSpecialty
+      description: A medical specialty of the provider.
+    - name: availableService
+      type: MedicalProcedure | MedicalTest | MedicalTherapy
+      description: A medical service available from this provider.
+  inherited:
+subClasses:
+  - CovidTestingFacility
+---
+# MedicalClinic
+
+A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.
+
+## Type Hierarchy
+
+MedicalClinic is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalClinic:
+
+- CovidTestingFacility: A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus
+      disease is available. If the facility is being made available from an established [[Pharmacy]], [[Hotel]], or other
+      non-medical organization, multiple types can be listed. This makes it easier to re-use existing schema.org information
+      about that place, e.g. contact info, address, opening hours. Note that in an emergency, such information may not always be reliable.
+      
+
+## Properties
+
+### Direct Properties
+
+- medicalSpecialty: A medical specialty of the provider.
+- availableService: A medical service available from this provider.
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface MedicalClinic {
+  $context?: 'schema.org'
+  $type: 'MedicalClinic'
+  medicalSpecialty?: MedicalSpecialty
+  availableService?: MedicalProcedure | MedicalTest | MedicalTherapy
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalClinic",
+  "name": "Example MedicalClinic",
+  "description": "An example of the MedicalClinic type",
+  "url": "https://example.com/medicalclinic",
+  "identifier": "example-medicalclinic-1"
+}
+```
+
+## Notes
+
+- MedicalClinic inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

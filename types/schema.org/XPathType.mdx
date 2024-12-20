@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: XPathType
+title: XPathType
+description: Text representing an XPath (typically but not necessarily version 1.0).
+properties:
+  direct:
+  inherited:
+parentClass: Text
+---
+# XPathType
+
+Text representing an XPath (typically but not necessarily version 1.0).
+
+## Type Hierarchy
+
+XPathType is a type of Text.
+
+### Direct Subtypes
+
+No types directly inherit from XPathType.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface XPathType extends Text {
+  $context?: 'schema.org'
+  $type: 'XPathType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "XPathType",
+  "name": "Example XPathType",
+  "description": "An example of the XPathType type",
+  "url": "https://example.com/xpathtype",
+  "identifier": "example-xpathtype-1"
+}
+```
+
+## Notes
+
+- XPathType inherits all properties from Text
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,202 @@
+---
+$context: schema.org
+$type: PostalAddress
+title: PostalAddress
+description: The mailing address.
+properties:
+  direct:
+    - name: addressCountry
+      type: Country | string
+      description: The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.
+    - name: postalCode
+      type: string
+      description: The postal code. For example, 94043.
+    - name: addressLocality
+      type: string
+      description: The locality in which the street address is, and which is in the region. For example, Mountain View.
+    - name: streetAddress
+      type: string
+      description: The street address. For example, 1600 Amphitheatre Pkwy.
+    - name: postOfficeBoxNumber
+      type: string
+      description: The post office box number for PO box addresses.
+    - name: addressRegion
+      type: string
+      description: The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
+  inherited:
+    - name: contactType
+      type: string
+      description: A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.
+      inheritedFrom: ContactPoint
+    - name: telephone
+      type: string
+      description: The telephone number.
+      inheritedFrom: ContactPoint
+    - name: productSupported
+      type: Product | string
+      description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").
+      inheritedFrom: ContactPoint
+    - name: faxNumber
+      type: string
+      description: The fax number.
+      inheritedFrom: ContactPoint
+    - name: email
+      type: string
+      description: Email address.
+      inheritedFrom: ContactPoint
+    - name: areaServed
+      type: AdministrativeArea | GeoShape | Place | string
+      description: The geographic area where a service or offered item is provided.
+      inheritedFrom: ContactPoint
+    - name: contactOption
+      type: ContactPointOption
+      description: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).
+      inheritedFrom: ContactPoint
+    - name: serviceArea
+      type: AdministrativeArea | GeoShape | Place
+      description: The geographic area where the service is provided.
+      inheritedFrom: ContactPoint
+    - name: hoursAvailable
+      type: OpeningHoursSpecification
+      description: The hours during which this service or contact is available.
+      inheritedFrom: ContactPoint
+    - name: availableLanguage
+      type: Language | string
+      description: A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+      inheritedFrom: ContactPoint
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+parentClass: ContactPoint
+---
+# PostalAddress
+
+The mailing address.
+
+## Type Hierarchy
+
+PostalAddress is a type of ContactPoint.
+
+### Direct Subtypes
+
+No types directly inherit from PostalAddress.
+
+## Properties
+
+### Direct Properties
+
+- addressCountry: The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.
+- postalCode: The postal code. For example, 94043.
+- addressLocality: The locality in which the street address is, and which is in the region. For example, Mountain View.
+- streetAddress: The street address. For example, 1600 Amphitheatre Pkwy.
+- postOfficeBoxNumber: The post office box number for PO box addresses.
+- addressRegion: The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative division](https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country).
+
+### Inherited Properties
+
+- contactType: A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point. (inherited from ContactPoint)
+- telephone: The telephone number. (inherited from ContactPoint)
+- productSupported: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones"). (inherited from ContactPoint)
+- faxNumber: The fax number. (inherited from ContactPoint)
+- email: Email address. (inherited from ContactPoint)
+- areaServed: The geographic area where a service or offered item is provided. (inherited from ContactPoint)
+- contactOption: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers). (inherited from ContactPoint)
+- serviceArea: The geographic area where the service is provided. (inherited from ContactPoint)
+- hoursAvailable: The hours during which this service or contact is available. (inherited from ContactPoint)
+- availableLanguage: A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]]. (inherited from ContactPoint)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface PostalAddress extends ContactPoint {
+  $context?: 'schema.org'
+  $type: 'PostalAddress'
+  addressCountry?: Country | string
+  postalCode?: string
+  addressLocality?: string
+  streetAddress?: string
+  postOfficeBoxNumber?: string
+  addressRegion?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PostalAddress",
+  "name": "Example PostalAddress",
+  "description": "An example of the PostalAddress type",
+  "url": "https://example.com/postaladdress",
+  "identifier": "example-postaladdress-1"
+}
+```
+
+## Notes
+
+- PostalAddress inherits all properties from ContactPoint
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

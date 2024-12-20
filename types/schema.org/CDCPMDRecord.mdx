@@ -1,0 +1,213 @@
+---
+$context: schema.org
+$type: CDCPMDRecord
+title: CDCPMDRecord
+description: A CDCPMDRecord is a data structure representing a record in a CDC tabular data format
+      used for hospital data reporting. See [documentation](/docs/cdc-covid.html) for details, and the linked CDC materials for authoritative
+      definitions used as the source here.
+      
+properties:
+  direct:
+    - name: cvdNumICUBeds
+      type: number
+      description: numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit (ICU) beds.
+    - name: datePosted
+      type: string
+      description: Publication date of an online listing.
+    - name: cvdNumC19OverflowPats
+      type: number
+      description: numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed.
+    - name: cvdNumVent
+      type: number
+      description: numvent - MECHANICAL VENTILATORS: Total number of ventilators available.
+    - name: cvdCollectionDate
+      type: string
+      description: collectiondate - Date for which patient counts are reported.
+    - name: cvdNumICUBedsOcc
+      type: number
+      description: numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
+    - name: cvdNumBedsOcc
+      type: number
+      description: numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
+    - name: cvdNumTotBeds
+      type: number
+      description: numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge) beds used for inpatients or outpatients.
+    - name: cvdNumC19HospPats
+      type: number
+      description: numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
+    - name: cvdNumBeds
+      type: number
+      description: numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+    - name: cvdNumC19HOPats
+      type: number
+      description: numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization.
+    - name: cvdFacilityId
+      type: string
+      description: Identifier of the NHSN facility that this data record applies to. Use [[cvdFacilityCounty]] to indicate the county. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
+    - name: cvdNumVentUse
+      type: number
+      description: numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
+    - name: cvdFacilityCounty
+      type: string
+      description: Name of the County of the NHSN facility that this data record applies to. Use [[cvdFacilityId]] to identify the facility. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
+    - name: cvdNumC19Died
+      type: number
+      description: numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
+    - name: cvdNumC19OFMechVentPats
+      type: number
+      description: numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator.
+    - name: cvdNumC19MechVentPats
+      type: number
+      description: numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator.
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+parentClass: StructuredValue
+---
+# CDCPMDRecord
+
+A CDCPMDRecord is a data structure representing a record in a CDC tabular data format
+      used for hospital data reporting. See [documentation](/docs/cdc-covid.html) for details, and the linked CDC materials for authoritative
+      definitions used as the source here.
+      
+
+## Type Hierarchy
+
+CDCPMDRecord is a type of StructuredValue.
+
+### Direct Subtypes
+
+No types directly inherit from CDCPMDRecord.
+
+## Properties
+
+### Direct Properties
+
+- cvdNumICUBeds: numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit (ICU) beds.
+- datePosted: Publication date of an online listing.
+- cvdNumC19OverflowPats: numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed.
+- cvdNumVent: numvent - MECHANICAL VENTILATORS: Total number of ventilators available.
+- cvdCollectionDate: collectiondate - Date for which patient counts are reported.
+- cvdNumICUBedsOcc: numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.
+- cvdNumBedsOcc: numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.
+- cvdNumTotBeds: numtotbeds - ALL HOSPITAL BEDS: Total number of all inpatient and outpatient beds, including all staffed, ICU, licensed, and overflow (surge) beds used for inpatients or outpatients.
+- cvdNumC19HospPats: numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.
+- cvdNumBeds: numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients.
+- cvdNumC19HOPats: numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization.
+- cvdFacilityId: Identifier of the NHSN facility that this data record applies to. Use [[cvdFacilityCounty]] to indicate the county. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
+- cvdNumVentUse: numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.
+- cvdFacilityCounty: Name of the County of the NHSN facility that this data record applies to. Use [[cvdFacilityId]] to identify the facility. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
+- cvdNumC19Died: numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
+- cvdNumC19OFMechVentPats: numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator.
+- cvdNumC19MechVentPats: numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator.
+
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface CDCPMDRecord extends StructuredValue {
+  $context?: 'schema.org'
+  $type: 'CDCPMDRecord'
+  cvdNumICUBeds?: number
+  datePosted?: string
+  cvdNumC19OverflowPats?: number
+  cvdNumVent?: number
+  cvdCollectionDate?: string
+  cvdNumICUBedsOcc?: number
+  cvdNumBedsOcc?: number
+  cvdNumTotBeds?: number
+  cvdNumC19HospPats?: number
+  cvdNumBeds?: number
+  cvdNumC19HOPats?: number
+  cvdFacilityId?: string
+  cvdNumVentUse?: number
+  cvdFacilityCounty?: string
+  cvdNumC19Died?: number
+  cvdNumC19OFMechVentPats?: number
+  cvdNumC19MechVentPats?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CDCPMDRecord",
+  "name": "Example CDCPMDRecord",
+  "description": "An example of the CDCPMDRecord type",
+  "url": "https://example.com/cdcpmdrecord",
+  "identifier": "example-cdcpmdrecord-1"
+}
+```
+
+## Notes
+
+- CDCPMDRecord inherits all properties from StructuredValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,60 @@
+---
+$context: schema.org
+$type: PhysicalExam
+title: PhysicalExam
+description: A type of physical examination of a patient performed by a physician. 
+properties:
+  direct:
+  inherited:
+---
+# PhysicalExam
+
+A type of physical examination of a patient performed by a physician. 
+
+## Type Hierarchy
+
+PhysicalExam is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from PhysicalExam.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface PhysicalExam {
+  $context?: 'schema.org'
+  $type: 'PhysicalExam'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PhysicalExam",
+  "name": "Example PhysicalExam",
+  "description": "An example of the PhysicalExam type",
+  "url": "https://example.com/physicalexam",
+  "identifier": "example-physicalexam-1"
+}
+```
+
+## Notes
+
+- PhysicalExam inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,75 @@
+---
+$context: schema.org
+$type: BookSeries
+title: BookSeries
+description: A series of books. Included books can be indicated with the hasPart property.
+properties:
+  direct:
+  inherited:
+    - name: issn
+      type: string
+      description: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+      inheritedFrom: CreativeWorkSeries
+    - name: startDate
+      type: string
+      description: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+    - name: endDate
+      type: string
+      description: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+parentClass: CreativeWorkSeries
+---
+# BookSeries
+
+A series of books. Included books can be indicated with the hasPart property.
+
+## Type Hierarchy
+
+BookSeries is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+No types directly inherit from BookSeries.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+- issn: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication. (inherited from CreativeWorkSeries)
+- startDate: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+- endDate: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+
+## Usage Example
+
+```typescript
+interface BookSeries extends CreativeWorkSeries {
+  $context?: 'schema.org'
+  $type: 'BookSeries'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "BookSeries",
+  "name": "Example BookSeries",
+  "description": "An example of the BookSeries type",
+  "url": "https://example.com/bookseries",
+  "identifier": "example-bookseries-1"
+}
+```
+
+## Notes
+
+- BookSeries inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

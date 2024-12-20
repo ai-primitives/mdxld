@@ -1,0 +1,60 @@
+---
+$context: schema.org
+$type: HowToStep
+title: HowToStep
+description: A step in the instructions for how to achieve a result. It is an ordered list with HowToDirection and/or HowToTip items.
+properties:
+  direct:
+  inherited:
+---
+# HowToStep
+
+A step in the instructions for how to achieve a result. It is an ordered list with HowToDirection and/or HowToTip items.
+
+## Type Hierarchy
+
+HowToStep is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from HowToStep.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface HowToStep {
+  $context?: 'schema.org'
+  $type: 'HowToStep'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HowToStep",
+  "name": "Example HowToStep",
+  "description": "An example of the HowToStep type",
+  "url": "https://example.com/howtostep",
+  "identifier": "example-howtostep-1"
+}
+```
+
+## Notes
+
+- HowToStep inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

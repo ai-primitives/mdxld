@@ -1,0 +1,199 @@
+---
+$context: schema.org
+$type: SizeSpecification
+title: SizeSpecification
+description: Size related properties of a product, typically a size code ([[name]]) and optionally a [[sizeSystem]], [[sizeGroup]], and product measurements ([[hasMeasurement]]). In addition, the intended audience can be defined through [[suggestedAge]], [[suggestedGender]], and suggested body measurements ([[suggestedMeasurement]]).
+properties:
+  direct:
+    - name: hasMeasurement
+      type: QuantitativeValue
+      description: A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.
+    - name: suggestedAge
+      type: QuantitativeValue
+      description: The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
+    - name: suggestedGender
+      type: GenderType | string
+      description: The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+    - name: suggestedMeasurement
+      type: QuantitativeValue
+      description: A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.
+    - name: sizeGroup
+      type: SizeGroupEnumeration | string
+      description: The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite maternity" or "regular".
+    - name: sizeSystem
+      type: SizeSystemEnumeration | string
+      description: The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
+  inherited:
+    - name: equal
+      type: QualitativeValue
+      description: This ordering relation for qualitative values indicates that the subject is equal to the object.
+      inheritedFrom: QualitativeValue
+    - name: additionalProperty
+      type: PropertyValue
+      description: A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+
+      inheritedFrom: QualitativeValue
+    - name: lesser
+      type: QualitativeValue
+      description: This ordering relation for qualitative values indicates that the subject is lesser than the object.
+      inheritedFrom: QualitativeValue
+    - name: lesserOrEqual
+      type: QualitativeValue
+      description: This ordering relation for qualitative values indicates that the subject is lesser than or equal to the object.
+      inheritedFrom: QualitativeValue
+    - name: greaterOrEqual
+      type: QualitativeValue
+      description: This ordering relation for qualitative values indicates that the subject is greater than or equal to the object.
+      inheritedFrom: QualitativeValue
+    - name: greater
+      type: QualitativeValue
+      description: This ordering relation for qualitative values indicates that the subject is greater than the object.
+      inheritedFrom: QualitativeValue
+    - name: nonEqual
+      type: QualitativeValue
+      description: This ordering relation for qualitative values indicates that the subject is not equal to the object.
+      inheritedFrom: QualitativeValue
+    - name: valueReference
+      type: DefinedTerm | Enumeration | MeasurementTypeEnumeration | PropertyValue | QualitativeValue | QuantitativeValue | StructuredValue | string
+      description: A secondary value that provides additional information on the original value, e.g. a reference temperature or a type of measurement.
+      inheritedFrom: QualitativeValue
+    - name: supersededBy
+      type: Class | Enumeration | Property
+      description: Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
+      inheritedFrom: Enumeration
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+parentClass: QualitativeValue
+---
+# SizeSpecification
+
+Size related properties of a product, typically a size code ([[name]]) and optionally a [[sizeSystem]], [[sizeGroup]], and product measurements ([[hasMeasurement]]). In addition, the intended audience can be defined through [[suggestedAge]], [[suggestedGender]], and suggested body measurements ([[suggestedMeasurement]]).
+
+## Type Hierarchy
+
+SizeSpecification is a type of QualitativeValue.
+
+### Direct Subtypes
+
+No types directly inherit from SizeSpecification.
+
+## Properties
+
+### Direct Properties
+
+- hasMeasurement: A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.
+- suggestedAge: The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
+- suggestedGender: The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+- suggestedMeasurement: A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.
+- sizeGroup: The size group (also known as "size type") for a product's size. Size groups are common in the fashion industry to define size segments and suggested audiences for wearable products. Multiple values can be combined, for example "men's big and tall", "petite maternity" or "regular".
+- sizeSystem: The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
+
+### Inherited Properties
+
+- equal: This ordering relation for qualitative values indicates that the subject is equal to the object. (inherited from QualitativeValue)
+- additionalProperty: A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+ (inherited from QualitativeValue)
+- lesser: This ordering relation for qualitative values indicates that the subject is lesser than the object. (inherited from QualitativeValue)
+- lesserOrEqual: This ordering relation for qualitative values indicates that the subject is lesser than or equal to the object. (inherited from QualitativeValue)
+- greaterOrEqual: This ordering relation for qualitative values indicates that the subject is greater than or equal to the object. (inherited from QualitativeValue)
+- greater: This ordering relation for qualitative values indicates that the subject is greater than the object. (inherited from QualitativeValue)
+- nonEqual: This ordering relation for qualitative values indicates that the subject is not equal to the object. (inherited from QualitativeValue)
+- valueReference: A secondary value that provides additional information on the original value, e.g. a reference temperature or a type of measurement. (inherited from QualitativeValue)
+- supersededBy: Relates a term (i.e. a property, class or enumeration) to one that supersedes it. (inherited from Enumeration)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface SizeSpecification extends QualitativeValue {
+  $context?: 'schema.org'
+  $type: 'SizeSpecification'
+  hasMeasurement?: QuantitativeValue
+  suggestedAge?: QuantitativeValue
+  suggestedGender?: GenderType | string
+  suggestedMeasurement?: QuantitativeValue
+  sizeGroup?: SizeGroupEnumeration | string
+  sizeSystem?: SizeSystemEnumeration | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SizeSpecification",
+  "name": "Example SizeSpecification",
+  "description": "An example of the SizeSpecification type",
+  "url": "https://example.com/sizespecification",
+  "identifier": "example-sizespecification-1"
+}
+```
+
+## Notes
+
+- SizeSpecification inherits all properties from QualitativeValue
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

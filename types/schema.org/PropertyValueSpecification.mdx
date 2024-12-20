@@ -1,0 +1,177 @@
+---
+$context: schema.org
+$type: PropertyValueSpecification
+title: PropertyValueSpecification
+description: A Property value specification.
+properties:
+  direct:
+    - name: valueMaxLength
+      type: number
+      description: Specifies the allowed range for number of characters in a literal value.
+    - name: valueMinLength
+      type: number
+      description: Specifies the minimum allowed range for number of characters in a literal value.
+    - name: multipleValues
+      type: boolean
+      description: Whether multiple values are allowed for the property.  Default is false.
+    - name: minValue
+      type: number
+      description: The lower value of some characteristic or property.
+    - name: readonlyValue
+      type: boolean
+      description: Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.
+    - name: maxValue
+      type: number
+      description: The upper value of some characteristic or property.
+    - name: stepValue
+      type: number
+      description: The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
+    - name: defaultValue
+      type: Thing | string
+      description: The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.
+    - name: valueName
+      type: string
+      description: Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.
+    - name: valuePattern
+      type: string
+      description: Specifies a regular expression for testing literal values according to the HTML spec.
+    - name: valueRequired
+      type: boolean
+      description: Whether the property must be filled in to complete the action.  Default is false.
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+parentClass: Intangible
+---
+# PropertyValueSpecification
+
+A Property value specification.
+
+## Type Hierarchy
+
+PropertyValueSpecification is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from PropertyValueSpecification.
+
+## Properties
+
+### Direct Properties
+
+- valueMaxLength: Specifies the allowed range for number of characters in a literal value.
+- valueMinLength: Specifies the minimum allowed range for number of characters in a literal value.
+- multipleValues: Whether multiple values are allowed for the property.  Default is false.
+- minValue: The lower value of some characteristic or property.
+- readonlyValue: Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a "hidden" input in an HTML form.
+- maxValue: The upper value of some characteristic or property.
+- stepValue: The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.
+- defaultValue: The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.
+- valueName: Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.
+- valuePattern: Specifies a regular expression for testing literal values according to the HTML spec.
+- valueRequired: Whether the property must be filled in to complete the action.  Default is false.
+
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface PropertyValueSpecification extends Intangible {
+  $context?: 'schema.org'
+  $type: 'PropertyValueSpecification'
+  valueMaxLength?: number
+  valueMinLength?: number
+  multipleValues?: boolean
+  minValue?: number
+  readonlyValue?: boolean
+  maxValue?: number
+  stepValue?: number
+  defaultValue?: Thing | string
+  valueName?: string
+  valuePattern?: string
+  valueRequired?: boolean
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PropertyValueSpecification",
+  "name": "Example PropertyValueSpecification",
+  "description": "An example of the PropertyValueSpecification type",
+  "url": "https://example.com/propertyvaluespecification",
+  "identifier": "example-propertyvaluespecification-1"
+}
+```
+
+## Notes
+
+- PropertyValueSpecification inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

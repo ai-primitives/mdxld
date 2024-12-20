@@ -1,0 +1,108 @@
+---
+$context: schema.org
+$type: Course
+title: Course
+description: A description of an educational course which may be offered as distinct instances which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.
+properties:
+  direct:
+    - name: syllabusSections
+      type: Syllabus
+      description: Indicates (typically several) Syllabus entities that lay out what each section of the overall course will cover.
+    - name: courseCode
+      type: string
+      description: The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or 6.001).
+    - name: occupationalCredentialAwarded
+      type: EducationalOccupationalCredential | string
+      description: A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.
+    - name: coursePrerequisites
+      type: AlignmentObject | Course | string
+      description: Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may be a pre-requisite competency, referenced using [[AlignmentObject]].
+    - name: hasCourseInstance
+      type: CourseInstance
+      description: An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.
+    - name: totalHistoricalEnrollment
+      type: number
+      description: The total number of students that have enrolled in the history of the course.
+    - name: numberOfCredits
+      type: StructuredValue | number
+      description: The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+    - name: educationalCredentialAwarded
+      type: EducationalOccupationalCredential | string
+      description: A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.
+    - name: availableLanguage
+      type: Language | string
+      description: A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+    - name: financialAidEligible
+      type: DefinedTerm | string
+      description: A financial aid type or program which students may use to pay for tuition or fees associated with the program.
+  inherited:
+---
+# Course
+
+A description of an educational course which may be offered as distinct instances which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.
+
+## Type Hierarchy
+
+Course is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from Course.
+
+## Properties
+
+### Direct Properties
+
+- syllabusSections: Indicates (typically several) Syllabus entities that lay out what each section of the overall course will cover.
+- courseCode: The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or 6.001).
+- occupationalCredentialAwarded: A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.
+- coursePrerequisites: Requirements for taking the Course. May be completion of another [[Course]] or a textual description like "permission of instructor". Requirements may be a pre-requisite competency, referenced using [[AlignmentObject]].
+- hasCourseInstance: An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.
+- totalHistoricalEnrollment: The total number of students that have enrolled in the history of the course.
+- numberOfCredits: The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+- educationalCredentialAwarded: A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.
+- availableLanguage: A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+- financialAidEligible: A financial aid type or program which students may use to pay for tuition or fees associated with the program.
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface Course {
+  $context?: 'schema.org'
+  $type: 'Course'
+  syllabusSections?: Syllabus
+  courseCode?: string
+  occupationalCredentialAwarded?: EducationalOccupationalCredential | string
+  coursePrerequisites?: AlignmentObject | Course | string
+  hasCourseInstance?: CourseInstance
+  totalHistoricalEnrollment?: number
+  numberOfCredits?: StructuredValue | number
+  educationalCredentialAwarded?: EducationalOccupationalCredential | string
+  availableLanguage?: Language | string
+  financialAidEligible?: DefinedTerm | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Course",
+  "name": "Example Course",
+  "description": "An example of the Course type",
+  "url": "https://example.com/course",
+  "identifier": "example-course-1"
+}
+```
+
+## Notes
+
+- Course inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

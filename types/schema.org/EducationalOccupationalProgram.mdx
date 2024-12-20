@@ -1,0 +1,250 @@
+---
+$context: schema.org
+$type: EducationalOccupationalProgram
+title: EducationalOccupationalProgram
+description: A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities (e.g., job, courses) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity (e.g., a job), or sometimes a higher educational opportunity (e.g., an advanced degree).
+properties:
+  direct:
+    - name: dayOfWeek
+      type: DayOfWeek
+      description: The day of the week for which these opening hours are valid.
+    - name: hasCourse
+      type: Course
+      description: A course or class that is one of the learning opportunities that constitute an educational / occupational program. No information is implied about whether the course is mandatory or optional; no guarantee is implied about whether the course will be available to everyone on the program.
+    - name: applicationDeadline
+      type: string
+      description: The date on which the program stops collecting applications for the next enrollment cycle. Flexible application deadlines (for example, a program with rolling admissions) can be described in a textual string, rather than as a DateTime.
+    - name: trainingSalary
+      type: MonetaryAmountDistribution
+      description: The estimated salary earned while in the program.
+    - name: programType
+      type: DefinedTerm | string
+      description: The type of educational or occupational program. For example, classroom, internship, alternance, etc.
+    - name: occupationalCredentialAwarded
+      type: EducationalOccupationalCredential | string
+      description: A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.
+    - name: termsPerYear
+      type: number
+      description: The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example, if the student can only take 2 semesters for the program in one year, then termsPerYear should be 2.
+    - name: salaryUponCompletion
+      type: MonetaryAmountDistribution
+      description: The expected salary upon completing the training.
+    - name: timeToComplete
+      type: Duration
+      description: The expected length of time to complete the program if attending full-time.
+    - name: occupationalCategory
+      type: CategoryCode | string
+      description: A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
+    - name: maximumEnrollment
+      type: number
+      description: The maximum number of students who may be enrolled in the program.
+    - name: educationalProgramMode
+      type: string
+      description: Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
+    - name: startDate
+      type: string
+      description: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+    - name: typicalCreditsPerTerm
+      type: StructuredValue | number
+      description: The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined by the institution.
+    - name: applicationStartDate
+      type: string
+      description: The date at which the program begins collecting applications for the next enrollment cycle.
+    - name: numberOfCredits
+      type: StructuredValue | number
+      description: The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+    - name: offers
+      type: Demand | Offer
+      description: An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+      
+    - name: provider
+      type: Organization | Person
+      description: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+    - name: programPrerequisites
+      type: AlignmentObject | Course | EducationalOccupationalCredential | string
+      description: Prerequisites for enrolling in the program.
+    - name: educationalCredentialAwarded
+      type: EducationalOccupationalCredential | string
+      description: A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.
+    - name: termDuration
+      type: Duration
+      description: The amount of time in a term as defined by the institution. A term is a length of time where students take one or more classes. Semesters and quarters are common units for term.
+    - name: financialAidEligible
+      type: DefinedTerm | string
+      description: A financial aid type or program which students may use to pay for tuition or fees associated with the program.
+    - name: endDate
+      type: string
+      description: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+    - name: timeOfDay
+      type: string
+      description: The time of day the program normally runs. For example, "evenings".
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+subClasses:
+  - WorkBasedProgram
+parentClass: Intangible
+---
+# EducationalOccupationalProgram
+
+A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities (e.g., job, courses) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity (e.g., a job), or sometimes a higher educational opportunity (e.g., an advanced degree).
+
+## Type Hierarchy
+
+EducationalOccupationalProgram is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from EducationalOccupationalProgram:
+
+- WorkBasedProgram: A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.
+
+## Properties
+
+### Direct Properties
+
+- dayOfWeek: The day of the week for which these opening hours are valid.
+- hasCourse: A course or class that is one of the learning opportunities that constitute an educational / occupational program. No information is implied about whether the course is mandatory or optional; no guarantee is implied about whether the course will be available to everyone on the program.
+- applicationDeadline: The date on which the program stops collecting applications for the next enrollment cycle. Flexible application deadlines (for example, a program with rolling admissions) can be described in a textual string, rather than as a DateTime.
+- trainingSalary: The estimated salary earned while in the program.
+- programType: The type of educational or occupational program. For example, classroom, internship, alternance, etc.
+- occupationalCredentialAwarded: A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.
+- termsPerYear: The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example, if the student can only take 2 semesters for the program in one year, then termsPerYear should be 2.
+- salaryUponCompletion: The expected salary upon completing the training.
+- timeToComplete: The expected length of time to complete the program if attending full-time.
+- occupationalCategory: A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
+- maximumEnrollment: The maximum number of students who may be enrolled in the program.
+- educationalProgramMode: Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
+- startDate: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+- typicalCreditsPerTerm: The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined by the institution.
+- applicationStartDate: The date at which the program begins collecting applications for the next enrollment cycle.
+- numberOfCredits: The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
+- offers: An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+      
+- provider: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+- programPrerequisites: Prerequisites for enrolling in the program.
+- educationalCredentialAwarded: A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.
+- termDuration: The amount of time in a term as defined by the institution. A term is a length of time where students take one or more classes. Semesters and quarters are common units for term.
+- financialAidEligible: A financial aid type or program which students may use to pay for tuition or fees associated with the program.
+- endDate: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+- timeOfDay: The time of day the program normally runs. For example, "evenings".
+
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface EducationalOccupationalProgram extends Intangible {
+  $context?: 'schema.org'
+  $type: 'EducationalOccupationalProgram'
+  dayOfWeek?: DayOfWeek
+  hasCourse?: Course
+  applicationDeadline?: string
+  trainingSalary?: MonetaryAmountDistribution
+  programType?: DefinedTerm | string
+  occupationalCredentialAwarded?: EducationalOccupationalCredential | string
+  termsPerYear?: number
+  salaryUponCompletion?: MonetaryAmountDistribution
+  timeToComplete?: Duration
+  occupationalCategory?: CategoryCode | string
+  maximumEnrollment?: number
+  educationalProgramMode?: string
+  startDate?: string
+  typicalCreditsPerTerm?: StructuredValue | number
+  applicationStartDate?: string
+  numberOfCredits?: StructuredValue | number
+  offers?: Demand | Offer
+  provider?: Organization | Person
+  programPrerequisites?: AlignmentObject | Course | EducationalOccupationalCredential | string
+  educationalCredentialAwarded?: EducationalOccupationalCredential | string
+  termDuration?: Duration
+  financialAidEligible?: DefinedTerm | string
+  endDate?: string
+  timeOfDay?: string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "EducationalOccupationalProgram",
+  "name": "Example EducationalOccupationalProgram",
+  "description": "An example of the EducationalOccupationalProgram type",
+  "url": "https://example.com/educationaloccupationalprogram",
+  "identifier": "example-educationaloccupationalprogram-1"
+}
+```
+
+## Notes
+
+- EducationalOccupationalProgram inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,206 @@
+---
+$context: schema.org
+$type: StructuredValue
+title: StructuredValue
+description: Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.
+properties:
+  direct:
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+subClasses:
+  - CDCPMDRecord
+  - ContactPoint
+  - DatedMoneySpecification
+  - DefinedRegion
+  - DeliveryTimeSettings
+  - EngineSpecification
+  - ExchangeRateSpecification
+  - GeoCoordinates
+  - GeoShape
+  - InteractionCounter
+  - MonetaryAmount
+  - NutritionInformation
+  - OfferShippingDetails
+  - OpeningHoursSpecification
+  - OwnershipInfo
+  - PostalCodeRangeSpecification
+  - PriceSpecification
+  - PropertyValue
+  - QuantitativeValue
+  - QuantitativeValueDistribution
+  - RepaymentSpecification
+  - ShippingDeliveryTime
+  - ShippingRateSettings
+  - TypeAndQuantityNode
+  - WarrantyPromise
+parentClass: Intangible
+---
+# StructuredValue
+
+Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.
+
+## Type Hierarchy
+
+StructuredValue is a type of Intangible.
+
+### Direct Subtypes
+
+The following types directly inherit from StructuredValue:
+
+- CDCPMDRecord: A CDCPMDRecord is a data structure representing a record in a CDC tabular data format
+      used for hospital data reporting. See [documentation](/docs/cdc-covid.html) for details, and the linked CDC materials for authoritative
+      definitions used as the source here.
+      
+- ContactPoint: A contact point&#x2014;for example, a Customer Complaints department.
+- DatedMoneySpecification: A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.
+- DefinedRegion: A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes.
+
+Examples: a delivery destination when shopping. Region where regional pricing is configured.
+
+Requirement 1:
+Country: US
+States: "NY", "CA"
+
+Requirement 2:
+Country: US
+PostalCode Set: { [94000-94585], [97000, 97999], [13000, 13599]}
+{ [12345, 12345], [78945, 78945], }
+Region = state, canton, prefecture, autonomous community...
+
+- DeliveryTimeSettings: A DeliveryTimeSettings represents re-usable pieces of shipping information, relating to timing. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished (and identified/referenced) by their different values for [[transitTimeLabel]].
+- EngineSpecification: Information about the engine of the vehicle. A vehicle can have multiple engines represented by multiple engine specification entities.
+- ExchangeRateSpecification: A structured value representing exchange rate.
+- GeoCoordinates: The geographic coordinates of a place or event.
+- GeoShape: The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.
+- InteractionCounter: A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.
+- MonetaryAmount: A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc.
+- NutritionInformation: Nutritional information about the recipe.
+- OfferShippingDetails: OfferShippingDetails represents information about shipping destinations.
+
+Multiple of these entities can be used to represent different shipping rates for different destinations:
+
+One entity for Alaska/Hawaii. A different one for continental US. A different one for all France.
+
+Multiple of these entities can be used to represent different shipping costs and delivery times.
+
+Two entities that are identical but differ in rate and time:
+
+E.g. Cheaper and slower: $5 in 5-7 days
+or Fast and expensive: $15 in 1-2 days.
+- OpeningHoursSpecification: A structured value providing information about the opening hours of a place or a certain service inside a place.\n\n
+The place is __open__ if the [[opens]] property is specified, and __closed__ otherwise.\n\nIf the value for the [[closes]] property is less than the value for the [[opens]] property then the hour range is assumed to span over the next day.
+      
+- OwnershipInfo: A structured value providing information about when a certain organization or person owned a certain product.
+- PostalCodeRangeSpecification: Indicates a range of postal codes, usually defined as the set of valid codes between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.
+- PriceSpecification: A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use [[MonetaryAmount]] to describe independent amounts of money such as a salary, credit card limits, etc.
+- PropertyValue: A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.\n\n Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.
+    
+- QuantitativeValue:  A point value or interval for product characteristics and other purposes.
+- QuantitativeValueDistribution: A statistical distribution of values.
+- RepaymentSpecification: A structured value representing repayment.
+- ShippingDeliveryTime: ShippingDeliveryTime provides various pieces of information about delivery times for shipping.
+- ShippingRateSettings: A ShippingRateSettings represents re-usable pieces of shipping information. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for [[shippingLabel]].
+- TypeAndQuantityNode: A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.
+- WarrantyPromise: A structured value representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface StructuredValue extends Intangible {
+  $context?: 'schema.org'
+  $type: 'StructuredValue'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "StructuredValue",
+  "name": "Example StructuredValue",
+  "description": "An example of the StructuredValue type",
+  "url": "https://example.com/structuredvalue",
+  "identifier": "example-structuredvalue-1"
+}
+```
+
+## Notes
+
+- StructuredValue inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

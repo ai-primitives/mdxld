@@ -1,0 +1,60 @@
+---
+$context: schema.org
+$type: StadiumOrArena
+title: StadiumOrArena
+description: A stadium.
+properties:
+  direct:
+  inherited:
+---
+# StadiumOrArena
+
+A stadium.
+
+## Type Hierarchy
+
+StadiumOrArena is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from StadiumOrArena.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface StadiumOrArena {
+  $context?: 'schema.org'
+  $type: 'StadiumOrArena'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "StadiumOrArena",
+  "name": "Example StadiumOrArena",
+  "description": "An example of the StadiumOrArena type",
+  "url": "https://example.com/stadiumorarena",
+  "identifier": "example-stadiumorarena-1"
+}
+```
+
+## Notes
+
+- StadiumOrArena inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

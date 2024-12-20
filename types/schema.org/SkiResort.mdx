@@ -1,0 +1,60 @@
+---
+$context: schema.org
+$type: SkiResort
+title: SkiResort
+description: A ski resort.
+properties:
+  direct:
+  inherited:
+---
+# SkiResort
+
+A ski resort.
+
+## Type Hierarchy
+
+SkiResort is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from SkiResort.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface SkiResort {
+  $context?: 'schema.org'
+  $type: 'SkiResort'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "SkiResort",
+  "name": "Example SkiResort",
+  "description": "An example of the SkiResort type",
+  "url": "https://example.com/skiresort",
+  "identifier": "example-skiresort-1"
+}
+```
+
+## Notes
+
+- SkiResort inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,208 @@
+---
+$context: schema.org
+$type: Drug
+title: Drug
+description: A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.
+properties:
+  direct:
+    - name: doseSchedule
+      type: DoseSchedule
+      description: A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
+    - name: pregnancyWarning
+      type: string
+      description: Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
+    - name: drugClass
+      type: DrugClass
+      description: The class of drug this belongs to (e.g., statins).
+    - name: legalStatus
+      type: DrugLegalStatus | MedicalEnumeration | string
+      description: The drug or supplement's legal status, including any controlled substance schedules that apply.
+    - name: clinicalPharmacology
+      type: string
+      description: Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+    - name: dosageForm
+      type: string
+      description: A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
+    - name: isAvailableGenerically
+      type: boolean
+      description: True if the drug is available in a generic form (regardless of name).
+    - name: prescriptionStatus
+      type: DrugPrescriptionStatus | string
+      description: Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
+    - name: breastfeedingWarning
+      type: string
+      description: Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
+    - name: alcoholWarning
+      type: string
+      description: Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
+    - name: relatedDrug
+      type: Drug
+      description: Any other drug related to this one, for example commonly-prescribed alternatives.
+    - name: mechanismOfAction
+      type: string
+      description: The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
+    - name: isProprietary
+      type: boolean
+      description: True if this item's name is a proprietary/brand name (vs. generic name).
+    - name: interactingDrug
+      type: Drug
+      description: Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.
+    - name: clincalPharmacology
+      type: string
+      description: Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+    - name: overdosage
+      type: string
+      description: Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
+    - name: foodWarning
+      type: string
+      description: Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
+    - name: pregnancyCategory
+      type: DrugPregnancyCategory
+      description: Pregnancy category of this drug.
+    - name: availableStrength
+      type: DrugStrength
+      description: An available dosage strength for the drug.
+    - name: warning
+      type: string
+      description: Any FDA or other warnings about the drug (text or URL).
+    - name: administrationRoute
+      type: string
+      description: A route by which this drug may be administered, e.g. 'oral'.
+    - name: proprietaryName
+      type: string
+      description: Proprietary name given to the diet plan, typically by its originator or creator.
+    - name: prescribingInfo
+      type: string
+      description: Link to prescribing information for the drug.
+    - name: maximumIntake
+      type: MaximumDoseSchedule
+      description: Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+    - name: nonProprietaryName
+      type: string
+      description: The generic name of this drug or supplement.
+    - name: drugUnit
+      type: string
+      description: The unit in which the drug is measured, e.g. '5 mg tablet'.
+    - name: activeIngredient
+      type: string
+      description: An active ingredient, typically chemical compounds and/or biologic substances.
+    - name: labelDetails
+      type: string
+      description: Link to the drug's label details.
+    - name: rxcui
+      type: string
+      description: The RxCUI drug identifier from RXNORM.
+    - name: includedInHealthInsurancePlan
+      type: HealthInsurancePlan
+      description: The insurance plans that cover this drug.
+  inherited:
+---
+# Drug
+
+A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.
+
+## Type Hierarchy
+
+Drug is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from Drug.
+
+## Properties
+
+### Direct Properties
+
+- doseSchedule: A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.
+- pregnancyWarning: Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
+- drugClass: The class of drug this belongs to (e.g., statins).
+- legalStatus: The drug or supplement's legal status, including any controlled substance schedules that apply.
+- clinicalPharmacology: Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+- dosageForm: A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.
+- isAvailableGenerically: True if the drug is available in a generic form (regardless of name).
+- prescriptionStatus: Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
+- breastfeedingWarning: Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.
+- alcoholWarning: Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.
+- relatedDrug: Any other drug related to this one, for example commonly-prescribed alternatives.
+- mechanismOfAction: The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.
+- isProprietary: True if this item's name is a proprietary/brand name (vs. generic name).
+- interactingDrug: Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.
+- clincalPharmacology: Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).
+- overdosage: Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.
+- foodWarning: Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.
+- pregnancyCategory: Pregnancy category of this drug.
+- availableStrength: An available dosage strength for the drug.
+- warning: Any FDA or other warnings about the drug (text or URL).
+- administrationRoute: A route by which this drug may be administered, e.g. 'oral'.
+- proprietaryName: Proprietary name given to the diet plan, typically by its originator or creator.
+- prescribingInfo: Link to prescribing information for the drug.
+- maximumIntake: Recommended intake of this supplement for a given population as defined by a specific recommending authority.
+- nonProprietaryName: The generic name of this drug or supplement.
+- drugUnit: The unit in which the drug is measured, e.g. '5 mg tablet'.
+- activeIngredient: An active ingredient, typically chemical compounds and/or biologic substances.
+- labelDetails: Link to the drug's label details.
+- rxcui: The RxCUI drug identifier from RXNORM.
+- includedInHealthInsurancePlan: The insurance plans that cover this drug.
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface Drug {
+  $context?: 'schema.org'
+  $type: 'Drug'
+  doseSchedule?: DoseSchedule
+  pregnancyWarning?: string
+  drugClass?: DrugClass
+  legalStatus?: DrugLegalStatus | MedicalEnumeration | string
+  clinicalPharmacology?: string
+  dosageForm?: string
+  isAvailableGenerically?: boolean
+  prescriptionStatus?: DrugPrescriptionStatus | string
+  breastfeedingWarning?: string
+  alcoholWarning?: string
+  relatedDrug?: Drug
+  mechanismOfAction?: string
+  isProprietary?: boolean
+  interactingDrug?: Drug
+  clincalPharmacology?: string
+  overdosage?: string
+  foodWarning?: string
+  pregnancyCategory?: DrugPregnancyCategory
+  availableStrength?: DrugStrength
+  warning?: string
+  administrationRoute?: string
+  proprietaryName?: string
+  prescribingInfo?: string
+  maximumIntake?: MaximumDoseSchedule
+  nonProprietaryName?: string
+  drugUnit?: string
+  activeIngredient?: string
+  labelDetails?: string
+  rxcui?: string
+  includedInHealthInsurancePlan?: HealthInsurancePlan
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Drug",
+  "name": "Example Drug",
+  "description": "An example of the Drug type",
+  "url": "https://example.com/drug",
+  "identifier": "example-drug-1"
+}
+```
+
+## Notes
+
+- Drug inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

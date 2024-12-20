@@ -1,0 +1,108 @@
+---
+$context: schema.org
+$type: MovieSeries
+title: MovieSeries
+description: A series of movies. Included movies can be indicated with the hasPart property.
+properties:
+  direct:
+    - name: actor
+      type: PerformingGroup | Person
+      description: An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+    - name: trailer
+      type: VideoObject
+      description: The trailer of a movie or TV/radio series, season, episode, etc.
+    - name: actors
+      type: Person
+      description: An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+    - name: directors
+      type: Person
+      description: A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+    - name: productionCompany
+      type: Organization
+      description: The production company or studio responsible for the item, e.g. series, video game, episode etc.
+    - name: director
+      type: Person
+      description: A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+    - name: musicBy
+      type: MusicGroup | Person
+      description: The composer of the soundtrack.
+  inherited:
+    - name: issn
+      type: string
+      description: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+      inheritedFrom: CreativeWorkSeries
+    - name: startDate
+      type: string
+      description: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+    - name: endDate
+      type: string
+      description: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+parentClass: CreativeWorkSeries
+---
+# MovieSeries
+
+A series of movies. Included movies can be indicated with the hasPart property.
+
+## Type Hierarchy
+
+MovieSeries is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+No types directly inherit from MovieSeries.
+
+## Properties
+
+### Direct Properties
+
+- actor: An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+- trailer: The trailer of a movie or TV/radio series, season, episode, etc.
+- actors: An actor, e.g. in TV, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.
+- directors: A director of e.g. TV, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.
+- productionCompany: The production company or studio responsible for the item, e.g. series, video game, episode etc.
+- director: A director of e.g. TV, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.
+- musicBy: The composer of the soundtrack.
+
+### Inherited Properties
+
+- issn: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication. (inherited from CreativeWorkSeries)
+- startDate: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+- endDate: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+
+## Usage Example
+
+```typescript
+interface MovieSeries extends CreativeWorkSeries {
+  $context?: 'schema.org'
+  $type: 'MovieSeries'
+  actor?: PerformingGroup | Person
+  trailer?: VideoObject
+  actors?: Person
+  directors?: Person
+  productionCompany?: Organization
+  director?: Person
+  musicBy?: MusicGroup | Person
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MovieSeries",
+  "name": "Example MovieSeries",
+  "description": "An example of the MovieSeries type",
+  "url": "https://example.com/movieseries",
+  "identifier": "example-movieseries-1"
+}
+```
+
+## Notes
+
+- MovieSeries inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,153 @@
+---
+$context: schema.org
+$type: HowToItem
+title: HowToItem
+description: An item used as either a tool or supply when performing the instructions for how to achieve a result.
+properties:
+  direct:
+    - name: requiredQuantity
+      type: QuantitativeValue | number | string
+      description: The required quantity of the item(s).
+  inherited:
+    - name: position
+      type: number | string
+      description: The position of an item in a series or sequence of items.
+      inheritedFrom: ListItem
+    - name: item
+      type: Thing
+      description: An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
+      inheritedFrom: ListItem
+    - name: previousItem
+      type: ListItem
+      description: A link to the ListItem that precedes the current one.
+      inheritedFrom: ListItem
+    - name: nextItem
+      type: ListItem
+      description: A link to the ListItem that follows the current one.
+      inheritedFrom: ListItem
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+subClasses:
+  - HowToSupply
+  - HowToTool
+parentClass: ListItem
+---
+# HowToItem
+
+An item used as either a tool or supply when performing the instructions for how to achieve a result.
+
+## Type Hierarchy
+
+HowToItem is a type of ListItem.
+
+### Direct Subtypes
+
+The following types directly inherit from HowToItem:
+
+- HowToSupply: A supply consumed when performing the instructions for how to achieve a result.
+- HowToTool: A tool used (but not consumed) when performing instructions for how to achieve a result.
+
+## Properties
+
+### Direct Properties
+
+- requiredQuantity: The required quantity of the item(s).
+
+### Inherited Properties
+
+- position: The position of an item in a series or sequence of items. (inherited from ListItem)
+- item: An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists'). (inherited from ListItem)
+- previousItem: A link to the ListItem that precedes the current one. (inherited from ListItem)
+- nextItem: A link to the ListItem that follows the current one. (inherited from ListItem)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface HowToItem extends ListItem {
+  $context?: 'schema.org'
+  $type: 'HowToItem'
+  requiredQuantity?: QuantitativeValue | number | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HowToItem",
+  "name": "Example HowToItem",
+  "description": "An example of the HowToItem type",
+  "url": "https://example.com/howtoitem",
+  "identifier": "example-howtoitem-1"
+}
+```
+
+## Notes
+
+- HowToItem inherits all properties from ListItem
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

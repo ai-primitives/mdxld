@@ -1,0 +1,181 @@
+---
+$context: schema.org
+$type: PeopleAudience
+title: PeopleAudience
+description: A set of characteristics belonging to people, e.g. who compose an item's target audience.
+properties:
+  direct:
+    - name: requiredMinAge
+      type: number
+      description: Audiences defined by a person's minimum age.
+    - name: requiredMaxAge
+      type: number
+      description: Audiences defined by a person's maximum age.
+    - name: suggestedAge
+      type: QuantitativeValue
+      description: The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
+    - name: suggestedGender
+      type: GenderType | string
+      description: The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+    - name: healthCondition
+      type: MedicalCondition
+      description: Specifying the health condition(s) of a patient, medical study, or other target audience.
+    - name: suggestedMeasurement
+      type: QuantitativeValue
+      description: A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.
+    - name: requiredGender
+      type: string
+      description: Audiences defined by a person's gender.
+    - name: suggestedMinAge
+      type: number
+      description: Minimum recommended age in years for the audience or user.
+    - name: suggestedMaxAge
+      type: number
+      description: Maximum recommended age in years for the audience or user.
+  inherited:
+    - name: geographicArea
+      type: AdministrativeArea
+      description: The geographic area associated with the audience.
+      inheritedFrom: Audience
+    - name: audienceType
+      type: string
+      description: The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
+      inheritedFrom: Audience
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+subClasses:
+  - ParentAudience
+parentClass: Audience
+---
+# PeopleAudience
+
+A set of characteristics belonging to people, e.g. who compose an item's target audience.
+
+## Type Hierarchy
+
+PeopleAudience is a type of Audience.
+
+### Direct Subtypes
+
+The following types directly inherit from PeopleAudience:
+
+- ParentAudience: A set of characteristics describing parents, who can be interested in viewing some content.
+
+## Properties
+
+### Direct Properties
+
+- requiredMinAge: Audiences defined by a person's minimum age.
+- requiredMaxAge: Audiences defined by a person's maximum age.
+- suggestedAge: The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
+- suggestedGender: The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
+- healthCondition: Specifying the health condition(s) of a patient, medical study, or other target audience.
+- suggestedMeasurement: A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.
+- requiredGender: Audiences defined by a person's gender.
+- suggestedMinAge: Minimum recommended age in years for the audience or user.
+- suggestedMaxAge: Maximum recommended age in years for the audience or user.
+
+### Inherited Properties
+
+- geographicArea: The geographic area associated with the audience. (inherited from Audience)
+- audienceType: The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.). (inherited from Audience)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface PeopleAudience extends Audience {
+  $context?: 'schema.org'
+  $type: 'PeopleAudience'
+  requiredMinAge?: number
+  requiredMaxAge?: number
+  suggestedAge?: QuantitativeValue
+  suggestedGender?: GenderType | string
+  healthCondition?: MedicalCondition
+  suggestedMeasurement?: QuantitativeValue
+  requiredGender?: string
+  suggestedMinAge?: number
+  suggestedMaxAge?: number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PeopleAudience",
+  "name": "Example PeopleAudience",
+  "description": "An example of the PeopleAudience type",
+  "url": "https://example.com/peopleaudience",
+  "identifier": "example-peopleaudience-1"
+}
+```
+
+## Notes
+
+- PeopleAudience inherits all properties from Audience
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

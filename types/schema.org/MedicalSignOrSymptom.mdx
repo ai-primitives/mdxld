@@ -1,0 +1,253 @@
+---
+$context: schema.org
+$type: MedicalSignOrSymptom
+title: MedicalSignOrSymptom
+description: Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.
+properties:
+  direct:
+    - name: possibleTreatment
+      type: MedicalTherapy
+      description: A possible treatment to address this condition, sign or symptom.
+  inherited:
+    - name: pathophysiology
+      type: string
+      description: Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.
+      inheritedFrom: MedicalCondition
+    - name: possibleComplication
+      type: string
+      description: A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.
+      inheritedFrom: MedicalCondition
+    - name: possibleTreatment
+      type: MedicalTherapy
+      description: A possible treatment to address this condition, sign or symptom.
+      inheritedFrom: MedicalCondition
+    - name: expectedPrognosis
+      type: string
+      description: The likely outcome in either the short term or long term of the medical condition.
+      inheritedFrom: MedicalCondition
+    - name: secondaryPrevention
+      type: MedicalTherapy
+      description: A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.
+      inheritedFrom: MedicalCondition
+    - name: stage
+      type: MedicalConditionStage
+      description: The stage of the condition, if applicable.
+      inheritedFrom: MedicalCondition
+    - name: typicalTest
+      type: MedicalTest
+      description: A medical test typically performed given this condition.
+      inheritedFrom: MedicalCondition
+    - name: drug
+      type: Drug
+      description: Specifying a drug or medicine used in a medication procedure.
+      inheritedFrom: MedicalCondition
+    - name: differentialDiagnosis
+      type: DDxElement
+      description: One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.
+      inheritedFrom: MedicalCondition
+    - name: riskFactor
+      type: MedicalRiskFactor
+      description: A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.
+      inheritedFrom: MedicalCondition
+    - name: associatedAnatomy
+      type: AnatomicalStructure | AnatomicalSystem | SuperficialAnatomy
+      description: The anatomy of the underlying organ system or structures associated with this entity.
+      inheritedFrom: MedicalCondition
+    - name: signOrSymptom
+      type: MedicalSignOrSymptom
+      description: A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.
+      inheritedFrom: MedicalCondition
+    - name: status
+      type: EventStatusType | MedicalStudyStatus | string
+      description: The status of the study (enumerated).
+      inheritedFrom: MedicalCondition
+    - name: primaryPrevention
+      type: MedicalTherapy
+      description: A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.
+      inheritedFrom: MedicalCondition
+    - name: naturalProgression
+      type: string
+      description: The expected progression of the condition if it is not treated and allowed to progress naturally.
+      inheritedFrom: MedicalCondition
+    - name: epidemiology
+      type: string
+      description: The characteristics of associated patients, such as age, gender, race etc.
+      inheritedFrom: MedicalCondition
+    - name: legalStatus
+      type: DrugLegalStatus | MedicalEnumeration | string
+      description: The drug or supplement's legal status, including any controlled substance schedules that apply.
+      inheritedFrom: MedicalEntity
+    - name: recognizingAuthority
+      type: Organization
+      description: If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.
+      inheritedFrom: MedicalEntity
+    - name: funding
+      type: Grant
+      description: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+      inheritedFrom: MedicalEntity
+    - name: code
+      type: MedicalCode
+      description: A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+      inheritedFrom: MedicalEntity
+    - name: medicineSystem
+      type: MedicineSystem
+      description: The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+      inheritedFrom: MedicalEntity
+    - name: study
+      type: MedicalStudy
+      description: A medical study or trial related to this entity.
+      inheritedFrom: MedicalEntity
+    - name: guideline
+      type: MedicalGuideline
+      description: A medical guideline related to this entity.
+      inheritedFrom: MedicalEntity
+    - name: relevantSpecialty
+      type: MedicalSpecialty
+      description: If applicable, a medical specialty in which this entity is relevant.
+      inheritedFrom: MedicalEntity
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+subClasses:
+  - MedicalSign
+  - MedicalSymptom
+parentClass: MedicalCondition
+---
+# MedicalSignOrSymptom
+
+Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.
+
+## Type Hierarchy
+
+MedicalSignOrSymptom is a type of MedicalCondition.
+
+### Direct Subtypes
+
+The following types directly inherit from MedicalSignOrSymptom:
+
+- MedicalSign: Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.
+- MedicalSymptom: Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.
+
+## Properties
+
+### Direct Properties
+
+- possibleTreatment: A possible treatment to address this condition, sign or symptom.
+
+### Inherited Properties
+
+- pathophysiology: Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition. (inherited from MedicalCondition)
+- possibleComplication: A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc. (inherited from MedicalCondition)
+- possibleTreatment: A possible treatment to address this condition, sign or symptom. (inherited from MedicalCondition)
+- expectedPrognosis: The likely outcome in either the short term or long term of the medical condition. (inherited from MedicalCondition)
+- secondaryPrevention: A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition. (inherited from MedicalCondition)
+- stage: The stage of the condition, if applicable. (inherited from MedicalCondition)
+- typicalTest: A medical test typically performed given this condition. (inherited from MedicalCondition)
+- drug: Specifying a drug or medicine used in a medication procedure. (inherited from MedicalCondition)
+- differentialDiagnosis: One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient. (inherited from MedicalCondition)
+- riskFactor: A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition. (inherited from MedicalCondition)
+- associatedAnatomy: The anatomy of the underlying organ system or structures associated with this entity. (inherited from MedicalCondition)
+- signOrSymptom: A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition. (inherited from MedicalCondition)
+- status: The status of the study (enumerated). (inherited from MedicalCondition)
+- primaryPrevention: A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination. (inherited from MedicalCondition)
+- naturalProgression: The expected progression of the condition if it is not treated and allowed to progress naturally. (inherited from MedicalCondition)
+- epidemiology: The characteristics of associated patients, such as age, gender, race etc. (inherited from MedicalCondition)
+- legalStatus: The drug or supplement's legal status, including any controlled substance schedules that apply. (inherited from MedicalEntity)
+- recognizingAuthority: If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine. (inherited from MedicalEntity)
+- funding: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]]. (inherited from MedicalEntity)
+- code: A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc. (inherited from MedicalEntity)
+- medicineSystem: The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc. (inherited from MedicalEntity)
+- study: A medical study or trial related to this entity. (inherited from MedicalEntity)
+- guideline: A medical guideline related to this entity. (inherited from MedicalEntity)
+- relevantSpecialty: If applicable, a medical specialty in which this entity is relevant. (inherited from MedicalEntity)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface MedicalSignOrSymptom extends MedicalCondition {
+  $context?: 'schema.org'
+  $type: 'MedicalSignOrSymptom'
+  possibleTreatment?: MedicalTherapy
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalSignOrSymptom",
+  "name": "Example MedicalSignOrSymptom",
+  "description": "An example of the MedicalSignOrSymptom type",
+  "url": "https://example.com/medicalsignorsymptom",
+  "identifier": "example-medicalsignorsymptom-1"
+}
+```
+
+## Notes
+
+- MedicalSignOrSymptom inherits all properties from MedicalCondition
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

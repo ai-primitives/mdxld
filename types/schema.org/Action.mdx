@@ -1,0 +1,221 @@
+---
+$context: schema.org
+$type: Action
+title: Action
+description: An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.\n\nSee also [blog post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and [Actions overview document](https://schema.org/docs/actions.html).
+properties:
+  direct:
+    - name: actionProcess
+      type: HowTo
+      description: Description of the process by which the action was performed.
+    - name: result
+      type: Thing
+      description: The result produced in the action. E.g. John wrote *a book*.
+    - name: endTime
+      type: string
+      description: The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+    - name: agent
+      type: Organization | Person
+      description: The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
+    - name: error
+      type: Thing
+      description: For failed actions, more information on the cause of the failure.
+    - name: location
+      type: Place | PostalAddress | VirtualLocation | string
+      description: The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+    - name: actionStatus
+      type: ActionStatusType
+      description: Indicates the current disposition of the Action.
+    - name: startTime
+      type: string
+      description: The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+    - name: target
+      type: EntryPoint | string
+      description: Indicates a target EntryPoint, or url, for an Action.
+    - name: participant
+      type: Organization | Person
+      description: Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
+    - name: instrument
+      type: Thing
+      description: The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
+    - name: provider
+      type: Organization | Person
+      description: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+    - name: object
+      type: Thing
+      description: The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read *a book*.
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+subClasses:
+  - AchieveAction
+  - AssessAction
+  - ConsumeAction
+  - ControlAction
+  - CreateAction
+  - FindAction
+  - InteractAction
+  - MoveAction
+  - OrganizeAction
+  - PlayAction
+  - SearchAction
+  - SeekToAction
+  - SolveMathAction
+  - TradeAction
+  - TransferAction
+  - UpdateAction
+parentClass: Thing
+---
+# Action
+
+An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.\n\nSee also [blog post](http://blog.schema.org/2014/04/announcing-schemaorg-actions.html) and [Actions overview document](https://schema.org/docs/actions.html).
+
+## Type Hierarchy
+
+Action is a type of Thing.
+
+### Direct Subtypes
+
+The following types directly inherit from Action:
+
+- AchieveAction: The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.
+- AssessAction: The act of forming one's opinion, reaction or sentiment.
+- ConsumeAction: The act of ingesting information/resources/food.
+- ControlAction: An agent controls a device or application.
+- CreateAction: The act of deliberately creating/producing/generating/building a result out of the agent.
+- FindAction: The act of finding an object.\n\nRelated actions:\n\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.
+- InteractAction: The act of interacting with another person or organization.
+- MoveAction: The act of an agent relocating to a place.\n\nRelated actions:\n\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.
+- OrganizeAction: The act of manipulating/administering/supervising/controlling one or more objects.
+- PlayAction: The act of playing/exercising/training/performing for enjoyment, leisure, recreation, competition or exercise.\n\nRelated actions:\n\n* [[ListenAction]]: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.\n* [[WatchAction]]: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content.
+- SearchAction: The act of searching for an object.\n\nRelated actions:\n\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.
+- SeekToAction: This is the [[Action]] of navigating to a specific [[startOffset]] timestamp within a [[VideoObject]], typically represented with a URL template structure.
+- SolveMathAction: The action that takes in a math expression and directs users to a page potentially capable of solving/simplifying that expression.
+- TradeAction: The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.
+- TransferAction: The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.
+- UpdateAction: The act of managing by changing/editing the state of the object.
+
+## Properties
+
+### Direct Properties
+
+- actionProcess: Description of the process by which the action was performed.
+- result: The result produced in the action. E.g. John wrote *a book*.
+- endTime: The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+- agent: The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
+- error: For failed actions, more information on the cause of the failure.
+- location: The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+- actionStatus: Indicates the current disposition of the Action.
+- startTime: The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+- target: Indicates a target EntryPoint, or url, for an Action.
+- participant: Other co-agents that participated in the action indirectly. E.g. John wrote a book with *Steve*.
+- instrument: The object that helped the agent perform the action. E.g. John wrote a book with *a pen*.
+- provider: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+- object: The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read *a book*.
+
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface Action extends Thing {
+  $context?: 'schema.org'
+  $type: 'Action'
+  actionProcess?: HowTo
+  result?: Thing
+  endTime?: string
+  agent?: Organization | Person
+  error?: Thing
+  location?: Place | PostalAddress | VirtualLocation | string
+  actionStatus?: ActionStatusType
+  startTime?: string
+  target?: EntryPoint | string
+  participant?: Organization | Person
+  instrument?: Thing
+  provider?: Organization | Person
+  object?: Thing
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Action",
+  "name": "Example Action",
+  "description": "An example of the Action type",
+  "url": "https://example.com/action",
+  "identifier": "example-action-1"
+}
+```
+
+## Notes
+
+- Action inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

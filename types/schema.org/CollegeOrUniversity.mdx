@@ -1,0 +1,65 @@
+---
+$context: schema.org
+$type: CollegeOrUniversity
+title: CollegeOrUniversity
+description: A college, university, or other third-level educational institution.
+properties:
+  direct:
+  inherited:
+    - name: alumni
+      type: Person
+      description: Alumni of an organization.
+      inheritedFrom: EducationalOrganization
+parentClass: EducationalOrganization
+---
+# CollegeOrUniversity
+
+A college, university, or other third-level educational institution.
+
+## Type Hierarchy
+
+CollegeOrUniversity is a type of EducationalOrganization.
+
+### Direct Subtypes
+
+No types directly inherit from CollegeOrUniversity.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+- alumni: Alumni of an organization. (inherited from EducationalOrganization)
+
+## Usage Example
+
+```typescript
+interface CollegeOrUniversity extends EducationalOrganization {
+  $context?: 'schema.org'
+  $type: 'CollegeOrUniversity'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CollegeOrUniversity",
+  "name": "Example CollegeOrUniversity",
+  "description": "An example of the CollegeOrUniversity type",
+  "url": "https://example.com/collegeoruniversity",
+  "identifier": "example-collegeoruniversity-1"
+}
+```
+
+## Notes
+
+- CollegeOrUniversity inherits all properties from EducationalOrganization
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

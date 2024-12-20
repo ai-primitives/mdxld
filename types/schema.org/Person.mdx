@@ -1,0 +1,671 @@
+---
+$context: schema.org
+$type: Person
+title: Person
+description: A person (alive, dead, undead, or fictional).
+properties:
+  direct:
+    - name: interactionStatistic
+      type: InteractionCounter
+      description: The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.
+    - name: hasCredential
+      type: EducationalOccupationalCredential
+      description: A credential awarded to the Person or Organization.
+    - name: colleague
+      type: Person | string
+      description: A colleague of the person.
+    - name: contactPoints
+      type: ContactPoint
+      description: A contact point for a person or organization.
+    - name: netWorth
+      type: MonetaryAmount | PriceSpecification
+      description: The total financial value of the person as calculated by subtracting assets from liabilities.
+    - name: knowsAbout
+      type: Thing | string
+      description: Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]] descriptions.
+    - name: publishingPrinciples
+      type: CreativeWork | string
+      description: The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].
+
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
+
+    - name: isicV4
+      type: string
+      description: The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.
+    - name: telephone
+      type: string
+      description: The telephone number.
+    - name: homeLocation
+      type: ContactPoint | Place
+      description: A contact location for a person's residence.
+    - name: vatID
+      type: string
+      description: The Value-added Tax ID of the organization or person.
+    - name: knowsLanguage
+      type: Language | string
+      description: Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
+    - name: familyName
+      type: string
+      description: Family name. In the U.S., the last name of a Person.
+    - name: honorificPrefix
+      type: string
+      description: An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
+    - name: award
+      type: string
+      description: An award won by or for this item.
+    - name: address
+      type: PostalAddress | string
+      description: Physical address of the item.
+    - name: callSign
+      type: string
+      description: A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
+    - name: birthPlace
+      type: Place
+      description: The place where the person was born.
+    - name: follows
+      type: Person
+      description: The most generic uni-directional social relation.
+    - name: funding
+      type: Grant
+      description: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+    - name: hasOfferCatalog
+      type: OfferCatalog
+      description: Indicates an OfferCatalog listing for this Organization, Person, or Service.
+    - name: hasCertification
+      type: Certification
+      description: Certification information about a product, organization, service, place, or person.
+    - name: givenName
+      type: string
+      description: Given name. In the U.S., the first name of a Person.
+    - name: hasPOS
+      type: Place
+      description: Points-of-Sales operated by the organization or person.
+    - name: funder
+      type: Organization | Person
+      description: A person or organization that supports (sponsors) something through some kind of financial contribution.
+    - name: parents
+      type: Person
+      description: A parents of the person.
+    - name: faxNumber
+      type: string
+      description: The fax number.
+    - name: deathPlace
+      type: Place
+      description: The place where the person died.
+    - name: email
+      type: string
+      description: Email address.
+    - name: naics
+      type: string
+      description: The North American Industry Classification System (NAICS) code for a particular organization or business person.
+    - name: children
+      type: Person
+      description: A child of the person.
+    - name: memberOf
+      type: MemberProgramTier | Organization | ProgramMembership
+      description: An Organization (or ProgramMembership) to which this Person or Organization belongs.
+    - name: contactPoint
+      type: ContactPoint
+      description: A contact point for a person or organization.
+    - name: taxID
+      type: string
+      description: The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
+    - name: parent
+      type: Person
+      description: A parent of this person.
+    - name: knows
+      type: Person
+      description: The most generic bi-directional social/work relation.
+    - name: skills
+      type: DefinedTerm | string
+      description: A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is either claimed by a person, an organization or desired or required to fulfill a role or to work in an occupation.
+    - name: birthDate
+      type: string
+      description: Date of birth.
+    - name: alumniOf
+      type: EducationalOrganization | Organization
+      description: An organization that the person is an alumni of.
+    - name: affiliation
+      type: Organization
+      description: An organization that this person is affiliated with. For example, a school/university, a club, or a team.
+    - name: relatedTo
+      type: Person
+      description: The most generic familial relation.
+    - name: jobTitle
+      type: DefinedTerm | string
+      description: The job title of the person (for example, Financial Manager).
+    - name: honorificSuffix
+      type: string
+      description: An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
+    - name: spouse
+      type: Person
+      description: The person's spouse.
+    - name: workLocation
+      type: ContactPoint | Place
+      description: A contact location for a person's place of work.
+    - name: brand
+      type: Brand | Organization
+      description: The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
+    - name: colleagues
+      type: Person
+      description: A colleague of the person.
+    - name: nationality
+      type: Country
+      description: Nationality of the person.
+    - name: owns
+      type: OwnershipInfo | Product
+      description: Products owned by the organization or person.
+    - name: performerIn
+      type: Event
+      description: Event that this person is a performer or participant in.
+    - name: deathDate
+      type: string
+      description: Date of death.
+    - name: worksFor
+      type: Organization
+      description: Organizations that the person works for.
+    - name: additionalName
+      type: string
+      description: An additional name for a Person, can be used for a middle name.
+    - name: sibling
+      type: Person
+      description: A sibling of the person.
+    - name: siblings
+      type: Person
+      description: A sibling of the person.
+    - name: globalLocationNumber
+      type: string
+      description: The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.
+    - name: height
+      type: Distance | QuantitativeValue
+      description: The height of the item.
+    - name: gender
+      type: GenderType | string
+      description: Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
+    - name: awards
+      type: string
+      description: Awards won by or for this item.
+    - name: weight
+      type: QuantitativeValue
+      description: The weight of the product or person.
+    - name: hasOccupation
+      type: Occupation
+      description: The Person's occupation. For past professions, use Role for expressing dates.
+    - name: duns
+      type: string
+      description: The Dun & Bradstreet DUNS number for identifying an organization or business person.
+    - name: sponsor
+      type: Organization | Person
+      description: A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+    - name: makesOffer
+      type: Offer
+      description: A pointer to products or services offered by the organization or person.
+    - name: seeks
+      type: Demand
+      description: A pointer to products or services sought by the organization or person (demand).
+    - name: agentInteractionStatistic
+      type: InteractionCounter
+      description: The number of completed interactions for this entity, in a particular role (the 'agent'), in a particular action (indicated in the statistic), and in a particular context (i.e. interactionService).
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+parentClass: Thing
+---
+# Person
+
+A person (alive, dead, undead, or fictional).
+
+## Type Hierarchy
+
+### Parent Type
+
+**Person** is a type of **Thing**. It inherits all properties from its parent type.
+
+### Direct Subtypes
+
+No types directly inherit from **Person**.
+
+## Properties
+
+### Direct Properties
+
+These properties are defined directly on the **Person** type:
+
+- **interactionStatistic**: The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.
+- **hasCredential**: A credential awarded to the Person or Organization.
+- **colleague**: A colleague of the person.
+- **contactPoints**: A contact point for a person or organization.
+- **netWorth**: The total financial value of the person as calculated by subtracting assets from liabilities.
+- **knowsAbout**: Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]] descriptions.
+- **publishingPrinciples**: The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].
+
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
+
+- **isicV4**: The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.
+- **telephone**: The telephone number.
+- **homeLocation**: A contact location for a person's residence.
+- **vatID**: The Value-added Tax ID of the organization or person.
+- **knowsLanguage**: Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
+- **familyName**: Family name. In the U.S., the last name of a Person.
+- **honorificPrefix**: An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
+- **award**: An award won by or for this item.
+- **address**: Physical address of the item.
+- **callSign**: A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.
+- **birthPlace**: The place where the person was born.
+- **follows**: The most generic uni-directional social relation.
+- **funding**: A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+- **hasOfferCatalog**: Indicates an OfferCatalog listing for this Organization, Person, or Service.
+- **hasCertification**: Certification information about a product, organization, service, place, or person.
+- **givenName**: Given name. In the U.S., the first name of a Person.
+- **hasPOS**: Points-of-Sales operated by the organization or person.
+- **funder**: A person or organization that supports (sponsors) something through some kind of financial contribution.
+- **parents**: A parents of the person.
+- **faxNumber**: The fax number.
+- **deathPlace**: The place where the person died.
+- **email**: Email address.
+- **naics**: The North American Industry Classification System (NAICS) code for a particular organization or business person.
+- **children**: A child of the person.
+- **memberOf**: An Organization (or ProgramMembership) to which this Person or Organization belongs.
+- **contactPoint**: A contact point for a person or organization.
+- **taxID**: The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
+- **parent**: A parent of this person.
+- **knows**: The most generic bi-directional social/work relation.
+- **skills**: A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is either claimed by a person, an organization or desired or required to fulfill a role or to work in an occupation.
+- **birthDate**: Date of birth.
+- **alumniOf**: An organization that the person is an alumni of.
+- **affiliation**: An organization that this person is affiliated with. For example, a school/university, a club, or a team.
+- **relatedTo**: The most generic familial relation.
+- **jobTitle**: The job title of the person (for example, Financial Manager).
+- **honorificSuffix**: An honorific suffix following a Person's name such as M.D./PhD/MSCSW.
+- **spouse**: The person's spouse.
+- **workLocation**: A contact location for a person's place of work.
+- **brand**: The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
+- **colleagues**: A colleague of the person.
+- **nationality**: Nationality of the person.
+- **owns**: Products owned by the organization or person.
+- **performerIn**: Event that this person is a performer or participant in.
+- **deathDate**: Date of death.
+- **worksFor**: Organizations that the person works for.
+- **additionalName**: An additional name for a Person, can be used for a middle name.
+- **sibling**: A sibling of the person.
+- **siblings**: A sibling of the person.
+- **globalLocationNumber**: The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.
+- **height**: The height of the item.
+- **gender**: Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
+- **awards**: Awards won by or for this item.
+- **weight**: The weight of the product or person.
+- **hasOccupation**: The Person's occupation. For past professions, use Role for expressing dates.
+- **duns**: The Dun & Bradstreet DUNS number for identifying an organization or business person.
+- **sponsor**: A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+- **makesOffer**: A pointer to products or services offered by the organization or person.
+- **seeks**: A pointer to products or services sought by the organization or person (demand).
+- **agentInteractionStatistic**: The number of completed interactions for this entity, in a particular role (the 'agent'), in a particular action (indicated in the statistic), and in a particular context (i.e. interactionService).
+
+### Inherited Properties
+
+These properties are inherited from parent types:
+
+- **name**: The name of the item. (inherited from **Thing**)
+- **disambiguatingDescription**: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from **Thing**)
+- **potentialAction**: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from **Thing**)
+- **url**: URL of the item. (inherited from **Thing**)
+- **identifier**: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from **Thing**)
+- **subjectOf**: A CreativeWork or Event about this Thing. (inherited from **Thing**)
+- **description**: A description of the item. (inherited from **Thing**)
+- **additionalType**: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from **Thing**)
+- **image**: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from **Thing**)
+- **sameAs**: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from **Thing**)
+- **alternateName**: An alias for the item. (inherited from **Thing**)
+- **mainEntityOfPage**: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from **Thing**)
+
+## Usage Example
+
+```typescript
+interface Person extends Thing {
+  /** The context URL for Schema.org */
+  $context?: 'schema.org'
+
+  /** The type identifier */
+  $type: 'Person'
+
+  // Direct properties
+  /** The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used. */
+  interactionStatistic?: InteractionCounter
+
+  /** A credential awarded to the Person or Organization. */
+  hasCredential?: EducationalOccupationalCredential
+
+  /** A colleague of the person. */
+  colleague?: Person | string
+
+  /** A contact point for a person or organization. */
+  contactPoints?: ContactPoint
+
+  /** The total financial value of the person as calculated by subtracting assets from liabilities. */
+  netWorth?: MonetaryAmount | PriceSpecification
+
+  /** Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]] descriptions. */
+  knowsAbout?: Thing | string
+
+  /** The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual, e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].
+
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
+ */
+  publishingPrinciples?: CreativeWork | string
+
+  /** The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place. */
+  isicV4?: string
+
+  /** The telephone number. */
+  telephone?: string
+
+  /** A contact location for a person's residence. */
+  homeLocation?: ContactPoint | Place
+
+  /** The Value-added Tax ID of the organization or person. */
+  vatID?: string
+
+  /** Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). */
+  knowsLanguage?: Language | string
+
+  /** Family name. In the U.S., the last name of a Person. */
+  familyName?: string
+
+  /** An honorific prefix preceding a Person's name such as Dr/Mrs/Mr. */
+  honorificPrefix?: string
+
+  /** An award won by or for this item. */
+  award?: string
+
+  /** Physical address of the item. */
+  address?: PostalAddress | string
+
+  /** A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles. */
+  callSign?: string
+
+  /** The place where the person was born. */
+  birthPlace?: Place
+
+  /** The most generic uni-directional social relation. */
+  follows?: Person
+
+  /** A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]]. */
+  funding?: Grant
+
+  /** Indicates an OfferCatalog listing for this Organization, Person, or Service. */
+  hasOfferCatalog?: OfferCatalog
+
+  /** Certification information about a product, organization, service, place, or person. */
+  hasCertification?: Certification
+
+  /** Given name. In the U.S., the first name of a Person. */
+  givenName?: string
+
+  /** Points-of-Sales operated by the organization or person. */
+  hasPOS?: Place
+
+  /** A person or organization that supports (sponsors) something through some kind of financial contribution. */
+  funder?: Organization | Person
+
+  /** A parents of the person. */
+  parents?: Person
+
+  /** The fax number. */
+  faxNumber?: string
+
+  /** The place where the person died. */
+  deathPlace?: Place
+
+  /** Email address. */
+  email?: string
+
+  /** The North American Industry Classification System (NAICS) code for a particular organization or business person. */
+  naics?: string
+
+  /** A child of the person. */
+  children?: Person
+
+  /** An Organization (or ProgramMembership) to which this Person or Organization belongs. */
+  memberOf?: MemberProgramTier | Organization | ProgramMembership
+
+  /** A contact point for a person or organization. */
+  contactPoint?: ContactPoint
+
+  /** The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain. */
+  taxID?: string
+
+  /** A parent of this person. */
+  parent?: Person
+
+  /** The most generic bi-directional social/work relation. */
+  knows?: Person
+
+  /** A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is either claimed by a person, an organization or desired or required to fulfill a role or to work in an occupation. */
+  skills?: DefinedTerm | string
+
+  /** Date of birth. */
+  birthDate?: string
+
+  /** An organization that the person is an alumni of. */
+  alumniOf?: EducationalOrganization | Organization
+
+  /** An organization that this person is affiliated with. For example, a school/university, a club, or a team. */
+  affiliation?: Organization
+
+  /** The most generic familial relation. */
+  relatedTo?: Person
+
+  /** The job title of the person (for example, Financial Manager). */
+  jobTitle?: DefinedTerm | string
+
+  /** An honorific suffix following a Person's name such as M.D./PhD/MSCSW. */
+  honorificSuffix?: string
+
+  /** The person's spouse. */
+  spouse?: Person
+
+  /** A contact location for a person's place of work. */
+  workLocation?: ContactPoint | Place
+
+  /** The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person. */
+  brand?: Brand | Organization
+
+  /** A colleague of the person. */
+  colleagues?: Person
+
+  /** Nationality of the person. */
+  nationality?: Country
+
+  /** Products owned by the organization or person. */
+  owns?: OwnershipInfo | Product
+
+  /** Event that this person is a performer or participant in. */
+  performerIn?: Event
+
+  /** Date of death. */
+  deathDate?: string
+
+  /** Organizations that the person works for. */
+  worksFor?: Organization
+
+  /** An additional name for a Person, can be used for a middle name. */
+  additionalName?: string
+
+  /** A sibling of the person. */
+  sibling?: Person
+
+  /** A sibling of the person. */
+  siblings?: Person
+
+  /** The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations. */
+  globalLocationNumber?: string
+
+  /** The height of the item. */
+  height?: Distance | QuantitativeValue
+
+  /** Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed". */
+  gender?: GenderType | string
+
+  /** Awards won by or for this item. */
+  awards?: string
+
+  /** The weight of the product or person. */
+  weight?: QuantitativeValue
+
+  /** The Person's occupation. For past professions, use Role for expressing dates. */
+  hasOccupation?: Occupation
+
+  /** The Dun & Bradstreet DUNS number for identifying an organization or business person. */
+  duns?: string
+
+  /** A person or organization that supports a thing through a pledge, promise, or financial contribution. E.g. a sponsor of a Medical Study or a corporate sponsor of an event. */
+  sponsor?: Organization | Person
+
+  /** A pointer to products or services offered by the organization or person. */
+  makesOffer?: Offer
+
+  /** A pointer to products or services sought by the organization or person (demand). */
+  seeks?: Demand
+
+  /** The number of completed interactions for this entity, in a particular role (the 'agent'), in a particular action (indicated in the statistic), and in a particular context (i.e. interactionService). */
+  agentInteractionStatistic?: InteractionCounter
+
+  // Inherited properties
+  /** The name of the item.
+   * @inheritDoc Inherited from Thing
+   */
+  name?: string
+
+  /** A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+   * @inheritDoc Inherited from Thing
+   */
+  disambiguatingDescription?: string
+
+  /** Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+   * @inheritDoc Inherited from Thing
+   */
+  potentialAction?: Action
+
+  /** URL of the item.
+   * @inheritDoc Inherited from Thing
+   */
+  url?: string
+
+  /** The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+   * @inheritDoc Inherited from Thing
+   */
+  identifier?: PropertyValue | string
+
+  /** A CreativeWork or Event about this Thing.
+   * @inheritDoc Inherited from Thing
+   */
+  subjectOf?: CreativeWork | Event
+
+  /** A description of the item.
+   * @inheritDoc Inherited from Thing
+   */
+  description?: string
+
+  /** An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+   * @inheritDoc Inherited from Thing
+   */
+  additionalType?: string
+
+  /** An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+   * @inheritDoc Inherited from Thing
+   */
+  image?: ImageObject | string
+
+  /** URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+   * @inheritDoc Inherited from Thing
+   */
+  sameAs?: string
+
+  /** An alias for the item.
+   * @inheritDoc Inherited from Thing
+   */
+  alternateName?: string
+
+  /** Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+   * @inheritDoc Inherited from Thing
+   */
+  mainEntityOfPage?: CreativeWork | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Person",
+  "interactionStatistic": "{ /* Example object of type: InteractionCounter */ }",
+  "hasCredential": "{ /* Example object of type: EducationalOccupationalCredential */ }",
+  "colleague": "{ /* Example object of type: Person */ }",
+  "name": "\"example-name\"",
+  "disambiguatingDescription": "\"example-disambiguatingDescription\"",
+  "potentialAction": "{ /* Example object of type: Action */ }"
+}
+```
+
+## Notes
+
+- **Person** is a type of **Thing** and inherits all its properties
+- Defines 66 direct properties specific to Person
+- Inherits 12 properties from parent types
+- This is a leaf type with no subtypes - use it when no more specific type exists
+- Ensure all required properties are provided when using this type
+- Properties can be used from both direct and inherited sets
+- Use TypeScript interface above for proper type checking

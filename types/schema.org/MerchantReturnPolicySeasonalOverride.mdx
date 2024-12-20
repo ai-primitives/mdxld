@@ -1,0 +1,167 @@
+---
+$context: schema.org
+$type: MerchantReturnPolicySeasonalOverride
+title: MerchantReturnPolicySeasonalOverride
+description: A seasonal override of a return policy, for example used for holidays.
+properties:
+  direct:
+    - name: returnFees
+      type: ReturnFeesEnumeration
+      description: The type of return fees for purchased products (for any return reason).
+    - name: returnMethod
+      type: ReturnMethodEnumeration
+      description: The type of return method offered, specified from an enumeration.
+    - name: refundType
+      type: RefundTypeEnumeration
+      description: A refund type, from an enumerated list.
+    - name: returnShippingFeesAmount
+      type: MonetaryAmount
+      description: Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].
+    - name: startDate
+      type: string
+      description: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+    - name: merchantReturnDays
+      type: number | string
+      description: Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
+    - name: returnPolicyCategory
+      type: MerchantReturnEnumeration
+      description: Specifies an applicable return policy (from an enumeration).
+    - name: endDate
+      type: string
+      description: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+    - name: restockingFee
+      type: MonetaryAmount | number
+      description: Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+parentClass: Intangible
+---
+# MerchantReturnPolicySeasonalOverride
+
+A seasonal override of a return policy, for example used for holidays.
+
+## Type Hierarchy
+
+MerchantReturnPolicySeasonalOverride is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from MerchantReturnPolicySeasonalOverride.
+
+## Properties
+
+### Direct Properties
+
+- returnFees: The type of return fees for purchased products (for any return reason).
+- returnMethod: The type of return method offered, specified from an enumeration.
+- refundType: A refund type, from an enumerated list.
+- returnShippingFeesAmount: Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].
+- startDate: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+- merchantReturnDays: Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
+- returnPolicyCategory: Specifies an applicable return policy (from an enumeration).
+- endDate: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+- restockingFee: Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
+
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface MerchantReturnPolicySeasonalOverride extends Intangible {
+  $context?: 'schema.org'
+  $type: 'MerchantReturnPolicySeasonalOverride'
+  returnFees?: ReturnFeesEnumeration
+  returnMethod?: ReturnMethodEnumeration
+  refundType?: RefundTypeEnumeration
+  returnShippingFeesAmount?: MonetaryAmount
+  startDate?: string
+  merchantReturnDays?: number | string
+  returnPolicyCategory?: MerchantReturnEnumeration
+  endDate?: string
+  restockingFee?: MonetaryAmount | number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MerchantReturnPolicySeasonalOverride",
+  "name": "Example MerchantReturnPolicySeasonalOverride",
+  "description": "An example of the MerchantReturnPolicySeasonalOverride type",
+  "url": "https://example.com/merchantreturnpolicyseasonaloverride",
+  "identifier": "example-merchantreturnpolicyseasonaloverride-1"
+}
+```
+
+## Notes
+
+- MerchantReturnPolicySeasonalOverride inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

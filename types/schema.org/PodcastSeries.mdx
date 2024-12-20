@@ -1,0 +1,83 @@
+---
+$context: schema.org
+$type: PodcastSeries
+title: PodcastSeries
+description: A podcast is an episodic series of digital audio or video files which a user can download and listen to.
+properties:
+  direct:
+    - name: actor
+      type: PerformingGroup | Person
+      description: An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+    - name: webFeed
+      type: DataFeed | string
+      description: The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS or Atom.
+  inherited:
+    - name: issn
+      type: string
+      description: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+      inheritedFrom: CreativeWorkSeries
+    - name: startDate
+      type: string
+      description: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+    - name: endDate
+      type: string
+      description: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+parentClass: CreativeWorkSeries
+---
+# PodcastSeries
+
+A podcast is an episodic series of digital audio or video files which a user can download and listen to.
+
+## Type Hierarchy
+
+PodcastSeries is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+No types directly inherit from PodcastSeries.
+
+## Properties
+
+### Direct Properties
+
+- actor: An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
+- webFeed: The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS or Atom.
+
+### Inherited Properties
+
+- issn: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication. (inherited from CreativeWorkSeries)
+- startDate: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+- endDate: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+
+## Usage Example
+
+```typescript
+interface PodcastSeries extends CreativeWorkSeries {
+  $context?: 'schema.org'
+  $type: 'PodcastSeries'
+  actor?: PerformingGroup | Person
+  webFeed?: DataFeed | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PodcastSeries",
+  "name": "Example PodcastSeries",
+  "description": "An example of the PodcastSeries type",
+  "url": "https://example.com/podcastseries",
+  "identifier": "example-podcastseries-1"
+}
+```
+
+## Notes
+
+- PodcastSeries inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

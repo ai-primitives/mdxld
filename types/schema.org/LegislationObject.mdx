@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: LegislationObject
+title: LegislationObject
+description: A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.
+properties:
+  direct:
+    - name: legislationLegalValue
+      type: LegalValueLevel
+      description: The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.
+  inherited:
+---
+# LegislationObject
+
+A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.
+
+## Type Hierarchy
+
+LegislationObject is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from LegislationObject.
+
+## Properties
+
+### Direct Properties
+
+- legislationLegalValue: The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface LegislationObject {
+  $context?: 'schema.org'
+  $type: 'LegislationObject'
+  legislationLegalValue?: LegalValueLevel
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LegislationObject",
+  "name": "Example LegislationObject",
+  "description": "An example of the LegislationObject type",
+  "url": "https://example.com/legislationobject",
+  "identifier": "example-legislationobject-1"
+}
+```
+
+## Notes
+
+- LegislationObject inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

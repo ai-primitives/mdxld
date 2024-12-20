@@ -1,0 +1,60 @@
+---
+$context: schema.org
+$type: AmpStory
+title: AmpStory
+description: A creative work with a visual storytelling format intended to be viewed online, particularly on mobile devices.
+properties:
+  direct:
+  inherited:
+---
+# AmpStory
+
+A creative work with a visual storytelling format intended to be viewed online, particularly on mobile devices.
+
+## Type Hierarchy
+
+AmpStory is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from AmpStory.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface AmpStory {
+  $context?: 'schema.org'
+  $type: 'AmpStory'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "AmpStory",
+  "name": "Example AmpStory",
+  "description": "An example of the AmpStory type",
+  "url": "https://example.com/ampstory",
+  "identifier": "example-ampstory-1"
+}
+```
+
+## Notes
+
+- AmpStory inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

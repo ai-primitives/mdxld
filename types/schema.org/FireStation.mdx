@@ -1,0 +1,60 @@
+---
+$context: schema.org
+$type: FireStation
+title: FireStation
+description: A fire station. With firemen.
+properties:
+  direct:
+  inherited:
+---
+# FireStation
+
+A fire station. With firemen.
+
+## Type Hierarchy
+
+FireStation is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from FireStation.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface FireStation {
+  $context?: 'schema.org'
+  $type: 'FireStation'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FireStation",
+  "name": "Example FireStation",
+  "description": "An example of the FireStation type",
+  "url": "https://example.com/firestation",
+  "identifier": "example-firestation-1"
+}
+```
+
+## Notes
+
+- FireStation inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

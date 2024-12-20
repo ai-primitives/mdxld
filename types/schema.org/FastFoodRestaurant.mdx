@@ -1,0 +1,110 @@
+---
+$context: schema.org
+$type: FastFoodRestaurant
+title: FastFoodRestaurant
+description: A fast-food restaurant.
+properties:
+  direct:
+  inherited:
+    - name: menu
+      type: Menu | string
+      description: Either the actual menu as a structured representation, as text, or a URL of the menu.
+      inheritedFrom: FoodEstablishment
+    - name: hasMenu
+      type: Menu | string
+      description: Either the actual menu as a structured representation, as text, or a URL of the menu.
+      inheritedFrom: FoodEstablishment
+    - name: starRating
+      type: Rating
+      description: An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+      inheritedFrom: FoodEstablishment
+    - name: servesCuisine
+      type: string
+      description: The cuisine of the restaurant.
+      inheritedFrom: FoodEstablishment
+    - name: acceptsReservations
+      type: boolean | string
+      description: Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.
+      inheritedFrom: FoodEstablishment
+    - name: priceRange
+      type: string
+      description: The price range of the business, for example ```$$$```.
+      inheritedFrom: LocalBusiness
+    - name: openingHours
+      type: string
+      description: The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \n* Here is an example: <code>&lt;time itemprop="openingHours" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.
+      inheritedFrom: LocalBusiness
+    - name: paymentAccepted
+      type: string
+      description: Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.
+      inheritedFrom: LocalBusiness
+    - name: branchOf
+      type: Organization
+      description: The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical) [[branch]].
+      inheritedFrom: LocalBusiness
+    - name: currenciesAccepted
+      type: string
+      description: The currency accepted.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+      inheritedFrom: LocalBusiness
+parentClass: FoodEstablishment
+---
+# FastFoodRestaurant
+
+A fast-food restaurant.
+
+## Type Hierarchy
+
+FastFoodRestaurant is a type of FoodEstablishment.
+
+### Direct Subtypes
+
+No types directly inherit from FastFoodRestaurant.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+- menu: Either the actual menu as a structured representation, as text, or a URL of the menu. (inherited from FoodEstablishment)
+- hasMenu: Either the actual menu as a structured representation, as text, or a URL of the menu. (inherited from FoodEstablishment)
+- starRating: An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars). (inherited from FoodEstablishment)
+- servesCuisine: The cuisine of the restaurant. (inherited from FoodEstablishment)
+- acceptsReservations: Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```. (inherited from FoodEstablishment)
+- priceRange: The price range of the business, for example ```$$$```. (inherited from LocalBusiness)
+- openingHours: The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \n* Here is an example: <code>&lt;time itemprop="openingHours" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>. (inherited from LocalBusiness)
+- paymentAccepted: Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc. (inherited from LocalBusiness)
+- branchOf: The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical) [[branch]]. (inherited from LocalBusiness)
+- currenciesAccepted: The currency accepted.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR". (inherited from LocalBusiness)
+
+## Usage Example
+
+```typescript
+interface FastFoodRestaurant extends FoodEstablishment {
+  $context?: 'schema.org'
+  $type: 'FastFoodRestaurant'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "FastFoodRestaurant",
+  "name": "Example FastFoodRestaurant",
+  "description": "An example of the FastFoodRestaurant type",
+  "url": "https://example.com/fastfoodrestaurant",
+  "identifier": "example-fastfoodrestaurant-1"
+}
+```
+
+## Notes
+
+- FastFoodRestaurant inherits all properties from FoodEstablishment
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

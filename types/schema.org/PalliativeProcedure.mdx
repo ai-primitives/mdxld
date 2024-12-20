@@ -1,0 +1,60 @@
+---
+$context: schema.org
+$type: PalliativeProcedure
+title: PalliativeProcedure
+description: A medical procedure intended primarily for palliative purposes, aimed at relieving the symptoms of an underlying health condition.
+properties:
+  direct:
+  inherited:
+---
+# PalliativeProcedure
+
+A medical procedure intended primarily for palliative purposes, aimed at relieving the symptoms of an underlying health condition.
+
+## Type Hierarchy
+
+PalliativeProcedure is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from PalliativeProcedure.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface PalliativeProcedure {
+  $context?: 'schema.org'
+  $type: 'PalliativeProcedure'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PalliativeProcedure",
+  "name": "Example PalliativeProcedure",
+  "description": "An example of the PalliativeProcedure type",
+  "url": "https://example.com/palliativeprocedure",
+  "identifier": "example-palliativeprocedure-1"
+}
+```
+
+## Notes
+
+- PalliativeProcedure inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

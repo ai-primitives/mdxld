@@ -1,0 +1,202 @@
+---
+$context: schema.org
+$type: TaxiReservation
+title: TaxiReservation
+description: A reservation for a taxi.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+properties:
+  direct:
+    - name: partySize
+      type: QuantitativeValue | number
+      description: Number of people the reservation should accommodate.
+    - name: pickupTime
+      type: string
+      description: When a taxi will pick up a passenger or a rental car can be picked up.
+    - name: pickupLocation
+      type: Place
+      description: Where a taxi will pick up a passenger or a rental car can be picked up.
+  inherited:
+    - name: bookingTime
+      type: string
+      description: The date and time the reservation was booked.
+      inheritedFrom: Reservation
+    - name: underName
+      type: Organization | Person
+      description: The person or organization the reservation or ticket is for.
+      inheritedFrom: Reservation
+    - name: broker
+      type: Organization | Person
+      description: An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+      inheritedFrom: Reservation
+    - name: reservedTicket
+      type: Ticket
+      description: A ticket associated with the reservation.
+      inheritedFrom: Reservation
+    - name: programMembershipUsed
+      type: ProgramMembership
+      description: Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.
+      inheritedFrom: Reservation
+    - name: modifiedTime
+      type: string
+      description: The date and time the reservation was modified.
+      inheritedFrom: Reservation
+    - name: reservationFor
+      type: Thing
+      description: The thing -- flight, event, restaurant, etc. being reserved.
+      inheritedFrom: Reservation
+    - name: priceCurrency
+      type: string
+      description: The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+      inheritedFrom: Reservation
+    - name: provider
+      type: Organization | Person
+      description: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+      inheritedFrom: Reservation
+    - name: totalPrice
+      type: PriceSpecification | number | string
+      description: The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
+      inheritedFrom: Reservation
+    - name: reservationId
+      type: string
+      description: A unique identifier for the reservation.
+      inheritedFrom: Reservation
+    - name: reservationStatus
+      type: ReservationStatusType
+      description: The current status of the reservation.
+      inheritedFrom: Reservation
+    - name: bookingAgent
+      type: Organization | Person
+      description: 'bookingAgent' is an out-dated term indicating a 'broker' that serves as a booking agent.
+      inheritedFrom: Reservation
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+parentClass: Reservation
+---
+# TaxiReservation
+
+A reservation for a taxi.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
+
+## Type Hierarchy
+
+TaxiReservation is a type of Reservation.
+
+### Direct Subtypes
+
+No types directly inherit from TaxiReservation.
+
+## Properties
+
+### Direct Properties
+
+- partySize: Number of people the reservation should accommodate.
+- pickupTime: When a taxi will pick up a passenger or a rental car can be picked up.
+- pickupLocation: Where a taxi will pick up a passenger or a rental car can be picked up.
+
+### Inherited Properties
+
+- bookingTime: The date and time the reservation was booked. (inherited from Reservation)
+- underName: The person or organization the reservation or ticket is for. (inherited from Reservation)
+- broker: An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. (inherited from Reservation)
+- reservedTicket: A ticket associated with the reservation. (inherited from Reservation)
+- programMembershipUsed: Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. (inherited from Reservation)
+- modifiedTime: The date and time the reservation was modified. (inherited from Reservation)
+- reservationFor: The thing -- flight, event, restaurant, etc. being reserved. (inherited from Reservation)
+- priceCurrency: The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR". (inherited from Reservation)
+- provider: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. (inherited from Reservation)
+- totalPrice: The total price for the reservation or ticket, including applicable taxes, shipping, etc.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator. (inherited from Reservation)
+- reservationId: A unique identifier for the reservation. (inherited from Reservation)
+- reservationStatus: The current status of the reservation. (inherited from Reservation)
+- bookingAgent: 'bookingAgent' is an out-dated term indicating a 'broker' that serves as a booking agent. (inherited from Reservation)
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface TaxiReservation extends Reservation {
+  $context?: 'schema.org'
+  $type: 'TaxiReservation'
+  partySize?: QuantitativeValue | number
+  pickupTime?: string
+  pickupLocation?: Place
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "TaxiReservation",
+  "name": "Example TaxiReservation",
+  "description": "An example of the TaxiReservation type",
+  "url": "https://example.com/taxireservation",
+  "identifier": "example-taxireservation-1"
+}
+```
+
+## Notes
+
+- TaxiReservation inherits all properties from Reservation
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

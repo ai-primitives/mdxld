@@ -1,0 +1,68 @@
+---
+$context: schema.org
+$type: Audiobook
+title: Audiobook
+description: An audiobook.
+properties:
+  direct:
+    - name: readBy
+      type: Person
+      description: A person who reads (performs) the audiobook.
+    - name: duration
+      type: Duration
+      description: The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+  inherited:
+---
+# Audiobook
+
+An audiobook.
+
+## Type Hierarchy
+
+Audiobook is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from Audiobook.
+
+## Properties
+
+### Direct Properties
+
+- readBy: A person who reads (performs) the audiobook.
+- duration: The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface Audiobook {
+  $context?: 'schema.org'
+  $type: 'Audiobook'
+  readBy?: Person
+  duration?: Duration
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Audiobook",
+  "name": "Example Audiobook",
+  "description": "An example of the Audiobook type",
+  "url": "https://example.com/audiobook",
+  "identifier": "example-audiobook-1"
+}
+```
+
+## Notes
+
+- Audiobook inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

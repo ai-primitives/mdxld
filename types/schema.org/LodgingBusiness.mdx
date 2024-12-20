@@ -1,0 +1,154 @@
+---
+$context: schema.org
+$type: LodgingBusiness
+title: LodgingBusiness
+description: A lodging business, such as a motel, hotel, or inn.
+properties:
+  direct:
+    - name: petsAllowed
+      type: boolean | string
+      description: Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.
+    - name: starRating
+      type: Rating
+      description: An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+    - name: checkoutTime
+      type: string
+      description: The latest someone may check out of a lodging establishment.
+    - name: checkinTime
+      type: string
+      description: The earliest someone may check into a lodging establishment.
+    - name: numberOfRooms
+      type: QuantitativeValue | number
+      description: The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
+Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+    - name: amenityFeature
+      type: LocationFeatureSpecification
+      description: An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
+    - name: availableLanguage
+      type: Language | string
+      description: A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+    - name: audience
+      type: Audience
+      description: An intended audience, i.e. a group for whom something was created.
+  inherited:
+    - name: priceRange
+      type: string
+      description: The price range of the business, for example ```$$$```.
+      inheritedFrom: LocalBusiness
+    - name: openingHours
+      type: string
+      description: The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \n* Here is an example: <code>&lt;time itemprop="openingHours" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.
+      inheritedFrom: LocalBusiness
+    - name: paymentAccepted
+      type: string
+      description: Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.
+      inheritedFrom: LocalBusiness
+    - name: branchOf
+      type: Organization
+      description: The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical) [[branch]].
+      inheritedFrom: LocalBusiness
+    - name: currenciesAccepted
+      type: string
+      description: The currency accepted.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
+      inheritedFrom: LocalBusiness
+subClasses:
+  - BedAndBreakfast
+  - Hostel
+  - Hotel
+  - Motel
+  - Resort
+  - VacationRental
+parentClass: LocalBusiness
+---
+# LodgingBusiness
+
+A lodging business, such as a motel, hotel, or inn.
+
+## Type Hierarchy
+
+LodgingBusiness is a type of LocalBusiness.
+
+### Direct Subtypes
+
+The following types directly inherit from LodgingBusiness:
+
+- BedAndBreakfast: Bed and breakfast.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+- Hostel: A hostel - cheap accommodation, often in shared dormitories.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+- Hotel: A hotel is an establishment that provides lodging paid on a short-term basis (source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+- Motel: A motel.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+
+- Resort: A resort is a place used for relaxation or recreation, attracting visitors for holidays or vacations. Resorts are places, towns or sometimes commercial establishments operated by a single company (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Resort">http://en.wikipedia.org/wiki/Resort</a>).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.
+    
+- VacationRental: A kind of lodging business that focuses on renting single properties for limited time.
+
+## Properties
+
+### Direct Properties
+
+- petsAllowed: Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.
+- starRating: An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+- checkoutTime: The latest someone may check out of a lodging establishment.
+- checkinTime: The earliest someone may check into a lodging establishment.
+- numberOfRooms: The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
+Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
+- amenityFeature: An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
+- availableLanguage: A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
+- audience: An intended audience, i.e. a group for whom something was created.
+
+### Inherited Properties
+
+- priceRange: The price range of the business, for example ```$$$```. (inherited from LocalBusiness)
+- openingHours: The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \n* Here is an example: <code>&lt;time itemprop="openingHours" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>. (inherited from LocalBusiness)
+- paymentAccepted: Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc. (inherited from LocalBusiness)
+- branchOf: The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical) [[branch]]. (inherited from LocalBusiness)
+- currenciesAccepted: The currency accepted.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR". (inherited from LocalBusiness)
+
+## Usage Example
+
+```typescript
+interface LodgingBusiness extends LocalBusiness {
+  $context?: 'schema.org'
+  $type: 'LodgingBusiness'
+  petsAllowed?: boolean | string
+  starRating?: Rating
+  checkoutTime?: string
+  checkinTime?: string
+  numberOfRooms?: QuantitativeValue | number
+  amenityFeature?: LocationFeatureSpecification
+  availableLanguage?: Language | string
+  audience?: Audience
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "LodgingBusiness",
+  "name": "Example LodgingBusiness",
+  "description": "An example of the LodgingBusiness type",
+  "url": "https://example.com/lodgingbusiness",
+  "identifier": "example-lodgingbusiness-1"
+}
+```
+
+## Notes
+
+- LodgingBusiness inherits all properties from LocalBusiness
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

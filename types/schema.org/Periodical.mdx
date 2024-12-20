@@ -1,0 +1,83 @@
+---
+$context: schema.org
+$type: Periodical
+title: Periodical
+description: A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+properties:
+  direct:
+  inherited:
+    - name: issn
+      type: string
+      description: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+      inheritedFrom: CreativeWorkSeries
+    - name: startDate
+      type: string
+      description: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+    - name: endDate
+      type: string
+      description: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
+      inheritedFrom: CreativeWorkSeries
+subClasses:
+  - ComicSeries
+  - Newspaper
+parentClass: CreativeWorkSeries
+---
+# Periodical
+
+A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper.\n\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).
+
+## Type Hierarchy
+
+Periodical is a type of CreativeWorkSeries.
+
+### Direct Subtypes
+
+The following types directly inherit from Periodical:
+
+- ComicSeries: A sequential publication of comic stories under a
+    	unifying title, for example "The Amazing Spider-Man" or "Groo the
+    	Wanderer".
+- Newspaper: A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+- issn: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication. (inherited from CreativeWorkSeries)
+- startDate: The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+- endDate: The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)). (inherited from CreativeWorkSeries)
+
+## Usage Example
+
+```typescript
+interface Periodical extends CreativeWorkSeries {
+  $context?: 'schema.org'
+  $type: 'Periodical'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Periodical",
+  "name": "Example Periodical",
+  "description": "An example of the Periodical type",
+  "url": "https://example.com/periodical",
+  "identifier": "example-periodical-1"
+}
+```
+
+## Notes
+
+- Periodical inherits all properties from CreativeWorkSeries
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

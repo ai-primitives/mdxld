@@ -1,0 +1,60 @@
+---
+$context: schema.org
+$type: MedicalAudience
+title: MedicalAudience
+description: Target audiences for medical web pages.
+properties:
+  direct:
+  inherited:
+---
+# MedicalAudience
+
+Target audiences for medical web pages.
+
+## Type Hierarchy
+
+MedicalAudience is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from MedicalAudience.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface MedicalAudience {
+  $context?: 'schema.org'
+  $type: 'MedicalAudience'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MedicalAudience",
+  "name": "Example MedicalAudience",
+  "description": "An example of the MedicalAudience type",
+  "url": "https://example.com/medicalaudience",
+  "identifier": "example-medicalaudience-1"
+}
+```
+
+## Notes
+
+- MedicalAudience inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

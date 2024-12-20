@@ -1,0 +1,89 @@
+---
+$context: schema.org
+$type: PhysiciansOffice
+title: PhysiciansOffice
+description: A doctor's office or clinic.
+properties:
+  direct:
+  inherited:
+    - name: occupationalCategory
+      type: CategoryCode | string
+      description: A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
+      inheritedFrom: Physician
+    - name: medicalSpecialty
+      type: MedicalSpecialty
+      description: A medical specialty of the provider.
+      inheritedFrom: Physician
+    - name: availableService
+      type: MedicalProcedure | MedicalTest | MedicalTherapy
+      description: A medical service available from this provider.
+      inheritedFrom: Physician
+    - name: usNPI
+      type: string
+      description: A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) 
+    is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services.
+      inheritedFrom: Physician
+    - name: hospitalAffiliation
+      type: Hospital
+      description: A hospital with which the physician or office is affiliated.
+      inheritedFrom: Physician
+parentClass: Physician
+---
+# PhysiciansOffice
+
+A doctor's office or clinic.
+
+## Type Hierarchy
+
+PhysiciansOffice is a type of Physician.
+
+### Direct Subtypes
+
+No types directly inherit from PhysiciansOffice.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+- occupationalCategory: A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC. (inherited from Physician)
+- medicalSpecialty: A medical specialty of the provider. (inherited from Physician)
+- availableService: A medical service available from this provider. (inherited from Physician)
+- usNPI: A <a href="https://en.wikipedia.org/wiki/National_Provider_Identifier">National Provider Identifier</a> (NPI) 
+    is a unique 10-digit identification number issued to health care providers in the United States by the Centers for Medicare and Medicaid Services. (inherited from Physician)
+- hospitalAffiliation: A hospital with which the physician or office is affiliated. (inherited from Physician)
+
+## Usage Example
+
+```typescript
+interface PhysiciansOffice extends Physician {
+  $context?: 'schema.org'
+  $type: 'PhysiciansOffice'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "PhysiciansOffice",
+  "name": "Example PhysiciansOffice",
+  "description": "An example of the PhysiciansOffice type",
+  "url": "https://example.com/physiciansoffice",
+  "identifier": "example-physiciansoffice-1"
+}
+```
+
+## Notes
+
+- PhysiciansOffice inherits all properties from Physician
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,73 @@
+---
+$context: schema.org
+$type: Patient
+title: Patient
+description: A patient is any person recipient of health care services.
+properties:
+  direct:
+    - name: diagnosis
+      type: MedicalCondition
+      description: One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
+    - name: drug
+      type: Drug
+      description: Specifying a drug or medicine used in a medication procedure.
+    - name: healthCondition
+      type: MedicalCondition
+      description: Specifying the health condition(s) of a patient, medical study, or other target audience.
+  inherited:
+---
+# Patient
+
+A patient is any person recipient of health care services.
+
+## Type Hierarchy
+
+Patient is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from Patient.
+
+## Properties
+
+### Direct Properties
+
+- diagnosis: One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
+- drug: Specifying a drug or medicine used in a medication procedure.
+- healthCondition: Specifying the health condition(s) of a patient, medical study, or other target audience.
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface Patient {
+  $context?: 'schema.org'
+  $type: 'Patient'
+  diagnosis?: MedicalCondition
+  drug?: Drug
+  healthCondition?: MedicalCondition
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Patient",
+  "name": "Example Patient",
+  "description": "An example of the Patient type",
+  "url": "https://example.com/patient",
+  "identifier": "example-patient-1"
+}
+```
+
+## Notes
+
+- Patient inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

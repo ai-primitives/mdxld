@@ -1,0 +1,98 @@
+---
+$context: schema.org
+$type: ExercisePlan
+title: ExercisePlan
+description: Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.
+properties:
+  direct:
+    - name: restPeriods
+      type: QuantitativeValue | string
+      description: How often one should break from the activity.
+    - name: additionalVariable
+      type: string
+      description: Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.
+    - name: intensity
+      type: QuantitativeValue | string
+      description: Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.
+    - name: repetitions
+      type: QuantitativeValue | number
+      description: Number of times one should repeat the activity.
+    - name: activityDuration
+      type: Duration | QuantitativeValue
+      description: Length of time to engage in the activity.
+    - name: workload
+      type: Energy | QuantitativeValue
+      description: Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
+    - name: exerciseType
+      type: string
+      description: Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
+    - name: activityFrequency
+      type: QuantitativeValue | string
+      description: How often one should engage in the activity.
+  inherited:
+---
+# ExercisePlan
+
+Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.
+
+## Type Hierarchy
+
+ExercisePlan is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from ExercisePlan.
+
+## Properties
+
+### Direct Properties
+
+- restPeriods: How often one should break from the activity.
+- additionalVariable: Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.
+- intensity: Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.
+- repetitions: Number of times one should repeat the activity.
+- activityDuration: Length of time to engage in the activity.
+- workload: Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.
+- exerciseType: Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.
+- activityFrequency: How often one should engage in the activity.
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface ExercisePlan {
+  $context?: 'schema.org'
+  $type: 'ExercisePlan'
+  restPeriods?: QuantitativeValue | string
+  additionalVariable?: string
+  intensity?: QuantitativeValue | string
+  repetitions?: QuantitativeValue | number
+  activityDuration?: Duration | QuantitativeValue
+  workload?: Energy | QuantitativeValue
+  exerciseType?: string
+  activityFrequency?: QuantitativeValue | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "ExercisePlan",
+  "name": "Example ExercisePlan",
+  "description": "An example of the ExercisePlan type",
+  "url": "https://example.com/exerciseplan",
+  "identifier": "example-exerciseplan-1"
+}
+```
+
+## Notes
+
+- ExercisePlan inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

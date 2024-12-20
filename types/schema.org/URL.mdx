@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: URL
+title: URL
+description: Data type: URL.
+properties:
+  direct:
+  inherited:
+parentClass: Text
+---
+# URL
+
+Data type: URL.
+
+## Type Hierarchy
+
+URL is a type of Text.
+
+### Direct Subtypes
+
+No types directly inherit from URL.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface URL extends Text {
+  $context?: 'schema.org'
+  $type: 'URL'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "URL",
+  "name": "Example URL",
+  "description": "An example of the URL type",
+  "url": "https://example.com/url",
+  "identifier": "example-url-1"
+}
+```
+
+## Notes
+
+- URL inherits all properties from Text
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

@@ -1,0 +1,234 @@
+---
+$context: schema.org
+$type: MerchantReturnPolicy
+title: MerchantReturnPolicy
+description: A MerchantReturnPolicy provides information about product return policies associated with an [[Organization]], [[Product]], or [[Offer]].
+properties:
+  direct:
+    - name: additionalProperty
+      type: PropertyValue
+      description: A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+
+    - name: returnFees
+      type: ReturnFeesEnumeration
+      description: The type of return fees for purchased products (for any return reason).
+    - name: returnPolicySeasonalOverride
+      type: MerchantReturnPolicySeasonalOverride
+      description: Seasonal override of a return policy.
+    - name: inStoreReturnsOffered
+      type: boolean
+      description: Are in-store returns offered? (For more advanced return methods use the [[returnMethod]] property.)
+    - name: itemDefectReturnFees
+      type: ReturnFeesEnumeration
+      description: The type of return fees for returns of defect products.
+    - name: customerRemorseReturnLabelSource
+      type: ReturnLabelSourceEnumeration
+      description: The method (from an enumeration) by which the customer obtains a return shipping label for a product returned due to customer remorse.
+    - name: returnMethod
+      type: ReturnMethodEnumeration
+      description: The type of return method offered, specified from an enumeration.
+    - name: refundType
+      type: RefundTypeEnumeration
+      description: A refund type, from an enumerated list.
+    - name: validForMemberTier
+      type: MemberProgramTier
+      description: The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
+    - name: itemDefectReturnLabelSource
+      type: ReturnLabelSourceEnumeration
+      description: The method (from an enumeration) by which the customer obtains a return shipping label for a defect product.
+    - name: returnPolicyCountry
+      type: Country | string
+      description: The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]]. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where the product was originally shipped from or sent to.
+    - name: itemDefectReturnShippingFeesAmount
+      type: MonetaryAmount
+      description: Amount of shipping costs for defect product returns. Applicable when property [[itemDefectReturnFees]] equals [[ReturnShippingFees]].
+    - name: returnLabelSource
+      type: ReturnLabelSourceEnumeration
+      description: The method (from an enumeration) by which the customer obtains a return shipping label for a product returned for any reason.
+    - name: returnShippingFeesAmount
+      type: MonetaryAmount
+      description: Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].
+    - name: merchantReturnLink
+      type: string
+      description: Specifies a Web page or service by URL, for product returns.
+    - name: customerRemorseReturnShippingFeesAmount
+      type: MonetaryAmount
+      description: The amount of shipping costs if a product is returned due to customer remorse. Applicable when property [[customerRemorseReturnFees]] equals [[ReturnShippingFees]].
+    - name: customerRemorseReturnFees
+      type: ReturnFeesEnumeration
+      description: The type of return fees if the product is returned due to customer remorse.
+    - name: itemCondition
+      type: OfferItemCondition
+      description: A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.
+    - name: merchantReturnDays
+      type: number | string
+      description: Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
+    - name: returnPolicyCategory
+      type: MerchantReturnEnumeration
+      description: Specifies an applicable return policy (from an enumeration).
+    - name: applicableCountry
+      type: Country | string
+      description: A country where a particular merchant return policy applies to, for example the two-letter ISO 3166-1 alpha-2 country code.
+    - name: restockingFee
+      type: MonetaryAmount | number
+      description: Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
+  inherited:
+    - name: name
+      type: string
+      description: The name of the item.
+      inheritedFrom: Thing
+    - name: disambiguatingDescription
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+      inheritedFrom: Thing
+    - name: potentialAction
+      type: Action
+      description: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+      inheritedFrom: Thing
+    - name: url
+      type: string
+      description: URL of the item.
+      inheritedFrom: Thing
+    - name: identifier
+      type: PropertyValue | string
+      description: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+        
+      inheritedFrom: Thing
+    - name: subjectOf
+      type: CreativeWork | Event
+      description: A CreativeWork or Event about this Thing.
+      inheritedFrom: Thing
+    - name: description
+      type: string
+      description: A description of the item.
+      inheritedFrom: Thing
+    - name: additionalType
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+      inheritedFrom: Thing
+    - name: image
+      type: ImageObject | string
+      description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+      inheritedFrom: Thing
+    - name: sameAs
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+      inheritedFrom: Thing
+    - name: alternateName
+      type: string
+      description: An alias for the item.
+      inheritedFrom: Thing
+    - name: mainEntityOfPage
+      type: CreativeWork | string
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details.
+      inheritedFrom: Thing
+parentClass: Intangible
+---
+# MerchantReturnPolicy
+
+A MerchantReturnPolicy provides information about product return policies associated with an [[Organization]], [[Product]], or [[Offer]].
+
+## Type Hierarchy
+
+MerchantReturnPolicy is a type of Intangible.
+
+### Direct Subtypes
+
+No types directly inherit from MerchantReturnPolicy.
+
+## Properties
+
+### Direct Properties
+
+- additionalProperty: A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+
+- returnFees: The type of return fees for purchased products (for any return reason).
+- returnPolicySeasonalOverride: Seasonal override of a return policy.
+- inStoreReturnsOffered: Are in-store returns offered? (For more advanced return methods use the [[returnMethod]] property.)
+- itemDefectReturnFees: The type of return fees for returns of defect products.
+- customerRemorseReturnLabelSource: The method (from an enumeration) by which the customer obtains a return shipping label for a product returned due to customer remorse.
+- returnMethod: The type of return method offered, specified from an enumeration.
+- refundType: A refund type, from an enumerated list.
+- validForMemberTier: The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.
+- itemDefectReturnLabelSource: The method (from an enumeration) by which the customer obtains a return shipping label for a defect product.
+- returnPolicyCountry: The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]]. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where the product was originally shipped from or sent to.
+- itemDefectReturnShippingFeesAmount: Amount of shipping costs for defect product returns. Applicable when property [[itemDefectReturnFees]] equals [[ReturnShippingFees]].
+- returnLabelSource: The method (from an enumeration) by which the customer obtains a return shipping label for a product returned for any reason.
+- returnShippingFeesAmount: Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].
+- merchantReturnLink: Specifies a Web page or service by URL, for product returns.
+- customerRemorseReturnShippingFeesAmount: The amount of shipping costs if a product is returned due to customer remorse. Applicable when property [[customerRemorseReturnFees]] equals [[ReturnShippingFees]].
+- customerRemorseReturnFees: The type of return fees if the product is returned due to customer remorse.
+- itemCondition: A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.
+- merchantReturnDays: Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
+- returnPolicyCategory: Specifies an applicable return policy (from an enumeration).
+- applicableCountry: A country where a particular merchant return policy applies to, for example the two-letter ISO 3166-1 alpha-2 country code.
+- restockingFee: Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
+
+### Inherited Properties
+
+- name: The name of the item. (inherited from Thing)
+- disambiguatingDescription: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. (inherited from Thing)
+- potentialAction: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. (inherited from Thing)
+- url: URL of the item. (inherited from Thing)
+- identifier: The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+         (inherited from Thing)
+- subjectOf: A CreativeWork or Event about this Thing. (inherited from Thing)
+- description: A description of the item. (inherited from Thing)
+- additionalType: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>. (inherited from Thing)
+- image: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]. (inherited from Thing)
+- sameAs: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. (inherited from Thing)
+- alternateName: An alias for the item. (inherited from Thing)
+- mainEntityOfPage: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details. (inherited from Thing)
+
+## Usage Example
+
+```typescript
+interface MerchantReturnPolicy extends Intangible {
+  $context?: 'schema.org'
+  $type: 'MerchantReturnPolicy'
+  additionalProperty?: PropertyValue
+  returnFees?: ReturnFeesEnumeration
+  returnPolicySeasonalOverride?: MerchantReturnPolicySeasonalOverride
+  inStoreReturnsOffered?: boolean
+  itemDefectReturnFees?: ReturnFeesEnumeration
+  customerRemorseReturnLabelSource?: ReturnLabelSourceEnumeration
+  returnMethod?: ReturnMethodEnumeration
+  refundType?: RefundTypeEnumeration
+  validForMemberTier?: MemberProgramTier
+  itemDefectReturnLabelSource?: ReturnLabelSourceEnumeration
+  returnPolicyCountry?: Country | string
+  itemDefectReturnShippingFeesAmount?: MonetaryAmount
+  returnLabelSource?: ReturnLabelSourceEnumeration
+  returnShippingFeesAmount?: MonetaryAmount
+  merchantReturnLink?: string
+  customerRemorseReturnShippingFeesAmount?: MonetaryAmount
+  customerRemorseReturnFees?: ReturnFeesEnumeration
+  itemCondition?: OfferItemCondition
+  merchantReturnDays?: number | string
+  returnPolicyCategory?: MerchantReturnEnumeration
+  applicableCountry?: Country | string
+  restockingFee?: MonetaryAmount | number
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "MerchantReturnPolicy",
+  "name": "Example MerchantReturnPolicy",
+  "description": "An example of the MerchantReturnPolicy type",
+  "url": "https://example.com/merchantreturnpolicy",
+  "identifier": "example-merchantreturnpolicy-1"
+}
+```
+
+## Notes
+
+- MerchantReturnPolicy inherits all properties from Intangible
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

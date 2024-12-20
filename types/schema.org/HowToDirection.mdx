@@ -1,0 +1,98 @@
+---
+$context: schema.org
+$type: HowToDirection
+title: HowToDirection
+description: A direction indicating a single action to do in the instructions for how to achieve a result.
+properties:
+  direct:
+    - name: beforeMedia
+      type: MediaObject | string
+      description: A media object representing the circumstances before performing this direction.
+    - name: prepTime
+      type: Duration
+      description: The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+    - name: tool
+      type: HowToTool | string
+      description: A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
+    - name: totalTime
+      type: Duration
+      description: The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+    - name: duringMedia
+      type: MediaObject | string
+      description: A media object representing the circumstances while performing this direction.
+    - name: performTime
+      type: Duration
+      description: The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+    - name: supply
+      type: HowToSupply | string
+      description: A sub-property of instrument. A supply consumed when performing instructions or a direction.
+    - name: afterMedia
+      type: MediaObject | string
+      description: A media object representing the circumstances after performing this direction.
+  inherited:
+---
+# HowToDirection
+
+A direction indicating a single action to do in the instructions for how to achieve a result.
+
+## Type Hierarchy
+
+HowToDirection is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from HowToDirection.
+
+## Properties
+
+### Direct Properties
+
+- beforeMedia: A media object representing the circumstances before performing this direction.
+- prepTime: The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+- tool: A sub property of instrument. An object used (but not consumed) when performing instructions or a direction.
+- totalTime: The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+- duringMedia: A media object representing the circumstances while performing this direction.
+- performTime: The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+- supply: A sub-property of instrument. A supply consumed when performing instructions or a direction.
+- afterMedia: A media object representing the circumstances after performing this direction.
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface HowToDirection {
+  $context?: 'schema.org'
+  $type: 'HowToDirection'
+  beforeMedia?: MediaObject | string
+  prepTime?: Duration
+  tool?: HowToTool | string
+  totalTime?: Duration
+  duringMedia?: MediaObject | string
+  performTime?: Duration
+  supply?: HowToSupply | string
+  afterMedia?: MediaObject | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HowToDirection",
+  "name": "Example HowToDirection",
+  "description": "An example of the HowToDirection type",
+  "url": "https://example.com/howtodirection",
+  "identifier": "example-howtodirection-1"
+}
+```
+
+## Notes
+
+- HowToDirection inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

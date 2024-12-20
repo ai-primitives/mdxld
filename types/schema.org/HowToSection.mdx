@@ -1,0 +1,63 @@
+---
+$context: schema.org
+$type: HowToSection
+title: HowToSection
+description: A sub-grouping of steps in the instructions for how to achieve a result (e.g. steps for making a pie crust within a pie recipe).
+properties:
+  direct:
+    - name: steps
+      type: CreativeWork | ItemList | string
+      description: A single step item (as HowToStep, text, document, video, etc.) or a HowToSection (originally misnamed 'steps'; 'step' is preferred).
+  inherited:
+---
+# HowToSection
+
+A sub-grouping of steps in the instructions for how to achieve a result (e.g. steps for making a pie crust within a pie recipe).
+
+## Type Hierarchy
+
+HowToSection is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from HowToSection.
+
+## Properties
+
+### Direct Properties
+
+- steps: A single step item (as HowToStep, text, document, video, etc.) or a HowToSection (originally misnamed 'steps'; 'step' is preferred).
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface HowToSection {
+  $context?: 'schema.org'
+  $type: 'HowToSection'
+  steps?: CreativeWork | ItemList | string
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "HowToSection",
+  "name": "Example HowToSection",
+  "description": "An example of the HowToSection type",
+  "url": "https://example.com/howtosection",
+  "identifier": "example-howtosection-1"
+}
+```
+
+## Notes
+
+- HowToSection inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

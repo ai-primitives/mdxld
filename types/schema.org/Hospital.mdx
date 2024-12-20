@@ -1,0 +1,73 @@
+---
+$context: schema.org
+$type: Hospital
+title: Hospital
+description: A hospital.
+properties:
+  direct:
+    - name: medicalSpecialty
+      type: MedicalSpecialty
+      description: A medical specialty of the provider.
+    - name: availableService
+      type: MedicalProcedure | MedicalTest | MedicalTherapy
+      description: A medical service available from this provider.
+    - name: healthcareReportingData
+      type: CDCPMDRecord | Dataset
+      description: Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some kind of [[Dataset]].
+  inherited:
+---
+# Hospital
+
+A hospital.
+
+## Type Hierarchy
+
+Hospital is the root type in the Schema.org hierarchy. All other types inherit from Thing either directly or indirectly.
+
+### Direct Subtypes
+
+No types directly inherit from Hospital.
+
+## Properties
+
+### Direct Properties
+
+- medicalSpecialty: A medical specialty of the provider.
+- availableService: A medical service available from this provider.
+- healthcareReportingData: Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some kind of [[Dataset]].
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface Hospital {
+  $context?: 'schema.org'
+  $type: 'Hospital'
+  medicalSpecialty?: MedicalSpecialty
+  availableService?: MedicalProcedure | MedicalTest | MedicalTherapy
+  healthcareReportingData?: CDCPMDRecord | Dataset
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "Hospital",
+  "name": "Example Hospital",
+  "description": "An example of the Hospital type",
+  "url": "https://example.com/hospital",
+  "identifier": "example-hospital-1"
+}
+```
+
+## Notes
+
+- Hospital inherits all properties from Thing
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface

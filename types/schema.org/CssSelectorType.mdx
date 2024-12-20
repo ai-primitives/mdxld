@@ -1,0 +1,61 @@
+---
+$context: schema.org
+$type: CssSelectorType
+title: CssSelectorType
+description: Text representing a CSS selector.
+properties:
+  direct:
+  inherited:
+parentClass: Text
+---
+# CssSelectorType
+
+Text representing a CSS selector.
+
+## Type Hierarchy
+
+CssSelectorType is a type of Text.
+
+### Direct Subtypes
+
+No types directly inherit from CssSelectorType.
+
+## Properties
+
+### Direct Properties
+
+
+
+### Inherited Properties
+
+No inherited properties.
+
+## Usage Example
+
+```typescript
+interface CssSelectorType extends Text {
+  $context?: 'schema.org'
+  $type: 'CssSelectorType'
+
+}
+```
+
+## Example Usage
+
+```json
+{
+  "$context": "schema.org",
+  "$type": "CssSelectorType",
+  "name": "Example CssSelectorType",
+  "description": "An example of the CssSelectorType type",
+  "url": "https://example.com/cssselectortype",
+  "identifier": "example-cssselectortype-1"
+}
+```
+
+## Notes
+
+- CssSelectorType inherits all properties from Text
+- Consider using more specific subtypes if available
+- Ensure all required properties are provided
+- Use appropriate property types as defined in the interface
