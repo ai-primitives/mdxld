@@ -2,8 +2,9 @@
 
 [![npm version](https://badge.fury.io/js/mdxld.svg)](https://www.npmjs.com/package/mdxld)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/stable-0.1.3-green.svg)](https://www.npmjs.com/package/mdxld)
 
-A modern TypeScript package for Markdown & MDX parsing with integrated YAML-LD frontmatter support. Parse MDX documents with type-safe YAML-LD frontmatter and optional AST support.
+A modern TypeScript package for Markdown & MDX parsing with integrated YAML-LD frontmatter support. Parse MDX documents with type-safe YAML-LD frontmatter and optional AST support. Now stable at version 0.1.3 with full core feature implementation.
 
 ## Features
 
